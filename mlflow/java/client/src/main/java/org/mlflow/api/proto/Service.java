@@ -101712,29 +101712,29 @@ public final class Service {
      * ID of the trace on which to set a tag.
      * </pre>
      *
-     * <code>optional string request_id = 1;</code>
-     * @return Whether the requestId field is set.
+     * <code>optional string trace_id = 4;</code>
+     * @return Whether the traceId field is set.
      */
-    boolean hasRequestId();
+    boolean hasTraceId();
     /**
      * <pre>
      * ID of the trace on which to set a tag.
      * </pre>
      *
-     * <code>optional string request_id = 1;</code>
-     * @return The requestId.
+     * <code>optional string trace_id = 4;</code>
+     * @return The traceId.
      */
-    java.lang.String getRequestId();
+    java.lang.String getTraceId();
     /**
      * <pre>
      * ID of the trace on which to set a tag.
      * </pre>
      *
-     * <code>optional string request_id = 1;</code>
-     * @return The bytes for requestId.
+     * <code>optional string trace_id = 4;</code>
+     * @return The bytes for traceId.
      */
     com.google.protobuf.ByteString
-        getRequestIdBytes();
+        getTraceIdBytes();
 
     /**
      * <pre>
@@ -101813,7 +101813,7 @@ public final class Service {
       super(builder);
     }
     private SetTraceTagV3() {
-      requestId_ = "";
+      traceId_ = "";
       key_ = "";
       value_ = "";
     }
@@ -101849,12 +101849,6 @@ public final class Service {
             case 0:
               done = true;
               break;
-            case 10: {
-              com.google.protobuf.ByteString bs = input.readBytes();
-              bitField0_ |= 0x00000001;
-              requestId_ = bs;
-              break;
-            }
             case 18: {
               com.google.protobuf.ByteString bs = input.readBytes();
               bitField0_ |= 0x00000002;
@@ -101865,6 +101859,12 @@ public final class Service {
               com.google.protobuf.ByteString bs = input.readBytes();
               bitField0_ |= 0x00000004;
               value_ = bs;
+              break;
+            }
+            case 34: {
+              com.google.protobuf.ByteString bs = input.readBytes();
+              bitField0_ |= 0x00000001;
+              traceId_ = bs;
               break;
             }
             default: {
@@ -102318,18 +102318,18 @@ public final class Service {
     }
 
     private int bitField0_;
-    public static final int REQUEST_ID_FIELD_NUMBER = 1;
-    private volatile java.lang.Object requestId_;
+    public static final int TRACE_ID_FIELD_NUMBER = 4;
+    private volatile java.lang.Object traceId_;
     /**
      * <pre>
      * ID of the trace on which to set a tag.
      * </pre>
      *
-     * <code>optional string request_id = 1;</code>
-     * @return Whether the requestId field is set.
+     * <code>optional string trace_id = 4;</code>
+     * @return Whether the traceId field is set.
      */
     @java.lang.Override
-    public boolean hasRequestId() {
+    public boolean hasTraceId() {
       return ((bitField0_ & 0x00000001) != 0);
     }
     /**
@@ -102337,12 +102337,12 @@ public final class Service {
      * ID of the trace on which to set a tag.
      * </pre>
      *
-     * <code>optional string request_id = 1;</code>
-     * @return The requestId.
+     * <code>optional string trace_id = 4;</code>
+     * @return The traceId.
      */
     @java.lang.Override
-    public java.lang.String getRequestId() {
-      java.lang.Object ref = requestId_;
+    public java.lang.String getTraceId() {
+      java.lang.Object ref = traceId_;
       if (ref instanceof java.lang.String) {
         return (java.lang.String) ref;
       } else {
@@ -102350,7 +102350,7 @@ public final class Service {
             (com.google.protobuf.ByteString) ref;
         java.lang.String s = bs.toStringUtf8();
         if (bs.isValidUtf8()) {
-          requestId_ = s;
+          traceId_ = s;
         }
         return s;
       }
@@ -102360,18 +102360,18 @@ public final class Service {
      * ID of the trace on which to set a tag.
      * </pre>
      *
-     * <code>optional string request_id = 1;</code>
-     * @return The bytes for requestId.
+     * <code>optional string trace_id = 4;</code>
+     * @return The bytes for traceId.
      */
     @java.lang.Override
     public com.google.protobuf.ByteString
-        getRequestIdBytes() {
-      java.lang.Object ref = requestId_;
+        getTraceIdBytes() {
+      java.lang.Object ref = traceId_;
       if (ref instanceof java.lang.String) {
         com.google.protobuf.ByteString b = 
             com.google.protobuf.ByteString.copyFromUtf8(
                 (java.lang.String) ref);
-        requestId_ = b;
+        traceId_ = b;
         return b;
       } else {
         return (com.google.protobuf.ByteString) ref;
@@ -102518,14 +102518,14 @@ public final class Service {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (((bitField0_ & 0x00000001) != 0)) {
-        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, requestId_);
-      }
       if (((bitField0_ & 0x00000002) != 0)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 2, key_);
       }
       if (((bitField0_ & 0x00000004) != 0)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 3, value_);
+      }
+      if (((bitField0_ & 0x00000001) != 0)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 4, traceId_);
       }
       unknownFields.writeTo(output);
     }
@@ -102536,14 +102536,14 @@ public final class Service {
       if (size != -1) return size;
 
       size = 0;
-      if (((bitField0_ & 0x00000001) != 0)) {
-        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, requestId_);
-      }
       if (((bitField0_ & 0x00000002) != 0)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, key_);
       }
       if (((bitField0_ & 0x00000004) != 0)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(3, value_);
+      }
+      if (((bitField0_ & 0x00000001) != 0)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(4, traceId_);
       }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
@@ -102560,10 +102560,10 @@ public final class Service {
       }
       org.mlflow.api.proto.Service.SetTraceTagV3 other = (org.mlflow.api.proto.Service.SetTraceTagV3) obj;
 
-      if (hasRequestId() != other.hasRequestId()) return false;
-      if (hasRequestId()) {
-        if (!getRequestId()
-            .equals(other.getRequestId())) return false;
+      if (hasTraceId() != other.hasTraceId()) return false;
+      if (hasTraceId()) {
+        if (!getTraceId()
+            .equals(other.getTraceId())) return false;
       }
       if (hasKey() != other.hasKey()) return false;
       if (hasKey()) {
@@ -102586,9 +102586,9 @@ public final class Service {
       }
       int hash = 41;
       hash = (19 * hash) + getDescriptor().hashCode();
-      if (hasRequestId()) {
-        hash = (37 * hash) + REQUEST_ID_FIELD_NUMBER;
-        hash = (53 * hash) + getRequestId().hashCode();
+      if (hasTraceId()) {
+        hash = (37 * hash) + TRACE_ID_FIELD_NUMBER;
+        hash = (53 * hash) + getTraceId().hashCode();
       }
       if (hasKey()) {
         hash = (37 * hash) + KEY_FIELD_NUMBER;
@@ -102731,7 +102731,7 @@ public final class Service {
       @java.lang.Override
       public Builder clear() {
         super.clear();
-        requestId_ = "";
+        traceId_ = "";
         bitField0_ = (bitField0_ & ~0x00000001);
         key_ = "";
         bitField0_ = (bitField0_ & ~0x00000002);
@@ -102768,7 +102768,7 @@ public final class Service {
         if (((from_bitField0_ & 0x00000001) != 0)) {
           to_bitField0_ |= 0x00000001;
         }
-        result.requestId_ = requestId_;
+        result.traceId_ = traceId_;
         if (((from_bitField0_ & 0x00000002) != 0)) {
           to_bitField0_ |= 0x00000002;
         }
@@ -102826,9 +102826,9 @@ public final class Service {
 
       public Builder mergeFrom(org.mlflow.api.proto.Service.SetTraceTagV3 other) {
         if (other == org.mlflow.api.proto.Service.SetTraceTagV3.getDefaultInstance()) return this;
-        if (other.hasRequestId()) {
+        if (other.hasTraceId()) {
           bitField0_ |= 0x00000001;
-          requestId_ = other.requestId_;
+          traceId_ = other.traceId_;
           onChanged();
         }
         if (other.hasKey()) {
@@ -102871,16 +102871,16 @@ public final class Service {
       }
       private int bitField0_;
 
-      private java.lang.Object requestId_ = "";
+      private java.lang.Object traceId_ = "";
       /**
        * <pre>
        * ID of the trace on which to set a tag.
        * </pre>
        *
-       * <code>optional string request_id = 1;</code>
-       * @return Whether the requestId field is set.
+       * <code>optional string trace_id = 4;</code>
+       * @return Whether the traceId field is set.
        */
-      public boolean hasRequestId() {
+      public boolean hasTraceId() {
         return ((bitField0_ & 0x00000001) != 0);
       }
       /**
@@ -102888,17 +102888,17 @@ public final class Service {
        * ID of the trace on which to set a tag.
        * </pre>
        *
-       * <code>optional string request_id = 1;</code>
-       * @return The requestId.
+       * <code>optional string trace_id = 4;</code>
+       * @return The traceId.
        */
-      public java.lang.String getRequestId() {
-        java.lang.Object ref = requestId_;
+      public java.lang.String getTraceId() {
+        java.lang.Object ref = traceId_;
         if (!(ref instanceof java.lang.String)) {
           com.google.protobuf.ByteString bs =
               (com.google.protobuf.ByteString) ref;
           java.lang.String s = bs.toStringUtf8();
           if (bs.isValidUtf8()) {
-            requestId_ = s;
+            traceId_ = s;
           }
           return s;
         } else {
@@ -102910,17 +102910,17 @@ public final class Service {
        * ID of the trace on which to set a tag.
        * </pre>
        *
-       * <code>optional string request_id = 1;</code>
-       * @return The bytes for requestId.
+       * <code>optional string trace_id = 4;</code>
+       * @return The bytes for traceId.
        */
       public com.google.protobuf.ByteString
-          getRequestIdBytes() {
-        java.lang.Object ref = requestId_;
+          getTraceIdBytes() {
+        java.lang.Object ref = traceId_;
         if (ref instanceof String) {
           com.google.protobuf.ByteString b = 
               com.google.protobuf.ByteString.copyFromUtf8(
                   (java.lang.String) ref);
-          requestId_ = b;
+          traceId_ = b;
           return b;
         } else {
           return (com.google.protobuf.ByteString) ref;
@@ -102931,17 +102931,17 @@ public final class Service {
        * ID of the trace on which to set a tag.
        * </pre>
        *
-       * <code>optional string request_id = 1;</code>
-       * @param value The requestId to set.
+       * <code>optional string trace_id = 4;</code>
+       * @param value The traceId to set.
        * @return This builder for chaining.
        */
-      public Builder setRequestId(
+      public Builder setTraceId(
           java.lang.String value) {
         if (value == null) {
     throw new NullPointerException();
   }
   bitField0_ |= 0x00000001;
-        requestId_ = value;
+        traceId_ = value;
         onChanged();
         return this;
       }
@@ -102950,12 +102950,12 @@ public final class Service {
        * ID of the trace on which to set a tag.
        * </pre>
        *
-       * <code>optional string request_id = 1;</code>
+       * <code>optional string trace_id = 4;</code>
        * @return This builder for chaining.
        */
-      public Builder clearRequestId() {
+      public Builder clearTraceId() {
         bitField0_ = (bitField0_ & ~0x00000001);
-        requestId_ = getDefaultInstance().getRequestId();
+        traceId_ = getDefaultInstance().getTraceId();
         onChanged();
         return this;
       }
@@ -102964,17 +102964,17 @@ public final class Service {
        * ID of the trace on which to set a tag.
        * </pre>
        *
-       * <code>optional string request_id = 1;</code>
-       * @param value The bytes for requestId to set.
+       * <code>optional string trace_id = 4;</code>
+       * @param value The bytes for traceId to set.
        * @return This builder for chaining.
        */
-      public Builder setRequestIdBytes(
+      public Builder setTraceIdBytes(
           com.google.protobuf.ByteString value) {
         if (value == null) {
     throw new NullPointerException();
   }
   bitField0_ |= 0x00000001;
-        requestId_ = value;
+        traceId_ = value;
         onChanged();
         return this;
       }
@@ -103268,29 +103268,29 @@ public final class Service {
      * ID of the trace from which to delete the tag.
      * </pre>
      *
-     * <code>optional string request_id = 1;</code>
-     * @return Whether the requestId field is set.
+     * <code>optional string trace_id = 3;</code>
+     * @return Whether the traceId field is set.
      */
-    boolean hasRequestId();
+    boolean hasTraceId();
     /**
      * <pre>
      * ID of the trace from which to delete the tag.
      * </pre>
      *
-     * <code>optional string request_id = 1;</code>
-     * @return The requestId.
+     * <code>optional string trace_id = 3;</code>
+     * @return The traceId.
      */
-    java.lang.String getRequestId();
+    java.lang.String getTraceId();
     /**
      * <pre>
      * ID of the trace from which to delete the tag.
      * </pre>
      *
-     * <code>optional string request_id = 1;</code>
-     * @return The bytes for requestId.
+     * <code>optional string trace_id = 3;</code>
+     * @return The bytes for traceId.
      */
     com.google.protobuf.ByteString
-        getRequestIdBytes();
+        getTraceIdBytes();
 
     /**
      * <pre>
@@ -103334,7 +103334,7 @@ public final class Service {
       super(builder);
     }
     private DeleteTraceTag() {
-      requestId_ = "";
+      traceId_ = "";
       key_ = "";
     }
 
@@ -103369,16 +103369,16 @@ public final class Service {
             case 0:
               done = true;
               break;
-            case 10: {
-              com.google.protobuf.ByteString bs = input.readBytes();
-              bitField0_ |= 0x00000001;
-              requestId_ = bs;
-              break;
-            }
             case 18: {
               com.google.protobuf.ByteString bs = input.readBytes();
               bitField0_ |= 0x00000002;
               key_ = bs;
+              break;
+            }
+            case 26: {
+              com.google.protobuf.ByteString bs = input.readBytes();
+              bitField0_ |= 0x00000001;
+              traceId_ = bs;
               break;
             }
             default: {
@@ -103832,18 +103832,18 @@ public final class Service {
     }
 
     private int bitField0_;
-    public static final int REQUEST_ID_FIELD_NUMBER = 1;
-    private volatile java.lang.Object requestId_;
+    public static final int TRACE_ID_FIELD_NUMBER = 3;
+    private volatile java.lang.Object traceId_;
     /**
      * <pre>
      * ID of the trace from which to delete the tag.
      * </pre>
      *
-     * <code>optional string request_id = 1;</code>
-     * @return Whether the requestId field is set.
+     * <code>optional string trace_id = 3;</code>
+     * @return Whether the traceId field is set.
      */
     @java.lang.Override
-    public boolean hasRequestId() {
+    public boolean hasTraceId() {
       return ((bitField0_ & 0x00000001) != 0);
     }
     /**
@@ -103851,12 +103851,12 @@ public final class Service {
      * ID of the trace from which to delete the tag.
      * </pre>
      *
-     * <code>optional string request_id = 1;</code>
-     * @return The requestId.
+     * <code>optional string trace_id = 3;</code>
+     * @return The traceId.
      */
     @java.lang.Override
-    public java.lang.String getRequestId() {
-      java.lang.Object ref = requestId_;
+    public java.lang.String getTraceId() {
+      java.lang.Object ref = traceId_;
       if (ref instanceof java.lang.String) {
         return (java.lang.String) ref;
       } else {
@@ -103864,7 +103864,7 @@ public final class Service {
             (com.google.protobuf.ByteString) ref;
         java.lang.String s = bs.toStringUtf8();
         if (bs.isValidUtf8()) {
-          requestId_ = s;
+          traceId_ = s;
         }
         return s;
       }
@@ -103874,18 +103874,18 @@ public final class Service {
      * ID of the trace from which to delete the tag.
      * </pre>
      *
-     * <code>optional string request_id = 1;</code>
-     * @return The bytes for requestId.
+     * <code>optional string trace_id = 3;</code>
+     * @return The bytes for traceId.
      */
     @java.lang.Override
     public com.google.protobuf.ByteString
-        getRequestIdBytes() {
-      java.lang.Object ref = requestId_;
+        getTraceIdBytes() {
+      java.lang.Object ref = traceId_;
       if (ref instanceof java.lang.String) {
         com.google.protobuf.ByteString b = 
             com.google.protobuf.ByteString.copyFromUtf8(
                 (java.lang.String) ref);
-        requestId_ = b;
+        traceId_ = b;
         return b;
       } else {
         return (com.google.protobuf.ByteString) ref;
@@ -103966,11 +103966,11 @@ public final class Service {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (((bitField0_ & 0x00000001) != 0)) {
-        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, requestId_);
-      }
       if (((bitField0_ & 0x00000002) != 0)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 2, key_);
+      }
+      if (((bitField0_ & 0x00000001) != 0)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 3, traceId_);
       }
       unknownFields.writeTo(output);
     }
@@ -103981,11 +103981,11 @@ public final class Service {
       if (size != -1) return size;
 
       size = 0;
-      if (((bitField0_ & 0x00000001) != 0)) {
-        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, requestId_);
-      }
       if (((bitField0_ & 0x00000002) != 0)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, key_);
+      }
+      if (((bitField0_ & 0x00000001) != 0)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(3, traceId_);
       }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
@@ -104002,10 +104002,10 @@ public final class Service {
       }
       org.mlflow.api.proto.Service.DeleteTraceTag other = (org.mlflow.api.proto.Service.DeleteTraceTag) obj;
 
-      if (hasRequestId() != other.hasRequestId()) return false;
-      if (hasRequestId()) {
-        if (!getRequestId()
-            .equals(other.getRequestId())) return false;
+      if (hasTraceId() != other.hasTraceId()) return false;
+      if (hasTraceId()) {
+        if (!getTraceId()
+            .equals(other.getTraceId())) return false;
       }
       if (hasKey() != other.hasKey()) return false;
       if (hasKey()) {
@@ -104023,9 +104023,9 @@ public final class Service {
       }
       int hash = 41;
       hash = (19 * hash) + getDescriptor().hashCode();
-      if (hasRequestId()) {
-        hash = (37 * hash) + REQUEST_ID_FIELD_NUMBER;
-        hash = (53 * hash) + getRequestId().hashCode();
+      if (hasTraceId()) {
+        hash = (37 * hash) + TRACE_ID_FIELD_NUMBER;
+        hash = (53 * hash) + getTraceId().hashCode();
       }
       if (hasKey()) {
         hash = (37 * hash) + KEY_FIELD_NUMBER;
@@ -104164,7 +104164,7 @@ public final class Service {
       @java.lang.Override
       public Builder clear() {
         super.clear();
-        requestId_ = "";
+        traceId_ = "";
         bitField0_ = (bitField0_ & ~0x00000001);
         key_ = "";
         bitField0_ = (bitField0_ & ~0x00000002);
@@ -104199,7 +104199,7 @@ public final class Service {
         if (((from_bitField0_ & 0x00000001) != 0)) {
           to_bitField0_ |= 0x00000001;
         }
-        result.requestId_ = requestId_;
+        result.traceId_ = traceId_;
         if (((from_bitField0_ & 0x00000002) != 0)) {
           to_bitField0_ |= 0x00000002;
         }
@@ -104253,9 +104253,9 @@ public final class Service {
 
       public Builder mergeFrom(org.mlflow.api.proto.Service.DeleteTraceTag other) {
         if (other == org.mlflow.api.proto.Service.DeleteTraceTag.getDefaultInstance()) return this;
-        if (other.hasRequestId()) {
+        if (other.hasTraceId()) {
           bitField0_ |= 0x00000001;
-          requestId_ = other.requestId_;
+          traceId_ = other.traceId_;
           onChanged();
         }
         if (other.hasKey()) {
@@ -104293,16 +104293,16 @@ public final class Service {
       }
       private int bitField0_;
 
-      private java.lang.Object requestId_ = "";
+      private java.lang.Object traceId_ = "";
       /**
        * <pre>
        * ID of the trace from which to delete the tag.
        * </pre>
        *
-       * <code>optional string request_id = 1;</code>
-       * @return Whether the requestId field is set.
+       * <code>optional string trace_id = 3;</code>
+       * @return Whether the traceId field is set.
        */
-      public boolean hasRequestId() {
+      public boolean hasTraceId() {
         return ((bitField0_ & 0x00000001) != 0);
       }
       /**
@@ -104310,17 +104310,17 @@ public final class Service {
        * ID of the trace from which to delete the tag.
        * </pre>
        *
-       * <code>optional string request_id = 1;</code>
-       * @return The requestId.
+       * <code>optional string trace_id = 3;</code>
+       * @return The traceId.
        */
-      public java.lang.String getRequestId() {
-        java.lang.Object ref = requestId_;
+      public java.lang.String getTraceId() {
+        java.lang.Object ref = traceId_;
         if (!(ref instanceof java.lang.String)) {
           com.google.protobuf.ByteString bs =
               (com.google.protobuf.ByteString) ref;
           java.lang.String s = bs.toStringUtf8();
           if (bs.isValidUtf8()) {
-            requestId_ = s;
+            traceId_ = s;
           }
           return s;
         } else {
@@ -104332,17 +104332,17 @@ public final class Service {
        * ID of the trace from which to delete the tag.
        * </pre>
        *
-       * <code>optional string request_id = 1;</code>
-       * @return The bytes for requestId.
+       * <code>optional string trace_id = 3;</code>
+       * @return The bytes for traceId.
        */
       public com.google.protobuf.ByteString
-          getRequestIdBytes() {
-        java.lang.Object ref = requestId_;
+          getTraceIdBytes() {
+        java.lang.Object ref = traceId_;
         if (ref instanceof String) {
           com.google.protobuf.ByteString b = 
               com.google.protobuf.ByteString.copyFromUtf8(
                   (java.lang.String) ref);
-          requestId_ = b;
+          traceId_ = b;
           return b;
         } else {
           return (com.google.protobuf.ByteString) ref;
@@ -104353,17 +104353,17 @@ public final class Service {
        * ID of the trace from which to delete the tag.
        * </pre>
        *
-       * <code>optional string request_id = 1;</code>
-       * @param value The requestId to set.
+       * <code>optional string trace_id = 3;</code>
+       * @param value The traceId to set.
        * @return This builder for chaining.
        */
-      public Builder setRequestId(
+      public Builder setTraceId(
           java.lang.String value) {
         if (value == null) {
     throw new NullPointerException();
   }
   bitField0_ |= 0x00000001;
-        requestId_ = value;
+        traceId_ = value;
         onChanged();
         return this;
       }
@@ -104372,12 +104372,12 @@ public final class Service {
        * ID of the trace from which to delete the tag.
        * </pre>
        *
-       * <code>optional string request_id = 1;</code>
+       * <code>optional string trace_id = 3;</code>
        * @return This builder for chaining.
        */
-      public Builder clearRequestId() {
+      public Builder clearTraceId() {
         bitField0_ = (bitField0_ & ~0x00000001);
-        requestId_ = getDefaultInstance().getRequestId();
+        traceId_ = getDefaultInstance().getTraceId();
         onChanged();
         return this;
       }
@@ -104386,17 +104386,17 @@ public final class Service {
        * ID of the trace from which to delete the tag.
        * </pre>
        *
-       * <code>optional string request_id = 1;</code>
-       * @param value The bytes for requestId to set.
+       * <code>optional string trace_id = 3;</code>
+       * @param value The bytes for traceId to set.
        * @return This builder for chaining.
        */
-      public Builder setRequestIdBytes(
+      public Builder setTraceIdBytes(
           com.google.protobuf.ByteString value) {
         if (value == null) {
     throw new NullPointerException();
   }
   bitField0_ |= 0x00000001;
-        requestId_ = value;
+        traceId_ = value;
         onChanged();
         return this;
       }
@@ -149797,343 +149797,344 @@ public final class Service {
       "se]\"v\n\013SetTraceTag\022\022\n\nrequest_id\030\001 \001(\t\022\013" +
       "\n\003key\030\002 \001(\t\022\r\n\005value\030\003 \001(\t\032\n\n\010Response:+" +
       "\342?(\n&com.databricks.rpc.RPC[$this.Respon" +
-      "se]\"x\n\rSetTraceTagV3\022\022\n\nrequest_id\030\001 \001(\t" +
-      "\022\013\n\003key\030\002 \001(\t\022\r\n\005value\030\003 \001(\t\032\n\n\010Response" +
-      ":+\342?(\n&com.databricks.rpc.RPC[$this.Resp" +
-      "onse]\"j\n\016DeleteTraceTag\022\022\n\nrequest_id\030\001 " +
-      "\001(\t\022\013\n\003key\030\002 \001(\t\032\n\n\010Response:+\342?(\n&com.d" +
-      "atabricks.rpc.RPC[$this.Response]\"l\n\020Del" +
-      "eteTraceTagV3\022\022\n\nrequest_id\030\001 \001(\t\022\013\n\003key" +
-      "\030\002 \001(\t\032\n\n\010Response:+\342?(\n&com.databricks." +
-      "rpc.RPC[$this.Response]\"0\n\005Trace\022\'\n\ntrac" +
-      "e_info\030\001 \001(\0132\023.mlflow.TraceInfoV3\"\266\003\n\rTr" +
-      "aceLocation\0225\n\004type\030\001 \001(\0162\'.mlflow.Trace" +
-      "Location.TraceLocationType\022K\n\021mlflow_exp" +
-      "eriment\030\002 \001(\0132..mlflow.TraceLocation.Mlf" +
-      "lowExperimentLocationH\000\022G\n\017inference_tab" +
-      "le\030\003 \001(\0132,.mlflow.TraceLocation.Inferenc" +
-      "eTableLocationH\000\0321\n\030MlflowExperimentLoca" +
-      "tion\022\025\n\rexperiment_id\030\001 \001(\t\0321\n\026Inference" +
-      "TableLocation\022\027\n\017full_table_name\030\001 \001(\t\"d" +
-      "\n\021TraceLocationType\022#\n\037TRACE_LOCATION_TY" +
-      "PE_UNSPECIFIED\020\000\022\025\n\021MLFLOW_EXPERIMENT\020\001\022" +
-      "\023\n\017INFERENCE_TABLE\020\002B\014\n\nidentifier\"\233\005\n\013T" +
-      "raceInfoV3\022\020\n\010trace_id\030\001 \001(\t\022\031\n\021client_r" +
-      "equest_id\030\002 \001(\t\022-\n\016trace_location\030\003 \001(\0132" +
-      "\025.mlflow.TraceLocation\022\017\n\007request\030\004 \001(\t\022" +
-      "\020\n\010response\030\005 \001(\t\022\027\n\017request_preview\030\014 \001" +
-      "(\t\022\030\n\020response_preview\030\r \001(\t\0220\n\014request_" +
-      "time\030\006 \001(\0132\032.google.protobuf.Timestamp\0225" +
-      "\n\022execution_duration\030\007 \001(\0132\031.google.prot" +
-      "obuf.Duration\022(\n\005state\030\010 \001(\0162\031.mlflow.Tr" +
-      "aceInfoV3.State\022>\n\016trace_metadata\030\t \003(\0132" +
-      "&.mlflow.TraceInfoV3.TraceMetadataEntry\022" +
-      "3\n\013assessments\030\n \003(\0132\036.mlflow.assessment" +
-      "s.Assessment\022+\n\004tags\030\013 \003(\0132\035.mlflow.Trac" +
-      "eInfoV3.TagsEntry\0324\n\022TraceMetadataEntry\022" +
-      "\013\n\003key\030\001 \001(\t\022\r\n\005value\030\002 \001(\t:\0028\001\032+\n\tTagsE" +
-      "ntry\022\013\n\003key\030\001 \001(\t\022\r\n\005value\030\002 \001(\t:\0028\001\"B\n\005" +
-      "State\022\025\n\021STATE_UNSPECIFIED\020\000\022\006\n\002OK\020\001\022\t\n\005" +
-      "ERROR\020\002\022\017\n\013IN_PROGRESS\020\003\"\211\001\n\014StartTraceV" +
-      "3\022\"\n\005trace\030\001 \001(\0132\r.mlflow.TraceB\004\370\206\031\001\032(\n" +
-      "\010Response\022\034\n\005trace\030\001 \001(\0132\r.mlflow.Trace:" +
+      "se]\"\210\001\n\rSetTraceTagV3\022\020\n\010trace_id\030\004 \001(\t\022" +
+      "\013\n\003key\030\002 \001(\t\022\r\n\005value\030\003 \001(\t\032\n\n\010Response:" +
       "+\342?(\n&com.databricks.rpc.RPC[$this.Respo" +
-      "nse]\"h\n\016DatasetSummary\022\033\n\rexperiment_id\030" +
-      "\001 \001(\tB\004\370\206\031\001\022\022\n\004name\030\002 \001(\tB\004\370\206\031\001\022\024\n\006diges" +
-      "t\030\003 \001(\tB\004\370\206\031\001\022\017\n\007context\030\004 \001(\t\"\224\001\n\016Searc" +
-      "hDatasets\022\026\n\016experiment_ids\030\001 \003(\t\032=\n\010Res" +
-      "ponse\0221\n\021dataset_summaries\030\001 \003(\0132\026.mlflo" +
-      "w.DatasetSummary:+\342?(\n&com.databricks.rp" +
-      "c.RPC[$this.Response]\"\232\002\n\021CreateLoggedMo" +
-      "del\022\033\n\rexperiment_id\030\001 \001(\tB\004\370\206\031\001\022\014\n\004name" +
-      "\030\002 \001(\t\022\022\n\nmodel_type\030\003 \001(\t\022\025\n\rsource_run" +
-      "_id\030\004 \001(\t\022,\n\006params\030\005 \003(\0132\034.mlflow.Logge" +
-      "dModelParameter\022$\n\004tags\030\006 \003(\0132\026.mlflow.L" +
-      "oggedModelTag\032.\n\010Response\022\"\n\005model\030\001 \001(\013" +
-      "2\023.mlflow.LoggedModel:+\342?(\n&com.databric" +
-      "ks.rpc.RPC[$this.Response]\"\273\001\n\023FinalizeL" +
-      "oggedModel\022\026\n\010model_id\030\001 \001(\tB\004\370\206\031\001\022/\n\006st" +
-      "atus\030\002 \001(\0162\031.mlflow.LoggedModelStatusB\004\370" +
-      "\206\031\001\032.\n\010Response\022\"\n\005model\030\001 \001(\0132\023.mlflow." +
-      "LoggedModel:+\342?(\n&com.databricks.rpc.RPC" +
-      "[$this.Response]\"\205\001\n\016GetLoggedModel\022\026\n\010m" +
-      "odel_id\030\001 \001(\tB\004\370\206\031\001\032.\n\010Response\022\"\n\005model" +
-      "\030\001 \001(\0132\023.mlflow.LoggedModel:+\342?(\n&com.da" +
-      "tabricks.rpc.RPC[$this.Response]\"d\n\021Dele" +
-      "teLoggedModel\022\026\n\010model_id\030\001 \001(\tB\004\370\206\031\001\032\n\n" +
-      "\010Response:+\342?(\n&com.databricks.rpc.RPC[$" +
-      "this.Response]\"\367\003\n\022SearchLoggedModels\022\026\n" +
-      "\016experiment_ids\030\001 \003(\t\022\016\n\006filter\030\002 \001(\t\0224\n" +
-      "\010datasets\030\006 \003(\0132\".mlflow.SearchLoggedMod" +
-      "els.Dataset\022\027\n\013max_results\030\003 \001(\005:\00250\0224\n\010" +
-      "order_by\030\004 \003(\0132\".mlflow.SearchLoggedMode" +
-      "ls.OrderBy\022\022\n\npage_token\030\005 \001(\t\032=\n\007Datase" +
-      "t\022\032\n\014dataset_name\030\001 \001(\tB\004\370\206\031\001\022\026\n\016dataset" +
-      "_digest\030\002 \001(\t\032j\n\007OrderBy\022\030\n\nfield_name\030\001" +
-      " \001(\tB\004\370\206\031\001\022\027\n\tascending\030\002 \001(\010:\004true\022\024\n\014d" +
-      "ataset_name\030\003 \001(\t\022\026\n\016dataset_digest\030\004 \001(" +
-      "\t\032H\n\010Response\022#\n\006models\030\001 \003(\0132\023.mlflow.L" +
-      "oggedModel\022\027\n\017next_page_token\030\002 \001(\t:+\342?(" +
-      "\n&com.databricks.rpc.RPC[$this.Response]" +
-      "\"\257\001\n\022SetLoggedModelTags\022\026\n\010model_id\030\001 \001(" +
-      "\tB\004\370\206\031\001\022$\n\004tags\030\002 \003(\0132\026.mlflow.LoggedMod" +
-      "elTag\032.\n\010Response\022\"\n\005model\030\001 \001(\0132\023.mlflo" +
-      "w.LoggedModel:+\342?(\n&com.databricks.rpc.R" +
-      "PC[$this.Response]\"~\n\024DeleteLoggedModelT" +
-      "ag\022\026\n\010model_id\030\001 \001(\tB\004\370\206\031\001\022\025\n\007tag_key\030\002 " +
-      "\001(\tB\004\370\206\031\001\032\n\n\010Response:+\342?(\n&com.databric" +
-      "ks.rpc.RPC[$this.Response]\"\354\001\n\030ListLogge" +
-      "dModelArtifacts\022\026\n\010model_id\030\001 \001(\tB\004\370\206\031\001\022" +
-      "\037\n\027artifact_directory_path\030\002 \001(\t\022\022\n\npage" +
-      "_token\030\003 \001(\t\032V\n\010Response\022\020\n\010root_uri\030\001 \001" +
-      "(\t\022\037\n\005files\030\002 \003(\0132\020.mlflow.FileInfo\022\027\n\017n" +
-      "ext_page_token\030\003 \001(\t:+\342?(\n&com.databrick" +
-      "s.rpc.RPC[$this.Response]\"\234\001\n\033LogLoggedM" +
-      "odelParamsRequest\022\026\n\010model_id\030\001 \001(\tB\004\370\206\031" +
-      "\001\022,\n\006params\030\002 \003(\0132\034.mlflow.LoggedModelPa" +
-      "rameter\032\n\n\010Response:+\342?(\n&com.databricks" +
-      ".rpc.RPC[$this.Response]\"[\n\013LoggedModel\022" +
-      "%\n\004info\030\001 \001(\0132\027.mlflow.LoggedModelInfo\022%" +
-      "\n\004data\030\002 \001(\0132\027.mlflow.LoggedModelData\"\204\003" +
-      "\n\017LoggedModelInfo\022\020\n\010model_id\030\001 \001(\t\022\025\n\re" +
-      "xperiment_id\030\002 \001(\t\022\014\n\004name\030\003 \001(\t\022\035\n\025crea" +
-      "tion_timestamp_ms\030\004 \001(\003\022!\n\031last_updated_" +
-      "timestamp_ms\030\005 \001(\003\022\024\n\014artifact_uri\030\006 \001(\t" +
-      "\022)\n\006status\030\007 \001(\0162\031.mlflow.LoggedModelSta" +
-      "tus\022\022\n\ncreator_id\030\010 \001(\003\022\022\n\nmodel_type\030\t " +
-      "\001(\t\022\025\n\rsource_run_id\030\n \001(\t\022\026\n\016status_mes" +
-      "sage\030\013 \001(\t\022$\n\004tags\030\014 \003(\0132\026.mlflow.Logged" +
-      "ModelTag\022:\n\rregistrations\030\r \003(\0132#.mlflow" +
-      ".LoggedModelRegistrationInfo\",\n\016LoggedMo" +
-      "delTag\022\013\n\003key\030\001 \001(\t\022\r\n\005value\030\002 \001(\t\"<\n\033Lo" +
-      "ggedModelRegistrationInfo\022\014\n\004name\030\001 \001(\t\022" +
-      "\017\n\007version\030\002 \001(\t\"`\n\017LoggedModelData\022,\n\006p" +
-      "arams\030\001 \003(\0132\034.mlflow.LoggedModelParamete" +
-      "r\022\037\n\007metrics\030\002 \003(\0132\016.mlflow.Metric\"2\n\024Lo" +
-      "ggedModelParameter\022\013\n\003key\030\001 \001(\t\022\r\n\005value" +
-      "\030\002 \001(\t\"\201\002\n\016SearchTracesV3\022(\n\tlocations\030\001" +
-      " \003(\0132\025.mlflow.TraceLocation\022\016\n\006filter\030\002 " +
-      "\001(\t\022\030\n\013max_results\030\003 \001(\005:\003100\022\020\n\010order_b" +
-      "y\030\004 \003(\t\022\022\n\npage_token\030\005 \001(\t\032H\n\010Response\022" +
-      "#\n\006traces\030\001 \003(\0132\023.mlflow.TraceInfoV3\022\027\n\017" +
-      "next_page_token\030\002 \001(\t:+\342?(\n&com.databric" +
-      "ks.rpc.RPC[$this.Response]*6\n\010ViewType\022\017" +
-      "\n\013ACTIVE_ONLY\020\001\022\020\n\014DELETED_ONLY\020\002\022\007\n\003ALL" +
-      "\020\003*I\n\nSourceType\022\014\n\010NOTEBOOK\020\001\022\007\n\003JOB\020\002\022" +
-      "\013\n\007PROJECT\020\003\022\t\n\005LOCAL\020\004\022\014\n\007UNKNOWN\020\350\007*M\n" +
-      "\tRunStatus\022\013\n\007RUNNING\020\001\022\r\n\tSCHEDULED\020\002\022\014" +
-      "\n\010FINISHED\020\003\022\n\n\006FAILED\020\004\022\n\n\006KILLED\020\005*O\n\013" +
-      "TraceStatus\022\034\n\030TRACE_STATUS_UNSPECIFIED\020" +
-      "\000\022\006\n\002OK\020\001\022\t\n\005ERROR\020\002\022\017\n\013IN_PROGRESS\020\003*\212\001" +
-      "\n\021LoggedModelStatus\022#\n\037LOGGED_MODEL_STAT" +
-      "US_UNSPECIFIED\020\000\022\030\n\024LOGGED_MODEL_PENDING" +
-      "\020\001\022\026\n\022LOGGED_MODEL_READY\020\002\022\036\n\032LOGGED_MOD" +
-      "EL_UPLOAD_FAILED\020\0032\363?\n\rMlflowService\022\246\001\n" +
-      "\023getExperimentByName\022\033.mlflow.GetExperim" +
-      "entByName\032$.mlflow.GetExperimentByName.R" +
-      "esponse\"L\362\206\031H\n,\n\003GET\022\037/mlflow/experiment" +
-      "s/get-by-name\032\004\010\002\020\000\020\001*\026Get Experiment By" +
-      " Name\022\224\001\n\020createExperiment\022\030.mlflow.Crea" +
-      "teExperiment\032!.mlflow.CreateExperiment.R" +
-      "esponse\"C\362\206\031?\n(\n\004POST\022\032/mlflow/experimen" +
-      "ts/create\032\004\010\002\020\000\020\001*\021Create Experiment\022\301\001\n" +
-      "\021searchExperiments\022\031.mlflow.SearchExperi" +
-      "ments\032\".mlflow.SearchExperiments.Respons" +
-      "e\"m\362\206\031i\n(\n\004POST\022\032/mlflow/experiments/sea" +
-      "rch\032\004\010\002\020\000\n\'\n\003GET\022\032/mlflow/experiments/se" +
-      "arch\032\004\010\002\020\000\020\001*\022Search Experiments\022\210\001\n\rget" +
-      "Experiment\022\025.mlflow.GetExperiment\032\036.mlfl" +
-      "ow.GetExperiment.Response\"@\362\206\0318\n$\n\003GET\022\027" +
-      "/mlflow/experiments/get\032\004\010\002\020\000\020\001*\016Get Exp" +
-      "eriment\272\214\031\000\022\224\001\n\020deleteExperiment\022\030.mlflo" +
-      "w.DeleteExperiment\032!.mlflow.DeleteExperi" +
-      "ment.Response\"C\362\206\031?\n(\n\004POST\022\032/mlflow/exp" +
-      "eriments/delete\032\004\010\002\020\000\020\001*\021Delete Experime" +
-      "nt\022\231\001\n\021restoreExperiment\022\031.mlflow.Restor" +
-      "eExperiment\032\".mlflow.RestoreExperiment.R" +
-      "esponse\"E\362\206\031A\n)\n\004POST\022\033/mlflow/experimen" +
-      "ts/restore\032\004\010\002\020\000\020\001*\022Restore Experiment\022\224" +
-      "\001\n\020updateExperiment\022\030.mlflow.UpdateExper" +
-      "iment\032!.mlflow.UpdateExperiment.Response" +
-      "\"C\362\206\031?\n(\n\004POST\022\032/mlflow/experiments/upda" +
-      "te\032\004\010\002\020\000\020\001*\021Update Experiment\022q\n\tcreateR" +
-      "un\022\021.mlflow.CreateRun\032\032.mlflow.CreateRun" +
-      ".Response\"5\362\206\0311\n!\n\004POST\022\023/mlflow/runs/cr" +
-      "eate\032\004\010\002\020\000\020\001*\nCreate Run\022q\n\tupdateRun\022\021." +
-      "mlflow.UpdateRun\032\032.mlflow.UpdateRun.Resp" +
-      "onse\"5\362\206\0311\n!\n\004POST\022\023/mlflow/runs/update\032" +
-      "\004\010\002\020\000\020\001*\nUpdate Run\022q\n\tdeleteRun\022\021.mlflo" +
-      "w.DeleteRun\032\032.mlflow.DeleteRun.Response\"" +
-      "5\362\206\0311\n!\n\004POST\022\023/mlflow/runs/delete\032\004\010\002\020\000" +
-      "\020\001*\nDelete Run\022v\n\nrestoreRun\022\022.mlflow.Re",
-      "storeRun\032\033.mlflow.RestoreRun.Response\"7\362" +
-      "\206\0313\n\"\n\004POST\022\024/mlflow/runs/restore\032\004\010\002\020\000\020" +
-      "\001*\013Restore Run\022u\n\tlogMetric\022\021.mlflow.Log" +
-      "Metric\032\032.mlflow.LogMetric.Response\"9\362\206\0315" +
-      "\n%\n\004POST\022\027/mlflow/runs/log-metric\032\004\010\002\020\000\020" +
-      "\001*\nLog Metric\022t\n\010logParam\022\020.mlflow.LogPa" +
-      "ram\032\031.mlflow.LogParam.Response\";\362\206\0317\n(\n\004" +
-      "POST\022\032/mlflow/runs/log-parameter\032\004\010\002\020\000\020\001" +
-      "*\tLog Param\022\241\001\n\020setExperimentTag\022\030.mlflo" +
-      "w.SetExperimentTag\032!.mlflow.SetExperimen" +
-      "tTag.Response\"P\362\206\031L\n4\n\004POST\022&/mlflow/exp" +
-      "eriments/set-experiment-tag\032\004\010\002\020\000\020\001*\022Set" +
-      " Experiment Tag\022\260\001\n\023deleteExperimentTag\022" +
-      "\033.mlflow.DeleteExperimentTag\032$.mlflow.De" +
-      "leteExperimentTag.Response\"V\362\206\031R\n7\n\004POST" +
-      "\022)/mlflow/experiments/delete-experiment-" +
-      "tag\032\004\010\002\020\000\020\001*\025Delete Experiment Tag\022f\n\006se" +
-      "tTag\022\016.mlflow.SetTag\032\027.mlflow.SetTag.Res" +
-      "ponse\"3\362\206\031/\n\"\n\004POST\022\024/mlflow/runs/set-ta" +
-      "g\032\004\010\002\020\000\020\001*\007Set Tag\022\210\001\n\013setTraceTag\022\023.mlf" +
-      "low.SetTraceTag\032\034.mlflow.SetTraceTag.Res" +
-      "ponse\"F\362\206\031B\n/\n\005PATCH\022 /mlflow/traces/{re" +
-      "quest_id}/tags\032\004\010\002\020\000\020\003*\rSet Trace Tag\022\217\001" +
-      "\n\rsetTraceTagV3\022\025.mlflow.SetTraceTagV3\032\036" +
-      ".mlflow.SetTraceTagV3.Response\"G\362\206\031C\n-\n\005" +
-      "PATCH\022\036/mlflow/traces/{trace_id}/tags\032\004\010" +
-      "\003\020\000\020\003*\020Set Trace Tag V3\022\225\001\n\016deleteTraceT" +
-      "ag\022\026.mlflow.DeleteTraceTag\032\037.mlflow.Dele" +
-      "teTraceTag.Response\"J\362\206\031F\n0\n\006DELETE\022 /ml" +
-      "flow/traces/{request_id}/tags\032\004\010\002\020\000\020\003*\020D" +
-      "elete Trace Tag\022\234\001\n\020deleteTraceTagV3\022\030.m" +
-      "lflow.DeleteTraceTagV3\032!.mlflow.DeleteTr" +
-      "aceTagV3.Response\"K\362\206\031G\n.\n\006DELETE\022\036/mlfl" +
-      "ow/traces/{trace_id}/tags\032\004\010\003\020\000\020\003*\023Delet" +
-      "e Trace Tag V3\022u\n\tdeleteTag\022\021.mlflow.Del" +
-      "eteTag\032\032.mlflow.DeleteTag.Response\"9\362\206\0315" +
-      "\n%\n\004POST\022\027/mlflow/runs/delete-tag\032\004\010\002\020\000\020" +
-      "\001*\nDelete Tag\022e\n\006getRun\022\016.mlflow.GetRun\032" +
-      "\027.mlflow.GetRun.Response\"2\362\206\031*\n\035\n\003GET\022\020/" +
-      "mlflow/runs/get\032\004\010\002\020\000\020\001*\007Get Run\272\214\031\000\022y\n\n" +
-      "searchRuns\022\022.mlflow.SearchRuns\032\033.mlflow." +
-      "SearchRuns.Response\":\362\206\0312\n!\n\004POST\022\023/mlfl" +
-      "ow/runs/search\032\004\010\002\020\000\020\001*\013Search Runs\272\214\031\000\022" +
-      "\207\001\n\rlistArtifacts\022\025.mlflow.ListArtifacts" +
-      "\032\036.mlflow.ListArtifacts.Response\"?\362\206\0317\n#" +
-      "\n\003GET\022\026/mlflow/artifacts/list\032\004\010\002\020\000\020\001*\016L" +
-      "ist Artifacts\272\214\031\000\022\225\001\n\020getMetricHistory\022\030" +
-      ".mlflow.GetMetricHistory\032!.mlflow.GetMet" +
-      "ricHistory.Response\"D\362\206\031@\n(\n\003GET\022\033/mlflo" +
-      "w/metrics/get-history\032\004\010\002\020\000\020\001*\022Get Metri" +
-      "c History\022\267\001\n\034getMetricHistoryBulkInterv" +
-      "al\022$.mlflow.GetMetricHistoryBulkInterval" +
-      "\032-.mlflow.GetMetricHistoryBulkInterval.R" +
-      "esponse\"B\362\206\031:\n6\n\003GET\022)/mlflow/metrics/ge" +
-      "t-history-bulk-interval\032\004\010\002\020\013\020\003\272\214\031\000\022p\n\010l" +
-      "ogBatch\022\020.mlflow.LogBatch\032\031.mlflow.LogBa" +
-      "tch.Response\"7\362\206\0313\n$\n\004POST\022\026/mlflow/runs" +
-      "/log-batch\032\004\010\002\020\000\020\001*\tLog Batch\022p\n\010logMode" +
-      "l\022\020.mlflow.LogModel\032\031.mlflow.LogModel.Re" +
-      "sponse\"7\362\206\0313\n$\n\004POST\022\026/mlflow/runs/log-m" +
-      "odel\032\004\010\002\020\000\020\001*\tLog Model\022u\n\tlogInputs\022\021.m" +
-      "lflow.LogInputs\032\032.mlflow.LogInputs.Respo" +
-      "nse\"9\362\206\0315\n%\n\004POST\022\027/mlflow/runs/log-inpu" +
-      "ts\032\004\010\002\020\000\020\001*\nLog Inputs\022v\n\nlogOutputs\022\022.m" +
-      "lflow.LogOutputs\032\033.mlflow.LogOutputs.Res" +
-      "ponse\"7\362\206\0313\n\"\n\004POST\022\024/mlflow/runs/output" +
-      "s\032\004\010\002\020\000\020\003*\013Log Outputs\022\207\001\n\016searchDataset" +
-      "s\022\026.mlflow.SearchDatasets\032\037.mlflow.Searc" +
-      "hDatasets.Response\"<\362\206\0314\n0\n\004POST\022\"mlflow" +
-      "/experiments/search-datasets\032\004\010\002\020\000\020\003\272\214\031\000" +
-      "\022p\n\nstartTrace\022\022.mlflow.StartTrace\032\033.mlf" +
-      "low.StartTrace.Response\"1\362\206\031-\n\034\n\004POST\022\016/" +
-      "mlflow/traces\032\004\010\002\020\000\020\003*\013Start Trace\022v\n\010en" +
-      "dTrace\022\020.mlflow.EndTrace\032\031.mlflow.EndTra" +
-      "ce.Response\"=\362\206\0319\n*\n\005PATCH\022\033/mlflow/trac" +
-      "es/{request_id}\032\004\010\002\020\000\020\003*\tEnd Trace\022\211\001\n\014g" +
-      "etTraceInfo\022\024.mlflow.GetTraceInfo\032\035.mlfl" +
-      "ow.GetTraceInfo.Response\"D\362\206\031@\n-\n\003GET\022 /" +
-      "mlflow/traces/{request_id}/info\032\004\010\002\020\000\020\003*" +
-      "\rGet TraceInfo\022\213\001\n\016getTraceInfoV3\022\026.mlfl" +
-      "ow.GetTraceInfoV3\032\037.mlflow.GetTraceInfoV" +
-      "3.Response\"@\362\206\031<\n&\n\003GET\022\031/mlflow/traces/" +
-      "{trace_id}\032\004\010\003\020\000\020\003*\020Get TraceInfo v3\022w\n\014" +
-      "searchTraces\022\024.mlflow.SearchTraces\032\035.mlf" +
-      "low.SearchTraces.Response\"2\362\206\031.\n\033\n\003GET\022\016" +
-      "/mlflow/traces\032\004\010\002\020\000\020\003*\rSearch Traces\022\210\001" +
-      "\n\016searchTracesV3\022\026.mlflow.SearchTracesV3" +
-      "\032\037.mlflow.SearchTracesV3.Response\"=\362\206\0319\n" +
-      "#\n\004POST\022\025/mlflow/traces/search\032\004\010\003\020\000\020\003*\020" +
-      "Search Traces V3\022i\n\014startTraceV3\022\024.mlflo" +
-      "w.StartTraceV3\032\035.mlflow.StartTraceV3.Res" +
-      "ponse\"$\362\206\031 \n\034\n\004POST\022\016/mlflow/traces\032\004\010\003\020" +
-      "\000\020\003\022\242\001\n\031searchUnifiedTraceHandler\022\033.mlfl" +
-      "ow.SearchUnifiedTraces\032$.mlflow.SearchUn" +
-      "ifiedTraces.Response\"B\362\206\031>\n#\n\003GET\022\026/mlfl" +
-      "ow/unified-traces\032\004\010\002\020\000\020\003*\025Search Unifie" +
-      "d Traces\022\257\001\n\025getOnlineTraceDetails\022\035.mlf" +
-      "low.GetOnlineTraceDetails\032&.mlflow.GetOn" +
-      "lineTraceDetails.Response\"O\362\206\031K\n-\n\003GET\022 " +
-      "/mlflow/get-online-trace-details\032\004\010\002\020\000\020\003" +
-      "*\030Get Online Trace Details\022\206\001\n\014deleteTra" +
-      "ces\022\024.mlflow.DeleteTraces\032\035.mlflow.Delet" +
-      "eTraces.Response\"A\362\206\031=\n*\n\004POST\022\034/mlflow/" +
-      "traces/delete-traces\032\004\010\002\020\000\020\003*\rDelete Tra" +
-      "ces\022\217\001\n\016deleteTracesV3\022\026.mlflow.DeleteTr" +
-      "acesV3\032\037.mlflow.DeleteTracesV3.Response\"" +
-      "D\362\206\031@\n*\n\004POST\022\034/mlflow/traces/delete-tra" +
-      "ces\032\004\010\003\020\000\020\003*\020Delete Traces V3\022\224\001\n\021create" +
-      "LoggedModel\022\031.mlflow.CreateLoggedModel\032\"" +
-      ".mlflow.CreateLoggedModel.Response\"@\362\206\031<" +
-      "\n#\n\004POST\022\025/mlflow/logged-models\032\004\010\002\020\000\020\003*" +
-      "\023Create Logged Model\022\250\001\n\023finalizeLoggedM" +
-      "odel\022\033.mlflow.FinalizeLoggedModel\032$.mlfl" +
-      "ow.FinalizeLoggedModel.Response\"N\362\206\031J\n/\n" +
-      "\005PATCH\022 /mlflow/logged-models/{model_id}" +
-      "\032\004\010\002\020\000\020\003*\025Finalize Logged Model\022\222\001\n\016getL" +
-      "oggedModel\022\026.mlflow.GetLoggedModel\032\037.mlf" +
-      "low.GetLoggedModel.Response\"G\362\206\031C\n-\n\003GET" +
-      "\022 /mlflow/logged-models/{model_id}\032\004\010\002\020\000" +
-      "\020\003*\020Get Logged Model\022\243\001\n\021deleteLoggedMod" +
-      "el\022\031.mlflow.DeleteLoggedModel\032\".mlflow.D" +
-      "eleteLoggedModel.Response\"O\362\206\031K\n0\n\006DELET" +
-      "E\022 /mlflow/logged-models/{model_id}\032\004\010\002\020" +
-      "\000\020\003*\025Delete a Logged Model\022\236\001\n\022searchLog" +
-      "gedModels\022\032.mlflow.SearchLoggedModels\032#." +
-      "mlflow.SearchLoggedModels.Response\"G\362\206\031C" +
-      "\n*\n\004POST\022\034/mlflow/logged-models/search\032\004" +
-      "\010\002\020\000\020\003*\023Search LoggedModels\022\251\001\n\022setLogge" +
-      "dModelTags\022\032.mlflow.SetLoggedModelTags\032#" +
-      ".mlflow.SetLoggedModelTags.Response\"R\362\206\031" +
-      "N\n4\n\005PATCH\022%/mlflow/logged-models/{model" +
-      "_id}/tags\032\004\010\002\020\000\020\003*\024Set Logged Model Tag\022" +
-      "\275\001\n\024deleteLoggedModelTag\022\034.mlflow.Delete" +
-      "LoggedModelTag\032%.mlflow.DeleteLoggedMode" +
-      "lTag.Response\"`\362\206\031\\\n?\n\006DELETE\022//mlflow/l" +
-      "ogged-models/{model_id}/tags/{tag_key}\032\004" +
-      "\010\002\020\000\020\003*\027Delete Logged Model Tag\022\326\001\n\030list" +
-      "LoggedModelArtifacts\022 .mlflow.ListLogged" +
-      "ModelArtifacts\032).mlflow.ListLoggedModelA" +
-      "rtifacts.Response\"m\362\206\031i\nC\n\003GET\0226/mlflow/" +
-      "logged-models/{model_id}/artifacts/direc" +
-      "tories\032\004\010\002\020\000\020\003* List Artifacts for Logge" +
-      "d Models\022\301\001\n\024LogLoggedModelParams\022#.mlfl" +
-      "ow.LogLoggedModelParamsRequest\032,.mlflow." +
-      "LogLoggedModelParamsRequest.Response\"V\362\206" +
-      "\031R\n5\n\004POST\022\'/mlflow/logged-models/{model" +
-      "_id}/params\032\004\010\002\020\000\020\003*\027Log Logged Model Pa" +
-      "rams\022\260\001\n\rGetAssessment\022\034.mlflow.GetAsses" +
-      "smentRequest\032%.mlflow.GetAssessmentReque" +
-      "st.Response\"Z\362\206\031V\nB\n\003GET\0225/mlflow/traces" +
-      "/{trace_id}/assessments/{assessment_id}\032" +
-      "\004\010\003\020\000\020\003*\016Get Assessment\022\337\001\n\020createAssess" +
-      "ment\022\030.mlflow.CreateAssessment\032!.mlflow." +
-      "CreateAssessment.Response\"\215\001\362\206\031\210\001\n>\n\004POS" +
-      "T\0220/mlflow/traces/{assessment.trace_id}/" +
-      "assessments\032\004\010\003\020\000\020\003\030\350\007\030\356\007\030\014\030\001*:Create an" +
-      " assessment of a trace or a span within " +
-      "the trace\022\320\001\n\020updateAssessment\022\030.mlflow." +
-      "UpdateAssessment\032!.mlflow.UpdateAssessme" +
-      "nt.Response\"\177\362\206\031{\nD\n\005PATCH\0225/mlflow/trac" +
-      "es/{trace_id}/assessments/{assessment_id" +
-      "}\032\004\010\003\020\000\020\003\030\350\007\030\356\007\030\001*)Update an existing as" +
-      "sessment on a trace.\022\261\001\n\020deleteAssessmen" +
-      "t\022\030.mlflow.DeleteAssessment\032!.mlflow.Del" +
-      "eteAssessment.Response\"`\362\206\031\\\nE\n\006DELETE\0225" +
-      "/mlflow/traces/{trace_id}/assessments/{a" +
-      "ssessment_id}\032\004\010\003\020\000\020\003*\021Delete Assessment" +
-      "B\036\n\024org.mlflow.api.proto\220\001\001\342?\002\020\001"
+      "nse]J\004\010\001\020\002R\nrequest_id\"z\n\016DeleteTraceTag" +
+      "\022\020\n\010trace_id\030\003 \001(\t\022\013\n\003key\030\002 \001(\t\032\n\n\010Respo" +
+      "nse:+\342?(\n&com.databricks.rpc.RPC[$this.R" +
+      "esponse]J\004\010\001\020\002R\nrequest_id\"l\n\020DeleteTrac" +
+      "eTagV3\022\022\n\nrequest_id\030\001 \001(\t\022\013\n\003key\030\002 \001(\t\032" +
+      "\n\n\010Response:+\342?(\n&com.databricks.rpc.RPC" +
+      "[$this.Response]\"0\n\005Trace\022\'\n\ntrace_info\030" +
+      "\001 \001(\0132\023.mlflow.TraceInfoV3\"\266\003\n\rTraceLoca" +
+      "tion\0225\n\004type\030\001 \001(\0162\'.mlflow.TraceLocatio" +
+      "n.TraceLocationType\022K\n\021mlflow_experiment" +
+      "\030\002 \001(\0132..mlflow.TraceLocation.MlflowExpe" +
+      "rimentLocationH\000\022G\n\017inference_table\030\003 \001(" +
+      "\0132,.mlflow.TraceLocation.InferenceTableL" +
+      "ocationH\000\0321\n\030MlflowExperimentLocation\022\025\n" +
+      "\rexperiment_id\030\001 \001(\t\0321\n\026InferenceTableLo" +
+      "cation\022\027\n\017full_table_name\030\001 \001(\t\"d\n\021Trace" +
+      "LocationType\022#\n\037TRACE_LOCATION_TYPE_UNSP" +
+      "ECIFIED\020\000\022\025\n\021MLFLOW_EXPERIMENT\020\001\022\023\n\017INFE" +
+      "RENCE_TABLE\020\002B\014\n\nidentifier\"\233\005\n\013TraceInf" +
+      "oV3\022\020\n\010trace_id\030\001 \001(\t\022\031\n\021client_request_" +
+      "id\030\002 \001(\t\022-\n\016trace_location\030\003 \001(\0132\025.mlflo" +
+      "w.TraceLocation\022\017\n\007request\030\004 \001(\t\022\020\n\010resp" +
+      "onse\030\005 \001(\t\022\027\n\017request_preview\030\014 \001(\t\022\030\n\020r" +
+      "esponse_preview\030\r \001(\t\0220\n\014request_time\030\006 " +
+      "\001(\0132\032.google.protobuf.Timestamp\0225\n\022execu" +
+      "tion_duration\030\007 \001(\0132\031.google.protobuf.Du" +
+      "ration\022(\n\005state\030\010 \001(\0162\031.mlflow.TraceInfo" +
+      "V3.State\022>\n\016trace_metadata\030\t \003(\0132&.mlflo" +
+      "w.TraceInfoV3.TraceMetadataEntry\0223\n\013asse" +
+      "ssments\030\n \003(\0132\036.mlflow.assessments.Asses" +
+      "sment\022+\n\004tags\030\013 \003(\0132\035.mlflow.TraceInfoV3" +
+      ".TagsEntry\0324\n\022TraceMetadataEntry\022\013\n\003key\030" +
+      "\001 \001(\t\022\r\n\005value\030\002 \001(\t:\0028\001\032+\n\tTagsEntry\022\013\n" +
+      "\003key\030\001 \001(\t\022\r\n\005value\030\002 \001(\t:\0028\001\"B\n\005State\022\025" +
+      "\n\021STATE_UNSPECIFIED\020\000\022\006\n\002OK\020\001\022\t\n\005ERROR\020\002" +
+      "\022\017\n\013IN_PROGRESS\020\003\"\211\001\n\014StartTraceV3\022\"\n\005tr" +
+      "ace\030\001 \001(\0132\r.mlflow.TraceB\004\370\206\031\001\032(\n\010Respon" +
+      "se\022\034\n\005trace\030\001 \001(\0132\r.mlflow.Trace:+\342?(\n&c" +
+      "om.databricks.rpc.RPC[$this.Response]\"h\n" +
+      "\016DatasetSummary\022\033\n\rexperiment_id\030\001 \001(\tB\004" +
+      "\370\206\031\001\022\022\n\004name\030\002 \001(\tB\004\370\206\031\001\022\024\n\006digest\030\003 \001(\t" +
+      "B\004\370\206\031\001\022\017\n\007context\030\004 \001(\t\"\224\001\n\016SearchDatase" +
+      "ts\022\026\n\016experiment_ids\030\001 \003(\t\032=\n\010Response\0221" +
+      "\n\021dataset_summaries\030\001 \003(\0132\026.mlflow.Datas" +
+      "etSummary:+\342?(\n&com.databricks.rpc.RPC[$" +
+      "this.Response]\"\232\002\n\021CreateLoggedModel\022\033\n\r" +
+      "experiment_id\030\001 \001(\tB\004\370\206\031\001\022\014\n\004name\030\002 \001(\t\022" +
+      "\022\n\nmodel_type\030\003 \001(\t\022\025\n\rsource_run_id\030\004 \001" +
+      "(\t\022,\n\006params\030\005 \003(\0132\034.mlflow.LoggedModelP" +
+      "arameter\022$\n\004tags\030\006 \003(\0132\026.mlflow.LoggedMo" +
+      "delTag\032.\n\010Response\022\"\n\005model\030\001 \001(\0132\023.mlfl" +
+      "ow.LoggedModel:+\342?(\n&com.databricks.rpc." +
+      "RPC[$this.Response]\"\273\001\n\023FinalizeLoggedMo" +
+      "del\022\026\n\010model_id\030\001 \001(\tB\004\370\206\031\001\022/\n\006status\030\002 " +
+      "\001(\0162\031.mlflow.LoggedModelStatusB\004\370\206\031\001\032.\n\010" +
+      "Response\022\"\n\005model\030\001 \001(\0132\023.mlflow.LoggedM" +
+      "odel:+\342?(\n&com.databricks.rpc.RPC[$this." +
+      "Response]\"\205\001\n\016GetLoggedModel\022\026\n\010model_id" +
+      "\030\001 \001(\tB\004\370\206\031\001\032.\n\010Response\022\"\n\005model\030\001 \001(\0132" +
+      "\023.mlflow.LoggedModel:+\342?(\n&com.databrick" +
+      "s.rpc.RPC[$this.Response]\"d\n\021DeleteLogge" +
+      "dModel\022\026\n\010model_id\030\001 \001(\tB\004\370\206\031\001\032\n\n\010Respon" +
+      "se:+\342?(\n&com.databricks.rpc.RPC[$this.Re" +
+      "sponse]\"\367\003\n\022SearchLoggedModels\022\026\n\016experi" +
+      "ment_ids\030\001 \003(\t\022\016\n\006filter\030\002 \001(\t\0224\n\010datase" +
+      "ts\030\006 \003(\0132\".mlflow.SearchLoggedModels.Dat" +
+      "aset\022\027\n\013max_results\030\003 \001(\005:\00250\0224\n\010order_b" +
+      "y\030\004 \003(\0132\".mlflow.SearchLoggedModels.Orde" +
+      "rBy\022\022\n\npage_token\030\005 \001(\t\032=\n\007Dataset\022\032\n\014da" +
+      "taset_name\030\001 \001(\tB\004\370\206\031\001\022\026\n\016dataset_digest" +
+      "\030\002 \001(\t\032j\n\007OrderBy\022\030\n\nfield_name\030\001 \001(\tB\004\370" +
+      "\206\031\001\022\027\n\tascending\030\002 \001(\010:\004true\022\024\n\014dataset_" +
+      "name\030\003 \001(\t\022\026\n\016dataset_digest\030\004 \001(\t\032H\n\010Re" +
+      "sponse\022#\n\006models\030\001 \003(\0132\023.mlflow.LoggedMo" +
+      "del\022\027\n\017next_page_token\030\002 \001(\t:+\342?(\n&com.d" +
+      "atabricks.rpc.RPC[$this.Response]\"\257\001\n\022Se" +
+      "tLoggedModelTags\022\026\n\010model_id\030\001 \001(\tB\004\370\206\031\001" +
+      "\022$\n\004tags\030\002 \003(\0132\026.mlflow.LoggedModelTag\032." +
+      "\n\010Response\022\"\n\005model\030\001 \001(\0132\023.mlflow.Logge" +
+      "dModel:+\342?(\n&com.databricks.rpc.RPC[$thi" +
+      "s.Response]\"~\n\024DeleteLoggedModelTag\022\026\n\010m" +
+      "odel_id\030\001 \001(\tB\004\370\206\031\001\022\025\n\007tag_key\030\002 \001(\tB\004\370\206" +
+      "\031\001\032\n\n\010Response:+\342?(\n&com.databricks.rpc." +
+      "RPC[$this.Response]\"\354\001\n\030ListLoggedModelA" +
+      "rtifacts\022\026\n\010model_id\030\001 \001(\tB\004\370\206\031\001\022\037\n\027arti" +
+      "fact_directory_path\030\002 \001(\t\022\022\n\npage_token\030" +
+      "\003 \001(\t\032V\n\010Response\022\020\n\010root_uri\030\001 \001(\t\022\037\n\005f" +
+      "iles\030\002 \003(\0132\020.mlflow.FileInfo\022\027\n\017next_pag" +
+      "e_token\030\003 \001(\t:+\342?(\n&com.databricks.rpc.R" +
+      "PC[$this.Response]\"\234\001\n\033LogLoggedModelPar" +
+      "amsRequest\022\026\n\010model_id\030\001 \001(\tB\004\370\206\031\001\022,\n\006pa" +
+      "rams\030\002 \003(\0132\034.mlflow.LoggedModelParameter" +
+      "\032\n\n\010Response:+\342?(\n&com.databricks.rpc.RP" +
+      "C[$this.Response]\"[\n\013LoggedModel\022%\n\004info" +
+      "\030\001 \001(\0132\027.mlflow.LoggedModelInfo\022%\n\004data\030" +
+      "\002 \001(\0132\027.mlflow.LoggedModelData\"\204\003\n\017Logge" +
+      "dModelInfo\022\020\n\010model_id\030\001 \001(\t\022\025\n\rexperime" +
+      "nt_id\030\002 \001(\t\022\014\n\004name\030\003 \001(\t\022\035\n\025creation_ti" +
+      "mestamp_ms\030\004 \001(\003\022!\n\031last_updated_timesta" +
+      "mp_ms\030\005 \001(\003\022\024\n\014artifact_uri\030\006 \001(\t\022)\n\006sta" +
+      "tus\030\007 \001(\0162\031.mlflow.LoggedModelStatus\022\022\n\n" +
+      "creator_id\030\010 \001(\003\022\022\n\nmodel_type\030\t \001(\t\022\025\n\r" +
+      "source_run_id\030\n \001(\t\022\026\n\016status_message\030\013 " +
+      "\001(\t\022$\n\004tags\030\014 \003(\0132\026.mlflow.LoggedModelTa" +
+      "g\022:\n\rregistrations\030\r \003(\0132#.mlflow.Logged" +
+      "ModelRegistrationInfo\",\n\016LoggedModelTag\022" +
+      "\013\n\003key\030\001 \001(\t\022\r\n\005value\030\002 \001(\t\"<\n\033LoggedMod" +
+      "elRegistrationInfo\022\014\n\004name\030\001 \001(\t\022\017\n\007vers" +
+      "ion\030\002 \001(\t\"`\n\017LoggedModelData\022,\n\006params\030\001" +
+      " \003(\0132\034.mlflow.LoggedModelParameter\022\037\n\007me" +
+      "trics\030\002 \003(\0132\016.mlflow.Metric\"2\n\024LoggedMod" +
+      "elParameter\022\013\n\003key\030\001 \001(\t\022\r\n\005value\030\002 \001(\t\"" +
+      "\201\002\n\016SearchTracesV3\022(\n\tlocations\030\001 \003(\0132\025." +
+      "mlflow.TraceLocation\022\016\n\006filter\030\002 \001(\t\022\030\n\013" +
+      "max_results\030\003 \001(\005:\003100\022\020\n\010order_by\030\004 \003(\t" +
+      "\022\022\n\npage_token\030\005 \001(\t\032H\n\010Response\022#\n\006trac" +
+      "es\030\001 \003(\0132\023.mlflow.TraceInfoV3\022\027\n\017next_pa" +
+      "ge_token\030\002 \001(\t:+\342?(\n&com.databricks.rpc." +
+      "RPC[$this.Response]*6\n\010ViewType\022\017\n\013ACTIV" +
+      "E_ONLY\020\001\022\020\n\014DELETED_ONLY\020\002\022\007\n\003ALL\020\003*I\n\nS" +
+      "ourceType\022\014\n\010NOTEBOOK\020\001\022\007\n\003JOB\020\002\022\013\n\007PROJ" +
+      "ECT\020\003\022\t\n\005LOCAL\020\004\022\014\n\007UNKNOWN\020\350\007*M\n\tRunSta" +
+      "tus\022\013\n\007RUNNING\020\001\022\r\n\tSCHEDULED\020\002\022\014\n\010FINIS" +
+      "HED\020\003\022\n\n\006FAILED\020\004\022\n\n\006KILLED\020\005*O\n\013TraceSt" +
+      "atus\022\034\n\030TRACE_STATUS_UNSPECIFIED\020\000\022\006\n\002OK" +
+      "\020\001\022\t\n\005ERROR\020\002\022\017\n\013IN_PROGRESS\020\003*\212\001\n\021Logge" +
+      "dModelStatus\022#\n\037LOGGED_MODEL_STATUS_UNSP" +
+      "ECIFIED\020\000\022\030\n\024LOGGED_MODEL_PENDING\020\001\022\026\n\022L" +
+      "OGGED_MODEL_READY\020\002\022\036\n\032LOGGED_MODEL_UPLO" +
+      "AD_FAILED\020\0032\363?\n\rMlflowService\022\246\001\n\023getExp" +
+      "erimentByName\022\033.mlflow.GetExperimentByNa" +
+      "me\032$.mlflow.GetExperimentByName.Response" +
+      "\"L\362\206\031H\n,\n\003GET\022\037/mlflow/experiments/get-b" +
+      "y-name\032\004\010\002\020\000\020\001*\026Get Experiment By Name\022\224" +
+      "\001\n\020createExperiment\022\030.mlflow.CreateExper" +
+      "iment\032!.mlflow.CreateExperiment.Response" +
+      "\"C\362\206\031?\n(\n\004POST\022\032/mlflow/experiments/crea" +
+      "te\032\004\010\002\020\000\020\001*\021Create Experiment\022\301\001\n\021search" +
+      "Experiments\022\031.mlflow.SearchExperiments\032\"" +
+      ".mlflow.SearchExperiments.Response\"m\362\206\031i" +
+      "\n(\n\004POST\022\032/mlflow/experiments/search\032\004\010\002" +
+      "\020\000\n\'\n\003GET\022\032/mlflow/experiments/search\032\004\010" +
+      "\002\020\000\020\001*\022Search Experiments\022\210\001\n\rgetExperim" +
+      "ent\022\025.mlflow.GetExperiment\032\036.mlflow.GetE" +
+      "xperiment.Response\"@\362\206\0318\n$\n\003GET\022\027/mlflow" +
+      "/experiments/get\032\004\010\002\020\000\020\001*\016Get Experiment" +
+      "\272\214\031\000\022\224\001\n\020deleteExperiment\022\030.mlflow.Delet" +
+      "eExperiment\032!.mlflow.DeleteExperiment.Re" +
+      "sponse\"C\362\206\031?\n(\n\004POST\022\032/mlflow/experiment" +
+      "s/delete\032\004\010\002\020\000\020\001*\021Delete Experiment\022\231\001\n\021" +
+      "restoreExperiment\022\031.mlflow.RestoreExperi" +
+      "ment\032\".mlflow.RestoreExperiment.Response" +
+      "\"E\362\206\031A\n)\n\004POST\022\033/mlflow/experiments/rest" +
+      "ore\032\004\010\002\020\000\020\001*\022Restore Experiment\022\224\001\n\020upda" +
+      "teExperiment\022\030.mlflow.UpdateExperiment\032!" +
+      ".mlflow.UpdateExperiment.Response\"C\362\206\031?\n" +
+      "(\n\004POST\022\032/mlflow/experiments/update\032\004\010\002\020" +
+      "\000\020\001*\021Update Experiment\022q\n\tcreateRun\022\021.ml" +
+      "flow.CreateRun\032\032.mlflow.CreateRun.Respon" +
+      "se\"5\362\206\0311\n!\n\004POST\022\023/mlflow/runs/create\032\004\010" +
+      "\002\020\000\020\001*\nCreate Run\022q\n\tupdateRun\022\021.mlflow." +
+      "UpdateRun\032\032.mlflow.UpdateRun.Response\"5\362" +
+      "\206\0311\n!\n\004POST\022\023/mlflow/runs/update\032\004\010\002\020\000\020\001" +
+      "*\nUpdate Run\022q\n\tdeleteRun\022\021.mlflow.Delet" +
+      "eRun\032\032.mlflow.DeleteRun.Response\"5\362\206\0311\n!" +
+      "\n\004POST\022\023/mlflow/runs/delete\032\004\010\002\020\000\020\001*\nDel",
+      "ete Run\022v\n\nrestoreRun\022\022.mlflow.RestoreRu" +
+      "n\032\033.mlflow.RestoreRun.Response\"7\362\206\0313\n\"\n\004" +
+      "POST\022\024/mlflow/runs/restore\032\004\010\002\020\000\020\001*\013Rest" +
+      "ore Run\022u\n\tlogMetric\022\021.mlflow.LogMetric\032" +
+      "\032.mlflow.LogMetric.Response\"9\362\206\0315\n%\n\004POS" +
+      "T\022\027/mlflow/runs/log-metric\032\004\010\002\020\000\020\001*\nLog " +
+      "Metric\022t\n\010logParam\022\020.mlflow.LogParam\032\031.m" +
+      "lflow.LogParam.Response\";\362\206\0317\n(\n\004POST\022\032/" +
+      "mlflow/runs/log-parameter\032\004\010\002\020\000\020\001*\tLog P" +
+      "aram\022\241\001\n\020setExperimentTag\022\030.mlflow.SetEx" +
+      "perimentTag\032!.mlflow.SetExperimentTag.Re" +
+      "sponse\"P\362\206\031L\n4\n\004POST\022&/mlflow/experiment" +
+      "s/set-experiment-tag\032\004\010\002\020\000\020\001*\022Set Experi" +
+      "ment Tag\022\260\001\n\023deleteExperimentTag\022\033.mlflo" +
+      "w.DeleteExperimentTag\032$.mlflow.DeleteExp" +
+      "erimentTag.Response\"V\362\206\031R\n7\n\004POST\022)/mlfl" +
+      "ow/experiments/delete-experiment-tag\032\004\010\002" +
+      "\020\000\020\001*\025Delete Experiment Tag\022f\n\006setTag\022\016." +
+      "mlflow.SetTag\032\027.mlflow.SetTag.Response\"3" +
+      "\362\206\031/\n\"\n\004POST\022\024/mlflow/runs/set-tag\032\004\010\002\020\000" +
+      "\020\001*\007Set Tag\022\210\001\n\013setTraceTag\022\023.mlflow.Set" +
+      "TraceTag\032\034.mlflow.SetTraceTag.Response\"F" +
+      "\362\206\031B\n/\n\005PATCH\022 /mlflow/traces/{request_i" +
+      "d}/tags\032\004\010\002\020\000\020\003*\rSet Trace Tag\022\217\001\n\rsetTr" +
+      "aceTagV3\022\025.mlflow.SetTraceTagV3\032\036.mlflow" +
+      ".SetTraceTagV3.Response\"G\362\206\031C\n-\n\005PATCH\022\036" +
+      "/mlflow/traces/{trace_id}/tags\032\004\010\003\020\000\020\003*\020" +
+      "Set Trace Tag V3\022\225\001\n\016deleteTraceTag\022\026.ml" +
+      "flow.DeleteTraceTag\032\037.mlflow.DeleteTrace" +
+      "Tag.Response\"J\362\206\031F\n0\n\006DELETE\022 /mlflow/tr" +
+      "aces/{request_id}/tags\032\004\010\002\020\000\020\003*\020Delete T" +
+      "race Tag\022\234\001\n\020deleteTraceTagV3\022\030.mlflow.D" +
+      "eleteTraceTagV3\032!.mlflow.DeleteTraceTagV" +
+      "3.Response\"K\362\206\031G\n.\n\006DELETE\022\036/mlflow/trac" +
+      "es/{trace_id}/tags\032\004\010\003\020\000\020\003*\023Delete Trace" +
+      " Tag V3\022u\n\tdeleteTag\022\021.mlflow.DeleteTag\032" +
+      "\032.mlflow.DeleteTag.Response\"9\362\206\0315\n%\n\004POS" +
+      "T\022\027/mlflow/runs/delete-tag\032\004\010\002\020\000\020\001*\nDele" +
+      "te Tag\022e\n\006getRun\022\016.mlflow.GetRun\032\027.mlflo" +
+      "w.GetRun.Response\"2\362\206\031*\n\035\n\003GET\022\020/mlflow/" +
+      "runs/get\032\004\010\002\020\000\020\001*\007Get Run\272\214\031\000\022y\n\nsearchR" +
+      "uns\022\022.mlflow.SearchRuns\032\033.mlflow.SearchR" +
+      "uns.Response\":\362\206\0312\n!\n\004POST\022\023/mlflow/runs" +
+      "/search\032\004\010\002\020\000\020\001*\013Search Runs\272\214\031\000\022\207\001\n\rlis" +
+      "tArtifacts\022\025.mlflow.ListArtifacts\032\036.mlfl" +
+      "ow.ListArtifacts.Response\"?\362\206\0317\n#\n\003GET\022\026" +
+      "/mlflow/artifacts/list\032\004\010\002\020\000\020\001*\016List Art" +
+      "ifacts\272\214\031\000\022\225\001\n\020getMetricHistory\022\030.mlflow" +
+      ".GetMetricHistory\032!.mlflow.GetMetricHist" +
+      "ory.Response\"D\362\206\031@\n(\n\003GET\022\033/mlflow/metri" +
+      "cs/get-history\032\004\010\002\020\000\020\001*\022Get Metric Histo" +
+      "ry\022\267\001\n\034getMetricHistoryBulkInterval\022$.ml" +
+      "flow.GetMetricHistoryBulkInterval\032-.mlfl" +
+      "ow.GetMetricHistoryBulkInterval.Response" +
+      "\"B\362\206\031:\n6\n\003GET\022)/mlflow/metrics/get-histo" +
+      "ry-bulk-interval\032\004\010\002\020\013\020\003\272\214\031\000\022p\n\010logBatch" +
+      "\022\020.mlflow.LogBatch\032\031.mlflow.LogBatch.Res" +
+      "ponse\"7\362\206\0313\n$\n\004POST\022\026/mlflow/runs/log-ba" +
+      "tch\032\004\010\002\020\000\020\001*\tLog Batch\022p\n\010logModel\022\020.mlf" +
+      "low.LogModel\032\031.mlflow.LogModel.Response\"" +
+      "7\362\206\0313\n$\n\004POST\022\026/mlflow/runs/log-model\032\004\010" +
+      "\002\020\000\020\001*\tLog Model\022u\n\tlogInputs\022\021.mlflow.L" +
+      "ogInputs\032\032.mlflow.LogInputs.Response\"9\362\206" +
+      "\0315\n%\n\004POST\022\027/mlflow/runs/log-inputs\032\004\010\002\020" +
+      "\000\020\001*\nLog Inputs\022v\n\nlogOutputs\022\022.mlflow.L" +
+      "ogOutputs\032\033.mlflow.LogOutputs.Response\"7" +
+      "\362\206\0313\n\"\n\004POST\022\024/mlflow/runs/outputs\032\004\010\002\020\000" +
+      "\020\003*\013Log Outputs\022\207\001\n\016searchDatasets\022\026.mlf" +
+      "low.SearchDatasets\032\037.mlflow.SearchDatase" +
+      "ts.Response\"<\362\206\0314\n0\n\004POST\022\"mlflow/experi" +
+      "ments/search-datasets\032\004\010\002\020\000\020\003\272\214\031\000\022p\n\nsta" +
+      "rtTrace\022\022.mlflow.StartTrace\032\033.mlflow.Sta" +
+      "rtTrace.Response\"1\362\206\031-\n\034\n\004POST\022\016/mlflow/" +
+      "traces\032\004\010\002\020\000\020\003*\013Start Trace\022v\n\010endTrace\022" +
+      "\020.mlflow.EndTrace\032\031.mlflow.EndTrace.Resp" +
+      "onse\"=\362\206\0319\n*\n\005PATCH\022\033/mlflow/traces/{req" +
+      "uest_id}\032\004\010\002\020\000\020\003*\tEnd Trace\022\211\001\n\014getTrace" +
+      "Info\022\024.mlflow.GetTraceInfo\032\035.mlflow.GetT" +
+      "raceInfo.Response\"D\362\206\031@\n-\n\003GET\022 /mlflow/" +
+      "traces/{request_id}/info\032\004\010\002\020\000\020\003*\rGet Tr" +
+      "aceInfo\022\213\001\n\016getTraceInfoV3\022\026.mlflow.GetT" +
+      "raceInfoV3\032\037.mlflow.GetTraceInfoV3.Respo" +
+      "nse\"@\362\206\031<\n&\n\003GET\022\031/mlflow/traces/{trace_" +
+      "id}\032\004\010\003\020\000\020\003*\020Get TraceInfo v3\022w\n\014searchT" +
+      "races\022\024.mlflow.SearchTraces\032\035.mlflow.Sea" +
+      "rchTraces.Response\"2\362\206\031.\n\033\n\003GET\022\016/mlflow" +
+      "/traces\032\004\010\002\020\000\020\003*\rSearch Traces\022\210\001\n\016searc" +
+      "hTracesV3\022\026.mlflow.SearchTracesV3\032\037.mlfl" +
+      "ow.SearchTracesV3.Response\"=\362\206\0319\n#\n\004POST" +
+      "\022\025/mlflow/traces/search\032\004\010\003\020\000\020\003*\020Search " +
+      "Traces V3\022i\n\014startTraceV3\022\024.mlflow.Start" +
+      "TraceV3\032\035.mlflow.StartTraceV3.Response\"$" +
+      "\362\206\031 \n\034\n\004POST\022\016/mlflow/traces\032\004\010\003\020\000\020\003\022\242\001\n" +
+      "\031searchUnifiedTraceHandler\022\033.mlflow.Sear" +
+      "chUnifiedTraces\032$.mlflow.SearchUnifiedTr" +
+      "aces.Response\"B\362\206\031>\n#\n\003GET\022\026/mlflow/unif" +
+      "ied-traces\032\004\010\002\020\000\020\003*\025Search Unified Trace" +
+      "s\022\257\001\n\025getOnlineTraceDetails\022\035.mlflow.Get" +
+      "OnlineTraceDetails\032&.mlflow.GetOnlineTra" +
+      "ceDetails.Response\"O\362\206\031K\n-\n\003GET\022 /mlflow" +
+      "/get-online-trace-details\032\004\010\002\020\000\020\003*\030Get O" +
+      "nline Trace Details\022\206\001\n\014deleteTraces\022\024.m" +
+      "lflow.DeleteTraces\032\035.mlflow.DeleteTraces" +
+      ".Response\"A\362\206\031=\n*\n\004POST\022\034/mlflow/traces/" +
+      "delete-traces\032\004\010\002\020\000\020\003*\rDelete Traces\022\217\001\n" +
+      "\016deleteTracesV3\022\026.mlflow.DeleteTracesV3\032" +
+      "\037.mlflow.DeleteTracesV3.Response\"D\362\206\031@\n*" +
+      "\n\004POST\022\034/mlflow/traces/delete-traces\032\004\010\003" +
+      "\020\000\020\003*\020Delete Traces V3\022\224\001\n\021createLoggedM" +
+      "odel\022\031.mlflow.CreateLoggedModel\032\".mlflow" +
+      ".CreateLoggedModel.Response\"@\362\206\031<\n#\n\004POS" +
+      "T\022\025/mlflow/logged-models\032\004\010\002\020\000\020\003*\023Create" +
+      " Logged Model\022\250\001\n\023finalizeLoggedModel\022\033." +
+      "mlflow.FinalizeLoggedModel\032$.mlflow.Fina" +
+      "lizeLoggedModel.Response\"N\362\206\031J\n/\n\005PATCH\022" +
+      " /mlflow/logged-models/{model_id}\032\004\010\002\020\000\020" +
+      "\003*\025Finalize Logged Model\022\222\001\n\016getLoggedMo" +
+      "del\022\026.mlflow.GetLoggedModel\032\037.mlflow.Get" +
+      "LoggedModel.Response\"G\362\206\031C\n-\n\003GET\022 /mlfl" +
+      "ow/logged-models/{model_id}\032\004\010\002\020\000\020\003*\020Get" +
+      " Logged Model\022\243\001\n\021deleteLoggedModel\022\031.ml" +
+      "flow.DeleteLoggedModel\032\".mlflow.DeleteLo" +
+      "ggedModel.Response\"O\362\206\031K\n0\n\006DELETE\022 /mlf" +
+      "low/logged-models/{model_id}\032\004\010\002\020\000\020\003*\025De" +
+      "lete a Logged Model\022\236\001\n\022searchLoggedMode" +
+      "ls\022\032.mlflow.SearchLoggedModels\032#.mlflow." +
+      "SearchLoggedModels.Response\"G\362\206\031C\n*\n\004POS" +
+      "T\022\034/mlflow/logged-models/search\032\004\010\002\020\000\020\003*" +
+      "\023Search LoggedModels\022\251\001\n\022setLoggedModelT" +
+      "ags\022\032.mlflow.SetLoggedModelTags\032#.mlflow" +
+      ".SetLoggedModelTags.Response\"R\362\206\031N\n4\n\005PA" +
+      "TCH\022%/mlflow/logged-models/{model_id}/ta" +
+      "gs\032\004\010\002\020\000\020\003*\024Set Logged Model Tag\022\275\001\n\024del" +
+      "eteLoggedModelTag\022\034.mlflow.DeleteLoggedM" +
+      "odelTag\032%.mlflow.DeleteLoggedModelTag.Re" +
+      "sponse\"`\362\206\031\\\n?\n\006DELETE\022//mlflow/logged-m" +
+      "odels/{model_id}/tags/{tag_key}\032\004\010\002\020\000\020\003*" +
+      "\027Delete Logged Model Tag\022\326\001\n\030listLoggedM" +
+      "odelArtifacts\022 .mlflow.ListLoggedModelAr" +
+      "tifacts\032).mlflow.ListLoggedModelArtifact" +
+      "s.Response\"m\362\206\031i\nC\n\003GET\0226/mlflow/logged-" +
+      "models/{model_id}/artifacts/directories\032" +
+      "\004\010\002\020\000\020\003* List Artifacts for Logged Model" +
+      "s\022\301\001\n\024LogLoggedModelParams\022#.mlflow.LogL" +
+      "oggedModelParamsRequest\032,.mlflow.LogLogg" +
+      "edModelParamsRequest.Response\"V\362\206\031R\n5\n\004P" +
+      "OST\022\'/mlflow/logged-models/{model_id}/pa" +
+      "rams\032\004\010\002\020\000\020\003*\027Log Logged Model Params\022\260\001" +
+      "\n\rGetAssessment\022\034.mlflow.GetAssessmentRe" +
+      "quest\032%.mlflow.GetAssessmentRequest.Resp" +
+      "onse\"Z\362\206\031V\nB\n\003GET\0225/mlflow/traces/{trace" +
+      "_id}/assessments/{assessment_id}\032\004\010\003\020\000\020\003" +
+      "*\016Get Assessment\022\337\001\n\020createAssessment\022\030." +
+      "mlflow.CreateAssessment\032!.mlflow.CreateA" +
+      "ssessment.Response\"\215\001\362\206\031\210\001\n>\n\004POST\0220/mlf" +
+      "low/traces/{assessment.trace_id}/assessm" +
+      "ents\032\004\010\003\020\000\020\003\030\350\007\030\356\007\030\014\030\001*:Create an assess" +
+      "ment of a trace or a span within the tra" +
+      "ce\022\320\001\n\020updateAssessment\022\030.mlflow.UpdateA" +
+      "ssessment\032!.mlflow.UpdateAssessment.Resp" +
+      "onse\"\177\362\206\031{\nD\n\005PATCH\0225/mlflow/traces/{tra" +
+      "ce_id}/assessments/{assessment_id}\032\004\010\003\020\000" +
+      "\020\003\030\350\007\030\356\007\030\001*)Update an existing assessmen" +
+      "t on a trace.\022\261\001\n\020deleteAssessment\022\030.mlf" +
+      "low.DeleteAssessment\032!.mlflow.DeleteAsse" +
+      "ssment.Response\"`\362\206\031\\\nE\n\006DELETE\0225/mlflow" +
+      "/traces/{trace_id}/assessments/{assessme" +
+      "nt_id}\032\004\010\003\020\000\020\003*\021Delete AssessmentB\036\n\024org" +
+      ".mlflow.api.proto\220\001\001\342?\002\020\001"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -150750,7 +150751,7 @@ public final class Service {
     internal_static_mlflow_SetTraceTagV3_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_mlflow_SetTraceTagV3_descriptor,
-        new java.lang.String[] { "RequestId", "Key", "Value", });
+        new java.lang.String[] { "TraceId", "Key", "Value", });
     internal_static_mlflow_SetTraceTagV3_Response_descriptor =
       internal_static_mlflow_SetTraceTagV3_descriptor.getNestedTypes().get(0);
     internal_static_mlflow_SetTraceTagV3_Response_fieldAccessorTable = new
@@ -150762,7 +150763,7 @@ public final class Service {
     internal_static_mlflow_DeleteTraceTag_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_mlflow_DeleteTraceTag_descriptor,
-        new java.lang.String[] { "RequestId", "Key", });
+        new java.lang.String[] { "TraceId", "Key", });
     internal_static_mlflow_DeleteTraceTag_Response_descriptor =
       internal_static_mlflow_DeleteTraceTag_descriptor.getNestedTypes().get(0);
     internal_static_mlflow_DeleteTraceTag_Response_fieldAccessorTable = new
