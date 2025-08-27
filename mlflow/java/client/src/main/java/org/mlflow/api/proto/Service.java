@@ -161091,20 +161091,20 @@ public final class Service {
       "lete Assessment\022\212\001\n\016registerScorer\022\026.mlf" +
       "low.RegisterScorer\032\037.mlflow.RegisterScor" +
       "er.Response\"?\362\206\031;\n&\n\004POST\022\030/mlflow/score" +
-      "rs/register\032\004\010\002\020\000\020\001*\017Register Scorer\022y\n\013" +
+      "rs/register\032\004\010\003\020\000\020\001*\017Register Scorer\022y\n\013" +
       "listScorers\022\023.mlflow.ListScorers\032\034.mlflo" +
       "w.ListScorers.Response\"7\362\206\0313\n!\n\003GET\022\024/ml" +
-      "flow/scorers/list\032\004\010\002\020\000\020\001*\014List Scorers\022" +
+      "flow/scorers/list\032\004\010\003\020\000\020\001*\014List Scorers\022" +
       "\232\001\n\022listScorerVersions\022\032.mlflow.ListScor" +
       "erVersions\032#.mlflow.ListScorerVersions.R" +
       "esponse\"C\362\206\031?\n%\n\003GET\022\030/mlflow/scorers/ve" +
-      "rsions\032\004\010\002\020\000\020\001*\024List Scorer Versions\022p\n\t" +
+      "rsions\032\004\010\003\020\000\020\001*\024List Scorer Versions\022p\n\t" +
       "getScorer\022\021.mlflow.GetScorer\032\032.mlflow.Ge" +
       "tScorer.Response\"4\362\206\0310\n \n\003GET\022\023/mlflow/s" +
-      "corers/get\032\004\010\002\020\000\020\001*\nGet Scorer\022\202\001\n\014delet" +
+      "corers/get\032\004\010\003\020\000\020\001*\nGet Scorer\022\202\001\n\014delet" +
       "eScorer\022\024.mlflow.DeleteScorer\032\035.mlflow.D" +
       "eleteScorer.Response\"=\362\206\0319\n&\n\006DELETE\022\026/m" +
-      "lflow/scorers/delete\032\004\010\002\020\000\020\001*\rDelete Sco" +
+      "lflow/scorers/delete\032\004\010\003\020\000\020\001*\rDelete Sco" +
       "rerB\036\n\024org.mlflow.api.proto\220\001\001\342?\002\020\001"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
