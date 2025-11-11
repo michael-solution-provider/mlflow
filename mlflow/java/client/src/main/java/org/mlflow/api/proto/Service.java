@@ -187729,12 +187729,12 @@ public final class Service {
       descriptor;
   static {
     java.lang.String[] descriptorData = {
-      "\n\rservice.proto\022\006mlflow\032\025scalapb/scalapb" +
-      ".proto\032\020databricks.proto\032\036google/protobu" +
-      "f/duration.proto\032 google/protobuf/field_" +
-      "mask.proto\032\037google/protobuf/timestamp.pr" +
-      "oto\032\021assessments.proto\032\016datasets.proto\032(" +
-      "opentelemetry/proto/trace/v1/trace.proto" +
+      "\n\rservice.proto\022\006mlflow\032\021assessments.pro" +
+      "to\032\020databricks.proto\032\016datasets.proto\032\036go" +
+      "ogle/protobuf/duration.proto\032 google/pro" +
+      "tobuf/field_mask.proto\032\037google/protobuf/" +
+      "timestamp.proto\032(opentelemetry/proto/tra" +
+      "ce/v1/trace.proto\032\025scalapb/scalapb.proto" +
       "\"\260\001\n\006Metric\022\013\n\003key\030\001 \001(\t\022\r\n\005value\030\002 \001(\001\022" +
       "\021\n\ttimestamp\030\003 \001(\003\022\017\n\004step\030\004 \001(\003:\0010\022\032\n\014d" +
       "ataset_name\030\005 \001(\tB\004\360\206\031\003\022\034\n\016dataset_diges" +
@@ -188469,14 +188469,14 @@ public final class Service {
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
         new com.google.protobuf.Descriptors.FileDescriptor[] {
-          org.mlflow.scalapb_interface.Scalapb.getDescriptor(),
+          org.mlflow.api.proto.Assessments.getDescriptor(),
           com.databricks.api.proto.databricks.Databricks.getDescriptor(),
+          org.mlflow.api.proto.Datasets.getDescriptor(),
           com.google.protobuf.DurationProto.getDescriptor(),
           com.google.protobuf.FieldMaskProto.getDescriptor(),
           com.google.protobuf.TimestampProto.getDescriptor(),
-          org.mlflow.api.proto.Assessments.getDescriptor(),
-          org.mlflow.api.proto.Datasets.getDescriptor(),
           io.opentelemetry.proto.trace.v1.TraceProto.getDescriptor(),
+          org.mlflow.scalapb_interface.Scalapb.getDescriptor(),
         });
     internal_static_mlflow_Metric_descriptor =
       getDescriptor().getMessageTypes().get(0);
@@ -189610,14 +189610,14 @@ public final class Service {
     registry.add(org.mlflow.scalapb_interface.Scalapb.options);
     com.google.protobuf.Descriptors.FileDescriptor
         .internalUpdateFileDescriptor(descriptor, registry);
-    org.mlflow.scalapb_interface.Scalapb.getDescriptor();
+    org.mlflow.api.proto.Assessments.getDescriptor();
     com.databricks.api.proto.databricks.Databricks.getDescriptor();
+    org.mlflow.api.proto.Datasets.getDescriptor();
     com.google.protobuf.DurationProto.getDescriptor();
     com.google.protobuf.FieldMaskProto.getDescriptor();
     com.google.protobuf.TimestampProto.getDescriptor();
-    org.mlflow.api.proto.Assessments.getDescriptor();
-    org.mlflow.api.proto.Datasets.getDescriptor();
     io.opentelemetry.proto.trace.v1.TraceProto.getDescriptor();
+    org.mlflow.scalapb_interface.Scalapb.getDescriptor();
   }
 
   // @@protoc_insertion_point(outer_class_scope)
