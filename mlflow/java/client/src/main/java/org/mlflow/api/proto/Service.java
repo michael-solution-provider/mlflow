@@ -172933,7 +172933,7 @@ public final class Service {
        * The updated dataset with new experiment associations
        * </pre>
        *
-       * <code>optional .mlflow.Dataset dataset = 1;</code>
+       * <code>optional .mlflow.datasets.Dataset dataset = 1;</code>
        * @return Whether the dataset field is set.
        */
       boolean hasDataset();
@@ -172942,18 +172942,18 @@ public final class Service {
        * The updated dataset with new experiment associations
        * </pre>
        *
-       * <code>optional .mlflow.Dataset dataset = 1;</code>
+       * <code>optional .mlflow.datasets.Dataset dataset = 1;</code>
        * @return The dataset.
        */
-      org.mlflow.api.proto.Service.Dataset getDataset();
+      org.mlflow.api.proto.Datasets.Dataset getDataset();
       /**
        * <pre>
        * The updated dataset with new experiment associations
        * </pre>
        *
-       * <code>optional .mlflow.Dataset dataset = 1;</code>
+       * <code>optional .mlflow.datasets.Dataset dataset = 1;</code>
        */
-      org.mlflow.api.proto.Service.DatasetOrBuilder getDatasetOrBuilder();
+      org.mlflow.api.proto.Datasets.DatasetOrBuilder getDatasetOrBuilder();
     }
     /**
      * Protobuf type {@code mlflow.AddDatasetToExperiments.Response}
@@ -173002,11 +173002,11 @@ public final class Service {
                 done = true;
                 break;
               case 10: {
-                org.mlflow.api.proto.Service.Dataset.Builder subBuilder = null;
+                org.mlflow.api.proto.Datasets.Dataset.Builder subBuilder = null;
                 if (((bitField0_ & 0x00000001) != 0)) {
                   subBuilder = dataset_.toBuilder();
                 }
-                dataset_ = input.readMessage(org.mlflow.api.proto.Service.Dataset.PARSER, extensionRegistry);
+                dataset_ = input.readMessage(org.mlflow.api.proto.Datasets.Dataset.PARSER, extensionRegistry);
                 if (subBuilder != null) {
                   subBuilder.mergeFrom(dataset_);
                   dataset_ = subBuilder.buildPartial();
@@ -173048,13 +173048,13 @@ public final class Service {
 
       private int bitField0_;
       public static final int DATASET_FIELD_NUMBER = 1;
-      private org.mlflow.api.proto.Service.Dataset dataset_;
+      private org.mlflow.api.proto.Datasets.Dataset dataset_;
       /**
        * <pre>
        * The updated dataset with new experiment associations
        * </pre>
        *
-       * <code>optional .mlflow.Dataset dataset = 1;</code>
+       * <code>optional .mlflow.datasets.Dataset dataset = 1;</code>
        * @return Whether the dataset field is set.
        */
       @java.lang.Override
@@ -173066,23 +173066,23 @@ public final class Service {
        * The updated dataset with new experiment associations
        * </pre>
        *
-       * <code>optional .mlflow.Dataset dataset = 1;</code>
+       * <code>optional .mlflow.datasets.Dataset dataset = 1;</code>
        * @return The dataset.
        */
       @java.lang.Override
-      public org.mlflow.api.proto.Service.Dataset getDataset() {
-        return dataset_ == null ? org.mlflow.api.proto.Service.Dataset.getDefaultInstance() : dataset_;
+      public org.mlflow.api.proto.Datasets.Dataset getDataset() {
+        return dataset_ == null ? org.mlflow.api.proto.Datasets.Dataset.getDefaultInstance() : dataset_;
       }
       /**
        * <pre>
        * The updated dataset with new experiment associations
        * </pre>
        *
-       * <code>optional .mlflow.Dataset dataset = 1;</code>
+       * <code>optional .mlflow.datasets.Dataset dataset = 1;</code>
        */
       @java.lang.Override
-      public org.mlflow.api.proto.Service.DatasetOrBuilder getDatasetOrBuilder() {
-        return dataset_ == null ? org.mlflow.api.proto.Service.Dataset.getDefaultInstance() : dataset_;
+      public org.mlflow.api.proto.Datasets.DatasetOrBuilder getDatasetOrBuilder() {
+        return dataset_ == null ? org.mlflow.api.proto.Datasets.Dataset.getDefaultInstance() : dataset_;
       }
 
       private byte memoizedIsInitialized = -1;
@@ -173408,15 +173408,15 @@ public final class Service {
         }
         private int bitField0_;
 
-        private org.mlflow.api.proto.Service.Dataset dataset_;
+        private org.mlflow.api.proto.Datasets.Dataset dataset_;
         private com.google.protobuf.SingleFieldBuilderV3<
-            org.mlflow.api.proto.Service.Dataset, org.mlflow.api.proto.Service.Dataset.Builder, org.mlflow.api.proto.Service.DatasetOrBuilder> datasetBuilder_;
+            org.mlflow.api.proto.Datasets.Dataset, org.mlflow.api.proto.Datasets.Dataset.Builder, org.mlflow.api.proto.Datasets.DatasetOrBuilder> datasetBuilder_;
         /**
          * <pre>
          * The updated dataset with new experiment associations
          * </pre>
          *
-         * <code>optional .mlflow.Dataset dataset = 1;</code>
+         * <code>optional .mlflow.datasets.Dataset dataset = 1;</code>
          * @return Whether the dataset field is set.
          */
         public boolean hasDataset() {
@@ -173427,12 +173427,12 @@ public final class Service {
          * The updated dataset with new experiment associations
          * </pre>
          *
-         * <code>optional .mlflow.Dataset dataset = 1;</code>
+         * <code>optional .mlflow.datasets.Dataset dataset = 1;</code>
          * @return The dataset.
          */
-        public org.mlflow.api.proto.Service.Dataset getDataset() {
+        public org.mlflow.api.proto.Datasets.Dataset getDataset() {
           if (datasetBuilder_ == null) {
-            return dataset_ == null ? org.mlflow.api.proto.Service.Dataset.getDefaultInstance() : dataset_;
+            return dataset_ == null ? org.mlflow.api.proto.Datasets.Dataset.getDefaultInstance() : dataset_;
           } else {
             return datasetBuilder_.getMessage();
           }
@@ -173442,9 +173442,9 @@ public final class Service {
          * The updated dataset with new experiment associations
          * </pre>
          *
-         * <code>optional .mlflow.Dataset dataset = 1;</code>
+         * <code>optional .mlflow.datasets.Dataset dataset = 1;</code>
          */
-        public Builder setDataset(org.mlflow.api.proto.Service.Dataset value) {
+        public Builder setDataset(org.mlflow.api.proto.Datasets.Dataset value) {
           if (datasetBuilder_ == null) {
             if (value == null) {
               throw new NullPointerException();
@@ -173462,10 +173462,10 @@ public final class Service {
          * The updated dataset with new experiment associations
          * </pre>
          *
-         * <code>optional .mlflow.Dataset dataset = 1;</code>
+         * <code>optional .mlflow.datasets.Dataset dataset = 1;</code>
          */
         public Builder setDataset(
-            org.mlflow.api.proto.Service.Dataset.Builder builderForValue) {
+            org.mlflow.api.proto.Datasets.Dataset.Builder builderForValue) {
           if (datasetBuilder_ == null) {
             dataset_ = builderForValue.build();
             onChanged();
@@ -173480,15 +173480,15 @@ public final class Service {
          * The updated dataset with new experiment associations
          * </pre>
          *
-         * <code>optional .mlflow.Dataset dataset = 1;</code>
+         * <code>optional .mlflow.datasets.Dataset dataset = 1;</code>
          */
-        public Builder mergeDataset(org.mlflow.api.proto.Service.Dataset value) {
+        public Builder mergeDataset(org.mlflow.api.proto.Datasets.Dataset value) {
           if (datasetBuilder_ == null) {
             if (((bitField0_ & 0x00000001) != 0) &&
                 dataset_ != null &&
-                dataset_ != org.mlflow.api.proto.Service.Dataset.getDefaultInstance()) {
+                dataset_ != org.mlflow.api.proto.Datasets.Dataset.getDefaultInstance()) {
               dataset_ =
-                org.mlflow.api.proto.Service.Dataset.newBuilder(dataset_).mergeFrom(value).buildPartial();
+                org.mlflow.api.proto.Datasets.Dataset.newBuilder(dataset_).mergeFrom(value).buildPartial();
             } else {
               dataset_ = value;
             }
@@ -173504,7 +173504,7 @@ public final class Service {
          * The updated dataset with new experiment associations
          * </pre>
          *
-         * <code>optional .mlflow.Dataset dataset = 1;</code>
+         * <code>optional .mlflow.datasets.Dataset dataset = 1;</code>
          */
         public Builder clearDataset() {
           if (datasetBuilder_ == null) {
@@ -173521,9 +173521,9 @@ public final class Service {
          * The updated dataset with new experiment associations
          * </pre>
          *
-         * <code>optional .mlflow.Dataset dataset = 1;</code>
+         * <code>optional .mlflow.datasets.Dataset dataset = 1;</code>
          */
-        public org.mlflow.api.proto.Service.Dataset.Builder getDatasetBuilder() {
+        public org.mlflow.api.proto.Datasets.Dataset.Builder getDatasetBuilder() {
           bitField0_ |= 0x00000001;
           onChanged();
           return getDatasetFieldBuilder().getBuilder();
@@ -173533,14 +173533,14 @@ public final class Service {
          * The updated dataset with new experiment associations
          * </pre>
          *
-         * <code>optional .mlflow.Dataset dataset = 1;</code>
+         * <code>optional .mlflow.datasets.Dataset dataset = 1;</code>
          */
-        public org.mlflow.api.proto.Service.DatasetOrBuilder getDatasetOrBuilder() {
+        public org.mlflow.api.proto.Datasets.DatasetOrBuilder getDatasetOrBuilder() {
           if (datasetBuilder_ != null) {
             return datasetBuilder_.getMessageOrBuilder();
           } else {
             return dataset_ == null ?
-                org.mlflow.api.proto.Service.Dataset.getDefaultInstance() : dataset_;
+                org.mlflow.api.proto.Datasets.Dataset.getDefaultInstance() : dataset_;
           }
         }
         /**
@@ -173548,14 +173548,14 @@ public final class Service {
          * The updated dataset with new experiment associations
          * </pre>
          *
-         * <code>optional .mlflow.Dataset dataset = 1;</code>
+         * <code>optional .mlflow.datasets.Dataset dataset = 1;</code>
          */
         private com.google.protobuf.SingleFieldBuilderV3<
-            org.mlflow.api.proto.Service.Dataset, org.mlflow.api.proto.Service.Dataset.Builder, org.mlflow.api.proto.Service.DatasetOrBuilder> 
+            org.mlflow.api.proto.Datasets.Dataset, org.mlflow.api.proto.Datasets.Dataset.Builder, org.mlflow.api.proto.Datasets.DatasetOrBuilder> 
             getDatasetFieldBuilder() {
           if (datasetBuilder_ == null) {
             datasetBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
-                org.mlflow.api.proto.Service.Dataset, org.mlflow.api.proto.Service.Dataset.Builder, org.mlflow.api.proto.Service.DatasetOrBuilder>(
+                org.mlflow.api.proto.Datasets.Dataset, org.mlflow.api.proto.Datasets.Dataset.Builder, org.mlflow.api.proto.Datasets.DatasetOrBuilder>(
                     getDataset(),
                     getParentForChildren(),
                     isClean());
@@ -174563,7 +174563,7 @@ public final class Service {
        * The updated dataset after removing experiment associations
        * </pre>
        *
-       * <code>optional .mlflow.Dataset dataset = 1;</code>
+       * <code>optional .mlflow.datasets.Dataset dataset = 1;</code>
        * @return Whether the dataset field is set.
        */
       boolean hasDataset();
@@ -174572,18 +174572,18 @@ public final class Service {
        * The updated dataset after removing experiment associations
        * </pre>
        *
-       * <code>optional .mlflow.Dataset dataset = 1;</code>
+       * <code>optional .mlflow.datasets.Dataset dataset = 1;</code>
        * @return The dataset.
        */
-      org.mlflow.api.proto.Service.Dataset getDataset();
+      org.mlflow.api.proto.Datasets.Dataset getDataset();
       /**
        * <pre>
        * The updated dataset after removing experiment associations
        * </pre>
        *
-       * <code>optional .mlflow.Dataset dataset = 1;</code>
+       * <code>optional .mlflow.datasets.Dataset dataset = 1;</code>
        */
-      org.mlflow.api.proto.Service.DatasetOrBuilder getDatasetOrBuilder();
+      org.mlflow.api.proto.Datasets.DatasetOrBuilder getDatasetOrBuilder();
     }
     /**
      * Protobuf type {@code mlflow.RemoveDatasetFromExperiments.Response}
@@ -174632,11 +174632,11 @@ public final class Service {
                 done = true;
                 break;
               case 10: {
-                org.mlflow.api.proto.Service.Dataset.Builder subBuilder = null;
+                org.mlflow.api.proto.Datasets.Dataset.Builder subBuilder = null;
                 if (((bitField0_ & 0x00000001) != 0)) {
                   subBuilder = dataset_.toBuilder();
                 }
-                dataset_ = input.readMessage(org.mlflow.api.proto.Service.Dataset.PARSER, extensionRegistry);
+                dataset_ = input.readMessage(org.mlflow.api.proto.Datasets.Dataset.PARSER, extensionRegistry);
                 if (subBuilder != null) {
                   subBuilder.mergeFrom(dataset_);
                   dataset_ = subBuilder.buildPartial();
@@ -174678,13 +174678,13 @@ public final class Service {
 
       private int bitField0_;
       public static final int DATASET_FIELD_NUMBER = 1;
-      private org.mlflow.api.proto.Service.Dataset dataset_;
+      private org.mlflow.api.proto.Datasets.Dataset dataset_;
       /**
        * <pre>
        * The updated dataset after removing experiment associations
        * </pre>
        *
-       * <code>optional .mlflow.Dataset dataset = 1;</code>
+       * <code>optional .mlflow.datasets.Dataset dataset = 1;</code>
        * @return Whether the dataset field is set.
        */
       @java.lang.Override
@@ -174696,23 +174696,23 @@ public final class Service {
        * The updated dataset after removing experiment associations
        * </pre>
        *
-       * <code>optional .mlflow.Dataset dataset = 1;</code>
+       * <code>optional .mlflow.datasets.Dataset dataset = 1;</code>
        * @return The dataset.
        */
       @java.lang.Override
-      public org.mlflow.api.proto.Service.Dataset getDataset() {
-        return dataset_ == null ? org.mlflow.api.proto.Service.Dataset.getDefaultInstance() : dataset_;
+      public org.mlflow.api.proto.Datasets.Dataset getDataset() {
+        return dataset_ == null ? org.mlflow.api.proto.Datasets.Dataset.getDefaultInstance() : dataset_;
       }
       /**
        * <pre>
        * The updated dataset after removing experiment associations
        * </pre>
        *
-       * <code>optional .mlflow.Dataset dataset = 1;</code>
+       * <code>optional .mlflow.datasets.Dataset dataset = 1;</code>
        */
       @java.lang.Override
-      public org.mlflow.api.proto.Service.DatasetOrBuilder getDatasetOrBuilder() {
-        return dataset_ == null ? org.mlflow.api.proto.Service.Dataset.getDefaultInstance() : dataset_;
+      public org.mlflow.api.proto.Datasets.DatasetOrBuilder getDatasetOrBuilder() {
+        return dataset_ == null ? org.mlflow.api.proto.Datasets.Dataset.getDefaultInstance() : dataset_;
       }
 
       private byte memoizedIsInitialized = -1;
@@ -175038,15 +175038,15 @@ public final class Service {
         }
         private int bitField0_;
 
-        private org.mlflow.api.proto.Service.Dataset dataset_;
+        private org.mlflow.api.proto.Datasets.Dataset dataset_;
         private com.google.protobuf.SingleFieldBuilderV3<
-            org.mlflow.api.proto.Service.Dataset, org.mlflow.api.proto.Service.Dataset.Builder, org.mlflow.api.proto.Service.DatasetOrBuilder> datasetBuilder_;
+            org.mlflow.api.proto.Datasets.Dataset, org.mlflow.api.proto.Datasets.Dataset.Builder, org.mlflow.api.proto.Datasets.DatasetOrBuilder> datasetBuilder_;
         /**
          * <pre>
          * The updated dataset after removing experiment associations
          * </pre>
          *
-         * <code>optional .mlflow.Dataset dataset = 1;</code>
+         * <code>optional .mlflow.datasets.Dataset dataset = 1;</code>
          * @return Whether the dataset field is set.
          */
         public boolean hasDataset() {
@@ -175057,12 +175057,12 @@ public final class Service {
          * The updated dataset after removing experiment associations
          * </pre>
          *
-         * <code>optional .mlflow.Dataset dataset = 1;</code>
+         * <code>optional .mlflow.datasets.Dataset dataset = 1;</code>
          * @return The dataset.
          */
-        public org.mlflow.api.proto.Service.Dataset getDataset() {
+        public org.mlflow.api.proto.Datasets.Dataset getDataset() {
           if (datasetBuilder_ == null) {
-            return dataset_ == null ? org.mlflow.api.proto.Service.Dataset.getDefaultInstance() : dataset_;
+            return dataset_ == null ? org.mlflow.api.proto.Datasets.Dataset.getDefaultInstance() : dataset_;
           } else {
             return datasetBuilder_.getMessage();
           }
@@ -175072,9 +175072,9 @@ public final class Service {
          * The updated dataset after removing experiment associations
          * </pre>
          *
-         * <code>optional .mlflow.Dataset dataset = 1;</code>
+         * <code>optional .mlflow.datasets.Dataset dataset = 1;</code>
          */
-        public Builder setDataset(org.mlflow.api.proto.Service.Dataset value) {
+        public Builder setDataset(org.mlflow.api.proto.Datasets.Dataset value) {
           if (datasetBuilder_ == null) {
             if (value == null) {
               throw new NullPointerException();
@@ -175092,10 +175092,10 @@ public final class Service {
          * The updated dataset after removing experiment associations
          * </pre>
          *
-         * <code>optional .mlflow.Dataset dataset = 1;</code>
+         * <code>optional .mlflow.datasets.Dataset dataset = 1;</code>
          */
         public Builder setDataset(
-            org.mlflow.api.proto.Service.Dataset.Builder builderForValue) {
+            org.mlflow.api.proto.Datasets.Dataset.Builder builderForValue) {
           if (datasetBuilder_ == null) {
             dataset_ = builderForValue.build();
             onChanged();
@@ -175110,15 +175110,15 @@ public final class Service {
          * The updated dataset after removing experiment associations
          * </pre>
          *
-         * <code>optional .mlflow.Dataset dataset = 1;</code>
+         * <code>optional .mlflow.datasets.Dataset dataset = 1;</code>
          */
-        public Builder mergeDataset(org.mlflow.api.proto.Service.Dataset value) {
+        public Builder mergeDataset(org.mlflow.api.proto.Datasets.Dataset value) {
           if (datasetBuilder_ == null) {
             if (((bitField0_ & 0x00000001) != 0) &&
                 dataset_ != null &&
-                dataset_ != org.mlflow.api.proto.Service.Dataset.getDefaultInstance()) {
+                dataset_ != org.mlflow.api.proto.Datasets.Dataset.getDefaultInstance()) {
               dataset_ =
-                org.mlflow.api.proto.Service.Dataset.newBuilder(dataset_).mergeFrom(value).buildPartial();
+                org.mlflow.api.proto.Datasets.Dataset.newBuilder(dataset_).mergeFrom(value).buildPartial();
             } else {
               dataset_ = value;
             }
@@ -175134,7 +175134,7 @@ public final class Service {
          * The updated dataset after removing experiment associations
          * </pre>
          *
-         * <code>optional .mlflow.Dataset dataset = 1;</code>
+         * <code>optional .mlflow.datasets.Dataset dataset = 1;</code>
          */
         public Builder clearDataset() {
           if (datasetBuilder_ == null) {
@@ -175151,9 +175151,9 @@ public final class Service {
          * The updated dataset after removing experiment associations
          * </pre>
          *
-         * <code>optional .mlflow.Dataset dataset = 1;</code>
+         * <code>optional .mlflow.datasets.Dataset dataset = 1;</code>
          */
-        public org.mlflow.api.proto.Service.Dataset.Builder getDatasetBuilder() {
+        public org.mlflow.api.proto.Datasets.Dataset.Builder getDatasetBuilder() {
           bitField0_ |= 0x00000001;
           onChanged();
           return getDatasetFieldBuilder().getBuilder();
@@ -175163,14 +175163,14 @@ public final class Service {
          * The updated dataset after removing experiment associations
          * </pre>
          *
-         * <code>optional .mlflow.Dataset dataset = 1;</code>
+         * <code>optional .mlflow.datasets.Dataset dataset = 1;</code>
          */
-        public org.mlflow.api.proto.Service.DatasetOrBuilder getDatasetOrBuilder() {
+        public org.mlflow.api.proto.Datasets.DatasetOrBuilder getDatasetOrBuilder() {
           if (datasetBuilder_ != null) {
             return datasetBuilder_.getMessageOrBuilder();
           } else {
             return dataset_ == null ?
-                org.mlflow.api.proto.Service.Dataset.getDefaultInstance() : dataset_;
+                org.mlflow.api.proto.Datasets.Dataset.getDefaultInstance() : dataset_;
           }
         }
         /**
@@ -175178,14 +175178,14 @@ public final class Service {
          * The updated dataset after removing experiment associations
          * </pre>
          *
-         * <code>optional .mlflow.Dataset dataset = 1;</code>
+         * <code>optional .mlflow.datasets.Dataset dataset = 1;</code>
          */
         private com.google.protobuf.SingleFieldBuilderV3<
-            org.mlflow.api.proto.Service.Dataset, org.mlflow.api.proto.Service.Dataset.Builder, org.mlflow.api.proto.Service.DatasetOrBuilder> 
+            org.mlflow.api.proto.Datasets.Dataset, org.mlflow.api.proto.Datasets.Dataset.Builder, org.mlflow.api.proto.Datasets.DatasetOrBuilder> 
             getDatasetFieldBuilder() {
           if (datasetBuilder_ == null) {
             datasetBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
-                org.mlflow.api.proto.Service.Dataset, org.mlflow.api.proto.Service.Dataset.Builder, org.mlflow.api.proto.Service.DatasetOrBuilder>(
+                org.mlflow.api.proto.Datasets.Dataset, org.mlflow.api.proto.Datasets.Dataset.Builder, org.mlflow.api.proto.Datasets.DatasetOrBuilder>(
                     getDataset(),
                     getParentForChildren(),
                     isClean());
@@ -188141,330 +188141,341 @@ public final class Service {
       "\022\031\n\013max_results\030\002 \001(\005:\0041000\022\022\n\npage_toke" +
       "n\030\003 \001(\t\0324\n\010Response\022\017\n\007records\030\001 \001(\t\022\027\n\017" +
       "next_page_token\030\002 \001(\t:+\342?(\n&com.databric" +
-      "ks.rpc.RPC[$this.Response]\"\246\001\n\027AddDatase" +
+      "ks.rpc.RPC[$this.Response]\"\257\001\n\027AddDatase" +
       "tToExperiments\022\030\n\ndataset_id\030\001 \001(\tB\004\370\206\031\001" +
-      "\022\026\n\016experiment_ids\030\002 \003(\t\032,\n\010Response\022 \n\007" +
-      "dataset\030\001 \001(\0132\017.mlflow.Dataset:+\342?(\n&com" +
-      ".databricks.rpc.RPC[$this.Response]\"\253\001\n\034" +
-      "RemoveDatasetFromExperiments\022\030\n\ndataset_" +
-      "id\030\001 \001(\tB\004\370\206\031\001\022\026\n\016experiment_ids\030\002 \003(\t\032," +
-      "\n\010Response\022 \n\007dataset\030\001 \001(\0132\017.mlflow.Dat" +
-      "aset:+\342?(\n&com.databricks.rpc.RPC[$this." +
-      "Response]\"\205\002\n\016RegisterScorer\022\025\n\rexperime" +
-      "nt_id\030\001 \001(\t\022\014\n\004name\030\002 \001(\t\022\031\n\021serialized_" +
-      "scorer\030\003 \001(\t\032\205\001\n\010Response\022\017\n\007version\030\001 \001" +
-      "(\005\022\021\n\tscorer_id\030\002 \001(\t\022\025\n\rexperiment_id\030\003" +
-      " \001(\t\022\014\n\004name\030\004 \001(\t\022\031\n\021serialized_scorer\030" +
-      "\005 \001(\t\022\025\n\rcreation_time\030\006 \001(\003:+\342?(\n&com.d" +
-      "atabricks.rpc.RPC[$this.Response]\"~\n\013Lis" +
-      "tScorers\022\025\n\rexperiment_id\030\001 \001(\t\032+\n\010Respo" +
-      "nse\022\037\n\007scorers\030\001 \003(\0132\016.mlflow.Scorer:+\342?" +
-      "(\n&com.databricks.rpc.RPC[$this.Response" +
-      "]\"\223\001\n\022ListScorerVersions\022\025\n\rexperiment_i" +
-      "d\030\001 \001(\t\022\014\n\004name\030\002 \001(\t\032+\n\010Response\022\037\n\007sco" +
-      "rers\030\001 \003(\0132\016.mlflow.Scorer:+\342?(\n&com.dat" +
-      "abricks.rpc.RPC[$this.Response]\"\232\001\n\tGetS" +
-      "corer\022\025\n\rexperiment_id\030\001 \001(\t\022\014\n\004name\030\002 \001" +
-      "(\t\022\017\n\007version\030\003 \001(\005\032*\n\010Response\022\036\n\006score" +
-      "r\030\001 \001(\0132\016.mlflow.Scorer:+\342?(\n&com.databr" +
-      "icks.rpc.RPC[$this.Response]\"}\n\014DeleteSc" +
-      "orer\022\025\n\rexperiment_id\030\001 \001(\t\022\014\n\004name\030\002 \001(" +
-      "\t\022\017\n\007version\030\003 \001(\005\032\n\n\010Response:+\342?(\n&com" +
-      ".databricks.rpc.RPC[$this.Response]\"\221\001\n\006" +
-      "Scorer\022\025\n\rexperiment_id\030\001 \001(\005\022\023\n\013scorer_" +
-      "name\030\002 \001(\t\022\026\n\016scorer_version\030\003 \001(\005\022\031\n\021se" +
-      "rialized_scorer\030\004 \001(\t\022\025\n\rcreation_time\030\005" +
-      " \001(\003\022\021\n\tscorer_id\030\006 \001(\t*6\n\010ViewType\022\017\n\013A" +
-      "CTIVE_ONLY\020\001\022\020\n\014DELETED_ONLY\020\002\022\007\n\003ALL\020\003*" +
-      "I\n\nSourceType\022\014\n\010NOTEBOOK\020\001\022\007\n\003JOB\020\002\022\013\n\007" +
-      "PROJECT\020\003\022\t\n\005LOCAL\020\004\022\014\n\007UNKNOWN\020\350\007*M\n\tRu" +
-      "nStatus\022\013\n\007RUNNING\020\001\022\r\n\tSCHEDULED\020\002\022\014\n\010F" +
-      "INISHED\020\003\022\n\n\006FAILED\020\004\022\n\n\006KILLED\020\005*O\n\013Tra" +
-      "ceStatus\022\034\n\030TRACE_STATUS_UNSPECIFIED\020\000\022\006" +
-      "\n\002OK\020\001\022\t\n\005ERROR\020\002\022\017\n\013IN_PROGRESS\020\003*\212\001\n\021L" +
-      "oggedModelStatus\022#\n\037LOGGED_MODEL_STATUS_" +
-      "UNSPECIFIED\020\000\022\030\n\024LOGGED_MODEL_PENDING\020\001\022" +
-      "\026\n\022LOGGED_MODEL_READY\020\002\022\036\n\032LOGGED_MODEL_" +
-      "UPLOAD_FAILED\020\0032\363V\n\rMlflowService\022\246\001\n\023ge" +
-      "tExperimentByName\022\033.mlflow.GetExperiment" +
-      "ByName\032$.mlflow.GetExperimentByName.Resp" +
-      "onse\"L\362\206\031H\n,\n\003GET\022\037/mlflow/experiments/g" +
-      "et-by-name\032\004\010\002\020\000\020\001*\026Get Experiment By Na" +
-      "me\022\224\001\n\020createExperiment\022\030.mlflow.CreateE" +
-      "xperiment\032!.mlflow.CreateExperiment.Resp" +
-      "onse\"C\362\206\031?\n(\n\004POST\022\032/mlflow/experiments/" +
-      "create\032\004\010\002\020\000\020\001*\021Create Experiment\022\301\001\n\021se" +
-      "archExperiments\022\031.mlflow.SearchExperimen" +
-      "ts\032\".mlflow.SearchExperiments.Response\"m" +
-      "\362\206\031i\n(\n\004POST\022\032/mlflow/experiments/search" +
-      "\032\004\010\002\020\000\n\'\n\003GET\022\032/mlflow/experiments/searc" +
-      "h\032\004\010\002\020\000\020\001*\022Search Experiments\022\210\001\n\rgetExp" +
-      "eriment\022\025.mlflow.GetExperiment\032\036.mlflow." +
-      "GetExperiment.Response\"@\362\206\0318\n$\n\003GET\022\027/ml" +
-      "flow/experiments/get\032\004\010\002\020\000\020\001*\016Get Experi" +
-      "ment\272\214\031\000\022\224\001\n\020deleteExperiment\022\030.mlflow.D" +
-      "eleteExperiment\032!.mlflow.DeleteExperimen" +
-      "t.Response\"C\362\206\031?\n(\n\004POST\022\032/mlflow/experi" +
-      "ments/delete\032\004\010\002\020\000\020\001*\021Delete Experiment\022" +
-      "\231\001\n\021restoreExperiment\022\031.mlflow.RestoreEx" +
-      "periment\032\".mlflow.RestoreExperiment.Resp" +
-      "onse\"E\362\206\031A\n)\n\004POST\022\033/mlflow/experiments/" +
-      "restore\032\004\010\002\020\000\020\001*\022Restore Experiment\022\224\001\n\020" +
-      "updateExperiment\022\030.mlflow.UpdateExperime" +
-      "nt\032!.mlflow.UpdateExperiment.Response\"C\362" +
-      "\206\031?\n(\n\004POST\022\032/mlflow/experiments/update\032" +
-      "\004\010\002\020\000\020\001*\021Update Experiment\022q\n\tcreateRun\022" +
-      "\021.mlflow.CreateRun\032\032.mlflow.CreateRun.Re" +
-      "sponse\"5\362\206\0311\n!\n\004POST\022\023/mlflow/runs/creat" +
-      "e\032\004\010\002\020\000\020\001*\nCreate Run\022q\n\tupdateRun\022\021.mlf" +
-      "low.UpdateRun\032\032.mlflow.UpdateRun.Respons" +
-      "e\"5\362\206\0311\n!\n\004POST\022\023/mlflow/runs/update\032\004\010\002" +
-      "\020\000\020\001*\nUpdate Run\022q\n\tdeleteRun\022\021.mlflow.D" +
-      "eleteRun\032\032.mlflow.DeleteRun.Response\"5\362\206" +
-      "\0311\n!\n\004POST\022\023/mlflow/runs/delete\032\004\010\002\020\000\020\001*" +
-      "\nDelete Run\022v\n\nrestoreRun\022\022.mlflow.Resto" +
-      "reRun\032\033.mlflow.RestoreRun.Response\"7\362\206\0313" +
-      "\n\"\n\004POST\022\024/mlflow/runs/restore\032\004\010\002\020\000\020\001*\013" +
-      "Restore Run\022u\n\tlogMetric\022\021.mlflow.LogMet" +
-      "ric\032\032.mlflow.LogMetric.Response\"9\362\206\0315\n%\n" +
-      "\004POST\022\027/mlflow/runs/log-metric\032\004\010\002\020\000\020\001*\n" +
-      "Log Metric\022t\n\010logParam\022\020.mlflow.LogParam" +
-      "\032\031.mlflow.LogParam.Response\";\362\206\0317\n(\n\004POS" +
-      "T\022\032/mlflow/runs/log-parameter\032\004\010\002\020\000\020\001*\tL" +
-      "og Param\022\241\001\n\020setExperimentTag\022\030.mlflow.S" +
-      "etExperimentTag\032!.mlflow.SetExperimentTa" +
-      "g.Response\"P\362\206\031L\n4\n\004POST\022&/mlflow/experi" +
-      "ments/set-experiment-tag\032\004\010\002\020\000\020\001*\022Set Ex" +
-      "periment Tag\022\260\001\n\023deleteExperimentTag\022\033.m" +
-      "lflow.DeleteExperimentTag\032$.mlflow.Delet" +
-      "eExperimentTag.Response\"V\362\206\031R\n7\n\004POST\022)/" +
-      "mlflow/experiments/delete-experiment-tag" +
-      "\032\004\010\002\020\000\020\001*\025Delete Experiment Tag\022f\n\006setTa" +
-      "g\022\016.mlflow.SetTag\032\027.mlflow.SetTag.Respon" +
-      "se\"3\362\206\031/\n\"\n\004POST\022\024/mlflow/runs/set-tag\032\004" +
-      "\010\002\020\000\020\001*\007Set Tag\022\210\001\n\013setTraceTag\022\023.mlflow" +
-      ".SetTraceTag\032\034.mlflow.SetTraceTag.Respon" +
-      "se\"F\362\206\031B\n/\n\005PATCH\022 /mlflow/traces/{reque" +
-      "st_id}/tags\032\004\010\002\020\000\020\003*\rSet Trace Tag\022\217\001\n\rs" +
-      "etTraceTagV3\022\025.mlflow.SetTraceTagV3\032\036.ml" +
-      "flow.SetTraceTagV3.Response\"G\362\206\031C\n-\n\005PAT" +
-      "CH\022\036/mlflow/traces/{trace_id}/tags\032\004\010\003\020\000" +
-      "\020\003*\020Set Trace Tag V3\022\225\001\n\016deleteTraceTag\022" +
-      "\026.mlflow.DeleteTraceTag\032\037.mlflow.DeleteT" +
-      "raceTag.Response\"J\362\206\031F\n0\n\006DELETE\022 /mlflo" +
-      "w/traces/{request_id}/tags\032\004\010\002\020\000\020\003*\020Dele" +
-      "te Trace Tag\022\234\001\n\020deleteTraceTagV3\022\030.mlfl" +
-      "ow.DeleteTraceTagV3\032!.mlflow.DeleteTrace" +
-      "TagV3.Response\"K\362\206\031G\n.\n\006DELETE\022\036/mlflow/" +
-      "traces/{trace_id}/tags\032\004\010\003\020\000\020\003*\023Delete T" +
-      "race Tag V3\022u\n\tdeleteTag\022\021.mlflow.Delete" +
-      "Tag\032\032.mlflow.DeleteTag.Response\"9\362\206\0315\n%\n" +
-      "\004POST\022\027/mlflow/runs/delete-tag\032\004\010\002\020\000\020\001*\n" +
-      "Delete Tag\022e\n\006getRun\022\016.mlflow.GetRun\032\027.m" +
-      "lflow.GetRun.Response\"2\362\206\031*\n\035\n\003GET\022\020/mlf" +
-      "low/runs/get\032\004\010\002\020\000\020\001*\007Get Run\272\214\031\000\022y\n\nsea" +
-      "rchRuns\022\022.mlflow.SearchRuns\032\033.mlflow.Sea" +
-      "rchRuns.Response\":\362\206\0312\n!\n\004POST\022\023/mlflow/" +
-      "runs/search\032\004\010\002\020\000\020\001*\013Search Runs\272\214\031\000\022\207\001\n" +
-      "\rlistArtifacts\022\025.mlflow.ListArtifacts\032\036." +
-      "mlflow.ListArtifacts.Response\"?\362\206\0317\n#\n\003G" +
-      "ET\022\026/mlflow/artifacts/list\032\004\010\002\020\000\020\001*\016List" +
-      " Artifacts\272\214\031\000\022\225\001\n\020getMetricHistory\022\030.ml" +
-      "flow.GetMetricHistory\032!.mlflow.GetMetric" +
-      "History.Response\"D\362\206\031@\n(\n\003GET\022\033/mlflow/m" +
-      "etrics/get-history\032\004\010\002\020\000\020\001*\022Get Metric H" +
-      "istory\022\267\001\n\034getMetricHistoryBulkInterval\022" +
-      "$.mlflow.GetMetricHistoryBulkInterval\032-." +
-      "mlflow.GetMetricHistoryBulkInterval.Resp" +
-      "onse\"B\362\206\031:\n6\n\003GET\022)/mlflow/metrics/get-h" +
-      "istory-bulk-interval\032\004\010\002\020\013\020\003\272\214\031\000\022p\n\010logB" +
-      "atch\022\020.mlflow.LogBatch\032\031.mlflow.LogBatch" +
-      ".Response\"7\362\206\0313\n$\n\004POST\022\026/mlflow/runs/lo" +
-      "g-batch\032\004\010\002\020\000\020\001*\tLog Batch\022p\n\010logModel\022\020" +
-      ".mlflow.LogModel\032\031.mlflow.LogModel.Respo" +
-      "nse\"7\362\206\0313\n$\n\004POST\022\026/mlflow/runs/log-mode" +
-      "l\032\004\010\002\020\000\020\001*\tLog Model\022u\n\tlogInputs\022\021.mlfl" +
-      "ow.LogInputs\032\032.mlflow.LogInputs.Response" +
-      "\"9\362\206\0315\n%\n\004POST\022\027/mlflow/runs/log-inputs\032" +
-      "\004\010\002\020\000\020\001*\nLog Inputs\022v\n\nlogOutputs\022\022.mlfl" +
-      "ow.LogOutputs\032\033.mlflow.LogOutputs.Respon" +
-      "se\"7\362\206\0313\n\"\n\004POST\022\024/mlflow/runs/outputs\032\004" +
-      "\010\002\020\000\020\003*\013Log Outputs\022\207\001\n\016searchDatasets\022\026" +
-      ".mlflow.SearchDatasets\032\037.mlflow.SearchDa" +
-      "tasets.Response\"<\362\206\0314\n0\n\004POST\022\"mlflow/ex" +
-      "periments/search-datasets\032\004\010\002\020\000\020\003\272\214\031\000\022p\n" +
-      "\nstartTrace\022\022.mlflow.StartTrace\032\033.mlflow" +
-      ".StartTrace.Response\"1\362\206\031-\n\034\n\004POST\022\016/mlf" +
-      "low/traces\032\004\010\002\020\000\020\003*\013Start Trace\022v\n\010endTr" +
-      "ace\022\020.mlflow.EndTrace\032\031.mlflow.EndTrace." +
-      "Response\"=\362\206\0319\n*\n\005PATCH\022\033/mlflow/traces/" +
-      "{request_id}\032\004\010\002\020\000\020\003*\tEnd Trace\022\211\001\n\014getT" +
-      "raceInfo\022\024.mlflow.GetTraceInfo\032\035.mlflow." +
-      "GetTraceInfo.Response\"D\362\206\031@\n-\n\003GET\022 /mlf" +
-      "low/traces/{request_id}/info\032\004\010\002\020\000\020\003*\rGe" +
-      "t TraceInfo\022\213\001\n\016getTraceInfoV3\022\026.mlflow." +
-      "GetTraceInfoV3\032\037.mlflow.GetTraceInfoV3.R" +
-      "esponse\"@\362\206\031<\n&\n\003GET\022\031/mlflow/traces/{tr" +
-      "ace_id}\032\004\010\003\020\000\020\003*\020Get TraceInfo v3\022n\n\010get" +
-      "Trace\022\020.mlflow.GetTrace\032\031.mlflow.GetTrac" +
-      "e.Response\"5\362\206\0311\n\037\n\003GET\022\022/mlflow/traces/" +
-      "get\032\004\010\003\020\000\020\003*\014Get Trace v3\022\203\001\n\016batchGetTr" +
-      "aces\022\026.mlflow.BatchGetTraces\032\037.mlflow.Ba" +
-      "tchGetTraces.Response\"8\362\206\0314\n$\n\003GET\022\027/mlf" +
-      "low/traces/batchGet\032\004\010\003\020\000\020\003*\nGet Traces\022" +
-      "w\n\014searchTraces\022\024.mlflow.SearchTraces\032\035." +
-      "mlflow.SearchTraces.Response\"2\362\206\031.\n\033\n\003GE" +
-      "T\022\016/mlflow/traces\032\004\010\002\020\000\020\003*\rSearch Traces" +
-      "\022\210\001\n\016searchTracesV3\022\026.mlflow.SearchTrace" +
-      "sV3\032\037.mlflow.SearchTracesV3.Response\"=\362\206" +
-      "\0319\n#\n\004POST\022\025/mlflow/traces/search\032\004\010\003\020\000\020" +
-      "\003*\020Search Traces V3\022i\n\014startTraceV3\022\024.ml" +
-      "flow.StartTraceV3\032\035.mlflow.StartTraceV3." +
-      "Response\"$\362\206\031 \n\034\n\004POST\022\016/mlflow/traces\032\004" +
-      "\010\003\020\000\020\003\022\222\001\n\017linkTracesToRun\022\027.mlflow.Link" +
-      "TracesToRun\032 .mlflow.LinkTracesToRun.Res" +
-      "ponse\"D\362\206\031@\n(\n\004POST\022\032/mlflow/traces/link" +
-      "-to-run\032\004\010\002\020\000\020\003*\022Link Traces to Run\022\242\001\n\031" +
-      "searchUnifiedTraceHandler\022\033.mlflow.Searc" +
-      "hUnifiedTraces\032$.mlflow.SearchUnifiedTra" +
-      "ces.Response\"B\362\206\031>\n#\n\003GET\022\026/mlflow/unifi" +
-      "ed-traces\032\004\010\002\020\000\020\003*\025Search Unified Traces" +
-      "\022\257\001\n\025getOnlineTraceDetails\022\035.mlflow.GetO" +
-      "nlineTraceDetails\032&.mlflow.GetOnlineTrac" +
-      "eDetails.Response\"O\362\206\031K\n-\n\003GET\022 /mlflow/" +
-      "get-online-trace-details\032\004\010\002\020\000\020\003*\030Get On" +
-      "line Trace Details\022\206\001\n\014deleteTraces\022\024.ml" +
-      "flow.DeleteTraces\032\035.mlflow.DeleteTraces." +
-      "Response\"A\362\206\031=\n*\n\004POST\022\034/mlflow/traces/d" +
-      "elete-traces\032\004\010\002\020\000\020\003*\rDelete Traces\022\217\001\n\016" +
-      "deleteTracesV3\022\026.mlflow.DeleteTracesV3\032\037" +
-      ".mlflow.DeleteTracesV3.Response\"D\362\206\031@\n*\n" +
-      "\004POST\022\034/mlflow/traces/delete-traces\032\004\010\003\020" +
-      "\000\020\003*\020Delete Traces V3\022\343\001\n\037calculateTrace" +
-      "FilterCorrelation\022\'.mlflow.CalculateTrac" +
-      "eFilterCorrelation\0320.mlflow.CalculateTra" +
-      "ceFilterCorrelation.Response\"e\362\206\031a\n9\n\004PO" +
-      "ST\022+/mlflow/traces/calculate-filter-corr" +
-      "elation\032\004\010\003\020\000\020\003*\"Calculate Trace Filter " +
-      "Correlation\022\224\001\n\021createLoggedModel\022\031.mlfl" +
-      "ow.CreateLoggedModel\032\".mlflow.CreateLogg" +
-      "edModel.Response\"@\362\206\031<\n#\n\004POST\022\025/mlflow/" +
-      "logged-models\032\004\010\002\020\000\020\003*\023Create Logged Mod" +
-      "el\022\250\001\n\023finalizeLoggedModel\022\033.mlflow.Fina" +
-      "lizeLoggedModel\032$.mlflow.FinalizeLoggedM" +
-      "odel.Response\"N\362\206\031J\n/\n\005PATCH\022 /mlflow/lo" +
-      "gged-models/{model_id}\032\004\010\002\020\000\020\003*\025Finalize" +
-      " Logged Model\022\222\001\n\016getLoggedModel\022\026.mlflo" +
-      "w.GetLoggedModel\032\037.mlflow.GetLoggedModel" +
-      ".Response\"G\362\206\031C\n-\n\003GET\022 /mlflow/logged-m" +
-      "odels/{model_id}\032\004\010\002\020\000\020\003*\020Get Logged Mod" +
-      "el\022\243\001\n\021deleteLoggedModel\022\031.mlflow.Delete" +
-      "LoggedModel\032\".mlflow.DeleteLoggedModel.R" +
-      "esponse\"O\362\206\031K\n0\n\006DELETE\022 /mlflow/logged-" +
-      "models/{model_id}\032\004\010\002\020\000\020\003*\025Delete a Logg" +
-      "ed Model\022\236\001\n\022searchLoggedModels\022\032.mlflow" +
-      ".SearchLoggedModels\032#.mlflow.SearchLogge" +
-      "dModels.Response\"G\362\206\031C\n*\n\004POST\022\034/mlflow/" +
-      "logged-models/search\032\004\010\002\020\000\020\003*\023Search Log" +
-      "gedModels\022\251\001\n\022setLoggedModelTags\022\032.mlflo" +
-      "w.SetLoggedModelTags\032#.mlflow.SetLoggedM" +
-      "odelTags.Response\"R\362\206\031N\n4\n\005PATCH\022%/mlflo" +
-      "w/logged-models/{model_id}/tags\032\004\010\002\020\000\020\003*" +
-      "\024Set Logged Model Tag\022\275\001\n\024deleteLoggedMo" +
-      "delTag\022\034.mlflow.DeleteLoggedModelTag\032%.m" +
-      "lflow.DeleteLoggedModelTag.Response\"`\362\206\031" +
-      "\\\n?\n\006DELETE\022//mlflow/logged-models/{mode" +
-      "l_id}/tags/{tag_key}\032\004\010\002\020\000\020\003*\027Delete Log" +
-      "ged Model Tag\022\326\001\n\030listLoggedModelArtifac" +
-      "ts\022 .mlflow.ListLoggedModelArtifacts\032).m" +
-      "lflow.ListLoggedModelArtifacts.Response\"" +
-      "m\362\206\031i\nC\n\003GET\0226/mlflow/logged-models/{mod" +
-      "el_id}/artifacts/directories\032\004\010\002\020\000\020\003* Li" +
-      "st Artifacts for Logged Models\022\301\001\n\024LogLo" +
-      "ggedModelParams\022#.mlflow.LogLoggedModelP" +
-      "aramsRequest\032,.mlflow.LogLoggedModelPara" +
-      "msRequest.Response\"V\362\206\031R\n5\n\004POST\022\'/mlflo" +
-      "w/logged-models/{model_id}/params\032\004\010\002\020\000\020" +
-      "\003*\027Log Logged Model Params\022\260\001\n\rGetAssess" +
-      "ment\022\034.mlflow.GetAssessmentRequest\032%.mlf" +
-      "low.GetAssessmentRequest.Response\"Z\362\206\031V\n" +
-      "B\n\003GET\0225/mlflow/traces/{trace_id}/assess" +
-      "ments/{assessment_id}\032\004\010\003\020\000\020\003*\016Get Asses" +
-      "sment\022\337\001\n\020createAssessment\022\030.mlflow.Crea" +
-      "teAssessment\032!.mlflow.CreateAssessment.R" +
-      "esponse\"\215\001\362\206\031\210\001\n>\n\004POST\0220/mlflow/traces/" +
-      "{assessment.trace_id}/assessments\032\004\010\003\020\000\020" +
-      "\003\030\350\007\030\356\007\030\014\030\001*:Create an assessment of a t" +
-      "race or a span within the trace\022\320\001\n\020upda" +
-      "teAssessment\022\030.mlflow.UpdateAssessment\032!" +
-      ".mlflow.UpdateAssessment.Response\"\177\362\206\031{\n" +
-      "D\n\005PATCH\0225/mlflow/traces/{trace_id}/asse" +
-      "ssments/{assessment_id}\032\004\010\003\020\000\020\003\030\350\007\030\356\007\030\001*" +
-      ")Update an existing assessment on a trac" +
-      "e.\022\261\001\n\020deleteAssessment\022\030.mlflow.DeleteA" +
-      "ssessment\032!.mlflow.DeleteAssessment.Resp" +
-      "onse\"`\362\206\031\\\nE\n\006DELETE\0225/mlflow/traces/{tr" +
-      "ace_id}/assessments/{assessment_id}\032\004\010\003\020" +
-      "\000\020\003*\021Delete Assessment\022\232\001\n\rcreateDataset" +
-      "\022\025.mlflow.CreateDataset\032\036.mlflow.CreateD" +
-      "ataset.Response\"R\362\206\031N\n%\n\004POST\022\027/mlflow/d" +
-      "atasets/create\032\004\010\003\020\000\020\003\030\350\007\030\356\007\030\014\030\001*\031Create" +
-      " Evaluation Dataset\022\221\001\n\ngetDataset\022\022.mlf" +
-      "low.GetDataset\032\033.mlflow.GetDataset.Respo" +
-      "nse\"R\362\206\031N\n*\n\003GET\022\035/mlflow/datasets/{data" +
-      "set_id}\032\004\010\003\020\000\020\003\030\350\007\030\272\027\030\001*\026Get Evaluation " +
-      "Dataset\022\240\001\n\rdeleteDataset\022\025.mlflow.Delet" +
-      "eDataset\032\036.mlflow.DeleteDataset.Response" +
-      "\"X\362\206\031T\n-\n\006DELETE\022\035/mlflow/datasets/{data" +
-      "set_id}\032\004\010\003\020\000\020\003\030\350\007\030\272\027\030\001*\031Delete Evaluati" +
-      "on Dataset\022\335\001\n\030searchEvaluationDatasets\022" +
-      " .mlflow.SearchEvaluationDatasets\032).mlfl" +
-      "ow.SearchEvaluationDatasets.Response\"t\362\206" +
-      "\031p\n%\n\004POST\022\027/mlflow/datasets/search\032\004\010\003\020" +
-      "\000\n$\n\003GET\022\027/mlflow/datasets/search\032\004\010\003\020\000\020" +
-      "\003\030\350\007\030\001*\032Search Evaluation Datasets\022\251\001\n\016s" +
-      "etDatasetTags\022\026.mlflow.SetDatasetTags\032\037." +
-      "mlflow.SetDatasetTags.Response\"^\362\206\031Z\n1\n\005" +
-      "PATCH\022\"/mlflow/datasets/{dataset_id}/tag" +
-      "s\032\004\010\003\020\000\020\003\030\350\007\030\272\027\030\001*\033Set Evaluation Datase" +
-      "t Tags\022\270\001\n\020deleteDatasetTag\022\030.mlflow.Del" +
-      "eteDatasetTag\032!.mlflow.DeleteDatasetTag." +
-      "Response\"g\362\206\031c\n8\n\006DELETE\022(/mlflow/datase" +
-      "ts/{dataset_id}/tags/{key}\032\004\010\003\020\000\020\003\030\350\007\030\272\027" +
-      "\030\001*\035Delete Evaluation Dataset Tag\022\303\001\n\024up" +
-      "sertDatasetRecords\022\034.mlflow.UpsertDatase" +
-      "tRecords\032%.mlflow.UpsertDatasetRecords.R" +
-      "esponse\"f\362\206\031b\n3\n\004POST\022%/mlflow/datasets/" +
-      "{dataset_id}/records\032\004\010\003\020\000\020\003\030\350\007\030\272\027\030\001*!Up" +
-      "sert Evaluation Dataset Records\022\326\001\n\027getD" +
-      "atasetExperimentIds\022\037.mlflow.GetDatasetE" +
-      "xperimentIds\032(.mlflow.GetDatasetExperime" +
-      "ntIds.Response\"p\362\206\031l\n9\n\003GET\022,/mlflow/dat" +
-      "asets/{dataset_id}/experiment-ids\032\004\010\003\020\000\020" +
-      "\003\030\350\007\030\272\027\030\001*%Get Evaluation Dataset Experi" +
-      "ment IDs\022\212\001\n\016registerScorer\022\026.mlflow.Reg" +
-      "isterScorer\032\037.mlflow.RegisterScorer.Resp" +
-      "onse\"?\362\206\031;\n&\n\004POST\022\030/mlflow/scorers/regi" +
-      "ster\032\004\010\003\020\000\020\001*\017Register Scorer\022y\n\013listSco" +
-      "rers\022\023.mlflow.ListScorers\032\034.mlflow.ListS" +
-      "corers.Response\"7\362\206\0313\n!\n\003GET\022\024/mlflow/sc" +
-      "orers/list\032\004\010\003\020\000\020\001*\014List Scorers\022\232\001\n\022lis" +
-      "tScorerVersions\022\032.mlflow.ListScorerVersi" +
-      "ons\032#.mlflow.ListScorerVersions.Response" +
-      "\"C\362\206\031?\n%\n\003GET\022\030/mlflow/scorers/versions\032" +
-      "\004\010\003\020\000\020\001*\024List Scorer Versions\022p\n\tgetScor" +
-      "er\022\021.mlflow.GetScorer\032\032.mlflow.GetScorer" +
-      ".Response\"4\362\206\0310\n \n\003GET\022\023/mlflow/scorers/" +
-      "get\032\004\010\003\020\000\020\001*\nGet Scorer\022\202\001\n\014deleteScorer" +
-      "\022\024.mlflow.DeleteScorer\032\035.mlflow.DeleteSc" +
-      "orer.Response\"=\362\206\0319\n&\n\006DELETE\022\026/mlflow/s" +
-      "corers/delete\032\004\010\003\020\000\020\001*\rDelete Scorer\022\266\001\n" +
-      "\021getDatasetRecords\022\031.mlflow.GetDatasetRe" +
-      "cords\032\".mlflow.GetDatasetRecords.Respons" +
-      "e\"b\362\206\031^\n2\n\003GET\022%/mlflow/datasets/{datase" +
-      "t_id}/records\032\004\010\003\020\000\020\003\030\350\007\030\272\027\030\001*\036Get Evalu" +
-      "ation Dataset RecordsB\036\n\024org.mlflow.api." +
-      "proto\220\001\001\342?\002\020\001"
+      "\022\026\n\016experiment_ids\030\002 \003(\t\0325\n\010Response\022)\n\007" +
+      "dataset\030\001 \001(\0132\030.mlflow.datasets.Dataset:" +
+      "+\342?(\n&com.databricks.rpc.RPC[$this.Respo" +
+      "nse]\"\264\001\n\034RemoveDatasetFromExperiments\022\030\n" +
+      "\ndataset_id\030\001 \001(\tB\004\370\206\031\001\022\026\n\016experiment_id" +
+      "s\030\002 \003(\t\0325\n\010Response\022)\n\007dataset\030\001 \001(\0132\030.m" +
+      "lflow.datasets.Dataset:+\342?(\n&com.databri" +
+      "cks.rpc.RPC[$this.Response]\"\205\002\n\016Register" +
+      "Scorer\022\025\n\rexperiment_id\030\001 \001(\t\022\014\n\004name\030\002 " +
+      "\001(\t\022\031\n\021serialized_scorer\030\003 \001(\t\032\205\001\n\010Respo" +
+      "nse\022\017\n\007version\030\001 \001(\005\022\021\n\tscorer_id\030\002 \001(\t\022" +
+      "\025\n\rexperiment_id\030\003 \001(\t\022\014\n\004name\030\004 \001(\t\022\031\n\021" +
+      "serialized_scorer\030\005 \001(\t\022\025\n\rcreation_time" +
+      "\030\006 \001(\003:+\342?(\n&com.databricks.rpc.RPC[$thi" +
+      "s.Response]\"~\n\013ListScorers\022\025\n\rexperiment" +
+      "_id\030\001 \001(\t\032+\n\010Response\022\037\n\007scorers\030\001 \003(\0132\016" +
+      ".mlflow.Scorer:+\342?(\n&com.databricks.rpc." +
+      "RPC[$this.Response]\"\223\001\n\022ListScorerVersio" +
+      "ns\022\025\n\rexperiment_id\030\001 \001(\t\022\014\n\004name\030\002 \001(\t\032" +
+      "+\n\010Response\022\037\n\007scorers\030\001 \003(\0132\016.mlflow.Sc" +
+      "orer:+\342?(\n&com.databricks.rpc.RPC[$this." +
+      "Response]\"\232\001\n\tGetScorer\022\025\n\rexperiment_id" +
+      "\030\001 \001(\t\022\014\n\004name\030\002 \001(\t\022\017\n\007version\030\003 \001(\005\032*\n" +
+      "\010Response\022\036\n\006scorer\030\001 \001(\0132\016.mlflow.Score" +
+      "r:+\342?(\n&com.databricks.rpc.RPC[$this.Res" +
+      "ponse]\"}\n\014DeleteScorer\022\025\n\rexperiment_id\030" +
+      "\001 \001(\t\022\014\n\004name\030\002 \001(\t\022\017\n\007version\030\003 \001(\005\032\n\n\010" +
+      "Response:+\342?(\n&com.databricks.rpc.RPC[$t" +
+      "his.Response]\"\221\001\n\006Scorer\022\025\n\rexperiment_i" +
+      "d\030\001 \001(\005\022\023\n\013scorer_name\030\002 \001(\t\022\026\n\016scorer_v" +
+      "ersion\030\003 \001(\005\022\031\n\021serialized_scorer\030\004 \001(\t\022" +
+      "\025\n\rcreation_time\030\005 \001(\003\022\021\n\tscorer_id\030\006 \001(" +
+      "\t*6\n\010ViewType\022\017\n\013ACTIVE_ONLY\020\001\022\020\n\014DELETE" +
+      "D_ONLY\020\002\022\007\n\003ALL\020\003*I\n\nSourceType\022\014\n\010NOTEB" +
+      "OOK\020\001\022\007\n\003JOB\020\002\022\013\n\007PROJECT\020\003\022\t\n\005LOCAL\020\004\022\014" +
+      "\n\007UNKNOWN\020\350\007*M\n\tRunStatus\022\013\n\007RUNNING\020\001\022\r" +
+      "\n\tSCHEDULED\020\002\022\014\n\010FINISHED\020\003\022\n\n\006FAILED\020\004\022" +
+      "\n\n\006KILLED\020\005*O\n\013TraceStatus\022\034\n\030TRACE_STAT" +
+      "US_UNSPECIFIED\020\000\022\006\n\002OK\020\001\022\t\n\005ERROR\020\002\022\017\n\013I" +
+      "N_PROGRESS\020\003*\212\001\n\021LoggedModelStatus\022#\n\037LO" +
+      "GGED_MODEL_STATUS_UNSPECIFIED\020\000\022\030\n\024LOGGE" +
+      "D_MODEL_PENDING\020\001\022\026\n\022LOGGED_MODEL_READY\020" +
+      "\002\022\036\n\032LOGGED_MODEL_UPLOAD_FAILED\020\0032\252Z\n\rMl" +
+      "flowService\022\246\001\n\023getExperimentByName\022\033.ml" +
+      "flow.GetExperimentByName\032$.mlflow.GetExp" +
+      "erimentByName.Response\"L\362\206\031H\n,\n\003GET\022\037/ml" +
+      "flow/experiments/get-by-name\032\004\010\002\020\000\020\001*\026Ge" +
+      "t Experiment By Name\022\224\001\n\020createExperimen" +
+      "t\022\030.mlflow.CreateExperiment\032!.mlflow.Cre" +
+      "ateExperiment.Response\"C\362\206\031?\n(\n\004POST\022\032/m" +
+      "lflow/experiments/create\032\004\010\002\020\000\020\001*\021Create" +
+      " Experiment\022\301\001\n\021searchExperiments\022\031.mlfl" +
+      "ow.SearchExperiments\032\".mlflow.SearchExpe" +
+      "riments.Response\"m\362\206\031i\n(\n\004POST\022\032/mlflow/" +
+      "experiments/search\032\004\010\002\020\000\n\'\n\003GET\022\032/mlflow" +
+      "/experiments/search\032\004\010\002\020\000\020\001*\022Search Expe" +
+      "riments\022\210\001\n\rgetExperiment\022\025.mlflow.GetEx" +
+      "periment\032\036.mlflow.GetExperiment.Response" +
+      "\"@\362\206\0318\n$\n\003GET\022\027/mlflow/experiments/get\032\004" +
+      "\010\002\020\000\020\001*\016Get Experiment\272\214\031\000\022\224\001\n\020deleteExp" +
+      "eriment\022\030.mlflow.DeleteExperiment\032!.mlfl" +
+      "ow.DeleteExperiment.Response\"C\362\206\031?\n(\n\004PO" +
+      "ST\022\032/mlflow/experiments/delete\032\004\010\002\020\000\020\001*\021" +
+      "Delete Experiment\022\231\001\n\021restoreExperiment\022" +
+      "\031.mlflow.RestoreExperiment\032\".mlflow.Rest" +
+      "oreExperiment.Response\"E\362\206\031A\n)\n\004POST\022\033/m" +
+      "lflow/experiments/restore\032\004\010\002\020\000\020\001*\022Resto" +
+      "re Experiment\022\224\001\n\020updateExperiment\022\030.mlf" +
+      "low.UpdateExperiment\032!.mlflow.UpdateExpe" +
+      "riment.Response\"C\362\206\031?\n(\n\004POST\022\032/mlflow/e" +
+      "xperiments/update\032\004\010\002\020\000\020\001*\021Update Experi" +
+      "ment\022q\n\tcreateRun\022\021.mlflow.CreateRun\032\032.m" +
+      "lflow.CreateRun.Response\"5\362\206\0311\n!\n\004POST\022\023" +
+      "/mlflow/runs/create\032\004\010\002\020\000\020\001*\nCreate Run\022" +
+      "q\n\tupdateRun\022\021.mlflow.UpdateRun\032\032.mlflow" +
+      ".UpdateRun.Response\"5\362\206\0311\n!\n\004POST\022\023/mlfl" +
+      "ow/runs/update\032\004\010\002\020\000\020\001*\nUpdate Run\022q\n\tde" +
+      "leteRun\022\021.mlflow.DeleteRun\032\032.mlflow.Dele" +
+      "teRun.Response\"5\362\206\0311\n!\n\004POST\022\023/mlflow/ru" +
+      "ns/delete\032\004\010\002\020\000\020\001*\nDelete Run\022v\n\nrestore" +
+      "Run\022\022.mlflow.RestoreRun\032\033.mlflow.Restore" +
+      "Run.Response\"7\362\206\0313\n\"\n\004POST\022\024/mlflow/runs" +
+      "/restore\032\004\010\002\020\000\020\001*\013Restore Run\022u\n\tlogMetr" +
+      "ic\022\021.mlflow.LogMetric\032\032.mlflow.LogMetric" +
+      ".Response\"9\362\206\0315\n%\n\004POST\022\027/mlflow/runs/lo" +
+      "g-metric\032\004\010\002\020\000\020\001*\nLog Metric\022t\n\010logParam" +
+      "\022\020.mlflow.LogParam\032\031.mlflow.LogParam.Res" +
+      "ponse\";\362\206\0317\n(\n\004POST\022\032/mlflow/runs/log-pa" +
+      "rameter\032\004\010\002\020\000\020\001*\tLog Param\022\241\001\n\020setExperi" +
+      "mentTag\022\030.mlflow.SetExperimentTag\032!.mlfl" +
+      "ow.SetExperimentTag.Response\"P\362\206\031L\n4\n\004PO" +
+      "ST\022&/mlflow/experiments/set-experiment-t" +
+      "ag\032\004\010\002\020\000\020\001*\022Set Experiment Tag\022\260\001\n\023delet" +
+      "eExperimentTag\022\033.mlflow.DeleteExperiment" +
+      "Tag\032$.mlflow.DeleteExperimentTag.Respons" +
+      "e\"V\362\206\031R\n7\n\004POST\022)/mlflow/experiments/del" +
+      "ete-experiment-tag\032\004\010\002\020\000\020\001*\025Delete Exper" +
+      "iment Tag\022f\n\006setTag\022\016.mlflow.SetTag\032\027.ml" +
+      "flow.SetTag.Response\"3\362\206\031/\n\"\n\004POST\022\024/mlf" +
+      "low/runs/set-tag\032\004\010\002\020\000\020\001*\007Set Tag\022\210\001\n\013se" +
+      "tTraceTag\022\023.mlflow.SetTraceTag\032\034.mlflow." +
+      "SetTraceTag.Response\"F\362\206\031B\n/\n\005PATCH\022 /ml" +
+      "flow/traces/{request_id}/tags\032\004\010\002\020\000\020\003*\rS" +
+      "et Trace Tag\022\217\001\n\rsetTraceTagV3\022\025.mlflow." +
+      "SetTraceTagV3\032\036.mlflow.SetTraceTagV3.Res" +
+      "ponse\"G\362\206\031C\n-\n\005PATCH\022\036/mlflow/traces/{tr" +
+      "ace_id}/tags\032\004\010\003\020\000\020\003*\020Set Trace Tag V3\022\225" +
+      "\001\n\016deleteTraceTag\022\026.mlflow.DeleteTraceTa" +
+      "g\032\037.mlflow.DeleteTraceTag.Response\"J\362\206\031F" +
+      "\n0\n\006DELETE\022 /mlflow/traces/{request_id}/" +
+      "tags\032\004\010\002\020\000\020\003*\020Delete Trace Tag\022\234\001\n\020delet" +
+      "eTraceTagV3\022\030.mlflow.DeleteTraceTagV3\032!." +
+      "mlflow.DeleteTraceTagV3.Response\"K\362\206\031G\n." +
+      "\n\006DELETE\022\036/mlflow/traces/{trace_id}/tags" +
+      "\032\004\010\003\020\000\020\003*\023Delete Trace Tag V3\022u\n\tdeleteT" +
+      "ag\022\021.mlflow.DeleteTag\032\032.mlflow.DeleteTag" +
+      ".Response\"9\362\206\0315\n%\n\004POST\022\027/mlflow/runs/de" +
+      "lete-tag\032\004\010\002\020\000\020\001*\nDelete Tag\022e\n\006getRun\022\016" +
+      ".mlflow.GetRun\032\027.mlflow.GetRun.Response\"" +
+      "2\362\206\031*\n\035\n\003GET\022\020/mlflow/runs/get\032\004\010\002\020\000\020\001*\007" +
+      "Get Run\272\214\031\000\022y\n\nsearchRuns\022\022.mlflow.Searc" +
+      "hRuns\032\033.mlflow.SearchRuns.Response\":\362\206\0312" +
+      "\n!\n\004POST\022\023/mlflow/runs/search\032\004\010\002\020\000\020\001*\013S" +
+      "earch Runs\272\214\031\000\022\207\001\n\rlistArtifacts\022\025.mlflo" +
+      "w.ListArtifacts\032\036.mlflow.ListArtifacts.R" +
+      "esponse\"?\362\206\0317\n#\n\003GET\022\026/mlflow/artifacts/" +
+      "list\032\004\010\002\020\000\020\001*\016List Artifacts\272\214\031\000\022\225\001\n\020get" +
+      "MetricHistory\022\030.mlflow.GetMetricHistory\032" +
+      "!.mlflow.GetMetricHistory.Response\"D\362\206\031@" +
+      "\n(\n\003GET\022\033/mlflow/metrics/get-history\032\004\010\002" +
+      "\020\000\020\001*\022Get Metric History\022\267\001\n\034getMetricHi" +
+      "storyBulkInterval\022$.mlflow.GetMetricHist" +
+      "oryBulkInterval\032-.mlflow.GetMetricHistor" +
+      "yBulkInterval.Response\"B\362\206\031:\n6\n\003GET\022)/ml" +
+      "flow/metrics/get-history-bulk-interval\032\004" +
+      "\010\002\020\013\020\003\272\214\031\000\022p\n\010logBatch\022\020.mlflow.LogBatch" +
+      "\032\031.mlflow.LogBatch.Response\"7\362\206\0313\n$\n\004POS" +
+      "T\022\026/mlflow/runs/log-batch\032\004\010\002\020\000\020\001*\tLog B" +
+      "atch\022p\n\010logModel\022\020.mlflow.LogModel\032\031.mlf" +
+      "low.LogModel.Response\"7\362\206\0313\n$\n\004POST\022\026/ml" +
+      "flow/runs/log-model\032\004\010\002\020\000\020\001*\tLog Model\022u" +
+      "\n\tlogInputs\022\021.mlflow.LogInputs\032\032.mlflow." +
+      "LogInputs.Response\"9\362\206\0315\n%\n\004POST\022\027/mlflo" +
+      "w/runs/log-inputs\032\004\010\002\020\000\020\001*\nLog Inputs\022v\n" +
+      "\nlogOutputs\022\022.mlflow.LogOutputs\032\033.mlflow" +
+      ".LogOutputs.Response\"7\362\206\0313\n\"\n\004POST\022\024/mlf" +
+      "low/runs/outputs\032\004\010\002\020\000\020\003*\013Log Outputs\022\207\001" +
+      "\n\016searchDatasets\022\026.mlflow.SearchDatasets" +
+      "\032\037.mlflow.SearchDatasets.Response\"<\362\206\0314\n" +
+      "0\n\004POST\022\"mlflow/experiments/search-datas" +
+      "ets\032\004\010\002\020\000\020\003\272\214\031\000\022p\n\nstartTrace\022\022.mlflow.S" +
+      "tartTrace\032\033.mlflow.StartTrace.Response\"1" +
+      "\362\206\031-\n\034\n\004POST\022\016/mlflow/traces\032\004\010\002\020\000\020\003*\013St" +
+      "art Trace\022v\n\010endTrace\022\020.mlflow.EndTrace\032" +
+      "\031.mlflow.EndTrace.Response\"=\362\206\0319\n*\n\005PATC" +
+      "H\022\033/mlflow/traces/{request_id}\032\004\010\002\020\000\020\003*\t" +
+      "End Trace\022\211\001\n\014getTraceInfo\022\024.mlflow.GetT" +
+      "raceInfo\032\035.mlflow.GetTraceInfo.Response\"" +
+      "D\362\206\031@\n-\n\003GET\022 /mlflow/traces/{request_id" +
+      "}/info\032\004\010\002\020\000\020\003*\rGet TraceInfo\022\213\001\n\016getTra" +
+      "ceInfoV3\022\026.mlflow.GetTraceInfoV3\032\037.mlflo" +
+      "w.GetTraceInfoV3.Response\"@\362\206\031<\n&\n\003GET\022\031" +
+      "/mlflow/traces/{trace_id}\032\004\010\003\020\000\020\003*\020Get T" +
+      "raceInfo v3\022n\n\010getTrace\022\020.mlflow.GetTrac" +
+      "e\032\031.mlflow.GetTrace.Response\"5\362\206\0311\n\037\n\003GE" +
+      "T\022\022/mlflow/traces/get\032\004\010\003\020\000\020\003*\014Get Trace" +
+      " v3\022\203\001\n\016batchGetTraces\022\026.mlflow.BatchGet" +
+      "Traces\032\037.mlflow.BatchGetTraces.Response\"" +
+      "8\362\206\0314\n$\n\003GET\022\027/mlflow/traces/batchGet\032\004\010" +
+      "\003\020\000\020\003*\nGet Traces\022w\n\014searchTraces\022\024.mlfl" +
+      "ow.SearchTraces\032\035.mlflow.SearchTraces.Re" +
+      "sponse\"2\362\206\031.\n\033\n\003GET\022\016/mlflow/traces\032\004\010\002\020" +
+      "\000\020\003*\rSearch Traces\022\210\001\n\016searchTracesV3\022\026." +
+      "mlflow.SearchTracesV3\032\037.mlflow.SearchTra" +
+      "cesV3.Response\"=\362\206\0319\n#\n\004POST\022\025/mlflow/tr" +
+      "aces/search\032\004\010\003\020\000\020\003*\020Search Traces V3\022i\n" +
+      "\014startTraceV3\022\024.mlflow.StartTraceV3\032\035.ml" +
+      "flow.StartTraceV3.Response\"$\362\206\031 \n\034\n\004POST" +
+      "\022\016/mlflow/traces\032\004\010\003\020\000\020\003\022\222\001\n\017linkTracesT" +
+      "oRun\022\027.mlflow.LinkTracesToRun\032 .mlflow.L" +
+      "inkTracesToRun.Response\"D\362\206\031@\n(\n\004POST\022\032/" +
+      "mlflow/traces/link-to-run\032\004\010\002\020\000\020\003*\022Link " +
+      "Traces to Run\022\242\001\n\031searchUnifiedTraceHand" +
+      "ler\022\033.mlflow.SearchUnifiedTraces\032$.mlflo" +
+      "w.SearchUnifiedTraces.Response\"B\362\206\031>\n#\n\003" +
+      "GET\022\026/mlflow/unified-traces\032\004\010\002\020\000\020\003*\025Sea" +
+      "rch Unified Traces\022\257\001\n\025getOnlineTraceDet" +
+      "ails\022\035.mlflow.GetOnlineTraceDetails\032&.ml" +
+      "flow.GetOnlineTraceDetails.Response\"O\362\206\031" +
+      "K\n-\n\003GET\022 /mlflow/get-online-trace-detai" +
+      "ls\032\004\010\002\020\000\020\003*\030Get Online Trace Details\022\206\001\n" +
+      "\014deleteTraces\022\024.mlflow.DeleteTraces\032\035.ml" +
+      "flow.DeleteTraces.Response\"A\362\206\031=\n*\n\004POST" +
+      "\022\034/mlflow/traces/delete-traces\032\004\010\002\020\000\020\003*\r" +
+      "Delete Traces\022\217\001\n\016deleteTracesV3\022\026.mlflo" +
+      "w.DeleteTracesV3\032\037.mlflow.DeleteTracesV3" +
+      ".Response\"D\362\206\031@\n*\n\004POST\022\034/mlflow/traces/" +
+      "delete-traces\032\004\010\003\020\000\020\003*\020Delete Traces V3\022" +
+      "\343\001\n\037calculateTraceFilterCorrelation\022\'.ml" +
+      "flow.CalculateTraceFilterCorrelation\0320.m" +
+      "lflow.CalculateTraceFilterCorrelation.Re" +
+      "sponse\"e\362\206\031a\n9\n\004POST\022+/mlflow/traces/cal" +
+      "culate-filter-correlation\032\004\010\003\020\000\020\003*\"Calcu" +
+      "late Trace Filter Correlation\022\224\001\n\021create" +
+      "LoggedModel\022\031.mlflow.CreateLoggedModel\032\"" +
+      ".mlflow.CreateLoggedModel.Response\"@\362\206\031<" +
+      "\n#\n\004POST\022\025/mlflow/logged-models\032\004\010\002\020\000\020\003*" +
+      "\023Create Logged Model\022\250\001\n\023finalizeLoggedM" +
+      "odel\022\033.mlflow.FinalizeLoggedModel\032$.mlfl" +
+      "ow.FinalizeLoggedModel.Response\"N\362\206\031J\n/\n" +
+      "\005PATCH\022 /mlflow/logged-models/{model_id}" +
+      "\032\004\010\002\020\000\020\003*\025Finalize Logged Model\022\222\001\n\016getL" +
+      "oggedModel\022\026.mlflow.GetLoggedModel\032\037.mlf" +
+      "low.GetLoggedModel.Response\"G\362\206\031C\n-\n\003GET" +
+      "\022 /mlflow/logged-models/{model_id}\032\004\010\002\020\000" +
+      "\020\003*\020Get Logged Model\022\243\001\n\021deleteLoggedMod" +
+      "el\022\031.mlflow.DeleteLoggedModel\032\".mlflow.D" +
+      "eleteLoggedModel.Response\"O\362\206\031K\n0\n\006DELET" +
+      "E\022 /mlflow/logged-models/{model_id}\032\004\010\002\020" +
+      "\000\020\003*\025Delete a Logged Model\022\236\001\n\022searchLog" +
+      "gedModels\022\032.mlflow.SearchLoggedModels\032#." +
+      "mlflow.SearchLoggedModels.Response\"G\362\206\031C" +
+      "\n*\n\004POST\022\034/mlflow/logged-models/search\032\004" +
+      "\010\002\020\000\020\003*\023Search LoggedModels\022\251\001\n\022setLogge" +
+      "dModelTags\022\032.mlflow.SetLoggedModelTags\032#" +
+      ".mlflow.SetLoggedModelTags.Response\"R\362\206\031" +
+      "N\n4\n\005PATCH\022%/mlflow/logged-models/{model" +
+      "_id}/tags\032\004\010\002\020\000\020\003*\024Set Logged Model Tag\022" +
+      "\275\001\n\024deleteLoggedModelTag\022\034.mlflow.Delete" +
+      "LoggedModelTag\032%.mlflow.DeleteLoggedMode" +
+      "lTag.Response\"`\362\206\031\\\n?\n\006DELETE\022//mlflow/l" +
+      "ogged-models/{model_id}/tags/{tag_key}\032\004" +
+      "\010\002\020\000\020\003*\027Delete Logged Model Tag\022\326\001\n\030list" +
+      "LoggedModelArtifacts\022 .mlflow.ListLogged" +
+      "ModelArtifacts\032).mlflow.ListLoggedModelA" +
+      "rtifacts.Response\"m\362\206\031i\nC\n\003GET\0226/mlflow/" +
+      "logged-models/{model_id}/artifacts/direc" +
+      "tories\032\004\010\002\020\000\020\003* List Artifacts for Logge" +
+      "d Models\022\301\001\n\024LogLoggedModelParams\022#.mlfl" +
+      "ow.LogLoggedModelParamsRequest\032,.mlflow." +
+      "LogLoggedModelParamsRequest.Response\"V\362\206" +
+      "\031R\n5\n\004POST\022\'/mlflow/logged-models/{model" +
+      "_id}/params\032\004\010\002\020\000\020\003*\027Log Logged Model Pa" +
+      "rams\022\260\001\n\rGetAssessment\022\034.mlflow.GetAsses" +
+      "smentRequest\032%.mlflow.GetAssessmentReque" +
+      "st.Response\"Z\362\206\031V\nB\n\003GET\0225/mlflow/traces" +
+      "/{trace_id}/assessments/{assessment_id}\032" +
+      "\004\010\003\020\000\020\003*\016Get Assessment\022\337\001\n\020createAssess" +
+      "ment\022\030.mlflow.CreateAssessment\032!.mlflow." +
+      "CreateAssessment.Response\"\215\001\362\206\031\210\001\n>\n\004POS" +
+      "T\0220/mlflow/traces/{assessment.trace_id}/" +
+      "assessments\032\004\010\003\020\000\020\003\030\350\007\030\356\007\030\014\030\001*:Create an" +
+      " assessment of a trace or a span within " +
+      "the trace\022\320\001\n\020updateAssessment\022\030.mlflow." +
+      "UpdateAssessment\032!.mlflow.UpdateAssessme" +
+      "nt.Response\"\177\362\206\031{\nD\n\005PATCH\0225/mlflow/trac" +
+      "es/{trace_id}/assessments/{assessment_id" +
+      "}\032\004\010\003\020\000\020\003\030\350\007\030\356\007\030\001*)Update an existing as" +
+      "sessment on a trace.\022\261\001\n\020deleteAssessmen" +
+      "t\022\030.mlflow.DeleteAssessment\032!.mlflow.Del" +
+      "eteAssessment.Response\"`\362\206\031\\\nE\n\006DELETE\0225" +
+      "/mlflow/traces/{trace_id}/assessments/{a" +
+      "ssessment_id}\032\004\010\003\020\000\020\003*\021Delete Assessment" +
+      "\022\232\001\n\rcreateDataset\022\025.mlflow.CreateDatase" +
+      "t\032\036.mlflow.CreateDataset.Response\"R\362\206\031N\n" +
+      "%\n\004POST\022\027/mlflow/datasets/create\032\004\010\003\020\000\020\003" +
+      "\030\350\007\030\356\007\030\014\030\001*\031Create Evaluation Dataset\022\221\001" +
+      "\n\ngetDataset\022\022.mlflow.GetDataset\032\033.mlflo" +
+      "w.GetDataset.Response\"R\362\206\031N\n*\n\003GET\022\035/mlf" +
+      "low/datasets/{dataset_id}\032\004\010\003\020\000\020\003\030\350\007\030\272\027\030" +
+      "\001*\026Get Evaluation Dataset\022\240\001\n\rdeleteData" +
+      "set\022\025.mlflow.DeleteDataset\032\036.mlflow.Dele" +
+      "teDataset.Response\"X\362\206\031T\n-\n\006DELETE\022\035/mlf" +
+      "low/datasets/{dataset_id}\032\004\010\003\020\000\020\003\030\350\007\030\272\027\030" +
+      "\001*\031Delete Evaluation Dataset\022\335\001\n\030searchE" +
+      "valuationDatasets\022 .mlflow.SearchEvaluat" +
+      "ionDatasets\032).mlflow.SearchEvaluationDat" +
+      "asets.Response\"t\362\206\031p\n%\n\004POST\022\027/mlflow/da" +
+      "tasets/search\032\004\010\003\020\000\n$\n\003GET\022\027/mlflow/data" +
+      "sets/search\032\004\010\003\020\000\020\003\030\350\007\030\001*\032Search Evaluat" +
+      "ion Datasets\022\251\001\n\016setDatasetTags\022\026.mlflow" +
+      ".SetDatasetTags\032\037.mlflow.SetDatasetTags." +
+      "Response\"^\362\206\031Z\n1\n\005PATCH\022\"/mlflow/dataset" +
+      "s/{dataset_id}/tags\032\004\010\003\020\000\020\003\030\350\007\030\272\027\030\001*\033Set" +
+      " Evaluation Dataset Tags\022\270\001\n\020deleteDatas" +
+      "etTag\022\030.mlflow.DeleteDatasetTag\032!.mlflow" +
+      ".DeleteDatasetTag.Response\"g\362\206\031c\n8\n\006DELE" +
+      "TE\022(/mlflow/datasets/{dataset_id}/tags/{" +
+      "key}\032\004\010\003\020\000\020\003\030\350\007\030\272\027\030\001*\035Delete Evaluation " +
+      "Dataset Tag\022\303\001\n\024upsertDatasetRecords\022\034.m" +
+      "lflow.UpsertDatasetRecords\032%.mlflow.Upse" +
+      "rtDatasetRecords.Response\"f\362\206\031b\n3\n\004POST\022" +
+      "%/mlflow/datasets/{dataset_id}/records\032\004" +
+      "\010\003\020\000\020\003\030\350\007\030\272\027\030\001*!Upsert Evaluation Datase" +
+      "t Records\022\326\001\n\027getDatasetExperimentIds\022\037." +
+      "mlflow.GetDatasetExperimentIds\032(.mlflow." +
+      "GetDatasetExperimentIds.Response\"p\362\206\031l\n9" +
+      "\n\003GET\022,/mlflow/datasets/{dataset_id}/exp" +
+      "eriment-ids\032\004\010\003\020\000\020\003\030\350\007\030\272\027\030\001*%Get Evaluat" +
+      "ion Dataset Experiment IDs\022\212\001\n\016registerS" +
+      "corer\022\026.mlflow.RegisterScorer\032\037.mlflow.R" +
+      "egisterScorer.Response\"?\362\206\031;\n&\n\004POST\022\030/m" +
+      "lflow/scorers/register\032\004\010\003\020\000\020\001*\017Register" +
+      " Scorer\022y\n\013listScorers\022\023.mlflow.ListScor" +
+      "ers\032\034.mlflow.ListScorers.Response\"7\362\206\0313\n" +
+      "!\n\003GET\022\024/mlflow/scorers/list\032\004\010\003\020\000\020\001*\014Li" +
+      "st Scorers\022\232\001\n\022listScorerVersions\022\032.mlfl" +
+      "ow.ListScorerVersions\032#.mlflow.ListScore" +
+      "rVersions.Response\"C\362\206\031?\n%\n\003GET\022\030/mlflow" +
+      "/scorers/versions\032\004\010\003\020\000\020\001*\024List Scorer V" +
+      "ersions\022p\n\tgetScorer\022\021.mlflow.GetScorer\032" +
+      "\032.mlflow.GetScorer.Response\"4\362\206\0310\n \n\003GET" +
+      "\022\023/mlflow/scorers/get\032\004\010\003\020\000\020\001*\nGet Score" +
+      "r\022\202\001\n\014deleteScorer\022\024.mlflow.DeleteScorer" +
+      "\032\035.mlflow.DeleteScorer.Response\"=\362\206\0319\n&\n" +
+      "\006DELETE\022\026/mlflow/scorers/delete\032\004\010\003\020\000\020\001*" +
+      "\rDelete Scorer\022\266\001\n\021getDatasetRecords\022\031.m" +
+      "lflow.GetDatasetRecords\032\".mlflow.GetData" +
+      "setRecords.Response\"b\362\206\031^\n2\n\003GET\022%/mlflo" +
+      "w/datasets/{dataset_id}/records\032\004\010\003\020\000\020\003\030" +
+      "\350\007\030\272\027\030\001*\036Get Evaluation Dataset Records\022" +
+      "\315\001\n\027addDatasetToExperiments\022\037.mlflow.Add" +
+      "DatasetToExperiments\032(.mlflow.AddDataset" +
+      "ToExperiments.Response\"g\362\206\031c\n;\n\004POST\022-/m" +
+      "lflow/datasets/{dataset_id}/add-experime" +
+      "nts\032\004\010\003\020\000\020\003\030\350\007\030\272\027\030\001*\032Add Dataset to Expe" +
+      "riments\022\344\001\n\034removeDatasetFromExperiments" +
+      "\022$.mlflow.RemoveDatasetFromExperiments\032-" +
+      ".mlflow.RemoveDatasetFromExperiments.Res" +
+      "ponse\"o\362\206\031k\n>\n\004POST\0220/mlflow/datasets/{d" +
+      "ataset_id}/remove-experiments\032\004\010\003\020\000\020\003\030\350\007" +
+      "\030\272\027\030\001*\037Remove Dataset from ExperimentsB\036" +
+      "\n\024org.mlflow.api.proto\220\001\001\342?\002\020\001"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
