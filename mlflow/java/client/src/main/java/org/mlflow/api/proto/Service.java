@@ -108980,29 +108980,29 @@ public final class Service {
      * ID of the trace from which to delete the tag.
      * </pre>
      *
-     * <code>optional string trace_id = 3;</code>
-     * @return Whether the traceId field is set.
+     * <code>optional string request_id = 1;</code>
+     * @return Whether the requestId field is set.
      */
-    boolean hasTraceId();
+    boolean hasRequestId();
     /**
      * <pre>
      * ID of the trace from which to delete the tag.
      * </pre>
      *
-     * <code>optional string trace_id = 3;</code>
-     * @return The traceId.
+     * <code>optional string request_id = 1;</code>
+     * @return The requestId.
      */
-    java.lang.String getTraceId();
+    java.lang.String getRequestId();
     /**
      * <pre>
      * ID of the trace from which to delete the tag.
      * </pre>
      *
-     * <code>optional string trace_id = 3;</code>
-     * @return The bytes for traceId.
+     * <code>optional string request_id = 1;</code>
+     * @return The bytes for requestId.
      */
     com.google.protobuf.ByteString
-        getTraceIdBytes();
+        getRequestIdBytes();
 
     /**
      * <pre>
@@ -109046,7 +109046,7 @@ public final class Service {
       super(builder);
     }
     private DeleteTraceTag() {
-      traceId_ = "";
+      requestId_ = "";
       key_ = "";
     }
 
@@ -109081,16 +109081,16 @@ public final class Service {
             case 0:
               done = true;
               break;
+            case 10: {
+              com.google.protobuf.ByteString bs = input.readBytes();
+              bitField0_ |= 0x00000001;
+              requestId_ = bs;
+              break;
+            }
             case 18: {
               com.google.protobuf.ByteString bs = input.readBytes();
               bitField0_ |= 0x00000002;
               key_ = bs;
-              break;
-            }
-            case 26: {
-              com.google.protobuf.ByteString bs = input.readBytes();
-              bitField0_ |= 0x00000001;
-              traceId_ = bs;
               break;
             }
             default: {
@@ -109544,18 +109544,18 @@ public final class Service {
     }
 
     private int bitField0_;
-    public static final int TRACE_ID_FIELD_NUMBER = 3;
-    private volatile java.lang.Object traceId_;
+    public static final int REQUEST_ID_FIELD_NUMBER = 1;
+    private volatile java.lang.Object requestId_;
     /**
      * <pre>
      * ID of the trace from which to delete the tag.
      * </pre>
      *
-     * <code>optional string trace_id = 3;</code>
-     * @return Whether the traceId field is set.
+     * <code>optional string request_id = 1;</code>
+     * @return Whether the requestId field is set.
      */
     @java.lang.Override
-    public boolean hasTraceId() {
+    public boolean hasRequestId() {
       return ((bitField0_ & 0x00000001) != 0);
     }
     /**
@@ -109563,12 +109563,12 @@ public final class Service {
      * ID of the trace from which to delete the tag.
      * </pre>
      *
-     * <code>optional string trace_id = 3;</code>
-     * @return The traceId.
+     * <code>optional string request_id = 1;</code>
+     * @return The requestId.
      */
     @java.lang.Override
-    public java.lang.String getTraceId() {
-      java.lang.Object ref = traceId_;
+    public java.lang.String getRequestId() {
+      java.lang.Object ref = requestId_;
       if (ref instanceof java.lang.String) {
         return (java.lang.String) ref;
       } else {
@@ -109576,7 +109576,7 @@ public final class Service {
             (com.google.protobuf.ByteString) ref;
         java.lang.String s = bs.toStringUtf8();
         if (bs.isValidUtf8()) {
-          traceId_ = s;
+          requestId_ = s;
         }
         return s;
       }
@@ -109586,18 +109586,18 @@ public final class Service {
      * ID of the trace from which to delete the tag.
      * </pre>
      *
-     * <code>optional string trace_id = 3;</code>
-     * @return The bytes for traceId.
+     * <code>optional string request_id = 1;</code>
+     * @return The bytes for requestId.
      */
     @java.lang.Override
     public com.google.protobuf.ByteString
-        getTraceIdBytes() {
-      java.lang.Object ref = traceId_;
+        getRequestIdBytes() {
+      java.lang.Object ref = requestId_;
       if (ref instanceof java.lang.String) {
         com.google.protobuf.ByteString b = 
             com.google.protobuf.ByteString.copyFromUtf8(
                 (java.lang.String) ref);
-        traceId_ = b;
+        requestId_ = b;
         return b;
       } else {
         return (com.google.protobuf.ByteString) ref;
@@ -109678,11 +109678,11 @@ public final class Service {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
+      if (((bitField0_ & 0x00000001) != 0)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, requestId_);
+      }
       if (((bitField0_ & 0x00000002) != 0)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 2, key_);
-      }
-      if (((bitField0_ & 0x00000001) != 0)) {
-        com.google.protobuf.GeneratedMessageV3.writeString(output, 3, traceId_);
       }
       unknownFields.writeTo(output);
     }
@@ -109693,11 +109693,11 @@ public final class Service {
       if (size != -1) return size;
 
       size = 0;
+      if (((bitField0_ & 0x00000001) != 0)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, requestId_);
+      }
       if (((bitField0_ & 0x00000002) != 0)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, key_);
-      }
-      if (((bitField0_ & 0x00000001) != 0)) {
-        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(3, traceId_);
       }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
@@ -109714,10 +109714,10 @@ public final class Service {
       }
       org.mlflow.api.proto.Service.DeleteTraceTag other = (org.mlflow.api.proto.Service.DeleteTraceTag) obj;
 
-      if (hasTraceId() != other.hasTraceId()) return false;
-      if (hasTraceId()) {
-        if (!getTraceId()
-            .equals(other.getTraceId())) return false;
+      if (hasRequestId() != other.hasRequestId()) return false;
+      if (hasRequestId()) {
+        if (!getRequestId()
+            .equals(other.getRequestId())) return false;
       }
       if (hasKey() != other.hasKey()) return false;
       if (hasKey()) {
@@ -109735,9 +109735,9 @@ public final class Service {
       }
       int hash = 41;
       hash = (19 * hash) + getDescriptor().hashCode();
-      if (hasTraceId()) {
-        hash = (37 * hash) + TRACE_ID_FIELD_NUMBER;
-        hash = (53 * hash) + getTraceId().hashCode();
+      if (hasRequestId()) {
+        hash = (37 * hash) + REQUEST_ID_FIELD_NUMBER;
+        hash = (53 * hash) + getRequestId().hashCode();
       }
       if (hasKey()) {
         hash = (37 * hash) + KEY_FIELD_NUMBER;
@@ -109876,7 +109876,7 @@ public final class Service {
       @java.lang.Override
       public Builder clear() {
         super.clear();
-        traceId_ = "";
+        requestId_ = "";
         bitField0_ = (bitField0_ & ~0x00000001);
         key_ = "";
         bitField0_ = (bitField0_ & ~0x00000002);
@@ -109911,7 +109911,7 @@ public final class Service {
         if (((from_bitField0_ & 0x00000001) != 0)) {
           to_bitField0_ |= 0x00000001;
         }
-        result.traceId_ = traceId_;
+        result.requestId_ = requestId_;
         if (((from_bitField0_ & 0x00000002) != 0)) {
           to_bitField0_ |= 0x00000002;
         }
@@ -109965,9 +109965,9 @@ public final class Service {
 
       public Builder mergeFrom(org.mlflow.api.proto.Service.DeleteTraceTag other) {
         if (other == org.mlflow.api.proto.Service.DeleteTraceTag.getDefaultInstance()) return this;
-        if (other.hasTraceId()) {
+        if (other.hasRequestId()) {
           bitField0_ |= 0x00000001;
-          traceId_ = other.traceId_;
+          requestId_ = other.requestId_;
           onChanged();
         }
         if (other.hasKey()) {
@@ -110005,16 +110005,16 @@ public final class Service {
       }
       private int bitField0_;
 
-      private java.lang.Object traceId_ = "";
+      private java.lang.Object requestId_ = "";
       /**
        * <pre>
        * ID of the trace from which to delete the tag.
        * </pre>
        *
-       * <code>optional string trace_id = 3;</code>
-       * @return Whether the traceId field is set.
+       * <code>optional string request_id = 1;</code>
+       * @return Whether the requestId field is set.
        */
-      public boolean hasTraceId() {
+      public boolean hasRequestId() {
         return ((bitField0_ & 0x00000001) != 0);
       }
       /**
@@ -110022,17 +110022,17 @@ public final class Service {
        * ID of the trace from which to delete the tag.
        * </pre>
        *
-       * <code>optional string trace_id = 3;</code>
-       * @return The traceId.
+       * <code>optional string request_id = 1;</code>
+       * @return The requestId.
        */
-      public java.lang.String getTraceId() {
-        java.lang.Object ref = traceId_;
+      public java.lang.String getRequestId() {
+        java.lang.Object ref = requestId_;
         if (!(ref instanceof java.lang.String)) {
           com.google.protobuf.ByteString bs =
               (com.google.protobuf.ByteString) ref;
           java.lang.String s = bs.toStringUtf8();
           if (bs.isValidUtf8()) {
-            traceId_ = s;
+            requestId_ = s;
           }
           return s;
         } else {
@@ -110044,17 +110044,17 @@ public final class Service {
        * ID of the trace from which to delete the tag.
        * </pre>
        *
-       * <code>optional string trace_id = 3;</code>
-       * @return The bytes for traceId.
+       * <code>optional string request_id = 1;</code>
+       * @return The bytes for requestId.
        */
       public com.google.protobuf.ByteString
-          getTraceIdBytes() {
-        java.lang.Object ref = traceId_;
+          getRequestIdBytes() {
+        java.lang.Object ref = requestId_;
         if (ref instanceof String) {
           com.google.protobuf.ByteString b = 
               com.google.protobuf.ByteString.copyFromUtf8(
                   (java.lang.String) ref);
-          traceId_ = b;
+          requestId_ = b;
           return b;
         } else {
           return (com.google.protobuf.ByteString) ref;
@@ -110065,17 +110065,17 @@ public final class Service {
        * ID of the trace from which to delete the tag.
        * </pre>
        *
-       * <code>optional string trace_id = 3;</code>
-       * @param value The traceId to set.
+       * <code>optional string request_id = 1;</code>
+       * @param value The requestId to set.
        * @return This builder for chaining.
        */
-      public Builder setTraceId(
+      public Builder setRequestId(
           java.lang.String value) {
         if (value == null) {
     throw new NullPointerException();
   }
   bitField0_ |= 0x00000001;
-        traceId_ = value;
+        requestId_ = value;
         onChanged();
         return this;
       }
@@ -110084,12 +110084,12 @@ public final class Service {
        * ID of the trace from which to delete the tag.
        * </pre>
        *
-       * <code>optional string trace_id = 3;</code>
+       * <code>optional string request_id = 1;</code>
        * @return This builder for chaining.
        */
-      public Builder clearTraceId() {
+      public Builder clearRequestId() {
         bitField0_ = (bitField0_ & ~0x00000001);
-        traceId_ = getDefaultInstance().getTraceId();
+        requestId_ = getDefaultInstance().getRequestId();
         onChanged();
         return this;
       }
@@ -110098,17 +110098,17 @@ public final class Service {
        * ID of the trace from which to delete the tag.
        * </pre>
        *
-       * <code>optional string trace_id = 3;</code>
-       * @param value The bytes for traceId to set.
+       * <code>optional string request_id = 1;</code>
+       * @param value The bytes for requestId to set.
        * @return This builder for chaining.
        */
-      public Builder setTraceIdBytes(
+      public Builder setRequestIdBytes(
           com.google.protobuf.ByteString value) {
         if (value == null) {
     throw new NullPointerException();
   }
   bitField0_ |= 0x00000001;
-        traceId_ = value;
+        requestId_ = value;
         onChanged();
         return this;
       }
@@ -110282,29 +110282,29 @@ public final class Service {
      * ID of the trace from which to delete the tag.
      * </pre>
      *
-     * <code>optional string request_id = 1;</code>
-     * @return Whether the requestId field is set.
+     * <code>optional string trace_id = 3;</code>
+     * @return Whether the traceId field is set.
      */
-    boolean hasRequestId();
+    boolean hasTraceId();
     /**
      * <pre>
      * ID of the trace from which to delete the tag.
      * </pre>
      *
-     * <code>optional string request_id = 1;</code>
-     * @return The requestId.
+     * <code>optional string trace_id = 3;</code>
+     * @return The traceId.
      */
-    java.lang.String getRequestId();
+    java.lang.String getTraceId();
     /**
      * <pre>
      * ID of the trace from which to delete the tag.
      * </pre>
      *
-     * <code>optional string request_id = 1;</code>
-     * @return The bytes for requestId.
+     * <code>optional string trace_id = 3;</code>
+     * @return The bytes for traceId.
      */
     com.google.protobuf.ByteString
-        getRequestIdBytes();
+        getTraceIdBytes();
 
     /**
      * <pre>
@@ -110348,7 +110348,7 @@ public final class Service {
       super(builder);
     }
     private DeleteTraceTagV3() {
-      requestId_ = "";
+      traceId_ = "";
       key_ = "";
     }
 
@@ -110383,16 +110383,16 @@ public final class Service {
             case 0:
               done = true;
               break;
-            case 10: {
-              com.google.protobuf.ByteString bs = input.readBytes();
-              bitField0_ |= 0x00000001;
-              requestId_ = bs;
-              break;
-            }
             case 18: {
               com.google.protobuf.ByteString bs = input.readBytes();
               bitField0_ |= 0x00000002;
               key_ = bs;
+              break;
+            }
+            case 26: {
+              com.google.protobuf.ByteString bs = input.readBytes();
+              bitField0_ |= 0x00000001;
+              traceId_ = bs;
               break;
             }
             default: {
@@ -110846,18 +110846,18 @@ public final class Service {
     }
 
     private int bitField0_;
-    public static final int REQUEST_ID_FIELD_NUMBER = 1;
-    private volatile java.lang.Object requestId_;
+    public static final int TRACE_ID_FIELD_NUMBER = 3;
+    private volatile java.lang.Object traceId_;
     /**
      * <pre>
      * ID of the trace from which to delete the tag.
      * </pre>
      *
-     * <code>optional string request_id = 1;</code>
-     * @return Whether the requestId field is set.
+     * <code>optional string trace_id = 3;</code>
+     * @return Whether the traceId field is set.
      */
     @java.lang.Override
-    public boolean hasRequestId() {
+    public boolean hasTraceId() {
       return ((bitField0_ & 0x00000001) != 0);
     }
     /**
@@ -110865,12 +110865,12 @@ public final class Service {
      * ID of the trace from which to delete the tag.
      * </pre>
      *
-     * <code>optional string request_id = 1;</code>
-     * @return The requestId.
+     * <code>optional string trace_id = 3;</code>
+     * @return The traceId.
      */
     @java.lang.Override
-    public java.lang.String getRequestId() {
-      java.lang.Object ref = requestId_;
+    public java.lang.String getTraceId() {
+      java.lang.Object ref = traceId_;
       if (ref instanceof java.lang.String) {
         return (java.lang.String) ref;
       } else {
@@ -110878,7 +110878,7 @@ public final class Service {
             (com.google.protobuf.ByteString) ref;
         java.lang.String s = bs.toStringUtf8();
         if (bs.isValidUtf8()) {
-          requestId_ = s;
+          traceId_ = s;
         }
         return s;
       }
@@ -110888,18 +110888,18 @@ public final class Service {
      * ID of the trace from which to delete the tag.
      * </pre>
      *
-     * <code>optional string request_id = 1;</code>
-     * @return The bytes for requestId.
+     * <code>optional string trace_id = 3;</code>
+     * @return The bytes for traceId.
      */
     @java.lang.Override
     public com.google.protobuf.ByteString
-        getRequestIdBytes() {
-      java.lang.Object ref = requestId_;
+        getTraceIdBytes() {
+      java.lang.Object ref = traceId_;
       if (ref instanceof java.lang.String) {
         com.google.protobuf.ByteString b = 
             com.google.protobuf.ByteString.copyFromUtf8(
                 (java.lang.String) ref);
-        requestId_ = b;
+        traceId_ = b;
         return b;
       } else {
         return (com.google.protobuf.ByteString) ref;
@@ -110980,11 +110980,11 @@ public final class Service {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (((bitField0_ & 0x00000001) != 0)) {
-        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, requestId_);
-      }
       if (((bitField0_ & 0x00000002) != 0)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 2, key_);
+      }
+      if (((bitField0_ & 0x00000001) != 0)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 3, traceId_);
       }
       unknownFields.writeTo(output);
     }
@@ -110995,11 +110995,11 @@ public final class Service {
       if (size != -1) return size;
 
       size = 0;
-      if (((bitField0_ & 0x00000001) != 0)) {
-        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, requestId_);
-      }
       if (((bitField0_ & 0x00000002) != 0)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, key_);
+      }
+      if (((bitField0_ & 0x00000001) != 0)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(3, traceId_);
       }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
@@ -111016,10 +111016,10 @@ public final class Service {
       }
       org.mlflow.api.proto.Service.DeleteTraceTagV3 other = (org.mlflow.api.proto.Service.DeleteTraceTagV3) obj;
 
-      if (hasRequestId() != other.hasRequestId()) return false;
-      if (hasRequestId()) {
-        if (!getRequestId()
-            .equals(other.getRequestId())) return false;
+      if (hasTraceId() != other.hasTraceId()) return false;
+      if (hasTraceId()) {
+        if (!getTraceId()
+            .equals(other.getTraceId())) return false;
       }
       if (hasKey() != other.hasKey()) return false;
       if (hasKey()) {
@@ -111037,9 +111037,9 @@ public final class Service {
       }
       int hash = 41;
       hash = (19 * hash) + getDescriptor().hashCode();
-      if (hasRequestId()) {
-        hash = (37 * hash) + REQUEST_ID_FIELD_NUMBER;
-        hash = (53 * hash) + getRequestId().hashCode();
+      if (hasTraceId()) {
+        hash = (37 * hash) + TRACE_ID_FIELD_NUMBER;
+        hash = (53 * hash) + getTraceId().hashCode();
       }
       if (hasKey()) {
         hash = (37 * hash) + KEY_FIELD_NUMBER;
@@ -111178,7 +111178,7 @@ public final class Service {
       @java.lang.Override
       public Builder clear() {
         super.clear();
-        requestId_ = "";
+        traceId_ = "";
         bitField0_ = (bitField0_ & ~0x00000001);
         key_ = "";
         bitField0_ = (bitField0_ & ~0x00000002);
@@ -111213,7 +111213,7 @@ public final class Service {
         if (((from_bitField0_ & 0x00000001) != 0)) {
           to_bitField0_ |= 0x00000001;
         }
-        result.requestId_ = requestId_;
+        result.traceId_ = traceId_;
         if (((from_bitField0_ & 0x00000002) != 0)) {
           to_bitField0_ |= 0x00000002;
         }
@@ -111267,9 +111267,9 @@ public final class Service {
 
       public Builder mergeFrom(org.mlflow.api.proto.Service.DeleteTraceTagV3 other) {
         if (other == org.mlflow.api.proto.Service.DeleteTraceTagV3.getDefaultInstance()) return this;
-        if (other.hasRequestId()) {
+        if (other.hasTraceId()) {
           bitField0_ |= 0x00000001;
-          requestId_ = other.requestId_;
+          traceId_ = other.traceId_;
           onChanged();
         }
         if (other.hasKey()) {
@@ -111307,16 +111307,16 @@ public final class Service {
       }
       private int bitField0_;
 
-      private java.lang.Object requestId_ = "";
+      private java.lang.Object traceId_ = "";
       /**
        * <pre>
        * ID of the trace from which to delete the tag.
        * </pre>
        *
-       * <code>optional string request_id = 1;</code>
-       * @return Whether the requestId field is set.
+       * <code>optional string trace_id = 3;</code>
+       * @return Whether the traceId field is set.
        */
-      public boolean hasRequestId() {
+      public boolean hasTraceId() {
         return ((bitField0_ & 0x00000001) != 0);
       }
       /**
@@ -111324,17 +111324,17 @@ public final class Service {
        * ID of the trace from which to delete the tag.
        * </pre>
        *
-       * <code>optional string request_id = 1;</code>
-       * @return The requestId.
+       * <code>optional string trace_id = 3;</code>
+       * @return The traceId.
        */
-      public java.lang.String getRequestId() {
-        java.lang.Object ref = requestId_;
+      public java.lang.String getTraceId() {
+        java.lang.Object ref = traceId_;
         if (!(ref instanceof java.lang.String)) {
           com.google.protobuf.ByteString bs =
               (com.google.protobuf.ByteString) ref;
           java.lang.String s = bs.toStringUtf8();
           if (bs.isValidUtf8()) {
-            requestId_ = s;
+            traceId_ = s;
           }
           return s;
         } else {
@@ -111346,17 +111346,17 @@ public final class Service {
        * ID of the trace from which to delete the tag.
        * </pre>
        *
-       * <code>optional string request_id = 1;</code>
-       * @return The bytes for requestId.
+       * <code>optional string trace_id = 3;</code>
+       * @return The bytes for traceId.
        */
       public com.google.protobuf.ByteString
-          getRequestIdBytes() {
-        java.lang.Object ref = requestId_;
+          getTraceIdBytes() {
+        java.lang.Object ref = traceId_;
         if (ref instanceof String) {
           com.google.protobuf.ByteString b = 
               com.google.protobuf.ByteString.copyFromUtf8(
                   (java.lang.String) ref);
-          requestId_ = b;
+          traceId_ = b;
           return b;
         } else {
           return (com.google.protobuf.ByteString) ref;
@@ -111367,17 +111367,17 @@ public final class Service {
        * ID of the trace from which to delete the tag.
        * </pre>
        *
-       * <code>optional string request_id = 1;</code>
-       * @param value The requestId to set.
+       * <code>optional string trace_id = 3;</code>
+       * @param value The traceId to set.
        * @return This builder for chaining.
        */
-      public Builder setRequestId(
+      public Builder setTraceId(
           java.lang.String value) {
         if (value == null) {
     throw new NullPointerException();
   }
   bitField0_ |= 0x00000001;
-        requestId_ = value;
+        traceId_ = value;
         onChanged();
         return this;
       }
@@ -111386,12 +111386,12 @@ public final class Service {
        * ID of the trace from which to delete the tag.
        * </pre>
        *
-       * <code>optional string request_id = 1;</code>
+       * <code>optional string trace_id = 3;</code>
        * @return This builder for chaining.
        */
-      public Builder clearRequestId() {
+      public Builder clearTraceId() {
         bitField0_ = (bitField0_ & ~0x00000001);
-        requestId_ = getDefaultInstance().getRequestId();
+        traceId_ = getDefaultInstance().getTraceId();
         onChanged();
         return this;
       }
@@ -111400,17 +111400,17 @@ public final class Service {
        * ID of the trace from which to delete the tag.
        * </pre>
        *
-       * <code>optional string request_id = 1;</code>
-       * @param value The bytes for requestId to set.
+       * <code>optional string trace_id = 3;</code>
+       * @param value The bytes for traceId to set.
        * @return This builder for chaining.
        */
-      public Builder setRequestIdBytes(
+      public Builder setTraceIdBytes(
           com.google.protobuf.ByteString value) {
         if (value == null) {
     throw new NullPointerException();
   }
   bitField0_ |= 0x00000001;
-        requestId_ = value;
+        traceId_ = value;
         onChanged();
         return this;
       }
@@ -187978,13 +187978,13 @@ public final class Service {
       "is.Response]\"\210\001\n\rSetTraceTagV3\022\020\n\010trace_" +
       "id\030\004 \001(\t\022\013\n\003key\030\002 \001(\t\022\r\n\005value\030\003 \001(\t\032\n\n\010" +
       "Response:+\342?(\n&com.databricks.rpc.RPC[$t" +
-      "his.Response]J\004\010\001\020\002R\nrequest_id\"z\n\016Delet" +
-      "eTraceTag\022\020\n\010trace_id\030\003 \001(\t\022\013\n\003key\030\002 \001(\t" +
-      "\032\n\n\010Response:+\342?(\n&com.databricks.rpc.RP" +
-      "C[$this.Response]J\004\010\001\020\002R\nrequest_id\"l\n\020D" +
-      "eleteTraceTagV3\022\022\n\nrequest_id\030\001 \001(\t\022\013\n\003k" +
-      "ey\030\002 \001(\t\032\n\n\010Response:+\342?(\n&com.databrick" +
-      "s.rpc.RPC[$this.Response]\"c\n\005Trace\022\'\n\ntr" +
+      "his.Response]J\004\010\001\020\002R\nrequest_id\"j\n\016Delet" +
+      "eTraceTag\022\022\n\nrequest_id\030\001 \001(\t\022\013\n\003key\030\002 \001" +
+      "(\t\032\n\n\010Response:+\342?(\n&com.databricks.rpc." +
+      "RPC[$this.Response]\"|\n\020DeleteTraceTagV3\022" +
+      "\020\n\010trace_id\030\003 \001(\t\022\013\n\003key\030\002 \001(\t\032\n\n\010Respon" +
+      "se:+\342?(\n&com.databricks.rpc.RPC[$this.Re" +
+      "sponse]J\004\010\001\020\002R\nrequest_id\"c\n\005Trace\022\'\n\ntr" +
       "ace_info\030\001 \001(\0132\023.mlflow.TraceInfoV3\0221\n\005s" +
       "pans\030\002 \003(\0132\".opentelemetry.proto.trace.v" +
       "1.Span\"\266\003\n\rTraceLocation\0225\n\004type\030\001 \001(\0162\'" +
@@ -189141,7 +189141,7 @@ public final class Service {
     internal_static_mlflow_DeleteTraceTag_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_mlflow_DeleteTraceTag_descriptor,
-        new java.lang.String[] { "TraceId", "Key", });
+        new java.lang.String[] { "RequestId", "Key", });
     internal_static_mlflow_DeleteTraceTag_Response_descriptor =
       internal_static_mlflow_DeleteTraceTag_descriptor.getNestedTypes().get(0);
     internal_static_mlflow_DeleteTraceTag_Response_fieldAccessorTable = new
@@ -189153,7 +189153,7 @@ public final class Service {
     internal_static_mlflow_DeleteTraceTagV3_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_mlflow_DeleteTraceTagV3_descriptor,
-        new java.lang.String[] { "RequestId", "Key", });
+        new java.lang.String[] { "TraceId", "Key", });
     internal_static_mlflow_DeleteTraceTagV3_Response_descriptor =
       internal_static_mlflow_DeleteTraceTagV3_descriptor.getNestedTypes().get(0);
     internal_static_mlflow_DeleteTraceTagV3_Response_fieldAccessorTable = new
