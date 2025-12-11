@@ -199794,36 +199794,8 @@ public final class Service {
 
     /**
      * <pre>
-     * Optional credential identifier (e.g., "ANTHROPIC_API_KEY")
-     * </pre>
-     *
-     * <code>optional string credential_name = 4;</code>
-     * @return Whether the credentialName field is set.
-     */
-    boolean hasCredentialName();
-    /**
-     * <pre>
-     * Optional credential identifier (e.g., "ANTHROPIC_API_KEY")
-     * </pre>
-     *
-     * <code>optional string credential_name = 4;</code>
-     * @return The credentialName.
-     */
-    java.lang.String getCredentialName();
-    /**
-     * <pre>
-     * Optional credential identifier (e.g., "ANTHROPIC_API_KEY")
-     * </pre>
-     *
-     * <code>optional string credential_name = 4;</code>
-     * @return The bytes for credentialName.
-     */
-    com.google.protobuf.ByteString
-        getCredentialNameBytes();
-
-    /**
-     * <pre>
-     * Optional provider-specific auth configuration as JSON string
+     * Optional provider-specific auth configuration as JSON string.
+     * For multi-auth providers, include "auth_mode" key (e.g., {"auth_mode": "access_keys", "aws_region_name": "us-east-1"})
      * </pre>
      *
      * <code>optional string auth_config_json = 5;</code>
@@ -199832,7 +199804,8 @@ public final class Service {
     boolean hasAuthConfigJson();
     /**
      * <pre>
-     * Optional provider-specific auth configuration as JSON string
+     * Optional provider-specific auth configuration as JSON string.
+     * For multi-auth providers, include "auth_mode" key (e.g., {"auth_mode": "access_keys", "aws_region_name": "us-east-1"})
      * </pre>
      *
      * <code>optional string auth_config_json = 5;</code>
@@ -199841,7 +199814,8 @@ public final class Service {
     java.lang.String getAuthConfigJson();
     /**
      * <pre>
-     * Optional provider-specific auth configuration as JSON string
+     * Optional provider-specific auth configuration as JSON string.
+     * For multi-auth providers, include "auth_mode" key (e.g., {"auth_mode": "access_keys", "aws_region_name": "us-east-1"})
      * </pre>
      *
      * <code>optional string auth_config_json = 5;</code>
@@ -199895,7 +199869,6 @@ public final class Service {
       secretName_ = "";
       secretValue_ = "";
       provider_ = "";
-      credentialName_ = "";
       authConfigJson_ = "";
       createdBy_ = "";
     }
@@ -199949,21 +199922,15 @@ public final class Service {
               provider_ = bs;
               break;
             }
-            case 34: {
-              com.google.protobuf.ByteString bs = input.readBytes();
-              bitField0_ |= 0x00000008;
-              credentialName_ = bs;
-              break;
-            }
             case 42: {
               com.google.protobuf.ByteString bs = input.readBytes();
-              bitField0_ |= 0x00000010;
+              bitField0_ |= 0x00000008;
               authConfigJson_ = bs;
               break;
             }
             case 50: {
               com.google.protobuf.ByteString bs = input.readBytes();
-              bitField0_ |= 0x00000020;
+              bitField0_ |= 0x00000010;
               createdBy_ = bs;
               break;
             }
@@ -200872,71 +200839,12 @@ public final class Service {
       }
     }
 
-    public static final int CREDENTIAL_NAME_FIELD_NUMBER = 4;
-    private volatile java.lang.Object credentialName_;
-    /**
-     * <pre>
-     * Optional credential identifier (e.g., "ANTHROPIC_API_KEY")
-     * </pre>
-     *
-     * <code>optional string credential_name = 4;</code>
-     * @return Whether the credentialName field is set.
-     */
-    @java.lang.Override
-    public boolean hasCredentialName() {
-      return ((bitField0_ & 0x00000008) != 0);
-    }
-    /**
-     * <pre>
-     * Optional credential identifier (e.g., "ANTHROPIC_API_KEY")
-     * </pre>
-     *
-     * <code>optional string credential_name = 4;</code>
-     * @return The credentialName.
-     */
-    @java.lang.Override
-    public java.lang.String getCredentialName() {
-      java.lang.Object ref = credentialName_;
-      if (ref instanceof java.lang.String) {
-        return (java.lang.String) ref;
-      } else {
-        com.google.protobuf.ByteString bs = 
-            (com.google.protobuf.ByteString) ref;
-        java.lang.String s = bs.toStringUtf8();
-        if (bs.isValidUtf8()) {
-          credentialName_ = s;
-        }
-        return s;
-      }
-    }
-    /**
-     * <pre>
-     * Optional credential identifier (e.g., "ANTHROPIC_API_KEY")
-     * </pre>
-     *
-     * <code>optional string credential_name = 4;</code>
-     * @return The bytes for credentialName.
-     */
-    @java.lang.Override
-    public com.google.protobuf.ByteString
-        getCredentialNameBytes() {
-      java.lang.Object ref = credentialName_;
-      if (ref instanceof java.lang.String) {
-        com.google.protobuf.ByteString b = 
-            com.google.protobuf.ByteString.copyFromUtf8(
-                (java.lang.String) ref);
-        credentialName_ = b;
-        return b;
-      } else {
-        return (com.google.protobuf.ByteString) ref;
-      }
-    }
-
     public static final int AUTH_CONFIG_JSON_FIELD_NUMBER = 5;
     private volatile java.lang.Object authConfigJson_;
     /**
      * <pre>
-     * Optional provider-specific auth configuration as JSON string
+     * Optional provider-specific auth configuration as JSON string.
+     * For multi-auth providers, include "auth_mode" key (e.g., {"auth_mode": "access_keys", "aws_region_name": "us-east-1"})
      * </pre>
      *
      * <code>optional string auth_config_json = 5;</code>
@@ -200944,11 +200852,12 @@ public final class Service {
      */
     @java.lang.Override
     public boolean hasAuthConfigJson() {
-      return ((bitField0_ & 0x00000010) != 0);
+      return ((bitField0_ & 0x00000008) != 0);
     }
     /**
      * <pre>
-     * Optional provider-specific auth configuration as JSON string
+     * Optional provider-specific auth configuration as JSON string.
+     * For multi-auth providers, include "auth_mode" key (e.g., {"auth_mode": "access_keys", "aws_region_name": "us-east-1"})
      * </pre>
      *
      * <code>optional string auth_config_json = 5;</code>
@@ -200971,7 +200880,8 @@ public final class Service {
     }
     /**
      * <pre>
-     * Optional provider-specific auth configuration as JSON string
+     * Optional provider-specific auth configuration as JSON string.
+     * For multi-auth providers, include "auth_mode" key (e.g., {"auth_mode": "access_keys", "aws_region_name": "us-east-1"})
      * </pre>
      *
      * <code>optional string auth_config_json = 5;</code>
@@ -201004,7 +200914,7 @@ public final class Service {
      */
     @java.lang.Override
     public boolean hasCreatedBy() {
-      return ((bitField0_ & 0x00000020) != 0);
+      return ((bitField0_ & 0x00000010) != 0);
     }
     /**
      * <pre>
@@ -201076,12 +200986,9 @@ public final class Service {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 3, provider_);
       }
       if (((bitField0_ & 0x00000008) != 0)) {
-        com.google.protobuf.GeneratedMessageV3.writeString(output, 4, credentialName_);
-      }
-      if (((bitField0_ & 0x00000010) != 0)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 5, authConfigJson_);
       }
-      if (((bitField0_ & 0x00000020) != 0)) {
+      if (((bitField0_ & 0x00000010) != 0)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 6, createdBy_);
       }
       unknownFields.writeTo(output);
@@ -201103,12 +201010,9 @@ public final class Service {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(3, provider_);
       }
       if (((bitField0_ & 0x00000008) != 0)) {
-        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(4, credentialName_);
-      }
-      if (((bitField0_ & 0x00000010) != 0)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(5, authConfigJson_);
       }
-      if (((bitField0_ & 0x00000020) != 0)) {
+      if (((bitField0_ & 0x00000010) != 0)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(6, createdBy_);
       }
       size += unknownFields.getSerializedSize();
@@ -201140,11 +201044,6 @@ public final class Service {
       if (hasProvider()) {
         if (!getProvider()
             .equals(other.getProvider())) return false;
-      }
-      if (hasCredentialName() != other.hasCredentialName()) return false;
-      if (hasCredentialName()) {
-        if (!getCredentialName()
-            .equals(other.getCredentialName())) return false;
       }
       if (hasAuthConfigJson() != other.hasAuthConfigJson()) return false;
       if (hasAuthConfigJson()) {
@@ -201178,10 +201077,6 @@ public final class Service {
       if (hasProvider()) {
         hash = (37 * hash) + PROVIDER_FIELD_NUMBER;
         hash = (53 * hash) + getProvider().hashCode();
-      }
-      if (hasCredentialName()) {
-        hash = (37 * hash) + CREDENTIAL_NAME_FIELD_NUMBER;
-        hash = (53 * hash) + getCredentialName().hashCode();
       }
       if (hasAuthConfigJson()) {
         hash = (37 * hash) + AUTH_CONFIG_JSON_FIELD_NUMBER;
@@ -201330,12 +201225,10 @@ public final class Service {
         bitField0_ = (bitField0_ & ~0x00000002);
         provider_ = "";
         bitField0_ = (bitField0_ & ~0x00000004);
-        credentialName_ = "";
-        bitField0_ = (bitField0_ & ~0x00000008);
         authConfigJson_ = "";
-        bitField0_ = (bitField0_ & ~0x00000010);
+        bitField0_ = (bitField0_ & ~0x00000008);
         createdBy_ = "";
-        bitField0_ = (bitField0_ & ~0x00000020);
+        bitField0_ = (bitField0_ & ~0x00000010);
         return this;
       }
 
@@ -201379,13 +201272,9 @@ public final class Service {
         if (((from_bitField0_ & 0x00000008) != 0)) {
           to_bitField0_ |= 0x00000008;
         }
-        result.credentialName_ = credentialName_;
+        result.authConfigJson_ = authConfigJson_;
         if (((from_bitField0_ & 0x00000010) != 0)) {
           to_bitField0_ |= 0x00000010;
-        }
-        result.authConfigJson_ = authConfigJson_;
-        if (((from_bitField0_ & 0x00000020) != 0)) {
-          to_bitField0_ |= 0x00000020;
         }
         result.createdBy_ = createdBy_;
         result.bitField0_ = to_bitField0_;
@@ -201452,18 +201341,13 @@ public final class Service {
           provider_ = other.provider_;
           onChanged();
         }
-        if (other.hasCredentialName()) {
-          bitField0_ |= 0x00000008;
-          credentialName_ = other.credentialName_;
-          onChanged();
-        }
         if (other.hasAuthConfigJson()) {
-          bitField0_ |= 0x00000010;
+          bitField0_ |= 0x00000008;
           authConfigJson_ = other.authConfigJson_;
           onChanged();
         }
         if (other.hasCreatedBy()) {
-          bitField0_ |= 0x00000020;
+          bitField0_ |= 0x00000010;
           createdBy_ = other.createdBy_;
           onChanged();
         }
@@ -201821,129 +201705,23 @@ public final class Service {
         return this;
       }
 
-      private java.lang.Object credentialName_ = "";
-      /**
-       * <pre>
-       * Optional credential identifier (e.g., "ANTHROPIC_API_KEY")
-       * </pre>
-       *
-       * <code>optional string credential_name = 4;</code>
-       * @return Whether the credentialName field is set.
-       */
-      public boolean hasCredentialName() {
-        return ((bitField0_ & 0x00000008) != 0);
-      }
-      /**
-       * <pre>
-       * Optional credential identifier (e.g., "ANTHROPIC_API_KEY")
-       * </pre>
-       *
-       * <code>optional string credential_name = 4;</code>
-       * @return The credentialName.
-       */
-      public java.lang.String getCredentialName() {
-        java.lang.Object ref = credentialName_;
-        if (!(ref instanceof java.lang.String)) {
-          com.google.protobuf.ByteString bs =
-              (com.google.protobuf.ByteString) ref;
-          java.lang.String s = bs.toStringUtf8();
-          if (bs.isValidUtf8()) {
-            credentialName_ = s;
-          }
-          return s;
-        } else {
-          return (java.lang.String) ref;
-        }
-      }
-      /**
-       * <pre>
-       * Optional credential identifier (e.g., "ANTHROPIC_API_KEY")
-       * </pre>
-       *
-       * <code>optional string credential_name = 4;</code>
-       * @return The bytes for credentialName.
-       */
-      public com.google.protobuf.ByteString
-          getCredentialNameBytes() {
-        java.lang.Object ref = credentialName_;
-        if (ref instanceof String) {
-          com.google.protobuf.ByteString b = 
-              com.google.protobuf.ByteString.copyFromUtf8(
-                  (java.lang.String) ref);
-          credentialName_ = b;
-          return b;
-        } else {
-          return (com.google.protobuf.ByteString) ref;
-        }
-      }
-      /**
-       * <pre>
-       * Optional credential identifier (e.g., "ANTHROPIC_API_KEY")
-       * </pre>
-       *
-       * <code>optional string credential_name = 4;</code>
-       * @param value The credentialName to set.
-       * @return This builder for chaining.
-       */
-      public Builder setCredentialName(
-          java.lang.String value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  bitField0_ |= 0x00000008;
-        credentialName_ = value;
-        onChanged();
-        return this;
-      }
-      /**
-       * <pre>
-       * Optional credential identifier (e.g., "ANTHROPIC_API_KEY")
-       * </pre>
-       *
-       * <code>optional string credential_name = 4;</code>
-       * @return This builder for chaining.
-       */
-      public Builder clearCredentialName() {
-        bitField0_ = (bitField0_ & ~0x00000008);
-        credentialName_ = getDefaultInstance().getCredentialName();
-        onChanged();
-        return this;
-      }
-      /**
-       * <pre>
-       * Optional credential identifier (e.g., "ANTHROPIC_API_KEY")
-       * </pre>
-       *
-       * <code>optional string credential_name = 4;</code>
-       * @param value The bytes for credentialName to set.
-       * @return This builder for chaining.
-       */
-      public Builder setCredentialNameBytes(
-          com.google.protobuf.ByteString value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  bitField0_ |= 0x00000008;
-        credentialName_ = value;
-        onChanged();
-        return this;
-      }
-
       private java.lang.Object authConfigJson_ = "";
       /**
        * <pre>
-       * Optional provider-specific auth configuration as JSON string
+       * Optional provider-specific auth configuration as JSON string.
+       * For multi-auth providers, include "auth_mode" key (e.g., {"auth_mode": "access_keys", "aws_region_name": "us-east-1"})
        * </pre>
        *
        * <code>optional string auth_config_json = 5;</code>
        * @return Whether the authConfigJson field is set.
        */
       public boolean hasAuthConfigJson() {
-        return ((bitField0_ & 0x00000010) != 0);
+        return ((bitField0_ & 0x00000008) != 0);
       }
       /**
        * <pre>
-       * Optional provider-specific auth configuration as JSON string
+       * Optional provider-specific auth configuration as JSON string.
+       * For multi-auth providers, include "auth_mode" key (e.g., {"auth_mode": "access_keys", "aws_region_name": "us-east-1"})
        * </pre>
        *
        * <code>optional string auth_config_json = 5;</code>
@@ -201965,7 +201743,8 @@ public final class Service {
       }
       /**
        * <pre>
-       * Optional provider-specific auth configuration as JSON string
+       * Optional provider-specific auth configuration as JSON string.
+       * For multi-auth providers, include "auth_mode" key (e.g., {"auth_mode": "access_keys", "aws_region_name": "us-east-1"})
        * </pre>
        *
        * <code>optional string auth_config_json = 5;</code>
@@ -201986,7 +201765,8 @@ public final class Service {
       }
       /**
        * <pre>
-       * Optional provider-specific auth configuration as JSON string
+       * Optional provider-specific auth configuration as JSON string.
+       * For multi-auth providers, include "auth_mode" key (e.g., {"auth_mode": "access_keys", "aws_region_name": "us-east-1"})
        * </pre>
        *
        * <code>optional string auth_config_json = 5;</code>
@@ -201998,28 +201778,30 @@ public final class Service {
         if (value == null) {
     throw new NullPointerException();
   }
-  bitField0_ |= 0x00000010;
+  bitField0_ |= 0x00000008;
         authConfigJson_ = value;
         onChanged();
         return this;
       }
       /**
        * <pre>
-       * Optional provider-specific auth configuration as JSON string
+       * Optional provider-specific auth configuration as JSON string.
+       * For multi-auth providers, include "auth_mode" key (e.g., {"auth_mode": "access_keys", "aws_region_name": "us-east-1"})
        * </pre>
        *
        * <code>optional string auth_config_json = 5;</code>
        * @return This builder for chaining.
        */
       public Builder clearAuthConfigJson() {
-        bitField0_ = (bitField0_ & ~0x00000010);
+        bitField0_ = (bitField0_ & ~0x00000008);
         authConfigJson_ = getDefaultInstance().getAuthConfigJson();
         onChanged();
         return this;
       }
       /**
        * <pre>
-       * Optional provider-specific auth configuration as JSON string
+       * Optional provider-specific auth configuration as JSON string.
+       * For multi-auth providers, include "auth_mode" key (e.g., {"auth_mode": "access_keys", "aws_region_name": "us-east-1"})
        * </pre>
        *
        * <code>optional string auth_config_json = 5;</code>
@@ -202031,7 +201813,7 @@ public final class Service {
         if (value == null) {
     throw new NullPointerException();
   }
-  bitField0_ |= 0x00000010;
+  bitField0_ |= 0x00000008;
         authConfigJson_ = value;
         onChanged();
         return this;
@@ -202047,7 +201829,7 @@ public final class Service {
        * @return Whether the createdBy field is set.
        */
       public boolean hasCreatedBy() {
-        return ((bitField0_ & 0x00000020) != 0);
+        return ((bitField0_ & 0x00000010) != 0);
       }
       /**
        * <pre>
@@ -202106,7 +201888,7 @@ public final class Service {
         if (value == null) {
     throw new NullPointerException();
   }
-  bitField0_ |= 0x00000020;
+  bitField0_ |= 0x00000010;
         createdBy_ = value;
         onChanged();
         return this;
@@ -202120,7 +201902,7 @@ public final class Service {
        * @return This builder for chaining.
        */
       public Builder clearCreatedBy() {
-        bitField0_ = (bitField0_ & ~0x00000020);
+        bitField0_ = (bitField0_ & ~0x00000010);
         createdBy_ = getDefaultInstance().getCreatedBy();
         onChanged();
         return this;
@@ -202139,7 +201921,7 @@ public final class Service {
         if (value == null) {
     throw new NullPointerException();
   }
-  bitField0_ |= 0x00000020;
+  bitField0_ |= 0x00000010;
         createdBy_ = value;
         onChanged();
         return this;
@@ -203789,36 +203571,8 @@ public final class Service {
 
     /**
      * <pre>
-     * Optional new credential identifier
-     * </pre>
-     *
-     * <code>optional string credential_name = 3;</code>
-     * @return Whether the credentialName field is set.
-     */
-    boolean hasCredentialName();
-    /**
-     * <pre>
-     * Optional new credential identifier
-     * </pre>
-     *
-     * <code>optional string credential_name = 3;</code>
-     * @return The credentialName.
-     */
-    java.lang.String getCredentialName();
-    /**
-     * <pre>
-     * Optional new credential identifier
-     * </pre>
-     *
-     * <code>optional string credential_name = 3;</code>
-     * @return The bytes for credentialName.
-     */
-    com.google.protobuf.ByteString
-        getCredentialNameBytes();
-
-    /**
-     * <pre>
-     * Optional new auth configuration as JSON string
+     * Optional new auth configuration as JSON string.
+     * For multi-auth providers, include "auth_mode" key (e.g., {"auth_mode": "access_keys", "aws_region_name": "us-east-1"})
      * </pre>
      *
      * <code>optional string auth_config_json = 4;</code>
@@ -203827,7 +203581,8 @@ public final class Service {
     boolean hasAuthConfigJson();
     /**
      * <pre>
-     * Optional new auth configuration as JSON string
+     * Optional new auth configuration as JSON string.
+     * For multi-auth providers, include "auth_mode" key (e.g., {"auth_mode": "access_keys", "aws_region_name": "us-east-1"})
      * </pre>
      *
      * <code>optional string auth_config_json = 4;</code>
@@ -203836,7 +203591,8 @@ public final class Service {
     java.lang.String getAuthConfigJson();
     /**
      * <pre>
-     * Optional new auth configuration as JSON string
+     * Optional new auth configuration as JSON string.
+     * For multi-auth providers, include "auth_mode" key (e.g., {"auth_mode": "access_keys", "aws_region_name": "us-east-1"})
      * </pre>
      *
      * <code>optional string auth_config_json = 4;</code>
@@ -203889,7 +203645,6 @@ public final class Service {
     private UpdateGatewaySecret() {
       secretId_ = "";
       secretValue_ = "";
-      credentialName_ = "";
       authConfigJson_ = "";
       updatedBy_ = "";
     }
@@ -203937,21 +203692,15 @@ public final class Service {
               secretValue_ = bs;
               break;
             }
-            case 26: {
-              com.google.protobuf.ByteString bs = input.readBytes();
-              bitField0_ |= 0x00000004;
-              credentialName_ = bs;
-              break;
-            }
             case 34: {
               com.google.protobuf.ByteString bs = input.readBytes();
-              bitField0_ |= 0x00000008;
+              bitField0_ |= 0x00000004;
               authConfigJson_ = bs;
               break;
             }
             case 42: {
               com.google.protobuf.ByteString bs = input.readBytes();
-              bitField0_ |= 0x00000010;
+              bitField0_ |= 0x00000008;
               updatedBy_ = bs;
               break;
             }
@@ -204800,71 +204549,12 @@ public final class Service {
       }
     }
 
-    public static final int CREDENTIAL_NAME_FIELD_NUMBER = 3;
-    private volatile java.lang.Object credentialName_;
-    /**
-     * <pre>
-     * Optional new credential identifier
-     * </pre>
-     *
-     * <code>optional string credential_name = 3;</code>
-     * @return Whether the credentialName field is set.
-     */
-    @java.lang.Override
-    public boolean hasCredentialName() {
-      return ((bitField0_ & 0x00000004) != 0);
-    }
-    /**
-     * <pre>
-     * Optional new credential identifier
-     * </pre>
-     *
-     * <code>optional string credential_name = 3;</code>
-     * @return The credentialName.
-     */
-    @java.lang.Override
-    public java.lang.String getCredentialName() {
-      java.lang.Object ref = credentialName_;
-      if (ref instanceof java.lang.String) {
-        return (java.lang.String) ref;
-      } else {
-        com.google.protobuf.ByteString bs = 
-            (com.google.protobuf.ByteString) ref;
-        java.lang.String s = bs.toStringUtf8();
-        if (bs.isValidUtf8()) {
-          credentialName_ = s;
-        }
-        return s;
-      }
-    }
-    /**
-     * <pre>
-     * Optional new credential identifier
-     * </pre>
-     *
-     * <code>optional string credential_name = 3;</code>
-     * @return The bytes for credentialName.
-     */
-    @java.lang.Override
-    public com.google.protobuf.ByteString
-        getCredentialNameBytes() {
-      java.lang.Object ref = credentialName_;
-      if (ref instanceof java.lang.String) {
-        com.google.protobuf.ByteString b = 
-            com.google.protobuf.ByteString.copyFromUtf8(
-                (java.lang.String) ref);
-        credentialName_ = b;
-        return b;
-      } else {
-        return (com.google.protobuf.ByteString) ref;
-      }
-    }
-
     public static final int AUTH_CONFIG_JSON_FIELD_NUMBER = 4;
     private volatile java.lang.Object authConfigJson_;
     /**
      * <pre>
-     * Optional new auth configuration as JSON string
+     * Optional new auth configuration as JSON string.
+     * For multi-auth providers, include "auth_mode" key (e.g., {"auth_mode": "access_keys", "aws_region_name": "us-east-1"})
      * </pre>
      *
      * <code>optional string auth_config_json = 4;</code>
@@ -204872,11 +204562,12 @@ public final class Service {
      */
     @java.lang.Override
     public boolean hasAuthConfigJson() {
-      return ((bitField0_ & 0x00000008) != 0);
+      return ((bitField0_ & 0x00000004) != 0);
     }
     /**
      * <pre>
-     * Optional new auth configuration as JSON string
+     * Optional new auth configuration as JSON string.
+     * For multi-auth providers, include "auth_mode" key (e.g., {"auth_mode": "access_keys", "aws_region_name": "us-east-1"})
      * </pre>
      *
      * <code>optional string auth_config_json = 4;</code>
@@ -204899,7 +204590,8 @@ public final class Service {
     }
     /**
      * <pre>
-     * Optional new auth configuration as JSON string
+     * Optional new auth configuration as JSON string.
+     * For multi-auth providers, include "auth_mode" key (e.g., {"auth_mode": "access_keys", "aws_region_name": "us-east-1"})
      * </pre>
      *
      * <code>optional string auth_config_json = 4;</code>
@@ -204932,7 +204624,7 @@ public final class Service {
      */
     @java.lang.Override
     public boolean hasUpdatedBy() {
-      return ((bitField0_ & 0x00000010) != 0);
+      return ((bitField0_ & 0x00000008) != 0);
     }
     /**
      * <pre>
@@ -205001,12 +204693,9 @@ public final class Service {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 2, secretValue_);
       }
       if (((bitField0_ & 0x00000004) != 0)) {
-        com.google.protobuf.GeneratedMessageV3.writeString(output, 3, credentialName_);
-      }
-      if (((bitField0_ & 0x00000008) != 0)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 4, authConfigJson_);
       }
-      if (((bitField0_ & 0x00000010) != 0)) {
+      if (((bitField0_ & 0x00000008) != 0)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 5, updatedBy_);
       }
       unknownFields.writeTo(output);
@@ -205025,12 +204714,9 @@ public final class Service {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, secretValue_);
       }
       if (((bitField0_ & 0x00000004) != 0)) {
-        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(3, credentialName_);
-      }
-      if (((bitField0_ & 0x00000008) != 0)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(4, authConfigJson_);
       }
-      if (((bitField0_ & 0x00000010) != 0)) {
+      if (((bitField0_ & 0x00000008) != 0)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(5, updatedBy_);
       }
       size += unknownFields.getSerializedSize();
@@ -205057,11 +204743,6 @@ public final class Service {
       if (hasSecretValue()) {
         if (!getSecretValue()
             .equals(other.getSecretValue())) return false;
-      }
-      if (hasCredentialName() != other.hasCredentialName()) return false;
-      if (hasCredentialName()) {
-        if (!getCredentialName()
-            .equals(other.getCredentialName())) return false;
       }
       if (hasAuthConfigJson() != other.hasAuthConfigJson()) return false;
       if (hasAuthConfigJson()) {
@@ -205091,10 +204772,6 @@ public final class Service {
       if (hasSecretValue()) {
         hash = (37 * hash) + SECRET_VALUE_FIELD_NUMBER;
         hash = (53 * hash) + getSecretValue().hashCode();
-      }
-      if (hasCredentialName()) {
-        hash = (37 * hash) + CREDENTIAL_NAME_FIELD_NUMBER;
-        hash = (53 * hash) + getCredentialName().hashCode();
       }
       if (hasAuthConfigJson()) {
         hash = (37 * hash) + AUTH_CONFIG_JSON_FIELD_NUMBER;
@@ -205241,12 +204918,10 @@ public final class Service {
         bitField0_ = (bitField0_ & ~0x00000001);
         secretValue_ = "";
         bitField0_ = (bitField0_ & ~0x00000002);
-        credentialName_ = "";
-        bitField0_ = (bitField0_ & ~0x00000004);
         authConfigJson_ = "";
-        bitField0_ = (bitField0_ & ~0x00000008);
+        bitField0_ = (bitField0_ & ~0x00000004);
         updatedBy_ = "";
-        bitField0_ = (bitField0_ & ~0x00000010);
+        bitField0_ = (bitField0_ & ~0x00000008);
         return this;
       }
 
@@ -205286,13 +204961,9 @@ public final class Service {
         if (((from_bitField0_ & 0x00000004) != 0)) {
           to_bitField0_ |= 0x00000004;
         }
-        result.credentialName_ = credentialName_;
+        result.authConfigJson_ = authConfigJson_;
         if (((from_bitField0_ & 0x00000008) != 0)) {
           to_bitField0_ |= 0x00000008;
-        }
-        result.authConfigJson_ = authConfigJson_;
-        if (((from_bitField0_ & 0x00000010) != 0)) {
-          to_bitField0_ |= 0x00000010;
         }
         result.updatedBy_ = updatedBy_;
         result.bitField0_ = to_bitField0_;
@@ -205354,18 +205025,13 @@ public final class Service {
           secretValue_ = other.secretValue_;
           onChanged();
         }
-        if (other.hasCredentialName()) {
-          bitField0_ |= 0x00000004;
-          credentialName_ = other.credentialName_;
-          onChanged();
-        }
         if (other.hasAuthConfigJson()) {
-          bitField0_ |= 0x00000008;
+          bitField0_ |= 0x00000004;
           authConfigJson_ = other.authConfigJson_;
           onChanged();
         }
         if (other.hasUpdatedBy()) {
-          bitField0_ |= 0x00000010;
+          bitField0_ |= 0x00000008;
           updatedBy_ = other.updatedBy_;
           onChanged();
         }
@@ -205615,129 +205281,23 @@ public final class Service {
         return this;
       }
 
-      private java.lang.Object credentialName_ = "";
-      /**
-       * <pre>
-       * Optional new credential identifier
-       * </pre>
-       *
-       * <code>optional string credential_name = 3;</code>
-       * @return Whether the credentialName field is set.
-       */
-      public boolean hasCredentialName() {
-        return ((bitField0_ & 0x00000004) != 0);
-      }
-      /**
-       * <pre>
-       * Optional new credential identifier
-       * </pre>
-       *
-       * <code>optional string credential_name = 3;</code>
-       * @return The credentialName.
-       */
-      public java.lang.String getCredentialName() {
-        java.lang.Object ref = credentialName_;
-        if (!(ref instanceof java.lang.String)) {
-          com.google.protobuf.ByteString bs =
-              (com.google.protobuf.ByteString) ref;
-          java.lang.String s = bs.toStringUtf8();
-          if (bs.isValidUtf8()) {
-            credentialName_ = s;
-          }
-          return s;
-        } else {
-          return (java.lang.String) ref;
-        }
-      }
-      /**
-       * <pre>
-       * Optional new credential identifier
-       * </pre>
-       *
-       * <code>optional string credential_name = 3;</code>
-       * @return The bytes for credentialName.
-       */
-      public com.google.protobuf.ByteString
-          getCredentialNameBytes() {
-        java.lang.Object ref = credentialName_;
-        if (ref instanceof String) {
-          com.google.protobuf.ByteString b = 
-              com.google.protobuf.ByteString.copyFromUtf8(
-                  (java.lang.String) ref);
-          credentialName_ = b;
-          return b;
-        } else {
-          return (com.google.protobuf.ByteString) ref;
-        }
-      }
-      /**
-       * <pre>
-       * Optional new credential identifier
-       * </pre>
-       *
-       * <code>optional string credential_name = 3;</code>
-       * @param value The credentialName to set.
-       * @return This builder for chaining.
-       */
-      public Builder setCredentialName(
-          java.lang.String value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  bitField0_ |= 0x00000004;
-        credentialName_ = value;
-        onChanged();
-        return this;
-      }
-      /**
-       * <pre>
-       * Optional new credential identifier
-       * </pre>
-       *
-       * <code>optional string credential_name = 3;</code>
-       * @return This builder for chaining.
-       */
-      public Builder clearCredentialName() {
-        bitField0_ = (bitField0_ & ~0x00000004);
-        credentialName_ = getDefaultInstance().getCredentialName();
-        onChanged();
-        return this;
-      }
-      /**
-       * <pre>
-       * Optional new credential identifier
-       * </pre>
-       *
-       * <code>optional string credential_name = 3;</code>
-       * @param value The bytes for credentialName to set.
-       * @return This builder for chaining.
-       */
-      public Builder setCredentialNameBytes(
-          com.google.protobuf.ByteString value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  bitField0_ |= 0x00000004;
-        credentialName_ = value;
-        onChanged();
-        return this;
-      }
-
       private java.lang.Object authConfigJson_ = "";
       /**
        * <pre>
-       * Optional new auth configuration as JSON string
+       * Optional new auth configuration as JSON string.
+       * For multi-auth providers, include "auth_mode" key (e.g., {"auth_mode": "access_keys", "aws_region_name": "us-east-1"})
        * </pre>
        *
        * <code>optional string auth_config_json = 4;</code>
        * @return Whether the authConfigJson field is set.
        */
       public boolean hasAuthConfigJson() {
-        return ((bitField0_ & 0x00000008) != 0);
+        return ((bitField0_ & 0x00000004) != 0);
       }
       /**
        * <pre>
-       * Optional new auth configuration as JSON string
+       * Optional new auth configuration as JSON string.
+       * For multi-auth providers, include "auth_mode" key (e.g., {"auth_mode": "access_keys", "aws_region_name": "us-east-1"})
        * </pre>
        *
        * <code>optional string auth_config_json = 4;</code>
@@ -205759,7 +205319,8 @@ public final class Service {
       }
       /**
        * <pre>
-       * Optional new auth configuration as JSON string
+       * Optional new auth configuration as JSON string.
+       * For multi-auth providers, include "auth_mode" key (e.g., {"auth_mode": "access_keys", "aws_region_name": "us-east-1"})
        * </pre>
        *
        * <code>optional string auth_config_json = 4;</code>
@@ -205780,7 +205341,8 @@ public final class Service {
       }
       /**
        * <pre>
-       * Optional new auth configuration as JSON string
+       * Optional new auth configuration as JSON string.
+       * For multi-auth providers, include "auth_mode" key (e.g., {"auth_mode": "access_keys", "aws_region_name": "us-east-1"})
        * </pre>
        *
        * <code>optional string auth_config_json = 4;</code>
@@ -205792,28 +205354,30 @@ public final class Service {
         if (value == null) {
     throw new NullPointerException();
   }
-  bitField0_ |= 0x00000008;
+  bitField0_ |= 0x00000004;
         authConfigJson_ = value;
         onChanged();
         return this;
       }
       /**
        * <pre>
-       * Optional new auth configuration as JSON string
+       * Optional new auth configuration as JSON string.
+       * For multi-auth providers, include "auth_mode" key (e.g., {"auth_mode": "access_keys", "aws_region_name": "us-east-1"})
        * </pre>
        *
        * <code>optional string auth_config_json = 4;</code>
        * @return This builder for chaining.
        */
       public Builder clearAuthConfigJson() {
-        bitField0_ = (bitField0_ & ~0x00000008);
+        bitField0_ = (bitField0_ & ~0x00000004);
         authConfigJson_ = getDefaultInstance().getAuthConfigJson();
         onChanged();
         return this;
       }
       /**
        * <pre>
-       * Optional new auth configuration as JSON string
+       * Optional new auth configuration as JSON string.
+       * For multi-auth providers, include "auth_mode" key (e.g., {"auth_mode": "access_keys", "aws_region_name": "us-east-1"})
        * </pre>
        *
        * <code>optional string auth_config_json = 4;</code>
@@ -205825,7 +205389,7 @@ public final class Service {
         if (value == null) {
     throw new NullPointerException();
   }
-  bitField0_ |= 0x00000008;
+  bitField0_ |= 0x00000004;
         authConfigJson_ = value;
         onChanged();
         return this;
@@ -205841,7 +205405,7 @@ public final class Service {
        * @return Whether the updatedBy field is set.
        */
       public boolean hasUpdatedBy() {
-        return ((bitField0_ & 0x00000010) != 0);
+        return ((bitField0_ & 0x00000008) != 0);
       }
       /**
        * <pre>
@@ -205900,7 +205464,7 @@ public final class Service {
         if (value == null) {
     throw new NullPointerException();
   }
-  bitField0_ |= 0x00000010;
+  bitField0_ |= 0x00000008;
         updatedBy_ = value;
         onChanged();
         return this;
@@ -205914,7 +205478,7 @@ public final class Service {
        * @return This builder for chaining.
        */
       public Builder clearUpdatedBy() {
-        bitField0_ = (bitField0_ & ~0x00000010);
+        bitField0_ = (bitField0_ & ~0x00000008);
         updatedBy_ = getDefaultInstance().getUpdatedBy();
         onChanged();
         return this;
@@ -205933,7 +205497,7 @@ public final class Service {
         if (value == null) {
     throw new NullPointerException();
   }
-  bitField0_ |= 0x00000010;
+  bitField0_ |= 0x00000008;
         updatedBy_ = value;
         onChanged();
         return this;
@@ -236889,469 +236453,469 @@ public final class Service {
       "\022\025\n\rresource_type\030\002 \001(\t\022\023\n\013resource_id\030\003" +
       " \001(\t\022\022\n\ncreated_at\030\004 \001(\003\022\027\n\017last_updated" +
       "_at\030\005 \001(\003\022\022\n\ncreated_by\030\006 \001(\t\022\027\n\017last_up" +
-      "dated_by\030\007 \001(\t\"\320\001\n\023CreateGatewaySecret\022\023" +
+      "dated_by\030\007 \001(\t\"\316\001\n\023CreateGatewaySecret\022\023" +
       "\n\013secret_name\030\001 \001(\t\022\024\n\014secret_value\030\002 \001(" +
-      "\t\022\020\n\010provider\030\003 \001(\t\022\027\n\017credential_name\030\004" +
-      " \001(\t\022\030\n\020auth_config_json\030\005 \001(\t\022\022\n\ncreate" +
-      "d_by\030\006 \001(\t\0325\n\010Response\022)\n\006secret\030\001 \001(\0132\031" +
-      ".mlflow.GatewaySecretInfo\"u\n\024GetGatewayS" +
-      "ecretInfo\022\021\n\tsecret_id\030\001 \001(\t\022\023\n\013secret_n" +
-      "ame\030\002 \001(\t\0325\n\010Response\022)\n\006secret\030\001 \001(\0132\031." +
-      "mlflow.GatewaySecretInfo\"\274\001\n\023UpdateGatew" +
-      "aySecret\022\021\n\tsecret_id\030\001 \001(\t\022\024\n\014secret_va" +
-      "lue\030\002 \001(\t\022\027\n\017credential_name\030\003 \001(\t\022\030\n\020au" +
-      "th_config_json\030\004 \001(\t\022\022\n\nupdated_by\030\005 \001(\t" +
-      "\0325\n\010Response\022)\n\006secret\030\001 \001(\0132\031.mlflow.Ga" +
-      "tewaySecretInfo\"4\n\023DeleteGatewaySecret\022\021" +
-      "\n\tsecret_id\030\001 \001(\t\032\n\n\010Response\"b\n\026ListGat" +
-      "ewaySecretInfos\022\020\n\010provider\030\001 \001(\t\0326\n\010Res" +
-      "ponse\022*\n\007secrets\030\001 \003(\0132\031.mlflow.GatewayS" +
-      "ecretInfo\"\277\001\n\034CreateGatewayModelDefiniti" +
-      "on\022\014\n\004name\030\001 \001(\t\022\021\n\tsecret_id\030\002 \001(\t\022\020\n\010p" +
-      "rovider\030\003 \001(\t\022\022\n\nmodel_name\030\004 \001(\t\022\022\n\ncre" +
-      "ated_by\030\005 \001(\t\032D\n\010Response\0228\n\020model_defin" +
-      "ition\030\001 \001(\0132\036.mlflow.GatewayModelDefinit" +
-      "ion\"~\n\031GetGatewayModelDefinition\022\033\n\023mode" +
-      "l_definition_id\030\001 \001(\t\032D\n\010Response\0228\n\020mod" +
-      "el_definition\030\001 \001(\0132\036.mlflow.GatewayMode" +
-      "lDefinition\"\211\001\n\033ListGatewayModelDefiniti" +
-      "ons\022\020\n\010provider\030\001 \001(\t\022\021\n\tsecret_id\030\002 \001(\t" +
-      "\032E\n\010Response\0229\n\021model_definitions\030\001 \003(\0132" +
-      "\036.mlflow.GatewayModelDefinition\"\312\001\n\034Upda" +
+      "\t\022\020\n\010provider\030\003 \001(\t\022\030\n\020auth_config_json\030" +
+      "\005 \001(\t\022\022\n\ncreated_by\030\006 \001(\t\0325\n\010Response\022)\n" +
+      "\006secret\030\001 \001(\0132\031.mlflow.GatewaySecretInfo" +
+      "J\004\010\004\020\005R\017credential_name\"u\n\024GetGatewaySec" +
+      "retInfo\022\021\n\tsecret_id\030\001 \001(\t\022\023\n\013secret_nam" +
+      "e\030\002 \001(\t\0325\n\010Response\022)\n\006secret\030\001 \001(\0132\031.ml" +
+      "flow.GatewaySecretInfo\"\272\001\n\023UpdateGateway" +
+      "Secret\022\021\n\tsecret_id\030\001 \001(\t\022\024\n\014secret_valu" +
+      "e\030\002 \001(\t\022\030\n\020auth_config_json\030\004 \001(\t\022\022\n\nupd" +
+      "ated_by\030\005 \001(\t\0325\n\010Response\022)\n\006secret\030\001 \001(" +
+      "\0132\031.mlflow.GatewaySecretInfoJ\004\010\003\020\004R\017cred" +
+      "ential_name\"4\n\023DeleteGatewaySecret\022\021\n\tse" +
+      "cret_id\030\001 \001(\t\032\n\n\010Response\"b\n\026ListGateway" +
+      "SecretInfos\022\020\n\010provider\030\001 \001(\t\0326\n\010Respons" +
+      "e\022*\n\007secrets\030\001 \003(\0132\031.mlflow.GatewaySecre" +
+      "tInfo\"\277\001\n\034CreateGatewayModelDefinition\022\014" +
+      "\n\004name\030\001 \001(\t\022\021\n\tsecret_id\030\002 \001(\t\022\020\n\010provi" +
+      "der\030\003 \001(\t\022\022\n\nmodel_name\030\004 \001(\t\022\022\n\ncreated" +
+      "_by\030\005 \001(\t\032D\n\010Response\0228\n\020model_definitio" +
+      "n\030\001 \001(\0132\036.mlflow.GatewayModelDefinition\"" +
+      "~\n\031GetGatewayModelDefinition\022\033\n\023model_de" +
+      "finition_id\030\001 \001(\t\032D\n\010Response\0228\n\020model_d" +
+      "efinition\030\001 \001(\0132\036.mlflow.GatewayModelDef" +
+      "inition\"\211\001\n\033ListGatewayModelDefinitions\022" +
+      "\020\n\010provider\030\001 \001(\t\022\021\n\tsecret_id\030\002 \001(\t\032E\n\010" +
+      "Response\0229\n\021model_definitions\030\001 \003(\0132\036.ml" +
+      "flow.GatewayModelDefinition\"\312\001\n\034UpdateGa" +
+      "tewayModelDefinition\022\033\n\023model_definition" +
+      "_id\030\001 \001(\t\022\014\n\004name\030\002 \001(\t\022\021\n\tsecret_id\030\003 \001" +
+      "(\t\022\022\n\nmodel_name\030\004 \001(\t\022\022\n\nupdated_by\030\005 \001" +
+      "(\t\032D\n\010Response\0228\n\020model_definition\030\001 \001(\013" +
+      "2\036.mlflow.GatewayModelDefinition\"G\n\034Dele" +
       "teGatewayModelDefinition\022\033\n\023model_defini" +
-      "tion_id\030\001 \001(\t\022\014\n\004name\030\002 \001(\t\022\021\n\tsecret_id" +
-      "\030\003 \001(\t\022\022\n\nmodel_name\030\004 \001(\t\022\022\n\nupdated_by" +
-      "\030\005 \001(\t\032D\n\010Response\0228\n\020model_definition\030\001" +
-      " \001(\0132\036.mlflow.GatewayModelDefinition\"G\n\034" +
-      "DeleteGatewayModelDefinition\022\033\n\023model_de" +
-      "finition_id\030\001 \001(\t\032\n\n\010Response\"\216\001\n\025Create" +
-      "GatewayEndpoint\022\014\n\004name\030\001 \001(\t\022\034\n\024model_d" +
-      "efinition_ids\030\002 \003(\t\022\022\n\ncreated_by\030\003 \001(\t\032" +
-      "5\n\010Response\022)\n\010endpoint\030\001 \001(\0132\027.mlflow.G" +
-      "atewayEndpoint\"n\n\022GetGatewayEndpoint\022\023\n\013" +
-      "endpoint_id\030\001 \001(\t\022\014\n\004name\030\002 \001(\t\0325\n\010Respo" +
-      "nse\022)\n\010endpoint\030\001 \001(\0132\027.mlflow.GatewayEn" +
-      "dpoint\"\205\001\n\025UpdateGatewayEndpoint\022\023\n\013endp" +
-      "oint_id\030\001 \001(\t\022\014\n\004name\030\002 \001(\t\022\022\n\nupdated_b" +
-      "y\030\003 \001(\t\0325\n\010Response\022)\n\010endpoint\030\001 \001(\0132\027." +
-      "mlflow.GatewayEndpoint\"8\n\025DeleteGatewayE" +
-      "ndpoint\022\023\n\013endpoint_id\030\001 \001(\t\032\n\n\010Response" +
-      "\"s\n\024ListGatewayEndpoints\022\020\n\010provider\030\001 \001" +
-      "(\t\022\021\n\tsecret_id\030\002 \001(\t\0326\n\010Response\022*\n\tend" +
-      "points\030\001 \003(\0132\027.mlflow.GatewayEndpoint\"\266\001" +
-      "\n\034AttachModelToGatewayEndpoint\022\023\n\013endpoi" +
-      "nt_id\030\001 \001(\t\022\033\n\023model_definition_id\030\002 \001(\t" +
-      "\022\016\n\006weight\030\003 \001(\002\022\022\n\ncreated_by\030\004 \001(\t\032@\n\010" +
-      "Response\0224\n\007mapping\030\001 \001(\0132#.mlflow.Gatew" +
-      "ayEndpointModelMapping\"^\n\036DetachModelFro" +
-      "mGatewayEndpoint\022\023\n\013endpoint_id\030\001 \001(\t\022\033\n" +
-      "\023model_definition_id\030\002 \001(\t\032\n\n\010Response\"\260" +
-      "\001\n\034CreateGatewayEndpointBinding\022\023\n\013endpo" +
-      "int_id\030\001 \001(\t\022\025\n\rresource_type\030\002 \001(\t\022\023\n\013r" +
-      "esource_id\030\003 \001(\t\022\022\n\ncreated_by\030\004 \001(\t\032;\n\010" +
-      "Response\022/\n\007binding\030\001 \001(\0132\036.mlflow.Gatew" +
-      "ayEndpointBinding\"k\n\034DeleteGatewayEndpoi" +
-      "ntBinding\022\023\n\013endpoint_id\030\001 \001(\t\022\025\n\rresour" +
-      "ce_type\030\002 \001(\t\022\023\n\013resource_id\030\003 \001(\t\032\n\n\010Re" +
-      "sponse\"\234\001\n\033ListGatewayEndpointBindings\022\023" +
-      "\n\013endpoint_id\030\001 \001(\t\022\025\n\rresource_type\030\002 \001" +
-      "(\t\022\023\n\013resource_id\030\003 \001(\t\032<\n\010Response\0220\n\010b" +
-      "indings\030\001 \003(\0132\036.mlflow.GatewayEndpointBi" +
-      "nding\"9\n\020GetSecretsConfig\032%\n\010Response\022\031\n" +
-      "\021secrets_available\030\001 \001(\010*6\n\010ViewType\022\017\n\013" +
-      "ACTIVE_ONLY\020\001\022\020\n\014DELETED_ONLY\020\002\022\007\n\003ALL\020\003" +
-      "*I\n\nSourceType\022\014\n\010NOTEBOOK\020\001\022\007\n\003JOB\020\002\022\013\n" +
-      "\007PROJECT\020\003\022\t\n\005LOCAL\020\004\022\014\n\007UNKNOWN\020\350\007*M\n\tR" +
-      "unStatus\022\013\n\007RUNNING\020\001\022\r\n\tSCHEDULED\020\002\022\014\n\010" +
-      "FINISHED\020\003\022\n\n\006FAILED\020\004\022\n\n\006KILLED\020\005*O\n\013Tr" +
-      "aceStatus\022\034\n\030TRACE_STATUS_UNSPECIFIED\020\000\022" +
-      "\006\n\002OK\020\001\022\t\n\005ERROR\020\002\022\017\n\013IN_PROGRESS\020\003*\212\001\n\021" +
-      "LoggedModelStatus\022#\n\037LOGGED_MODEL_STATUS" +
-      "_UNSPECIFIED\020\000\022\030\n\024LOGGED_MODEL_PENDING\020\001" +
-      "\022\026\n\022LOGGED_MODEL_READY\020\002\022\036\n\032LOGGED_MODEL" +
-      "_UPLOAD_FAILED\020\0032\237w\n\rMlflowService\022\246\001\n\023g" +
-      "etExperimentByName\022\033.mlflow.GetExperimen" +
-      "tByName\032$.mlflow.GetExperimentByName.Res" +
-      "ponse\"L\362\206\031H\n,\n\003GET\022\037/mlflow/experiments/" +
-      "get-by-name\032\004\010\002\020\000\020\001*\026Get Experiment By N" +
-      "ame\022\224\001\n\020createExperiment\022\030.mlflow.Create" +
-      "Experiment\032!.mlflow.CreateExperiment.Res" +
-      "ponse\"C\362\206\031?\n(\n\004POST\022\032/mlflow/experiments" +
-      "/create\032\004\010\002\020\000\020\001*\021Create Experiment\022\301\001\n\021s" +
-      "earchExperiments\022\031.mlflow.SearchExperime" +
-      "nts\032\".mlflow.SearchExperiments.Response\"" +
-      "m\362\206\031i\n(\n\004POST\022\032/mlflow/experiments/searc" +
-      "h\032\004\010\002\020\000\n\'\n\003GET\022\032/mlflow/experiments/sear" +
-      "ch\032\004\010\002\020\000\020\001*\022Search Experiments\022\210\001\n\rgetEx" +
-      "periment\022\025.mlflow.GetExperiment\032\036.mlflow" +
-      ".GetExperiment.Response\"@\362\206\0318\n$\n\003GET\022\027/m" +
-      "lflow/experiments/get\032\004\010\002\020\000\020\001*\016Get Exper" +
-      "iment\272\214\031\000\022\224\001\n\020deleteExperiment\022\030.mlflow." +
-      "DeleteExperiment\032!.mlflow.DeleteExperime" +
-      "nt.Response\"C\362\206\031?\n(\n\004POST\022\032/mlflow/exper" +
-      "iments/delete\032\004\010\002\020\000\020\001*\021Delete Experiment" +
-      "\022\231\001\n\021restoreExperiment\022\031.mlflow.RestoreE" +
-      "xperiment\032\".mlflow.RestoreExperiment.Res" +
-      "ponse\"E\362\206\031A\n)\n\004POST\022\033/mlflow/experiments" +
-      "/restore\032\004\010\002\020\000\020\001*\022Restore Experiment\022\224\001\n" +
-      "\020updateExperiment\022\030.mlflow.UpdateExperim" +
-      "ent\032!.mlflow.UpdateExperiment.Response\"C" +
-      "\362\206\031?\n(\n\004POST\022\032/mlflow/experiments/update" +
-      "\032\004\010\002\020\000\020\001*\021Update Experiment\022q\n\tcreateRun" +
-      "\022\021.mlflow.CreateRun\032\032.mlflow.CreateRun.R" +
-      "esponse\"5\362\206\0311\n!\n\004POST\022\023/mlflow/runs/crea" +
-      "te\032\004\010\002\020\000\020\001*\nCreate Run\022q\n\tupdateRun\022\021.ml" +
-      "flow.UpdateRun\032\032.mlflow.UpdateRun.Respon" +
-      "se\"5\362\206\0311\n!\n\004POST\022\023/mlflow/runs/update\032\004\010" +
-      "\002\020\000\020\001*\nUpdate Run\022q\n\tdeleteRun\022\021.mlflow." +
-      "DeleteRun\032\032.mlflow.DeleteRun.Response\"5\362" +
-      "\206\0311\n!\n\004POST\022\023/mlflow/runs/delete\032\004\010\002\020\000\020\001" +
-      "*\nDelete Run\022v\n\nrestoreRun\022\022.mlflow.Rest" +
-      "oreRun\032\033.mlflow.RestoreRun.Response\"7\362\206\031" +
-      "3\n\"\n\004POST\022\024/mlflow/runs/restore\032\004\010\002\020\000\020\001*" +
-      "\013Restore Run\022u\n\tlogMetric\022\021.mlflow.LogMe" +
-      "tric\032\032.mlflow.LogMetric.Response\"9\362\206\0315\n%" +
-      "\n\004POST\022\027/mlflow/runs/log-metric\032\004\010\002\020\000\020\001*" +
-      "\nLog Metric\022t\n\010logParam\022\020.mlflow.LogPara" +
-      "m\032\031.mlflow.LogParam.Response\";\362\206\0317\n(\n\004PO" +
-      "ST\022\032/mlflow/runs/log-parameter\032\004\010\002\020\000\020\001*\t" +
-      "Log Param\022\241\001\n\020setExperimentTag\022\030.mlflow." +
-      "SetExperimentTag\032!.mlflow.SetExperimentT" +
-      "ag.Response\"P\362\206\031L\n4\n\004POST\022&/mlflow/exper" +
-      "iments/set-experiment-tag\032\004\010\002\020\000\020\001*\022Set E" +
-      "xperiment Tag\022\260\001\n\023deleteExperimentTag\022\033." +
-      "mlflow.DeleteExperimentTag\032$.mlflow.Dele" +
-      "teExperimentTag.Response\"V\362\206\031R\n7\n\004POST\022)" +
-      "/mlflow/experiments/delete-experiment-ta" +
-      "g\032\004\010\002\020\000\020\001*\025Delete Experiment Tag\022f\n\006setT" +
-      "ag\022\016.mlflow.SetTag\032\027.mlflow.SetTag.Respo" +
-      "nse\"3\362\206\031/\n\"\n\004POST\022\024/mlflow/runs/set-tag\032" +
-      "\004\010\002\020\000\020\001*\007Set Tag\022\210\001\n\013setTraceTag\022\023.mlflo" +
-      "w.SetTraceTag\032\034.mlflow.SetTraceTag.Respo" +
-      "nse\"F\362\206\031B\n/\n\005PATCH\022 /mlflow/traces/{requ" +
-      "est_id}/tags\032\004\010\002\020\000\020\003*\rSet Trace Tag\022\217\001\n\r" +
-      "setTraceTagV3\022\025.mlflow.SetTraceTagV3\032\036.m" +
-      "lflow.SetTraceTagV3.Response\"G\362\206\031C\n-\n\005PA" +
-      "TCH\022\036/mlflow/traces/{trace_id}/tags\032\004\010\003\020" +
-      "\000\020\003*\020Set Trace Tag V3\022\225\001\n\016deleteTraceTag" +
-      "\022\026.mlflow.DeleteTraceTag\032\037.mlflow.Delete" +
-      "TraceTag.Response\"J\362\206\031F\n0\n\006DELETE\022 /mlfl" +
-      "ow/traces/{request_id}/tags\032\004\010\002\020\000\020\003*\020Del" +
-      "ete Trace Tag\022\234\001\n\020deleteTraceTagV3\022\030.mlf" +
-      "low.DeleteTraceTagV3\032!.mlflow.DeleteTrac" +
-      "eTagV3.Response\"K\362\206\031G\n.\n\006DELETE\022\036/mlflow" +
-      "/traces/{trace_id}/tags\032\004\010\003\020\000\020\003*\023Delete " +
-      "Trace Tag V3\022u\n\tdeleteTag\022\021.mlflow.Delet" +
-      "eTag\032\032.mlflow.DeleteTag.Response\"9\362\206\0315\n%" +
-      "\n\004POST\022\027/mlflow/runs/delete-tag\032\004\010\002\020\000\020\001*" +
-      "\nDelete Tag\022e\n\006getRun\022\016.mlflow.GetRun\032\027." +
-      "mlflow.GetRun.Response\"2\362\206\031*\n\035\n\003GET\022\020/ml" +
-      "flow/runs/get\032\004\010\002\020\000\020\001*\007Get Run\272\214\031\000\022y\n\nse" +
-      "archRuns\022\022.mlflow.SearchRuns\032\033.mlflow.Se" +
-      "archRuns.Response\":\362\206\0312\n!\n\004POST\022\023/mlflow" +
-      "/runs/search\032\004\010\002\020\000\020\001*\013Search Runs\272\214\031\000\022\207\001" +
-      "\n\rlistArtifacts\022\025.mlflow.ListArtifacts\032\036" +
-      ".mlflow.ListArtifacts.Response\"?\362\206\0317\n#\n\003" +
-      "GET\022\026/mlflow/artifacts/list\032\004\010\002\020\000\020\001*\016Lis" +
-      "t Artifacts\272\214\031\000\022\225\001\n\020getMetricHistory\022\030.m" +
-      "lflow.GetMetricHistory\032!.mlflow.GetMetri" +
-      "cHistory.Response\"D\362\206\031@\n(\n\003GET\022\033/mlflow/" +
-      "metrics/get-history\032\004\010\002\020\000\020\001*\022Get Metric " +
-      "History\022\267\001\n\034getMetricHistoryBulkInterval" +
-      "\022$.mlflow.GetMetricHistoryBulkInterval\032-" +
-      ".mlflow.GetMetricHistoryBulkInterval.Res" +
-      "ponse\"B\362\206\031:\n6\n\003GET\022)/mlflow/metrics/get-" +
-      "history-bulk-interval\032\004\010\002\020\013\020\003\272\214\031\000\022p\n\010log" +
-      "Batch\022\020.mlflow.LogBatch\032\031.mlflow.LogBatc" +
-      "h.Response\"7\362\206\0313\n$\n\004POST\022\026/mlflow/runs/l" +
-      "og-batch\032\004\010\002\020\000\020\001*\tLog Batch\022p\n\010logModel\022" +
-      "\020.mlflow.LogModel\032\031.mlflow.LogModel.Resp" +
-      "onse\"7\362\206\0313\n$\n\004POST\022\026/mlflow/runs/log-mod" +
-      "el\032\004\010\002\020\000\020\001*\tLog Model\022u\n\tlogInputs\022\021.mlf" +
-      "low.LogInputs\032\032.mlflow.LogInputs.Respons" +
-      "e\"9\362\206\0315\n%\n\004POST\022\027/mlflow/runs/log-inputs" +
-      "\032\004\010\002\020\000\020\001*\nLog Inputs\022v\n\nlogOutputs\022\022.mlf" +
-      "low.LogOutputs\032\033.mlflow.LogOutputs.Respo" +
-      "nse\"7\362\206\0313\n\"\n\004POST\022\024/mlflow/runs/outputs\032" +
-      "\004\010\002\020\000\020\003*\013Log Outputs\022\207\001\n\016searchDatasets\022" +
-      "\026.mlflow.SearchDatasets\032\037.mlflow.SearchD" +
-      "atasets.Response\"<\362\206\0314\n0\n\004POST\022\"mlflow/e" +
-      "xperiments/search-datasets\032\004\010\002\020\000\020\003\272\214\031\000\022p" +
-      "\n\nstartTrace\022\022.mlflow.StartTrace\032\033.mlflo" +
-      "w.StartTrace.Response\"1\362\206\031-\n\034\n\004POST\022\016/ml" +
-      "flow/traces\032\004\010\002\020\000\020\003*\013Start Trace\022v\n\010endT" +
-      "race\022\020.mlflow.EndTrace\032\031.mlflow.EndTrace" +
-      ".Response\"=\362\206\0319\n*\n\005PATCH\022\033/mlflow/traces" +
-      "/{request_id}\032\004\010\002\020\000\020\003*\tEnd Trace\022\211\001\n\014get" +
-      "TraceInfo\022\024.mlflow.GetTraceInfo\032\035.mlflow" +
-      ".GetTraceInfo.Response\"D\362\206\031@\n-\n\003GET\022 /ml" +
-      "flow/traces/{request_id}/info\032\004\010\002\020\000\020\003*\rG" +
-      "et TraceInfo\022\213\001\n\016getTraceInfoV3\022\026.mlflow" +
-      ".GetTraceInfoV3\032\037.mlflow.GetTraceInfoV3." +
-      "Response\"@\362\206\031<\n&\n\003GET\022\031/mlflow/traces/{t" +
-      "race_id}\032\004\010\003\020\000\020\003*\020Get TraceInfo v3\022n\n\010ge" +
-      "tTrace\022\020.mlflow.GetTrace\032\031.mlflow.GetTra" +
-      "ce.Response\"5\362\206\0311\n\037\n\003GET\022\022/mlflow/traces" +
-      "/get\032\004\010\003\020\000\020\003*\014Get Trace v3\022\203\001\n\016batchGetT" +
-      "races\022\026.mlflow.BatchGetTraces\032\037.mlflow.B" +
-      "atchGetTraces.Response\"8\362\206\0314\n$\n\003GET\022\027/ml" +
-      "flow/traces/batchGet\032\004\010\003\020\000\020\003*\nGet Traces" +
-      "\022w\n\014searchTraces\022\024.mlflow.SearchTraces\032\035" +
-      ".mlflow.SearchTraces.Response\"2\362\206\031.\n\033\n\003G" +
-      "ET\022\016/mlflow/traces\032\004\010\002\020\000\020\003*\rSearch Trace" +
-      "s\022\210\001\n\016searchTracesV3\022\026.mlflow.SearchTrac" +
-      "esV3\032\037.mlflow.SearchTracesV3.Response\"=\362" +
-      "\206\0319\n#\n\004POST\022\025/mlflow/traces/search\032\004\010\003\020\000" +
-      "\020\003*\020Search Traces V3\022i\n\014startTraceV3\022\024.m" +
-      "lflow.StartTraceV3\032\035.mlflow.StartTraceV3" +
-      ".Response\"$\362\206\031 \n\034\n\004POST\022\016/mlflow/traces\032" +
-      "\004\010\003\020\000\020\003\022\222\001\n\017linkTracesToRun\022\027.mlflow.Lin" +
-      "kTracesToRun\032 .mlflow.LinkTracesToRun.Re" +
-      "sponse\"D\362\206\031@\n(\n\004POST\022\032/mlflow/traces/lin" +
-      "k-to-run\032\004\010\002\020\000\020\003*\022Link Traces to Run\022\237\001\n" +
-      "\022linkPromptsToTrace\022\032.mlflow.LinkPrompts" +
-      "ToTrace\032#.mlflow.LinkPromptsToTrace.Resp" +
-      "onse\"H\362\206\031D\n)\n\004POST\022\033/mlflow/traces/link-" +
-      "prompts\032\004\010\002\020\000\020\003*\025Link Prompts to Trace\022\242" +
-      "\001\n\031searchUnifiedTraceHandler\022\033.mlflow.Se" +
-      "archUnifiedTraces\032$.mlflow.SearchUnified" +
-      "Traces.Response\"B\362\206\031>\n#\n\003GET\022\026/mlflow/un" +
-      "ified-traces\032\004\010\002\020\000\020\003*\025Search Unified Tra" +
-      "ces\022\257\001\n\025getOnlineTraceDetails\022\035.mlflow.G" +
-      "etOnlineTraceDetails\032&.mlflow.GetOnlineT" +
-      "raceDetails.Response\"O\362\206\031K\n-\n\003GET\022 /mlfl" +
-      "ow/get-online-trace-details\032\004\010\002\020\000\020\003*\030Get" +
-      " Online Trace Details\022\206\001\n\014deleteTraces\022\024" +
-      ".mlflow.DeleteTraces\032\035.mlflow.DeleteTrac" +
-      "es.Response\"A\362\206\031=\n*\n\004POST\022\034/mlflow/trace" +
-      "s/delete-traces\032\004\010\002\020\000\020\003*\rDelete Traces\022\217" +
-      "\001\n\016deleteTracesV3\022\026.mlflow.DeleteTracesV" +
-      "3\032\037.mlflow.DeleteTracesV3.Response\"D\362\206\031@" +
-      "\n*\n\004POST\022\034/mlflow/traces/delete-traces\032\004" +
-      "\010\003\020\000\020\003*\020Delete Traces V3\022\343\001\n\037calculateTr" +
-      "aceFilterCorrelation\022\'.mlflow.CalculateT" +
-      "raceFilterCorrelation\0320.mlflow.Calculate" +
-      "TraceFilterCorrelation.Response\"e\362\206\031a\n9\n" +
-      "\004POST\022+/mlflow/traces/calculate-filter-c" +
-      "orrelation\032\004\010\003\020\000\020\003*\"Calculate Trace Filt" +
-      "er Correlation\022\224\001\n\021createLoggedModel\022\031.m" +
-      "lflow.CreateLoggedModel\032\".mlflow.CreateL" +
-      "oggedModel.Response\"@\362\206\031<\n#\n\004POST\022\025/mlfl" +
-      "ow/logged-models\032\004\010\002\020\000\020\003*\023Create Logged " +
-      "Model\022\250\001\n\023finalizeLoggedModel\022\033.mlflow.F" +
-      "inalizeLoggedModel\032$.mlflow.FinalizeLogg" +
-      "edModel.Response\"N\362\206\031J\n/\n\005PATCH\022 /mlflow" +
-      "/logged-models/{model_id}\032\004\010\002\020\000\020\003*\025Final" +
-      "ize Logged Model\022\222\001\n\016getLoggedModel\022\026.ml" +
-      "flow.GetLoggedModel\032\037.mlflow.GetLoggedMo" +
-      "del.Response\"G\362\206\031C\n-\n\003GET\022 /mlflow/logge" +
-      "d-models/{model_id}\032\004\010\002\020\000\020\003*\020Get Logged " +
-      "Model\022\243\001\n\021deleteLoggedModel\022\031.mlflow.Del" +
-      "eteLoggedModel\032\".mlflow.DeleteLoggedMode" +
-      "l.Response\"O\362\206\031K\n0\n\006DELETE\022 /mlflow/logg" +
-      "ed-models/{model_id}\032\004\010\002\020\000\020\003*\025Delete a L" +
-      "ogged Model\022\236\001\n\022searchLoggedModels\022\032.mlf" +
-      "low.SearchLoggedModels\032#.mlflow.SearchLo" +
-      "ggedModels.Response\"G\362\206\031C\n*\n\004POST\022\034/mlfl" +
-      "ow/logged-models/search\032\004\010\002\020\000\020\003*\023Search " +
-      "LoggedModels\022\251\001\n\022setLoggedModelTags\022\032.ml" +
-      "flow.SetLoggedModelTags\032#.mlflow.SetLogg" +
-      "edModelTags.Response\"R\362\206\031N\n4\n\005PATCH\022%/ml" +
-      "flow/logged-models/{model_id}/tags\032\004\010\002\020\000" +
-      "\020\003*\024Set Logged Model Tag\022\275\001\n\024deleteLogge" +
-      "dModelTag\022\034.mlflow.DeleteLoggedModelTag\032" +
-      "%.mlflow.DeleteLoggedModelTag.Response\"`" +
-      "\362\206\031\\\n?\n\006DELETE\022//mlflow/logged-models/{m" +
-      "odel_id}/tags/{tag_key}\032\004\010\002\020\000\020\003*\027Delete " +
-      "Logged Model Tag\022\326\001\n\030listLoggedModelArti" +
-      "facts\022 .mlflow.ListLoggedModelArtifacts\032" +
-      ").mlflow.ListLoggedModelArtifacts.Respon" +
-      "se\"m\362\206\031i\nC\n\003GET\0226/mlflow/logged-models/{" +
-      "model_id}/artifacts/directories\032\004\010\002\020\000\020\003*" +
-      " List Artifacts for Logged Models\022\301\001\n\024Lo" +
-      "gLoggedModelParams\022#.mlflow.LogLoggedMod" +
-      "elParamsRequest\032,.mlflow.LogLoggedModelP" +
-      "aramsRequest.Response\"V\362\206\031R\n5\n\004POST\022\'/ml" +
-      "flow/logged-models/{model_id}/params\032\004\010\002" +
-      "\020\000\020\003*\027Log Logged Model Params\022\260\001\n\rGetAss" +
-      "essment\022\034.mlflow.GetAssessmentRequest\032%." +
-      "mlflow.GetAssessmentRequest.Response\"Z\362\206" +
-      "\031V\nB\n\003GET\0225/mlflow/traces/{trace_id}/ass" +
-      "essments/{assessment_id}\032\004\010\003\020\000\020\003*\016Get As" +
-      "sessment\022\337\001\n\020createAssessment\022\030.mlflow.C" +
-      "reateAssessment\032!.mlflow.CreateAssessmen" +
-      "t.Response\"\215\001\362\206\031\210\001\n>\n\004POST\0220/mlflow/trac" +
-      "es/{assessment.trace_id}/assessments\032\004\010\003" +
-      "\020\000\020\003\030\350\007\030\356\007\030\014\030\001*:Create an assessment of " +
-      "a trace or a span within the trace\022\320\001\n\020u" +
-      "pdateAssessment\022\030.mlflow.UpdateAssessmen" +
-      "t\032!.mlflow.UpdateAssessment.Response\"\177\362\206" +
-      "\031{\nD\n\005PATCH\0225/mlflow/traces/{trace_id}/a" +
-      "ssessments/{assessment_id}\032\004\010\003\020\000\020\003\030\350\007\030\356\007" +
-      "\030\001*)Update an existing assessment on a t" +
-      "race.\022\261\001\n\020deleteAssessment\022\030.mlflow.Dele" +
-      "teAssessment\032!.mlflow.DeleteAssessment.R" +
-      "esponse\"`\362\206\031\\\nE\n\006DELETE\0225/mlflow/traces/" +
-      "{trace_id}/assessments/{assessment_id}\032\004" +
-      "\010\003\020\000\020\003*\021Delete Assessment\022\232\001\n\rcreateData" +
-      "set\022\025.mlflow.CreateDataset\032\036.mlflow.Crea" +
-      "teDataset.Response\"R\362\206\031N\n%\n\004POST\022\027/mlflo" +
-      "w/datasets/create\032\004\010\003\020\000\020\003\030\350\007\030\356\007\030\014\030\001*\031Cre" +
-      "ate Evaluation Dataset\022\221\001\n\ngetDataset\022\022." +
-      "mlflow.GetDataset\032\033.mlflow.GetDataset.Re" +
-      "sponse\"R\362\206\031N\n*\n\003GET\022\035/mlflow/datasets/{d" +
-      "ataset_id}\032\004\010\003\020\000\020\003\030\350\007\030\272\027\030\001*\026Get Evaluati" +
-      "on Dataset\022\240\001\n\rdeleteDataset\022\025.mlflow.De" +
-      "leteDataset\032\036.mlflow.DeleteDataset.Respo" +
-      "nse\"X\362\206\031T\n-\n\006DELETE\022\035/mlflow/datasets/{d" +
-      "ataset_id}\032\004\010\003\020\000\020\003\030\350\007\030\272\027\030\001*\031Delete Evalu" +
-      "ation Dataset\022\335\001\n\030searchEvaluationDatase" +
-      "ts\022 .mlflow.SearchEvaluationDatasets\032).m" +
-      "lflow.SearchEvaluationDatasets.Response\"" +
-      "t\362\206\031p\n%\n\004POST\022\027/mlflow/datasets/search\032\004" +
-      "\010\003\020\000\n$\n\003GET\022\027/mlflow/datasets/search\032\004\010\003" +
-      "\020\000\020\003\030\350\007\030\001*\032Search Evaluation Datasets\022\251\001" +
-      "\n\016setDatasetTags\022\026.mlflow.SetDatasetTags",
-      "\032\037.mlflow.SetDatasetTags.Response\"^\362\206\031Z\n" +
-      "1\n\005PATCH\022\"/mlflow/datasets/{dataset_id}/" +
-      "tags\032\004\010\003\020\000\020\003\030\350\007\030\272\027\030\001*\033Set Evaluation Dat" +
-      "aset Tags\022\270\001\n\020deleteDatasetTag\022\030.mlflow." +
-      "DeleteDatasetTag\032!.mlflow.DeleteDatasetT" +
-      "ag.Response\"g\362\206\031c\n8\n\006DELETE\022(/mlflow/dat" +
-      "asets/{dataset_id}/tags/{key}\032\004\010\003\020\000\020\003\030\350\007" +
-      "\030\272\027\030\001*\035Delete Evaluation Dataset Tag\022\303\001\n" +
-      "\024upsertDatasetRecords\022\034.mlflow.UpsertDat" +
-      "asetRecords\032%.mlflow.UpsertDatasetRecord" +
-      "s.Response\"f\362\206\031b\n3\n\004POST\022%/mlflow/datase" +
-      "ts/{dataset_id}/records\032\004\010\003\020\000\020\003\030\350\007\030\272\027\030\001*" +
-      "!Upsert Evaluation Dataset Records\022\326\001\n\027g" +
-      "etDatasetExperimentIds\022\037.mlflow.GetDatas" +
-      "etExperimentIds\032(.mlflow.GetDatasetExper" +
-      "imentIds.Response\"p\362\206\031l\n9\n\003GET\022,/mlflow/" +
-      "datasets/{dataset_id}/experiment-ids\032\004\010\003" +
-      "\020\000\020\003\030\350\007\030\272\027\030\001*%Get Evaluation Dataset Exp" +
-      "eriment IDs\022\212\001\n\016registerScorer\022\026.mlflow." +
-      "RegisterScorer\032\037.mlflow.RegisterScorer.R" +
-      "esponse\"?\362\206\031;\n&\n\004POST\022\030/mlflow/scorers/r" +
-      "egister\032\004\010\003\020\000\020\001*\017Register Scorer\022y\n\013list" +
-      "Scorers\022\023.mlflow.ListScorers\032\034.mlflow.Li" +
-      "stScorers.Response\"7\362\206\0313\n!\n\003GET\022\024/mlflow" +
-      "/scorers/list\032\004\010\003\020\000\020\001*\014List Scorers\022\232\001\n\022" +
-      "listScorerVersions\022\032.mlflow.ListScorerVe" +
-      "rsions\032#.mlflow.ListScorerVersions.Respo" +
-      "nse\"C\362\206\031?\n%\n\003GET\022\030/mlflow/scorers/versio" +
-      "ns\032\004\010\003\020\000\020\001*\024List Scorer Versions\022p\n\tgetS" +
-      "corer\022\021.mlflow.GetScorer\032\032.mlflow.GetSco" +
-      "rer.Response\"4\362\206\0310\n \n\003GET\022\023/mlflow/score" +
-      "rs/get\032\004\010\003\020\000\020\001*\nGet Scorer\022\202\001\n\014deleteSco" +
-      "rer\022\024.mlflow.DeleteScorer\032\035.mlflow.Delet" +
-      "eScorer.Response\"=\362\206\0319\n&\n\006DELETE\022\026/mlflo" +
-      "w/scorers/delete\032\004\010\003\020\000\020\001*\rDelete Scorer\022" +
-      "\266\001\n\021getDatasetRecords\022\031.mlflow.GetDatase" +
-      "tRecords\032\".mlflow.GetDatasetRecords.Resp" +
-      "onse\"b\362\206\031^\n2\n\003GET\022%/mlflow/datasets/{dat" +
-      "aset_id}/records\032\004\010\003\020\000\020\003\030\350\007\030\272\027\030\001*\036Get Ev" +
-      "aluation Dataset Records\022\315\001\n\027addDatasetT" +
-      "oExperiments\022\037.mlflow.AddDatasetToExperi" +
-      "ments\032(.mlflow.AddDatasetToExperiments.R" +
-      "esponse\"g\362\206\031c\n;\n\004POST\022-/mlflow/datasets/" +
-      "{dataset_id}/add-experiments\032\004\010\003\020\000\020\003\030\350\007\030" +
-      "\272\027\030\001*\032Add Dataset to Experiments\022\344\001\n\034rem" +
-      "oveDatasetFromExperiments\022$.mlflow.Remov" +
-      "eDatasetFromExperiments\032-.mlflow.RemoveD" +
-      "atasetFromExperiments.Response\"o\362\206\031k\n>\n\004" +
-      "POST\0220/mlflow/datasets/{dataset_id}/remo" +
-      "ve-experiments\032\004\010\003\020\000\020\003\030\350\007\030\272\027\030\001*\037Remove D" +
-      "ataset from Experiments\022\216\001\n\014createSecret" +
-      "\022\033.mlflow.CreateGatewaySecret\032$.mlflow.C" +
-      "reateGatewaySecret.Response\";\362\206\0317\n$\n\004POS" +
-      "T\022\026/mlflow/secrets/create\032\004\010\003\020\000\020\001*\rCreat" +
-      "e Secret\022\217\001\n\rgetSecretInfo\022\034.mlflow.GetG" +
-      "atewaySecretInfo\032%.mlflow.GetGatewaySecr" +
-      "etInfo.Response\"9\362\206\0315\n \n\003GET\022\023/mlflow/se" +
-      "crets/get\032\004\010\003\020\000\020\001*\017Get Secret Info\022\216\001\n\014u" +
-      "pdateSecret\022\033.mlflow.UpdateGatewaySecret" +
-      "\032$.mlflow.UpdateGatewaySecret.Response\";" +
-      "\362\206\0317\n$\n\004POST\022\026/mlflow/secrets/update\032\004\010\003" +
-      "\020\000\020\001*\rUpdate Secret\022\220\001\n\014deleteSecret\022\033.m" +
-      "lflow.DeleteGatewaySecret\032$.mlflow.Delet" +
-      "eGatewaySecret.Response\"=\362\206\0319\n&\n\006DELETE\022" +
-      "\026/mlflow/secrets/delete\032\004\010\003\020\000\020\001*\rDelete " +
-      "Secret\022\223\001\n\017listSecretInfos\022\036.mlflow.List" +
-      "GatewaySecretInfos\032\'.mlflow.ListGatewayS" +
-      "ecretInfos.Response\"7\362\206\0313\n!\n\003GET\022\024/mlflo" +
-      "w/secrets/list\032\004\010\003\020\000\020\001*\014List Secrets\022\230\001\n" +
-      "\016createEndpoint\022\035.mlflow.CreateGatewayEn" +
-      "dpoint\032&.mlflow.CreateGatewayEndpoint.Re" +
-      "sponse\"?\362\206\031;\n&\n\004POST\022\030/mlflow/endpoints/" +
-      "create\032\004\010\003\020\000\020\001*\017Create Endpoint\022\210\001\n\013getE" +
-      "ndpoint\022\032.mlflow.GetGatewayEndpoint\032#.ml" +
-      "flow.GetGatewayEndpoint.Response\"8\362\206\0314\n\"" +
-      "\n\003GET\022\025/mlflow/endpoints/get\032\004\010\003\020\000\020\001*\014Ge" +
-      "t Endpoint\022\230\001\n\016updateEndpoint\022\035.mlflow.U" +
-      "pdateGatewayEndpoint\032&.mlflow.UpdateGate" +
-      "wayEndpoint.Response\"?\362\206\031;\n&\n\004POST\022\030/mlf" +
-      "low/endpoints/update\032\004\010\003\020\000\020\001*\017Update End" +
-      "point\022\232\001\n\016deleteEndpoint\022\035.mlflow.Delete" +
-      "GatewayEndpoint\032&.mlflow.DeleteGatewayEn" +
-      "dpoint.Response\"A\362\206\031=\n(\n\006DELETE\022\030/mlflow" +
-      "/endpoints/delete\032\004\010\003\020\000\020\001*\017Delete Endpoi" +
-      "nt\022\221\001\n\rlistEndpoints\022\034.mlflow.ListGatewa" +
-      "yEndpoints\032%.mlflow.ListGatewayEndpoints" +
-      ".Response\";\362\206\0317\n#\n\003GET\022\026/mlflow/endpoint" +
-      "s/list\032\004\010\003\020\000\020\001*\016List Endpoints\022\275\001\n\025creat" +
-      "eModelDefinition\022$.mlflow.CreateGatewayM" +
-      "odelDefinition\032-.mlflow.CreateGatewayMod" +
-      "elDefinition.Response\"O\362\206\031K\n.\n\004POST\022 /ml" +
-      "flow/model-definitions/create\032\004\010\003\020\000\020\001*\027C" +
-      "reate Model Definition\022\255\001\n\022getModelDefin" +
-      "ition\022!.mlflow.GetGatewayModelDefinition" +
-      "\032*.mlflow.GetGatewayModelDefinition.Resp" +
-      "onse\"H\362\206\031D\n*\n\003GET\022\035/mlflow/model-definit" +
-      "ions/get\032\004\010\003\020\000\020\001*\024Get Model Definition\022\266" +
-      "\001\n\024listModelDefinitions\022#.mlflow.ListGat" +
-      "ewayModelDefinitions\032,.mlflow.ListGatewa" +
-      "yModelDefinitions.Response\"K\362\206\031G\n+\n\003GET\022" +
-      "\036/mlflow/model-definitions/list\032\004\010\003\020\000\020\001*" +
-      "\026List Model Definitions\022\275\001\n\025updateModelD" +
-      "efinition\022$.mlflow.UpdateGatewayModelDef" +
-      "inition\032-.mlflow.UpdateGatewayModelDefin" +
-      "ition.Response\"O\362\206\031K\n.\n\004POST\022 /mlflow/mo" +
-      "del-definitions/update\032\004\010\003\020\000\020\001*\027Update M" +
-      "odel Definition\022\277\001\n\025deleteModelDefinitio" +
-      "n\022$.mlflow.DeleteGatewayModelDefinition\032" +
-      "-.mlflow.DeleteGatewayModelDefinition.Re" +
-      "sponse\"Q\362\206\031M\n0\n\006DELETE\022 /mlflow/model-de" +
-      "finitions/delete\032\004\010\003\020\000\020\001*\027Delete Model D" +
-      "efinition\022\275\001\n\025attachModelToEndpoint\022$.ml" +
-      "flow.AttachModelToGatewayEndpoint\032-.mlfl" +
-      "ow.AttachModelToGatewayEndpoint.Response" +
-      "\"O\362\206\031K\n-\n\004POST\022\037/mlflow/endpoints/models" +
-      "/attach\032\004\010\003\020\000\020\001*\030Attach Model to Endpoin" +
-      "t\022\305\001\n\027detachModelFromEndpoint\022&.mlflow.D" +
-      "etachModelFromGatewayEndpoint\032/.mlflow.D" +
-      "etachModelFromGatewayEndpoint.Response\"Q" +
-      "\362\206\031M\n-\n\004POST\022\037/mlflow/endpoints/models/d" +
-      "etach\032\004\010\003\020\000\020\001*\032Detach Model from Endpoin" +
-      "t\022\276\001\n\025createEndpointBinding\022$.mlflow.Cre" +
-      "ateGatewayEndpointBinding\032-.mlflow.Creat" +
-      "eGatewayEndpointBinding.Response\"P\362\206\031L\n/" +
-      "\n\004POST\022!/mlflow/endpoints/bindings/creat" +
-      "e\032\004\010\003\020\000\020\001*\027Create Endpoint Binding\022\300\001\n\025d" +
-      "eleteEndpointBinding\022$.mlflow.DeleteGate" +
-      "wayEndpointBinding\032-.mlflow.DeleteGatewa" +
-      "yEndpointBinding.Response\"R\362\206\031N\n1\n\006DELET" +
-      "E\022!/mlflow/endpoints/bindings/delete\032\004\010\003" +
-      "\020\000\020\001*\027Delete Endpoint Binding\022\267\001\n\024listEn" +
-      "dpointBindings\022#.mlflow.ListGatewayEndpo" +
-      "intBindings\032,.mlflow.ListGatewayEndpoint" +
-      "Bindings.Response\"L\362\206\031H\n,\n\003GET\022\037/mlflow/" +
-      "endpoints/bindings/list\032\004\010\003\020\000\020\001*\026List En" +
-      "dpoint Bindings\022\220\001\n\020getSecretsConfig\022\030.m" +
-      "lflow.GetSecretsConfig\032!.mlflow.GetSecre" +
-      "tsConfig.Response\"?\362\206\031;\n#\n\003GET\022\026/mlflow/" +
-      "secrets/config\032\004\010\003\020\000\020\001*\022Get Secrets Conf" +
-      "igB\036\n\024org.mlflow.api.proto\220\001\001\342?\002\020\001"
+      "tion_id\030\001 \001(\t\032\n\n\010Response\"\216\001\n\025CreateGate" +
+      "wayEndpoint\022\014\n\004name\030\001 \001(\t\022\034\n\024model_defin" +
+      "ition_ids\030\002 \003(\t\022\022\n\ncreated_by\030\003 \001(\t\0325\n\010R" +
+      "esponse\022)\n\010endpoint\030\001 \001(\0132\027.mlflow.Gatew" +
+      "ayEndpoint\"n\n\022GetGatewayEndpoint\022\023\n\013endp" +
+      "oint_id\030\001 \001(\t\022\014\n\004name\030\002 \001(\t\0325\n\010Response\022" +
+      ")\n\010endpoint\030\001 \001(\0132\027.mlflow.GatewayEndpoi" +
+      "nt\"\205\001\n\025UpdateGatewayEndpoint\022\023\n\013endpoint" +
+      "_id\030\001 \001(\t\022\014\n\004name\030\002 \001(\t\022\022\n\nupdated_by\030\003 " +
+      "\001(\t\0325\n\010Response\022)\n\010endpoint\030\001 \001(\0132\027.mlfl" +
+      "ow.GatewayEndpoint\"8\n\025DeleteGatewayEndpo" +
+      "int\022\023\n\013endpoint_id\030\001 \001(\t\032\n\n\010Response\"s\n\024" +
+      "ListGatewayEndpoints\022\020\n\010provider\030\001 \001(\t\022\021" +
+      "\n\tsecret_id\030\002 \001(\t\0326\n\010Response\022*\n\tendpoin" +
+      "ts\030\001 \003(\0132\027.mlflow.GatewayEndpoint\"\266\001\n\034At" +
+      "tachModelToGatewayEndpoint\022\023\n\013endpoint_i" +
+      "d\030\001 \001(\t\022\033\n\023model_definition_id\030\002 \001(\t\022\016\n\006" +
+      "weight\030\003 \001(\002\022\022\n\ncreated_by\030\004 \001(\t\032@\n\010Resp" +
+      "onse\0224\n\007mapping\030\001 \001(\0132#.mlflow.GatewayEn" +
+      "dpointModelMapping\"^\n\036DetachModelFromGat" +
+      "ewayEndpoint\022\023\n\013endpoint_id\030\001 \001(\t\022\033\n\023mod" +
+      "el_definition_id\030\002 \001(\t\032\n\n\010Response\"\260\001\n\034C" +
+      "reateGatewayEndpointBinding\022\023\n\013endpoint_" +
+      "id\030\001 \001(\t\022\025\n\rresource_type\030\002 \001(\t\022\023\n\013resou" +
+      "rce_id\030\003 \001(\t\022\022\n\ncreated_by\030\004 \001(\t\032;\n\010Resp" +
+      "onse\022/\n\007binding\030\001 \001(\0132\036.mlflow.GatewayEn" +
+      "dpointBinding\"k\n\034DeleteGatewayEndpointBi" +
+      "nding\022\023\n\013endpoint_id\030\001 \001(\t\022\025\n\rresource_t" +
+      "ype\030\002 \001(\t\022\023\n\013resource_id\030\003 \001(\t\032\n\n\010Respon" +
+      "se\"\234\001\n\033ListGatewayEndpointBindings\022\023\n\013en" +
+      "dpoint_id\030\001 \001(\t\022\025\n\rresource_type\030\002 \001(\t\022\023" +
+      "\n\013resource_id\030\003 \001(\t\032<\n\010Response\0220\n\010bindi" +
+      "ngs\030\001 \003(\0132\036.mlflow.GatewayEndpointBindin" +
+      "g\"9\n\020GetSecretsConfig\032%\n\010Response\022\031\n\021sec" +
+      "rets_available\030\001 \001(\010*6\n\010ViewType\022\017\n\013ACTI" +
+      "VE_ONLY\020\001\022\020\n\014DELETED_ONLY\020\002\022\007\n\003ALL\020\003*I\n\n" +
+      "SourceType\022\014\n\010NOTEBOOK\020\001\022\007\n\003JOB\020\002\022\013\n\007PRO" +
+      "JECT\020\003\022\t\n\005LOCAL\020\004\022\014\n\007UNKNOWN\020\350\007*M\n\tRunSt" +
+      "atus\022\013\n\007RUNNING\020\001\022\r\n\tSCHEDULED\020\002\022\014\n\010FINI" +
+      "SHED\020\003\022\n\n\006FAILED\020\004\022\n\n\006KILLED\020\005*O\n\013TraceS" +
+      "tatus\022\034\n\030TRACE_STATUS_UNSPECIFIED\020\000\022\006\n\002O" +
+      "K\020\001\022\t\n\005ERROR\020\002\022\017\n\013IN_PROGRESS\020\003*\212\001\n\021Logg" +
+      "edModelStatus\022#\n\037LOGGED_MODEL_STATUS_UNS" +
+      "PECIFIED\020\000\022\030\n\024LOGGED_MODEL_PENDING\020\001\022\026\n\022" +
+      "LOGGED_MODEL_READY\020\002\022\036\n\032LOGGED_MODEL_UPL" +
+      "OAD_FAILED\020\0032\237w\n\rMlflowService\022\246\001\n\023getEx" +
+      "perimentByName\022\033.mlflow.GetExperimentByN" +
+      "ame\032$.mlflow.GetExperimentByName.Respons" +
+      "e\"L\362\206\031H\n,\n\003GET\022\037/mlflow/experiments/get-" +
+      "by-name\032\004\010\002\020\000\020\001*\026Get Experiment By Name\022" +
+      "\224\001\n\020createExperiment\022\030.mlflow.CreateExpe" +
+      "riment\032!.mlflow.CreateExperiment.Respons" +
+      "e\"C\362\206\031?\n(\n\004POST\022\032/mlflow/experiments/cre" +
+      "ate\032\004\010\002\020\000\020\001*\021Create Experiment\022\301\001\n\021searc" +
+      "hExperiments\022\031.mlflow.SearchExperiments\032" +
+      "\".mlflow.SearchExperiments.Response\"m\362\206\031" +
+      "i\n(\n\004POST\022\032/mlflow/experiments/search\032\004\010" +
+      "\002\020\000\n\'\n\003GET\022\032/mlflow/experiments/search\032\004" +
+      "\010\002\020\000\020\001*\022Search Experiments\022\210\001\n\rgetExperi" +
+      "ment\022\025.mlflow.GetExperiment\032\036.mlflow.Get" +
+      "Experiment.Response\"@\362\206\0318\n$\n\003GET\022\027/mlflo" +
+      "w/experiments/get\032\004\010\002\020\000\020\001*\016Get Experimen" +
+      "t\272\214\031\000\022\224\001\n\020deleteExperiment\022\030.mlflow.Dele" +
+      "teExperiment\032!.mlflow.DeleteExperiment.R" +
+      "esponse\"C\362\206\031?\n(\n\004POST\022\032/mlflow/experimen" +
+      "ts/delete\032\004\010\002\020\000\020\001*\021Delete Experiment\022\231\001\n" +
+      "\021restoreExperiment\022\031.mlflow.RestoreExper" +
+      "iment\032\".mlflow.RestoreExperiment.Respons" +
+      "e\"E\362\206\031A\n)\n\004POST\022\033/mlflow/experiments/res" +
+      "tore\032\004\010\002\020\000\020\001*\022Restore Experiment\022\224\001\n\020upd" +
+      "ateExperiment\022\030.mlflow.UpdateExperiment\032" +
+      "!.mlflow.UpdateExperiment.Response\"C\362\206\031?" +
+      "\n(\n\004POST\022\032/mlflow/experiments/update\032\004\010\002" +
+      "\020\000\020\001*\021Update Experiment\022q\n\tcreateRun\022\021.m" +
+      "lflow.CreateRun\032\032.mlflow.CreateRun.Respo" +
+      "nse\"5\362\206\0311\n!\n\004POST\022\023/mlflow/runs/create\032\004" +
+      "\010\002\020\000\020\001*\nCreate Run\022q\n\tupdateRun\022\021.mlflow" +
+      ".UpdateRun\032\032.mlflow.UpdateRun.Response\"5" +
+      "\362\206\0311\n!\n\004POST\022\023/mlflow/runs/update\032\004\010\002\020\000\020" +
+      "\001*\nUpdate Run\022q\n\tdeleteRun\022\021.mlflow.Dele" +
+      "teRun\032\032.mlflow.DeleteRun.Response\"5\362\206\0311\n" +
+      "!\n\004POST\022\023/mlflow/runs/delete\032\004\010\002\020\000\020\001*\nDe" +
+      "lete Run\022v\n\nrestoreRun\022\022.mlflow.RestoreR" +
+      "un\032\033.mlflow.RestoreRun.Response\"7\362\206\0313\n\"\n" +
+      "\004POST\022\024/mlflow/runs/restore\032\004\010\002\020\000\020\001*\013Res" +
+      "tore Run\022u\n\tlogMetric\022\021.mlflow.LogMetric" +
+      "\032\032.mlflow.LogMetric.Response\"9\362\206\0315\n%\n\004PO" +
+      "ST\022\027/mlflow/runs/log-metric\032\004\010\002\020\000\020\001*\nLog" +
+      " Metric\022t\n\010logParam\022\020.mlflow.LogParam\032\031." +
+      "mlflow.LogParam.Response\";\362\206\0317\n(\n\004POST\022\032" +
+      "/mlflow/runs/log-parameter\032\004\010\002\020\000\020\001*\tLog " +
+      "Param\022\241\001\n\020setExperimentTag\022\030.mlflow.SetE" +
+      "xperimentTag\032!.mlflow.SetExperimentTag.R" +
+      "esponse\"P\362\206\031L\n4\n\004POST\022&/mlflow/experimen" +
+      "ts/set-experiment-tag\032\004\010\002\020\000\020\001*\022Set Exper" +
+      "iment Tag\022\260\001\n\023deleteExperimentTag\022\033.mlfl" +
+      "ow.DeleteExperimentTag\032$.mlflow.DeleteEx" +
+      "perimentTag.Response\"V\362\206\031R\n7\n\004POST\022)/mlf" +
+      "low/experiments/delete-experiment-tag\032\004\010" +
+      "\002\020\000\020\001*\025Delete Experiment Tag\022f\n\006setTag\022\016" +
+      ".mlflow.SetTag\032\027.mlflow.SetTag.Response\"" +
+      "3\362\206\031/\n\"\n\004POST\022\024/mlflow/runs/set-tag\032\004\010\002\020" +
+      "\000\020\001*\007Set Tag\022\210\001\n\013setTraceTag\022\023.mlflow.Se" +
+      "tTraceTag\032\034.mlflow.SetTraceTag.Response\"" +
+      "F\362\206\031B\n/\n\005PATCH\022 /mlflow/traces/{request_" +
+      "id}/tags\032\004\010\002\020\000\020\003*\rSet Trace Tag\022\217\001\n\rsetT" +
+      "raceTagV3\022\025.mlflow.SetTraceTagV3\032\036.mlflo" +
+      "w.SetTraceTagV3.Response\"G\362\206\031C\n-\n\005PATCH\022" +
+      "\036/mlflow/traces/{trace_id}/tags\032\004\010\003\020\000\020\003*" +
+      "\020Set Trace Tag V3\022\225\001\n\016deleteTraceTag\022\026.m" +
+      "lflow.DeleteTraceTag\032\037.mlflow.DeleteTrac" +
+      "eTag.Response\"J\362\206\031F\n0\n\006DELETE\022 /mlflow/t" +
+      "races/{request_id}/tags\032\004\010\002\020\000\020\003*\020Delete " +
+      "Trace Tag\022\234\001\n\020deleteTraceTagV3\022\030.mlflow." +
+      "DeleteTraceTagV3\032!.mlflow.DeleteTraceTag" +
+      "V3.Response\"K\362\206\031G\n.\n\006DELETE\022\036/mlflow/tra" +
+      "ces/{trace_id}/tags\032\004\010\003\020\000\020\003*\023Delete Trac" +
+      "e Tag V3\022u\n\tdeleteTag\022\021.mlflow.DeleteTag" +
+      "\032\032.mlflow.DeleteTag.Response\"9\362\206\0315\n%\n\004PO" +
+      "ST\022\027/mlflow/runs/delete-tag\032\004\010\002\020\000\020\001*\nDel" +
+      "ete Tag\022e\n\006getRun\022\016.mlflow.GetRun\032\027.mlfl" +
+      "ow.GetRun.Response\"2\362\206\031*\n\035\n\003GET\022\020/mlflow" +
+      "/runs/get\032\004\010\002\020\000\020\001*\007Get Run\272\214\031\000\022y\n\nsearch" +
+      "Runs\022\022.mlflow.SearchRuns\032\033.mlflow.Search" +
+      "Runs.Response\":\362\206\0312\n!\n\004POST\022\023/mlflow/run" +
+      "s/search\032\004\010\002\020\000\020\001*\013Search Runs\272\214\031\000\022\207\001\n\rli" +
+      "stArtifacts\022\025.mlflow.ListArtifacts\032\036.mlf" +
+      "low.ListArtifacts.Response\"?\362\206\0317\n#\n\003GET\022" +
+      "\026/mlflow/artifacts/list\032\004\010\002\020\000\020\001*\016List Ar" +
+      "tifacts\272\214\031\000\022\225\001\n\020getMetricHistory\022\030.mlflo" +
+      "w.GetMetricHistory\032!.mlflow.GetMetricHis" +
+      "tory.Response\"D\362\206\031@\n(\n\003GET\022\033/mlflow/metr" +
+      "ics/get-history\032\004\010\002\020\000\020\001*\022Get Metric Hist" +
+      "ory\022\267\001\n\034getMetricHistoryBulkInterval\022$.m" +
+      "lflow.GetMetricHistoryBulkInterval\032-.mlf" +
+      "low.GetMetricHistoryBulkInterval.Respons" +
+      "e\"B\362\206\031:\n6\n\003GET\022)/mlflow/metrics/get-hist" +
+      "ory-bulk-interval\032\004\010\002\020\013\020\003\272\214\031\000\022p\n\010logBatc" +
+      "h\022\020.mlflow.LogBatch\032\031.mlflow.LogBatch.Re" +
+      "sponse\"7\362\206\0313\n$\n\004POST\022\026/mlflow/runs/log-b" +
+      "atch\032\004\010\002\020\000\020\001*\tLog Batch\022p\n\010logModel\022\020.ml" +
+      "flow.LogModel\032\031.mlflow.LogModel.Response" +
+      "\"7\362\206\0313\n$\n\004POST\022\026/mlflow/runs/log-model\032\004" +
+      "\010\002\020\000\020\001*\tLog Model\022u\n\tlogInputs\022\021.mlflow." +
+      "LogInputs\032\032.mlflow.LogInputs.Response\"9\362" +
+      "\206\0315\n%\n\004POST\022\027/mlflow/runs/log-inputs\032\004\010\002" +
+      "\020\000\020\001*\nLog Inputs\022v\n\nlogOutputs\022\022.mlflow." +
+      "LogOutputs\032\033.mlflow.LogOutputs.Response\"" +
+      "7\362\206\0313\n\"\n\004POST\022\024/mlflow/runs/outputs\032\004\010\002\020" +
+      "\000\020\003*\013Log Outputs\022\207\001\n\016searchDatasets\022\026.ml" +
+      "flow.SearchDatasets\032\037.mlflow.SearchDatas" +
+      "ets.Response\"<\362\206\0314\n0\n\004POST\022\"mlflow/exper" +
+      "iments/search-datasets\032\004\010\002\020\000\020\003\272\214\031\000\022p\n\nst" +
+      "artTrace\022\022.mlflow.StartTrace\032\033.mlflow.St" +
+      "artTrace.Response\"1\362\206\031-\n\034\n\004POST\022\016/mlflow" +
+      "/traces\032\004\010\002\020\000\020\003*\013Start Trace\022v\n\010endTrace" +
+      "\022\020.mlflow.EndTrace\032\031.mlflow.EndTrace.Res" +
+      "ponse\"=\362\206\0319\n*\n\005PATCH\022\033/mlflow/traces/{re" +
+      "quest_id}\032\004\010\002\020\000\020\003*\tEnd Trace\022\211\001\n\014getTrac" +
+      "eInfo\022\024.mlflow.GetTraceInfo\032\035.mlflow.Get" +
+      "TraceInfo.Response\"D\362\206\031@\n-\n\003GET\022 /mlflow" +
+      "/traces/{request_id}/info\032\004\010\002\020\000\020\003*\rGet T" +
+      "raceInfo\022\213\001\n\016getTraceInfoV3\022\026.mlflow.Get" +
+      "TraceInfoV3\032\037.mlflow.GetTraceInfoV3.Resp" +
+      "onse\"@\362\206\031<\n&\n\003GET\022\031/mlflow/traces/{trace" +
+      "_id}\032\004\010\003\020\000\020\003*\020Get TraceInfo v3\022n\n\010getTra" +
+      "ce\022\020.mlflow.GetTrace\032\031.mlflow.GetTrace.R" +
+      "esponse\"5\362\206\0311\n\037\n\003GET\022\022/mlflow/traces/get" +
+      "\032\004\010\003\020\000\020\003*\014Get Trace v3\022\203\001\n\016batchGetTrace" +
+      "s\022\026.mlflow.BatchGetTraces\032\037.mlflow.Batch" +
+      "GetTraces.Response\"8\362\206\0314\n$\n\003GET\022\027/mlflow" +
+      "/traces/batchGet\032\004\010\003\020\000\020\003*\nGet Traces\022w\n\014" +
+      "searchTraces\022\024.mlflow.SearchTraces\032\035.mlf" +
+      "low.SearchTraces.Response\"2\362\206\031.\n\033\n\003GET\022\016" +
+      "/mlflow/traces\032\004\010\002\020\000\020\003*\rSearch Traces\022\210\001" +
+      "\n\016searchTracesV3\022\026.mlflow.SearchTracesV3" +
+      "\032\037.mlflow.SearchTracesV3.Response\"=\362\206\0319\n" +
+      "#\n\004POST\022\025/mlflow/traces/search\032\004\010\003\020\000\020\003*\020" +
+      "Search Traces V3\022i\n\014startTraceV3\022\024.mlflo" +
+      "w.StartTraceV3\032\035.mlflow.StartTraceV3.Res" +
+      "ponse\"$\362\206\031 \n\034\n\004POST\022\016/mlflow/traces\032\004\010\003\020" +
+      "\000\020\003\022\222\001\n\017linkTracesToRun\022\027.mlflow.LinkTra" +
+      "cesToRun\032 .mlflow.LinkTracesToRun.Respon" +
+      "se\"D\362\206\031@\n(\n\004POST\022\032/mlflow/traces/link-to" +
+      "-run\032\004\010\002\020\000\020\003*\022Link Traces to Run\022\237\001\n\022lin" +
+      "kPromptsToTrace\022\032.mlflow.LinkPromptsToTr" +
+      "ace\032#.mlflow.LinkPromptsToTrace.Response" +
+      "\"H\362\206\031D\n)\n\004POST\022\033/mlflow/traces/link-prom" +
+      "pts\032\004\010\002\020\000\020\003*\025Link Prompts to Trace\022\242\001\n\031s" +
+      "earchUnifiedTraceHandler\022\033.mlflow.Search" +
+      "UnifiedTraces\032$.mlflow.SearchUnifiedTrac" +
+      "es.Response\"B\362\206\031>\n#\n\003GET\022\026/mlflow/unifie" +
+      "d-traces\032\004\010\002\020\000\020\003*\025Search Unified Traces\022" +
+      "\257\001\n\025getOnlineTraceDetails\022\035.mlflow.GetOn" +
+      "lineTraceDetails\032&.mlflow.GetOnlineTrace" +
+      "Details.Response\"O\362\206\031K\n-\n\003GET\022 /mlflow/g" +
+      "et-online-trace-details\032\004\010\002\020\000\020\003*\030Get Onl" +
+      "ine Trace Details\022\206\001\n\014deleteTraces\022\024.mlf" +
+      "low.DeleteTraces\032\035.mlflow.DeleteTraces.R" +
+      "esponse\"A\362\206\031=\n*\n\004POST\022\034/mlflow/traces/de" +
+      "lete-traces\032\004\010\002\020\000\020\003*\rDelete Traces\022\217\001\n\016d" +
+      "eleteTracesV3\022\026.mlflow.DeleteTracesV3\032\037." +
+      "mlflow.DeleteTracesV3.Response\"D\362\206\031@\n*\n\004" +
+      "POST\022\034/mlflow/traces/delete-traces\032\004\010\003\020\000" +
+      "\020\003*\020Delete Traces V3\022\343\001\n\037calculateTraceF" +
+      "ilterCorrelation\022\'.mlflow.CalculateTrace" +
+      "FilterCorrelation\0320.mlflow.CalculateTrac" +
+      "eFilterCorrelation.Response\"e\362\206\031a\n9\n\004POS" +
+      "T\022+/mlflow/traces/calculate-filter-corre" +
+      "lation\032\004\010\003\020\000\020\003*\"Calculate Trace Filter C" +
+      "orrelation\022\224\001\n\021createLoggedModel\022\031.mlflo" +
+      "w.CreateLoggedModel\032\".mlflow.CreateLogge" +
+      "dModel.Response\"@\362\206\031<\n#\n\004POST\022\025/mlflow/l" +
+      "ogged-models\032\004\010\002\020\000\020\003*\023Create Logged Mode" +
+      "l\022\250\001\n\023finalizeLoggedModel\022\033.mlflow.Final" +
+      "izeLoggedModel\032$.mlflow.FinalizeLoggedMo" +
+      "del.Response\"N\362\206\031J\n/\n\005PATCH\022 /mlflow/log" +
+      "ged-models/{model_id}\032\004\010\002\020\000\020\003*\025Finalize " +
+      "Logged Model\022\222\001\n\016getLoggedModel\022\026.mlflow" +
+      ".GetLoggedModel\032\037.mlflow.GetLoggedModel." +
+      "Response\"G\362\206\031C\n-\n\003GET\022 /mlflow/logged-mo" +
+      "dels/{model_id}\032\004\010\002\020\000\020\003*\020Get Logged Mode" +
+      "l\022\243\001\n\021deleteLoggedModel\022\031.mlflow.DeleteL" +
+      "oggedModel\032\".mlflow.DeleteLoggedModel.Re" +
+      "sponse\"O\362\206\031K\n0\n\006DELETE\022 /mlflow/logged-m" +
+      "odels/{model_id}\032\004\010\002\020\000\020\003*\025Delete a Logge" +
+      "d Model\022\236\001\n\022searchLoggedModels\022\032.mlflow." +
+      "SearchLoggedModels\032#.mlflow.SearchLogged" +
+      "Models.Response\"G\362\206\031C\n*\n\004POST\022\034/mlflow/l" +
+      "ogged-models/search\032\004\010\002\020\000\020\003*\023Search Logg" +
+      "edModels\022\251\001\n\022setLoggedModelTags\022\032.mlflow" +
+      ".SetLoggedModelTags\032#.mlflow.SetLoggedMo" +
+      "delTags.Response\"R\362\206\031N\n4\n\005PATCH\022%/mlflow" +
+      "/logged-models/{model_id}/tags\032\004\010\002\020\000\020\003*\024" +
+      "Set Logged Model Tag\022\275\001\n\024deleteLoggedMod" +
+      "elTag\022\034.mlflow.DeleteLoggedModelTag\032%.ml" +
+      "flow.DeleteLoggedModelTag.Response\"`\362\206\031\\" +
+      "\n?\n\006DELETE\022//mlflow/logged-models/{model" +
+      "_id}/tags/{tag_key}\032\004\010\002\020\000\020\003*\027Delete Logg" +
+      "ed Model Tag\022\326\001\n\030listLoggedModelArtifact" +
+      "s\022 .mlflow.ListLoggedModelArtifacts\032).ml" +
+      "flow.ListLoggedModelArtifacts.Response\"m" +
+      "\362\206\031i\nC\n\003GET\0226/mlflow/logged-models/{mode" +
+      "l_id}/artifacts/directories\032\004\010\002\020\000\020\003* Lis" +
+      "t Artifacts for Logged Models\022\301\001\n\024LogLog" +
+      "gedModelParams\022#.mlflow.LogLoggedModelPa" +
+      "ramsRequest\032,.mlflow.LogLoggedModelParam" +
+      "sRequest.Response\"V\362\206\031R\n5\n\004POST\022\'/mlflow" +
+      "/logged-models/{model_id}/params\032\004\010\002\020\000\020\003" +
+      "*\027Log Logged Model Params\022\260\001\n\rGetAssessm" +
+      "ent\022\034.mlflow.GetAssessmentRequest\032%.mlfl" +
+      "ow.GetAssessmentRequest.Response\"Z\362\206\031V\nB" +
+      "\n\003GET\0225/mlflow/traces/{trace_id}/assessm" +
+      "ents/{assessment_id}\032\004\010\003\020\000\020\003*\016Get Assess" +
+      "ment\022\337\001\n\020createAssessment\022\030.mlflow.Creat" +
+      "eAssessment\032!.mlflow.CreateAssessment.Re" +
+      "sponse\"\215\001\362\206\031\210\001\n>\n\004POST\0220/mlflow/traces/{" +
+      "assessment.trace_id}/assessments\032\004\010\003\020\000\020\003" +
+      "\030\350\007\030\356\007\030\014\030\001*:Create an assessment of a tr" +
+      "ace or a span within the trace\022\320\001\n\020updat" +
+      "eAssessment\022\030.mlflow.UpdateAssessment\032!." +
+      "mlflow.UpdateAssessment.Response\"\177\362\206\031{\nD" +
+      "\n\005PATCH\0225/mlflow/traces/{trace_id}/asses" +
+      "sments/{assessment_id}\032\004\010\003\020\000\020\003\030\350\007\030\356\007\030\001*)" +
+      "Update an existing assessment on a trace" +
+      ".\022\261\001\n\020deleteAssessment\022\030.mlflow.DeleteAs" +
+      "sessment\032!.mlflow.DeleteAssessment.Respo" +
+      "nse\"`\362\206\031\\\nE\n\006DELETE\0225/mlflow/traces/{tra" +
+      "ce_id}/assessments/{assessment_id}\032\004\010\003\020\000" +
+      "\020\003*\021Delete Assessment\022\232\001\n\rcreateDataset\022" +
+      "\025.mlflow.CreateDataset\032\036.mlflow.CreateDa" +
+      "taset.Response\"R\362\206\031N\n%\n\004POST\022\027/mlflow/da" +
+      "tasets/create\032\004\010\003\020\000\020\003\030\350\007\030\356\007\030\014\030\001*\031Create " +
+      "Evaluation Dataset\022\221\001\n\ngetDataset\022\022.mlfl" +
+      "ow.GetDataset\032\033.mlflow.GetDataset.Respon" +
+      "se\"R\362\206\031N\n*\n\003GET\022\035/mlflow/datasets/{datas" +
+      "et_id}\032\004\010\003\020\000\020\003\030\350\007\030\272\027\030\001*\026Get Evaluation D" +
+      "ataset\022\240\001\n\rdeleteDataset\022\025.mlflow.Delete" +
+      "Dataset\032\036.mlflow.DeleteDataset.Response\"" +
+      "X\362\206\031T\n-\n\006DELETE\022\035/mlflow/datasets/{datas" +
+      "et_id}\032\004\010\003\020\000\020\003\030\350\007\030\272\027\030\001*\031Delete Evaluatio" +
+      "n Dataset\022\335\001\n\030searchEvaluationDatasets\022 " +
+      ".mlflow.SearchEvaluationDatasets\032).mlflo" +
+      "w.SearchEvaluationDatasets.Response\"t\362\206\031" +
+      "p\n%\n\004POST\022\027/mlflow/datasets/search\032\004\010\003\020\000" +
+      "\n$\n\003GET\022\027/mlflow/datasets/search\032\004\010\003\020\000\020\003" +
+      "\030\350\007\030\001*\032Search Evaluation Datasets\022\251\001\n\016se" +
+      "tDatasetTags\022\026.mlflow.SetDatasetTags\032\037.m",
+      "lflow.SetDatasetTags.Response\"^\362\206\031Z\n1\n\005P" +
+      "ATCH\022\"/mlflow/datasets/{dataset_id}/tags" +
+      "\032\004\010\003\020\000\020\003\030\350\007\030\272\027\030\001*\033Set Evaluation Dataset" +
+      " Tags\022\270\001\n\020deleteDatasetTag\022\030.mlflow.Dele" +
+      "teDatasetTag\032!.mlflow.DeleteDatasetTag.R" +
+      "esponse\"g\362\206\031c\n8\n\006DELETE\022(/mlflow/dataset" +
+      "s/{dataset_id}/tags/{key}\032\004\010\003\020\000\020\003\030\350\007\030\272\027\030" +
+      "\001*\035Delete Evaluation Dataset Tag\022\303\001\n\024ups" +
+      "ertDatasetRecords\022\034.mlflow.UpsertDataset" +
+      "Records\032%.mlflow.UpsertDatasetRecords.Re" +
+      "sponse\"f\362\206\031b\n3\n\004POST\022%/mlflow/datasets/{" +
+      "dataset_id}/records\032\004\010\003\020\000\020\003\030\350\007\030\272\027\030\001*!Ups" +
+      "ert Evaluation Dataset Records\022\326\001\n\027getDa" +
+      "tasetExperimentIds\022\037.mlflow.GetDatasetEx" +
+      "perimentIds\032(.mlflow.GetDatasetExperimen" +
+      "tIds.Response\"p\362\206\031l\n9\n\003GET\022,/mlflow/data" +
+      "sets/{dataset_id}/experiment-ids\032\004\010\003\020\000\020\003" +
+      "\030\350\007\030\272\027\030\001*%Get Evaluation Dataset Experim" +
+      "ent IDs\022\212\001\n\016registerScorer\022\026.mlflow.Regi" +
+      "sterScorer\032\037.mlflow.RegisterScorer.Respo" +
+      "nse\"?\362\206\031;\n&\n\004POST\022\030/mlflow/scorers/regis" +
+      "ter\032\004\010\003\020\000\020\001*\017Register Scorer\022y\n\013listScor" +
+      "ers\022\023.mlflow.ListScorers\032\034.mlflow.ListSc" +
+      "orers.Response\"7\362\206\0313\n!\n\003GET\022\024/mlflow/sco" +
+      "rers/list\032\004\010\003\020\000\020\001*\014List Scorers\022\232\001\n\022list" +
+      "ScorerVersions\022\032.mlflow.ListScorerVersio" +
+      "ns\032#.mlflow.ListScorerVersions.Response\"" +
+      "C\362\206\031?\n%\n\003GET\022\030/mlflow/scorers/versions\032\004" +
+      "\010\003\020\000\020\001*\024List Scorer Versions\022p\n\tgetScore" +
+      "r\022\021.mlflow.GetScorer\032\032.mlflow.GetScorer." +
+      "Response\"4\362\206\0310\n \n\003GET\022\023/mlflow/scorers/g" +
+      "et\032\004\010\003\020\000\020\001*\nGet Scorer\022\202\001\n\014deleteScorer\022" +
+      "\024.mlflow.DeleteScorer\032\035.mlflow.DeleteSco" +
+      "rer.Response\"=\362\206\0319\n&\n\006DELETE\022\026/mlflow/sc" +
+      "orers/delete\032\004\010\003\020\000\020\001*\rDelete Scorer\022\266\001\n\021" +
+      "getDatasetRecords\022\031.mlflow.GetDatasetRec" +
+      "ords\032\".mlflow.GetDatasetRecords.Response" +
+      "\"b\362\206\031^\n2\n\003GET\022%/mlflow/datasets/{dataset" +
+      "_id}/records\032\004\010\003\020\000\020\003\030\350\007\030\272\027\030\001*\036Get Evalua" +
+      "tion Dataset Records\022\315\001\n\027addDatasetToExp" +
+      "eriments\022\037.mlflow.AddDatasetToExperiment" +
+      "s\032(.mlflow.AddDatasetToExperiments.Respo" +
+      "nse\"g\362\206\031c\n;\n\004POST\022-/mlflow/datasets/{dat" +
+      "aset_id}/add-experiments\032\004\010\003\020\000\020\003\030\350\007\030\272\027\030\001" +
+      "*\032Add Dataset to Experiments\022\344\001\n\034removeD" +
+      "atasetFromExperiments\022$.mlflow.RemoveDat" +
+      "asetFromExperiments\032-.mlflow.RemoveDatas" +
+      "etFromExperiments.Response\"o\362\206\031k\n>\n\004POST" +
+      "\0220/mlflow/datasets/{dataset_id}/remove-e" +
+      "xperiments\032\004\010\003\020\000\020\003\030\350\007\030\272\027\030\001*\037Remove Datas" +
+      "et from Experiments\022\216\001\n\014createSecret\022\033.m" +
+      "lflow.CreateGatewaySecret\032$.mlflow.Creat" +
+      "eGatewaySecret.Response\";\362\206\0317\n$\n\004POST\022\026/" +
+      "mlflow/secrets/create\032\004\010\003\020\000\020\001*\rCreate Se" +
+      "cret\022\217\001\n\rgetSecretInfo\022\034.mlflow.GetGatew" +
+      "aySecretInfo\032%.mlflow.GetGatewaySecretIn" +
+      "fo.Response\"9\362\206\0315\n \n\003GET\022\023/mlflow/secret" +
+      "s/get\032\004\010\003\020\000\020\001*\017Get Secret Info\022\216\001\n\014updat" +
+      "eSecret\022\033.mlflow.UpdateGatewaySecret\032$.m" +
+      "lflow.UpdateGatewaySecret.Response\";\362\206\0317" +
+      "\n$\n\004POST\022\026/mlflow/secrets/update\032\004\010\003\020\000\020\001" +
+      "*\rUpdate Secret\022\220\001\n\014deleteSecret\022\033.mlflo" +
+      "w.DeleteGatewaySecret\032$.mlflow.DeleteGat" +
+      "ewaySecret.Response\"=\362\206\0319\n&\n\006DELETE\022\026/ml" +
+      "flow/secrets/delete\032\004\010\003\020\000\020\001*\rDelete Secr" +
+      "et\022\223\001\n\017listSecretInfos\022\036.mlflow.ListGate" +
+      "waySecretInfos\032\'.mlflow.ListGatewaySecre" +
+      "tInfos.Response\"7\362\206\0313\n!\n\003GET\022\024/mlflow/se" +
+      "crets/list\032\004\010\003\020\000\020\001*\014List Secrets\022\230\001\n\016cre" +
+      "ateEndpoint\022\035.mlflow.CreateGatewayEndpoi" +
+      "nt\032&.mlflow.CreateGatewayEndpoint.Respon" +
+      "se\"?\362\206\031;\n&\n\004POST\022\030/mlflow/endpoints/crea" +
+      "te\032\004\010\003\020\000\020\001*\017Create Endpoint\022\210\001\n\013getEndpo" +
+      "int\022\032.mlflow.GetGatewayEndpoint\032#.mlflow" +
+      ".GetGatewayEndpoint.Response\"8\362\206\0314\n\"\n\003GE" +
+      "T\022\025/mlflow/endpoints/get\032\004\010\003\020\000\020\001*\014Get En" +
+      "dpoint\022\230\001\n\016updateEndpoint\022\035.mlflow.Updat" +
+      "eGatewayEndpoint\032&.mlflow.UpdateGatewayE" +
+      "ndpoint.Response\"?\362\206\031;\n&\n\004POST\022\030/mlflow/" +
+      "endpoints/update\032\004\010\003\020\000\020\001*\017Update Endpoin" +
+      "t\022\232\001\n\016deleteEndpoint\022\035.mlflow.DeleteGate" +
+      "wayEndpoint\032&.mlflow.DeleteGatewayEndpoi" +
+      "nt.Response\"A\362\206\031=\n(\n\006DELETE\022\030/mlflow/end" +
+      "points/delete\032\004\010\003\020\000\020\001*\017Delete Endpoint\022\221" +
+      "\001\n\rlistEndpoints\022\034.mlflow.ListGatewayEnd" +
+      "points\032%.mlflow.ListGatewayEndpoints.Res" +
+      "ponse\";\362\206\0317\n#\n\003GET\022\026/mlflow/endpoints/li" +
+      "st\032\004\010\003\020\000\020\001*\016List Endpoints\022\275\001\n\025createMod" +
+      "elDefinition\022$.mlflow.CreateGatewayModel" +
+      "Definition\032-.mlflow.CreateGatewayModelDe" +
+      "finition.Response\"O\362\206\031K\n.\n\004POST\022 /mlflow" +
+      "/model-definitions/create\032\004\010\003\020\000\020\001*\027Creat" +
+      "e Model Definition\022\255\001\n\022getModelDefinitio" +
+      "n\022!.mlflow.GetGatewayModelDefinition\032*.m" +
+      "lflow.GetGatewayModelDefinition.Response" +
+      "\"H\362\206\031D\n*\n\003GET\022\035/mlflow/model-definitions" +
+      "/get\032\004\010\003\020\000\020\001*\024Get Model Definition\022\266\001\n\024l" +
+      "istModelDefinitions\022#.mlflow.ListGateway" +
+      "ModelDefinitions\032,.mlflow.ListGatewayMod" +
+      "elDefinitions.Response\"K\362\206\031G\n+\n\003GET\022\036/ml" +
+      "flow/model-definitions/list\032\004\010\003\020\000\020\001*\026Lis" +
+      "t Model Definitions\022\275\001\n\025updateModelDefin" +
+      "ition\022$.mlflow.UpdateGatewayModelDefinit" +
+      "ion\032-.mlflow.UpdateGatewayModelDefinitio" +
+      "n.Response\"O\362\206\031K\n.\n\004POST\022 /mlflow/model-" +
+      "definitions/update\032\004\010\003\020\000\020\001*\027Update Model" +
+      " Definition\022\277\001\n\025deleteModelDefinition\022$." +
+      "mlflow.DeleteGatewayModelDefinition\032-.ml" +
+      "flow.DeleteGatewayModelDefinition.Respon" +
+      "se\"Q\362\206\031M\n0\n\006DELETE\022 /mlflow/model-defini" +
+      "tions/delete\032\004\010\003\020\000\020\001*\027Delete Model Defin" +
+      "ition\022\275\001\n\025attachModelToEndpoint\022$.mlflow" +
+      ".AttachModelToGatewayEndpoint\032-.mlflow.A" +
+      "ttachModelToGatewayEndpoint.Response\"O\362\206" +
+      "\031K\n-\n\004POST\022\037/mlflow/endpoints/models/att" +
+      "ach\032\004\010\003\020\000\020\001*\030Attach Model to Endpoint\022\305\001" +
+      "\n\027detachModelFromEndpoint\022&.mlflow.Detac" +
+      "hModelFromGatewayEndpoint\032/.mlflow.Detac" +
+      "hModelFromGatewayEndpoint.Response\"Q\362\206\031M" +
+      "\n-\n\004POST\022\037/mlflow/endpoints/models/detac" +
+      "h\032\004\010\003\020\000\020\001*\032Detach Model from Endpoint\022\276\001" +
+      "\n\025createEndpointBinding\022$.mlflow.CreateG" +
+      "atewayEndpointBinding\032-.mlflow.CreateGat" +
+      "ewayEndpointBinding.Response\"P\362\206\031L\n/\n\004PO" +
+      "ST\022!/mlflow/endpoints/bindings/create\032\004\010" +
+      "\003\020\000\020\001*\027Create Endpoint Binding\022\300\001\n\025delet" +
+      "eEndpointBinding\022$.mlflow.DeleteGatewayE" +
+      "ndpointBinding\032-.mlflow.DeleteGatewayEnd" +
+      "pointBinding.Response\"R\362\206\031N\n1\n\006DELETE\022!/" +
+      "mlflow/endpoints/bindings/delete\032\004\010\003\020\000\020\001" +
+      "*\027Delete Endpoint Binding\022\267\001\n\024listEndpoi" +
+      "ntBindings\022#.mlflow.ListGatewayEndpointB" +
+      "indings\032,.mlflow.ListGatewayEndpointBind" +
+      "ings.Response\"L\362\206\031H\n,\n\003GET\022\037/mlflow/endp" +
+      "oints/bindings/list\032\004\010\003\020\000\020\001*\026List Endpoi" +
+      "nt Bindings\022\220\001\n\020getSecretsConfig\022\030.mlflo" +
+      "w.GetSecretsConfig\032!.mlflow.GetSecretsCo" +
+      "nfig.Response\"?\362\206\031;\n#\n\003GET\022\026/mlflow/secr" +
+      "ets/config\032\004\010\003\020\000\020\001*\022Get Secrets ConfigB\036" +
+      "\n\024org.mlflow.api.proto\220\001\001\342?\002\020\001"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -238540,7 +238104,7 @@ public final class Service {
     internal_static_mlflow_CreateGatewaySecret_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_mlflow_CreateGatewaySecret_descriptor,
-        new java.lang.String[] { "SecretName", "SecretValue", "Provider", "CredentialName", "AuthConfigJson", "CreatedBy", });
+        new java.lang.String[] { "SecretName", "SecretValue", "Provider", "AuthConfigJson", "CreatedBy", });
     internal_static_mlflow_CreateGatewaySecret_Response_descriptor =
       internal_static_mlflow_CreateGatewaySecret_descriptor.getNestedTypes().get(0);
     internal_static_mlflow_CreateGatewaySecret_Response_fieldAccessorTable = new
@@ -238564,7 +238128,7 @@ public final class Service {
     internal_static_mlflow_UpdateGatewaySecret_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_mlflow_UpdateGatewaySecret_descriptor,
-        new java.lang.String[] { "SecretId", "SecretValue", "CredentialName", "AuthConfigJson", "UpdatedBy", });
+        new java.lang.String[] { "SecretId", "SecretValue", "AuthConfigJson", "UpdatedBy", });
     internal_static_mlflow_UpdateGatewaySecret_Response_descriptor =
       internal_static_mlflow_UpdateGatewaySecret_descriptor.getNestedTypes().get(0);
     internal_static_mlflow_UpdateGatewaySecret_Response_fieldAccessorTable = new
