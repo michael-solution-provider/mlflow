@@ -240774,7 +240774,7 @@ public final class Service {
       "ModelStatus\022#\n\037LOGGED_MODEL_STATUS_UNSPE" +
       "CIFIED\020\000\022\030\n\024LOGGED_MODEL_PENDING\020\001\022\026\n\022LO" +
       "GGED_MODEL_READY\020\002\022\036\n\032LOGGED_MODEL_UPLOA" +
-      "D_FAILED\020\0032\316y\n\rMlflowService\022\246\001\n\023getExpe" +
+      "D_FAILED\020\0032\352{\n\rMlflowService\022\246\001\n\023getExpe" +
       "rimentByName\022\033.mlflow.GetExperimentByNam" +
       "e\032$.mlflow.GetExperimentByName.Response\"" +
       "L\362\206\031H\n,\n\003GET\022\037/mlflow/experiments/get-by" +
@@ -241067,104 +241067,111 @@ public final class Service {
       "FromExperiments.Response\"o\362\206\031k\n>\n\004POST\0220" +
       "/mlflow/datasets/{dataset_id}/remove-exp" +
       "eriments\032\004\010\003\020\000\020\003\030\350\007\030\272\027\030\001*\037Remove Dataset" +
-      " from Experiments\022\216\001\n\014createSecret\022\033.mlf" +
-      "low.CreateGatewaySecret\032$.mlflow.CreateG" +
-      "atewaySecret.Response\";\362\206\0317\n$\n\004POST\022\026/ml" +
-      "flow/secrets/create\032\004\010\003\020\000\020\001*\rCreate Secr" +
-      "et\022\217\001\n\rgetSecretInfo\022\034.mlflow.GetGateway" +
-      "SecretInfo\032%.mlflow.GetGatewaySecretInfo" +
-      ".Response\"9\362\206\0315\n \n\003GET\022\023/mlflow/secrets/" +
-      "get\032\004\010\003\020\000\020\001*\017Get Secret Info\022\216\001\n\014updateS" +
-      "ecret\022\033.mlflow.UpdateGatewaySecret\032$.mlf" +
-      "low.UpdateGatewaySecret.Response\";\362\206\0317\n$" +
-      "\n\004POST\022\026/mlflow/secrets/update\032\004\010\003\020\000\020\001*\r" +
-      "Update Secret\022\220\001\n\014deleteSecret\022\033.mlflow." +
-      "DeleteGatewaySecret\032$.mlflow.DeleteGatew" +
-      "aySecret.Response\"=\362\206\0319\n&\n\006DELETE\022\026/mlfl" +
-      "ow/secrets/delete\032\004\010\003\020\000\020\001*\rDelete Secret" +
-      "\022\223\001\n\017listSecretInfos\022\036.mlflow.ListGatewa" +
-      "ySecretInfos\032\'.mlflow.ListGatewaySecretI" +
-      "nfos.Response\"7\362\206\0313\n!\n\003GET\022\024/mlflow/secr" +
-      "ets/list\032\004\010\003\020\000\020\001*\014List Secrets\022\230\001\n\016creat" +
-      "eEndpoint\022\035.mlflow.CreateGatewayEndpoint" +
-      "\032&.mlflow.CreateGatewayEndpoint.Response" +
-      "\"?\362\206\031;\n&\n\004POST\022\030/mlflow/endpoints/create" +
-      "\032\004\010\003\020\000\020\001*\017Create Endpoint\022\210\001\n\013getEndpoin" +
-      "t\022\032.mlflow.GetGatewayEndpoint\032#.mlflow.G" +
-      "etGatewayEndpoint.Response\"8\362\206\0314\n\"\n\003GET\022" +
-      "\025/mlflow/endpoints/get\032\004\010\003\020\000\020\001*\014Get Endp" +
-      "oint\022\230\001\n\016updateEndpoint\022\035.mlflow.UpdateG" +
-      "atewayEndpoint\032&.mlflow.UpdateGatewayEnd" +
-      "point.Response\"?\362\206\031;\n&\n\004POST\022\030/mlflow/en" +
-      "dpoints/update\032\004\010\003\020\000\020\001*\017Update Endpoint\022" +
-      "\232\001\n\016deleteEndpoint\022\035.mlflow.DeleteGatewa" +
-      "yEndpoint\032&.mlflow.DeleteGatewayEndpoint" +
-      ".Response\"A\362\206\031=\n(\n\006DELETE\022\030/mlflow/endpo" +
-      "ints/delete\032\004\010\003\020\000\020\001*\017Delete Endpoint\022\221\001\n" +
-      "\rlistEndpoints\022\034.mlflow.ListGatewayEndpo" +
-      "ints\032%.mlflow.ListGatewayEndpoints.Respo" +
-      "nse\";\362\206\0317\n#\n\003GET\022\026/mlflow/endpoints/list" +
-      "\032\004\010\003\020\000\020\001*\016List Endpoints\022\275\001\n\025createModel" +
-      "Definition\022$.mlflow.CreateGatewayModelDe" +
-      "finition\032-.mlflow.CreateGatewayModelDefi" +
-      "nition.Response\"O\362\206\031K\n.\n\004POST\022 /mlflow/m" +
-      "odel-definitions/create\032\004\010\003\020\000\020\001*\027Create " +
-      "Model Definition\022\255\001\n\022getModelDefinition\022" +
-      "!.mlflow.GetGatewayModelDefinition\032*.mlf" +
-      "low.GetGatewayModelDefinition.Response\"H" +
-      "\362\206\031D\n*\n\003GET\022\035/mlflow/model-definitions/g" +
-      "et\032\004\010\003\020\000\020\001*\024Get Model Definition\022\266\001\n\024lis" +
-      "tModelDefinitions\022#.mlflow.ListGatewayMo" +
-      "delDefinitions\032,.mlflow.ListGatewayModel" +
-      "Definitions.Response\"K\362\206\031G\n+\n\003GET\022\036/mlfl" +
-      "ow/model-definitions/list\032\004\010\003\020\000\020\001*\026List " +
-      "Model Definitions\022\275\001\n\025updateModelDefinit" +
-      "ion\022$.mlflow.UpdateGatewayModelDefinitio" +
-      "n\032-.mlflow.UpdateGatewayModelDefinition." +
-      "Response\"O\362\206\031K\n.\n\004POST\022 /mlflow/model-de" +
-      "finitions/update\032\004\010\003\020\000\020\001*\027Update Model D" +
-      "efinition\022\277\001\n\025deleteModelDefinition\022$.ml" +
-      "flow.DeleteGatewayModelDefinition\032-.mlfl" +
-      "ow.DeleteGatewayModelDefinition.Response" +
-      "\"Q\362\206\031M\n0\n\006DELETE\022 /mlflow/model-definiti" +
-      "ons/delete\032\004\010\003\020\000\020\001*\027Delete Model Definit" +
-      "ion\022\275\001\n\025attachModelToEndpoint\022$.mlflow.A" +
-      "ttachModelToGatewayEndpoint\032-.mlflow.Att" +
-      "achModelToGatewayEndpoint.Response\"O\362\206\031K" +
-      "\n-\n\004POST\022\037/mlflow/endpoints/models/attac" +
-      "h\032\004\010\003\020\000\020\001*\030Attach Model to Endpoint\022\305\001\n\027" +
-      "detachModelFromEndpoint\022&.mlflow.DetachM" +
-      "odelFromGatewayEndpoint\032/.mlflow.DetachM" +
-      "odelFromGatewayEndpoint.Response\"Q\362\206\031M\n-" +
-      "\n\004POST\022\037/mlflow/endpoints/models/detach\032" +
-      "\004\010\003\020\000\020\001*\032Detach Model from Endpoint\022\276\001\n\025" +
-      "createEndpointBinding\022$.mlflow.CreateGat" +
-      "ewayEndpointBinding\032-.mlflow.CreateGatew" +
-      "ayEndpointBinding.Response\"P\362\206\031L\n/\n\004POST" +
-      "\022!/mlflow/endpoints/bindings/create\032\004\010\003\020" +
-      "\000\020\001*\027Create Endpoint Binding\022\300\001\n\025deleteE" +
-      "ndpointBinding\022$.mlflow.DeleteGatewayEnd" +
-      "pointBinding\032-.mlflow.DeleteGatewayEndpo" +
-      "intBinding.Response\"R\362\206\031N\n1\n\006DELETE\022!/ml" +
-      "flow/endpoints/bindings/delete\032\004\010\003\020\000\020\001*\027" +
-      "Delete Endpoint Binding\022\267\001\n\024listEndpoint" +
-      "Bindings\022#.mlflow.ListGatewayEndpointBin" +
-      "dings\032,.mlflow.ListGatewayEndpointBindin" +
-      "gs.Response\"L\362\206\031H\n,\n\003GET\022\037/mlflow/endpoi" +
-      "nts/bindings/list\032\004\010\003\020\000\020\001*\026List Endpoint" +
-      " Bindings\022\214\001\n\016setEndpointTag\022\026.mlflow.Se" +
-      "tEndpointTag\032\037.mlflow.SetEndpointTag.Res" +
-      "ponse\"A\362\206\031=\n\'\n\004POST\022\031/mlflow/endpoints/s" +
-      "et-tag\032\004\010\003\020\000\020\001*\020Set Endpoint Tag\022\235\001\n\021del" +
-      "eteEndpointTag\022\031.mlflow.DeleteEndpointTa" +
-      "g\032\".mlflow.DeleteEndpointTag.Response\"I\362" +
-      "\206\031E\n,\n\006DELETE\022\034/mlflow/endpoints/delete-" +
-      "tag\032\004\010\003\020\000\020\001*\023Delete Endpoint Tag\022\220\001\n\020get" +
-      "SecretsConfig\022\030.mlflow.GetSecretsConfig\032" +
-      "!.mlflow.GetSecretsConfig.Response\"?\362\206\031;" +
-      "\n#\n\003GET\022\026/mlflow/secrets/config\032\004\010\003\020\000\020\001*" +
-      "\022Get Secrets ConfigB\036\n\024org.mlflow.api.pr" +
-      "oto\220\001\001\342?\002\020\001"
+      " from Experiments\022\245\001\n\023createGatewaySecre" +
+      "t\022\033.mlflow.CreateGatewaySecret\032$.mlflow." +
+      "CreateGatewaySecret.Response\"K\362\206\031G\n,\n\004PO" +
+      "ST\022\036/mlflow/gateway/secrets/create\032\004\010\003\020\000" +
+      "\020\001*\025Create Gateway Secret\022\246\001\n\024getGateway" +
+      "SecretInfo\022\034.mlflow.GetGatewaySecretInfo" +
+      "\032%.mlflow.GetGatewaySecretInfo.Response\"" +
+      "I\362\206\031E\n(\n\003GET\022\033/mlflow/gateway/secrets/ge" +
+      "t\032\004\010\003\020\000\020\001*\027Get Gateway Secret Info\022\245\001\n\023u" +
+      "pdateGatewaySecret\022\033.mlflow.UpdateGatewa" +
+      "ySecret\032$.mlflow.UpdateGatewaySecret.Res" +
+      "ponse\"K\362\206\031G\n,\n\004POST\022\036/mlflow/gateway/sec" +
+      "rets/update\032\004\010\003\020\000\020\001*\025Update Gateway Secr" +
+      "et\022\247\001\n\023deleteGatewaySecret\022\033.mlflow.Dele" +
+      "teGatewaySecret\032$.mlflow.DeleteGatewaySe" +
+      "cret.Response\"M\362\206\031I\n.\n\006DELETE\022\036/mlflow/g" +
+      "ateway/secrets/delete\032\004\010\003\020\000\020\001*\025Delete Ga" +
+      "teway Secret\022\252\001\n\026listGatewaySecretInfos\022" +
+      "\036.mlflow.ListGatewaySecretInfos\032\'.mlflow" +
+      ".ListGatewaySecretInfos.Response\"G\362\206\031C\n)" +
+      "\n\003GET\022\034/mlflow/gateway/secrets/list\032\004\010\003\020" +
+      "\000\020\001*\024List Gateway Secrets\022\257\001\n\025createGate" +
+      "wayEndpoint\022\035.mlflow.CreateGatewayEndpoi" +
+      "nt\032&.mlflow.CreateGatewayEndpoint.Respon" +
+      "se\"O\362\206\031K\n.\n\004POST\022 /mlflow/gateway/endpoi" +
+      "nts/create\032\004\010\003\020\000\020\001*\027Create Gateway Endpo" +
+      "int\022\237\001\n\022getGatewayEndpoint\022\032.mlflow.GetG" +
+      "atewayEndpoint\032#.mlflow.GetGatewayEndpoi" +
+      "nt.Response\"H\362\206\031D\n*\n\003GET\022\035/mlflow/gatewa" +
+      "y/endpoints/get\032\004\010\003\020\000\020\001*\024Get Gateway End" +
+      "point\022\257\001\n\025updateGatewayEndpoint\022\035.mlflow" +
+      ".UpdateGatewayEndpoint\032&.mlflow.UpdateGa" +
+      "tewayEndpoint.Response\"O\362\206\031K\n.\n\004POST\022 /m" +
+      "lflow/gateway/endpoints/update\032\004\010\003\020\000\020\001*\027" +
+      "Update Gateway Endpoint\022\261\001\n\025deleteGatewa" +
+      "yEndpoint\022\035.mlflow.DeleteGatewayEndpoint" +
+      "\032&.mlflow.DeleteGatewayEndpoint.Response" +
+      "\"Q\362\206\031M\n0\n\006DELETE\022 /mlflow/gateway/endpoi" +
+      "nts/delete\032\004\010\003\020\000\020\001*\027Delete Gateway Endpo" +
+      "int\022\250\001\n\024listGatewayEndpoints\022\034.mlflow.Li" +
+      "stGatewayEndpoints\032%.mlflow.ListGatewayE" +
+      "ndpoints.Response\"K\362\206\031G\n+\n\003GET\022\036/mlflow/" +
+      "gateway/endpoints/list\032\004\010\003\020\000\020\001*\026List Gat" +
+      "eway Endpoints\022\324\001\n\034createGatewayModelDef" +
+      "inition\022$.mlflow.CreateGatewayModelDefin" +
+      "ition\032-.mlflow.CreateGatewayModelDefinit" +
+      "ion.Response\"_\362\206\031[\n6\n\004POST\022(/mlflow/gate" +
+      "way/model-definitions/create\032\004\010\003\020\000\020\001*\037Cr" +
+      "eate Gateway Model Definition\022\304\001\n\031getGat" +
+      "ewayModelDefinition\022!.mlflow.GetGatewayM" +
+      "odelDefinition\032*.mlflow.GetGatewayModelD" +
+      "efinition.Response\"X\362\206\031T\n2\n\003GET\022%/mlflow" +
+      "/gateway/model-definitions/get\032\004\010\003\020\000\020\001*\034" +
+      "Get Gateway Model Definition\022\315\001\n\033listGat" +
+      "ewayModelDefinitions\022#.mlflow.ListGatewa" +
+      "yModelDefinitions\032,.mlflow.ListGatewayMo" +
+      "delDefinitions.Response\"[\362\206\031W\n3\n\003GET\022&/m" +
+      "lflow/gateway/model-definitions/list\032\004\010\003" +
+      "\020\000\020\001*\036List Gateway Model Definitions\022\324\001\n" +
+      "\034updateGatewayModelDefinition\022$.mlflow.U" +
+      "pdateGatewayModelDefinition\032-.mlflow.Upd" +
+      "ateGatewayModelDefinition.Response\"_\362\206\031[" +
+      "\n6\n\004POST\022(/mlflow/gateway/model-definiti" +
+      "ons/update\032\004\010\003\020\000\020\001*\037Update Gateway Model" +
+      " Definition\022\326\001\n\034deleteGatewayModelDefini" +
+      "tion\022$.mlflow.DeleteGatewayModelDefiniti" +
+      "on\032-.mlflow.DeleteGatewayModelDefinition" +
+      ".Response\"a\362\206\031]\n8\n\006DELETE\022(/mlflow/gatew" +
+      "ay/model-definitions/delete\032\004\010\003\020\000\020\001*\037Del" +
+      "ete Gateway Model Definition\022\305\001\n\025attachM" +
+      "odelToEndpoint\022$.mlflow.AttachModelToGat" +
+      "ewayEndpoint\032-.mlflow.AttachModelToGatew" +
+      "ayEndpoint.Response\"W\362\206\031S\n5\n\004POST\022\'/mlfl" +
+      "ow/gateway/endpoints/models/attach\032\004\010\003\020\000" +
+      "\020\001*\030Attach Model to Endpoint\022\315\001\n\027detachM" +
+      "odelFromEndpoint\022&.mlflow.DetachModelFro" +
+      "mGatewayEndpoint\032/.mlflow.DetachModelFro" +
+      "mGatewayEndpoint.Response\"Y\362\206\031U\n5\n\004POST\022" +
+      "\'/mlflow/gateway/endpoints/models/detach" +
+      "\032\004\010\003\020\000\020\001*\032Detach Model from Endpoint\022\306\001\n" +
+      "\025createEndpointBinding\022$.mlflow.CreateGa" +
+      "tewayEndpointBinding\032-.mlflow.CreateGate" +
+      "wayEndpointBinding.Response\"X\362\206\031T\n7\n\004POS" +
+      "T\022)/mlflow/gateway/endpoints/bindings/cr" +
+      "eate\032\004\010\003\020\000\020\001*\027Create Endpoint Binding\022\310\001" +
+      "\n\025deleteEndpointBinding\022$.mlflow.DeleteG" +
+      "atewayEndpointBinding\032-.mlflow.DeleteGat" +
+      "ewayEndpointBinding.Response\"Z\362\206\031V\n9\n\006DE" +
+      "LETE\022)/mlflow/gateway/endpoints/bindings" +
+      "/delete\032\004\010\003\020\000\020\001*\027Delete Endpoint Binding" +
+      "\022\277\001\n\024listEndpointBindings\022#.mlflow.ListG" +
+      "atewayEndpointBindings\032,.mlflow.ListGate" +
+      "wayEndpointBindings.Response\"T\362\206\031P\n4\n\003GE" +
+      "T\022\'/mlflow/gateway/endpoints/bindings/li" +
+      "st\032\004\010\003\020\000\020\001*\026List Endpoint Bindings\022\243\001\n\025s" +
+      "etGatewayEndpointTag\022\026.mlflow.SetEndpoin" +
+      "tTag\032\037.mlflow.SetEndpointTag.Response\"Q\362" +
+      "\206\031M\n/\n\004POST\022!/mlflow/gateway/endpoints/s" +
+      "et-tag\032\004\010\003\020\000\020\001*\030Gateway Set Endpoint Tag" +
+      "\022\264\001\n\030deleteGatewayEndpointTag\022\031.mlflow.D" +
+      "eleteEndpointTag\032\".mlflow.DeleteEndpoint" +
+      "Tag.Response\"Y\362\206\031U\n4\n\006DELETE\022$/mlflow/ga" +
+      "teway/endpoints/delete-tag\032\004\010\003\020\000\020\001*\033Gate" +
+      "way Delete Endpoint TagB\036\n\024org.mlflow.ap" +
+      "i.proto\220\001\001\342?\002\020\001"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
