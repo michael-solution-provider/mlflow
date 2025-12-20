@@ -195683,7 +195683,7 @@ public final class Service {
      * <pre>
      * Masked version of the secret values for display as key-value pairs.
      * For simple API keys: {"api_key": "sk-...xyz123"}
-     * For compound credentials: {"aws_access_key_id": "AKI...1234", "aws_secret_access_key": "***"}
+     * For compound credentials: ``{"aws_access_key_id": "AKI...1234", "aws_secret_access_key": "***"}``
      * </pre>
      *
      * <code>map&lt;string, string&gt; masked_values = 3;</code>
@@ -195693,7 +195693,7 @@ public final class Service {
      * <pre>
      * Masked version of the secret values for display as key-value pairs.
      * For simple API keys: {"api_key": "sk-...xyz123"}
-     * For compound credentials: {"aws_access_key_id": "AKI...1234", "aws_secret_access_key": "***"}
+     * For compound credentials: ``{"aws_access_key_id": "AKI...1234", "aws_secret_access_key": "***"}``
      * </pre>
      *
      * <code>map&lt;string, string&gt; masked_values = 3;</code>
@@ -195710,7 +195710,7 @@ public final class Service {
      * <pre>
      * Masked version of the secret values for display as key-value pairs.
      * For simple API keys: {"api_key": "sk-...xyz123"}
-     * For compound credentials: {"aws_access_key_id": "AKI...1234", "aws_secret_access_key": "***"}
+     * For compound credentials: ``{"aws_access_key_id": "AKI...1234", "aws_secret_access_key": "***"}``
      * </pre>
      *
      * <code>map&lt;string, string&gt; masked_values = 3;</code>
@@ -195721,7 +195721,7 @@ public final class Service {
      * <pre>
      * Masked version of the secret values for display as key-value pairs.
      * For simple API keys: {"api_key": "sk-...xyz123"}
-     * For compound credentials: {"aws_access_key_id": "AKI...1234", "aws_secret_access_key": "***"}
+     * For compound credentials: ``{"aws_access_key_id": "AKI...1234", "aws_secret_access_key": "***"}``
      * </pre>
      *
      * <code>map&lt;string, string&gt; masked_values = 3;</code>
@@ -195734,7 +195734,7 @@ public final class Service {
      * <pre>
      * Masked version of the secret values for display as key-value pairs.
      * For simple API keys: {"api_key": "sk-...xyz123"}
-     * For compound credentials: {"aws_access_key_id": "AKI...1234", "aws_secret_access_key": "***"}
+     * For compound credentials: ``{"aws_access_key_id": "AKI...1234", "aws_secret_access_key": "***"}``
      * </pre>
      *
      * <code>map&lt;string, string&gt; masked_values = 3;</code>
@@ -196207,7 +196207,7 @@ public final class Service {
      * <pre>
      * Masked version of the secret values for display as key-value pairs.
      * For simple API keys: {"api_key": "sk-...xyz123"}
-     * For compound credentials: {"aws_access_key_id": "AKI...1234", "aws_secret_access_key": "***"}
+     * For compound credentials: ``{"aws_access_key_id": "AKI...1234", "aws_secret_access_key": "***"}``
      * </pre>
      *
      * <code>map&lt;string, string&gt; masked_values = 3;</code>
@@ -196231,7 +196231,7 @@ public final class Service {
      * <pre>
      * Masked version of the secret values for display as key-value pairs.
      * For simple API keys: {"api_key": "sk-...xyz123"}
-     * For compound credentials: {"aws_access_key_id": "AKI...1234", "aws_secret_access_key": "***"}
+     * For compound credentials: ``{"aws_access_key_id": "AKI...1234", "aws_secret_access_key": "***"}``
      * </pre>
      *
      * <code>map&lt;string, string&gt; masked_values = 3;</code>
@@ -196245,7 +196245,7 @@ public final class Service {
      * <pre>
      * Masked version of the secret values for display as key-value pairs.
      * For simple API keys: {"api_key": "sk-...xyz123"}
-     * For compound credentials: {"aws_access_key_id": "AKI...1234", "aws_secret_access_key": "***"}
+     * For compound credentials: ``{"aws_access_key_id": "AKI...1234", "aws_secret_access_key": "***"}``
      * </pre>
      *
      * <code>map&lt;string, string&gt; masked_values = 3;</code>
@@ -196264,7 +196264,7 @@ public final class Service {
      * <pre>
      * Masked version of the secret values for display as key-value pairs.
      * For simple API keys: {"api_key": "sk-...xyz123"}
-     * For compound credentials: {"aws_access_key_id": "AKI...1234", "aws_secret_access_key": "***"}
+     * For compound credentials: ``{"aws_access_key_id": "AKI...1234", "aws_secret_access_key": "***"}``
      * </pre>
      *
      * <code>map&lt;string, string&gt; masked_values = 3;</code>
@@ -197372,7 +197372,7 @@ public final class Service {
        * <pre>
        * Masked version of the secret values for display as key-value pairs.
        * For simple API keys: {"api_key": "sk-...xyz123"}
-       * For compound credentials: {"aws_access_key_id": "AKI...1234", "aws_secret_access_key": "***"}
+       * For compound credentials: ``{"aws_access_key_id": "AKI...1234", "aws_secret_access_key": "***"}``
        * </pre>
        *
        * <code>map&lt;string, string&gt; masked_values = 3;</code>
@@ -197396,7 +197396,7 @@ public final class Service {
        * <pre>
        * Masked version of the secret values for display as key-value pairs.
        * For simple API keys: {"api_key": "sk-...xyz123"}
-       * For compound credentials: {"aws_access_key_id": "AKI...1234", "aws_secret_access_key": "***"}
+       * For compound credentials: ``{"aws_access_key_id": "AKI...1234", "aws_secret_access_key": "***"}``
        * </pre>
        *
        * <code>map&lt;string, string&gt; masked_values = 3;</code>
@@ -197410,7 +197410,7 @@ public final class Service {
        * <pre>
        * Masked version of the secret values for display as key-value pairs.
        * For simple API keys: {"api_key": "sk-...xyz123"}
-       * For compound credentials: {"aws_access_key_id": "AKI...1234", "aws_secret_access_key": "***"}
+       * For compound credentials: ``{"aws_access_key_id": "AKI...1234", "aws_secret_access_key": "***"}``
        * </pre>
        *
        * <code>map&lt;string, string&gt; masked_values = 3;</code>
@@ -197429,7 +197429,7 @@ public final class Service {
        * <pre>
        * Masked version of the secret values for display as key-value pairs.
        * For simple API keys: {"api_key": "sk-...xyz123"}
-       * For compound credentials: {"aws_access_key_id": "AKI...1234", "aws_secret_access_key": "***"}
+       * For compound credentials: ``{"aws_access_key_id": "AKI...1234", "aws_secret_access_key": "***"}``
        * </pre>
        *
        * <code>map&lt;string, string&gt; masked_values = 3;</code>
@@ -197456,7 +197456,7 @@ public final class Service {
        * <pre>
        * Masked version of the secret values for display as key-value pairs.
        * For simple API keys: {"api_key": "sk-...xyz123"}
-       * For compound credentials: {"aws_access_key_id": "AKI...1234", "aws_secret_access_key": "***"}
+       * For compound credentials: ``{"aws_access_key_id": "AKI...1234", "aws_secret_access_key": "***"}``
        * </pre>
        *
        * <code>map&lt;string, string&gt; masked_values = 3;</code>
@@ -197481,7 +197481,7 @@ public final class Service {
        * <pre>
        * Masked version of the secret values for display as key-value pairs.
        * For simple API keys: {"api_key": "sk-...xyz123"}
-       * For compound credentials: {"aws_access_key_id": "AKI...1234", "aws_secret_access_key": "***"}
+       * For compound credentials: ``{"aws_access_key_id": "AKI...1234", "aws_secret_access_key": "***"}``
        * </pre>
        *
        * <code>map&lt;string, string&gt; masked_values = 3;</code>
@@ -197502,7 +197502,7 @@ public final class Service {
        * <pre>
        * Masked version of the secret values for display as key-value pairs.
        * For simple API keys: {"api_key": "sk-...xyz123"}
-       * For compound credentials: {"aws_access_key_id": "AKI...1234", "aws_secret_access_key": "***"}
+       * For compound credentials: ``{"aws_access_key_id": "AKI...1234", "aws_secret_access_key": "***"}``
        * </pre>
        *
        * <code>map&lt;string, string&gt; masked_values = 3;</code>
