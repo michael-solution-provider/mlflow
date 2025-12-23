@@ -195870,32 +195870,57 @@ public final class Service {
 
     /**
      * <pre>
-     * Provider-specific auth configuration as JSON (e.g., region, project_id)
+     * Provider-specific auth configuration (e.g., auth_mode, region, project_id)
      * </pre>
      *
-     * <code>optional string auth_config_json = 9;</code>
-     * @return Whether the authConfigJson field is set.
+     * <code>map&lt;string, string&gt; auth_config = 9;</code>
      */
-    boolean hasAuthConfigJson();
+    int getAuthConfigCount();
     /**
      * <pre>
-     * Provider-specific auth configuration as JSON (e.g., region, project_id)
+     * Provider-specific auth configuration (e.g., auth_mode, region, project_id)
      * </pre>
      *
-     * <code>optional string auth_config_json = 9;</code>
-     * @return The authConfigJson.
+     * <code>map&lt;string, string&gt; auth_config = 9;</code>
      */
-    java.lang.String getAuthConfigJson();
+    boolean containsAuthConfig(
+        java.lang.String key);
+    /**
+     * Use {@link #getAuthConfigMap()} instead.
+     */
+    @java.lang.Deprecated
+    java.util.Map<java.lang.String, java.lang.String>
+    getAuthConfig();
     /**
      * <pre>
-     * Provider-specific auth configuration as JSON (e.g., region, project_id)
+     * Provider-specific auth configuration (e.g., auth_mode, region, project_id)
      * </pre>
      *
-     * <code>optional string auth_config_json = 9;</code>
-     * @return The bytes for authConfigJson.
+     * <code>map&lt;string, string&gt; auth_config = 9;</code>
      */
-    com.google.protobuf.ByteString
-        getAuthConfigJsonBytes();
+    java.util.Map<java.lang.String, java.lang.String>
+    getAuthConfigMap();
+    /**
+     * <pre>
+     * Provider-specific auth configuration (e.g., auth_mode, region, project_id)
+     * </pre>
+     *
+     * <code>map&lt;string, string&gt; auth_config = 9;</code>
+     */
+
+    java.lang.String getAuthConfigOrDefault(
+        java.lang.String key,
+        java.lang.String defaultValue);
+    /**
+     * <pre>
+     * Provider-specific auth configuration (e.g., auth_mode, region, project_id)
+     * </pre>
+     *
+     * <code>map&lt;string, string&gt; auth_config = 9;</code>
+     */
+
+    java.lang.String getAuthConfigOrThrow(
+        java.lang.String key);
   }
   /**
    * <pre>
@@ -195919,7 +195944,6 @@ public final class Service {
       provider_ = "";
       createdBy_ = "";
       lastUpdatedBy_ = "";
-      authConfigJson_ = "";
     }
 
     @java.lang.Override
@@ -196007,9 +196031,16 @@ public final class Service {
               break;
             }
             case 74: {
-              com.google.protobuf.ByteString bs = input.readBytes();
-              bitField0_ |= 0x00000080;
-              authConfigJson_ = bs;
+              if (!((mutable_bitField0_ & 0x00000100) != 0)) {
+                authConfig_ = com.google.protobuf.MapField.newMapField(
+                    AuthConfigDefaultEntryHolder.defaultEntry);
+                mutable_bitField0_ |= 0x00000100;
+              }
+              com.google.protobuf.MapEntry<java.lang.String, java.lang.String>
+              authConfig__ = input.readMessage(
+                  AuthConfigDefaultEntryHolder.defaultEntry.getParserForType(), extensionRegistry);
+              authConfig_.getMutableMap().put(
+                  authConfig__.getKey(), authConfig__.getValue());
               break;
             }
             default: {
@@ -196043,6 +196074,8 @@ public final class Service {
       switch (number) {
         case 3:
           return internalGetMaskedValues();
+        case 9:
+          return internalGetAuthConfig();
         default:
           throw new RuntimeException(
               "Invalid map field number: " + number);
@@ -196516,64 +196549,101 @@ public final class Service {
       }
     }
 
-    public static final int AUTH_CONFIG_JSON_FIELD_NUMBER = 9;
-    private volatile java.lang.Object authConfigJson_;
-    /**
-     * <pre>
-     * Provider-specific auth configuration as JSON (e.g., region, project_id)
-     * </pre>
-     *
-     * <code>optional string auth_config_json = 9;</code>
-     * @return Whether the authConfigJson field is set.
-     */
-    @java.lang.Override
-    public boolean hasAuthConfigJson() {
-      return ((bitField0_ & 0x00000080) != 0);
+    public static final int AUTH_CONFIG_FIELD_NUMBER = 9;
+    private static final class AuthConfigDefaultEntryHolder {
+      static final com.google.protobuf.MapEntry<
+          java.lang.String, java.lang.String> defaultEntry =
+              com.google.protobuf.MapEntry
+              .<java.lang.String, java.lang.String>newDefaultInstance(
+                  org.mlflow.api.proto.Service.internal_static_mlflow_GatewaySecretInfo_AuthConfigEntry_descriptor, 
+                  com.google.protobuf.WireFormat.FieldType.STRING,
+                  "",
+                  com.google.protobuf.WireFormat.FieldType.STRING,
+                  "");
+    }
+    private com.google.protobuf.MapField<
+        java.lang.String, java.lang.String> authConfig_;
+    private com.google.protobuf.MapField<java.lang.String, java.lang.String>
+    internalGetAuthConfig() {
+      if (authConfig_ == null) {
+        return com.google.protobuf.MapField.emptyMapField(
+            AuthConfigDefaultEntryHolder.defaultEntry);
+      }
+      return authConfig_;
+    }
+
+    public int getAuthConfigCount() {
+      return internalGetAuthConfig().getMap().size();
     }
     /**
      * <pre>
-     * Provider-specific auth configuration as JSON (e.g., region, project_id)
+     * Provider-specific auth configuration (e.g., auth_mode, region, project_id)
      * </pre>
      *
-     * <code>optional string auth_config_json = 9;</code>
-     * @return The authConfigJson.
+     * <code>map&lt;string, string&gt; auth_config = 9;</code>
+     */
+
+    @java.lang.Override
+    public boolean containsAuthConfig(
+        java.lang.String key) {
+      if (key == null) { throw new NullPointerException("map key"); }
+      return internalGetAuthConfig().getMap().containsKey(key);
+    }
+    /**
+     * Use {@link #getAuthConfigMap()} instead.
      */
     @java.lang.Override
-    public java.lang.String getAuthConfigJson() {
-      java.lang.Object ref = authConfigJson_;
-      if (ref instanceof java.lang.String) {
-        return (java.lang.String) ref;
-      } else {
-        com.google.protobuf.ByteString bs = 
-            (com.google.protobuf.ByteString) ref;
-        java.lang.String s = bs.toStringUtf8();
-        if (bs.isValidUtf8()) {
-          authConfigJson_ = s;
-        }
-        return s;
-      }
+    @java.lang.Deprecated
+    public java.util.Map<java.lang.String, java.lang.String> getAuthConfig() {
+      return getAuthConfigMap();
     }
     /**
      * <pre>
-     * Provider-specific auth configuration as JSON (e.g., region, project_id)
+     * Provider-specific auth configuration (e.g., auth_mode, region, project_id)
      * </pre>
      *
-     * <code>optional string auth_config_json = 9;</code>
-     * @return The bytes for authConfigJson.
+     * <code>map&lt;string, string&gt; auth_config = 9;</code>
      */
     @java.lang.Override
-    public com.google.protobuf.ByteString
-        getAuthConfigJsonBytes() {
-      java.lang.Object ref = authConfigJson_;
-      if (ref instanceof java.lang.String) {
-        com.google.protobuf.ByteString b = 
-            com.google.protobuf.ByteString.copyFromUtf8(
-                (java.lang.String) ref);
-        authConfigJson_ = b;
-        return b;
-      } else {
-        return (com.google.protobuf.ByteString) ref;
+
+    public java.util.Map<java.lang.String, java.lang.String> getAuthConfigMap() {
+      return internalGetAuthConfig().getMap();
+    }
+    /**
+     * <pre>
+     * Provider-specific auth configuration (e.g., auth_mode, region, project_id)
+     * </pre>
+     *
+     * <code>map&lt;string, string&gt; auth_config = 9;</code>
+     */
+    @java.lang.Override
+
+    public java.lang.String getAuthConfigOrDefault(
+        java.lang.String key,
+        java.lang.String defaultValue) {
+      if (key == null) { throw new NullPointerException("map key"); }
+      java.util.Map<java.lang.String, java.lang.String> map =
+          internalGetAuthConfig().getMap();
+      return map.containsKey(key) ? map.get(key) : defaultValue;
+    }
+    /**
+     * <pre>
+     * Provider-specific auth configuration (e.g., auth_mode, region, project_id)
+     * </pre>
+     *
+     * <code>map&lt;string, string&gt; auth_config = 9;</code>
+     */
+    @java.lang.Override
+
+    public java.lang.String getAuthConfigOrThrow(
+        java.lang.String key) {
+      if (key == null) { throw new NullPointerException("map key"); }
+      java.util.Map<java.lang.String, java.lang.String> map =
+          internalGetAuthConfig().getMap();
+      if (!map.containsKey(key)) {
+        throw new java.lang.IllegalArgumentException();
       }
+      return map.get(key);
     }
 
     private byte memoizedIsInitialized = -1;
@@ -196617,9 +196687,12 @@ public final class Service {
       if (((bitField0_ & 0x00000040) != 0)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 8, lastUpdatedBy_);
       }
-      if (((bitField0_ & 0x00000080) != 0)) {
-        com.google.protobuf.GeneratedMessageV3.writeString(output, 9, authConfigJson_);
-      }
+      com.google.protobuf.GeneratedMessageV3
+        .serializeStringMapTo(
+          output,
+          internalGetAuthConfig(),
+          AuthConfigDefaultEntryHolder.defaultEntry,
+          9);
       unknownFields.writeTo(output);
     }
 
@@ -196662,8 +196735,15 @@ public final class Service {
       if (((bitField0_ & 0x00000040) != 0)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(8, lastUpdatedBy_);
       }
-      if (((bitField0_ & 0x00000080) != 0)) {
-        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(9, authConfigJson_);
+      for (java.util.Map.Entry<java.lang.String, java.lang.String> entry
+           : internalGetAuthConfig().getMap().entrySet()) {
+        com.google.protobuf.MapEntry<java.lang.String, java.lang.String>
+        authConfig__ = AuthConfigDefaultEntryHolder.defaultEntry.newBuilderForType()
+            .setKey(entry.getKey())
+            .setValue(entry.getValue())
+            .build();
+        size += com.google.protobuf.CodedOutputStream
+            .computeMessageSize(9, authConfig__);
       }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
@@ -196717,11 +196797,8 @@ public final class Service {
         if (!getLastUpdatedBy()
             .equals(other.getLastUpdatedBy())) return false;
       }
-      if (hasAuthConfigJson() != other.hasAuthConfigJson()) return false;
-      if (hasAuthConfigJson()) {
-        if (!getAuthConfigJson()
-            .equals(other.getAuthConfigJson())) return false;
-      }
+      if (!internalGetAuthConfig().equals(
+          other.internalGetAuthConfig())) return false;
       if (!unknownFields.equals(other.unknownFields)) return false;
       return true;
     }
@@ -196767,9 +196844,9 @@ public final class Service {
         hash = (37 * hash) + LAST_UPDATED_BY_FIELD_NUMBER;
         hash = (53 * hash) + getLastUpdatedBy().hashCode();
       }
-      if (hasAuthConfigJson()) {
-        hash = (37 * hash) + AUTH_CONFIG_JSON_FIELD_NUMBER;
-        hash = (53 * hash) + getAuthConfigJson().hashCode();
+      if (!internalGetAuthConfig().getMap().isEmpty()) {
+        hash = (37 * hash) + AUTH_CONFIG_FIELD_NUMBER;
+        hash = (53 * hash) + internalGetAuthConfig().hashCode();
       }
       hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
@@ -196888,6 +196965,8 @@ public final class Service {
         switch (number) {
           case 3:
             return internalGetMaskedValues();
+          case 9:
+            return internalGetAuthConfig();
           default:
             throw new RuntimeException(
                 "Invalid map field number: " + number);
@@ -196899,6 +196978,8 @@ public final class Service {
         switch (number) {
           case 3:
             return internalGetMutableMaskedValues();
+          case 9:
+            return internalGetMutableAuthConfig();
           default:
             throw new RuntimeException(
                 "Invalid map field number: " + number);
@@ -196945,8 +197026,7 @@ public final class Service {
         bitField0_ = (bitField0_ & ~0x00000040);
         lastUpdatedBy_ = "";
         bitField0_ = (bitField0_ & ~0x00000080);
-        authConfigJson_ = "";
-        bitField0_ = (bitField0_ & ~0x00000100);
+        internalGetMutableAuthConfig().clear();
         return this;
       }
 
@@ -197005,10 +197085,8 @@ public final class Service {
           to_bitField0_ |= 0x00000040;
         }
         result.lastUpdatedBy_ = lastUpdatedBy_;
-        if (((from_bitField0_ & 0x00000100) != 0)) {
-          to_bitField0_ |= 0x00000080;
-        }
-        result.authConfigJson_ = authConfigJson_;
+        result.authConfig_ = internalGetAuthConfig();
+        result.authConfig_.makeImmutable();
         result.bitField0_ = to_bitField0_;
         onBuilt();
         return result;
@@ -197091,11 +197169,8 @@ public final class Service {
           lastUpdatedBy_ = other.lastUpdatedBy_;
           onChanged();
         }
-        if (other.hasAuthConfigJson()) {
-          bitField0_ |= 0x00000100;
-          authConfigJson_ = other.authConfigJson_;
-          onChanged();
-        }
+        internalGetMutableAuthConfig().mergeFrom(
+            other.internalGetAuthConfig());
         this.mergeUnknownFields(other.unknownFields);
         onChanged();
         return this;
@@ -197949,111 +198024,162 @@ public final class Service {
         return this;
       }
 
-      private java.lang.Object authConfigJson_ = "";
-      /**
-       * <pre>
-       * Provider-specific auth configuration as JSON (e.g., region, project_id)
-       * </pre>
-       *
-       * <code>optional string auth_config_json = 9;</code>
-       * @return Whether the authConfigJson field is set.
-       */
-      public boolean hasAuthConfigJson() {
-        return ((bitField0_ & 0x00000100) != 0);
-      }
-      /**
-       * <pre>
-       * Provider-specific auth configuration as JSON (e.g., region, project_id)
-       * </pre>
-       *
-       * <code>optional string auth_config_json = 9;</code>
-       * @return The authConfigJson.
-       */
-      public java.lang.String getAuthConfigJson() {
-        java.lang.Object ref = authConfigJson_;
-        if (!(ref instanceof java.lang.String)) {
-          com.google.protobuf.ByteString bs =
-              (com.google.protobuf.ByteString) ref;
-          java.lang.String s = bs.toStringUtf8();
-          if (bs.isValidUtf8()) {
-            authConfigJson_ = s;
-          }
-          return s;
-        } else {
-          return (java.lang.String) ref;
+      private com.google.protobuf.MapField<
+          java.lang.String, java.lang.String> authConfig_;
+      private com.google.protobuf.MapField<java.lang.String, java.lang.String>
+      internalGetAuthConfig() {
+        if (authConfig_ == null) {
+          return com.google.protobuf.MapField.emptyMapField(
+              AuthConfigDefaultEntryHolder.defaultEntry);
         }
+        return authConfig_;
       }
-      /**
-       * <pre>
-       * Provider-specific auth configuration as JSON (e.g., region, project_id)
-       * </pre>
-       *
-       * <code>optional string auth_config_json = 9;</code>
-       * @return The bytes for authConfigJson.
-       */
-      public com.google.protobuf.ByteString
-          getAuthConfigJsonBytes() {
-        java.lang.Object ref = authConfigJson_;
-        if (ref instanceof String) {
-          com.google.protobuf.ByteString b = 
-              com.google.protobuf.ByteString.copyFromUtf8(
-                  (java.lang.String) ref);
-          authConfigJson_ = b;
-          return b;
-        } else {
-          return (com.google.protobuf.ByteString) ref;
+      private com.google.protobuf.MapField<java.lang.String, java.lang.String>
+      internalGetMutableAuthConfig() {
+        onChanged();;
+        if (authConfig_ == null) {
+          authConfig_ = com.google.protobuf.MapField.newMapField(
+              AuthConfigDefaultEntryHolder.defaultEntry);
         }
+        if (!authConfig_.isMutable()) {
+          authConfig_ = authConfig_.copy();
+        }
+        return authConfig_;
+      }
+
+      public int getAuthConfigCount() {
+        return internalGetAuthConfig().getMap().size();
       }
       /**
        * <pre>
-       * Provider-specific auth configuration as JSON (e.g., region, project_id)
+       * Provider-specific auth configuration (e.g., auth_mode, region, project_id)
        * </pre>
        *
-       * <code>optional string auth_config_json = 9;</code>
-       * @param value The authConfigJson to set.
-       * @return This builder for chaining.
+       * <code>map&lt;string, string&gt; auth_config = 9;</code>
        */
-      public Builder setAuthConfigJson(
+
+      @java.lang.Override
+      public boolean containsAuthConfig(
+          java.lang.String key) {
+        if (key == null) { throw new NullPointerException("map key"); }
+        return internalGetAuthConfig().getMap().containsKey(key);
+      }
+      /**
+       * Use {@link #getAuthConfigMap()} instead.
+       */
+      @java.lang.Override
+      @java.lang.Deprecated
+      public java.util.Map<java.lang.String, java.lang.String> getAuthConfig() {
+        return getAuthConfigMap();
+      }
+      /**
+       * <pre>
+       * Provider-specific auth configuration (e.g., auth_mode, region, project_id)
+       * </pre>
+       *
+       * <code>map&lt;string, string&gt; auth_config = 9;</code>
+       */
+      @java.lang.Override
+
+      public java.util.Map<java.lang.String, java.lang.String> getAuthConfigMap() {
+        return internalGetAuthConfig().getMap();
+      }
+      /**
+       * <pre>
+       * Provider-specific auth configuration (e.g., auth_mode, region, project_id)
+       * </pre>
+       *
+       * <code>map&lt;string, string&gt; auth_config = 9;</code>
+       */
+      @java.lang.Override
+
+      public java.lang.String getAuthConfigOrDefault(
+          java.lang.String key,
+          java.lang.String defaultValue) {
+        if (key == null) { throw new NullPointerException("map key"); }
+        java.util.Map<java.lang.String, java.lang.String> map =
+            internalGetAuthConfig().getMap();
+        return map.containsKey(key) ? map.get(key) : defaultValue;
+      }
+      /**
+       * <pre>
+       * Provider-specific auth configuration (e.g., auth_mode, region, project_id)
+       * </pre>
+       *
+       * <code>map&lt;string, string&gt; auth_config = 9;</code>
+       */
+      @java.lang.Override
+
+      public java.lang.String getAuthConfigOrThrow(
+          java.lang.String key) {
+        if (key == null) { throw new NullPointerException("map key"); }
+        java.util.Map<java.lang.String, java.lang.String> map =
+            internalGetAuthConfig().getMap();
+        if (!map.containsKey(key)) {
+          throw new java.lang.IllegalArgumentException();
+        }
+        return map.get(key);
+      }
+
+      public Builder clearAuthConfig() {
+        internalGetMutableAuthConfig().getMutableMap()
+            .clear();
+        return this;
+      }
+      /**
+       * <pre>
+       * Provider-specific auth configuration (e.g., auth_mode, region, project_id)
+       * </pre>
+       *
+       * <code>map&lt;string, string&gt; auth_config = 9;</code>
+       */
+
+      public Builder removeAuthConfig(
+          java.lang.String key) {
+        if (key == null) { throw new NullPointerException("map key"); }
+        internalGetMutableAuthConfig().getMutableMap()
+            .remove(key);
+        return this;
+      }
+      /**
+       * Use alternate mutation accessors instead.
+       */
+      @java.lang.Deprecated
+      public java.util.Map<java.lang.String, java.lang.String>
+      getMutableAuthConfig() {
+        return internalGetMutableAuthConfig().getMutableMap();
+      }
+      /**
+       * <pre>
+       * Provider-specific auth configuration (e.g., auth_mode, region, project_id)
+       * </pre>
+       *
+       * <code>map&lt;string, string&gt; auth_config = 9;</code>
+       */
+      public Builder putAuthConfig(
+          java.lang.String key,
           java.lang.String value) {
+        if (key == null) { throw new NullPointerException("map key"); }
         if (value == null) {
-    throw new NullPointerException();
-  }
-  bitField0_ |= 0x00000100;
-        authConfigJson_ = value;
-        onChanged();
+  throw new NullPointerException("map value");
+}
+
+        internalGetMutableAuthConfig().getMutableMap()
+            .put(key, value);
         return this;
       }
       /**
        * <pre>
-       * Provider-specific auth configuration as JSON (e.g., region, project_id)
+       * Provider-specific auth configuration (e.g., auth_mode, region, project_id)
        * </pre>
        *
-       * <code>optional string auth_config_json = 9;</code>
-       * @return This builder for chaining.
+       * <code>map&lt;string, string&gt; auth_config = 9;</code>
        */
-      public Builder clearAuthConfigJson() {
-        bitField0_ = (bitField0_ & ~0x00000100);
-        authConfigJson_ = getDefaultInstance().getAuthConfigJson();
-        onChanged();
-        return this;
-      }
-      /**
-       * <pre>
-       * Provider-specific auth configuration as JSON (e.g., region, project_id)
-       * </pre>
-       *
-       * <code>optional string auth_config_json = 9;</code>
-       * @param value The bytes for authConfigJson to set.
-       * @return This builder for chaining.
-       */
-      public Builder setAuthConfigJsonBytes(
-          com.google.protobuf.ByteString value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  bitField0_ |= 0x00000100;
-        authConfigJson_ = value;
-        onChanged();
+
+      public Builder putAllAuthConfig(
+          java.util.Map<java.lang.String, java.lang.String> values) {
+        internalGetMutableAuthConfig().getMutableMap()
+            .putAll(values);
         return this;
       }
       @java.lang.Override
@@ -207982,35 +208108,62 @@ public final class Service {
 
     /**
      * <pre>
-     * Optional provider-specific auth configuration as JSON string.
+     * Optional provider-specific auth configuration.
      * For multi-auth providers, include "auth_mode" key (e.g., {"auth_mode": "access_keys", "aws_region_name": "us-east-1"})
      * </pre>
      *
-     * <code>optional string auth_config_json = 5;</code>
-     * @return Whether the authConfigJson field is set.
+     * <code>map&lt;string, string&gt; auth_config = 5;</code>
      */
-    boolean hasAuthConfigJson();
+    int getAuthConfigCount();
     /**
      * <pre>
-     * Optional provider-specific auth configuration as JSON string.
+     * Optional provider-specific auth configuration.
      * For multi-auth providers, include "auth_mode" key (e.g., {"auth_mode": "access_keys", "aws_region_name": "us-east-1"})
      * </pre>
      *
-     * <code>optional string auth_config_json = 5;</code>
-     * @return The authConfigJson.
+     * <code>map&lt;string, string&gt; auth_config = 5;</code>
      */
-    java.lang.String getAuthConfigJson();
+    boolean containsAuthConfig(
+        java.lang.String key);
+    /**
+     * Use {@link #getAuthConfigMap()} instead.
+     */
+    @java.lang.Deprecated
+    java.util.Map<java.lang.String, java.lang.String>
+    getAuthConfig();
     /**
      * <pre>
-     * Optional provider-specific auth configuration as JSON string.
+     * Optional provider-specific auth configuration.
      * For multi-auth providers, include "auth_mode" key (e.g., {"auth_mode": "access_keys", "aws_region_name": "us-east-1"})
      * </pre>
      *
-     * <code>optional string auth_config_json = 5;</code>
-     * @return The bytes for authConfigJson.
+     * <code>map&lt;string, string&gt; auth_config = 5;</code>
      */
-    com.google.protobuf.ByteString
-        getAuthConfigJsonBytes();
+    java.util.Map<java.lang.String, java.lang.String>
+    getAuthConfigMap();
+    /**
+     * <pre>
+     * Optional provider-specific auth configuration.
+     * For multi-auth providers, include "auth_mode" key (e.g., {"auth_mode": "access_keys", "aws_region_name": "us-east-1"})
+     * </pre>
+     *
+     * <code>map&lt;string, string&gt; auth_config = 5;</code>
+     */
+
+    java.lang.String getAuthConfigOrDefault(
+        java.lang.String key,
+        java.lang.String defaultValue);
+    /**
+     * <pre>
+     * Optional provider-specific auth configuration.
+     * For multi-auth providers, include "auth_mode" key (e.g., {"auth_mode": "access_keys", "aws_region_name": "us-east-1"})
+     * </pre>
+     *
+     * <code>map&lt;string, string&gt; auth_config = 5;</code>
+     */
+
+    java.lang.String getAuthConfigOrThrow(
+        java.lang.String key);
 
     /**
      * <pre>
@@ -208056,7 +208209,6 @@ public final class Service {
     private CreateGatewaySecret() {
       secretName_ = "";
       provider_ = "";
-      authConfigJson_ = "";
       createdBy_ = "";
     }
 
@@ -208117,14 +208269,21 @@ public final class Service {
               break;
             }
             case 42: {
-              com.google.protobuf.ByteString bs = input.readBytes();
-              bitField0_ |= 0x00000004;
-              authConfigJson_ = bs;
+              if (!((mutable_bitField0_ & 0x00000008) != 0)) {
+                authConfig_ = com.google.protobuf.MapField.newMapField(
+                    AuthConfigDefaultEntryHolder.defaultEntry);
+                mutable_bitField0_ |= 0x00000008;
+              }
+              com.google.protobuf.MapEntry<java.lang.String, java.lang.String>
+              authConfig__ = input.readMessage(
+                  AuthConfigDefaultEntryHolder.defaultEntry.getParserForType(), extensionRegistry);
+              authConfig_.getMutableMap().put(
+                  authConfig__.getKey(), authConfig__.getValue());
               break;
             }
             case 50: {
               com.google.protobuf.ByteString bs = input.readBytes();
-              bitField0_ |= 0x00000008;
+              bitField0_ |= 0x00000004;
               createdBy_ = bs;
               break;
             }
@@ -208159,6 +208318,8 @@ public final class Service {
       switch (number) {
         case 2:
           return internalGetSecretValue();
+        case 5:
+          return internalGetAuthConfig();
         default:
           throw new RuntimeException(
               "Invalid map field number: " + number);
@@ -209090,67 +209251,105 @@ public final class Service {
       }
     }
 
-    public static final int AUTH_CONFIG_JSON_FIELD_NUMBER = 5;
-    private volatile java.lang.Object authConfigJson_;
-    /**
-     * <pre>
-     * Optional provider-specific auth configuration as JSON string.
-     * For multi-auth providers, include "auth_mode" key (e.g., {"auth_mode": "access_keys", "aws_region_name": "us-east-1"})
-     * </pre>
-     *
-     * <code>optional string auth_config_json = 5;</code>
-     * @return Whether the authConfigJson field is set.
-     */
-    @java.lang.Override
-    public boolean hasAuthConfigJson() {
-      return ((bitField0_ & 0x00000004) != 0);
+    public static final int AUTH_CONFIG_FIELD_NUMBER = 5;
+    private static final class AuthConfigDefaultEntryHolder {
+      static final com.google.protobuf.MapEntry<
+          java.lang.String, java.lang.String> defaultEntry =
+              com.google.protobuf.MapEntry
+              .<java.lang.String, java.lang.String>newDefaultInstance(
+                  org.mlflow.api.proto.Service.internal_static_mlflow_CreateGatewaySecret_AuthConfigEntry_descriptor, 
+                  com.google.protobuf.WireFormat.FieldType.STRING,
+                  "",
+                  com.google.protobuf.WireFormat.FieldType.STRING,
+                  "");
+    }
+    private com.google.protobuf.MapField<
+        java.lang.String, java.lang.String> authConfig_;
+    private com.google.protobuf.MapField<java.lang.String, java.lang.String>
+    internalGetAuthConfig() {
+      if (authConfig_ == null) {
+        return com.google.protobuf.MapField.emptyMapField(
+            AuthConfigDefaultEntryHolder.defaultEntry);
+      }
+      return authConfig_;
+    }
+
+    public int getAuthConfigCount() {
+      return internalGetAuthConfig().getMap().size();
     }
     /**
      * <pre>
-     * Optional provider-specific auth configuration as JSON string.
+     * Optional provider-specific auth configuration.
      * For multi-auth providers, include "auth_mode" key (e.g., {"auth_mode": "access_keys", "aws_region_name": "us-east-1"})
      * </pre>
      *
-     * <code>optional string auth_config_json = 5;</code>
-     * @return The authConfigJson.
+     * <code>map&lt;string, string&gt; auth_config = 5;</code>
+     */
+
+    @java.lang.Override
+    public boolean containsAuthConfig(
+        java.lang.String key) {
+      if (key == null) { throw new NullPointerException("map key"); }
+      return internalGetAuthConfig().getMap().containsKey(key);
+    }
+    /**
+     * Use {@link #getAuthConfigMap()} instead.
      */
     @java.lang.Override
-    public java.lang.String getAuthConfigJson() {
-      java.lang.Object ref = authConfigJson_;
-      if (ref instanceof java.lang.String) {
-        return (java.lang.String) ref;
-      } else {
-        com.google.protobuf.ByteString bs = 
-            (com.google.protobuf.ByteString) ref;
-        java.lang.String s = bs.toStringUtf8();
-        if (bs.isValidUtf8()) {
-          authConfigJson_ = s;
-        }
-        return s;
-      }
+    @java.lang.Deprecated
+    public java.util.Map<java.lang.String, java.lang.String> getAuthConfig() {
+      return getAuthConfigMap();
     }
     /**
      * <pre>
-     * Optional provider-specific auth configuration as JSON string.
+     * Optional provider-specific auth configuration.
      * For multi-auth providers, include "auth_mode" key (e.g., {"auth_mode": "access_keys", "aws_region_name": "us-east-1"})
      * </pre>
      *
-     * <code>optional string auth_config_json = 5;</code>
-     * @return The bytes for authConfigJson.
+     * <code>map&lt;string, string&gt; auth_config = 5;</code>
      */
     @java.lang.Override
-    public com.google.protobuf.ByteString
-        getAuthConfigJsonBytes() {
-      java.lang.Object ref = authConfigJson_;
-      if (ref instanceof java.lang.String) {
-        com.google.protobuf.ByteString b = 
-            com.google.protobuf.ByteString.copyFromUtf8(
-                (java.lang.String) ref);
-        authConfigJson_ = b;
-        return b;
-      } else {
-        return (com.google.protobuf.ByteString) ref;
+
+    public java.util.Map<java.lang.String, java.lang.String> getAuthConfigMap() {
+      return internalGetAuthConfig().getMap();
+    }
+    /**
+     * <pre>
+     * Optional provider-specific auth configuration.
+     * For multi-auth providers, include "auth_mode" key (e.g., {"auth_mode": "access_keys", "aws_region_name": "us-east-1"})
+     * </pre>
+     *
+     * <code>map&lt;string, string&gt; auth_config = 5;</code>
+     */
+    @java.lang.Override
+
+    public java.lang.String getAuthConfigOrDefault(
+        java.lang.String key,
+        java.lang.String defaultValue) {
+      if (key == null) { throw new NullPointerException("map key"); }
+      java.util.Map<java.lang.String, java.lang.String> map =
+          internalGetAuthConfig().getMap();
+      return map.containsKey(key) ? map.get(key) : defaultValue;
+    }
+    /**
+     * <pre>
+     * Optional provider-specific auth configuration.
+     * For multi-auth providers, include "auth_mode" key (e.g., {"auth_mode": "access_keys", "aws_region_name": "us-east-1"})
+     * </pre>
+     *
+     * <code>map&lt;string, string&gt; auth_config = 5;</code>
+     */
+    @java.lang.Override
+
+    public java.lang.String getAuthConfigOrThrow(
+        java.lang.String key) {
+      if (key == null) { throw new NullPointerException("map key"); }
+      java.util.Map<java.lang.String, java.lang.String> map =
+          internalGetAuthConfig().getMap();
+      if (!map.containsKey(key)) {
+        throw new java.lang.IllegalArgumentException();
       }
+      return map.get(key);
     }
 
     public static final int CREATED_BY_FIELD_NUMBER = 6;
@@ -209165,7 +209364,7 @@ public final class Service {
      */
     @java.lang.Override
     public boolean hasCreatedBy() {
-      return ((bitField0_ & 0x00000008) != 0);
+      return ((bitField0_ & 0x00000004) != 0);
     }
     /**
      * <pre>
@@ -209239,10 +209438,13 @@ public final class Service {
       if (((bitField0_ & 0x00000002) != 0)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 3, provider_);
       }
+      com.google.protobuf.GeneratedMessageV3
+        .serializeStringMapTo(
+          output,
+          internalGetAuthConfig(),
+          AuthConfigDefaultEntryHolder.defaultEntry,
+          5);
       if (((bitField0_ & 0x00000004) != 0)) {
-        com.google.protobuf.GeneratedMessageV3.writeString(output, 5, authConfigJson_);
-      }
-      if (((bitField0_ & 0x00000008) != 0)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 6, createdBy_);
       }
       unknownFields.writeTo(output);
@@ -209270,10 +209472,17 @@ public final class Service {
       if (((bitField0_ & 0x00000002) != 0)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(3, provider_);
       }
-      if (((bitField0_ & 0x00000004) != 0)) {
-        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(5, authConfigJson_);
+      for (java.util.Map.Entry<java.lang.String, java.lang.String> entry
+           : internalGetAuthConfig().getMap().entrySet()) {
+        com.google.protobuf.MapEntry<java.lang.String, java.lang.String>
+        authConfig__ = AuthConfigDefaultEntryHolder.defaultEntry.newBuilderForType()
+            .setKey(entry.getKey())
+            .setValue(entry.getValue())
+            .build();
+        size += com.google.protobuf.CodedOutputStream
+            .computeMessageSize(5, authConfig__);
       }
-      if (((bitField0_ & 0x00000008) != 0)) {
+      if (((bitField0_ & 0x00000004) != 0)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(6, createdBy_);
       }
       size += unknownFields.getSerializedSize();
@@ -209303,11 +209512,8 @@ public final class Service {
         if (!getProvider()
             .equals(other.getProvider())) return false;
       }
-      if (hasAuthConfigJson() != other.hasAuthConfigJson()) return false;
-      if (hasAuthConfigJson()) {
-        if (!getAuthConfigJson()
-            .equals(other.getAuthConfigJson())) return false;
-      }
+      if (!internalGetAuthConfig().equals(
+          other.internalGetAuthConfig())) return false;
       if (hasCreatedBy() != other.hasCreatedBy()) return false;
       if (hasCreatedBy()) {
         if (!getCreatedBy()
@@ -209336,9 +209542,9 @@ public final class Service {
         hash = (37 * hash) + PROVIDER_FIELD_NUMBER;
         hash = (53 * hash) + getProvider().hashCode();
       }
-      if (hasAuthConfigJson()) {
-        hash = (37 * hash) + AUTH_CONFIG_JSON_FIELD_NUMBER;
-        hash = (53 * hash) + getAuthConfigJson().hashCode();
+      if (!internalGetAuthConfig().getMap().isEmpty()) {
+        hash = (37 * hash) + AUTH_CONFIG_FIELD_NUMBER;
+        hash = (53 * hash) + internalGetAuthConfig().hashCode();
       }
       if (hasCreatedBy()) {
         hash = (37 * hash) + CREATED_BY_FIELD_NUMBER;
@@ -209457,6 +209663,8 @@ public final class Service {
         switch (number) {
           case 2:
             return internalGetSecretValue();
+          case 5:
+            return internalGetAuthConfig();
           default:
             throw new RuntimeException(
                 "Invalid map field number: " + number);
@@ -209468,6 +209676,8 @@ public final class Service {
         switch (number) {
           case 2:
             return internalGetMutableSecretValue();
+          case 5:
+            return internalGetMutableAuthConfig();
           default:
             throw new RuntimeException(
                 "Invalid map field number: " + number);
@@ -209504,8 +209714,7 @@ public final class Service {
         internalGetMutableSecretValue().clear();
         provider_ = "";
         bitField0_ = (bitField0_ & ~0x00000004);
-        authConfigJson_ = "";
-        bitField0_ = (bitField0_ & ~0x00000008);
+        internalGetMutableAuthConfig().clear();
         createdBy_ = "";
         bitField0_ = (bitField0_ & ~0x00000010);
         return this;
@@ -209546,12 +209755,10 @@ public final class Service {
           to_bitField0_ |= 0x00000002;
         }
         result.provider_ = provider_;
-        if (((from_bitField0_ & 0x00000008) != 0)) {
-          to_bitField0_ |= 0x00000004;
-        }
-        result.authConfigJson_ = authConfigJson_;
+        result.authConfig_ = internalGetAuthConfig();
+        result.authConfig_.makeImmutable();
         if (((from_bitField0_ & 0x00000010) != 0)) {
-          to_bitField0_ |= 0x00000008;
+          to_bitField0_ |= 0x00000004;
         }
         result.createdBy_ = createdBy_;
         result.bitField0_ = to_bitField0_;
@@ -209615,11 +209822,8 @@ public final class Service {
           provider_ = other.provider_;
           onChanged();
         }
-        if (other.hasAuthConfigJson()) {
-          bitField0_ |= 0x00000008;
-          authConfigJson_ = other.authConfigJson_;
-          onChanged();
-        }
+        internalGetMutableAuthConfig().mergeFrom(
+            other.internalGetAuthConfig());
         if (other.hasCreatedBy()) {
           bitField0_ |= 0x00000010;
           createdBy_ = other.createdBy_;
@@ -210044,117 +210248,169 @@ public final class Service {
         return this;
       }
 
-      private java.lang.Object authConfigJson_ = "";
-      /**
-       * <pre>
-       * Optional provider-specific auth configuration as JSON string.
-       * For multi-auth providers, include "auth_mode" key (e.g., {"auth_mode": "access_keys", "aws_region_name": "us-east-1"})
-       * </pre>
-       *
-       * <code>optional string auth_config_json = 5;</code>
-       * @return Whether the authConfigJson field is set.
-       */
-      public boolean hasAuthConfigJson() {
-        return ((bitField0_ & 0x00000008) != 0);
-      }
-      /**
-       * <pre>
-       * Optional provider-specific auth configuration as JSON string.
-       * For multi-auth providers, include "auth_mode" key (e.g., {"auth_mode": "access_keys", "aws_region_name": "us-east-1"})
-       * </pre>
-       *
-       * <code>optional string auth_config_json = 5;</code>
-       * @return The authConfigJson.
-       */
-      public java.lang.String getAuthConfigJson() {
-        java.lang.Object ref = authConfigJson_;
-        if (!(ref instanceof java.lang.String)) {
-          com.google.protobuf.ByteString bs =
-              (com.google.protobuf.ByteString) ref;
-          java.lang.String s = bs.toStringUtf8();
-          if (bs.isValidUtf8()) {
-            authConfigJson_ = s;
-          }
-          return s;
-        } else {
-          return (java.lang.String) ref;
+      private com.google.protobuf.MapField<
+          java.lang.String, java.lang.String> authConfig_;
+      private com.google.protobuf.MapField<java.lang.String, java.lang.String>
+      internalGetAuthConfig() {
+        if (authConfig_ == null) {
+          return com.google.protobuf.MapField.emptyMapField(
+              AuthConfigDefaultEntryHolder.defaultEntry);
         }
+        return authConfig_;
       }
-      /**
-       * <pre>
-       * Optional provider-specific auth configuration as JSON string.
-       * For multi-auth providers, include "auth_mode" key (e.g., {"auth_mode": "access_keys", "aws_region_name": "us-east-1"})
-       * </pre>
-       *
-       * <code>optional string auth_config_json = 5;</code>
-       * @return The bytes for authConfigJson.
-       */
-      public com.google.protobuf.ByteString
-          getAuthConfigJsonBytes() {
-        java.lang.Object ref = authConfigJson_;
-        if (ref instanceof String) {
-          com.google.protobuf.ByteString b = 
-              com.google.protobuf.ByteString.copyFromUtf8(
-                  (java.lang.String) ref);
-          authConfigJson_ = b;
-          return b;
-        } else {
-          return (com.google.protobuf.ByteString) ref;
+      private com.google.protobuf.MapField<java.lang.String, java.lang.String>
+      internalGetMutableAuthConfig() {
+        onChanged();;
+        if (authConfig_ == null) {
+          authConfig_ = com.google.protobuf.MapField.newMapField(
+              AuthConfigDefaultEntryHolder.defaultEntry);
         }
+        if (!authConfig_.isMutable()) {
+          authConfig_ = authConfig_.copy();
+        }
+        return authConfig_;
+      }
+
+      public int getAuthConfigCount() {
+        return internalGetAuthConfig().getMap().size();
       }
       /**
        * <pre>
-       * Optional provider-specific auth configuration as JSON string.
+       * Optional provider-specific auth configuration.
        * For multi-auth providers, include "auth_mode" key (e.g., {"auth_mode": "access_keys", "aws_region_name": "us-east-1"})
        * </pre>
        *
-       * <code>optional string auth_config_json = 5;</code>
-       * @param value The authConfigJson to set.
-       * @return This builder for chaining.
+       * <code>map&lt;string, string&gt; auth_config = 5;</code>
        */
-      public Builder setAuthConfigJson(
+
+      @java.lang.Override
+      public boolean containsAuthConfig(
+          java.lang.String key) {
+        if (key == null) { throw new NullPointerException("map key"); }
+        return internalGetAuthConfig().getMap().containsKey(key);
+      }
+      /**
+       * Use {@link #getAuthConfigMap()} instead.
+       */
+      @java.lang.Override
+      @java.lang.Deprecated
+      public java.util.Map<java.lang.String, java.lang.String> getAuthConfig() {
+        return getAuthConfigMap();
+      }
+      /**
+       * <pre>
+       * Optional provider-specific auth configuration.
+       * For multi-auth providers, include "auth_mode" key (e.g., {"auth_mode": "access_keys", "aws_region_name": "us-east-1"})
+       * </pre>
+       *
+       * <code>map&lt;string, string&gt; auth_config = 5;</code>
+       */
+      @java.lang.Override
+
+      public java.util.Map<java.lang.String, java.lang.String> getAuthConfigMap() {
+        return internalGetAuthConfig().getMap();
+      }
+      /**
+       * <pre>
+       * Optional provider-specific auth configuration.
+       * For multi-auth providers, include "auth_mode" key (e.g., {"auth_mode": "access_keys", "aws_region_name": "us-east-1"})
+       * </pre>
+       *
+       * <code>map&lt;string, string&gt; auth_config = 5;</code>
+       */
+      @java.lang.Override
+
+      public java.lang.String getAuthConfigOrDefault(
+          java.lang.String key,
+          java.lang.String defaultValue) {
+        if (key == null) { throw new NullPointerException("map key"); }
+        java.util.Map<java.lang.String, java.lang.String> map =
+            internalGetAuthConfig().getMap();
+        return map.containsKey(key) ? map.get(key) : defaultValue;
+      }
+      /**
+       * <pre>
+       * Optional provider-specific auth configuration.
+       * For multi-auth providers, include "auth_mode" key (e.g., {"auth_mode": "access_keys", "aws_region_name": "us-east-1"})
+       * </pre>
+       *
+       * <code>map&lt;string, string&gt; auth_config = 5;</code>
+       */
+      @java.lang.Override
+
+      public java.lang.String getAuthConfigOrThrow(
+          java.lang.String key) {
+        if (key == null) { throw new NullPointerException("map key"); }
+        java.util.Map<java.lang.String, java.lang.String> map =
+            internalGetAuthConfig().getMap();
+        if (!map.containsKey(key)) {
+          throw new java.lang.IllegalArgumentException();
+        }
+        return map.get(key);
+      }
+
+      public Builder clearAuthConfig() {
+        internalGetMutableAuthConfig().getMutableMap()
+            .clear();
+        return this;
+      }
+      /**
+       * <pre>
+       * Optional provider-specific auth configuration.
+       * For multi-auth providers, include "auth_mode" key (e.g., {"auth_mode": "access_keys", "aws_region_name": "us-east-1"})
+       * </pre>
+       *
+       * <code>map&lt;string, string&gt; auth_config = 5;</code>
+       */
+
+      public Builder removeAuthConfig(
+          java.lang.String key) {
+        if (key == null) { throw new NullPointerException("map key"); }
+        internalGetMutableAuthConfig().getMutableMap()
+            .remove(key);
+        return this;
+      }
+      /**
+       * Use alternate mutation accessors instead.
+       */
+      @java.lang.Deprecated
+      public java.util.Map<java.lang.String, java.lang.String>
+      getMutableAuthConfig() {
+        return internalGetMutableAuthConfig().getMutableMap();
+      }
+      /**
+       * <pre>
+       * Optional provider-specific auth configuration.
+       * For multi-auth providers, include "auth_mode" key (e.g., {"auth_mode": "access_keys", "aws_region_name": "us-east-1"})
+       * </pre>
+       *
+       * <code>map&lt;string, string&gt; auth_config = 5;</code>
+       */
+      public Builder putAuthConfig(
+          java.lang.String key,
           java.lang.String value) {
+        if (key == null) { throw new NullPointerException("map key"); }
         if (value == null) {
-    throw new NullPointerException();
-  }
-  bitField0_ |= 0x00000008;
-        authConfigJson_ = value;
-        onChanged();
+  throw new NullPointerException("map value");
+}
+
+        internalGetMutableAuthConfig().getMutableMap()
+            .put(key, value);
         return this;
       }
       /**
        * <pre>
-       * Optional provider-specific auth configuration as JSON string.
+       * Optional provider-specific auth configuration.
        * For multi-auth providers, include "auth_mode" key (e.g., {"auth_mode": "access_keys", "aws_region_name": "us-east-1"})
        * </pre>
        *
-       * <code>optional string auth_config_json = 5;</code>
-       * @return This builder for chaining.
+       * <code>map&lt;string, string&gt; auth_config = 5;</code>
        */
-      public Builder clearAuthConfigJson() {
-        bitField0_ = (bitField0_ & ~0x00000008);
-        authConfigJson_ = getDefaultInstance().getAuthConfigJson();
-        onChanged();
-        return this;
-      }
-      /**
-       * <pre>
-       * Optional provider-specific auth configuration as JSON string.
-       * For multi-auth providers, include "auth_mode" key (e.g., {"auth_mode": "access_keys", "aws_region_name": "us-east-1"})
-       * </pre>
-       *
-       * <code>optional string auth_config_json = 5;</code>
-       * @param value The bytes for authConfigJson to set.
-       * @return This builder for chaining.
-       */
-      public Builder setAuthConfigJsonBytes(
-          com.google.protobuf.ByteString value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  bitField0_ |= 0x00000008;
-        authConfigJson_ = value;
-        onChanged();
+
+      public Builder putAllAuthConfig(
+          java.util.Map<java.lang.String, java.lang.String> values) {
+        internalGetMutableAuthConfig().getMutableMap()
+            .putAll(values);
         return this;
       }
 
@@ -211945,35 +212201,62 @@ public final class Service {
 
     /**
      * <pre>
-     * Optional new auth configuration as JSON string.
+     * Optional new auth configuration.
      * For multi-auth providers, include "auth_mode" key (e.g., {"auth_mode": "access_keys", "aws_region_name": "us-east-1"})
      * </pre>
      *
-     * <code>optional string auth_config_json = 4;</code>
-     * @return Whether the authConfigJson field is set.
+     * <code>map&lt;string, string&gt; auth_config = 4;</code>
      */
-    boolean hasAuthConfigJson();
+    int getAuthConfigCount();
     /**
      * <pre>
-     * Optional new auth configuration as JSON string.
+     * Optional new auth configuration.
      * For multi-auth providers, include "auth_mode" key (e.g., {"auth_mode": "access_keys", "aws_region_name": "us-east-1"})
      * </pre>
      *
-     * <code>optional string auth_config_json = 4;</code>
-     * @return The authConfigJson.
+     * <code>map&lt;string, string&gt; auth_config = 4;</code>
      */
-    java.lang.String getAuthConfigJson();
+    boolean containsAuthConfig(
+        java.lang.String key);
+    /**
+     * Use {@link #getAuthConfigMap()} instead.
+     */
+    @java.lang.Deprecated
+    java.util.Map<java.lang.String, java.lang.String>
+    getAuthConfig();
     /**
      * <pre>
-     * Optional new auth configuration as JSON string.
+     * Optional new auth configuration.
      * For multi-auth providers, include "auth_mode" key (e.g., {"auth_mode": "access_keys", "aws_region_name": "us-east-1"})
      * </pre>
      *
-     * <code>optional string auth_config_json = 4;</code>
-     * @return The bytes for authConfigJson.
+     * <code>map&lt;string, string&gt; auth_config = 4;</code>
      */
-    com.google.protobuf.ByteString
-        getAuthConfigJsonBytes();
+    java.util.Map<java.lang.String, java.lang.String>
+    getAuthConfigMap();
+    /**
+     * <pre>
+     * Optional new auth configuration.
+     * For multi-auth providers, include "auth_mode" key (e.g., {"auth_mode": "access_keys", "aws_region_name": "us-east-1"})
+     * </pre>
+     *
+     * <code>map&lt;string, string&gt; auth_config = 4;</code>
+     */
+
+    java.lang.String getAuthConfigOrDefault(
+        java.lang.String key,
+        java.lang.String defaultValue);
+    /**
+     * <pre>
+     * Optional new auth configuration.
+     * For multi-auth providers, include "auth_mode" key (e.g., {"auth_mode": "access_keys", "aws_region_name": "us-east-1"})
+     * </pre>
+     *
+     * <code>map&lt;string, string&gt; auth_config = 4;</code>
+     */
+
+    java.lang.String getAuthConfigOrThrow(
+        java.lang.String key);
 
     /**
      * <pre>
@@ -212018,7 +212301,6 @@ public final class Service {
     }
     private UpdateGatewaySecret() {
       secretId_ = "";
-      authConfigJson_ = "";
       updatedBy_ = "";
     }
 
@@ -212073,14 +212355,21 @@ public final class Service {
               break;
             }
             case 34: {
-              com.google.protobuf.ByteString bs = input.readBytes();
-              bitField0_ |= 0x00000002;
-              authConfigJson_ = bs;
+              if (!((mutable_bitField0_ & 0x00000004) != 0)) {
+                authConfig_ = com.google.protobuf.MapField.newMapField(
+                    AuthConfigDefaultEntryHolder.defaultEntry);
+                mutable_bitField0_ |= 0x00000004;
+              }
+              com.google.protobuf.MapEntry<java.lang.String, java.lang.String>
+              authConfig__ = input.readMessage(
+                  AuthConfigDefaultEntryHolder.defaultEntry.getParserForType(), extensionRegistry);
+              authConfig_.getMutableMap().put(
+                  authConfig__.getKey(), authConfig__.getValue());
               break;
             }
             case 42: {
               com.google.protobuf.ByteString bs = input.readBytes();
-              bitField0_ |= 0x00000004;
+              bitField0_ |= 0x00000002;
               updatedBy_ = bs;
               break;
             }
@@ -212115,6 +212404,8 @@ public final class Service {
       switch (number) {
         case 2:
           return internalGetSecretValue();
+        case 4:
+          return internalGetAuthConfig();
         default:
           throw new RuntimeException(
               "Invalid map field number: " + number);
@@ -212986,67 +213277,105 @@ public final class Service {
       return map.get(key);
     }
 
-    public static final int AUTH_CONFIG_JSON_FIELD_NUMBER = 4;
-    private volatile java.lang.Object authConfigJson_;
-    /**
-     * <pre>
-     * Optional new auth configuration as JSON string.
-     * For multi-auth providers, include "auth_mode" key (e.g., {"auth_mode": "access_keys", "aws_region_name": "us-east-1"})
-     * </pre>
-     *
-     * <code>optional string auth_config_json = 4;</code>
-     * @return Whether the authConfigJson field is set.
-     */
-    @java.lang.Override
-    public boolean hasAuthConfigJson() {
-      return ((bitField0_ & 0x00000002) != 0);
+    public static final int AUTH_CONFIG_FIELD_NUMBER = 4;
+    private static final class AuthConfigDefaultEntryHolder {
+      static final com.google.protobuf.MapEntry<
+          java.lang.String, java.lang.String> defaultEntry =
+              com.google.protobuf.MapEntry
+              .<java.lang.String, java.lang.String>newDefaultInstance(
+                  org.mlflow.api.proto.Service.internal_static_mlflow_UpdateGatewaySecret_AuthConfigEntry_descriptor, 
+                  com.google.protobuf.WireFormat.FieldType.STRING,
+                  "",
+                  com.google.protobuf.WireFormat.FieldType.STRING,
+                  "");
+    }
+    private com.google.protobuf.MapField<
+        java.lang.String, java.lang.String> authConfig_;
+    private com.google.protobuf.MapField<java.lang.String, java.lang.String>
+    internalGetAuthConfig() {
+      if (authConfig_ == null) {
+        return com.google.protobuf.MapField.emptyMapField(
+            AuthConfigDefaultEntryHolder.defaultEntry);
+      }
+      return authConfig_;
+    }
+
+    public int getAuthConfigCount() {
+      return internalGetAuthConfig().getMap().size();
     }
     /**
      * <pre>
-     * Optional new auth configuration as JSON string.
+     * Optional new auth configuration.
      * For multi-auth providers, include "auth_mode" key (e.g., {"auth_mode": "access_keys", "aws_region_name": "us-east-1"})
      * </pre>
      *
-     * <code>optional string auth_config_json = 4;</code>
-     * @return The authConfigJson.
+     * <code>map&lt;string, string&gt; auth_config = 4;</code>
+     */
+
+    @java.lang.Override
+    public boolean containsAuthConfig(
+        java.lang.String key) {
+      if (key == null) { throw new NullPointerException("map key"); }
+      return internalGetAuthConfig().getMap().containsKey(key);
+    }
+    /**
+     * Use {@link #getAuthConfigMap()} instead.
      */
     @java.lang.Override
-    public java.lang.String getAuthConfigJson() {
-      java.lang.Object ref = authConfigJson_;
-      if (ref instanceof java.lang.String) {
-        return (java.lang.String) ref;
-      } else {
-        com.google.protobuf.ByteString bs = 
-            (com.google.protobuf.ByteString) ref;
-        java.lang.String s = bs.toStringUtf8();
-        if (bs.isValidUtf8()) {
-          authConfigJson_ = s;
-        }
-        return s;
-      }
+    @java.lang.Deprecated
+    public java.util.Map<java.lang.String, java.lang.String> getAuthConfig() {
+      return getAuthConfigMap();
     }
     /**
      * <pre>
-     * Optional new auth configuration as JSON string.
+     * Optional new auth configuration.
      * For multi-auth providers, include "auth_mode" key (e.g., {"auth_mode": "access_keys", "aws_region_name": "us-east-1"})
      * </pre>
      *
-     * <code>optional string auth_config_json = 4;</code>
-     * @return The bytes for authConfigJson.
+     * <code>map&lt;string, string&gt; auth_config = 4;</code>
      */
     @java.lang.Override
-    public com.google.protobuf.ByteString
-        getAuthConfigJsonBytes() {
-      java.lang.Object ref = authConfigJson_;
-      if (ref instanceof java.lang.String) {
-        com.google.protobuf.ByteString b = 
-            com.google.protobuf.ByteString.copyFromUtf8(
-                (java.lang.String) ref);
-        authConfigJson_ = b;
-        return b;
-      } else {
-        return (com.google.protobuf.ByteString) ref;
+
+    public java.util.Map<java.lang.String, java.lang.String> getAuthConfigMap() {
+      return internalGetAuthConfig().getMap();
+    }
+    /**
+     * <pre>
+     * Optional new auth configuration.
+     * For multi-auth providers, include "auth_mode" key (e.g., {"auth_mode": "access_keys", "aws_region_name": "us-east-1"})
+     * </pre>
+     *
+     * <code>map&lt;string, string&gt; auth_config = 4;</code>
+     */
+    @java.lang.Override
+
+    public java.lang.String getAuthConfigOrDefault(
+        java.lang.String key,
+        java.lang.String defaultValue) {
+      if (key == null) { throw new NullPointerException("map key"); }
+      java.util.Map<java.lang.String, java.lang.String> map =
+          internalGetAuthConfig().getMap();
+      return map.containsKey(key) ? map.get(key) : defaultValue;
+    }
+    /**
+     * <pre>
+     * Optional new auth configuration.
+     * For multi-auth providers, include "auth_mode" key (e.g., {"auth_mode": "access_keys", "aws_region_name": "us-east-1"})
+     * </pre>
+     *
+     * <code>map&lt;string, string&gt; auth_config = 4;</code>
+     */
+    @java.lang.Override
+
+    public java.lang.String getAuthConfigOrThrow(
+        java.lang.String key) {
+      if (key == null) { throw new NullPointerException("map key"); }
+      java.util.Map<java.lang.String, java.lang.String> map =
+          internalGetAuthConfig().getMap();
+      if (!map.containsKey(key)) {
+        throw new java.lang.IllegalArgumentException();
       }
+      return map.get(key);
     }
 
     public static final int UPDATED_BY_FIELD_NUMBER = 5;
@@ -213061,7 +213390,7 @@ public final class Service {
      */
     @java.lang.Override
     public boolean hasUpdatedBy() {
-      return ((bitField0_ & 0x00000004) != 0);
+      return ((bitField0_ & 0x00000002) != 0);
     }
     /**
      * <pre>
@@ -213132,10 +213461,13 @@ public final class Service {
           internalGetSecretValue(),
           SecretValueDefaultEntryHolder.defaultEntry,
           2);
+      com.google.protobuf.GeneratedMessageV3
+        .serializeStringMapTo(
+          output,
+          internalGetAuthConfig(),
+          AuthConfigDefaultEntryHolder.defaultEntry,
+          4);
       if (((bitField0_ & 0x00000002) != 0)) {
-        com.google.protobuf.GeneratedMessageV3.writeString(output, 4, authConfigJson_);
-      }
-      if (((bitField0_ & 0x00000004) != 0)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 5, updatedBy_);
       }
       unknownFields.writeTo(output);
@@ -213160,10 +213492,17 @@ public final class Service {
         size += com.google.protobuf.CodedOutputStream
             .computeMessageSize(2, secretValue__);
       }
-      if (((bitField0_ & 0x00000002) != 0)) {
-        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(4, authConfigJson_);
+      for (java.util.Map.Entry<java.lang.String, java.lang.String> entry
+           : internalGetAuthConfig().getMap().entrySet()) {
+        com.google.protobuf.MapEntry<java.lang.String, java.lang.String>
+        authConfig__ = AuthConfigDefaultEntryHolder.defaultEntry.newBuilderForType()
+            .setKey(entry.getKey())
+            .setValue(entry.getValue())
+            .build();
+        size += com.google.protobuf.CodedOutputStream
+            .computeMessageSize(4, authConfig__);
       }
-      if (((bitField0_ & 0x00000004) != 0)) {
+      if (((bitField0_ & 0x00000002) != 0)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(5, updatedBy_);
       }
       size += unknownFields.getSerializedSize();
@@ -213188,11 +213527,8 @@ public final class Service {
       }
       if (!internalGetSecretValue().equals(
           other.internalGetSecretValue())) return false;
-      if (hasAuthConfigJson() != other.hasAuthConfigJson()) return false;
-      if (hasAuthConfigJson()) {
-        if (!getAuthConfigJson()
-            .equals(other.getAuthConfigJson())) return false;
-      }
+      if (!internalGetAuthConfig().equals(
+          other.internalGetAuthConfig())) return false;
       if (hasUpdatedBy() != other.hasUpdatedBy()) return false;
       if (hasUpdatedBy()) {
         if (!getUpdatedBy()
@@ -213217,9 +213553,9 @@ public final class Service {
         hash = (37 * hash) + SECRET_VALUE_FIELD_NUMBER;
         hash = (53 * hash) + internalGetSecretValue().hashCode();
       }
-      if (hasAuthConfigJson()) {
-        hash = (37 * hash) + AUTH_CONFIG_JSON_FIELD_NUMBER;
-        hash = (53 * hash) + getAuthConfigJson().hashCode();
+      if (!internalGetAuthConfig().getMap().isEmpty()) {
+        hash = (37 * hash) + AUTH_CONFIG_FIELD_NUMBER;
+        hash = (53 * hash) + internalGetAuthConfig().hashCode();
       }
       if (hasUpdatedBy()) {
         hash = (37 * hash) + UPDATED_BY_FIELD_NUMBER;
@@ -213338,6 +213674,8 @@ public final class Service {
         switch (number) {
           case 2:
             return internalGetSecretValue();
+          case 4:
+            return internalGetAuthConfig();
           default:
             throw new RuntimeException(
                 "Invalid map field number: " + number);
@@ -213349,6 +213687,8 @@ public final class Service {
         switch (number) {
           case 2:
             return internalGetMutableSecretValue();
+          case 4:
+            return internalGetMutableAuthConfig();
           default:
             throw new RuntimeException(
                 "Invalid map field number: " + number);
@@ -213383,8 +213723,7 @@ public final class Service {
         secretId_ = "";
         bitField0_ = (bitField0_ & ~0x00000001);
         internalGetMutableSecretValue().clear();
-        authConfigJson_ = "";
-        bitField0_ = (bitField0_ & ~0x00000004);
+        internalGetMutableAuthConfig().clear();
         updatedBy_ = "";
         bitField0_ = (bitField0_ & ~0x00000008);
         return this;
@@ -213421,12 +213760,10 @@ public final class Service {
         result.secretId_ = secretId_;
         result.secretValue_ = internalGetSecretValue();
         result.secretValue_.makeImmutable();
-        if (((from_bitField0_ & 0x00000004) != 0)) {
-          to_bitField0_ |= 0x00000002;
-        }
-        result.authConfigJson_ = authConfigJson_;
+        result.authConfig_ = internalGetAuthConfig();
+        result.authConfig_.makeImmutable();
         if (((from_bitField0_ & 0x00000008) != 0)) {
-          to_bitField0_ |= 0x00000004;
+          to_bitField0_ |= 0x00000002;
         }
         result.updatedBy_ = updatedBy_;
         result.bitField0_ = to_bitField0_;
@@ -213485,11 +213822,8 @@ public final class Service {
         }
         internalGetMutableSecretValue().mergeFrom(
             other.internalGetSecretValue());
-        if (other.hasAuthConfigJson()) {
-          bitField0_ |= 0x00000004;
-          authConfigJson_ = other.authConfigJson_;
-          onChanged();
-        }
+        internalGetMutableAuthConfig().mergeFrom(
+            other.internalGetAuthConfig());
         if (other.hasUpdatedBy()) {
           bitField0_ |= 0x00000008;
           updatedBy_ = other.updatedBy_;
@@ -213806,117 +214140,169 @@ public final class Service {
         return this;
       }
 
-      private java.lang.Object authConfigJson_ = "";
-      /**
-       * <pre>
-       * Optional new auth configuration as JSON string.
-       * For multi-auth providers, include "auth_mode" key (e.g., {"auth_mode": "access_keys", "aws_region_name": "us-east-1"})
-       * </pre>
-       *
-       * <code>optional string auth_config_json = 4;</code>
-       * @return Whether the authConfigJson field is set.
-       */
-      public boolean hasAuthConfigJson() {
-        return ((bitField0_ & 0x00000004) != 0);
-      }
-      /**
-       * <pre>
-       * Optional new auth configuration as JSON string.
-       * For multi-auth providers, include "auth_mode" key (e.g., {"auth_mode": "access_keys", "aws_region_name": "us-east-1"})
-       * </pre>
-       *
-       * <code>optional string auth_config_json = 4;</code>
-       * @return The authConfigJson.
-       */
-      public java.lang.String getAuthConfigJson() {
-        java.lang.Object ref = authConfigJson_;
-        if (!(ref instanceof java.lang.String)) {
-          com.google.protobuf.ByteString bs =
-              (com.google.protobuf.ByteString) ref;
-          java.lang.String s = bs.toStringUtf8();
-          if (bs.isValidUtf8()) {
-            authConfigJson_ = s;
-          }
-          return s;
-        } else {
-          return (java.lang.String) ref;
+      private com.google.protobuf.MapField<
+          java.lang.String, java.lang.String> authConfig_;
+      private com.google.protobuf.MapField<java.lang.String, java.lang.String>
+      internalGetAuthConfig() {
+        if (authConfig_ == null) {
+          return com.google.protobuf.MapField.emptyMapField(
+              AuthConfigDefaultEntryHolder.defaultEntry);
         }
+        return authConfig_;
       }
-      /**
-       * <pre>
-       * Optional new auth configuration as JSON string.
-       * For multi-auth providers, include "auth_mode" key (e.g., {"auth_mode": "access_keys", "aws_region_name": "us-east-1"})
-       * </pre>
-       *
-       * <code>optional string auth_config_json = 4;</code>
-       * @return The bytes for authConfigJson.
-       */
-      public com.google.protobuf.ByteString
-          getAuthConfigJsonBytes() {
-        java.lang.Object ref = authConfigJson_;
-        if (ref instanceof String) {
-          com.google.protobuf.ByteString b = 
-              com.google.protobuf.ByteString.copyFromUtf8(
-                  (java.lang.String) ref);
-          authConfigJson_ = b;
-          return b;
-        } else {
-          return (com.google.protobuf.ByteString) ref;
+      private com.google.protobuf.MapField<java.lang.String, java.lang.String>
+      internalGetMutableAuthConfig() {
+        onChanged();;
+        if (authConfig_ == null) {
+          authConfig_ = com.google.protobuf.MapField.newMapField(
+              AuthConfigDefaultEntryHolder.defaultEntry);
         }
+        if (!authConfig_.isMutable()) {
+          authConfig_ = authConfig_.copy();
+        }
+        return authConfig_;
+      }
+
+      public int getAuthConfigCount() {
+        return internalGetAuthConfig().getMap().size();
       }
       /**
        * <pre>
-       * Optional new auth configuration as JSON string.
+       * Optional new auth configuration.
        * For multi-auth providers, include "auth_mode" key (e.g., {"auth_mode": "access_keys", "aws_region_name": "us-east-1"})
        * </pre>
        *
-       * <code>optional string auth_config_json = 4;</code>
-       * @param value The authConfigJson to set.
-       * @return This builder for chaining.
+       * <code>map&lt;string, string&gt; auth_config = 4;</code>
        */
-      public Builder setAuthConfigJson(
+
+      @java.lang.Override
+      public boolean containsAuthConfig(
+          java.lang.String key) {
+        if (key == null) { throw new NullPointerException("map key"); }
+        return internalGetAuthConfig().getMap().containsKey(key);
+      }
+      /**
+       * Use {@link #getAuthConfigMap()} instead.
+       */
+      @java.lang.Override
+      @java.lang.Deprecated
+      public java.util.Map<java.lang.String, java.lang.String> getAuthConfig() {
+        return getAuthConfigMap();
+      }
+      /**
+       * <pre>
+       * Optional new auth configuration.
+       * For multi-auth providers, include "auth_mode" key (e.g., {"auth_mode": "access_keys", "aws_region_name": "us-east-1"})
+       * </pre>
+       *
+       * <code>map&lt;string, string&gt; auth_config = 4;</code>
+       */
+      @java.lang.Override
+
+      public java.util.Map<java.lang.String, java.lang.String> getAuthConfigMap() {
+        return internalGetAuthConfig().getMap();
+      }
+      /**
+       * <pre>
+       * Optional new auth configuration.
+       * For multi-auth providers, include "auth_mode" key (e.g., {"auth_mode": "access_keys", "aws_region_name": "us-east-1"})
+       * </pre>
+       *
+       * <code>map&lt;string, string&gt; auth_config = 4;</code>
+       */
+      @java.lang.Override
+
+      public java.lang.String getAuthConfigOrDefault(
+          java.lang.String key,
+          java.lang.String defaultValue) {
+        if (key == null) { throw new NullPointerException("map key"); }
+        java.util.Map<java.lang.String, java.lang.String> map =
+            internalGetAuthConfig().getMap();
+        return map.containsKey(key) ? map.get(key) : defaultValue;
+      }
+      /**
+       * <pre>
+       * Optional new auth configuration.
+       * For multi-auth providers, include "auth_mode" key (e.g., {"auth_mode": "access_keys", "aws_region_name": "us-east-1"})
+       * </pre>
+       *
+       * <code>map&lt;string, string&gt; auth_config = 4;</code>
+       */
+      @java.lang.Override
+
+      public java.lang.String getAuthConfigOrThrow(
+          java.lang.String key) {
+        if (key == null) { throw new NullPointerException("map key"); }
+        java.util.Map<java.lang.String, java.lang.String> map =
+            internalGetAuthConfig().getMap();
+        if (!map.containsKey(key)) {
+          throw new java.lang.IllegalArgumentException();
+        }
+        return map.get(key);
+      }
+
+      public Builder clearAuthConfig() {
+        internalGetMutableAuthConfig().getMutableMap()
+            .clear();
+        return this;
+      }
+      /**
+       * <pre>
+       * Optional new auth configuration.
+       * For multi-auth providers, include "auth_mode" key (e.g., {"auth_mode": "access_keys", "aws_region_name": "us-east-1"})
+       * </pre>
+       *
+       * <code>map&lt;string, string&gt; auth_config = 4;</code>
+       */
+
+      public Builder removeAuthConfig(
+          java.lang.String key) {
+        if (key == null) { throw new NullPointerException("map key"); }
+        internalGetMutableAuthConfig().getMutableMap()
+            .remove(key);
+        return this;
+      }
+      /**
+       * Use alternate mutation accessors instead.
+       */
+      @java.lang.Deprecated
+      public java.util.Map<java.lang.String, java.lang.String>
+      getMutableAuthConfig() {
+        return internalGetMutableAuthConfig().getMutableMap();
+      }
+      /**
+       * <pre>
+       * Optional new auth configuration.
+       * For multi-auth providers, include "auth_mode" key (e.g., {"auth_mode": "access_keys", "aws_region_name": "us-east-1"})
+       * </pre>
+       *
+       * <code>map&lt;string, string&gt; auth_config = 4;</code>
+       */
+      public Builder putAuthConfig(
+          java.lang.String key,
           java.lang.String value) {
+        if (key == null) { throw new NullPointerException("map key"); }
         if (value == null) {
-    throw new NullPointerException();
-  }
-  bitField0_ |= 0x00000004;
-        authConfigJson_ = value;
-        onChanged();
+  throw new NullPointerException("map value");
+}
+
+        internalGetMutableAuthConfig().getMutableMap()
+            .put(key, value);
         return this;
       }
       /**
        * <pre>
-       * Optional new auth configuration as JSON string.
+       * Optional new auth configuration.
        * For multi-auth providers, include "auth_mode" key (e.g., {"auth_mode": "access_keys", "aws_region_name": "us-east-1"})
        * </pre>
        *
-       * <code>optional string auth_config_json = 4;</code>
-       * @return This builder for chaining.
+       * <code>map&lt;string, string&gt; auth_config = 4;</code>
        */
-      public Builder clearAuthConfigJson() {
-        bitField0_ = (bitField0_ & ~0x00000004);
-        authConfigJson_ = getDefaultInstance().getAuthConfigJson();
-        onChanged();
-        return this;
-      }
-      /**
-       * <pre>
-       * Optional new auth configuration as JSON string.
-       * For multi-auth providers, include "auth_mode" key (e.g., {"auth_mode": "access_keys", "aws_region_name": "us-east-1"})
-       * </pre>
-       *
-       * <code>optional string auth_config_json = 4;</code>
-       * @param value The bytes for authConfigJson to set.
-       * @return This builder for chaining.
-       */
-      public Builder setAuthConfigJsonBytes(
-          com.google.protobuf.ByteString value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  bitField0_ |= 0x00000004;
-        authConfigJson_ = value;
-        onChanged();
+
+      public Builder putAllAuthConfig(
+          java.util.Map<java.lang.String, java.lang.String> values) {
+        internalGetMutableAuthConfig().getMutableMap()
+            .putAll(values);
         return this;
       }
 
@@ -247362,6 +247748,11 @@ public final class Service {
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_mlflow_GatewaySecretInfo_MaskedValuesEntry_fieldAccessorTable;
   private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_mlflow_GatewaySecretInfo_AuthConfigEntry_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_mlflow_GatewaySecretInfo_AuthConfigEntry_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_mlflow_GatewayModelDefinition_descriptor;
   private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
@@ -247397,6 +247788,11 @@ public final class Service {
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_mlflow_CreateGatewaySecret_SecretValueEntry_fieldAccessorTable;
   private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_mlflow_CreateGatewaySecret_AuthConfigEntry_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_mlflow_CreateGatewaySecret_AuthConfigEntry_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_mlflow_CreateGatewaySecret_Response_descriptor;
   private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
@@ -247421,6 +247817,11 @@ public final class Service {
   private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_mlflow_UpdateGatewaySecret_SecretValueEntry_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_mlflow_UpdateGatewaySecret_AuthConfigEntry_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_mlflow_UpdateGatewaySecret_AuthConfigEntry_fieldAccessorTable;
   private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_mlflow_UpdateGatewaySecret_Response_descriptor;
   private static final 
@@ -248105,533 +248506,540 @@ public final class Service {
       "se]\"\221\001\n\006Scorer\022\025\n\rexperiment_id\030\001 \001(\005\022\023\n" +
       "\013scorer_name\030\002 \001(\t\022\026\n\016scorer_version\030\003 \001" +
       "(\005\022\031\n\021serialized_scorer\030\004 \001(\t\022\025\n\rcreatio" +
-      "n_time\030\005 \001(\003\022\021\n\tscorer_id\030\006 \001(\t\"\272\002\n\021Gate" +
+      "n_time\030\005 \001(\003\022\021\n\tscorer_id\030\006 \001(\t\"\223\003\n\021Gate" +
       "waySecretInfo\022\021\n\tsecret_id\030\001 \001(\t\022\023\n\013secr" +
       "et_name\030\002 \001(\t\022B\n\rmasked_values\030\003 \003(\0132+.m" +
       "lflow.GatewaySecretInfo.MaskedValuesEntr" +
       "y\022\022\n\ncreated_at\030\004 \001(\003\022\027\n\017last_updated_at" +
       "\030\005 \001(\003\022\020\n\010provider\030\006 \001(\t\022\022\n\ncreated_by\030\007" +
-      " \001(\t\022\027\n\017last_updated_by\030\010 \001(\t\022\030\n\020auth_co" +
-      "nfig_json\030\t \001(\t\0323\n\021MaskedValuesEntry\022\013\n\003" +
-      "key\030\001 \001(\t\022\r\n\005value\030\002 \001(\t:\0028\001\"\353\001\n\026Gateway" +
-      "ModelDefinition\022\033\n\023model_definition_id\030\001" +
-      " \001(\t\022\014\n\004name\030\002 \001(\t\022\021\n\tsecret_id\030\003 \001(\t\022\023\n" +
-      "\013secret_name\030\004 \001(\t\022\020\n\010provider\030\005 \001(\t\022\022\n\n" +
-      "model_name\030\006 \001(\t\022\022\n\ncreated_at\030\007 \001(\003\022\027\n\017" +
-      "last_updated_at\030\010 \001(\003\022\022\n\ncreated_by\030\t \001(" +
-      "\t\022\027\n\017last_updated_by\030\n \001(\t\"\325\001\n\033GatewayEn" +
-      "dpointModelMapping\022\022\n\nmapping_id\030\001 \001(\t\022\023" +
-      "\n\013endpoint_id\030\002 \001(\t\022\033\n\023model_definition_" +
-      "id\030\003 \001(\t\0228\n\020model_definition\030\004 \001(\0132\036.mlf" +
-      "low.GatewayModelDefinition\022\016\n\006weight\030\005 \001" +
-      "(\002\022\022\n\ncreated_at\030\006 \001(\003\022\022\n\ncreated_by\030\007 \001" +
-      "(\t\"\365\001\n\017GatewayEndpoint\022\023\n\013endpoint_id\030\001 " +
-      "\001(\t\022\014\n\004name\030\002 \001(\t\022\022\n\ncreated_at\030\003 \001(\003\022\027\n" +
-      "\017last_updated_at\030\004 \001(\003\022;\n\016model_mappings" +
-      "\030\005 \003(\0132#.mlflow.GatewayEndpointModelMapp" +
-      "ing\022\022\n\ncreated_by\030\006 \001(\t\022\027\n\017last_updated_" +
-      "by\030\007 \001(\t\022(\n\004tags\030\010 \003(\0132\032.mlflow.GatewayE" +
-      "ndpointTag\"0\n\022GatewayEndpointTag\022\013\n\003key\030" +
-      "\001 \001(\t\022\r\n\005value\030\002 \001(\t\"\263\001\n\026GatewayEndpoint" +
-      "Binding\022\023\n\013endpoint_id\030\001 \001(\t\022\025\n\rresource" +
-      "_type\030\002 \001(\t\022\023\n\013resource_id\030\003 \001(\t\022\022\n\ncrea" +
-      "ted_at\030\004 \001(\003\022\027\n\017last_updated_at\030\005 \001(\003\022\022\n" +
-      "\ncreated_by\030\006 \001(\t\022\027\n\017last_updated_by\030\007 \001" +
-      "(\t\"\260\002\n\023CreateGatewaySecret\022\023\n\013secret_nam" +
-      "e\030\001 \001(\t\022B\n\014secret_value\030\002 \003(\0132,.mlflow.C" +
-      "reateGatewaySecret.SecretValueEntry\022\020\n\010p" +
-      "rovider\030\003 \001(\t\022\030\n\020auth_config_json\030\005 \001(\t\022" +
-      "\022\n\ncreated_by\030\006 \001(\t\0322\n\020SecretValueEntry\022" +
-      "\013\n\003key\030\001 \001(\t\022\r\n\005value\030\002 \001(\t:\0028\001\0325\n\010Respo" +
-      "nse\022)\n\006secret\030\001 \001(\0132\031.mlflow.GatewaySecr" +
-      "etInfoJ\004\010\004\020\005R\017credential_name\"u\n\024GetGate" +
-      "waySecretInfo\022\021\n\tsecret_id\030\001 \001(\t\022\023\n\013secr" +
-      "et_name\030\002 \001(\t\0325\n\010Response\022)\n\006secret\030\001 \001(" +
-      "\0132\031.mlflow.GatewaySecretInfo\"\234\002\n\023UpdateG" +
-      "atewaySecret\022\021\n\tsecret_id\030\001 \001(\t\022B\n\014secre" +
-      "t_value\030\002 \003(\0132,.mlflow.UpdateGatewaySecr" +
-      "et.SecretValueEntry\022\030\n\020auth_config_json\030" +
-      "\004 \001(\t\022\022\n\nupdated_by\030\005 \001(\t\0322\n\020SecretValue" +
-      "Entry\022\013\n\003key\030\001 \001(\t\022\r\n\005value\030\002 \001(\t:\0028\001\0325\n" +
-      "\010Response\022)\n\006secret\030\001 \001(\0132\031.mlflow.Gatew" +
-      "aySecretInfoJ\004\010\003\020\004R\017credential_name\"4\n\023D" +
-      "eleteGatewaySecret\022\021\n\tsecret_id\030\001 \001(\t\032\n\n" +
-      "\010Response\"b\n\026ListGatewaySecretInfos\022\020\n\010p" +
-      "rovider\030\001 \001(\t\0326\n\010Response\022*\n\007secrets\030\001 \003" +
-      "(\0132\031.mlflow.GatewaySecretInfo\"\277\001\n\034Create" +
-      "GatewayModelDefinition\022\014\n\004name\030\001 \001(\t\022\021\n\t" +
-      "secret_id\030\002 \001(\t\022\020\n\010provider\030\003 \001(\t\022\022\n\nmod" +
-      "el_name\030\004 \001(\t\022\022\n\ncreated_by\030\005 \001(\t\032D\n\010Res" +
-      "ponse\0228\n\020model_definition\030\001 \001(\0132\036.mlflow" +
-      ".GatewayModelDefinition\"~\n\031GetGatewayMod" +
-      "elDefinition\022\033\n\023model_definition_id\030\001 \001(" +
-      "\t\032D\n\010Response\0228\n\020model_definition\030\001 \001(\0132" +
-      "\036.mlflow.GatewayModelDefinition\"\211\001\n\033List" +
-      "GatewayModelDefinitions\022\020\n\010provider\030\001 \001(" +
-      "\t\022\021\n\tsecret_id\030\002 \001(\t\032E\n\010Response\0229\n\021mode" +
-      "l_definitions\030\001 \003(\0132\036.mlflow.GatewayMode" +
-      "lDefinition\"\334\001\n\034UpdateGatewayModelDefini" +
-      "tion\022\033\n\023model_definition_id\030\001 \001(\t\022\014\n\004nam" +
-      "e\030\002 \001(\t\022\021\n\tsecret_id\030\003 \001(\t\022\022\n\nmodel_name" +
-      "\030\004 \001(\t\022\022\n\nupdated_by\030\005 \001(\t\022\020\n\010provider\030\006" +
-      " \001(\t\032D\n\010Response\0228\n\020model_definition\030\001 \001" +
-      "(\0132\036.mlflow.GatewayModelDefinition\"G\n\034De" +
-      "leteGatewayModelDefinition\022\033\n\023model_defi" +
-      "nition_id\030\001 \001(\t\032\n\n\010Response\"\216\001\n\025CreateGa" +
-      "tewayEndpoint\022\014\n\004name\030\001 \001(\t\022\034\n\024model_def" +
-      "inition_ids\030\002 \003(\t\022\022\n\ncreated_by\030\003 \001(\t\0325\n" +
-      "\010Response\022)\n\010endpoint\030\001 \001(\0132\027.mlflow.Gat" +
-      "ewayEndpoint\"n\n\022GetGatewayEndpoint\022\023\n\013en" +
-      "dpoint_id\030\001 \001(\t\022\014\n\004name\030\002 \001(\t\0325\n\010Respons" +
-      "e\022)\n\010endpoint\030\001 \001(\0132\027.mlflow.GatewayEndp" +
-      "oint\"\205\001\n\025UpdateGatewayEndpoint\022\023\n\013endpoi" +
-      "nt_id\030\001 \001(\t\022\014\n\004name\030\002 \001(\t\022\022\n\nupdated_by\030" +
-      "\003 \001(\t\0325\n\010Response\022)\n\010endpoint\030\001 \001(\0132\027.ml" +
-      "flow.GatewayEndpoint\"8\n\025DeleteGatewayEnd" +
-      "point\022\023\n\013endpoint_id\030\001 \001(\t\032\n\n\010Response\"s" +
-      "\n\024ListGatewayEndpoints\022\020\n\010provider\030\001 \001(\t" +
-      "\022\021\n\tsecret_id\030\002 \001(\t\0326\n\010Response\022*\n\tendpo" +
-      "ints\030\001 \003(\0132\027.mlflow.GatewayEndpoint\"\266\001\n\034" +
-      "AttachModelToGatewayEndpoint\022\023\n\013endpoint" +
-      "_id\030\001 \001(\t\022\033\n\023model_definition_id\030\002 \001(\t\022\016" +
-      "\n\006weight\030\003 \001(\002\022\022\n\ncreated_by\030\004 \001(\t\032@\n\010Re" +
-      "sponse\0224\n\007mapping\030\001 \001(\0132#.mlflow.Gateway" +
-      "EndpointModelMapping\"^\n\036DetachModelFromG" +
-      "atewayEndpoint\022\023\n\013endpoint_id\030\001 \001(\t\022\033\n\023m" +
-      "odel_definition_id\030\002 \001(\t\032\n\n\010Response\"\260\001\n" +
-      "\034CreateGatewayEndpointBinding\022\023\n\013endpoin" +
-      "t_id\030\001 \001(\t\022\025\n\rresource_type\030\002 \001(\t\022\023\n\013res" +
-      "ource_id\030\003 \001(\t\022\022\n\ncreated_by\030\004 \001(\t\032;\n\010Re" +
-      "sponse\022/\n\007binding\030\001 \001(\0132\036.mlflow.Gateway" +
-      "EndpointBinding\"k\n\034DeleteGatewayEndpoint" +
-      "Binding\022\023\n\013endpoint_id\030\001 \001(\t\022\025\n\rresource" +
-      "_type\030\002 \001(\t\022\023\n\013resource_id\030\003 \001(\t\032\n\n\010Resp" +
-      "onse\"\234\001\n\033ListGatewayEndpointBindings\022\023\n\013" +
-      "endpoint_id\030\001 \001(\t\022\025\n\rresource_type\030\002 \001(\t" +
-      "\022\023\n\013resource_id\030\003 \001(\t\032<\n\010Response\0220\n\010bin" +
-      "dings\030\001 \003(\0132\036.mlflow.GatewayEndpointBind" +
-      "ing\"T\n\025SetGatewayEndpointTag\022\023\n\013endpoint" +
-      "_id\030\001 \001(\t\022\013\n\003key\030\002 \001(\t\022\r\n\005value\030\003 \001(\t\032\n\n" +
-      "\010Response\"H\n\030DeleteGatewayEndpointTag\022\023\n" +
-      "\013endpoint_id\030\001 \001(\t\022\013\n\003key\030\002 \001(\t\032\n\n\010Respo" +
-      "nse\"9\n\020GetSecretsConfig\032%\n\010Response\022\031\n\021s" +
-      "ecrets_available\030\001 \001(\010*6\n\010ViewType\022\017\n\013AC" +
-      "TIVE_ONLY\020\001\022\020\n\014DELETED_ONLY\020\002\022\007\n\003ALL\020\003*I" +
-      "\n\nSourceType\022\014\n\010NOTEBOOK\020\001\022\007\n\003JOB\020\002\022\013\n\007P" +
-      "ROJECT\020\003\022\t\n\005LOCAL\020\004\022\014\n\007UNKNOWN\020\350\007*M\n\tRun" +
-      "Status\022\013\n\007RUNNING\020\001\022\r\n\tSCHEDULED\020\002\022\014\n\010FI" +
-      "NISHED\020\003\022\n\n\006FAILED\020\004\022\n\n\006KILLED\020\005*O\n\013Trac" +
-      "eStatus\022\034\n\030TRACE_STATUS_UNSPECIFIED\020\000\022\006\n" +
-      "\002OK\020\001\022\t\n\005ERROR\020\002\022\017\n\013IN_PROGRESS\020\003*8\n\016Met" +
-      "ricViewType\022\n\n\006TRACES\020\001\022\t\n\005SPANS\020\002\022\017\n\013AS" +
-      "SESSMENTS\020\003*P\n\017AggregationType\022\t\n\005COUNT\020" +
-      "\001\022\007\n\003SUM\020\002\022\007\n\003AVG\020\003\022\016\n\nPERCENTILE\020\004\022\007\n\003M" +
-      "IN\020\005\022\007\n\003MAX\020\006*\212\001\n\021LoggedModelStatus\022#\n\037L" +
-      "OGGED_MODEL_STATUS_UNSPECIFIED\020\000\022\030\n\024LOGG" +
-      "ED_MODEL_PENDING\020\001\022\026\n\022LOGGED_MODEL_READY" +
-      "\020\002\022\036\n\032LOGGED_MODEL_UPLOAD_FAILED\020\0032\236}\n\rM" +
-      "lflowService\022\246\001\n\023getExperimentByName\022\033.m" +
-      "lflow.GetExperimentByName\032$.mlflow.GetEx" +
-      "perimentByName.Response\"L\362\206\031H\n,\n\003GET\022\037/m" +
-      "lflow/experiments/get-by-name\032\004\010\002\020\000\020\001*\026G" +
-      "et Experiment By Name\022\224\001\n\020createExperime" +
-      "nt\022\030.mlflow.CreateExperiment\032!.mlflow.Cr" +
-      "eateExperiment.Response\"C\362\206\031?\n(\n\004POST\022\032/" +
-      "mlflow/experiments/create\032\004\010\002\020\000\020\001*\021Creat" +
-      "e Experiment\022\301\001\n\021searchExperiments\022\031.mlf" +
-      "low.SearchExperiments\032\".mlflow.SearchExp" +
-      "eriments.Response\"m\362\206\031i\n(\n\004POST\022\032/mlflow" +
-      "/experiments/search\032\004\010\002\020\000\n\'\n\003GET\022\032/mlflo" +
-      "w/experiments/search\032\004\010\002\020\000\020\001*\022Search Exp" +
-      "eriments\022\210\001\n\rgetExperiment\022\025.mlflow.GetE" +
-      "xperiment\032\036.mlflow.GetExperiment.Respons" +
-      "e\"@\362\206\0318\n$\n\003GET\022\027/mlflow/experiments/get\032" +
-      "\004\010\002\020\000\020\001*\016Get Experiment\272\214\031\000\022\224\001\n\020deleteEx" +
-      "periment\022\030.mlflow.DeleteExperiment\032!.mlf" +
-      "low.DeleteExperiment.Response\"C\362\206\031?\n(\n\004P" +
-      "OST\022\032/mlflow/experiments/delete\032\004\010\002\020\000\020\001*" +
-      "\021Delete Experiment\022\231\001\n\021restoreExperiment" +
-      "\022\031.mlflow.RestoreExperiment\032\".mlflow.Res" +
-      "toreExperiment.Response\"E\362\206\031A\n)\n\004POST\022\033/" +
-      "mlflow/experiments/restore\032\004\010\002\020\000\020\001*\022Rest" +
-      "ore Experiment\022\224\001\n\020updateExperiment\022\030.ml" +
-      "flow.UpdateExperiment\032!.mlflow.UpdateExp" +
-      "eriment.Response\"C\362\206\031?\n(\n\004POST\022\032/mlflow/" +
-      "experiments/update\032\004\010\002\020\000\020\001*\021Update Exper" +
-      "iment\022q\n\tcreateRun\022\021.mlflow.CreateRun\032\032." +
-      "mlflow.CreateRun.Response\"5\362\206\0311\n!\n\004POST\022" +
-      "\023/mlflow/runs/create\032\004\010\002\020\000\020\001*\nCreate Run" +
-      "\022q\n\tupdateRun\022\021.mlflow.UpdateRun\032\032.mlflo" +
-      "w.UpdateRun.Response\"5\362\206\0311\n!\n\004POST\022\023/mlf" +
-      "low/runs/update\032\004\010\002\020\000\020\001*\nUpdate Run\022q\n\td" +
-      "eleteRun\022\021.mlflow.DeleteRun\032\032.mlflow.Del" +
-      "eteRun.Response\"5\362\206\0311\n!\n\004POST\022\023/mlflow/r" +
-      "uns/delete\032\004\010\002\020\000\020\001*\nDelete Run\022v\n\nrestor" +
-      "eRun\022\022.mlflow.RestoreRun\032\033.mlflow.Restor" +
-      "eRun.Response\"7\362\206\0313\n\"\n\004POST\022\024/mlflow/run" +
-      "s/restore\032\004\010\002\020\000\020\001*\013Restore Run\022u\n\tlogMet" +
-      "ric\022\021.mlflow.LogMetric\032\032.mlflow.LogMetri" +
-      "c.Response\"9\362\206\0315\n%\n\004POST\022\027/mlflow/runs/l" +
-      "og-metric\032\004\010\002\020\000\020\001*\nLog Metric\022t\n\010logPara" +
-      "m\022\020.mlflow.LogParam\032\031.mlflow.LogParam.Re" +
-      "sponse\";\362\206\0317\n(\n\004POST\022\032/mlflow/runs/log-p" +
-      "arameter\032\004\010\002\020\000\020\001*\tLog Param\022\241\001\n\020setExper" +
-      "imentTag\022\030.mlflow.SetExperimentTag\032!.mlf" +
-      "low.SetExperimentTag.Response\"P\362\206\031L\n4\n\004P" +
-      "OST\022&/mlflow/experiments/set-experiment-" +
-      "tag\032\004\010\002\020\000\020\001*\022Set Experiment Tag\022\260\001\n\023dele" +
-      "teExperimentTag\022\033.mlflow.DeleteExperimen" +
-      "tTag\032$.mlflow.DeleteExperimentTag.Respon" +
-      "se\"V\362\206\031R\n7\n\004POST\022)/mlflow/experiments/de" +
-      "lete-experiment-tag\032\004\010\002\020\000\020\001*\025Delete Expe" +
-      "riment Tag\022f\n\006setTag\022\016.mlflow.SetTag\032\027.m" +
-      "lflow.SetTag.Response\"3\362\206\031/\n\"\n\004POST\022\024/ml" +
-      "flow/runs/set-tag\032\004\010\002\020\000\020\001*\007Set Tag\022\210\001\n\013s" +
-      "etTraceTag\022\023.mlflow.SetTraceTag\032\034.mlflow" +
-      ".SetTraceTag.Response\"F\362\206\031B\n/\n\005PATCH\022 /m" +
-      "lflow/traces/{request_id}/tags\032\004\010\002\020\000\020\003*\r" +
-      "Set Trace Tag\022\217\001\n\rsetTraceTagV3\022\025.mlflow" +
-      ".SetTraceTagV3\032\036.mlflow.SetTraceTagV3.Re" +
-      "sponse\"G\362\206\031C\n-\n\005PATCH\022\036/mlflow/traces/{t" +
-      "race_id}/tags\032\004\010\003\020\000\020\003*\020Set Trace Tag V3\022" +
-      "\225\001\n\016deleteTraceTag\022\026.mlflow.DeleteTraceT" +
-      "ag\032\037.mlflow.DeleteTraceTag.Response\"J\362\206\031" +
-      "F\n0\n\006DELETE\022 /mlflow/traces/{request_id}" +
-      "/tags\032\004\010\002\020\000\020\003*\020Delete Trace Tag\022\234\001\n\020dele" +
-      "teTraceTagV3\022\030.mlflow.DeleteTraceTagV3\032!" +
-      ".mlflow.DeleteTraceTagV3.Response\"K\362\206\031G\n" +
-      ".\n\006DELETE\022\036/mlflow/traces/{trace_id}/tag" +
-      "s\032\004\010\003\020\000\020\003*\023Delete Trace Tag V3\022u\n\tdelete" +
-      "Tag\022\021.mlflow.DeleteTag\032\032.mlflow.DeleteTa" +
-      "g.Response\"9\362\206\0315\n%\n\004POST\022\027/mlflow/runs/d" +
-      "elete-tag\032\004\010\002\020\000\020\001*\nDelete Tag\022e\n\006getRun\022" +
-      "\016.mlflow.GetRun\032\027.mlflow.GetRun.Response" +
-      "\"2\362\206\031*\n\035\n\003GET\022\020/mlflow/runs/get\032\004\010\002\020\000\020\001*" +
-      "\007Get Run\272\214\031\000\022y\n\nsearchRuns\022\022.mlflow.Sear" +
-      "chRuns\032\033.mlflow.SearchRuns.Response\":\362\206\031" +
-      "2\n!\n\004POST\022\023/mlflow/runs/search\032\004\010\002\020\000\020\001*\013" +
-      "Search Runs\272\214\031\000\022\207\001\n\rlistArtifacts\022\025.mlfl" +
-      "ow.ListArtifacts\032\036.mlflow.ListArtifacts." +
-      "Response\"?\362\206\0317\n#\n\003GET\022\026/mlflow/artifacts" +
-      "/list\032\004\010\002\020\000\020\001*\016List Artifacts\272\214\031\000\022\225\001\n\020ge" +
-      "tMetricHistory\022\030.mlflow.GetMetricHistory" +
-      "\032!.mlflow.GetMetricHistory.Response\"D\362\206\031" +
-      "@\n(\n\003GET\022\033/mlflow/metrics/get-history\032\004\010" +
-      "\002\020\000\020\001*\022Get Metric History\022\267\001\n\034getMetricH" +
-      "istoryBulkInterval\022$.mlflow.GetMetricHis" +
-      "toryBulkInterval\032-.mlflow.GetMetricHisto" +
-      "ryBulkInterval.Response\"B\362\206\031:\n6\n\003GET\022)/m" +
-      "lflow/metrics/get-history-bulk-interval\032" +
-      "\004\010\002\020\013\020\003\272\214\031\000\022p\n\010logBatch\022\020.mlflow.LogBatc" +
-      "h\032\031.mlflow.LogBatch.Response\"7\362\206\0313\n$\n\004PO" +
-      "ST\022\026/mlflow/runs/log-batch\032\004\010\002\020\000\020\001*\tLog " +
-      "Batch\022p\n\010logModel\022\020.mlflow.LogModel\032\031.ml" +
-      "flow.LogModel.Response\"7\362\206\0313\n$\n\004POST\022\026/m" +
-      "lflow/runs/log-model\032\004\010\002\020\000\020\001*\tLog Model\022" +
-      "u\n\tlogInputs\022\021.mlflow.LogInputs\032\032.mlflow" +
-      ".LogInputs.Response\"9\362\206\0315\n%\n\004POST\022\027/mlfl" +
-      "ow/runs/log-inputs\032\004\010\002\020\000\020\001*\nLog Inputs\022v" +
-      "\n\nlogOutputs\022\022.mlflow.LogOutputs\032\033.mlflo" +
-      "w.LogOutputs.Response\"7\362\206\0313\n\"\n\004POST\022\024/ml" +
-      "flow/runs/outputs\032\004\010\002\020\000\020\003*\013Log Outputs\022\207" +
-      "\001\n\016searchDatasets\022\026.mlflow.SearchDataset" +
-      "s\032\037.mlflow.SearchDatasets.Response\"<\362\206\0314" +
-      "\n0\n\004POST\022\"mlflow/experiments/search-data" +
-      "sets\032\004\010\002\020\000\020\003\272\214\031\000\022p\n\nstartTrace\022\022.mlflow." +
-      "StartTrace\032\033.mlflow.StartTrace.Response\"" +
-      "1\362\206\031-\n\034\n\004POST\022\016/mlflow/traces\032\004\010\002\020\000\020\003*\013S" +
-      "tart Trace\022v\n\010endTrace\022\020.mlflow.EndTrace" +
-      "\032\031.mlflow.EndTrace.Response\"=\362\206\0319\n*\n\005PAT" +
-      "CH\022\033/mlflow/traces/{request_id}\032\004\010\002\020\000\020\003*" +
-      "\tEnd Trace\022\211\001\n\014getTraceInfo\022\024.mlflow.Get" +
-      "TraceInfo\032\035.mlflow.GetTraceInfo.Response" +
-      "\"D\362\206\031@\n-\n\003GET\022 /mlflow/traces/{request_i" +
-      "d}/info\032\004\010\002\020\000\020\003*\rGet TraceInfo\022\213\001\n\016getTr" +
-      "aceInfoV3\022\026.mlflow.GetTraceInfoV3\032\037.mlfl" +
-      "ow.GetTraceInfoV3.Response\"@\362\206\031<\n&\n\003GET\022" +
-      "\031/mlflow/traces/{trace_id}\032\004\010\003\020\000\020\003*\020Get " +
-      "TraceInfo v3\022n\n\010getTrace\022\020.mlflow.GetTra" +
-      "ce\032\031.mlflow.GetTrace.Response\"5\362\206\0311\n\037\n\003G" +
-      "ET\022\022/mlflow/traces/get\032\004\010\003\020\000\020\003*\014Get Trac" +
-      "e v3\022\203\001\n\016batchGetTraces\022\026.mlflow.BatchGe" +
-      "tTraces\032\037.mlflow.BatchGetTraces.Response" +
-      "\"8\362\206\0314\n$\n\003GET\022\027/mlflow/traces/batchGet\032\004" +
-      "\010\003\020\000\020\003*\nGet Traces\022w\n\014searchTraces\022\024.mlf" +
-      "low.SearchTraces\032\035.mlflow.SearchTraces.R" +
-      "esponse\"2\362\206\031.\n\033\n\003GET\022\016/mlflow/traces\032\004\010\002" +
-      "\020\000\020\003*\rSearch Traces\022\210\001\n\016searchTracesV3\022\026" +
-      ".mlflow.SearchTracesV3\032\037.mlflow.SearchTr" +
-      "acesV3.Response\"=\362\206\0319\n#\n\004POST\022\025/mlflow/t" +
-      "races/search\032\004\010\003\020\000\020\003*\020Search Traces V3\022i" +
-      "\n\014startTraceV3\022\024.mlflow.StartTraceV3\032\035.m" +
-      "lflow.StartTraceV3.Response\"$\362\206\031 \n\034\n\004POS" +
-      "T\022\016/mlflow/traces\032\004\010\003\020\000\020\003\022\222\001\n\017linkTraces" +
-      "ToRun\022\027.mlflow.LinkTracesToRun\032 .mlflow." +
-      "LinkTracesToRun.Response\"D\362\206\031@\n(\n\004POST\022\032" +
-      "/mlflow/traces/link-to-run\032\004\010\002\020\000\020\003*\022Link" +
-      " Traces to Run\022\237\001\n\022linkPromptsToTrace\022\032." +
-      "mlflow.LinkPromptsToTrace\032#.mlflow.LinkP" +
-      "romptsToTrace.Response\"H\362\206\031D\n)\n\004POST\022\033/m" +
-      "lflow/traces/link-prompts\032\004\010\002\020\000\020\003*\025Link " +
-      "Prompts to Trace\022\242\001\n\031searchUnifiedTraceH" +
-      "andler\022\033.mlflow.SearchUnifiedTraces\032$.ml" +
-      "flow.SearchUnifiedTraces.Response\"B\362\206\031>\n" +
-      "#\n\003GET\022\026/mlflow/unified-traces\032\004\010\002\020\000\020\003*\025" +
-      "Search Unified Traces\022\257\001\n\025getOnlineTrace" +
-      "Details\022\035.mlflow.GetOnlineTraceDetails\032&" +
-      ".mlflow.GetOnlineTraceDetails.Response\"O" +
-      "\362\206\031K\n-\n\003GET\022 /mlflow/get-online-trace-de" +
-      "tails\032\004\010\002\020\000\020\003*\030Get Online Trace Details\022" +
-      "\206\001\n\014deleteTraces\022\024.mlflow.DeleteTraces\032\035" +
-      ".mlflow.DeleteTraces.Response\"A\362\206\031=\n*\n\004P" +
-      "OST\022\034/mlflow/traces/delete-traces\032\004\010\002\020\000\020" +
-      "\003*\rDelete Traces\022\217\001\n\016deleteTracesV3\022\026.ml" +
-      "flow.DeleteTracesV3\032\037.mlflow.DeleteTrace" +
-      "sV3.Response\"D\362\206\031@\n*\n\004POST\022\034/mlflow/trac" +
-      "es/delete-traces\032\004\010\003\020\000\020\003*\020Delete Traces " +
-      "V3\022\343\001\n\037calculateTraceFilterCorrelation\022\'" +
-      ".mlflow.CalculateTraceFilterCorrelation\032" +
-      "0.mlflow.CalculateTraceFilterCorrelation" +
-      ".Response\"e\362\206\031a\n9\n\004POST\022+/mlflow/traces/" +
-      "calculate-filter-correlation\032\004\010\003\020\000\020\003*\"Ca" +
-      "lculate Trace Filter Correlation\022\225\001\n\021que" +
-      "ryTraceMetrics\022\031.mlflow.QueryTraceMetric" +
-      "s\032\".mlflow.QueryTraceMetrics.Response\"A\362" +
-      "\206\031=\n$\n\004POST\022\026/mlflow/traces/metrics\032\004\010\003\020" +
-      "\000\020\003*\023Query Trace Metrics\022\224\001\n\021createLogge" +
-      "dModel\022\031.mlflow.CreateLoggedModel\032\".mlfl" +
-      "ow.CreateLoggedModel.Response\"@\362\206\031<\n#\n\004P" +
-      "OST\022\025/mlflow/logged-models\032\004\010\002\020\000\020\003*\023Crea" +
-      "te Logged Model\022\250\001\n\023finalizeLoggedModel\022" +
-      "\033.mlflow.FinalizeLoggedModel\032$.mlflow.Fi" +
-      "nalizeLoggedModel.Response\"N\362\206\031J\n/\n\005PATC" +
-      "H\022 /mlflow/logged-models/{model_id}\032\004\010\002\020" +
-      "\000\020\003*\025Finalize Logged Model\022\222\001\n\016getLogged" +
-      "Model\022\026.mlflow.GetLoggedModel\032\037.mlflow.G" +
-      "etLoggedModel.Response\"G\362\206\031C\n-\n\003GET\022 /ml" +
-      "flow/logged-models/{model_id}\032\004\010\002\020\000\020\003*\020G" +
-      "et Logged Model\022\243\001\n\021deleteLoggedModel\022\031." +
-      "mlflow.DeleteLoggedModel\032\".mlflow.Delete" +
-      "LoggedModel.Response\"O\362\206\031K\n0\n\006DELETE\022 /m" +
-      "lflow/logged-models/{model_id}\032\004\010\002\020\000\020\003*\025" +
-      "Delete a Logged Model\022\236\001\n\022searchLoggedMo" +
-      "dels\022\032.mlflow.SearchLoggedModels\032#.mlflo" +
-      "w.SearchLoggedModels.Response\"G\362\206\031C\n*\n\004P" +
-      "OST\022\034/mlflow/logged-models/search\032\004\010\002\020\000\020" +
-      "\003*\023Search LoggedModels\022\251\001\n\022setLoggedMode" +
-      "lTags\022\032.mlflow.SetLoggedModelTags\032#.mlfl" +
-      "ow.SetLoggedModelTags.Response\"R\362\206\031N\n4\n\005" +
-      "PATCH\022%/mlflow/logged-models/{model_id}/" +
-      "tags\032\004\010\002\020\000\020\003*\024Set Logged Model Tag\022\275\001\n\024d" +
-      "eleteLoggedModelTag\022\034.mlflow.DeleteLogge" +
-      "dModelTag\032%.mlflow.DeleteLoggedModelTag." +
-      "Response\"`\362\206\031\\\n?\n\006DELETE\022//mlflow/logged" +
-      "-models/{model_id}/tags/{tag_key}\032\004\010\002\020\000\020" +
-      "\003*\027Delete Logged Model Tag\022\326\001\n\030listLogge" +
-      "dModelArtifacts\022 .mlflow.ListLoggedModel" +
-      "Artifacts\032).mlflow.ListLoggedModelArtifa" +
-      "cts.Response\"m\362\206\031i\nC\n\003GET\0226/mlflow/logge" +
-      "d-models/{model_id}/artifacts/directorie" +
-      "s\032\004\010\002\020\000\020\003* List Artifacts for Logged Mod" +
-      "els\022\301\001\n\024LogLoggedModelParams\022#.mlflow.Lo" +
-      "gLoggedModelParamsRequest\032,.mlflow.LogLo",
-      "ggedModelParamsRequest.Response\"V\362\206\031R\n5\n" +
-      "\004POST\022\'/mlflow/logged-models/{model_id}/" +
-      "params\032\004\010\002\020\000\020\003*\027Log Logged Model Params\022" +
-      "\260\001\n\rGetAssessment\022\034.mlflow.GetAssessment" +
-      "Request\032%.mlflow.GetAssessmentRequest.Re" +
-      "sponse\"Z\362\206\031V\nB\n\003GET\0225/mlflow/traces/{tra" +
-      "ce_id}/assessments/{assessment_id}\032\004\010\003\020\000" +
-      "\020\003*\016Get Assessment\022\337\001\n\020createAssessment\022" +
-      "\030.mlflow.CreateAssessment\032!.mlflow.Creat" +
-      "eAssessment.Response\"\215\001\362\206\031\210\001\n>\n\004POST\0220/m" +
-      "lflow/traces/{assessment.trace_id}/asses" +
-      "sments\032\004\010\003\020\000\020\003\030\350\007\030\356\007\030\014\030\001*:Create an asse" +
-      "ssment of a trace or a span within the t" +
-      "race\022\320\001\n\020updateAssessment\022\030.mlflow.Updat" +
-      "eAssessment\032!.mlflow.UpdateAssessment.Re" +
-      "sponse\"\177\362\206\031{\nD\n\005PATCH\0225/mlflow/traces/{t" +
-      "race_id}/assessments/{assessment_id}\032\004\010\003" +
-      "\020\000\020\003\030\350\007\030\356\007\030\001*)Update an existing assessm" +
-      "ent on a trace.\022\261\001\n\020deleteAssessment\022\030.m" +
-      "lflow.DeleteAssessment\032!.mlflow.DeleteAs" +
-      "sessment.Response\"`\362\206\031\\\nE\n\006DELETE\0225/mlfl" +
-      "ow/traces/{trace_id}/assessments/{assess" +
-      "ment_id}\032\004\010\003\020\000\020\003*\021Delete Assessment\022\232\001\n\r" +
-      "createDataset\022\025.mlflow.CreateDataset\032\036.m" +
-      "lflow.CreateDataset.Response\"R\362\206\031N\n%\n\004PO" +
-      "ST\022\027/mlflow/datasets/create\032\004\010\003\020\000\020\003\030\350\007\030\356" +
-      "\007\030\014\030\001*\031Create Evaluation Dataset\022\221\001\n\nget" +
-      "Dataset\022\022.mlflow.GetDataset\032\033.mlflow.Get" +
-      "Dataset.Response\"R\362\206\031N\n*\n\003GET\022\035/mlflow/d" +
-      "atasets/{dataset_id}\032\004\010\003\020\000\020\003\030\350\007\030\272\027\030\001*\026Ge" +
-      "t Evaluation Dataset\022\240\001\n\rdeleteDataset\022\025" +
-      ".mlflow.DeleteDataset\032\036.mlflow.DeleteDat" +
-      "aset.Response\"X\362\206\031T\n-\n\006DELETE\022\035/mlflow/d" +
-      "atasets/{dataset_id}\032\004\010\003\020\000\020\003\030\350\007\030\272\027\030\001*\031De" +
-      "lete Evaluation Dataset\022\335\001\n\030searchEvalua" +
-      "tionDatasets\022 .mlflow.SearchEvaluationDa" +
-      "tasets\032).mlflow.SearchEvaluationDatasets" +
-      ".Response\"t\362\206\031p\n%\n\004POST\022\027/mlflow/dataset" +
-      "s/search\032\004\010\003\020\000\n$\n\003GET\022\027/mlflow/datasets/" +
-      "search\032\004\010\003\020\000\020\003\030\350\007\030\001*\032Search Evaluation D" +
-      "atasets\022\251\001\n\016setDatasetTags\022\026.mlflow.SetD" +
-      "atasetTags\032\037.mlflow.SetDatasetTags.Respo" +
-      "nse\"^\362\206\031Z\n1\n\005PATCH\022\"/mlflow/datasets/{da" +
-      "taset_id}/tags\032\004\010\003\020\000\020\003\030\350\007\030\272\027\030\001*\033Set Eval" +
-      "uation Dataset Tags\022\270\001\n\020deleteDatasetTag" +
-      "\022\030.mlflow.DeleteDatasetTag\032!.mlflow.Dele" +
-      "teDatasetTag.Response\"g\362\206\031c\n8\n\006DELETE\022(/" +
-      "mlflow/datasets/{dataset_id}/tags/{key}\032" +
-      "\004\010\003\020\000\020\003\030\350\007\030\272\027\030\001*\035Delete Evaluation Datas" +
-      "et Tag\022\303\001\n\024upsertDatasetRecords\022\034.mlflow" +
-      ".UpsertDatasetRecords\032%.mlflow.UpsertDat" +
-      "asetRecords.Response\"f\362\206\031b\n3\n\004POST\022%/mlf" +
-      "low/datasets/{dataset_id}/records\032\004\010\003\020\000\020" +
-      "\003\030\350\007\030\272\027\030\001*!Upsert Evaluation Dataset Rec" +
-      "ords\022\326\001\n\027getDatasetExperimentIds\022\037.mlflo" +
-      "w.GetDatasetExperimentIds\032(.mlflow.GetDa" +
-      "tasetExperimentIds.Response\"p\362\206\031l\n9\n\003GET" +
-      "\022,/mlflow/datasets/{dataset_id}/experime" +
-      "nt-ids\032\004\010\003\020\000\020\003\030\350\007\030\272\027\030\001*%Get Evaluation D" +
-      "ataset Experiment IDs\022\212\001\n\016registerScorer" +
-      "\022\026.mlflow.RegisterScorer\032\037.mlflow.Regist" +
-      "erScorer.Response\"?\362\206\031;\n&\n\004POST\022\030/mlflow" +
-      "/scorers/register\032\004\010\003\020\000\020\001*\017Register Scor" +
-      "er\022y\n\013listScorers\022\023.mlflow.ListScorers\032\034" +
-      ".mlflow.ListScorers.Response\"7\362\206\0313\n!\n\003GE" +
-      "T\022\024/mlflow/scorers/list\032\004\010\003\020\000\020\001*\014List Sc" +
-      "orers\022\232\001\n\022listScorerVersions\022\032.mlflow.Li" +
-      "stScorerVersions\032#.mlflow.ListScorerVers" +
-      "ions.Response\"C\362\206\031?\n%\n\003GET\022\030/mlflow/scor" +
-      "ers/versions\032\004\010\003\020\000\020\001*\024List Scorer Versio" +
-      "ns\022p\n\tgetScorer\022\021.mlflow.GetScorer\032\032.mlf" +
-      "low.GetScorer.Response\"4\362\206\0310\n \n\003GET\022\023/ml" +
-      "flow/scorers/get\032\004\010\003\020\000\020\001*\nGet Scorer\022\202\001\n" +
-      "\014deleteScorer\022\024.mlflow.DeleteScorer\032\035.ml" +
-      "flow.DeleteScorer.Response\"=\362\206\0319\n&\n\006DELE" +
-      "TE\022\026/mlflow/scorers/delete\032\004\010\003\020\000\020\001*\rDele" +
-      "te Scorer\022\266\001\n\021getDatasetRecords\022\031.mlflow" +
-      ".GetDatasetRecords\032\".mlflow.GetDatasetRe" +
-      "cords.Response\"b\362\206\031^\n2\n\003GET\022%/mlflow/dat" +
-      "asets/{dataset_id}/records\032\004\010\003\020\000\020\003\030\350\007\030\272\027" +
-      "\030\001*\036Get Evaluation Dataset Records\022\315\001\n\027a" +
-      "ddDatasetToExperiments\022\037.mlflow.AddDatas" +
-      "etToExperiments\032(.mlflow.AddDatasetToExp" +
-      "eriments.Response\"g\362\206\031c\n;\n\004POST\022-/mlflow" +
-      "/datasets/{dataset_id}/add-experiments\032\004" +
-      "\010\003\020\000\020\003\030\350\007\030\272\027\030\001*\032Add Dataset to Experimen" +
-      "ts\022\344\001\n\034removeDatasetFromExperiments\022$.ml" +
-      "flow.RemoveDatasetFromExperiments\032-.mlfl" +
-      "ow.RemoveDatasetFromExperiments.Response" +
-      "\"o\362\206\031k\n>\n\004POST\0220/mlflow/datasets/{datase" +
-      "t_id}/remove-experiments\032\004\010\003\020\000\020\003\030\350\007\030\272\027\030\001" +
-      "*\037Remove Dataset from Experiments\022\245\001\n\023cr" +
-      "eateGatewaySecret\022\033.mlflow.CreateGateway" +
-      "Secret\032$.mlflow.CreateGatewaySecret.Resp" +
-      "onse\"K\362\206\031G\n,\n\004POST\022\036/mlflow/gateway/secr" +
-      "ets/create\032\004\010\003\020\000\020\001*\025Create Gateway Secre" +
-      "t\022\246\001\n\024getGatewaySecretInfo\022\034.mlflow.GetG" +
-      "atewaySecretInfo\032%.mlflow.GetGatewaySecr" +
-      "etInfo.Response\"I\362\206\031E\n(\n\003GET\022\033/mlflow/ga" +
-      "teway/secrets/get\032\004\010\003\020\000\020\001*\027Get Gateway S" +
-      "ecret Info\022\245\001\n\023updateGatewaySecret\022\033.mlf" +
-      "low.UpdateGatewaySecret\032$.mlflow.UpdateG" +
-      "atewaySecret.Response\"K\362\206\031G\n,\n\004POST\022\036/ml" +
-      "flow/gateway/secrets/update\032\004\010\003\020\000\020\001*\025Upd" +
-      "ate Gateway Secret\022\247\001\n\023deleteGatewaySecr" +
-      "et\022\033.mlflow.DeleteGatewaySecret\032$.mlflow" +
-      ".DeleteGatewaySecret.Response\"M\362\206\031I\n.\n\006D" +
-      "ELETE\022\036/mlflow/gateway/secrets/delete\032\004\010" +
-      "\003\020\000\020\001*\025Delete Gateway Secret\022\252\001\n\026listGat" +
-      "ewaySecretInfos\022\036.mlflow.ListGatewaySecr" +
-      "etInfos\032\'.mlflow.ListGatewaySecretInfos." +
-      "Response\"G\362\206\031C\n)\n\003GET\022\034/mlflow/gateway/s" +
-      "ecrets/list\032\004\010\003\020\000\020\001*\024List Gateway Secret" +
-      "s\022\257\001\n\025createGatewayEndpoint\022\035.mlflow.Cre" +
-      "ateGatewayEndpoint\032&.mlflow.CreateGatewa" +
-      "yEndpoint.Response\"O\362\206\031K\n.\n\004POST\022 /mlflo" +
-      "w/gateway/endpoints/create\032\004\010\003\020\000\020\001*\027Crea" +
-      "te Gateway Endpoint\022\237\001\n\022getGatewayEndpoi" +
-      "nt\022\032.mlflow.GetGatewayEndpoint\032#.mlflow." +
-      "GetGatewayEndpoint.Response\"H\362\206\031D\n*\n\003GET" +
-      "\022\035/mlflow/gateway/endpoints/get\032\004\010\003\020\000\020\001*" +
-      "\024Get Gateway Endpoint\022\257\001\n\025updateGatewayE" +
-      "ndpoint\022\035.mlflow.UpdateGatewayEndpoint\032&" +
-      ".mlflow.UpdateGatewayEndpoint.Response\"O" +
-      "\362\206\031K\n.\n\004POST\022 /mlflow/gateway/endpoints/" +
-      "update\032\004\010\003\020\000\020\001*\027Update Gateway Endpoint\022" +
-      "\261\001\n\025deleteGatewayEndpoint\022\035.mlflow.Delet" +
-      "eGatewayEndpoint\032&.mlflow.DeleteGatewayE" +
-      "ndpoint.Response\"Q\362\206\031M\n0\n\006DELETE\022 /mlflo" +
-      "w/gateway/endpoints/delete\032\004\010\003\020\000\020\001*\027Dele" +
-      "te Gateway Endpoint\022\250\001\n\024listGatewayEndpo" +
-      "ints\022\034.mlflow.ListGatewayEndpoints\032%.mlf" +
-      "low.ListGatewayEndpoints.Response\"K\362\206\031G\n" +
-      "+\n\003GET\022\036/mlflow/gateway/endpoints/list\032\004" +
-      "\010\003\020\000\020\001*\026List Gateway Endpoints\022\324\001\n\034creat" +
-      "eGatewayModelDefinition\022$.mlflow.CreateG" +
-      "atewayModelDefinition\032-.mlflow.CreateGat" +
-      "ewayModelDefinition.Response\"_\362\206\031[\n6\n\004PO" +
-      "ST\022(/mlflow/gateway/model-definitions/cr" +
-      "eate\032\004\010\003\020\000\020\001*\037Create Gateway Model Defin" +
-      "ition\022\304\001\n\031getGatewayModelDefinition\022!.ml" +
-      "flow.GetGatewayModelDefinition\032*.mlflow." +
-      "GetGatewayModelDefinition.Response\"X\362\206\031T" +
-      "\n2\n\003GET\022%/mlflow/gateway/model-definitio" +
-      "ns/get\032\004\010\003\020\000\020\001*\034Get Gateway Model Defini" +
-      "tion\022\315\001\n\033listGatewayModelDefinitions\022#.m" +
-      "lflow.ListGatewayModelDefinitions\032,.mlfl" +
-      "ow.ListGatewayModelDefinitions.Response\"" +
-      "[\362\206\031W\n3\n\003GET\022&/mlflow/gateway/model-defi" +
-      "nitions/list\032\004\010\003\020\000\020\001*\036List Gateway Model" +
-      " Definitions\022\324\001\n\034updateGatewayModelDefin" +
-      "ition\022$.mlflow.UpdateGatewayModelDefinit" +
-      "ion\032-.mlflow.UpdateGatewayModelDefinitio" +
-      "n.Response\"_\362\206\031[\n6\n\004POST\022(/mlflow/gatewa" +
-      "y/model-definitions/update\032\004\010\003\020\000\020\001*\037Upda" +
-      "te Gateway Model Definition\022\326\001\n\034deleteGa" +
-      "tewayModelDefinition\022$.mlflow.DeleteGate" +
-      "wayModelDefinition\032-.mlflow.DeleteGatewa" +
-      "yModelDefinition.Response\"a\362\206\031]\n8\n\006DELET" +
-      "E\022(/mlflow/gateway/model-definitions/del" +
-      "ete\032\004\010\003\020\000\020\001*\037Delete Gateway Model Defini" +
-      "tion\022\305\001\n\025attachModelToEndpoint\022$.mlflow." +
-      "AttachModelToGatewayEndpoint\032-.mlflow.At" +
-      "tachModelToGatewayEndpoint.Response\"W\362\206\031" +
-      "S\n5\n\004POST\022\'/mlflow/gateway/endpoints/mod" +
-      "els/attach\032\004\010\003\020\000\020\001*\030Attach Model to Endp" +
-      "oint\022\315\001\n\027detachModelFromEndpoint\022&.mlflo" +
-      "w.DetachModelFromGatewayEndpoint\032/.mlflo" +
-      "w.DetachModelFromGatewayEndpoint.Respons" +
-      "e\"Y\362\206\031U\n5\n\004POST\022\'/mlflow/gateway/endpoin" +
-      "ts/models/detach\032\004\010\003\020\000\020\001*\032Detach Model f" +
-      "rom Endpoint\022\306\001\n\025createEndpointBinding\022$" +
-      ".mlflow.CreateGatewayEndpointBinding\032-.m" +
-      "lflow.CreateGatewayEndpointBinding.Respo" +
-      "nse\"X\362\206\031T\n7\n\004POST\022)/mlflow/gateway/endpo" +
-      "ints/bindings/create\032\004\010\003\020\000\020\001*\027Create End" +
-      "point Binding\022\310\001\n\025deleteEndpointBinding\022" +
-      "$.mlflow.DeleteGatewayEndpointBinding\032-." +
-      "mlflow.DeleteGatewayEndpointBinding.Resp" +
-      "onse\"Z\362\206\031V\n9\n\006DELETE\022)/mlflow/gateway/en" +
-      "dpoints/bindings/delete\032\004\010\003\020\000\020\001*\027Delete " +
-      "Endpoint Binding\022\277\001\n\024listEndpointBinding" +
-      "s\022#.mlflow.ListGatewayEndpointBindings\032," +
-      ".mlflow.ListGatewayEndpointBindings.Resp" +
-      "onse\"T\362\206\031P\n4\n\003GET\022\'/mlflow/gateway/endpo" +
-      "ints/bindings/list\032\004\010\003\020\000\020\001*\026List Endpoin" +
-      "t Bindings\022\261\001\n\025setGatewayEndpointTag\022\035.m" +
-      "lflow.SetGatewayEndpointTag\032&.mlflow.Set" +
-      "GatewayEndpointTag.Response\"Q\362\206\031M\n/\n\004POS" +
-      "T\022!/mlflow/gateway/endpoints/set-tag\032\004\010\003" +
-      "\020\000\020\001*\030Gateway Set Endpoint Tag\022\302\001\n\030delet" +
-      "eGatewayEndpointTag\022 .mlflow.DeleteGatew" +
-      "ayEndpointTag\032).mlflow.DeleteGatewayEndp" +
-      "ointTag.Response\"Y\362\206\031U\n4\n\006DELETE\022$/mlflo" +
-      "w/gateway/endpoints/delete-tag\032\004\010\003\020\000\020\001*\033" +
-      "Gateway Delete Endpoint TagB\036\n\024org.mlflo" +
-      "w.api.proto\220\001\001\342?\002\020\001"
+      " \001(\t\022\027\n\017last_updated_by\030\010 \001(\t\022>\n\013auth_co" +
+      "nfig\030\t \003(\0132).mlflow.GatewaySecretInfo.Au" +
+      "thConfigEntry\0323\n\021MaskedValuesEntry\022\013\n\003ke" +
+      "y\030\001 \001(\t\022\r\n\005value\030\002 \001(\t:\0028\001\0321\n\017AuthConfig" +
+      "Entry\022\013\n\003key\030\001 \001(\t\022\r\n\005value\030\002 \001(\t:\0028\001\"\353\001" +
+      "\n\026GatewayModelDefinition\022\033\n\023model_defini" +
+      "tion_id\030\001 \001(\t\022\014\n\004name\030\002 \001(\t\022\021\n\tsecret_id" +
+      "\030\003 \001(\t\022\023\n\013secret_name\030\004 \001(\t\022\020\n\010provider\030" +
+      "\005 \001(\t\022\022\n\nmodel_name\030\006 \001(\t\022\022\n\ncreated_at\030" +
+      "\007 \001(\003\022\027\n\017last_updated_at\030\010 \001(\003\022\022\n\ncreate" +
+      "d_by\030\t \001(\t\022\027\n\017last_updated_by\030\n \001(\t\"\325\001\n\033" +
+      "GatewayEndpointModelMapping\022\022\n\nmapping_i" +
+      "d\030\001 \001(\t\022\023\n\013endpoint_id\030\002 \001(\t\022\033\n\023model_de" +
+      "finition_id\030\003 \001(\t\0228\n\020model_definition\030\004 " +
+      "\001(\0132\036.mlflow.GatewayModelDefinition\022\016\n\006w" +
+      "eight\030\005 \001(\002\022\022\n\ncreated_at\030\006 \001(\003\022\022\n\ncreat" +
+      "ed_by\030\007 \001(\t\"\365\001\n\017GatewayEndpoint\022\023\n\013endpo" +
+      "int_id\030\001 \001(\t\022\014\n\004name\030\002 \001(\t\022\022\n\ncreated_at" +
+      "\030\003 \001(\003\022\027\n\017last_updated_at\030\004 \001(\003\022;\n\016model" +
+      "_mappings\030\005 \003(\0132#.mlflow.GatewayEndpoint" +
+      "ModelMapping\022\022\n\ncreated_by\030\006 \001(\t\022\027\n\017last" +
+      "_updated_by\030\007 \001(\t\022(\n\004tags\030\010 \003(\0132\032.mlflow" +
+      ".GatewayEndpointTag\"0\n\022GatewayEndpointTa" +
+      "g\022\013\n\003key\030\001 \001(\t\022\r\n\005value\030\002 \001(\t\"\263\001\n\026Gatewa" +
+      "yEndpointBinding\022\023\n\013endpoint_id\030\001 \001(\t\022\025\n" +
+      "\rresource_type\030\002 \001(\t\022\023\n\013resource_id\030\003 \001(" +
+      "\t\022\022\n\ncreated_at\030\004 \001(\003\022\027\n\017last_updated_at" +
+      "\030\005 \001(\003\022\022\n\ncreated_by\030\006 \001(\t\022\027\n\017last_updat" +
+      "ed_by\030\007 \001(\t\"\213\003\n\023CreateGatewaySecret\022\023\n\013s" +
+      "ecret_name\030\001 \001(\t\022B\n\014secret_value\030\002 \003(\0132," +
+      ".mlflow.CreateGatewaySecret.SecretValueE" +
+      "ntry\022\020\n\010provider\030\003 \001(\t\022@\n\013auth_config\030\005 " +
+      "\003(\0132+.mlflow.CreateGatewaySecret.AuthCon" +
+      "figEntry\022\022\n\ncreated_by\030\006 \001(\t\0322\n\020SecretVa" +
+      "lueEntry\022\013\n\003key\030\001 \001(\t\022\r\n\005value\030\002 \001(\t:\0028\001" +
+      "\0321\n\017AuthConfigEntry\022\013\n\003key\030\001 \001(\t\022\r\n\005valu" +
+      "e\030\002 \001(\t:\0028\001\0325\n\010Response\022)\n\006secret\030\001 \001(\0132" +
+      "\031.mlflow.GatewaySecretInfoJ\004\010\004\020\005R\017creden" +
+      "tial_name\"u\n\024GetGatewaySecretInfo\022\021\n\tsec" +
+      "ret_id\030\001 \001(\t\022\023\n\013secret_name\030\002 \001(\t\0325\n\010Res" +
+      "ponse\022)\n\006secret\030\001 \001(\0132\031.mlflow.GatewaySe" +
+      "cretInfo\"\367\002\n\023UpdateGatewaySecret\022\021\n\tsecr" +
+      "et_id\030\001 \001(\t\022B\n\014secret_value\030\002 \003(\0132,.mlfl" +
+      "ow.UpdateGatewaySecret.SecretValueEntry\022" +
+      "@\n\013auth_config\030\004 \003(\0132+.mlflow.UpdateGate" +
+      "waySecret.AuthConfigEntry\022\022\n\nupdated_by\030" +
+      "\005 \001(\t\0322\n\020SecretValueEntry\022\013\n\003key\030\001 \001(\t\022\r" +
+      "\n\005value\030\002 \001(\t:\0028\001\0321\n\017AuthConfigEntry\022\013\n\003" +
+      "key\030\001 \001(\t\022\r\n\005value\030\002 \001(\t:\0028\001\0325\n\010Response" +
+      "\022)\n\006secret\030\001 \001(\0132\031.mlflow.GatewaySecretI" +
+      "nfoJ\004\010\003\020\004R\017credential_name\"4\n\023DeleteGate" +
+      "waySecret\022\021\n\tsecret_id\030\001 \001(\t\032\n\n\010Response" +
+      "\"b\n\026ListGatewaySecretInfos\022\020\n\010provider\030\001" +
+      " \001(\t\0326\n\010Response\022*\n\007secrets\030\001 \003(\0132\031.mlfl" +
+      "ow.GatewaySecretInfo\"\277\001\n\034CreateGatewayMo" +
+      "delDefinition\022\014\n\004name\030\001 \001(\t\022\021\n\tsecret_id" +
+      "\030\002 \001(\t\022\020\n\010provider\030\003 \001(\t\022\022\n\nmodel_name\030\004" +
+      " \001(\t\022\022\n\ncreated_by\030\005 \001(\t\032D\n\010Response\0228\n\020" +
+      "model_definition\030\001 \001(\0132\036.mlflow.GatewayM" +
+      "odelDefinition\"~\n\031GetGatewayModelDefinit" +
+      "ion\022\033\n\023model_definition_id\030\001 \001(\t\032D\n\010Resp" +
+      "onse\0228\n\020model_definition\030\001 \001(\0132\036.mlflow." +
+      "GatewayModelDefinition\"\211\001\n\033ListGatewayMo" +
+      "delDefinitions\022\020\n\010provider\030\001 \001(\t\022\021\n\tsecr" +
+      "et_id\030\002 \001(\t\032E\n\010Response\0229\n\021model_definit" +
+      "ions\030\001 \003(\0132\036.mlflow.GatewayModelDefiniti" +
+      "on\"\334\001\n\034UpdateGatewayModelDefinition\022\033\n\023m" +
+      "odel_definition_id\030\001 \001(\t\022\014\n\004name\030\002 \001(\t\022\021" +
+      "\n\tsecret_id\030\003 \001(\t\022\022\n\nmodel_name\030\004 \001(\t\022\022\n" +
+      "\nupdated_by\030\005 \001(\t\022\020\n\010provider\030\006 \001(\t\032D\n\010R" +
+      "esponse\0228\n\020model_definition\030\001 \001(\0132\036.mlfl" +
+      "ow.GatewayModelDefinition\"G\n\034DeleteGatew" +
+      "ayModelDefinition\022\033\n\023model_definition_id" +
+      "\030\001 \001(\t\032\n\n\010Response\"\216\001\n\025CreateGatewayEndp" +
+      "oint\022\014\n\004name\030\001 \001(\t\022\034\n\024model_definition_i" +
+      "ds\030\002 \003(\t\022\022\n\ncreated_by\030\003 \001(\t\0325\n\010Response" +
+      "\022)\n\010endpoint\030\001 \001(\0132\027.mlflow.GatewayEndpo" +
+      "int\"n\n\022GetGatewayEndpoint\022\023\n\013endpoint_id" +
+      "\030\001 \001(\t\022\014\n\004name\030\002 \001(\t\0325\n\010Response\022)\n\010endp" +
+      "oint\030\001 \001(\0132\027.mlflow.GatewayEndpoint\"\205\001\n\025" +
+      "UpdateGatewayEndpoint\022\023\n\013endpoint_id\030\001 \001" +
+      "(\t\022\014\n\004name\030\002 \001(\t\022\022\n\nupdated_by\030\003 \001(\t\0325\n\010" +
+      "Response\022)\n\010endpoint\030\001 \001(\0132\027.mlflow.Gate" +
+      "wayEndpoint\"8\n\025DeleteGatewayEndpoint\022\023\n\013" +
+      "endpoint_id\030\001 \001(\t\032\n\n\010Response\"s\n\024ListGat" +
+      "ewayEndpoints\022\020\n\010provider\030\001 \001(\t\022\021\n\tsecre" +
+      "t_id\030\002 \001(\t\0326\n\010Response\022*\n\tendpoints\030\001 \003(" +
+      "\0132\027.mlflow.GatewayEndpoint\"\266\001\n\034AttachMod" +
+      "elToGatewayEndpoint\022\023\n\013endpoint_id\030\001 \001(\t" +
+      "\022\033\n\023model_definition_id\030\002 \001(\t\022\016\n\006weight\030" +
+      "\003 \001(\002\022\022\n\ncreated_by\030\004 \001(\t\032@\n\010Response\0224\n" +
+      "\007mapping\030\001 \001(\0132#.mlflow.GatewayEndpointM" +
+      "odelMapping\"^\n\036DetachModelFromGatewayEnd" +
+      "point\022\023\n\013endpoint_id\030\001 \001(\t\022\033\n\023model_defi" +
+      "nition_id\030\002 \001(\t\032\n\n\010Response\"\260\001\n\034CreateGa" +
+      "tewayEndpointBinding\022\023\n\013endpoint_id\030\001 \001(" +
+      "\t\022\025\n\rresource_type\030\002 \001(\t\022\023\n\013resource_id\030" +
+      "\003 \001(\t\022\022\n\ncreated_by\030\004 \001(\t\032;\n\010Response\022/\n" +
+      "\007binding\030\001 \001(\0132\036.mlflow.GatewayEndpointB" +
+      "inding\"k\n\034DeleteGatewayEndpointBinding\022\023" +
+      "\n\013endpoint_id\030\001 \001(\t\022\025\n\rresource_type\030\002 \001" +
+      "(\t\022\023\n\013resource_id\030\003 \001(\t\032\n\n\010Response\"\234\001\n\033" +
+      "ListGatewayEndpointBindings\022\023\n\013endpoint_" +
+      "id\030\001 \001(\t\022\025\n\rresource_type\030\002 \001(\t\022\023\n\013resou" +
+      "rce_id\030\003 \001(\t\032<\n\010Response\0220\n\010bindings\030\001 \003" +
+      "(\0132\036.mlflow.GatewayEndpointBinding\"T\n\025Se" +
+      "tGatewayEndpointTag\022\023\n\013endpoint_id\030\001 \001(\t" +
+      "\022\013\n\003key\030\002 \001(\t\022\r\n\005value\030\003 \001(\t\032\n\n\010Response" +
+      "\"H\n\030DeleteGatewayEndpointTag\022\023\n\013endpoint" +
+      "_id\030\001 \001(\t\022\013\n\003key\030\002 \001(\t\032\n\n\010Response\"9\n\020Ge" +
+      "tSecretsConfig\032%\n\010Response\022\031\n\021secrets_av" +
+      "ailable\030\001 \001(\010*6\n\010ViewType\022\017\n\013ACTIVE_ONLY" +
+      "\020\001\022\020\n\014DELETED_ONLY\020\002\022\007\n\003ALL\020\003*I\n\nSourceT" +
+      "ype\022\014\n\010NOTEBOOK\020\001\022\007\n\003JOB\020\002\022\013\n\007PROJECT\020\003\022" +
+      "\t\n\005LOCAL\020\004\022\014\n\007UNKNOWN\020\350\007*M\n\tRunStatus\022\013\n" +
+      "\007RUNNING\020\001\022\r\n\tSCHEDULED\020\002\022\014\n\010FINISHED\020\003\022" +
+      "\n\n\006FAILED\020\004\022\n\n\006KILLED\020\005*O\n\013TraceStatus\022\034" +
+      "\n\030TRACE_STATUS_UNSPECIFIED\020\000\022\006\n\002OK\020\001\022\t\n\005" +
+      "ERROR\020\002\022\017\n\013IN_PROGRESS\020\003*8\n\016MetricViewTy" +
+      "pe\022\n\n\006TRACES\020\001\022\t\n\005SPANS\020\002\022\017\n\013ASSESSMENTS" +
+      "\020\003*P\n\017AggregationType\022\t\n\005COUNT\020\001\022\007\n\003SUM\020" +
+      "\002\022\007\n\003AVG\020\003\022\016\n\nPERCENTILE\020\004\022\007\n\003MIN\020\005\022\007\n\003M" +
+      "AX\020\006*\212\001\n\021LoggedModelStatus\022#\n\037LOGGED_MOD" +
+      "EL_STATUS_UNSPECIFIED\020\000\022\030\n\024LOGGED_MODEL_" +
+      "PENDING\020\001\022\026\n\022LOGGED_MODEL_READY\020\002\022\036\n\032LOG" +
+      "GED_MODEL_UPLOAD_FAILED\020\0032\236}\n\rMlflowServ" +
+      "ice\022\246\001\n\023getExperimentByName\022\033.mlflow.Get" +
+      "ExperimentByName\032$.mlflow.GetExperimentB" +
+      "yName.Response\"L\362\206\031H\n,\n\003GET\022\037/mlflow/exp" +
+      "eriments/get-by-name\032\004\010\002\020\000\020\001*\026Get Experi" +
+      "ment By Name\022\224\001\n\020createExperiment\022\030.mlfl" +
+      "ow.CreateExperiment\032!.mlflow.CreateExper" +
+      "iment.Response\"C\362\206\031?\n(\n\004POST\022\032/mlflow/ex" +
+      "periments/create\032\004\010\002\020\000\020\001*\021Create Experim" +
+      "ent\022\301\001\n\021searchExperiments\022\031.mlflow.Searc" +
+      "hExperiments\032\".mlflow.SearchExperiments." +
+      "Response\"m\362\206\031i\n(\n\004POST\022\032/mlflow/experime" +
+      "nts/search\032\004\010\002\020\000\n\'\n\003GET\022\032/mlflow/experim" +
+      "ents/search\032\004\010\002\020\000\020\001*\022Search Experiments\022" +
+      "\210\001\n\rgetExperiment\022\025.mlflow.GetExperiment" +
+      "\032\036.mlflow.GetExperiment.Response\"@\362\206\0318\n$" +
+      "\n\003GET\022\027/mlflow/experiments/get\032\004\010\002\020\000\020\001*\016" +
+      "Get Experiment\272\214\031\000\022\224\001\n\020deleteExperiment\022" +
+      "\030.mlflow.DeleteExperiment\032!.mlflow.Delet" +
+      "eExperiment.Response\"C\362\206\031?\n(\n\004POST\022\032/mlf" +
+      "low/experiments/delete\032\004\010\002\020\000\020\001*\021Delete E" +
+      "xperiment\022\231\001\n\021restoreExperiment\022\031.mlflow" +
+      ".RestoreExperiment\032\".mlflow.RestoreExper" +
+      "iment.Response\"E\362\206\031A\n)\n\004POST\022\033/mlflow/ex" +
+      "periments/restore\032\004\010\002\020\000\020\001*\022Restore Exper" +
+      "iment\022\224\001\n\020updateExperiment\022\030.mlflow.Upda" +
+      "teExperiment\032!.mlflow.UpdateExperiment.R" +
+      "esponse\"C\362\206\031?\n(\n\004POST\022\032/mlflow/experimen" +
+      "ts/update\032\004\010\002\020\000\020\001*\021Update Experiment\022q\n\t" +
+      "createRun\022\021.mlflow.CreateRun\032\032.mlflow.Cr" +
+      "eateRun.Response\"5\362\206\0311\n!\n\004POST\022\023/mlflow/" +
+      "runs/create\032\004\010\002\020\000\020\001*\nCreate Run\022q\n\tupdat" +
+      "eRun\022\021.mlflow.UpdateRun\032\032.mlflow.UpdateR" +
+      "un.Response\"5\362\206\0311\n!\n\004POST\022\023/mlflow/runs/" +
+      "update\032\004\010\002\020\000\020\001*\nUpdate Run\022q\n\tdeleteRun\022" +
+      "\021.mlflow.DeleteRun\032\032.mlflow.DeleteRun.Re" +
+      "sponse\"5\362\206\0311\n!\n\004POST\022\023/mlflow/runs/delet" +
+      "e\032\004\010\002\020\000\020\001*\nDelete Run\022v\n\nrestoreRun\022\022.ml" +
+      "flow.RestoreRun\032\033.mlflow.RestoreRun.Resp" +
+      "onse\"7\362\206\0313\n\"\n\004POST\022\024/mlflow/runs/restore" +
+      "\032\004\010\002\020\000\020\001*\013Restore Run\022u\n\tlogMetric\022\021.mlf" +
+      "low.LogMetric\032\032.mlflow.LogMetric.Respons" +
+      "e\"9\362\206\0315\n%\n\004POST\022\027/mlflow/runs/log-metric" +
+      "\032\004\010\002\020\000\020\001*\nLog Metric\022t\n\010logParam\022\020.mlflo" +
+      "w.LogParam\032\031.mlflow.LogParam.Response\";\362" +
+      "\206\0317\n(\n\004POST\022\032/mlflow/runs/log-parameter\032" +
+      "\004\010\002\020\000\020\001*\tLog Param\022\241\001\n\020setExperimentTag\022" +
+      "\030.mlflow.SetExperimentTag\032!.mlflow.SetEx" +
+      "perimentTag.Response\"P\362\206\031L\n4\n\004POST\022&/mlf" +
+      "low/experiments/set-experiment-tag\032\004\010\002\020\000" +
+      "\020\001*\022Set Experiment Tag\022\260\001\n\023deleteExperim" +
+      "entTag\022\033.mlflow.DeleteExperimentTag\032$.ml" +
+      "flow.DeleteExperimentTag.Response\"V\362\206\031R\n" +
+      "7\n\004POST\022)/mlflow/experiments/delete-expe" +
+      "riment-tag\032\004\010\002\020\000\020\001*\025Delete Experiment Ta" +
+      "g\022f\n\006setTag\022\016.mlflow.SetTag\032\027.mlflow.Set" +
+      "Tag.Response\"3\362\206\031/\n\"\n\004POST\022\024/mlflow/runs" +
+      "/set-tag\032\004\010\002\020\000\020\001*\007Set Tag\022\210\001\n\013setTraceTa" +
+      "g\022\023.mlflow.SetTraceTag\032\034.mlflow.SetTrace" +
+      "Tag.Response\"F\362\206\031B\n/\n\005PATCH\022 /mlflow/tra" +
+      "ces/{request_id}/tags\032\004\010\002\020\000\020\003*\rSet Trace" +
+      " Tag\022\217\001\n\rsetTraceTagV3\022\025.mlflow.SetTrace" +
+      "TagV3\032\036.mlflow.SetTraceTagV3.Response\"G\362" +
+      "\206\031C\n-\n\005PATCH\022\036/mlflow/traces/{trace_id}/" +
+      "tags\032\004\010\003\020\000\020\003*\020Set Trace Tag V3\022\225\001\n\016delet" +
+      "eTraceTag\022\026.mlflow.DeleteTraceTag\032\037.mlfl" +
+      "ow.DeleteTraceTag.Response\"J\362\206\031F\n0\n\006DELE" +
+      "TE\022 /mlflow/traces/{request_id}/tags\032\004\010\002" +
+      "\020\000\020\003*\020Delete Trace Tag\022\234\001\n\020deleteTraceTa" +
+      "gV3\022\030.mlflow.DeleteTraceTagV3\032!.mlflow.D" +
+      "eleteTraceTagV3.Response\"K\362\206\031G\n.\n\006DELETE" +
+      "\022\036/mlflow/traces/{trace_id}/tags\032\004\010\003\020\000\020\003" +
+      "*\023Delete Trace Tag V3\022u\n\tdeleteTag\022\021.mlf" +
+      "low.DeleteTag\032\032.mlflow.DeleteTag.Respons" +
+      "e\"9\362\206\0315\n%\n\004POST\022\027/mlflow/runs/delete-tag" +
+      "\032\004\010\002\020\000\020\001*\nDelete Tag\022e\n\006getRun\022\016.mlflow." +
+      "GetRun\032\027.mlflow.GetRun.Response\"2\362\206\031*\n\035\n" +
+      "\003GET\022\020/mlflow/runs/get\032\004\010\002\020\000\020\001*\007Get Run\272" +
+      "\214\031\000\022y\n\nsearchRuns\022\022.mlflow.SearchRuns\032\033." +
+      "mlflow.SearchRuns.Response\":\362\206\0312\n!\n\004POST" +
+      "\022\023/mlflow/runs/search\032\004\010\002\020\000\020\001*\013Search Ru" +
+      "ns\272\214\031\000\022\207\001\n\rlistArtifacts\022\025.mlflow.ListAr" +
+      "tifacts\032\036.mlflow.ListArtifacts.Response\"" +
+      "?\362\206\0317\n#\n\003GET\022\026/mlflow/artifacts/list\032\004\010\002" +
+      "\020\000\020\001*\016List Artifacts\272\214\031\000\022\225\001\n\020getMetricHi" +
+      "story\022\030.mlflow.GetMetricHistory\032!.mlflow" +
+      ".GetMetricHistory.Response\"D\362\206\031@\n(\n\003GET\022" +
+      "\033/mlflow/metrics/get-history\032\004\010\002\020\000\020\001*\022Ge" +
+      "t Metric History\022\267\001\n\034getMetricHistoryBul" +
+      "kInterval\022$.mlflow.GetMetricHistoryBulkI" +
+      "nterval\032-.mlflow.GetMetricHistoryBulkInt" +
+      "erval.Response\"B\362\206\031:\n6\n\003GET\022)/mlflow/met" +
+      "rics/get-history-bulk-interval\032\004\010\002\020\013\020\003\272\214" +
+      "\031\000\022p\n\010logBatch\022\020.mlflow.LogBatch\032\031.mlflo" +
+      "w.LogBatch.Response\"7\362\206\0313\n$\n\004POST\022\026/mlfl" +
+      "ow/runs/log-batch\032\004\010\002\020\000\020\001*\tLog Batch\022p\n\010" +
+      "logModel\022\020.mlflow.LogModel\032\031.mlflow.LogM" +
+      "odel.Response\"7\362\206\0313\n$\n\004POST\022\026/mlflow/run" +
+      "s/log-model\032\004\010\002\020\000\020\001*\tLog Model\022u\n\tlogInp" +
+      "uts\022\021.mlflow.LogInputs\032\032.mlflow.LogInput" +
+      "s.Response\"9\362\206\0315\n%\n\004POST\022\027/mlflow/runs/l" +
+      "og-inputs\032\004\010\002\020\000\020\001*\nLog Inputs\022v\n\nlogOutp" +
+      "uts\022\022.mlflow.LogOutputs\032\033.mlflow.LogOutp" +
+      "uts.Response\"7\362\206\0313\n\"\n\004POST\022\024/mlflow/runs" +
+      "/outputs\032\004\010\002\020\000\020\003*\013Log Outputs\022\207\001\n\016search" +
+      "Datasets\022\026.mlflow.SearchDatasets\032\037.mlflo" +
+      "w.SearchDatasets.Response\"<\362\206\0314\n0\n\004POST\022" +
+      "\"mlflow/experiments/search-datasets\032\004\010\002\020" +
+      "\000\020\003\272\214\031\000\022p\n\nstartTrace\022\022.mlflow.StartTrac" +
+      "e\032\033.mlflow.StartTrace.Response\"1\362\206\031-\n\034\n\004" +
+      "POST\022\016/mlflow/traces\032\004\010\002\020\000\020\003*\013Start Trac" +
+      "e\022v\n\010endTrace\022\020.mlflow.EndTrace\032\031.mlflow" +
+      ".EndTrace.Response\"=\362\206\0319\n*\n\005PATCH\022\033/mlfl" +
+      "ow/traces/{request_id}\032\004\010\002\020\000\020\003*\tEnd Trac" +
+      "e\022\211\001\n\014getTraceInfo\022\024.mlflow.GetTraceInfo" +
+      "\032\035.mlflow.GetTraceInfo.Response\"D\362\206\031@\n-\n" +
+      "\003GET\022 /mlflow/traces/{request_id}/info\032\004" +
+      "\010\002\020\000\020\003*\rGet TraceInfo\022\213\001\n\016getTraceInfoV3" +
+      "\022\026.mlflow.GetTraceInfoV3\032\037.mlflow.GetTra" +
+      "ceInfoV3.Response\"@\362\206\031<\n&\n\003GET\022\031/mlflow/" +
+      "traces/{trace_id}\032\004\010\003\020\000\020\003*\020Get TraceInfo" +
+      " v3\022n\n\010getTrace\022\020.mlflow.GetTrace\032\031.mlfl" +
+      "ow.GetTrace.Response\"5\362\206\0311\n\037\n\003GET\022\022/mlfl" +
+      "ow/traces/get\032\004\010\003\020\000\020\003*\014Get Trace v3\022\203\001\n\016" +
+      "batchGetTraces\022\026.mlflow.BatchGetTraces\032\037" +
+      ".mlflow.BatchGetTraces.Response\"8\362\206\0314\n$\n" +
+      "\003GET\022\027/mlflow/traces/batchGet\032\004\010\003\020\000\020\003*\nG" +
+      "et Traces\022w\n\014searchTraces\022\024.mlflow.Searc" +
+      "hTraces\032\035.mlflow.SearchTraces.Response\"2" +
+      "\362\206\031.\n\033\n\003GET\022\016/mlflow/traces\032\004\010\002\020\000\020\003*\rSea" +
+      "rch Traces\022\210\001\n\016searchTracesV3\022\026.mlflow.S" +
+      "earchTracesV3\032\037.mlflow.SearchTracesV3.Re" +
+      "sponse\"=\362\206\0319\n#\n\004POST\022\025/mlflow/traces/sea" +
+      "rch\032\004\010\003\020\000\020\003*\020Search Traces V3\022i\n\014startTr" +
+      "aceV3\022\024.mlflow.StartTraceV3\032\035.mlflow.Sta" +
+      "rtTraceV3.Response\"$\362\206\031 \n\034\n\004POST\022\016/mlflo" +
+      "w/traces\032\004\010\003\020\000\020\003\022\222\001\n\017linkTracesToRun\022\027.m" +
+      "lflow.LinkTracesToRun\032 .mlflow.LinkTrace" +
+      "sToRun.Response\"D\362\206\031@\n(\n\004POST\022\032/mlflow/t" +
+      "races/link-to-run\032\004\010\002\020\000\020\003*\022Link Traces t" +
+      "o Run\022\237\001\n\022linkPromptsToTrace\022\032.mlflow.Li" +
+      "nkPromptsToTrace\032#.mlflow.LinkPromptsToT" +
+      "race.Response\"H\362\206\031D\n)\n\004POST\022\033/mlflow/tra" +
+      "ces/link-prompts\032\004\010\002\020\000\020\003*\025Link Prompts t" +
+      "o Trace\022\242\001\n\031searchUnifiedTraceHandler\022\033." +
+      "mlflow.SearchUnifiedTraces\032$.mlflow.Sear" +
+      "chUnifiedTraces.Response\"B\362\206\031>\n#\n\003GET\022\026/" +
+      "mlflow/unified-traces\032\004\010\002\020\000\020\003*\025Search Un" +
+      "ified Traces\022\257\001\n\025getOnlineTraceDetails\022\035" +
+      ".mlflow.GetOnlineTraceDetails\032&.mlflow.G" +
+      "etOnlineTraceDetails.Response\"O\362\206\031K\n-\n\003G" +
+      "ET\022 /mlflow/get-online-trace-details\032\004\010\002" +
+      "\020\000\020\003*\030Get Online Trace Details\022\206\001\n\014delet" +
+      "eTraces\022\024.mlflow.DeleteTraces\032\035.mlflow.D" +
+      "eleteTraces.Response\"A\362\206\031=\n*\n\004POST\022\034/mlf" +
+      "low/traces/delete-traces\032\004\010\002\020\000\020\003*\rDelete" +
+      " Traces\022\217\001\n\016deleteTracesV3\022\026.mlflow.Dele" +
+      "teTracesV3\032\037.mlflow.DeleteTracesV3.Respo" +
+      "nse\"D\362\206\031@\n*\n\004POST\022\034/mlflow/traces/delete" +
+      "-traces\032\004\010\003\020\000\020\003*\020Delete Traces V3\022\343\001\n\037ca" +
+      "lculateTraceFilterCorrelation\022\'.mlflow.C" +
+      "alculateTraceFilterCorrelation\0320.mlflow." +
+      "CalculateTraceFilterCorrelation.Response" +
+      "\"e\362\206\031a\n9\n\004POST\022+/mlflow/traces/calculate" +
+      "-filter-correlation\032\004\010\003\020\000\020\003*\"Calculate T" +
+      "race Filter Correlation\022\225\001\n\021queryTraceMe" +
+      "trics\022\031.mlflow.QueryTraceMetrics\032\".mlflo" +
+      "w.QueryTraceMetrics.Response\"A\362\206\031=\n$\n\004PO" +
+      "ST\022\026/mlflow/traces/metrics\032\004\010\003\020\000\020\003*\023Quer" +
+      "y Trace Metrics\022\224\001\n\021createLoggedModel\022\031." +
+      "mlflow.CreateLoggedModel\032\".mlflow.Create" +
+      "LoggedModel.Response\"@\362\206\031<\n#\n\004POST\022\025/mlf" +
+      "low/logged-models\032\004\010\002\020\000\020\003*\023Create Logged" +
+      " Model\022\250\001\n\023finalizeLoggedModel\022\033.mlflow." +
+      "FinalizeLoggedModel\032$.mlflow.FinalizeLog" +
+      "gedModel.Response\"N\362\206\031J\n/\n\005PATCH\022 /mlflo" +
+      "w/logged-models/{model_id}\032\004\010\002\020\000\020\003*\025Fina" +
+      "lize Logged Model\022\222\001\n\016getLoggedModel\022\026.m" +
+      "lflow.GetLoggedModel\032\037.mlflow.GetLoggedM" +
+      "odel.Response\"G\362\206\031C\n-\n\003GET\022 /mlflow/logg" +
+      "ed-models/{model_id}\032\004\010\002\020\000\020\003*\020Get Logged" +
+      " Model\022\243\001\n\021deleteLoggedModel\022\031.mlflow.De" +
+      "leteLoggedModel\032\".mlflow.DeleteLoggedMod" +
+      "el.Response\"O\362\206\031K\n0\n\006DELETE\022 /mlflow/log" +
+      "ged-models/{model_id}\032\004\010\002\020\000\020\003*\025Delete a " +
+      "Logged Model\022\236\001\n\022searchLoggedModels\022\032.ml" +
+      "flow.SearchLoggedModels\032#.mlflow.SearchL" +
+      "oggedModels.Response\"G\362\206\031C\n*\n\004POST\022\034/mlf" +
+      "low/logged-models/search\032\004\010\002\020\000\020\003*\023Search" +
+      " LoggedModels\022\251\001\n\022setLoggedModelTags\022\032.m" +
+      "lflow.SetLoggedModelTags\032#.mlflow.SetLog" +
+      "gedModelTags.Response\"R\362\206\031N\n4\n\005PATCH\022%/m" +
+      "lflow/logged-models/{model_id}/tags\032\004\010\002\020" +
+      "\000\020\003*\024Set Logged Model Tag\022\275\001\n\024deleteLogg" +
+      "edModelTag\022\034.mlflow.DeleteLoggedModelTag" +
+      "\032%.mlflow.DeleteLoggedModelTag.Response\"" +
+      "`\362\206\031\\\n?\n\006DELETE\022//mlflow/logged-models/{" +
+      "model_id}/tags/{tag_key}\032\004\010\002\020\000\020\003*\027Delete" +
+      " Logged Model Tag\022\326\001\n\030listLoggedModelArt",
+      "ifacts\022 .mlflow.ListLoggedModelArtifacts" +
+      "\032).mlflow.ListLoggedModelArtifacts.Respo" +
+      "nse\"m\362\206\031i\nC\n\003GET\0226/mlflow/logged-models/" +
+      "{model_id}/artifacts/directories\032\004\010\002\020\000\020\003" +
+      "* List Artifacts for Logged Models\022\301\001\n\024L" +
+      "ogLoggedModelParams\022#.mlflow.LogLoggedMo" +
+      "delParamsRequest\032,.mlflow.LogLoggedModel" +
+      "ParamsRequest.Response\"V\362\206\031R\n5\n\004POST\022\'/m" +
+      "lflow/logged-models/{model_id}/params\032\004\010" +
+      "\002\020\000\020\003*\027Log Logged Model Params\022\260\001\n\rGetAs" +
+      "sessment\022\034.mlflow.GetAssessmentRequest\032%" +
+      ".mlflow.GetAssessmentRequest.Response\"Z\362" +
+      "\206\031V\nB\n\003GET\0225/mlflow/traces/{trace_id}/as" +
+      "sessments/{assessment_id}\032\004\010\003\020\000\020\003*\016Get A" +
+      "ssessment\022\337\001\n\020createAssessment\022\030.mlflow." +
+      "CreateAssessment\032!.mlflow.CreateAssessme" +
+      "nt.Response\"\215\001\362\206\031\210\001\n>\n\004POST\0220/mlflow/tra" +
+      "ces/{assessment.trace_id}/assessments\032\004\010" +
+      "\003\020\000\020\003\030\350\007\030\356\007\030\014\030\001*:Create an assessment of" +
+      " a trace or a span within the trace\022\320\001\n\020" +
+      "updateAssessment\022\030.mlflow.UpdateAssessme" +
+      "nt\032!.mlflow.UpdateAssessment.Response\"\177\362" +
+      "\206\031{\nD\n\005PATCH\0225/mlflow/traces/{trace_id}/" +
+      "assessments/{assessment_id}\032\004\010\003\020\000\020\003\030\350\007\030\356" +
+      "\007\030\001*)Update an existing assessment on a " +
+      "trace.\022\261\001\n\020deleteAssessment\022\030.mlflow.Del" +
+      "eteAssessment\032!.mlflow.DeleteAssessment." +
+      "Response\"`\362\206\031\\\nE\n\006DELETE\0225/mlflow/traces" +
+      "/{trace_id}/assessments/{assessment_id}\032" +
+      "\004\010\003\020\000\020\003*\021Delete Assessment\022\232\001\n\rcreateDat" +
+      "aset\022\025.mlflow.CreateDataset\032\036.mlflow.Cre" +
+      "ateDataset.Response\"R\362\206\031N\n%\n\004POST\022\027/mlfl" +
+      "ow/datasets/create\032\004\010\003\020\000\020\003\030\350\007\030\356\007\030\014\030\001*\031Cr" +
+      "eate Evaluation Dataset\022\221\001\n\ngetDataset\022\022" +
+      ".mlflow.GetDataset\032\033.mlflow.GetDataset.R" +
+      "esponse\"R\362\206\031N\n*\n\003GET\022\035/mlflow/datasets/{" +
+      "dataset_id}\032\004\010\003\020\000\020\003\030\350\007\030\272\027\030\001*\026Get Evaluat" +
+      "ion Dataset\022\240\001\n\rdeleteDataset\022\025.mlflow.D" +
+      "eleteDataset\032\036.mlflow.DeleteDataset.Resp" +
+      "onse\"X\362\206\031T\n-\n\006DELETE\022\035/mlflow/datasets/{" +
+      "dataset_id}\032\004\010\003\020\000\020\003\030\350\007\030\272\027\030\001*\031Delete Eval" +
+      "uation Dataset\022\335\001\n\030searchEvaluationDatas" +
+      "ets\022 .mlflow.SearchEvaluationDatasets\032)." +
+      "mlflow.SearchEvaluationDatasets.Response" +
+      "\"t\362\206\031p\n%\n\004POST\022\027/mlflow/datasets/search\032" +
+      "\004\010\003\020\000\n$\n\003GET\022\027/mlflow/datasets/search\032\004\010" +
+      "\003\020\000\020\003\030\350\007\030\001*\032Search Evaluation Datasets\022\251" +
+      "\001\n\016setDatasetTags\022\026.mlflow.SetDatasetTag" +
+      "s\032\037.mlflow.SetDatasetTags.Response\"^\362\206\031Z" +
+      "\n1\n\005PATCH\022\"/mlflow/datasets/{dataset_id}" +
+      "/tags\032\004\010\003\020\000\020\003\030\350\007\030\272\027\030\001*\033Set Evaluation Da" +
+      "taset Tags\022\270\001\n\020deleteDatasetTag\022\030.mlflow" +
+      ".DeleteDatasetTag\032!.mlflow.DeleteDataset" +
+      "Tag.Response\"g\362\206\031c\n8\n\006DELETE\022(/mlflow/da" +
+      "tasets/{dataset_id}/tags/{key}\032\004\010\003\020\000\020\003\030\350" +
+      "\007\030\272\027\030\001*\035Delete Evaluation Dataset Tag\022\303\001" +
+      "\n\024upsertDatasetRecords\022\034.mlflow.UpsertDa" +
+      "tasetRecords\032%.mlflow.UpsertDatasetRecor" +
+      "ds.Response\"f\362\206\031b\n3\n\004POST\022%/mlflow/datas" +
+      "ets/{dataset_id}/records\032\004\010\003\020\000\020\003\030\350\007\030\272\027\030\001" +
+      "*!Upsert Evaluation Dataset Records\022\326\001\n\027" +
+      "getDatasetExperimentIds\022\037.mlflow.GetData" +
+      "setExperimentIds\032(.mlflow.GetDatasetExpe" +
+      "rimentIds.Response\"p\362\206\031l\n9\n\003GET\022,/mlflow" +
+      "/datasets/{dataset_id}/experiment-ids\032\004\010" +
+      "\003\020\000\020\003\030\350\007\030\272\027\030\001*%Get Evaluation Dataset Ex" +
+      "periment IDs\022\212\001\n\016registerScorer\022\026.mlflow" +
+      ".RegisterScorer\032\037.mlflow.RegisterScorer." +
+      "Response\"?\362\206\031;\n&\n\004POST\022\030/mlflow/scorers/" +
+      "register\032\004\010\003\020\000\020\001*\017Register Scorer\022y\n\013lis" +
+      "tScorers\022\023.mlflow.ListScorers\032\034.mlflow.L" +
+      "istScorers.Response\"7\362\206\0313\n!\n\003GET\022\024/mlflo" +
+      "w/scorers/list\032\004\010\003\020\000\020\001*\014List Scorers\022\232\001\n" +
+      "\022listScorerVersions\022\032.mlflow.ListScorerV" +
+      "ersions\032#.mlflow.ListScorerVersions.Resp" +
+      "onse\"C\362\206\031?\n%\n\003GET\022\030/mlflow/scorers/versi" +
+      "ons\032\004\010\003\020\000\020\001*\024List Scorer Versions\022p\n\tget" +
+      "Scorer\022\021.mlflow.GetScorer\032\032.mlflow.GetSc" +
+      "orer.Response\"4\362\206\0310\n \n\003GET\022\023/mlflow/scor" +
+      "ers/get\032\004\010\003\020\000\020\001*\nGet Scorer\022\202\001\n\014deleteSc" +
+      "orer\022\024.mlflow.DeleteScorer\032\035.mlflow.Dele" +
+      "teScorer.Response\"=\362\206\0319\n&\n\006DELETE\022\026/mlfl" +
+      "ow/scorers/delete\032\004\010\003\020\000\020\001*\rDelete Scorer" +
+      "\022\266\001\n\021getDatasetRecords\022\031.mlflow.GetDatas" +
+      "etRecords\032\".mlflow.GetDatasetRecords.Res" +
+      "ponse\"b\362\206\031^\n2\n\003GET\022%/mlflow/datasets/{da" +
+      "taset_id}/records\032\004\010\003\020\000\020\003\030\350\007\030\272\027\030\001*\036Get E" +
+      "valuation Dataset Records\022\315\001\n\027addDataset" +
+      "ToExperiments\022\037.mlflow.AddDatasetToExper" +
+      "iments\032(.mlflow.AddDatasetToExperiments." +
+      "Response\"g\362\206\031c\n;\n\004POST\022-/mlflow/datasets" +
+      "/{dataset_id}/add-experiments\032\004\010\003\020\000\020\003\030\350\007" +
+      "\030\272\027\030\001*\032Add Dataset to Experiments\022\344\001\n\034re" +
+      "moveDatasetFromExperiments\022$.mlflow.Remo" +
+      "veDatasetFromExperiments\032-.mlflow.Remove" +
+      "DatasetFromExperiments.Response\"o\362\206\031k\n>\n" +
+      "\004POST\0220/mlflow/datasets/{dataset_id}/rem" +
+      "ove-experiments\032\004\010\003\020\000\020\003\030\350\007\030\272\027\030\001*\037Remove " +
+      "Dataset from Experiments\022\245\001\n\023createGatew" +
+      "aySecret\022\033.mlflow.CreateGatewaySecret\032$." +
+      "mlflow.CreateGatewaySecret.Response\"K\362\206\031" +
+      "G\n,\n\004POST\022\036/mlflow/gateway/secrets/creat" +
+      "e\032\004\010\003\020\000\020\001*\025Create Gateway Secret\022\246\001\n\024get" +
+      "GatewaySecretInfo\022\034.mlflow.GetGatewaySec" +
+      "retInfo\032%.mlflow.GetGatewaySecretInfo.Re" +
+      "sponse\"I\362\206\031E\n(\n\003GET\022\033/mlflow/gateway/sec" +
+      "rets/get\032\004\010\003\020\000\020\001*\027Get Gateway Secret Inf" +
+      "o\022\245\001\n\023updateGatewaySecret\022\033.mlflow.Updat" +
+      "eGatewaySecret\032$.mlflow.UpdateGatewaySec" +
+      "ret.Response\"K\362\206\031G\n,\n\004POST\022\036/mlflow/gate" +
+      "way/secrets/update\032\004\010\003\020\000\020\001*\025Update Gatew" +
+      "ay Secret\022\247\001\n\023deleteGatewaySecret\022\033.mlfl" +
+      "ow.DeleteGatewaySecret\032$.mlflow.DeleteGa" +
+      "tewaySecret.Response\"M\362\206\031I\n.\n\006DELETE\022\036/m" +
+      "lflow/gateway/secrets/delete\032\004\010\003\020\000\020\001*\025De" +
+      "lete Gateway Secret\022\252\001\n\026listGatewaySecre" +
+      "tInfos\022\036.mlflow.ListGatewaySecretInfos\032\'" +
+      ".mlflow.ListGatewaySecretInfos.Response\"" +
+      "G\362\206\031C\n)\n\003GET\022\034/mlflow/gateway/secrets/li" +
+      "st\032\004\010\003\020\000\020\001*\024List Gateway Secrets\022\257\001\n\025cre" +
+      "ateGatewayEndpoint\022\035.mlflow.CreateGatewa" +
+      "yEndpoint\032&.mlflow.CreateGatewayEndpoint" +
+      ".Response\"O\362\206\031K\n.\n\004POST\022 /mlflow/gateway" +
+      "/endpoints/create\032\004\010\003\020\000\020\001*\027Create Gatewa" +
+      "y Endpoint\022\237\001\n\022getGatewayEndpoint\022\032.mlfl" +
+      "ow.GetGatewayEndpoint\032#.mlflow.GetGatewa" +
+      "yEndpoint.Response\"H\362\206\031D\n*\n\003GET\022\035/mlflow" +
+      "/gateway/endpoints/get\032\004\010\003\020\000\020\001*\024Get Gate" +
+      "way Endpoint\022\257\001\n\025updateGatewayEndpoint\022\035" +
+      ".mlflow.UpdateGatewayEndpoint\032&.mlflow.U" +
+      "pdateGatewayEndpoint.Response\"O\362\206\031K\n.\n\004P" +
+      "OST\022 /mlflow/gateway/endpoints/update\032\004\010" +
+      "\003\020\000\020\001*\027Update Gateway Endpoint\022\261\001\n\025delet" +
+      "eGatewayEndpoint\022\035.mlflow.DeleteGatewayE" +
+      "ndpoint\032&.mlflow.DeleteGatewayEndpoint.R" +
+      "esponse\"Q\362\206\031M\n0\n\006DELETE\022 /mlflow/gateway" +
+      "/endpoints/delete\032\004\010\003\020\000\020\001*\027Delete Gatewa" +
+      "y Endpoint\022\250\001\n\024listGatewayEndpoints\022\034.ml" +
+      "flow.ListGatewayEndpoints\032%.mlflow.ListG" +
+      "atewayEndpoints.Response\"K\362\206\031G\n+\n\003GET\022\036/" +
+      "mlflow/gateway/endpoints/list\032\004\010\003\020\000\020\001*\026L" +
+      "ist Gateway Endpoints\022\324\001\n\034createGatewayM" +
+      "odelDefinition\022$.mlflow.CreateGatewayMod" +
+      "elDefinition\032-.mlflow.CreateGatewayModel" +
+      "Definition.Response\"_\362\206\031[\n6\n\004POST\022(/mlfl" +
+      "ow/gateway/model-definitions/create\032\004\010\003\020" +
+      "\000\020\001*\037Create Gateway Model Definition\022\304\001\n" +
+      "\031getGatewayModelDefinition\022!.mlflow.GetG" +
+      "atewayModelDefinition\032*.mlflow.GetGatewa" +
+      "yModelDefinition.Response\"X\362\206\031T\n2\n\003GET\022%" +
+      "/mlflow/gateway/model-definitions/get\032\004\010" +
+      "\003\020\000\020\001*\034Get Gateway Model Definition\022\315\001\n\033" +
+      "listGatewayModelDefinitions\022#.mlflow.Lis" +
+      "tGatewayModelDefinitions\032,.mlflow.ListGa" +
+      "tewayModelDefinitions.Response\"[\362\206\031W\n3\n\003" +
+      "GET\022&/mlflow/gateway/model-definitions/l" +
+      "ist\032\004\010\003\020\000\020\001*\036List Gateway Model Definiti" +
+      "ons\022\324\001\n\034updateGatewayModelDefinition\022$.m" +
+      "lflow.UpdateGatewayModelDefinition\032-.mlf" +
+      "low.UpdateGatewayModelDefinition.Respons" +
+      "e\"_\362\206\031[\n6\n\004POST\022(/mlflow/gateway/model-d" +
+      "efinitions/update\032\004\010\003\020\000\020\001*\037Update Gatewa" +
+      "y Model Definition\022\326\001\n\034deleteGatewayMode" +
+      "lDefinition\022$.mlflow.DeleteGatewayModelD" +
+      "efinition\032-.mlflow.DeleteGatewayModelDef" +
+      "inition.Response\"a\362\206\031]\n8\n\006DELETE\022(/mlflo" +
+      "w/gateway/model-definitions/delete\032\004\010\003\020\000" +
+      "\020\001*\037Delete Gateway Model Definition\022\305\001\n\025" +
+      "attachModelToEndpoint\022$.mlflow.AttachMod" +
+      "elToGatewayEndpoint\032-.mlflow.AttachModel" +
+      "ToGatewayEndpoint.Response\"W\362\206\031S\n5\n\004POST" +
+      "\022\'/mlflow/gateway/endpoints/models/attac" +
+      "h\032\004\010\003\020\000\020\001*\030Attach Model to Endpoint\022\315\001\n\027" +
+      "detachModelFromEndpoint\022&.mlflow.DetachM" +
+      "odelFromGatewayEndpoint\032/.mlflow.DetachM" +
+      "odelFromGatewayEndpoint.Response\"Y\362\206\031U\n5" +
+      "\n\004POST\022\'/mlflow/gateway/endpoints/models" +
+      "/detach\032\004\010\003\020\000\020\001*\032Detach Model from Endpo" +
+      "int\022\306\001\n\025createEndpointBinding\022$.mlflow.C" +
+      "reateGatewayEndpointBinding\032-.mlflow.Cre" +
+      "ateGatewayEndpointBinding.Response\"X\362\206\031T" +
+      "\n7\n\004POST\022)/mlflow/gateway/endpoints/bind" +
+      "ings/create\032\004\010\003\020\000\020\001*\027Create Endpoint Bin" +
+      "ding\022\310\001\n\025deleteEndpointBinding\022$.mlflow." +
+      "DeleteGatewayEndpointBinding\032-.mlflow.De" +
+      "leteGatewayEndpointBinding.Response\"Z\362\206\031" +
+      "V\n9\n\006DELETE\022)/mlflow/gateway/endpoints/b" +
+      "indings/delete\032\004\010\003\020\000\020\001*\027Delete Endpoint " +
+      "Binding\022\277\001\n\024listEndpointBindings\022#.mlflo" +
+      "w.ListGatewayEndpointBindings\032,.mlflow.L" +
+      "istGatewayEndpointBindings.Response\"T\362\206\031" +
+      "P\n4\n\003GET\022\'/mlflow/gateway/endpoints/bind" +
+      "ings/list\032\004\010\003\020\000\020\001*\026List Endpoint Binding" +
+      "s\022\261\001\n\025setGatewayEndpointTag\022\035.mlflow.Set" +
+      "GatewayEndpointTag\032&.mlflow.SetGatewayEn" +
+      "dpointTag.Response\"Q\362\206\031M\n/\n\004POST\022!/mlflo" +
+      "w/gateway/endpoints/set-tag\032\004\010\003\020\000\020\001*\030Gat" +
+      "eway Set Endpoint Tag\022\302\001\n\030deleteGatewayE" +
+      "ndpointTag\022 .mlflow.DeleteGatewayEndpoin" +
+      "tTag\032).mlflow.DeleteGatewayEndpointTag.R" +
+      "esponse\"Y\362\206\031U\n4\n\006DELETE\022$/mlflow/gateway" +
+      "/endpoints/delete-tag\032\004\010\003\020\000\020\001*\033Gateway D" +
+      "elete Endpoint TagB\036\n\024org.mlflow.api.pro" +
+      "to\220\001\001\342?\002\020\001"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -249826,12 +250234,18 @@ public final class Service {
     internal_static_mlflow_GatewaySecretInfo_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_mlflow_GatewaySecretInfo_descriptor,
-        new java.lang.String[] { "SecretId", "SecretName", "MaskedValues", "CreatedAt", "LastUpdatedAt", "Provider", "CreatedBy", "LastUpdatedBy", "AuthConfigJson", });
+        new java.lang.String[] { "SecretId", "SecretName", "MaskedValues", "CreatedAt", "LastUpdatedAt", "Provider", "CreatedBy", "LastUpdatedBy", "AuthConfig", });
     internal_static_mlflow_GatewaySecretInfo_MaskedValuesEntry_descriptor =
       internal_static_mlflow_GatewaySecretInfo_descriptor.getNestedTypes().get(0);
     internal_static_mlflow_GatewaySecretInfo_MaskedValuesEntry_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_mlflow_GatewaySecretInfo_MaskedValuesEntry_descriptor,
+        new java.lang.String[] { "Key", "Value", });
+    internal_static_mlflow_GatewaySecretInfo_AuthConfigEntry_descriptor =
+      internal_static_mlflow_GatewaySecretInfo_descriptor.getNestedTypes().get(1);
+    internal_static_mlflow_GatewaySecretInfo_AuthConfigEntry_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_mlflow_GatewaySecretInfo_AuthConfigEntry_descriptor,
         new java.lang.String[] { "Key", "Value", });
     internal_static_mlflow_GatewayModelDefinition_descriptor =
       getDescriptor().getMessageTypes().get(111);
@@ -249868,15 +250282,21 @@ public final class Service {
     internal_static_mlflow_CreateGatewaySecret_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_mlflow_CreateGatewaySecret_descriptor,
-        new java.lang.String[] { "SecretName", "SecretValue", "Provider", "AuthConfigJson", "CreatedBy", });
+        new java.lang.String[] { "SecretName", "SecretValue", "Provider", "AuthConfig", "CreatedBy", });
     internal_static_mlflow_CreateGatewaySecret_SecretValueEntry_descriptor =
       internal_static_mlflow_CreateGatewaySecret_descriptor.getNestedTypes().get(0);
     internal_static_mlflow_CreateGatewaySecret_SecretValueEntry_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_mlflow_CreateGatewaySecret_SecretValueEntry_descriptor,
         new java.lang.String[] { "Key", "Value", });
-    internal_static_mlflow_CreateGatewaySecret_Response_descriptor =
+    internal_static_mlflow_CreateGatewaySecret_AuthConfigEntry_descriptor =
       internal_static_mlflow_CreateGatewaySecret_descriptor.getNestedTypes().get(1);
+    internal_static_mlflow_CreateGatewaySecret_AuthConfigEntry_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_mlflow_CreateGatewaySecret_AuthConfigEntry_descriptor,
+        new java.lang.String[] { "Key", "Value", });
+    internal_static_mlflow_CreateGatewaySecret_Response_descriptor =
+      internal_static_mlflow_CreateGatewaySecret_descriptor.getNestedTypes().get(2);
     internal_static_mlflow_CreateGatewaySecret_Response_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_mlflow_CreateGatewaySecret_Response_descriptor,
@@ -249898,15 +250318,21 @@ public final class Service {
     internal_static_mlflow_UpdateGatewaySecret_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_mlflow_UpdateGatewaySecret_descriptor,
-        new java.lang.String[] { "SecretId", "SecretValue", "AuthConfigJson", "UpdatedBy", });
+        new java.lang.String[] { "SecretId", "SecretValue", "AuthConfig", "UpdatedBy", });
     internal_static_mlflow_UpdateGatewaySecret_SecretValueEntry_descriptor =
       internal_static_mlflow_UpdateGatewaySecret_descriptor.getNestedTypes().get(0);
     internal_static_mlflow_UpdateGatewaySecret_SecretValueEntry_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_mlflow_UpdateGatewaySecret_SecretValueEntry_descriptor,
         new java.lang.String[] { "Key", "Value", });
-    internal_static_mlflow_UpdateGatewaySecret_Response_descriptor =
+    internal_static_mlflow_UpdateGatewaySecret_AuthConfigEntry_descriptor =
       internal_static_mlflow_UpdateGatewaySecret_descriptor.getNestedTypes().get(1);
+    internal_static_mlflow_UpdateGatewaySecret_AuthConfigEntry_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_mlflow_UpdateGatewaySecret_AuthConfigEntry_descriptor,
+        new java.lang.String[] { "Key", "Value", });
+    internal_static_mlflow_UpdateGatewaySecret_Response_descriptor =
+      internal_static_mlflow_UpdateGatewaySecret_descriptor.getNestedTypes().get(2);
     internal_static_mlflow_UpdateGatewaySecret_Response_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_mlflow_UpdateGatewaySecret_Response_descriptor,
