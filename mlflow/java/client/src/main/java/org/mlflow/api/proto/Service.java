@@ -201299,7 +201299,7 @@ public final class Service {
 
     /**
      * <pre>
-     * Type of linkage (PRIMARY, FALLBACK)
+     * Type of linkage
      * </pre>
      *
      * <code>optional .mlflow.GatewayModelLinkageType linkage_type = 8;</code>
@@ -201308,7 +201308,7 @@ public final class Service {
     boolean hasLinkageType();
     /**
      * <pre>
-     * Type of linkage (PRIMARY, FALLBACK)
+     * Type of linkage
      * </pre>
      *
      * <code>optional .mlflow.GatewayModelLinkageType linkage_type = 8;</code>
@@ -201823,7 +201823,7 @@ public final class Service {
     private int linkageType_;
     /**
      * <pre>
-     * Type of linkage (PRIMARY, FALLBACK)
+     * Type of linkage
      * </pre>
      *
      * <code>optional .mlflow.GatewayModelLinkageType linkage_type = 8;</code>
@@ -201834,7 +201834,7 @@ public final class Service {
     }
     /**
      * <pre>
-     * Type of linkage (PRIMARY, FALLBACK)
+     * Type of linkage
      * </pre>
      *
      * <code>optional .mlflow.GatewayModelLinkageType linkage_type = 8;</code>
@@ -203107,7 +203107,7 @@ public final class Service {
       private int linkageType_ = 0;
       /**
        * <pre>
-       * Type of linkage (PRIMARY, FALLBACK)
+       * Type of linkage
        * </pre>
        *
        * <code>optional .mlflow.GatewayModelLinkageType linkage_type = 8;</code>
@@ -203118,7 +203118,7 @@ public final class Service {
       }
       /**
        * <pre>
-       * Type of linkage (PRIMARY, FALLBACK)
+       * Type of linkage
        * </pre>
        *
        * <code>optional .mlflow.GatewayModelLinkageType linkage_type = 8;</code>
@@ -203132,7 +203132,7 @@ public final class Service {
       }
       /**
        * <pre>
-       * Type of linkage (PRIMARY, FALLBACK)
+       * Type of linkage
        * </pre>
        *
        * <code>optional .mlflow.GatewayModelLinkageType linkage_type = 8;</code>
@@ -203150,7 +203150,7 @@ public final class Service {
       }
       /**
        * <pre>
-       * Type of linkage (PRIMARY, FALLBACK)
+       * Type of linkage
        * </pre>
        *
        * <code>optional .mlflow.GatewayModelLinkageType linkage_type = 8;</code>
@@ -227795,6 +227795,1074 @@ public final class Service {
 
   }
 
+  public interface GatewayEndpointModelConfigOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:mlflow.GatewayEndpointModelConfig)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <pre>
+     * ID of the model definition
+     * </pre>
+     *
+     * <code>optional string model_definition_id = 1;</code>
+     * @return Whether the modelDefinitionId field is set.
+     */
+    boolean hasModelDefinitionId();
+    /**
+     * <pre>
+     * ID of the model definition
+     * </pre>
+     *
+     * <code>optional string model_definition_id = 1;</code>
+     * @return The modelDefinitionId.
+     */
+    java.lang.String getModelDefinitionId();
+    /**
+     * <pre>
+     * ID of the model definition
+     * </pre>
+     *
+     * <code>optional string model_definition_id = 1;</code>
+     * @return The bytes for modelDefinitionId.
+     */
+    com.google.protobuf.ByteString
+        getModelDefinitionIdBytes();
+
+    /**
+     * <pre>
+     * Type of linkage
+     * </pre>
+     *
+     * <code>optional .mlflow.GatewayModelLinkageType linkage_type = 2;</code>
+     * @return Whether the linkageType field is set.
+     */
+    boolean hasLinkageType();
+    /**
+     * <pre>
+     * Type of linkage
+     * </pre>
+     *
+     * <code>optional .mlflow.GatewayModelLinkageType linkage_type = 2;</code>
+     * @return The linkageType.
+     */
+    org.mlflow.api.proto.Service.GatewayModelLinkageType getLinkageType();
+
+    /**
+     * <pre>
+     * Routing weight for traffic distribution
+     * </pre>
+     *
+     * <code>optional float weight = 3;</code>
+     * @return Whether the weight field is set.
+     */
+    boolean hasWeight();
+    /**
+     * <pre>
+     * Routing weight for traffic distribution
+     * </pre>
+     *
+     * <code>optional float weight = 3;</code>
+     * @return The weight.
+     */
+    float getWeight();
+
+    /**
+     * <pre>
+     * Order for fallback attempts (only for FALLBACK linkages, NULL for PRIMARY)
+     * </pre>
+     *
+     * <code>optional int32 fallback_order = 4;</code>
+     * @return Whether the fallbackOrder field is set.
+     */
+    boolean hasFallbackOrder();
+    /**
+     * <pre>
+     * Order for fallback attempts (only for FALLBACK linkages, NULL for PRIMARY)
+     * </pre>
+     *
+     * <code>optional int32 fallback_order = 4;</code>
+     * @return The fallbackOrder.
+     */
+    int getFallbackOrder();
+  }
+  /**
+   * <pre>
+   * Configuration for a model attached to an endpoint
+   * </pre>
+   *
+   * Protobuf type {@code mlflow.GatewayEndpointModelConfig}
+   */
+  public static final class GatewayEndpointModelConfig extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:mlflow.GatewayEndpointModelConfig)
+      GatewayEndpointModelConfigOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use GatewayEndpointModelConfig.newBuilder() to construct.
+    private GatewayEndpointModelConfig(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private GatewayEndpointModelConfig() {
+      modelDefinitionId_ = "";
+      linkageType_ = 0;
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new GatewayEndpointModelConfig();
+    }
+
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet
+    getUnknownFields() {
+      return this.unknownFields;
+    }
+    private GatewayEndpointModelConfig(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      this();
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
+      int mutable_bitField0_ = 0;
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            case 10: {
+              com.google.protobuf.ByteString bs = input.readBytes();
+              bitField0_ |= 0x00000001;
+              modelDefinitionId_ = bs;
+              break;
+            }
+            case 16: {
+              int rawValue = input.readEnum();
+                @SuppressWarnings("deprecation")
+              org.mlflow.api.proto.Service.GatewayModelLinkageType value = org.mlflow.api.proto.Service.GatewayModelLinkageType.valueOf(rawValue);
+              if (value == null) {
+                unknownFields.mergeVarintField(2, rawValue);
+              } else {
+                bitField0_ |= 0x00000002;
+                linkageType_ = rawValue;
+              }
+              break;
+            }
+            case 29: {
+              bitField0_ |= 0x00000004;
+              weight_ = input.readFloat();
+              break;
+            }
+            case 32: {
+              bitField0_ |= 0x00000008;
+              fallbackOrder_ = input.readInt32();
+              break;
+            }
+            default: {
+              if (!parseUnknownField(
+                  input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e).setUnfinishedMessage(this);
+      } finally {
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return org.mlflow.api.proto.Service.internal_static_mlflow_GatewayEndpointModelConfig_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return org.mlflow.api.proto.Service.internal_static_mlflow_GatewayEndpointModelConfig_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              org.mlflow.api.proto.Service.GatewayEndpointModelConfig.class, org.mlflow.api.proto.Service.GatewayEndpointModelConfig.Builder.class);
+    }
+
+    private int bitField0_;
+    public static final int MODEL_DEFINITION_ID_FIELD_NUMBER = 1;
+    private volatile java.lang.Object modelDefinitionId_;
+    /**
+     * <pre>
+     * ID of the model definition
+     * </pre>
+     *
+     * <code>optional string model_definition_id = 1;</code>
+     * @return Whether the modelDefinitionId field is set.
+     */
+    @java.lang.Override
+    public boolean hasModelDefinitionId() {
+      return ((bitField0_ & 0x00000001) != 0);
+    }
+    /**
+     * <pre>
+     * ID of the model definition
+     * </pre>
+     *
+     * <code>optional string model_definition_id = 1;</code>
+     * @return The modelDefinitionId.
+     */
+    @java.lang.Override
+    public java.lang.String getModelDefinitionId() {
+      java.lang.Object ref = modelDefinitionId_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        if (bs.isValidUtf8()) {
+          modelDefinitionId_ = s;
+        }
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * ID of the model definition
+     * </pre>
+     *
+     * <code>optional string model_definition_id = 1;</code>
+     * @return The bytes for modelDefinitionId.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getModelDefinitionIdBytes() {
+      java.lang.Object ref = modelDefinitionId_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        modelDefinitionId_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int LINKAGE_TYPE_FIELD_NUMBER = 2;
+    private int linkageType_;
+    /**
+     * <pre>
+     * Type of linkage
+     * </pre>
+     *
+     * <code>optional .mlflow.GatewayModelLinkageType linkage_type = 2;</code>
+     * @return Whether the linkageType field is set.
+     */
+    @java.lang.Override public boolean hasLinkageType() {
+      return ((bitField0_ & 0x00000002) != 0);
+    }
+    /**
+     * <pre>
+     * Type of linkage
+     * </pre>
+     *
+     * <code>optional .mlflow.GatewayModelLinkageType linkage_type = 2;</code>
+     * @return The linkageType.
+     */
+    @java.lang.Override public org.mlflow.api.proto.Service.GatewayModelLinkageType getLinkageType() {
+      @SuppressWarnings("deprecation")
+      org.mlflow.api.proto.Service.GatewayModelLinkageType result = org.mlflow.api.proto.Service.GatewayModelLinkageType.valueOf(linkageType_);
+      return result == null ? org.mlflow.api.proto.Service.GatewayModelLinkageType.LINKAGE_TYPE_UNSPECIFIED : result;
+    }
+
+    public static final int WEIGHT_FIELD_NUMBER = 3;
+    private float weight_;
+    /**
+     * <pre>
+     * Routing weight for traffic distribution
+     * </pre>
+     *
+     * <code>optional float weight = 3;</code>
+     * @return Whether the weight field is set.
+     */
+    @java.lang.Override
+    public boolean hasWeight() {
+      return ((bitField0_ & 0x00000004) != 0);
+    }
+    /**
+     * <pre>
+     * Routing weight for traffic distribution
+     * </pre>
+     *
+     * <code>optional float weight = 3;</code>
+     * @return The weight.
+     */
+    @java.lang.Override
+    public float getWeight() {
+      return weight_;
+    }
+
+    public static final int FALLBACK_ORDER_FIELD_NUMBER = 4;
+    private int fallbackOrder_;
+    /**
+     * <pre>
+     * Order for fallback attempts (only for FALLBACK linkages, NULL for PRIMARY)
+     * </pre>
+     *
+     * <code>optional int32 fallback_order = 4;</code>
+     * @return Whether the fallbackOrder field is set.
+     */
+    @java.lang.Override
+    public boolean hasFallbackOrder() {
+      return ((bitField0_ & 0x00000008) != 0);
+    }
+    /**
+     * <pre>
+     * Order for fallback attempts (only for FALLBACK linkages, NULL for PRIMARY)
+     * </pre>
+     *
+     * <code>optional int32 fallback_order = 4;</code>
+     * @return The fallbackOrder.
+     */
+    @java.lang.Override
+    public int getFallbackOrder() {
+      return fallbackOrder_;
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (((bitField0_ & 0x00000001) != 0)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, modelDefinitionId_);
+      }
+      if (((bitField0_ & 0x00000002) != 0)) {
+        output.writeEnum(2, linkageType_);
+      }
+      if (((bitField0_ & 0x00000004) != 0)) {
+        output.writeFloat(3, weight_);
+      }
+      if (((bitField0_ & 0x00000008) != 0)) {
+        output.writeInt32(4, fallbackOrder_);
+      }
+      unknownFields.writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (((bitField0_ & 0x00000001) != 0)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, modelDefinitionId_);
+      }
+      if (((bitField0_ & 0x00000002) != 0)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeEnumSize(2, linkageType_);
+      }
+      if (((bitField0_ & 0x00000004) != 0)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeFloatSize(3, weight_);
+      }
+      if (((bitField0_ & 0x00000008) != 0)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeInt32Size(4, fallbackOrder_);
+      }
+      size += unknownFields.getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof org.mlflow.api.proto.Service.GatewayEndpointModelConfig)) {
+        return super.equals(obj);
+      }
+      org.mlflow.api.proto.Service.GatewayEndpointModelConfig other = (org.mlflow.api.proto.Service.GatewayEndpointModelConfig) obj;
+
+      if (hasModelDefinitionId() != other.hasModelDefinitionId()) return false;
+      if (hasModelDefinitionId()) {
+        if (!getModelDefinitionId()
+            .equals(other.getModelDefinitionId())) return false;
+      }
+      if (hasLinkageType() != other.hasLinkageType()) return false;
+      if (hasLinkageType()) {
+        if (linkageType_ != other.linkageType_) return false;
+      }
+      if (hasWeight() != other.hasWeight()) return false;
+      if (hasWeight()) {
+        if (java.lang.Float.floatToIntBits(getWeight())
+            != java.lang.Float.floatToIntBits(
+                other.getWeight())) return false;
+      }
+      if (hasFallbackOrder() != other.hasFallbackOrder()) return false;
+      if (hasFallbackOrder()) {
+        if (getFallbackOrder()
+            != other.getFallbackOrder()) return false;
+      }
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      if (hasModelDefinitionId()) {
+        hash = (37 * hash) + MODEL_DEFINITION_ID_FIELD_NUMBER;
+        hash = (53 * hash) + getModelDefinitionId().hashCode();
+      }
+      if (hasLinkageType()) {
+        hash = (37 * hash) + LINKAGE_TYPE_FIELD_NUMBER;
+        hash = (53 * hash) + linkageType_;
+      }
+      if (hasWeight()) {
+        hash = (37 * hash) + WEIGHT_FIELD_NUMBER;
+        hash = (53 * hash) + java.lang.Float.floatToIntBits(
+            getWeight());
+      }
+      if (hasFallbackOrder()) {
+        hash = (37 * hash) + FALLBACK_ORDER_FIELD_NUMBER;
+        hash = (53 * hash) + getFallbackOrder();
+      }
+      hash = (29 * hash) + unknownFields.hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static org.mlflow.api.proto.Service.GatewayEndpointModelConfig parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static org.mlflow.api.proto.Service.GatewayEndpointModelConfig parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static org.mlflow.api.proto.Service.GatewayEndpointModelConfig parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static org.mlflow.api.proto.Service.GatewayEndpointModelConfig parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static org.mlflow.api.proto.Service.GatewayEndpointModelConfig parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static org.mlflow.api.proto.Service.GatewayEndpointModelConfig parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static org.mlflow.api.proto.Service.GatewayEndpointModelConfig parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static org.mlflow.api.proto.Service.GatewayEndpointModelConfig parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static org.mlflow.api.proto.Service.GatewayEndpointModelConfig parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+    public static org.mlflow.api.proto.Service.GatewayEndpointModelConfig parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static org.mlflow.api.proto.Service.GatewayEndpointModelConfig parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static org.mlflow.api.proto.Service.GatewayEndpointModelConfig parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(org.mlflow.api.proto.Service.GatewayEndpointModelConfig prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * <pre>
+     * Configuration for a model attached to an endpoint
+     * </pre>
+     *
+     * Protobuf type {@code mlflow.GatewayEndpointModelConfig}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:mlflow.GatewayEndpointModelConfig)
+        org.mlflow.api.proto.Service.GatewayEndpointModelConfigOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return org.mlflow.api.proto.Service.internal_static_mlflow_GatewayEndpointModelConfig_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return org.mlflow.api.proto.Service.internal_static_mlflow_GatewayEndpointModelConfig_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                org.mlflow.api.proto.Service.GatewayEndpointModelConfig.class, org.mlflow.api.proto.Service.GatewayEndpointModelConfig.Builder.class);
+      }
+
+      // Construct using org.mlflow.api.proto.Service.GatewayEndpointModelConfig.newBuilder()
+      private Builder() {
+        maybeForceBuilderInitialization();
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+        }
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        modelDefinitionId_ = "";
+        bitField0_ = (bitField0_ & ~0x00000001);
+        linkageType_ = 0;
+        bitField0_ = (bitField0_ & ~0x00000002);
+        weight_ = 0F;
+        bitField0_ = (bitField0_ & ~0x00000004);
+        fallbackOrder_ = 0;
+        bitField0_ = (bitField0_ & ~0x00000008);
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return org.mlflow.api.proto.Service.internal_static_mlflow_GatewayEndpointModelConfig_descriptor;
+      }
+
+      @java.lang.Override
+      public org.mlflow.api.proto.Service.GatewayEndpointModelConfig getDefaultInstanceForType() {
+        return org.mlflow.api.proto.Service.GatewayEndpointModelConfig.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public org.mlflow.api.proto.Service.GatewayEndpointModelConfig build() {
+        org.mlflow.api.proto.Service.GatewayEndpointModelConfig result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public org.mlflow.api.proto.Service.GatewayEndpointModelConfig buildPartial() {
+        org.mlflow.api.proto.Service.GatewayEndpointModelConfig result = new org.mlflow.api.proto.Service.GatewayEndpointModelConfig(this);
+        int from_bitField0_ = bitField0_;
+        int to_bitField0_ = 0;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          to_bitField0_ |= 0x00000001;
+        }
+        result.modelDefinitionId_ = modelDefinitionId_;
+        if (((from_bitField0_ & 0x00000002) != 0)) {
+          to_bitField0_ |= 0x00000002;
+        }
+        result.linkageType_ = linkageType_;
+        if (((from_bitField0_ & 0x00000004) != 0)) {
+          result.weight_ = weight_;
+          to_bitField0_ |= 0x00000004;
+        }
+        if (((from_bitField0_ & 0x00000008) != 0)) {
+          result.fallbackOrder_ = fallbackOrder_;
+          to_bitField0_ |= 0x00000008;
+        }
+        result.bitField0_ = to_bitField0_;
+        onBuilt();
+        return result;
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof org.mlflow.api.proto.Service.GatewayEndpointModelConfig) {
+          return mergeFrom((org.mlflow.api.proto.Service.GatewayEndpointModelConfig)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(org.mlflow.api.proto.Service.GatewayEndpointModelConfig other) {
+        if (other == org.mlflow.api.proto.Service.GatewayEndpointModelConfig.getDefaultInstance()) return this;
+        if (other.hasModelDefinitionId()) {
+          bitField0_ |= 0x00000001;
+          modelDefinitionId_ = other.modelDefinitionId_;
+          onChanged();
+        }
+        if (other.hasLinkageType()) {
+          setLinkageType(other.getLinkageType());
+        }
+        if (other.hasWeight()) {
+          setWeight(other.getWeight());
+        }
+        if (other.hasFallbackOrder()) {
+          setFallbackOrder(other.getFallbackOrder());
+        }
+        this.mergeUnknownFields(other.unknownFields);
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        org.mlflow.api.proto.Service.GatewayEndpointModelConfig parsedMessage = null;
+        try {
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (org.mlflow.api.proto.Service.GatewayEndpointModelConfig) e.getUnfinishedMessage();
+          throw e.unwrapIOException();
+        } finally {
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
+        return this;
+      }
+      private int bitField0_;
+
+      private java.lang.Object modelDefinitionId_ = "";
+      /**
+       * <pre>
+       * ID of the model definition
+       * </pre>
+       *
+       * <code>optional string model_definition_id = 1;</code>
+       * @return Whether the modelDefinitionId field is set.
+       */
+      public boolean hasModelDefinitionId() {
+        return ((bitField0_ & 0x00000001) != 0);
+      }
+      /**
+       * <pre>
+       * ID of the model definition
+       * </pre>
+       *
+       * <code>optional string model_definition_id = 1;</code>
+       * @return The modelDefinitionId.
+       */
+      public java.lang.String getModelDefinitionId() {
+        java.lang.Object ref = modelDefinitionId_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          if (bs.isValidUtf8()) {
+            modelDefinitionId_ = s;
+          }
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * ID of the model definition
+       * </pre>
+       *
+       * <code>optional string model_definition_id = 1;</code>
+       * @return The bytes for modelDefinitionId.
+       */
+      public com.google.protobuf.ByteString
+          getModelDefinitionIdBytes() {
+        java.lang.Object ref = modelDefinitionId_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          modelDefinitionId_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * ID of the model definition
+       * </pre>
+       *
+       * <code>optional string model_definition_id = 1;</code>
+       * @param value The modelDefinitionId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setModelDefinitionId(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  bitField0_ |= 0x00000001;
+        modelDefinitionId_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * ID of the model definition
+       * </pre>
+       *
+       * <code>optional string model_definition_id = 1;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearModelDefinitionId() {
+        bitField0_ = (bitField0_ & ~0x00000001);
+        modelDefinitionId_ = getDefaultInstance().getModelDefinitionId();
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * ID of the model definition
+       * </pre>
+       *
+       * <code>optional string model_definition_id = 1;</code>
+       * @param value The bytes for modelDefinitionId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setModelDefinitionIdBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  bitField0_ |= 0x00000001;
+        modelDefinitionId_ = value;
+        onChanged();
+        return this;
+      }
+
+      private int linkageType_ = 0;
+      /**
+       * <pre>
+       * Type of linkage
+       * </pre>
+       *
+       * <code>optional .mlflow.GatewayModelLinkageType linkage_type = 2;</code>
+       * @return Whether the linkageType field is set.
+       */
+      @java.lang.Override public boolean hasLinkageType() {
+        return ((bitField0_ & 0x00000002) != 0);
+      }
+      /**
+       * <pre>
+       * Type of linkage
+       * </pre>
+       *
+       * <code>optional .mlflow.GatewayModelLinkageType linkage_type = 2;</code>
+       * @return The linkageType.
+       */
+      @java.lang.Override
+      public org.mlflow.api.proto.Service.GatewayModelLinkageType getLinkageType() {
+        @SuppressWarnings("deprecation")
+        org.mlflow.api.proto.Service.GatewayModelLinkageType result = org.mlflow.api.proto.Service.GatewayModelLinkageType.valueOf(linkageType_);
+        return result == null ? org.mlflow.api.proto.Service.GatewayModelLinkageType.LINKAGE_TYPE_UNSPECIFIED : result;
+      }
+      /**
+       * <pre>
+       * Type of linkage
+       * </pre>
+       *
+       * <code>optional .mlflow.GatewayModelLinkageType linkage_type = 2;</code>
+       * @param value The linkageType to set.
+       * @return This builder for chaining.
+       */
+      public Builder setLinkageType(org.mlflow.api.proto.Service.GatewayModelLinkageType value) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        bitField0_ |= 0x00000002;
+        linkageType_ = value.getNumber();
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Type of linkage
+       * </pre>
+       *
+       * <code>optional .mlflow.GatewayModelLinkageType linkage_type = 2;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearLinkageType() {
+        bitField0_ = (bitField0_ & ~0x00000002);
+        linkageType_ = 0;
+        onChanged();
+        return this;
+      }
+
+      private float weight_ ;
+      /**
+       * <pre>
+       * Routing weight for traffic distribution
+       * </pre>
+       *
+       * <code>optional float weight = 3;</code>
+       * @return Whether the weight field is set.
+       */
+      @java.lang.Override
+      public boolean hasWeight() {
+        return ((bitField0_ & 0x00000004) != 0);
+      }
+      /**
+       * <pre>
+       * Routing weight for traffic distribution
+       * </pre>
+       *
+       * <code>optional float weight = 3;</code>
+       * @return The weight.
+       */
+      @java.lang.Override
+      public float getWeight() {
+        return weight_;
+      }
+      /**
+       * <pre>
+       * Routing weight for traffic distribution
+       * </pre>
+       *
+       * <code>optional float weight = 3;</code>
+       * @param value The weight to set.
+       * @return This builder for chaining.
+       */
+      public Builder setWeight(float value) {
+        bitField0_ |= 0x00000004;
+        weight_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Routing weight for traffic distribution
+       * </pre>
+       *
+       * <code>optional float weight = 3;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearWeight() {
+        bitField0_ = (bitField0_ & ~0x00000004);
+        weight_ = 0F;
+        onChanged();
+        return this;
+      }
+
+      private int fallbackOrder_ ;
+      /**
+       * <pre>
+       * Order for fallback attempts (only for FALLBACK linkages, NULL for PRIMARY)
+       * </pre>
+       *
+       * <code>optional int32 fallback_order = 4;</code>
+       * @return Whether the fallbackOrder field is set.
+       */
+      @java.lang.Override
+      public boolean hasFallbackOrder() {
+        return ((bitField0_ & 0x00000008) != 0);
+      }
+      /**
+       * <pre>
+       * Order for fallback attempts (only for FALLBACK linkages, NULL for PRIMARY)
+       * </pre>
+       *
+       * <code>optional int32 fallback_order = 4;</code>
+       * @return The fallbackOrder.
+       */
+      @java.lang.Override
+      public int getFallbackOrder() {
+        return fallbackOrder_;
+      }
+      /**
+       * <pre>
+       * Order for fallback attempts (only for FALLBACK linkages, NULL for PRIMARY)
+       * </pre>
+       *
+       * <code>optional int32 fallback_order = 4;</code>
+       * @param value The fallbackOrder to set.
+       * @return This builder for chaining.
+       */
+      public Builder setFallbackOrder(int value) {
+        bitField0_ |= 0x00000008;
+        fallbackOrder_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Order for fallback attempts (only for FALLBACK linkages, NULL for PRIMARY)
+       * </pre>
+       *
+       * <code>optional int32 fallback_order = 4;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearFallbackOrder() {
+        bitField0_ = (bitField0_ & ~0x00000008);
+        fallbackOrder_ = 0;
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:mlflow.GatewayEndpointModelConfig)
+    }
+
+    // @@protoc_insertion_point(class_scope:mlflow.GatewayEndpointModelConfig)
+    private static final org.mlflow.api.proto.Service.GatewayEndpointModelConfig DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new org.mlflow.api.proto.Service.GatewayEndpointModelConfig();
+    }
+
+    public static org.mlflow.api.proto.Service.GatewayEndpointModelConfig getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    @java.lang.Deprecated public static final com.google.protobuf.Parser<GatewayEndpointModelConfig>
+        PARSER = new com.google.protobuf.AbstractParser<GatewayEndpointModelConfig>() {
+      @java.lang.Override
+      public GatewayEndpointModelConfig parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return new GatewayEndpointModelConfig(input, extensionRegistry);
+      }
+    };
+
+    public static com.google.protobuf.Parser<GatewayEndpointModelConfig> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<GatewayEndpointModelConfig> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public org.mlflow.api.proto.Service.GatewayEndpointModelConfig getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
   public interface CreateGatewayEndpointOrBuilder extends
       // @@protoc_insertion_point(interface_extends:mlflow.CreateGatewayEndpoint)
       com.google.protobuf.MessageOrBuilder {
@@ -227830,44 +228898,47 @@ public final class Service {
 
     /**
      * <pre>
-     * List of PRIMARY model definition IDs to attach to this endpoint
+     * List of model configurations
      * </pre>
      *
-     * <code>repeated string model_definition_ids = 2;</code>
-     * @return A list containing the modelDefinitionIds.
+     * <code>repeated .mlflow.GatewayEndpointModelConfig model_configs = 2;</code>
      */
-    java.util.List<java.lang.String>
-        getModelDefinitionIdsList();
+    java.util.List<org.mlflow.api.proto.Service.GatewayEndpointModelConfig> 
+        getModelConfigsList();
     /**
      * <pre>
-     * List of PRIMARY model definition IDs to attach to this endpoint
+     * List of model configurations
      * </pre>
      *
-     * <code>repeated string model_definition_ids = 2;</code>
-     * @return The count of modelDefinitionIds.
+     * <code>repeated .mlflow.GatewayEndpointModelConfig model_configs = 2;</code>
      */
-    int getModelDefinitionIdsCount();
+    org.mlflow.api.proto.Service.GatewayEndpointModelConfig getModelConfigs(int index);
     /**
      * <pre>
-     * List of PRIMARY model definition IDs to attach to this endpoint
+     * List of model configurations
      * </pre>
      *
-     * <code>repeated string model_definition_ids = 2;</code>
-     * @param index The index of the element to return.
-     * @return The modelDefinitionIds at the given index.
+     * <code>repeated .mlflow.GatewayEndpointModelConfig model_configs = 2;</code>
      */
-    java.lang.String getModelDefinitionIds(int index);
+    int getModelConfigsCount();
     /**
      * <pre>
-     * List of PRIMARY model definition IDs to attach to this endpoint
+     * List of model configurations
      * </pre>
      *
-     * <code>repeated string model_definition_ids = 2;</code>
-     * @param index The index of the value to return.
-     * @return The bytes of the modelDefinitionIds at the given index.
+     * <code>repeated .mlflow.GatewayEndpointModelConfig model_configs = 2;</code>
      */
-    com.google.protobuf.ByteString
-        getModelDefinitionIdsBytes(int index);
+    java.util.List<? extends org.mlflow.api.proto.Service.GatewayEndpointModelConfigOrBuilder> 
+        getModelConfigsOrBuilderList();
+    /**
+     * <pre>
+     * List of model configurations
+     * </pre>
+     *
+     * <code>repeated .mlflow.GatewayEndpointModelConfig model_configs = 2;</code>
+     */
+    org.mlflow.api.proto.Service.GatewayEndpointModelConfigOrBuilder getModelConfigsOrBuilder(
+        int index);
 
     /**
      * <pre>
@@ -227943,47 +229014,6 @@ public final class Service {
      * <code>optional .mlflow.FallbackConfig fallback_config = 5;</code>
      */
     org.mlflow.api.proto.Service.FallbackConfigOrBuilder getFallbackConfigOrBuilder();
-
-    /**
-     * <pre>
-     * Optional ordered list of FALLBACK model definition IDs (order determines fallback_order)
-     * </pre>
-     *
-     * <code>repeated string fallback_model_definition_ids = 6;</code>
-     * @return A list containing the fallbackModelDefinitionIds.
-     */
-    java.util.List<java.lang.String>
-        getFallbackModelDefinitionIdsList();
-    /**
-     * <pre>
-     * Optional ordered list of FALLBACK model definition IDs (order determines fallback_order)
-     * </pre>
-     *
-     * <code>repeated string fallback_model_definition_ids = 6;</code>
-     * @return The count of fallbackModelDefinitionIds.
-     */
-    int getFallbackModelDefinitionIdsCount();
-    /**
-     * <pre>
-     * Optional ordered list of FALLBACK model definition IDs (order determines fallback_order)
-     * </pre>
-     *
-     * <code>repeated string fallback_model_definition_ids = 6;</code>
-     * @param index The index of the element to return.
-     * @return The fallbackModelDefinitionIds at the given index.
-     */
-    java.lang.String getFallbackModelDefinitionIds(int index);
-    /**
-     * <pre>
-     * Optional ordered list of FALLBACK model definition IDs (order determines fallback_order)
-     * </pre>
-     *
-     * <code>repeated string fallback_model_definition_ids = 6;</code>
-     * @param index The index of the value to return.
-     * @return The bytes of the fallbackModelDefinitionIds at the given index.
-     */
-    com.google.protobuf.ByteString
-        getFallbackModelDefinitionIdsBytes(int index);
   }
   /**
    * Protobuf type {@code mlflow.CreateGatewayEndpoint}
@@ -227999,10 +229029,9 @@ public final class Service {
     }
     private CreateGatewayEndpoint() {
       name_ = "";
-      modelDefinitionIds_ = com.google.protobuf.LazyStringArrayList.EMPTY;
+      modelConfigs_ = java.util.Collections.emptyList();
       createdBy_ = "";
       routingStrategy_ = 0;
-      fallbackModelDefinitionIds_ = com.google.protobuf.LazyStringArrayList.EMPTY;
     }
 
     @java.lang.Override
@@ -228043,12 +229072,12 @@ public final class Service {
               break;
             }
             case 18: {
-              com.google.protobuf.ByteString bs = input.readBytes();
               if (!((mutable_bitField0_ & 0x00000002) != 0)) {
-                modelDefinitionIds_ = new com.google.protobuf.LazyStringArrayList();
+                modelConfigs_ = new java.util.ArrayList<org.mlflow.api.proto.Service.GatewayEndpointModelConfig>();
                 mutable_bitField0_ |= 0x00000002;
               }
-              modelDefinitionIds_.add(bs);
+              modelConfigs_.add(
+                  input.readMessage(org.mlflow.api.proto.Service.GatewayEndpointModelConfig.PARSER, extensionRegistry));
               break;
             }
             case 26: {
@@ -228082,15 +229111,6 @@ public final class Service {
               bitField0_ |= 0x00000008;
               break;
             }
-            case 50: {
-              com.google.protobuf.ByteString bs = input.readBytes();
-              if (!((mutable_bitField0_ & 0x00000020) != 0)) {
-                fallbackModelDefinitionIds_ = new com.google.protobuf.LazyStringArrayList();
-                mutable_bitField0_ |= 0x00000020;
-              }
-              fallbackModelDefinitionIds_.add(bs);
-              break;
-            }
             default: {
               if (!parseUnknownField(
                   input, unknownFields, extensionRegistry, tag)) {
@@ -228107,10 +229127,7 @@ public final class Service {
             e).setUnfinishedMessage(this);
       } finally {
         if (((mutable_bitField0_ & 0x00000002) != 0)) {
-          modelDefinitionIds_ = modelDefinitionIds_.getUnmodifiableView();
-        }
-        if (((mutable_bitField0_ & 0x00000020) != 0)) {
-          fallbackModelDefinitionIds_ = fallbackModelDefinitionIds_.getUnmodifiableView();
+          modelConfigs_ = java.util.Collections.unmodifiableList(modelConfigs_);
         }
         this.unknownFields = unknownFields.build();
         makeExtensionsImmutable();
@@ -228882,55 +229899,64 @@ public final class Service {
       }
     }
 
-    public static final int MODEL_DEFINITION_IDS_FIELD_NUMBER = 2;
-    private com.google.protobuf.LazyStringList modelDefinitionIds_;
+    public static final int MODEL_CONFIGS_FIELD_NUMBER = 2;
+    private java.util.List<org.mlflow.api.proto.Service.GatewayEndpointModelConfig> modelConfigs_;
     /**
      * <pre>
-     * List of PRIMARY model definition IDs to attach to this endpoint
+     * List of model configurations
      * </pre>
      *
-     * <code>repeated string model_definition_ids = 2;</code>
-     * @return A list containing the modelDefinitionIds.
+     * <code>repeated .mlflow.GatewayEndpointModelConfig model_configs = 2;</code>
      */
-    public com.google.protobuf.ProtocolStringList
-        getModelDefinitionIdsList() {
-      return modelDefinitionIds_;
+    @java.lang.Override
+    public java.util.List<org.mlflow.api.proto.Service.GatewayEndpointModelConfig> getModelConfigsList() {
+      return modelConfigs_;
     }
     /**
      * <pre>
-     * List of PRIMARY model definition IDs to attach to this endpoint
+     * List of model configurations
      * </pre>
      *
-     * <code>repeated string model_definition_ids = 2;</code>
-     * @return The count of modelDefinitionIds.
+     * <code>repeated .mlflow.GatewayEndpointModelConfig model_configs = 2;</code>
      */
-    public int getModelDefinitionIdsCount() {
-      return modelDefinitionIds_.size();
+    @java.lang.Override
+    public java.util.List<? extends org.mlflow.api.proto.Service.GatewayEndpointModelConfigOrBuilder> 
+        getModelConfigsOrBuilderList() {
+      return modelConfigs_;
     }
     /**
      * <pre>
-     * List of PRIMARY model definition IDs to attach to this endpoint
+     * List of model configurations
      * </pre>
      *
-     * <code>repeated string model_definition_ids = 2;</code>
-     * @param index The index of the element to return.
-     * @return The modelDefinitionIds at the given index.
+     * <code>repeated .mlflow.GatewayEndpointModelConfig model_configs = 2;</code>
      */
-    public java.lang.String getModelDefinitionIds(int index) {
-      return modelDefinitionIds_.get(index);
+    @java.lang.Override
+    public int getModelConfigsCount() {
+      return modelConfigs_.size();
     }
     /**
      * <pre>
-     * List of PRIMARY model definition IDs to attach to this endpoint
+     * List of model configurations
      * </pre>
      *
-     * <code>repeated string model_definition_ids = 2;</code>
-     * @param index The index of the value to return.
-     * @return The bytes of the modelDefinitionIds at the given index.
+     * <code>repeated .mlflow.GatewayEndpointModelConfig model_configs = 2;</code>
      */
-    public com.google.protobuf.ByteString
-        getModelDefinitionIdsBytes(int index) {
-      return modelDefinitionIds_.getByteString(index);
+    @java.lang.Override
+    public org.mlflow.api.proto.Service.GatewayEndpointModelConfig getModelConfigs(int index) {
+      return modelConfigs_.get(index);
+    }
+    /**
+     * <pre>
+     * List of model configurations
+     * </pre>
+     *
+     * <code>repeated .mlflow.GatewayEndpointModelConfig model_configs = 2;</code>
+     */
+    @java.lang.Override
+    public org.mlflow.api.proto.Service.GatewayEndpointModelConfigOrBuilder getModelConfigsOrBuilder(
+        int index) {
+      return modelConfigs_.get(index);
     }
 
     public static final int CREATED_BY_FIELD_NUMBER = 3;
@@ -229058,57 +230084,6 @@ public final class Service {
       return fallbackConfig_ == null ? org.mlflow.api.proto.Service.FallbackConfig.getDefaultInstance() : fallbackConfig_;
     }
 
-    public static final int FALLBACK_MODEL_DEFINITION_IDS_FIELD_NUMBER = 6;
-    private com.google.protobuf.LazyStringList fallbackModelDefinitionIds_;
-    /**
-     * <pre>
-     * Optional ordered list of FALLBACK model definition IDs (order determines fallback_order)
-     * </pre>
-     *
-     * <code>repeated string fallback_model_definition_ids = 6;</code>
-     * @return A list containing the fallbackModelDefinitionIds.
-     */
-    public com.google.protobuf.ProtocolStringList
-        getFallbackModelDefinitionIdsList() {
-      return fallbackModelDefinitionIds_;
-    }
-    /**
-     * <pre>
-     * Optional ordered list of FALLBACK model definition IDs (order determines fallback_order)
-     * </pre>
-     *
-     * <code>repeated string fallback_model_definition_ids = 6;</code>
-     * @return The count of fallbackModelDefinitionIds.
-     */
-    public int getFallbackModelDefinitionIdsCount() {
-      return fallbackModelDefinitionIds_.size();
-    }
-    /**
-     * <pre>
-     * Optional ordered list of FALLBACK model definition IDs (order determines fallback_order)
-     * </pre>
-     *
-     * <code>repeated string fallback_model_definition_ids = 6;</code>
-     * @param index The index of the element to return.
-     * @return The fallbackModelDefinitionIds at the given index.
-     */
-    public java.lang.String getFallbackModelDefinitionIds(int index) {
-      return fallbackModelDefinitionIds_.get(index);
-    }
-    /**
-     * <pre>
-     * Optional ordered list of FALLBACK model definition IDs (order determines fallback_order)
-     * </pre>
-     *
-     * <code>repeated string fallback_model_definition_ids = 6;</code>
-     * @param index The index of the value to return.
-     * @return The bytes of the fallbackModelDefinitionIds at the given index.
-     */
-    public com.google.protobuf.ByteString
-        getFallbackModelDefinitionIdsBytes(int index) {
-      return fallbackModelDefinitionIds_.getByteString(index);
-    }
-
     private byte memoizedIsInitialized = -1;
     @java.lang.Override
     public final boolean isInitialized() {
@@ -229126,8 +230101,8 @@ public final class Service {
       if (((bitField0_ & 0x00000001) != 0)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 1, name_);
       }
-      for (int i = 0; i < modelDefinitionIds_.size(); i++) {
-        com.google.protobuf.GeneratedMessageV3.writeString(output, 2, modelDefinitionIds_.getRaw(i));
+      for (int i = 0; i < modelConfigs_.size(); i++) {
+        output.writeMessage(2, modelConfigs_.get(i));
       }
       if (((bitField0_ & 0x00000002) != 0)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 3, createdBy_);
@@ -229137,9 +230112,6 @@ public final class Service {
       }
       if (((bitField0_ & 0x00000008) != 0)) {
         output.writeMessage(5, getFallbackConfig());
-      }
-      for (int i = 0; i < fallbackModelDefinitionIds_.size(); i++) {
-        com.google.protobuf.GeneratedMessageV3.writeString(output, 6, fallbackModelDefinitionIds_.getRaw(i));
       }
       unknownFields.writeTo(output);
     }
@@ -229153,13 +230125,9 @@ public final class Service {
       if (((bitField0_ & 0x00000001) != 0)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, name_);
       }
-      {
-        int dataSize = 0;
-        for (int i = 0; i < modelDefinitionIds_.size(); i++) {
-          dataSize += computeStringSizeNoTag(modelDefinitionIds_.getRaw(i));
-        }
-        size += dataSize;
-        size += 1 * getModelDefinitionIdsList().size();
+      for (int i = 0; i < modelConfigs_.size(); i++) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(2, modelConfigs_.get(i));
       }
       if (((bitField0_ & 0x00000002) != 0)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(3, createdBy_);
@@ -229171,14 +230139,6 @@ public final class Service {
       if (((bitField0_ & 0x00000008) != 0)) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(5, getFallbackConfig());
-      }
-      {
-        int dataSize = 0;
-        for (int i = 0; i < fallbackModelDefinitionIds_.size(); i++) {
-          dataSize += computeStringSizeNoTag(fallbackModelDefinitionIds_.getRaw(i));
-        }
-        size += dataSize;
-        size += 1 * getFallbackModelDefinitionIdsList().size();
       }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
@@ -229200,8 +230160,8 @@ public final class Service {
         if (!getName()
             .equals(other.getName())) return false;
       }
-      if (!getModelDefinitionIdsList()
-          .equals(other.getModelDefinitionIdsList())) return false;
+      if (!getModelConfigsList()
+          .equals(other.getModelConfigsList())) return false;
       if (hasCreatedBy() != other.hasCreatedBy()) return false;
       if (hasCreatedBy()) {
         if (!getCreatedBy()
@@ -229216,8 +230176,6 @@ public final class Service {
         if (!getFallbackConfig()
             .equals(other.getFallbackConfig())) return false;
       }
-      if (!getFallbackModelDefinitionIdsList()
-          .equals(other.getFallbackModelDefinitionIdsList())) return false;
       if (!unknownFields.equals(other.unknownFields)) return false;
       return true;
     }
@@ -229233,9 +230191,9 @@ public final class Service {
         hash = (37 * hash) + NAME_FIELD_NUMBER;
         hash = (53 * hash) + getName().hashCode();
       }
-      if (getModelDefinitionIdsCount() > 0) {
-        hash = (37 * hash) + MODEL_DEFINITION_IDS_FIELD_NUMBER;
-        hash = (53 * hash) + getModelDefinitionIdsList().hashCode();
+      if (getModelConfigsCount() > 0) {
+        hash = (37 * hash) + MODEL_CONFIGS_FIELD_NUMBER;
+        hash = (53 * hash) + getModelConfigsList().hashCode();
       }
       if (hasCreatedBy()) {
         hash = (37 * hash) + CREATED_BY_FIELD_NUMBER;
@@ -229248,10 +230206,6 @@ public final class Service {
       if (hasFallbackConfig()) {
         hash = (37 * hash) + FALLBACK_CONFIG_FIELD_NUMBER;
         hash = (53 * hash) + getFallbackConfig().hashCode();
-      }
-      if (getFallbackModelDefinitionIdsCount() > 0) {
-        hash = (37 * hash) + FALLBACK_MODEL_DEFINITION_IDS_FIELD_NUMBER;
-        hash = (53 * hash) + getFallbackModelDefinitionIdsList().hashCode();
       }
       hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
@@ -229381,6 +230335,7 @@ public final class Service {
       private void maybeForceBuilderInitialization() {
         if (com.google.protobuf.GeneratedMessageV3
                 .alwaysUseFieldBuilders) {
+          getModelConfigsFieldBuilder();
           getFallbackConfigFieldBuilder();
         }
       }
@@ -229389,8 +230344,12 @@ public final class Service {
         super.clear();
         name_ = "";
         bitField0_ = (bitField0_ & ~0x00000001);
-        modelDefinitionIds_ = com.google.protobuf.LazyStringArrayList.EMPTY;
-        bitField0_ = (bitField0_ & ~0x00000002);
+        if (modelConfigsBuilder_ == null) {
+          modelConfigs_ = java.util.Collections.emptyList();
+          bitField0_ = (bitField0_ & ~0x00000002);
+        } else {
+          modelConfigsBuilder_.clear();
+        }
         createdBy_ = "";
         bitField0_ = (bitField0_ & ~0x00000004);
         routingStrategy_ = 0;
@@ -229401,8 +230360,6 @@ public final class Service {
           fallbackConfigBuilder_.clear();
         }
         bitField0_ = (bitField0_ & ~0x00000010);
-        fallbackModelDefinitionIds_ = com.google.protobuf.LazyStringArrayList.EMPTY;
-        bitField0_ = (bitField0_ & ~0x00000020);
         return this;
       }
 
@@ -229435,11 +230392,15 @@ public final class Service {
           to_bitField0_ |= 0x00000001;
         }
         result.name_ = name_;
-        if (((bitField0_ & 0x00000002) != 0)) {
-          modelDefinitionIds_ = modelDefinitionIds_.getUnmodifiableView();
-          bitField0_ = (bitField0_ & ~0x00000002);
+        if (modelConfigsBuilder_ == null) {
+          if (((bitField0_ & 0x00000002) != 0)) {
+            modelConfigs_ = java.util.Collections.unmodifiableList(modelConfigs_);
+            bitField0_ = (bitField0_ & ~0x00000002);
+          }
+          result.modelConfigs_ = modelConfigs_;
+        } else {
+          result.modelConfigs_ = modelConfigsBuilder_.build();
         }
-        result.modelDefinitionIds_ = modelDefinitionIds_;
         if (((from_bitField0_ & 0x00000004) != 0)) {
           to_bitField0_ |= 0x00000002;
         }
@@ -229456,11 +230417,6 @@ public final class Service {
           }
           to_bitField0_ |= 0x00000008;
         }
-        if (((bitField0_ & 0x00000020) != 0)) {
-          fallbackModelDefinitionIds_ = fallbackModelDefinitionIds_.getUnmodifiableView();
-          bitField0_ = (bitField0_ & ~0x00000020);
-        }
-        result.fallbackModelDefinitionIds_ = fallbackModelDefinitionIds_;
         result.bitField0_ = to_bitField0_;
         onBuilt();
         return result;
@@ -229515,15 +230471,31 @@ public final class Service {
           name_ = other.name_;
           onChanged();
         }
-        if (!other.modelDefinitionIds_.isEmpty()) {
-          if (modelDefinitionIds_.isEmpty()) {
-            modelDefinitionIds_ = other.modelDefinitionIds_;
-            bitField0_ = (bitField0_ & ~0x00000002);
-          } else {
-            ensureModelDefinitionIdsIsMutable();
-            modelDefinitionIds_.addAll(other.modelDefinitionIds_);
+        if (modelConfigsBuilder_ == null) {
+          if (!other.modelConfigs_.isEmpty()) {
+            if (modelConfigs_.isEmpty()) {
+              modelConfigs_ = other.modelConfigs_;
+              bitField0_ = (bitField0_ & ~0x00000002);
+            } else {
+              ensureModelConfigsIsMutable();
+              modelConfigs_.addAll(other.modelConfigs_);
+            }
+            onChanged();
           }
-          onChanged();
+        } else {
+          if (!other.modelConfigs_.isEmpty()) {
+            if (modelConfigsBuilder_.isEmpty()) {
+              modelConfigsBuilder_.dispose();
+              modelConfigsBuilder_ = null;
+              modelConfigs_ = other.modelConfigs_;
+              bitField0_ = (bitField0_ & ~0x00000002);
+              modelConfigsBuilder_ = 
+                com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
+                   getModelConfigsFieldBuilder() : null;
+            } else {
+              modelConfigsBuilder_.addAllMessages(other.modelConfigs_);
+            }
+          }
         }
         if (other.hasCreatedBy()) {
           bitField0_ |= 0x00000004;
@@ -229535,16 +230507,6 @@ public final class Service {
         }
         if (other.hasFallbackConfig()) {
           mergeFallbackConfig(other.getFallbackConfig());
-        }
-        if (!other.fallbackModelDefinitionIds_.isEmpty()) {
-          if (fallbackModelDefinitionIds_.isEmpty()) {
-            fallbackModelDefinitionIds_ = other.fallbackModelDefinitionIds_;
-            bitField0_ = (bitField0_ & ~0x00000020);
-          } else {
-            ensureFallbackModelDefinitionIdsIsMutable();
-            fallbackModelDefinitionIds_.addAll(other.fallbackModelDefinitionIds_);
-          }
-          onChanged();
         }
         this.mergeUnknownFields(other.unknownFields);
         onChanged();
@@ -229684,149 +230646,316 @@ public final class Service {
         return this;
       }
 
-      private com.google.protobuf.LazyStringList modelDefinitionIds_ = com.google.protobuf.LazyStringArrayList.EMPTY;
-      private void ensureModelDefinitionIdsIsMutable() {
+      private java.util.List<org.mlflow.api.proto.Service.GatewayEndpointModelConfig> modelConfigs_ =
+        java.util.Collections.emptyList();
+      private void ensureModelConfigsIsMutable() {
         if (!((bitField0_ & 0x00000002) != 0)) {
-          modelDefinitionIds_ = new com.google.protobuf.LazyStringArrayList(modelDefinitionIds_);
+          modelConfigs_ = new java.util.ArrayList<org.mlflow.api.proto.Service.GatewayEndpointModelConfig>(modelConfigs_);
           bitField0_ |= 0x00000002;
          }
       }
+
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          org.mlflow.api.proto.Service.GatewayEndpointModelConfig, org.mlflow.api.proto.Service.GatewayEndpointModelConfig.Builder, org.mlflow.api.proto.Service.GatewayEndpointModelConfigOrBuilder> modelConfigsBuilder_;
+
       /**
        * <pre>
-       * List of PRIMARY model definition IDs to attach to this endpoint
+       * List of model configurations
        * </pre>
        *
-       * <code>repeated string model_definition_ids = 2;</code>
-       * @return A list containing the modelDefinitionIds.
+       * <code>repeated .mlflow.GatewayEndpointModelConfig model_configs = 2;</code>
        */
-      public com.google.protobuf.ProtocolStringList
-          getModelDefinitionIdsList() {
-        return modelDefinitionIds_.getUnmodifiableView();
+      public java.util.List<org.mlflow.api.proto.Service.GatewayEndpointModelConfig> getModelConfigsList() {
+        if (modelConfigsBuilder_ == null) {
+          return java.util.Collections.unmodifiableList(modelConfigs_);
+        } else {
+          return modelConfigsBuilder_.getMessageList();
+        }
       }
       /**
        * <pre>
-       * List of PRIMARY model definition IDs to attach to this endpoint
+       * List of model configurations
        * </pre>
        *
-       * <code>repeated string model_definition_ids = 2;</code>
-       * @return The count of modelDefinitionIds.
+       * <code>repeated .mlflow.GatewayEndpointModelConfig model_configs = 2;</code>
        */
-      public int getModelDefinitionIdsCount() {
-        return modelDefinitionIds_.size();
+      public int getModelConfigsCount() {
+        if (modelConfigsBuilder_ == null) {
+          return modelConfigs_.size();
+        } else {
+          return modelConfigsBuilder_.getCount();
+        }
       }
       /**
        * <pre>
-       * List of PRIMARY model definition IDs to attach to this endpoint
+       * List of model configurations
        * </pre>
        *
-       * <code>repeated string model_definition_ids = 2;</code>
-       * @param index The index of the element to return.
-       * @return The modelDefinitionIds at the given index.
+       * <code>repeated .mlflow.GatewayEndpointModelConfig model_configs = 2;</code>
        */
-      public java.lang.String getModelDefinitionIds(int index) {
-        return modelDefinitionIds_.get(index);
+      public org.mlflow.api.proto.Service.GatewayEndpointModelConfig getModelConfigs(int index) {
+        if (modelConfigsBuilder_ == null) {
+          return modelConfigs_.get(index);
+        } else {
+          return modelConfigsBuilder_.getMessage(index);
+        }
       }
       /**
        * <pre>
-       * List of PRIMARY model definition IDs to attach to this endpoint
+       * List of model configurations
        * </pre>
        *
-       * <code>repeated string model_definition_ids = 2;</code>
-       * @param index The index of the value to return.
-       * @return The bytes of the modelDefinitionIds at the given index.
+       * <code>repeated .mlflow.GatewayEndpointModelConfig model_configs = 2;</code>
        */
-      public com.google.protobuf.ByteString
-          getModelDefinitionIdsBytes(int index) {
-        return modelDefinitionIds_.getByteString(index);
-      }
-      /**
-       * <pre>
-       * List of PRIMARY model definition IDs to attach to this endpoint
-       * </pre>
-       *
-       * <code>repeated string model_definition_ids = 2;</code>
-       * @param index The index to set the value at.
-       * @param value The modelDefinitionIds to set.
-       * @return This builder for chaining.
-       */
-      public Builder setModelDefinitionIds(
-          int index, java.lang.String value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  ensureModelDefinitionIdsIsMutable();
-        modelDefinitionIds_.set(index, value);
-        onChanged();
+      public Builder setModelConfigs(
+          int index, org.mlflow.api.proto.Service.GatewayEndpointModelConfig value) {
+        if (modelConfigsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureModelConfigsIsMutable();
+          modelConfigs_.set(index, value);
+          onChanged();
+        } else {
+          modelConfigsBuilder_.setMessage(index, value);
+        }
         return this;
       }
       /**
        * <pre>
-       * List of PRIMARY model definition IDs to attach to this endpoint
+       * List of model configurations
        * </pre>
        *
-       * <code>repeated string model_definition_ids = 2;</code>
-       * @param value The modelDefinitionIds to add.
-       * @return This builder for chaining.
+       * <code>repeated .mlflow.GatewayEndpointModelConfig model_configs = 2;</code>
        */
-      public Builder addModelDefinitionIds(
-          java.lang.String value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  ensureModelDefinitionIdsIsMutable();
-        modelDefinitionIds_.add(value);
-        onChanged();
+      public Builder setModelConfigs(
+          int index, org.mlflow.api.proto.Service.GatewayEndpointModelConfig.Builder builderForValue) {
+        if (modelConfigsBuilder_ == null) {
+          ensureModelConfigsIsMutable();
+          modelConfigs_.set(index, builderForValue.build());
+          onChanged();
+        } else {
+          modelConfigsBuilder_.setMessage(index, builderForValue.build());
+        }
         return this;
       }
       /**
        * <pre>
-       * List of PRIMARY model definition IDs to attach to this endpoint
+       * List of model configurations
        * </pre>
        *
-       * <code>repeated string model_definition_ids = 2;</code>
-       * @param values The modelDefinitionIds to add.
-       * @return This builder for chaining.
+       * <code>repeated .mlflow.GatewayEndpointModelConfig model_configs = 2;</code>
        */
-      public Builder addAllModelDefinitionIds(
-          java.lang.Iterable<java.lang.String> values) {
-        ensureModelDefinitionIdsIsMutable();
-        com.google.protobuf.AbstractMessageLite.Builder.addAll(
-            values, modelDefinitionIds_);
-        onChanged();
+      public Builder addModelConfigs(org.mlflow.api.proto.Service.GatewayEndpointModelConfig value) {
+        if (modelConfigsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureModelConfigsIsMutable();
+          modelConfigs_.add(value);
+          onChanged();
+        } else {
+          modelConfigsBuilder_.addMessage(value);
+        }
         return this;
       }
       /**
        * <pre>
-       * List of PRIMARY model definition IDs to attach to this endpoint
+       * List of model configurations
        * </pre>
        *
-       * <code>repeated string model_definition_ids = 2;</code>
-       * @return This builder for chaining.
+       * <code>repeated .mlflow.GatewayEndpointModelConfig model_configs = 2;</code>
        */
-      public Builder clearModelDefinitionIds() {
-        modelDefinitionIds_ = com.google.protobuf.LazyStringArrayList.EMPTY;
-        bitField0_ = (bitField0_ & ~0x00000002);
-        onChanged();
+      public Builder addModelConfigs(
+          int index, org.mlflow.api.proto.Service.GatewayEndpointModelConfig value) {
+        if (modelConfigsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureModelConfigsIsMutable();
+          modelConfigs_.add(index, value);
+          onChanged();
+        } else {
+          modelConfigsBuilder_.addMessage(index, value);
+        }
         return this;
       }
       /**
        * <pre>
-       * List of PRIMARY model definition IDs to attach to this endpoint
+       * List of model configurations
        * </pre>
        *
-       * <code>repeated string model_definition_ids = 2;</code>
-       * @param value The bytes of the modelDefinitionIds to add.
-       * @return This builder for chaining.
+       * <code>repeated .mlflow.GatewayEndpointModelConfig model_configs = 2;</code>
        */
-      public Builder addModelDefinitionIdsBytes(
-          com.google.protobuf.ByteString value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  ensureModelDefinitionIdsIsMutable();
-        modelDefinitionIds_.add(value);
-        onChanged();
+      public Builder addModelConfigs(
+          org.mlflow.api.proto.Service.GatewayEndpointModelConfig.Builder builderForValue) {
+        if (modelConfigsBuilder_ == null) {
+          ensureModelConfigsIsMutable();
+          modelConfigs_.add(builderForValue.build());
+          onChanged();
+        } else {
+          modelConfigsBuilder_.addMessage(builderForValue.build());
+        }
         return this;
+      }
+      /**
+       * <pre>
+       * List of model configurations
+       * </pre>
+       *
+       * <code>repeated .mlflow.GatewayEndpointModelConfig model_configs = 2;</code>
+       */
+      public Builder addModelConfigs(
+          int index, org.mlflow.api.proto.Service.GatewayEndpointModelConfig.Builder builderForValue) {
+        if (modelConfigsBuilder_ == null) {
+          ensureModelConfigsIsMutable();
+          modelConfigs_.add(index, builderForValue.build());
+          onChanged();
+        } else {
+          modelConfigsBuilder_.addMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * List of model configurations
+       * </pre>
+       *
+       * <code>repeated .mlflow.GatewayEndpointModelConfig model_configs = 2;</code>
+       */
+      public Builder addAllModelConfigs(
+          java.lang.Iterable<? extends org.mlflow.api.proto.Service.GatewayEndpointModelConfig> values) {
+        if (modelConfigsBuilder_ == null) {
+          ensureModelConfigsIsMutable();
+          com.google.protobuf.AbstractMessageLite.Builder.addAll(
+              values, modelConfigs_);
+          onChanged();
+        } else {
+          modelConfigsBuilder_.addAllMessages(values);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * List of model configurations
+       * </pre>
+       *
+       * <code>repeated .mlflow.GatewayEndpointModelConfig model_configs = 2;</code>
+       */
+      public Builder clearModelConfigs() {
+        if (modelConfigsBuilder_ == null) {
+          modelConfigs_ = java.util.Collections.emptyList();
+          bitField0_ = (bitField0_ & ~0x00000002);
+          onChanged();
+        } else {
+          modelConfigsBuilder_.clear();
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * List of model configurations
+       * </pre>
+       *
+       * <code>repeated .mlflow.GatewayEndpointModelConfig model_configs = 2;</code>
+       */
+      public Builder removeModelConfigs(int index) {
+        if (modelConfigsBuilder_ == null) {
+          ensureModelConfigsIsMutable();
+          modelConfigs_.remove(index);
+          onChanged();
+        } else {
+          modelConfigsBuilder_.remove(index);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * List of model configurations
+       * </pre>
+       *
+       * <code>repeated .mlflow.GatewayEndpointModelConfig model_configs = 2;</code>
+       */
+      public org.mlflow.api.proto.Service.GatewayEndpointModelConfig.Builder getModelConfigsBuilder(
+          int index) {
+        return getModelConfigsFieldBuilder().getBuilder(index);
+      }
+      /**
+       * <pre>
+       * List of model configurations
+       * </pre>
+       *
+       * <code>repeated .mlflow.GatewayEndpointModelConfig model_configs = 2;</code>
+       */
+      public org.mlflow.api.proto.Service.GatewayEndpointModelConfigOrBuilder getModelConfigsOrBuilder(
+          int index) {
+        if (modelConfigsBuilder_ == null) {
+          return modelConfigs_.get(index);  } else {
+          return modelConfigsBuilder_.getMessageOrBuilder(index);
+        }
+      }
+      /**
+       * <pre>
+       * List of model configurations
+       * </pre>
+       *
+       * <code>repeated .mlflow.GatewayEndpointModelConfig model_configs = 2;</code>
+       */
+      public java.util.List<? extends org.mlflow.api.proto.Service.GatewayEndpointModelConfigOrBuilder> 
+           getModelConfigsOrBuilderList() {
+        if (modelConfigsBuilder_ != null) {
+          return modelConfigsBuilder_.getMessageOrBuilderList();
+        } else {
+          return java.util.Collections.unmodifiableList(modelConfigs_);
+        }
+      }
+      /**
+       * <pre>
+       * List of model configurations
+       * </pre>
+       *
+       * <code>repeated .mlflow.GatewayEndpointModelConfig model_configs = 2;</code>
+       */
+      public org.mlflow.api.proto.Service.GatewayEndpointModelConfig.Builder addModelConfigsBuilder() {
+        return getModelConfigsFieldBuilder().addBuilder(
+            org.mlflow.api.proto.Service.GatewayEndpointModelConfig.getDefaultInstance());
+      }
+      /**
+       * <pre>
+       * List of model configurations
+       * </pre>
+       *
+       * <code>repeated .mlflow.GatewayEndpointModelConfig model_configs = 2;</code>
+       */
+      public org.mlflow.api.proto.Service.GatewayEndpointModelConfig.Builder addModelConfigsBuilder(
+          int index) {
+        return getModelConfigsFieldBuilder().addBuilder(
+            index, org.mlflow.api.proto.Service.GatewayEndpointModelConfig.getDefaultInstance());
+      }
+      /**
+       * <pre>
+       * List of model configurations
+       * </pre>
+       *
+       * <code>repeated .mlflow.GatewayEndpointModelConfig model_configs = 2;</code>
+       */
+      public java.util.List<org.mlflow.api.proto.Service.GatewayEndpointModelConfig.Builder> 
+           getModelConfigsBuilderList() {
+        return getModelConfigsFieldBuilder().getBuilderList();
+      }
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          org.mlflow.api.proto.Service.GatewayEndpointModelConfig, org.mlflow.api.proto.Service.GatewayEndpointModelConfig.Builder, org.mlflow.api.proto.Service.GatewayEndpointModelConfigOrBuilder> 
+          getModelConfigsFieldBuilder() {
+        if (modelConfigsBuilder_ == null) {
+          modelConfigsBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
+              org.mlflow.api.proto.Service.GatewayEndpointModelConfig, org.mlflow.api.proto.Service.GatewayEndpointModelConfig.Builder, org.mlflow.api.proto.Service.GatewayEndpointModelConfigOrBuilder>(
+                  modelConfigs_,
+                  ((bitField0_ & 0x00000002) != 0),
+                  getParentForChildren(),
+                  isClean());
+          modelConfigs_ = null;
+        }
+        return modelConfigsBuilder_;
       }
 
       private java.lang.Object createdBy_ = "";
@@ -230150,151 +231279,6 @@ public final class Service {
           fallbackConfig_ = null;
         }
         return fallbackConfigBuilder_;
-      }
-
-      private com.google.protobuf.LazyStringList fallbackModelDefinitionIds_ = com.google.protobuf.LazyStringArrayList.EMPTY;
-      private void ensureFallbackModelDefinitionIdsIsMutable() {
-        if (!((bitField0_ & 0x00000020) != 0)) {
-          fallbackModelDefinitionIds_ = new com.google.protobuf.LazyStringArrayList(fallbackModelDefinitionIds_);
-          bitField0_ |= 0x00000020;
-         }
-      }
-      /**
-       * <pre>
-       * Optional ordered list of FALLBACK model definition IDs (order determines fallback_order)
-       * </pre>
-       *
-       * <code>repeated string fallback_model_definition_ids = 6;</code>
-       * @return A list containing the fallbackModelDefinitionIds.
-       */
-      public com.google.protobuf.ProtocolStringList
-          getFallbackModelDefinitionIdsList() {
-        return fallbackModelDefinitionIds_.getUnmodifiableView();
-      }
-      /**
-       * <pre>
-       * Optional ordered list of FALLBACK model definition IDs (order determines fallback_order)
-       * </pre>
-       *
-       * <code>repeated string fallback_model_definition_ids = 6;</code>
-       * @return The count of fallbackModelDefinitionIds.
-       */
-      public int getFallbackModelDefinitionIdsCount() {
-        return fallbackModelDefinitionIds_.size();
-      }
-      /**
-       * <pre>
-       * Optional ordered list of FALLBACK model definition IDs (order determines fallback_order)
-       * </pre>
-       *
-       * <code>repeated string fallback_model_definition_ids = 6;</code>
-       * @param index The index of the element to return.
-       * @return The fallbackModelDefinitionIds at the given index.
-       */
-      public java.lang.String getFallbackModelDefinitionIds(int index) {
-        return fallbackModelDefinitionIds_.get(index);
-      }
-      /**
-       * <pre>
-       * Optional ordered list of FALLBACK model definition IDs (order determines fallback_order)
-       * </pre>
-       *
-       * <code>repeated string fallback_model_definition_ids = 6;</code>
-       * @param index The index of the value to return.
-       * @return The bytes of the fallbackModelDefinitionIds at the given index.
-       */
-      public com.google.protobuf.ByteString
-          getFallbackModelDefinitionIdsBytes(int index) {
-        return fallbackModelDefinitionIds_.getByteString(index);
-      }
-      /**
-       * <pre>
-       * Optional ordered list of FALLBACK model definition IDs (order determines fallback_order)
-       * </pre>
-       *
-       * <code>repeated string fallback_model_definition_ids = 6;</code>
-       * @param index The index to set the value at.
-       * @param value The fallbackModelDefinitionIds to set.
-       * @return This builder for chaining.
-       */
-      public Builder setFallbackModelDefinitionIds(
-          int index, java.lang.String value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  ensureFallbackModelDefinitionIdsIsMutable();
-        fallbackModelDefinitionIds_.set(index, value);
-        onChanged();
-        return this;
-      }
-      /**
-       * <pre>
-       * Optional ordered list of FALLBACK model definition IDs (order determines fallback_order)
-       * </pre>
-       *
-       * <code>repeated string fallback_model_definition_ids = 6;</code>
-       * @param value The fallbackModelDefinitionIds to add.
-       * @return This builder for chaining.
-       */
-      public Builder addFallbackModelDefinitionIds(
-          java.lang.String value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  ensureFallbackModelDefinitionIdsIsMutable();
-        fallbackModelDefinitionIds_.add(value);
-        onChanged();
-        return this;
-      }
-      /**
-       * <pre>
-       * Optional ordered list of FALLBACK model definition IDs (order determines fallback_order)
-       * </pre>
-       *
-       * <code>repeated string fallback_model_definition_ids = 6;</code>
-       * @param values The fallbackModelDefinitionIds to add.
-       * @return This builder for chaining.
-       */
-      public Builder addAllFallbackModelDefinitionIds(
-          java.lang.Iterable<java.lang.String> values) {
-        ensureFallbackModelDefinitionIdsIsMutable();
-        com.google.protobuf.AbstractMessageLite.Builder.addAll(
-            values, fallbackModelDefinitionIds_);
-        onChanged();
-        return this;
-      }
-      /**
-       * <pre>
-       * Optional ordered list of FALLBACK model definition IDs (order determines fallback_order)
-       * </pre>
-       *
-       * <code>repeated string fallback_model_definition_ids = 6;</code>
-       * @return This builder for chaining.
-       */
-      public Builder clearFallbackModelDefinitionIds() {
-        fallbackModelDefinitionIds_ = com.google.protobuf.LazyStringArrayList.EMPTY;
-        bitField0_ = (bitField0_ & ~0x00000020);
-        onChanged();
-        return this;
-      }
-      /**
-       * <pre>
-       * Optional ordered list of FALLBACK model definition IDs (order determines fallback_order)
-       * </pre>
-       *
-       * <code>repeated string fallback_model_definition_ids = 6;</code>
-       * @param value The bytes of the fallbackModelDefinitionIds to add.
-       * @return This builder for chaining.
-       */
-      public Builder addFallbackModelDefinitionIdsBytes(
-          com.google.protobuf.ByteString value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  ensureFallbackModelDefinitionIdsIsMutable();
-        fallbackModelDefinitionIds_.add(value);
-        onChanged();
-        return this;
       }
       @java.lang.Override
       public final Builder setUnknownFields(
@@ -231970,44 +232954,47 @@ public final class Service {
 
     /**
      * <pre>
-     * Optional new list of PRIMARY model definition IDs (replaces existing PRIMARY linkages)
+     * Optional new list of model configurations (replaces all existing model linkages)
      * </pre>
      *
-     * <code>repeated string model_definition_ids = 4;</code>
-     * @return A list containing the modelDefinitionIds.
+     * <code>repeated .mlflow.GatewayEndpointModelConfig model_configs = 4;</code>
      */
-    java.util.List<java.lang.String>
-        getModelDefinitionIdsList();
+    java.util.List<org.mlflow.api.proto.Service.GatewayEndpointModelConfig> 
+        getModelConfigsList();
     /**
      * <pre>
-     * Optional new list of PRIMARY model definition IDs (replaces existing PRIMARY linkages)
+     * Optional new list of model configurations (replaces all existing model linkages)
      * </pre>
      *
-     * <code>repeated string model_definition_ids = 4;</code>
-     * @return The count of modelDefinitionIds.
+     * <code>repeated .mlflow.GatewayEndpointModelConfig model_configs = 4;</code>
      */
-    int getModelDefinitionIdsCount();
+    org.mlflow.api.proto.Service.GatewayEndpointModelConfig getModelConfigs(int index);
     /**
      * <pre>
-     * Optional new list of PRIMARY model definition IDs (replaces existing PRIMARY linkages)
+     * Optional new list of model configurations (replaces all existing model linkages)
      * </pre>
      *
-     * <code>repeated string model_definition_ids = 4;</code>
-     * @param index The index of the element to return.
-     * @return The modelDefinitionIds at the given index.
+     * <code>repeated .mlflow.GatewayEndpointModelConfig model_configs = 4;</code>
      */
-    java.lang.String getModelDefinitionIds(int index);
+    int getModelConfigsCount();
     /**
      * <pre>
-     * Optional new list of PRIMARY model definition IDs (replaces existing PRIMARY linkages)
+     * Optional new list of model configurations (replaces all existing model linkages)
      * </pre>
      *
-     * <code>repeated string model_definition_ids = 4;</code>
-     * @param index The index of the value to return.
-     * @return The bytes of the modelDefinitionIds at the given index.
+     * <code>repeated .mlflow.GatewayEndpointModelConfig model_configs = 4;</code>
      */
-    com.google.protobuf.ByteString
-        getModelDefinitionIdsBytes(int index);
+    java.util.List<? extends org.mlflow.api.proto.Service.GatewayEndpointModelConfigOrBuilder> 
+        getModelConfigsOrBuilderList();
+    /**
+     * <pre>
+     * Optional new list of model configurations (replaces all existing model linkages)
+     * </pre>
+     *
+     * <code>repeated .mlflow.GatewayEndpointModelConfig model_configs = 4;</code>
+     */
+    org.mlflow.api.proto.Service.GatewayEndpointModelConfigOrBuilder getModelConfigsOrBuilder(
+        int index);
 
     /**
      * <pre>
@@ -232054,47 +233041,6 @@ public final class Service {
      * <code>optional .mlflow.FallbackConfig fallback_config = 6;</code>
      */
     org.mlflow.api.proto.Service.FallbackConfigOrBuilder getFallbackConfigOrBuilder();
-
-    /**
-     * <pre>
-     * Optional ordered list of FALLBACK model definition IDs (order determines fallback_order)
-     * </pre>
-     *
-     * <code>repeated string fallback_model_definition_ids = 7;</code>
-     * @return A list containing the fallbackModelDefinitionIds.
-     */
-    java.util.List<java.lang.String>
-        getFallbackModelDefinitionIdsList();
-    /**
-     * <pre>
-     * Optional ordered list of FALLBACK model definition IDs (order determines fallback_order)
-     * </pre>
-     *
-     * <code>repeated string fallback_model_definition_ids = 7;</code>
-     * @return The count of fallbackModelDefinitionIds.
-     */
-    int getFallbackModelDefinitionIdsCount();
-    /**
-     * <pre>
-     * Optional ordered list of FALLBACK model definition IDs (order determines fallback_order)
-     * </pre>
-     *
-     * <code>repeated string fallback_model_definition_ids = 7;</code>
-     * @param index The index of the element to return.
-     * @return The fallbackModelDefinitionIds at the given index.
-     */
-    java.lang.String getFallbackModelDefinitionIds(int index);
-    /**
-     * <pre>
-     * Optional ordered list of FALLBACK model definition IDs (order determines fallback_order)
-     * </pre>
-     *
-     * <code>repeated string fallback_model_definition_ids = 7;</code>
-     * @param index The index of the value to return.
-     * @return The bytes of the fallbackModelDefinitionIds at the given index.
-     */
-    com.google.protobuf.ByteString
-        getFallbackModelDefinitionIdsBytes(int index);
   }
   /**
    * Protobuf type {@code mlflow.UpdateGatewayEndpoint}
@@ -232112,9 +233058,8 @@ public final class Service {
       endpointId_ = "";
       name_ = "";
       updatedBy_ = "";
-      modelDefinitionIds_ = com.google.protobuf.LazyStringArrayList.EMPTY;
+      modelConfigs_ = java.util.Collections.emptyList();
       routingStrategy_ = 0;
-      fallbackModelDefinitionIds_ = com.google.protobuf.LazyStringArrayList.EMPTY;
     }
 
     @java.lang.Override
@@ -232167,12 +233112,12 @@ public final class Service {
               break;
             }
             case 34: {
-              com.google.protobuf.ByteString bs = input.readBytes();
               if (!((mutable_bitField0_ & 0x00000008) != 0)) {
-                modelDefinitionIds_ = new com.google.protobuf.LazyStringArrayList();
+                modelConfigs_ = new java.util.ArrayList<org.mlflow.api.proto.Service.GatewayEndpointModelConfig>();
                 mutable_bitField0_ |= 0x00000008;
               }
-              modelDefinitionIds_.add(bs);
+              modelConfigs_.add(
+                  input.readMessage(org.mlflow.api.proto.Service.GatewayEndpointModelConfig.PARSER, extensionRegistry));
               break;
             }
             case 40: {
@@ -232200,15 +233145,6 @@ public final class Service {
               bitField0_ |= 0x00000010;
               break;
             }
-            case 58: {
-              com.google.protobuf.ByteString bs = input.readBytes();
-              if (!((mutable_bitField0_ & 0x00000040) != 0)) {
-                fallbackModelDefinitionIds_ = new com.google.protobuf.LazyStringArrayList();
-                mutable_bitField0_ |= 0x00000040;
-              }
-              fallbackModelDefinitionIds_.add(bs);
-              break;
-            }
             default: {
               if (!parseUnknownField(
                   input, unknownFields, extensionRegistry, tag)) {
@@ -232225,10 +233161,7 @@ public final class Service {
             e).setUnfinishedMessage(this);
       } finally {
         if (((mutable_bitField0_ & 0x00000008) != 0)) {
-          modelDefinitionIds_ = modelDefinitionIds_.getUnmodifiableView();
-        }
-        if (((mutable_bitField0_ & 0x00000040) != 0)) {
-          fallbackModelDefinitionIds_ = fallbackModelDefinitionIds_.getUnmodifiableView();
+          modelConfigs_ = java.util.Collections.unmodifiableList(modelConfigs_);
         }
         this.unknownFields = unknownFields.build();
         makeExtensionsImmutable();
@@ -233120,55 +234053,64 @@ public final class Service {
       }
     }
 
-    public static final int MODEL_DEFINITION_IDS_FIELD_NUMBER = 4;
-    private com.google.protobuf.LazyStringList modelDefinitionIds_;
+    public static final int MODEL_CONFIGS_FIELD_NUMBER = 4;
+    private java.util.List<org.mlflow.api.proto.Service.GatewayEndpointModelConfig> modelConfigs_;
     /**
      * <pre>
-     * Optional new list of PRIMARY model definition IDs (replaces existing PRIMARY linkages)
+     * Optional new list of model configurations (replaces all existing model linkages)
      * </pre>
      *
-     * <code>repeated string model_definition_ids = 4;</code>
-     * @return A list containing the modelDefinitionIds.
+     * <code>repeated .mlflow.GatewayEndpointModelConfig model_configs = 4;</code>
      */
-    public com.google.protobuf.ProtocolStringList
-        getModelDefinitionIdsList() {
-      return modelDefinitionIds_;
+    @java.lang.Override
+    public java.util.List<org.mlflow.api.proto.Service.GatewayEndpointModelConfig> getModelConfigsList() {
+      return modelConfigs_;
     }
     /**
      * <pre>
-     * Optional new list of PRIMARY model definition IDs (replaces existing PRIMARY linkages)
+     * Optional new list of model configurations (replaces all existing model linkages)
      * </pre>
      *
-     * <code>repeated string model_definition_ids = 4;</code>
-     * @return The count of modelDefinitionIds.
+     * <code>repeated .mlflow.GatewayEndpointModelConfig model_configs = 4;</code>
      */
-    public int getModelDefinitionIdsCount() {
-      return modelDefinitionIds_.size();
+    @java.lang.Override
+    public java.util.List<? extends org.mlflow.api.proto.Service.GatewayEndpointModelConfigOrBuilder> 
+        getModelConfigsOrBuilderList() {
+      return modelConfigs_;
     }
     /**
      * <pre>
-     * Optional new list of PRIMARY model definition IDs (replaces existing PRIMARY linkages)
+     * Optional new list of model configurations (replaces all existing model linkages)
      * </pre>
      *
-     * <code>repeated string model_definition_ids = 4;</code>
-     * @param index The index of the element to return.
-     * @return The modelDefinitionIds at the given index.
+     * <code>repeated .mlflow.GatewayEndpointModelConfig model_configs = 4;</code>
      */
-    public java.lang.String getModelDefinitionIds(int index) {
-      return modelDefinitionIds_.get(index);
+    @java.lang.Override
+    public int getModelConfigsCount() {
+      return modelConfigs_.size();
     }
     /**
      * <pre>
-     * Optional new list of PRIMARY model definition IDs (replaces existing PRIMARY linkages)
+     * Optional new list of model configurations (replaces all existing model linkages)
      * </pre>
      *
-     * <code>repeated string model_definition_ids = 4;</code>
-     * @param index The index of the value to return.
-     * @return The bytes of the modelDefinitionIds at the given index.
+     * <code>repeated .mlflow.GatewayEndpointModelConfig model_configs = 4;</code>
      */
-    public com.google.protobuf.ByteString
-        getModelDefinitionIdsBytes(int index) {
-      return modelDefinitionIds_.getByteString(index);
+    @java.lang.Override
+    public org.mlflow.api.proto.Service.GatewayEndpointModelConfig getModelConfigs(int index) {
+      return modelConfigs_.get(index);
+    }
+    /**
+     * <pre>
+     * Optional new list of model configurations (replaces all existing model linkages)
+     * </pre>
+     *
+     * <code>repeated .mlflow.GatewayEndpointModelConfig model_configs = 4;</code>
+     */
+    @java.lang.Override
+    public org.mlflow.api.proto.Service.GatewayEndpointModelConfigOrBuilder getModelConfigsOrBuilder(
+        int index) {
+      return modelConfigs_.get(index);
     }
 
     public static final int ROUTING_STRATEGY_FIELD_NUMBER = 5;
@@ -233236,57 +234178,6 @@ public final class Service {
       return fallbackConfig_ == null ? org.mlflow.api.proto.Service.FallbackConfig.getDefaultInstance() : fallbackConfig_;
     }
 
-    public static final int FALLBACK_MODEL_DEFINITION_IDS_FIELD_NUMBER = 7;
-    private com.google.protobuf.LazyStringList fallbackModelDefinitionIds_;
-    /**
-     * <pre>
-     * Optional ordered list of FALLBACK model definition IDs (order determines fallback_order)
-     * </pre>
-     *
-     * <code>repeated string fallback_model_definition_ids = 7;</code>
-     * @return A list containing the fallbackModelDefinitionIds.
-     */
-    public com.google.protobuf.ProtocolStringList
-        getFallbackModelDefinitionIdsList() {
-      return fallbackModelDefinitionIds_;
-    }
-    /**
-     * <pre>
-     * Optional ordered list of FALLBACK model definition IDs (order determines fallback_order)
-     * </pre>
-     *
-     * <code>repeated string fallback_model_definition_ids = 7;</code>
-     * @return The count of fallbackModelDefinitionIds.
-     */
-    public int getFallbackModelDefinitionIdsCount() {
-      return fallbackModelDefinitionIds_.size();
-    }
-    /**
-     * <pre>
-     * Optional ordered list of FALLBACK model definition IDs (order determines fallback_order)
-     * </pre>
-     *
-     * <code>repeated string fallback_model_definition_ids = 7;</code>
-     * @param index The index of the element to return.
-     * @return The fallbackModelDefinitionIds at the given index.
-     */
-    public java.lang.String getFallbackModelDefinitionIds(int index) {
-      return fallbackModelDefinitionIds_.get(index);
-    }
-    /**
-     * <pre>
-     * Optional ordered list of FALLBACK model definition IDs (order determines fallback_order)
-     * </pre>
-     *
-     * <code>repeated string fallback_model_definition_ids = 7;</code>
-     * @param index The index of the value to return.
-     * @return The bytes of the fallbackModelDefinitionIds at the given index.
-     */
-    public com.google.protobuf.ByteString
-        getFallbackModelDefinitionIdsBytes(int index) {
-      return fallbackModelDefinitionIds_.getByteString(index);
-    }
-
     private byte memoizedIsInitialized = -1;
     @java.lang.Override
     public final boolean isInitialized() {
@@ -233310,17 +234201,14 @@ public final class Service {
       if (((bitField0_ & 0x00000004) != 0)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 3, updatedBy_);
       }
-      for (int i = 0; i < modelDefinitionIds_.size(); i++) {
-        com.google.protobuf.GeneratedMessageV3.writeString(output, 4, modelDefinitionIds_.getRaw(i));
+      for (int i = 0; i < modelConfigs_.size(); i++) {
+        output.writeMessage(4, modelConfigs_.get(i));
       }
       if (((bitField0_ & 0x00000008) != 0)) {
         output.writeEnum(5, routingStrategy_);
       }
       if (((bitField0_ & 0x00000010) != 0)) {
         output.writeMessage(6, getFallbackConfig());
-      }
-      for (int i = 0; i < fallbackModelDefinitionIds_.size(); i++) {
-        com.google.protobuf.GeneratedMessageV3.writeString(output, 7, fallbackModelDefinitionIds_.getRaw(i));
       }
       unknownFields.writeTo(output);
     }
@@ -233340,13 +234228,9 @@ public final class Service {
       if (((bitField0_ & 0x00000004) != 0)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(3, updatedBy_);
       }
-      {
-        int dataSize = 0;
-        for (int i = 0; i < modelDefinitionIds_.size(); i++) {
-          dataSize += computeStringSizeNoTag(modelDefinitionIds_.getRaw(i));
-        }
-        size += dataSize;
-        size += 1 * getModelDefinitionIdsList().size();
+      for (int i = 0; i < modelConfigs_.size(); i++) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(4, modelConfigs_.get(i));
       }
       if (((bitField0_ & 0x00000008) != 0)) {
         size += com.google.protobuf.CodedOutputStream
@@ -233355,14 +234239,6 @@ public final class Service {
       if (((bitField0_ & 0x00000010) != 0)) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(6, getFallbackConfig());
-      }
-      {
-        int dataSize = 0;
-        for (int i = 0; i < fallbackModelDefinitionIds_.size(); i++) {
-          dataSize += computeStringSizeNoTag(fallbackModelDefinitionIds_.getRaw(i));
-        }
-        size += dataSize;
-        size += 1 * getFallbackModelDefinitionIdsList().size();
       }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
@@ -233394,8 +234270,8 @@ public final class Service {
         if (!getUpdatedBy()
             .equals(other.getUpdatedBy())) return false;
       }
-      if (!getModelDefinitionIdsList()
-          .equals(other.getModelDefinitionIdsList())) return false;
+      if (!getModelConfigsList()
+          .equals(other.getModelConfigsList())) return false;
       if (hasRoutingStrategy() != other.hasRoutingStrategy()) return false;
       if (hasRoutingStrategy()) {
         if (routingStrategy_ != other.routingStrategy_) return false;
@@ -233405,8 +234281,6 @@ public final class Service {
         if (!getFallbackConfig()
             .equals(other.getFallbackConfig())) return false;
       }
-      if (!getFallbackModelDefinitionIdsList()
-          .equals(other.getFallbackModelDefinitionIdsList())) return false;
       if (!unknownFields.equals(other.unknownFields)) return false;
       return true;
     }
@@ -233430,9 +234304,9 @@ public final class Service {
         hash = (37 * hash) + UPDATED_BY_FIELD_NUMBER;
         hash = (53 * hash) + getUpdatedBy().hashCode();
       }
-      if (getModelDefinitionIdsCount() > 0) {
-        hash = (37 * hash) + MODEL_DEFINITION_IDS_FIELD_NUMBER;
-        hash = (53 * hash) + getModelDefinitionIdsList().hashCode();
+      if (getModelConfigsCount() > 0) {
+        hash = (37 * hash) + MODEL_CONFIGS_FIELD_NUMBER;
+        hash = (53 * hash) + getModelConfigsList().hashCode();
       }
       if (hasRoutingStrategy()) {
         hash = (37 * hash) + ROUTING_STRATEGY_FIELD_NUMBER;
@@ -233441,10 +234315,6 @@ public final class Service {
       if (hasFallbackConfig()) {
         hash = (37 * hash) + FALLBACK_CONFIG_FIELD_NUMBER;
         hash = (53 * hash) + getFallbackConfig().hashCode();
-      }
-      if (getFallbackModelDefinitionIdsCount() > 0) {
-        hash = (37 * hash) + FALLBACK_MODEL_DEFINITION_IDS_FIELD_NUMBER;
-        hash = (53 * hash) + getFallbackModelDefinitionIdsList().hashCode();
       }
       hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
@@ -233574,6 +234444,7 @@ public final class Service {
       private void maybeForceBuilderInitialization() {
         if (com.google.protobuf.GeneratedMessageV3
                 .alwaysUseFieldBuilders) {
+          getModelConfigsFieldBuilder();
           getFallbackConfigFieldBuilder();
         }
       }
@@ -233586,8 +234457,12 @@ public final class Service {
         bitField0_ = (bitField0_ & ~0x00000002);
         updatedBy_ = "";
         bitField0_ = (bitField0_ & ~0x00000004);
-        modelDefinitionIds_ = com.google.protobuf.LazyStringArrayList.EMPTY;
-        bitField0_ = (bitField0_ & ~0x00000008);
+        if (modelConfigsBuilder_ == null) {
+          modelConfigs_ = java.util.Collections.emptyList();
+          bitField0_ = (bitField0_ & ~0x00000008);
+        } else {
+          modelConfigsBuilder_.clear();
+        }
         routingStrategy_ = 0;
         bitField0_ = (bitField0_ & ~0x00000010);
         if (fallbackConfigBuilder_ == null) {
@@ -233596,8 +234471,6 @@ public final class Service {
           fallbackConfigBuilder_.clear();
         }
         bitField0_ = (bitField0_ & ~0x00000020);
-        fallbackModelDefinitionIds_ = com.google.protobuf.LazyStringArrayList.EMPTY;
-        bitField0_ = (bitField0_ & ~0x00000040);
         return this;
       }
 
@@ -233638,11 +234511,15 @@ public final class Service {
           to_bitField0_ |= 0x00000004;
         }
         result.updatedBy_ = updatedBy_;
-        if (((bitField0_ & 0x00000008) != 0)) {
-          modelDefinitionIds_ = modelDefinitionIds_.getUnmodifiableView();
-          bitField0_ = (bitField0_ & ~0x00000008);
+        if (modelConfigsBuilder_ == null) {
+          if (((bitField0_ & 0x00000008) != 0)) {
+            modelConfigs_ = java.util.Collections.unmodifiableList(modelConfigs_);
+            bitField0_ = (bitField0_ & ~0x00000008);
+          }
+          result.modelConfigs_ = modelConfigs_;
+        } else {
+          result.modelConfigs_ = modelConfigsBuilder_.build();
         }
-        result.modelDefinitionIds_ = modelDefinitionIds_;
         if (((from_bitField0_ & 0x00000010) != 0)) {
           to_bitField0_ |= 0x00000008;
         }
@@ -233655,11 +234532,6 @@ public final class Service {
           }
           to_bitField0_ |= 0x00000010;
         }
-        if (((bitField0_ & 0x00000040) != 0)) {
-          fallbackModelDefinitionIds_ = fallbackModelDefinitionIds_.getUnmodifiableView();
-          bitField0_ = (bitField0_ & ~0x00000040);
-        }
-        result.fallbackModelDefinitionIds_ = fallbackModelDefinitionIds_;
         result.bitField0_ = to_bitField0_;
         onBuilt();
         return result;
@@ -233724,31 +234596,37 @@ public final class Service {
           updatedBy_ = other.updatedBy_;
           onChanged();
         }
-        if (!other.modelDefinitionIds_.isEmpty()) {
-          if (modelDefinitionIds_.isEmpty()) {
-            modelDefinitionIds_ = other.modelDefinitionIds_;
-            bitField0_ = (bitField0_ & ~0x00000008);
-          } else {
-            ensureModelDefinitionIdsIsMutable();
-            modelDefinitionIds_.addAll(other.modelDefinitionIds_);
+        if (modelConfigsBuilder_ == null) {
+          if (!other.modelConfigs_.isEmpty()) {
+            if (modelConfigs_.isEmpty()) {
+              modelConfigs_ = other.modelConfigs_;
+              bitField0_ = (bitField0_ & ~0x00000008);
+            } else {
+              ensureModelConfigsIsMutable();
+              modelConfigs_.addAll(other.modelConfigs_);
+            }
+            onChanged();
           }
-          onChanged();
+        } else {
+          if (!other.modelConfigs_.isEmpty()) {
+            if (modelConfigsBuilder_.isEmpty()) {
+              modelConfigsBuilder_.dispose();
+              modelConfigsBuilder_ = null;
+              modelConfigs_ = other.modelConfigs_;
+              bitField0_ = (bitField0_ & ~0x00000008);
+              modelConfigsBuilder_ = 
+                com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
+                   getModelConfigsFieldBuilder() : null;
+            } else {
+              modelConfigsBuilder_.addAllMessages(other.modelConfigs_);
+            }
+          }
         }
         if (other.hasRoutingStrategy()) {
           setRoutingStrategy(other.getRoutingStrategy());
         }
         if (other.hasFallbackConfig()) {
           mergeFallbackConfig(other.getFallbackConfig());
-        }
-        if (!other.fallbackModelDefinitionIds_.isEmpty()) {
-          if (fallbackModelDefinitionIds_.isEmpty()) {
-            fallbackModelDefinitionIds_ = other.fallbackModelDefinitionIds_;
-            bitField0_ = (bitField0_ & ~0x00000040);
-          } else {
-            ensureFallbackModelDefinitionIdsIsMutable();
-            fallbackModelDefinitionIds_.addAll(other.fallbackModelDefinitionIds_);
-          }
-          onChanged();
         }
         this.mergeUnknownFields(other.unknownFields);
         onChanged();
@@ -234104,149 +234982,316 @@ public final class Service {
         return this;
       }
 
-      private com.google.protobuf.LazyStringList modelDefinitionIds_ = com.google.protobuf.LazyStringArrayList.EMPTY;
-      private void ensureModelDefinitionIdsIsMutable() {
+      private java.util.List<org.mlflow.api.proto.Service.GatewayEndpointModelConfig> modelConfigs_ =
+        java.util.Collections.emptyList();
+      private void ensureModelConfigsIsMutable() {
         if (!((bitField0_ & 0x00000008) != 0)) {
-          modelDefinitionIds_ = new com.google.protobuf.LazyStringArrayList(modelDefinitionIds_);
+          modelConfigs_ = new java.util.ArrayList<org.mlflow.api.proto.Service.GatewayEndpointModelConfig>(modelConfigs_);
           bitField0_ |= 0x00000008;
          }
       }
+
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          org.mlflow.api.proto.Service.GatewayEndpointModelConfig, org.mlflow.api.proto.Service.GatewayEndpointModelConfig.Builder, org.mlflow.api.proto.Service.GatewayEndpointModelConfigOrBuilder> modelConfigsBuilder_;
+
       /**
        * <pre>
-       * Optional new list of PRIMARY model definition IDs (replaces existing PRIMARY linkages)
+       * Optional new list of model configurations (replaces all existing model linkages)
        * </pre>
        *
-       * <code>repeated string model_definition_ids = 4;</code>
-       * @return A list containing the modelDefinitionIds.
+       * <code>repeated .mlflow.GatewayEndpointModelConfig model_configs = 4;</code>
        */
-      public com.google.protobuf.ProtocolStringList
-          getModelDefinitionIdsList() {
-        return modelDefinitionIds_.getUnmodifiableView();
+      public java.util.List<org.mlflow.api.proto.Service.GatewayEndpointModelConfig> getModelConfigsList() {
+        if (modelConfigsBuilder_ == null) {
+          return java.util.Collections.unmodifiableList(modelConfigs_);
+        } else {
+          return modelConfigsBuilder_.getMessageList();
+        }
       }
       /**
        * <pre>
-       * Optional new list of PRIMARY model definition IDs (replaces existing PRIMARY linkages)
+       * Optional new list of model configurations (replaces all existing model linkages)
        * </pre>
        *
-       * <code>repeated string model_definition_ids = 4;</code>
-       * @return The count of modelDefinitionIds.
+       * <code>repeated .mlflow.GatewayEndpointModelConfig model_configs = 4;</code>
        */
-      public int getModelDefinitionIdsCount() {
-        return modelDefinitionIds_.size();
+      public int getModelConfigsCount() {
+        if (modelConfigsBuilder_ == null) {
+          return modelConfigs_.size();
+        } else {
+          return modelConfigsBuilder_.getCount();
+        }
       }
       /**
        * <pre>
-       * Optional new list of PRIMARY model definition IDs (replaces existing PRIMARY linkages)
+       * Optional new list of model configurations (replaces all existing model linkages)
        * </pre>
        *
-       * <code>repeated string model_definition_ids = 4;</code>
-       * @param index The index of the element to return.
-       * @return The modelDefinitionIds at the given index.
+       * <code>repeated .mlflow.GatewayEndpointModelConfig model_configs = 4;</code>
        */
-      public java.lang.String getModelDefinitionIds(int index) {
-        return modelDefinitionIds_.get(index);
+      public org.mlflow.api.proto.Service.GatewayEndpointModelConfig getModelConfigs(int index) {
+        if (modelConfigsBuilder_ == null) {
+          return modelConfigs_.get(index);
+        } else {
+          return modelConfigsBuilder_.getMessage(index);
+        }
       }
       /**
        * <pre>
-       * Optional new list of PRIMARY model definition IDs (replaces existing PRIMARY linkages)
+       * Optional new list of model configurations (replaces all existing model linkages)
        * </pre>
        *
-       * <code>repeated string model_definition_ids = 4;</code>
-       * @param index The index of the value to return.
-       * @return The bytes of the modelDefinitionIds at the given index.
+       * <code>repeated .mlflow.GatewayEndpointModelConfig model_configs = 4;</code>
        */
-      public com.google.protobuf.ByteString
-          getModelDefinitionIdsBytes(int index) {
-        return modelDefinitionIds_.getByteString(index);
-      }
-      /**
-       * <pre>
-       * Optional new list of PRIMARY model definition IDs (replaces existing PRIMARY linkages)
-       * </pre>
-       *
-       * <code>repeated string model_definition_ids = 4;</code>
-       * @param index The index to set the value at.
-       * @param value The modelDefinitionIds to set.
-       * @return This builder for chaining.
-       */
-      public Builder setModelDefinitionIds(
-          int index, java.lang.String value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  ensureModelDefinitionIdsIsMutable();
-        modelDefinitionIds_.set(index, value);
-        onChanged();
+      public Builder setModelConfigs(
+          int index, org.mlflow.api.proto.Service.GatewayEndpointModelConfig value) {
+        if (modelConfigsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureModelConfigsIsMutable();
+          modelConfigs_.set(index, value);
+          onChanged();
+        } else {
+          modelConfigsBuilder_.setMessage(index, value);
+        }
         return this;
       }
       /**
        * <pre>
-       * Optional new list of PRIMARY model definition IDs (replaces existing PRIMARY linkages)
+       * Optional new list of model configurations (replaces all existing model linkages)
        * </pre>
        *
-       * <code>repeated string model_definition_ids = 4;</code>
-       * @param value The modelDefinitionIds to add.
-       * @return This builder for chaining.
+       * <code>repeated .mlflow.GatewayEndpointModelConfig model_configs = 4;</code>
        */
-      public Builder addModelDefinitionIds(
-          java.lang.String value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  ensureModelDefinitionIdsIsMutable();
-        modelDefinitionIds_.add(value);
-        onChanged();
+      public Builder setModelConfigs(
+          int index, org.mlflow.api.proto.Service.GatewayEndpointModelConfig.Builder builderForValue) {
+        if (modelConfigsBuilder_ == null) {
+          ensureModelConfigsIsMutable();
+          modelConfigs_.set(index, builderForValue.build());
+          onChanged();
+        } else {
+          modelConfigsBuilder_.setMessage(index, builderForValue.build());
+        }
         return this;
       }
       /**
        * <pre>
-       * Optional new list of PRIMARY model definition IDs (replaces existing PRIMARY linkages)
+       * Optional new list of model configurations (replaces all existing model linkages)
        * </pre>
        *
-       * <code>repeated string model_definition_ids = 4;</code>
-       * @param values The modelDefinitionIds to add.
-       * @return This builder for chaining.
+       * <code>repeated .mlflow.GatewayEndpointModelConfig model_configs = 4;</code>
        */
-      public Builder addAllModelDefinitionIds(
-          java.lang.Iterable<java.lang.String> values) {
-        ensureModelDefinitionIdsIsMutable();
-        com.google.protobuf.AbstractMessageLite.Builder.addAll(
-            values, modelDefinitionIds_);
-        onChanged();
+      public Builder addModelConfigs(org.mlflow.api.proto.Service.GatewayEndpointModelConfig value) {
+        if (modelConfigsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureModelConfigsIsMutable();
+          modelConfigs_.add(value);
+          onChanged();
+        } else {
+          modelConfigsBuilder_.addMessage(value);
+        }
         return this;
       }
       /**
        * <pre>
-       * Optional new list of PRIMARY model definition IDs (replaces existing PRIMARY linkages)
+       * Optional new list of model configurations (replaces all existing model linkages)
        * </pre>
        *
-       * <code>repeated string model_definition_ids = 4;</code>
-       * @return This builder for chaining.
+       * <code>repeated .mlflow.GatewayEndpointModelConfig model_configs = 4;</code>
        */
-      public Builder clearModelDefinitionIds() {
-        modelDefinitionIds_ = com.google.protobuf.LazyStringArrayList.EMPTY;
-        bitField0_ = (bitField0_ & ~0x00000008);
-        onChanged();
+      public Builder addModelConfigs(
+          int index, org.mlflow.api.proto.Service.GatewayEndpointModelConfig value) {
+        if (modelConfigsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureModelConfigsIsMutable();
+          modelConfigs_.add(index, value);
+          onChanged();
+        } else {
+          modelConfigsBuilder_.addMessage(index, value);
+        }
         return this;
       }
       /**
        * <pre>
-       * Optional new list of PRIMARY model definition IDs (replaces existing PRIMARY linkages)
+       * Optional new list of model configurations (replaces all existing model linkages)
        * </pre>
        *
-       * <code>repeated string model_definition_ids = 4;</code>
-       * @param value The bytes of the modelDefinitionIds to add.
-       * @return This builder for chaining.
+       * <code>repeated .mlflow.GatewayEndpointModelConfig model_configs = 4;</code>
        */
-      public Builder addModelDefinitionIdsBytes(
-          com.google.protobuf.ByteString value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  ensureModelDefinitionIdsIsMutable();
-        modelDefinitionIds_.add(value);
-        onChanged();
+      public Builder addModelConfigs(
+          org.mlflow.api.proto.Service.GatewayEndpointModelConfig.Builder builderForValue) {
+        if (modelConfigsBuilder_ == null) {
+          ensureModelConfigsIsMutable();
+          modelConfigs_.add(builderForValue.build());
+          onChanged();
+        } else {
+          modelConfigsBuilder_.addMessage(builderForValue.build());
+        }
         return this;
+      }
+      /**
+       * <pre>
+       * Optional new list of model configurations (replaces all existing model linkages)
+       * </pre>
+       *
+       * <code>repeated .mlflow.GatewayEndpointModelConfig model_configs = 4;</code>
+       */
+      public Builder addModelConfigs(
+          int index, org.mlflow.api.proto.Service.GatewayEndpointModelConfig.Builder builderForValue) {
+        if (modelConfigsBuilder_ == null) {
+          ensureModelConfigsIsMutable();
+          modelConfigs_.add(index, builderForValue.build());
+          onChanged();
+        } else {
+          modelConfigsBuilder_.addMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * Optional new list of model configurations (replaces all existing model linkages)
+       * </pre>
+       *
+       * <code>repeated .mlflow.GatewayEndpointModelConfig model_configs = 4;</code>
+       */
+      public Builder addAllModelConfigs(
+          java.lang.Iterable<? extends org.mlflow.api.proto.Service.GatewayEndpointModelConfig> values) {
+        if (modelConfigsBuilder_ == null) {
+          ensureModelConfigsIsMutable();
+          com.google.protobuf.AbstractMessageLite.Builder.addAll(
+              values, modelConfigs_);
+          onChanged();
+        } else {
+          modelConfigsBuilder_.addAllMessages(values);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * Optional new list of model configurations (replaces all existing model linkages)
+       * </pre>
+       *
+       * <code>repeated .mlflow.GatewayEndpointModelConfig model_configs = 4;</code>
+       */
+      public Builder clearModelConfigs() {
+        if (modelConfigsBuilder_ == null) {
+          modelConfigs_ = java.util.Collections.emptyList();
+          bitField0_ = (bitField0_ & ~0x00000008);
+          onChanged();
+        } else {
+          modelConfigsBuilder_.clear();
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * Optional new list of model configurations (replaces all existing model linkages)
+       * </pre>
+       *
+       * <code>repeated .mlflow.GatewayEndpointModelConfig model_configs = 4;</code>
+       */
+      public Builder removeModelConfigs(int index) {
+        if (modelConfigsBuilder_ == null) {
+          ensureModelConfigsIsMutable();
+          modelConfigs_.remove(index);
+          onChanged();
+        } else {
+          modelConfigsBuilder_.remove(index);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * Optional new list of model configurations (replaces all existing model linkages)
+       * </pre>
+       *
+       * <code>repeated .mlflow.GatewayEndpointModelConfig model_configs = 4;</code>
+       */
+      public org.mlflow.api.proto.Service.GatewayEndpointModelConfig.Builder getModelConfigsBuilder(
+          int index) {
+        return getModelConfigsFieldBuilder().getBuilder(index);
+      }
+      /**
+       * <pre>
+       * Optional new list of model configurations (replaces all existing model linkages)
+       * </pre>
+       *
+       * <code>repeated .mlflow.GatewayEndpointModelConfig model_configs = 4;</code>
+       */
+      public org.mlflow.api.proto.Service.GatewayEndpointModelConfigOrBuilder getModelConfigsOrBuilder(
+          int index) {
+        if (modelConfigsBuilder_ == null) {
+          return modelConfigs_.get(index);  } else {
+          return modelConfigsBuilder_.getMessageOrBuilder(index);
+        }
+      }
+      /**
+       * <pre>
+       * Optional new list of model configurations (replaces all existing model linkages)
+       * </pre>
+       *
+       * <code>repeated .mlflow.GatewayEndpointModelConfig model_configs = 4;</code>
+       */
+      public java.util.List<? extends org.mlflow.api.proto.Service.GatewayEndpointModelConfigOrBuilder> 
+           getModelConfigsOrBuilderList() {
+        if (modelConfigsBuilder_ != null) {
+          return modelConfigsBuilder_.getMessageOrBuilderList();
+        } else {
+          return java.util.Collections.unmodifiableList(modelConfigs_);
+        }
+      }
+      /**
+       * <pre>
+       * Optional new list of model configurations (replaces all existing model linkages)
+       * </pre>
+       *
+       * <code>repeated .mlflow.GatewayEndpointModelConfig model_configs = 4;</code>
+       */
+      public org.mlflow.api.proto.Service.GatewayEndpointModelConfig.Builder addModelConfigsBuilder() {
+        return getModelConfigsFieldBuilder().addBuilder(
+            org.mlflow.api.proto.Service.GatewayEndpointModelConfig.getDefaultInstance());
+      }
+      /**
+       * <pre>
+       * Optional new list of model configurations (replaces all existing model linkages)
+       * </pre>
+       *
+       * <code>repeated .mlflow.GatewayEndpointModelConfig model_configs = 4;</code>
+       */
+      public org.mlflow.api.proto.Service.GatewayEndpointModelConfig.Builder addModelConfigsBuilder(
+          int index) {
+        return getModelConfigsFieldBuilder().addBuilder(
+            index, org.mlflow.api.proto.Service.GatewayEndpointModelConfig.getDefaultInstance());
+      }
+      /**
+       * <pre>
+       * Optional new list of model configurations (replaces all existing model linkages)
+       * </pre>
+       *
+       * <code>repeated .mlflow.GatewayEndpointModelConfig model_configs = 4;</code>
+       */
+      public java.util.List<org.mlflow.api.proto.Service.GatewayEndpointModelConfig.Builder> 
+           getModelConfigsBuilderList() {
+        return getModelConfigsFieldBuilder().getBuilderList();
+      }
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          org.mlflow.api.proto.Service.GatewayEndpointModelConfig, org.mlflow.api.proto.Service.GatewayEndpointModelConfig.Builder, org.mlflow.api.proto.Service.GatewayEndpointModelConfigOrBuilder> 
+          getModelConfigsFieldBuilder() {
+        if (modelConfigsBuilder_ == null) {
+          modelConfigsBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
+              org.mlflow.api.proto.Service.GatewayEndpointModelConfig, org.mlflow.api.proto.Service.GatewayEndpointModelConfig.Builder, org.mlflow.api.proto.Service.GatewayEndpointModelConfigOrBuilder>(
+                  modelConfigs_,
+                  ((bitField0_ & 0x00000008) != 0),
+                  getParentForChildren(),
+                  isClean());
+          modelConfigs_ = null;
+        }
+        return modelConfigsBuilder_;
       }
 
       private int routingStrategy_ = 0;
@@ -234462,151 +235507,6 @@ public final class Service {
           fallbackConfig_ = null;
         }
         return fallbackConfigBuilder_;
-      }
-
-      private com.google.protobuf.LazyStringList fallbackModelDefinitionIds_ = com.google.protobuf.LazyStringArrayList.EMPTY;
-      private void ensureFallbackModelDefinitionIdsIsMutable() {
-        if (!((bitField0_ & 0x00000040) != 0)) {
-          fallbackModelDefinitionIds_ = new com.google.protobuf.LazyStringArrayList(fallbackModelDefinitionIds_);
-          bitField0_ |= 0x00000040;
-         }
-      }
-      /**
-       * <pre>
-       * Optional ordered list of FALLBACK model definition IDs (order determines fallback_order)
-       * </pre>
-       *
-       * <code>repeated string fallback_model_definition_ids = 7;</code>
-       * @return A list containing the fallbackModelDefinitionIds.
-       */
-      public com.google.protobuf.ProtocolStringList
-          getFallbackModelDefinitionIdsList() {
-        return fallbackModelDefinitionIds_.getUnmodifiableView();
-      }
-      /**
-       * <pre>
-       * Optional ordered list of FALLBACK model definition IDs (order determines fallback_order)
-       * </pre>
-       *
-       * <code>repeated string fallback_model_definition_ids = 7;</code>
-       * @return The count of fallbackModelDefinitionIds.
-       */
-      public int getFallbackModelDefinitionIdsCount() {
-        return fallbackModelDefinitionIds_.size();
-      }
-      /**
-       * <pre>
-       * Optional ordered list of FALLBACK model definition IDs (order determines fallback_order)
-       * </pre>
-       *
-       * <code>repeated string fallback_model_definition_ids = 7;</code>
-       * @param index The index of the element to return.
-       * @return The fallbackModelDefinitionIds at the given index.
-       */
-      public java.lang.String getFallbackModelDefinitionIds(int index) {
-        return fallbackModelDefinitionIds_.get(index);
-      }
-      /**
-       * <pre>
-       * Optional ordered list of FALLBACK model definition IDs (order determines fallback_order)
-       * </pre>
-       *
-       * <code>repeated string fallback_model_definition_ids = 7;</code>
-       * @param index The index of the value to return.
-       * @return The bytes of the fallbackModelDefinitionIds at the given index.
-       */
-      public com.google.protobuf.ByteString
-          getFallbackModelDefinitionIdsBytes(int index) {
-        return fallbackModelDefinitionIds_.getByteString(index);
-      }
-      /**
-       * <pre>
-       * Optional ordered list of FALLBACK model definition IDs (order determines fallback_order)
-       * </pre>
-       *
-       * <code>repeated string fallback_model_definition_ids = 7;</code>
-       * @param index The index to set the value at.
-       * @param value The fallbackModelDefinitionIds to set.
-       * @return This builder for chaining.
-       */
-      public Builder setFallbackModelDefinitionIds(
-          int index, java.lang.String value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  ensureFallbackModelDefinitionIdsIsMutable();
-        fallbackModelDefinitionIds_.set(index, value);
-        onChanged();
-        return this;
-      }
-      /**
-       * <pre>
-       * Optional ordered list of FALLBACK model definition IDs (order determines fallback_order)
-       * </pre>
-       *
-       * <code>repeated string fallback_model_definition_ids = 7;</code>
-       * @param value The fallbackModelDefinitionIds to add.
-       * @return This builder for chaining.
-       */
-      public Builder addFallbackModelDefinitionIds(
-          java.lang.String value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  ensureFallbackModelDefinitionIdsIsMutable();
-        fallbackModelDefinitionIds_.add(value);
-        onChanged();
-        return this;
-      }
-      /**
-       * <pre>
-       * Optional ordered list of FALLBACK model definition IDs (order determines fallback_order)
-       * </pre>
-       *
-       * <code>repeated string fallback_model_definition_ids = 7;</code>
-       * @param values The fallbackModelDefinitionIds to add.
-       * @return This builder for chaining.
-       */
-      public Builder addAllFallbackModelDefinitionIds(
-          java.lang.Iterable<java.lang.String> values) {
-        ensureFallbackModelDefinitionIdsIsMutable();
-        com.google.protobuf.AbstractMessageLite.Builder.addAll(
-            values, fallbackModelDefinitionIds_);
-        onChanged();
-        return this;
-      }
-      /**
-       * <pre>
-       * Optional ordered list of FALLBACK model definition IDs (order determines fallback_order)
-       * </pre>
-       *
-       * <code>repeated string fallback_model_definition_ids = 7;</code>
-       * @return This builder for chaining.
-       */
-      public Builder clearFallbackModelDefinitionIds() {
-        fallbackModelDefinitionIds_ = com.google.protobuf.LazyStringArrayList.EMPTY;
-        bitField0_ = (bitField0_ & ~0x00000040);
-        onChanged();
-        return this;
-      }
-      /**
-       * <pre>
-       * Optional ordered list of FALLBACK model definition IDs (order determines fallback_order)
-       * </pre>
-       *
-       * <code>repeated string fallback_model_definition_ids = 7;</code>
-       * @param value The bytes of the fallbackModelDefinitionIds to add.
-       * @return This builder for chaining.
-       */
-      public Builder addFallbackModelDefinitionIdsBytes(
-          com.google.protobuf.ByteString value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  ensureFallbackModelDefinitionIdsIsMutable();
-        fallbackModelDefinitionIds_.add(value);
-        onChanged();
-        return this;
       }
       @java.lang.Override
       public final Builder setUnknownFields(
@@ -237557,58 +238457,37 @@ public final class Service {
 
     /**
      * <pre>
-     * ID of the model definition to attach
+     * Configuration for the model to attach
      * </pre>
      *
-     * <code>optional string model_definition_id = 2;</code>
-     * @return Whether the modelDefinitionId field is set.
+     * <code>optional .mlflow.GatewayEndpointModelConfig model_config = 2;</code>
+     * @return Whether the modelConfig field is set.
      */
-    boolean hasModelDefinitionId();
+    boolean hasModelConfig();
     /**
      * <pre>
-     * ID of the model definition to attach
+     * Configuration for the model to attach
      * </pre>
      *
-     * <code>optional string model_definition_id = 2;</code>
-     * @return The modelDefinitionId.
+     * <code>optional .mlflow.GatewayEndpointModelConfig model_config = 2;</code>
+     * @return The modelConfig.
      */
-    java.lang.String getModelDefinitionId();
+    org.mlflow.api.proto.Service.GatewayEndpointModelConfig getModelConfig();
     /**
      * <pre>
-     * ID of the model definition to attach
+     * Configuration for the model to attach
      * </pre>
      *
-     * <code>optional string model_definition_id = 2;</code>
-     * @return The bytes for modelDefinitionId.
+     * <code>optional .mlflow.GatewayEndpointModelConfig model_config = 2;</code>
      */
-    com.google.protobuf.ByteString
-        getModelDefinitionIdBytes();
-
-    /**
-     * <pre>
-     * Optional routing weight (default 1)
-     * </pre>
-     *
-     * <code>optional float weight = 3;</code>
-     * @return Whether the weight field is set.
-     */
-    boolean hasWeight();
-    /**
-     * <pre>
-     * Optional routing weight (default 1)
-     * </pre>
-     *
-     * <code>optional float weight = 3;</code>
-     * @return The weight.
-     */
-    float getWeight();
+    org.mlflow.api.proto.Service.GatewayEndpointModelConfigOrBuilder getModelConfigOrBuilder();
 
     /**
      * <pre>
      * Username of the creator
      * </pre>
      *
-     * <code>optional string created_by = 4;</code>
+     * <code>optional string created_by = 3;</code>
      * @return Whether the createdBy field is set.
      */
     boolean hasCreatedBy();
@@ -237617,7 +238496,7 @@ public final class Service {
      * Username of the creator
      * </pre>
      *
-     * <code>optional string created_by = 4;</code>
+     * <code>optional string created_by = 3;</code>
      * @return The createdBy.
      */
     java.lang.String getCreatedBy();
@@ -237626,7 +238505,7 @@ public final class Service {
      * Username of the creator
      * </pre>
      *
-     * <code>optional string created_by = 4;</code>
+     * <code>optional string created_by = 3;</code>
      * @return The bytes for createdBy.
      */
     com.google.protobuf.ByteString
@@ -237646,7 +238525,6 @@ public final class Service {
     }
     private AttachModelToGatewayEndpoint() {
       endpointId_ = "";
-      modelDefinitionId_ = "";
       createdBy_ = "";
     }
 
@@ -237688,19 +238566,21 @@ public final class Service {
               break;
             }
             case 18: {
-              com.google.protobuf.ByteString bs = input.readBytes();
+              org.mlflow.api.proto.Service.GatewayEndpointModelConfig.Builder subBuilder = null;
+              if (((bitField0_ & 0x00000002) != 0)) {
+                subBuilder = modelConfig_.toBuilder();
+              }
+              modelConfig_ = input.readMessage(org.mlflow.api.proto.Service.GatewayEndpointModelConfig.PARSER, extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(modelConfig_);
+                modelConfig_ = subBuilder.buildPartial();
+              }
               bitField0_ |= 0x00000002;
-              modelDefinitionId_ = bs;
               break;
             }
-            case 29: {
-              bitField0_ |= 0x00000004;
-              weight_ = input.readFloat();
-              break;
-            }
-            case 34: {
+            case 26: {
               com.google.protobuf.ByteString bs = input.readBytes();
-              bitField0_ |= 0x00000008;
+              bitField0_ |= 0x00000004;
               createdBy_ = bs;
               break;
             }
@@ -238489,113 +239369,64 @@ public final class Service {
       }
     }
 
-    public static final int MODEL_DEFINITION_ID_FIELD_NUMBER = 2;
-    private volatile java.lang.Object modelDefinitionId_;
+    public static final int MODEL_CONFIG_FIELD_NUMBER = 2;
+    private org.mlflow.api.proto.Service.GatewayEndpointModelConfig modelConfig_;
     /**
      * <pre>
-     * ID of the model definition to attach
+     * Configuration for the model to attach
      * </pre>
      *
-     * <code>optional string model_definition_id = 2;</code>
-     * @return Whether the modelDefinitionId field is set.
+     * <code>optional .mlflow.GatewayEndpointModelConfig model_config = 2;</code>
+     * @return Whether the modelConfig field is set.
      */
     @java.lang.Override
-    public boolean hasModelDefinitionId() {
+    public boolean hasModelConfig() {
       return ((bitField0_ & 0x00000002) != 0);
     }
     /**
      * <pre>
-     * ID of the model definition to attach
+     * Configuration for the model to attach
      * </pre>
      *
-     * <code>optional string model_definition_id = 2;</code>
-     * @return The modelDefinitionId.
+     * <code>optional .mlflow.GatewayEndpointModelConfig model_config = 2;</code>
+     * @return The modelConfig.
      */
     @java.lang.Override
-    public java.lang.String getModelDefinitionId() {
-      java.lang.Object ref = modelDefinitionId_;
-      if (ref instanceof java.lang.String) {
-        return (java.lang.String) ref;
-      } else {
-        com.google.protobuf.ByteString bs = 
-            (com.google.protobuf.ByteString) ref;
-        java.lang.String s = bs.toStringUtf8();
-        if (bs.isValidUtf8()) {
-          modelDefinitionId_ = s;
-        }
-        return s;
-      }
+    public org.mlflow.api.proto.Service.GatewayEndpointModelConfig getModelConfig() {
+      return modelConfig_ == null ? org.mlflow.api.proto.Service.GatewayEndpointModelConfig.getDefaultInstance() : modelConfig_;
     }
     /**
      * <pre>
-     * ID of the model definition to attach
+     * Configuration for the model to attach
      * </pre>
      *
-     * <code>optional string model_definition_id = 2;</code>
-     * @return The bytes for modelDefinitionId.
+     * <code>optional .mlflow.GatewayEndpointModelConfig model_config = 2;</code>
      */
     @java.lang.Override
-    public com.google.protobuf.ByteString
-        getModelDefinitionIdBytes() {
-      java.lang.Object ref = modelDefinitionId_;
-      if (ref instanceof java.lang.String) {
-        com.google.protobuf.ByteString b = 
-            com.google.protobuf.ByteString.copyFromUtf8(
-                (java.lang.String) ref);
-        modelDefinitionId_ = b;
-        return b;
-      } else {
-        return (com.google.protobuf.ByteString) ref;
-      }
+    public org.mlflow.api.proto.Service.GatewayEndpointModelConfigOrBuilder getModelConfigOrBuilder() {
+      return modelConfig_ == null ? org.mlflow.api.proto.Service.GatewayEndpointModelConfig.getDefaultInstance() : modelConfig_;
     }
 
-    public static final int WEIGHT_FIELD_NUMBER = 3;
-    private float weight_;
-    /**
-     * <pre>
-     * Optional routing weight (default 1)
-     * </pre>
-     *
-     * <code>optional float weight = 3;</code>
-     * @return Whether the weight field is set.
-     */
-    @java.lang.Override
-    public boolean hasWeight() {
-      return ((bitField0_ & 0x00000004) != 0);
-    }
-    /**
-     * <pre>
-     * Optional routing weight (default 1)
-     * </pre>
-     *
-     * <code>optional float weight = 3;</code>
-     * @return The weight.
-     */
-    @java.lang.Override
-    public float getWeight() {
-      return weight_;
-    }
-
-    public static final int CREATED_BY_FIELD_NUMBER = 4;
+    public static final int CREATED_BY_FIELD_NUMBER = 3;
     private volatile java.lang.Object createdBy_;
     /**
      * <pre>
      * Username of the creator
      * </pre>
      *
-     * <code>optional string created_by = 4;</code>
+     * <code>optional string created_by = 3;</code>
      * @return Whether the createdBy field is set.
      */
     @java.lang.Override
     public boolean hasCreatedBy() {
-      return ((bitField0_ & 0x00000008) != 0);
+      return ((bitField0_ & 0x00000004) != 0);
     }
     /**
      * <pre>
      * Username of the creator
      * </pre>
      *
-     * <code>optional string created_by = 4;</code>
+     * <code>optional string created_by = 3;</code>
      * @return The createdBy.
      */
     @java.lang.Override
@@ -238618,7 +239449,7 @@ public final class Service {
      * Username of the creator
      * </pre>
      *
-     * <code>optional string created_by = 4;</code>
+     * <code>optional string created_by = 3;</code>
      * @return The bytes for createdBy.
      */
     @java.lang.Override
@@ -238654,13 +239485,10 @@ public final class Service {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 1, endpointId_);
       }
       if (((bitField0_ & 0x00000002) != 0)) {
-        com.google.protobuf.GeneratedMessageV3.writeString(output, 2, modelDefinitionId_);
+        output.writeMessage(2, getModelConfig());
       }
       if (((bitField0_ & 0x00000004) != 0)) {
-        output.writeFloat(3, weight_);
-      }
-      if (((bitField0_ & 0x00000008) != 0)) {
-        com.google.protobuf.GeneratedMessageV3.writeString(output, 4, createdBy_);
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 3, createdBy_);
       }
       unknownFields.writeTo(output);
     }
@@ -238675,14 +239503,11 @@ public final class Service {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, endpointId_);
       }
       if (((bitField0_ & 0x00000002) != 0)) {
-        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, modelDefinitionId_);
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(2, getModelConfig());
       }
       if (((bitField0_ & 0x00000004) != 0)) {
-        size += com.google.protobuf.CodedOutputStream
-          .computeFloatSize(3, weight_);
-      }
-      if (((bitField0_ & 0x00000008) != 0)) {
-        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(4, createdBy_);
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(3, createdBy_);
       }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
@@ -238704,16 +239529,10 @@ public final class Service {
         if (!getEndpointId()
             .equals(other.getEndpointId())) return false;
       }
-      if (hasModelDefinitionId() != other.hasModelDefinitionId()) return false;
-      if (hasModelDefinitionId()) {
-        if (!getModelDefinitionId()
-            .equals(other.getModelDefinitionId())) return false;
-      }
-      if (hasWeight() != other.hasWeight()) return false;
-      if (hasWeight()) {
-        if (java.lang.Float.floatToIntBits(getWeight())
-            != java.lang.Float.floatToIntBits(
-                other.getWeight())) return false;
+      if (hasModelConfig() != other.hasModelConfig()) return false;
+      if (hasModelConfig()) {
+        if (!getModelConfig()
+            .equals(other.getModelConfig())) return false;
       }
       if (hasCreatedBy() != other.hasCreatedBy()) return false;
       if (hasCreatedBy()) {
@@ -238735,14 +239554,9 @@ public final class Service {
         hash = (37 * hash) + ENDPOINT_ID_FIELD_NUMBER;
         hash = (53 * hash) + getEndpointId().hashCode();
       }
-      if (hasModelDefinitionId()) {
-        hash = (37 * hash) + MODEL_DEFINITION_ID_FIELD_NUMBER;
-        hash = (53 * hash) + getModelDefinitionId().hashCode();
-      }
-      if (hasWeight()) {
-        hash = (37 * hash) + WEIGHT_FIELD_NUMBER;
-        hash = (53 * hash) + java.lang.Float.floatToIntBits(
-            getWeight());
+      if (hasModelConfig()) {
+        hash = (37 * hash) + MODEL_CONFIG_FIELD_NUMBER;
+        hash = (53 * hash) + getModelConfig().hashCode();
       }
       if (hasCreatedBy()) {
         hash = (37 * hash) + CREATED_BY_FIELD_NUMBER;
@@ -238876,6 +239690,7 @@ public final class Service {
       private void maybeForceBuilderInitialization() {
         if (com.google.protobuf.GeneratedMessageV3
                 .alwaysUseFieldBuilders) {
+          getModelConfigFieldBuilder();
         }
       }
       @java.lang.Override
@@ -238883,12 +239698,14 @@ public final class Service {
         super.clear();
         endpointId_ = "";
         bitField0_ = (bitField0_ & ~0x00000001);
-        modelDefinitionId_ = "";
+        if (modelConfigBuilder_ == null) {
+          modelConfig_ = null;
+        } else {
+          modelConfigBuilder_.clear();
+        }
         bitField0_ = (bitField0_ & ~0x00000002);
-        weight_ = 0F;
-        bitField0_ = (bitField0_ & ~0x00000004);
         createdBy_ = "";
-        bitField0_ = (bitField0_ & ~0x00000008);
+        bitField0_ = (bitField0_ & ~0x00000004);
         return this;
       }
 
@@ -238922,15 +239739,15 @@ public final class Service {
         }
         result.endpointId_ = endpointId_;
         if (((from_bitField0_ & 0x00000002) != 0)) {
+          if (modelConfigBuilder_ == null) {
+            result.modelConfig_ = modelConfig_;
+          } else {
+            result.modelConfig_ = modelConfigBuilder_.build();
+          }
           to_bitField0_ |= 0x00000002;
         }
-        result.modelDefinitionId_ = modelDefinitionId_;
         if (((from_bitField0_ & 0x00000004) != 0)) {
-          result.weight_ = weight_;
           to_bitField0_ |= 0x00000004;
-        }
-        if (((from_bitField0_ & 0x00000008) != 0)) {
-          to_bitField0_ |= 0x00000008;
         }
         result.createdBy_ = createdBy_;
         result.bitField0_ = to_bitField0_;
@@ -238987,16 +239804,11 @@ public final class Service {
           endpointId_ = other.endpointId_;
           onChanged();
         }
-        if (other.hasModelDefinitionId()) {
-          bitField0_ |= 0x00000002;
-          modelDefinitionId_ = other.modelDefinitionId_;
-          onChanged();
-        }
-        if (other.hasWeight()) {
-          setWeight(other.getWeight());
+        if (other.hasModelConfig()) {
+          mergeModelConfig(other.getModelConfig());
         }
         if (other.hasCreatedBy()) {
-          bitField0_ |= 0x00000008;
+          bitField0_ |= 0x00000004;
           createdBy_ = other.createdBy_;
           onChanged();
         }
@@ -239138,167 +239950,160 @@ public final class Service {
         return this;
       }
 
-      private java.lang.Object modelDefinitionId_ = "";
+      private org.mlflow.api.proto.Service.GatewayEndpointModelConfig modelConfig_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          org.mlflow.api.proto.Service.GatewayEndpointModelConfig, org.mlflow.api.proto.Service.GatewayEndpointModelConfig.Builder, org.mlflow.api.proto.Service.GatewayEndpointModelConfigOrBuilder> modelConfigBuilder_;
       /**
        * <pre>
-       * ID of the model definition to attach
+       * Configuration for the model to attach
        * </pre>
        *
-       * <code>optional string model_definition_id = 2;</code>
-       * @return Whether the modelDefinitionId field is set.
+       * <code>optional .mlflow.GatewayEndpointModelConfig model_config = 2;</code>
+       * @return Whether the modelConfig field is set.
        */
-      public boolean hasModelDefinitionId() {
+      public boolean hasModelConfig() {
         return ((bitField0_ & 0x00000002) != 0);
       }
       /**
        * <pre>
-       * ID of the model definition to attach
+       * Configuration for the model to attach
        * </pre>
        *
-       * <code>optional string model_definition_id = 2;</code>
-       * @return The modelDefinitionId.
+       * <code>optional .mlflow.GatewayEndpointModelConfig model_config = 2;</code>
+       * @return The modelConfig.
        */
-      public java.lang.String getModelDefinitionId() {
-        java.lang.Object ref = modelDefinitionId_;
-        if (!(ref instanceof java.lang.String)) {
-          com.google.protobuf.ByteString bs =
-              (com.google.protobuf.ByteString) ref;
-          java.lang.String s = bs.toStringUtf8();
-          if (bs.isValidUtf8()) {
-            modelDefinitionId_ = s;
+      public org.mlflow.api.proto.Service.GatewayEndpointModelConfig getModelConfig() {
+        if (modelConfigBuilder_ == null) {
+          return modelConfig_ == null ? org.mlflow.api.proto.Service.GatewayEndpointModelConfig.getDefaultInstance() : modelConfig_;
+        } else {
+          return modelConfigBuilder_.getMessage();
+        }
+      }
+      /**
+       * <pre>
+       * Configuration for the model to attach
+       * </pre>
+       *
+       * <code>optional .mlflow.GatewayEndpointModelConfig model_config = 2;</code>
+       */
+      public Builder setModelConfig(org.mlflow.api.proto.Service.GatewayEndpointModelConfig value) {
+        if (modelConfigBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
           }
-          return s;
+          modelConfig_ = value;
+          onChanged();
         } else {
-          return (java.lang.String) ref;
+          modelConfigBuilder_.setMessage(value);
         }
-      }
-      /**
-       * <pre>
-       * ID of the model definition to attach
-       * </pre>
-       *
-       * <code>optional string model_definition_id = 2;</code>
-       * @return The bytes for modelDefinitionId.
-       */
-      public com.google.protobuf.ByteString
-          getModelDefinitionIdBytes() {
-        java.lang.Object ref = modelDefinitionId_;
-        if (ref instanceof String) {
-          com.google.protobuf.ByteString b = 
-              com.google.protobuf.ByteString.copyFromUtf8(
-                  (java.lang.String) ref);
-          modelDefinitionId_ = b;
-          return b;
-        } else {
-          return (com.google.protobuf.ByteString) ref;
-        }
-      }
-      /**
-       * <pre>
-       * ID of the model definition to attach
-       * </pre>
-       *
-       * <code>optional string model_definition_id = 2;</code>
-       * @param value The modelDefinitionId to set.
-       * @return This builder for chaining.
-       */
-      public Builder setModelDefinitionId(
-          java.lang.String value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  bitField0_ |= 0x00000002;
-        modelDefinitionId_ = value;
-        onChanged();
+        bitField0_ |= 0x00000002;
         return this;
       }
       /**
        * <pre>
-       * ID of the model definition to attach
+       * Configuration for the model to attach
        * </pre>
        *
-       * <code>optional string model_definition_id = 2;</code>
-       * @return This builder for chaining.
+       * <code>optional .mlflow.GatewayEndpointModelConfig model_config = 2;</code>
        */
-      public Builder clearModelDefinitionId() {
+      public Builder setModelConfig(
+          org.mlflow.api.proto.Service.GatewayEndpointModelConfig.Builder builderForValue) {
+        if (modelConfigBuilder_ == null) {
+          modelConfig_ = builderForValue.build();
+          onChanged();
+        } else {
+          modelConfigBuilder_.setMessage(builderForValue.build());
+        }
+        bitField0_ |= 0x00000002;
+        return this;
+      }
+      /**
+       * <pre>
+       * Configuration for the model to attach
+       * </pre>
+       *
+       * <code>optional .mlflow.GatewayEndpointModelConfig model_config = 2;</code>
+       */
+      public Builder mergeModelConfig(org.mlflow.api.proto.Service.GatewayEndpointModelConfig value) {
+        if (modelConfigBuilder_ == null) {
+          if (((bitField0_ & 0x00000002) != 0) &&
+              modelConfig_ != null &&
+              modelConfig_ != org.mlflow.api.proto.Service.GatewayEndpointModelConfig.getDefaultInstance()) {
+            modelConfig_ =
+              org.mlflow.api.proto.Service.GatewayEndpointModelConfig.newBuilder(modelConfig_).mergeFrom(value).buildPartial();
+          } else {
+            modelConfig_ = value;
+          }
+          onChanged();
+        } else {
+          modelConfigBuilder_.mergeFrom(value);
+        }
+        bitField0_ |= 0x00000002;
+        return this;
+      }
+      /**
+       * <pre>
+       * Configuration for the model to attach
+       * </pre>
+       *
+       * <code>optional .mlflow.GatewayEndpointModelConfig model_config = 2;</code>
+       */
+      public Builder clearModelConfig() {
+        if (modelConfigBuilder_ == null) {
+          modelConfig_ = null;
+          onChanged();
+        } else {
+          modelConfigBuilder_.clear();
+        }
         bitField0_ = (bitField0_ & ~0x00000002);
-        modelDefinitionId_ = getDefaultInstance().getModelDefinitionId();
-        onChanged();
         return this;
       }
       /**
        * <pre>
-       * ID of the model definition to attach
+       * Configuration for the model to attach
        * </pre>
        *
-       * <code>optional string model_definition_id = 2;</code>
-       * @param value The bytes for modelDefinitionId to set.
-       * @return This builder for chaining.
+       * <code>optional .mlflow.GatewayEndpointModelConfig model_config = 2;</code>
        */
-      public Builder setModelDefinitionIdBytes(
-          com.google.protobuf.ByteString value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  bitField0_ |= 0x00000002;
-        modelDefinitionId_ = value;
+      public org.mlflow.api.proto.Service.GatewayEndpointModelConfig.Builder getModelConfigBuilder() {
+        bitField0_ |= 0x00000002;
         onChanged();
-        return this;
-      }
-
-      private float weight_ ;
-      /**
-       * <pre>
-       * Optional routing weight (default 1)
-       * </pre>
-       *
-       * <code>optional float weight = 3;</code>
-       * @return Whether the weight field is set.
-       */
-      @java.lang.Override
-      public boolean hasWeight() {
-        return ((bitField0_ & 0x00000004) != 0);
+        return getModelConfigFieldBuilder().getBuilder();
       }
       /**
        * <pre>
-       * Optional routing weight (default 1)
+       * Configuration for the model to attach
        * </pre>
        *
-       * <code>optional float weight = 3;</code>
-       * @return The weight.
+       * <code>optional .mlflow.GatewayEndpointModelConfig model_config = 2;</code>
        */
-      @java.lang.Override
-      public float getWeight() {
-        return weight_;
+      public org.mlflow.api.proto.Service.GatewayEndpointModelConfigOrBuilder getModelConfigOrBuilder() {
+        if (modelConfigBuilder_ != null) {
+          return modelConfigBuilder_.getMessageOrBuilder();
+        } else {
+          return modelConfig_ == null ?
+              org.mlflow.api.proto.Service.GatewayEndpointModelConfig.getDefaultInstance() : modelConfig_;
+        }
       }
       /**
        * <pre>
-       * Optional routing weight (default 1)
+       * Configuration for the model to attach
        * </pre>
        *
-       * <code>optional float weight = 3;</code>
-       * @param value The weight to set.
-       * @return This builder for chaining.
+       * <code>optional .mlflow.GatewayEndpointModelConfig model_config = 2;</code>
        */
-      public Builder setWeight(float value) {
-        bitField0_ |= 0x00000004;
-        weight_ = value;
-        onChanged();
-        return this;
-      }
-      /**
-       * <pre>
-       * Optional routing weight (default 1)
-       * </pre>
-       *
-       * <code>optional float weight = 3;</code>
-       * @return This builder for chaining.
-       */
-      public Builder clearWeight() {
-        bitField0_ = (bitField0_ & ~0x00000004);
-        weight_ = 0F;
-        onChanged();
-        return this;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          org.mlflow.api.proto.Service.GatewayEndpointModelConfig, org.mlflow.api.proto.Service.GatewayEndpointModelConfig.Builder, org.mlflow.api.proto.Service.GatewayEndpointModelConfigOrBuilder> 
+          getModelConfigFieldBuilder() {
+        if (modelConfigBuilder_ == null) {
+          modelConfigBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              org.mlflow.api.proto.Service.GatewayEndpointModelConfig, org.mlflow.api.proto.Service.GatewayEndpointModelConfig.Builder, org.mlflow.api.proto.Service.GatewayEndpointModelConfigOrBuilder>(
+                  getModelConfig(),
+                  getParentForChildren(),
+                  isClean());
+          modelConfig_ = null;
+        }
+        return modelConfigBuilder_;
       }
 
       private java.lang.Object createdBy_ = "";
@@ -239307,18 +240112,18 @@ public final class Service {
        * Username of the creator
        * </pre>
        *
-       * <code>optional string created_by = 4;</code>
+       * <code>optional string created_by = 3;</code>
        * @return Whether the createdBy field is set.
        */
       public boolean hasCreatedBy() {
-        return ((bitField0_ & 0x00000008) != 0);
+        return ((bitField0_ & 0x00000004) != 0);
       }
       /**
        * <pre>
        * Username of the creator
        * </pre>
        *
-       * <code>optional string created_by = 4;</code>
+       * <code>optional string created_by = 3;</code>
        * @return The createdBy.
        */
       public java.lang.String getCreatedBy() {
@@ -239340,7 +240145,7 @@ public final class Service {
        * Username of the creator
        * </pre>
        *
-       * <code>optional string created_by = 4;</code>
+       * <code>optional string created_by = 3;</code>
        * @return The bytes for createdBy.
        */
       public com.google.protobuf.ByteString
@@ -239361,7 +240166,7 @@ public final class Service {
        * Username of the creator
        * </pre>
        *
-       * <code>optional string created_by = 4;</code>
+       * <code>optional string created_by = 3;</code>
        * @param value The createdBy to set.
        * @return This builder for chaining.
        */
@@ -239370,7 +240175,7 @@ public final class Service {
         if (value == null) {
     throw new NullPointerException();
   }
-  bitField0_ |= 0x00000008;
+  bitField0_ |= 0x00000004;
         createdBy_ = value;
         onChanged();
         return this;
@@ -239380,11 +240185,11 @@ public final class Service {
        * Username of the creator
        * </pre>
        *
-       * <code>optional string created_by = 4;</code>
+       * <code>optional string created_by = 3;</code>
        * @return This builder for chaining.
        */
       public Builder clearCreatedBy() {
-        bitField0_ = (bitField0_ & ~0x00000008);
+        bitField0_ = (bitField0_ & ~0x00000004);
         createdBy_ = getDefaultInstance().getCreatedBy();
         onChanged();
         return this;
@@ -239394,7 +240199,7 @@ public final class Service {
        * Username of the creator
        * </pre>
        *
-       * <code>optional string created_by = 4;</code>
+       * <code>optional string created_by = 3;</code>
        * @param value The bytes for createdBy to set.
        * @return This builder for chaining.
        */
@@ -239403,7 +240208,7 @@ public final class Service {
         if (value == null) {
     throw new NullPointerException();
   }
-  bitField0_ |= 0x00000008;
+  bitField0_ |= 0x00000004;
         createdBy_ = value;
         onChanged();
         return this;
@@ -251304,6 +252109,11 @@ public final class Service {
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_mlflow_FallbackConfig_fieldAccessorTable;
   private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_mlflow_GatewayEndpointModelConfig_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_mlflow_GatewayEndpointModelConfig_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_mlflow_CreateGatewayEndpoint_descriptor;
   private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
@@ -251998,474 +252808,478 @@ public final class Service {
       "model_definition_id\030\001 \001(\t\032\n\n\010Response\"R\n" +
       "\016FallbackConfig\022*\n\010strategy\030\001 \001(\0162\030.mlfl" +
       "ow.FallbackStrategy\022\024\n\014max_attempts\030\002 \001(" +
-      "\005\"\231\002\n\025CreateGatewayEndpoint\022\014\n\004name\030\001 \001(" +
-      "\t\022\034\n\024model_definition_ids\030\002 \003(\t\022\022\n\ncreat" +
-      "ed_by\030\003 \001(\t\0221\n\020routing_strategy\030\004 \001(\0162\027." +
-      "mlflow.RoutingStrategy\022/\n\017fallback_confi" +
-      "g\030\005 \001(\0132\026.mlflow.FallbackConfig\022%\n\035fallb" +
-      "ack_model_definition_ids\030\006 \003(\t\0325\n\010Respon" +
-      "se\022)\n\010endpoint\030\001 \001(\0132\027.mlflow.GatewayEnd" +
-      "point\"n\n\022GetGatewayEndpoint\022\023\n\013endpoint_" +
-      "id\030\001 \001(\t\022\014\n\004name\030\002 \001(\t\0325\n\010Response\022)\n\010en" +
-      "dpoint\030\001 \001(\0132\027.mlflow.GatewayEndpoint\"\256\002" +
-      "\n\025UpdateGatewayEndpoint\022\023\n\013endpoint_id\030\001" +
-      " \001(\t\022\014\n\004name\030\002 \001(\t\022\022\n\nupdated_by\030\003 \001(\t\022\034" +
-      "\n\024model_definition_ids\030\004 \003(\t\0221\n\020routing_" +
-      "strategy\030\005 \001(\0162\027.mlflow.RoutingStrategy\022" +
-      "/\n\017fallback_config\030\006 \001(\0132\026.mlflow.Fallba" +
-      "ckConfig\022%\n\035fallback_model_definition_id" +
-      "s\030\007 \003(\t\0325\n\010Response\022)\n\010endpoint\030\001 \001(\0132\027." +
-      "mlflow.GatewayEndpoint\"8\n\025DeleteGatewayE" +
-      "ndpoint\022\023\n\013endpoint_id\030\001 \001(\t\032\n\n\010Response" +
-      "\"s\n\024ListGatewayEndpoints\022\020\n\010provider\030\001 \001" +
-      "(\t\022\021\n\tsecret_id\030\002 \001(\t\0326\n\010Response\022*\n\tend" +
-      "points\030\001 \003(\0132\027.mlflow.GatewayEndpoint\"\266\001" +
-      "\n\034AttachModelToGatewayEndpoint\022\023\n\013endpoi" +
-      "nt_id\030\001 \001(\t\022\033\n\023model_definition_id\030\002 \001(\t" +
-      "\022\016\n\006weight\030\003 \001(\002\022\022\n\ncreated_by\030\004 \001(\t\032@\n\010" +
-      "Response\0224\n\007mapping\030\001 \001(\0132#.mlflow.Gatew" +
-      "ayEndpointModelMapping\"^\n\036DetachModelFro" +
-      "mGatewayEndpoint\022\023\n\013endpoint_id\030\001 \001(\t\022\033\n" +
-      "\023model_definition_id\030\002 \001(\t\032\n\n\010Response\"\260" +
-      "\001\n\034CreateGatewayEndpointBinding\022\023\n\013endpo" +
-      "int_id\030\001 \001(\t\022\025\n\rresource_type\030\002 \001(\t\022\023\n\013r" +
-      "esource_id\030\003 \001(\t\022\022\n\ncreated_by\030\004 \001(\t\032;\n\010" +
-      "Response\022/\n\007binding\030\001 \001(\0132\036.mlflow.Gatew" +
-      "ayEndpointBinding\"k\n\034DeleteGatewayEndpoi" +
-      "ntBinding\022\023\n\013endpoint_id\030\001 \001(\t\022\025\n\rresour" +
-      "ce_type\030\002 \001(\t\022\023\n\013resource_id\030\003 \001(\t\032\n\n\010Re" +
-      "sponse\"\234\001\n\033ListGatewayEndpointBindings\022\023" +
-      "\n\013endpoint_id\030\001 \001(\t\022\025\n\rresource_type\030\002 \001" +
-      "(\t\022\023\n\013resource_id\030\003 \001(\t\032<\n\010Response\0220\n\010b" +
-      "indings\030\001 \003(\0132\036.mlflow.GatewayEndpointBi" +
-      "nding\"T\n\025SetGatewayEndpointTag\022\023\n\013endpoi" +
-      "nt_id\030\001 \001(\t\022\013\n\003key\030\002 \001(\t\022\r\n\005value\030\003 \001(\t\032" +
-      "\n\n\010Response\"H\n\030DeleteGatewayEndpointTag\022" +
-      "\023\n\013endpoint_id\030\001 \001(\t\022\013\n\003key\030\002 \001(\t\032\n\n\010Res" +
-      "ponse\"9\n\020GetSecretsConfig\032%\n\010Response\022\031\n" +
-      "\021secrets_available\030\001 \001(\010*6\n\010ViewType\022\017\n\013" +
-      "ACTIVE_ONLY\020\001\022\020\n\014DELETED_ONLY\020\002\022\007\n\003ALL\020\003" +
-      "*I\n\nSourceType\022\014\n\010NOTEBOOK\020\001\022\007\n\003JOB\020\002\022\013\n" +
-      "\007PROJECT\020\003\022\t\n\005LOCAL\020\004\022\014\n\007UNKNOWN\020\350\007*M\n\tR" +
-      "unStatus\022\013\n\007RUNNING\020\001\022\r\n\tSCHEDULED\020\002\022\014\n\010" +
-      "FINISHED\020\003\022\n\n\006FAILED\020\004\022\n\n\006KILLED\020\005*O\n\013Tr" +
-      "aceStatus\022\034\n\030TRACE_STATUS_UNSPECIFIED\020\000\022" +
-      "\006\n\002OK\020\001\022\t\n\005ERROR\020\002\022\017\n\013IN_PROGRESS\020\003*8\n\016M" +
-      "etricViewType\022\n\n\006TRACES\020\001\022\t\n\005SPANS\020\002\022\017\n\013" +
-      "ASSESSMENTS\020\003*P\n\017AggregationType\022\t\n\005COUN" +
-      "T\020\001\022\007\n\003SUM\020\002\022\007\n\003AVG\020\003\022\016\n\nPERCENTILE\020\004\022\007\n" +
-      "\003MIN\020\005\022\007\n\003MAX\020\006*\212\001\n\021LoggedModelStatus\022#\n" +
-      "\037LOGGED_MODEL_STATUS_UNSPECIFIED\020\000\022\030\n\024LO" +
-      "GGED_MODEL_PENDING\020\001\022\026\n\022LOGGED_MODEL_REA" +
-      "DY\020\002\022\036\n\032LOGGED_MODEL_UPLOAD_FAILED\020\003*Z\n\017" +
-      "RoutingStrategy\022&\n\034ROUTING_STRATEGY_UNSP" +
-      "ECIFIED\020\000\032\004\360\206\031\003\022\037\n\033REQUEST_BASED_TRAFFIC" +
-      "_SPLIT\020\001*K\n\020FallbackStrategy\022\'\n\035FALLBACK" +
-      "_STRATEGY_UNSPECIFIED\020\000\032\004\360\206\031\003\022\016\n\nSEQUENT" +
-      "IAL\020\001*X\n\027GatewayModelLinkageType\022\"\n\030LINK" +
-      "AGE_TYPE_UNSPECIFIED\020\000\032\004\360\206\031\003\022\013\n\007PRIMARY\020" +
-      "\001\022\014\n\010FALLBACK\020\0022\236}\n\rMlflowService\022\246\001\n\023ge" +
-      "tExperimentByName\022\033.mlflow.GetExperiment" +
-      "ByName\032$.mlflow.GetExperimentByName.Resp" +
-      "onse\"L\362\206\031H\n,\n\003GET\022\037/mlflow/experiments/g" +
-      "et-by-name\032\004\010\002\020\000\020\001*\026Get Experiment By Na" +
-      "me\022\224\001\n\020createExperiment\022\030.mlflow.CreateE" +
-      "xperiment\032!.mlflow.CreateExperiment.Resp" +
-      "onse\"C\362\206\031?\n(\n\004POST\022\032/mlflow/experiments/" +
-      "create\032\004\010\002\020\000\020\001*\021Create Experiment\022\301\001\n\021se" +
-      "archExperiments\022\031.mlflow.SearchExperimen" +
-      "ts\032\".mlflow.SearchExperiments.Response\"m" +
-      "\362\206\031i\n(\n\004POST\022\032/mlflow/experiments/search" +
-      "\032\004\010\002\020\000\n\'\n\003GET\022\032/mlflow/experiments/searc" +
-      "h\032\004\010\002\020\000\020\001*\022Search Experiments\022\210\001\n\rgetExp" +
-      "eriment\022\025.mlflow.GetExperiment\032\036.mlflow." +
-      "GetExperiment.Response\"@\362\206\0318\n$\n\003GET\022\027/ml" +
-      "flow/experiments/get\032\004\010\002\020\000\020\001*\016Get Experi" +
-      "ment\272\214\031\000\022\224\001\n\020deleteExperiment\022\030.mlflow.D" +
-      "eleteExperiment\032!.mlflow.DeleteExperimen" +
-      "t.Response\"C\362\206\031?\n(\n\004POST\022\032/mlflow/experi" +
-      "ments/delete\032\004\010\002\020\000\020\001*\021Delete Experiment\022" +
-      "\231\001\n\021restoreExperiment\022\031.mlflow.RestoreEx" +
-      "periment\032\".mlflow.RestoreExperiment.Resp" +
-      "onse\"E\362\206\031A\n)\n\004POST\022\033/mlflow/experiments/" +
-      "restore\032\004\010\002\020\000\020\001*\022Restore Experiment\022\224\001\n\020" +
-      "updateExperiment\022\030.mlflow.UpdateExperime" +
-      "nt\032!.mlflow.UpdateExperiment.Response\"C\362" +
-      "\206\031?\n(\n\004POST\022\032/mlflow/experiments/update\032" +
-      "\004\010\002\020\000\020\001*\021Update Experiment\022q\n\tcreateRun\022" +
-      "\021.mlflow.CreateRun\032\032.mlflow.CreateRun.Re" +
-      "sponse\"5\362\206\0311\n!\n\004POST\022\023/mlflow/runs/creat" +
-      "e\032\004\010\002\020\000\020\001*\nCreate Run\022q\n\tupdateRun\022\021.mlf" +
-      "low.UpdateRun\032\032.mlflow.UpdateRun.Respons" +
-      "e\"5\362\206\0311\n!\n\004POST\022\023/mlflow/runs/update\032\004\010\002" +
-      "\020\000\020\001*\nUpdate Run\022q\n\tdeleteRun\022\021.mlflow.D" +
-      "eleteRun\032\032.mlflow.DeleteRun.Response\"5\362\206" +
-      "\0311\n!\n\004POST\022\023/mlflow/runs/delete\032\004\010\002\020\000\020\001*" +
-      "\nDelete Run\022v\n\nrestoreRun\022\022.mlflow.Resto" +
-      "reRun\032\033.mlflow.RestoreRun.Response\"7\362\206\0313" +
-      "\n\"\n\004POST\022\024/mlflow/runs/restore\032\004\010\002\020\000\020\001*\013" +
-      "Restore Run\022u\n\tlogMetric\022\021.mlflow.LogMet" +
-      "ric\032\032.mlflow.LogMetric.Response\"9\362\206\0315\n%\n" +
-      "\004POST\022\027/mlflow/runs/log-metric\032\004\010\002\020\000\020\001*\n" +
-      "Log Metric\022t\n\010logParam\022\020.mlflow.LogParam" +
-      "\032\031.mlflow.LogParam.Response\";\362\206\0317\n(\n\004POS" +
-      "T\022\032/mlflow/runs/log-parameter\032\004\010\002\020\000\020\001*\tL" +
-      "og Param\022\241\001\n\020setExperimentTag\022\030.mlflow.S" +
-      "etExperimentTag\032!.mlflow.SetExperimentTa" +
-      "g.Response\"P\362\206\031L\n4\n\004POST\022&/mlflow/experi" +
-      "ments/set-experiment-tag\032\004\010\002\020\000\020\001*\022Set Ex" +
-      "periment Tag\022\260\001\n\023deleteExperimentTag\022\033.m" +
-      "lflow.DeleteExperimentTag\032$.mlflow.Delet" +
-      "eExperimentTag.Response\"V\362\206\031R\n7\n\004POST\022)/" +
-      "mlflow/experiments/delete-experiment-tag" +
-      "\032\004\010\002\020\000\020\001*\025Delete Experiment Tag\022f\n\006setTa" +
-      "g\022\016.mlflow.SetTag\032\027.mlflow.SetTag.Respon" +
-      "se\"3\362\206\031/\n\"\n\004POST\022\024/mlflow/runs/set-tag\032\004" +
-      "\010\002\020\000\020\001*\007Set Tag\022\210\001\n\013setTraceTag\022\023.mlflow" +
-      ".SetTraceTag\032\034.mlflow.SetTraceTag.Respon" +
-      "se\"F\362\206\031B\n/\n\005PATCH\022 /mlflow/traces/{reque" +
-      "st_id}/tags\032\004\010\002\020\000\020\003*\rSet Trace Tag\022\217\001\n\rs" +
-      "etTraceTagV3\022\025.mlflow.SetTraceTagV3\032\036.ml" +
-      "flow.SetTraceTagV3.Response\"G\362\206\031C\n-\n\005PAT" +
-      "CH\022\036/mlflow/traces/{trace_id}/tags\032\004\010\003\020\000" +
-      "\020\003*\020Set Trace Tag V3\022\225\001\n\016deleteTraceTag\022" +
-      "\026.mlflow.DeleteTraceTag\032\037.mlflow.DeleteT" +
-      "raceTag.Response\"J\362\206\031F\n0\n\006DELETE\022 /mlflo" +
-      "w/traces/{request_id}/tags\032\004\010\002\020\000\020\003*\020Dele" +
-      "te Trace Tag\022\234\001\n\020deleteTraceTagV3\022\030.mlfl" +
-      "ow.DeleteTraceTagV3\032!.mlflow.DeleteTrace" +
-      "TagV3.Response\"K\362\206\031G\n.\n\006DELETE\022\036/mlflow/" +
-      "traces/{trace_id}/tags\032\004\010\003\020\000\020\003*\023Delete T" +
-      "race Tag V3\022u\n\tdeleteTag\022\021.mlflow.Delete" +
-      "Tag\032\032.mlflow.DeleteTag.Response\"9\362\206\0315\n%\n" +
-      "\004POST\022\027/mlflow/runs/delete-tag\032\004\010\002\020\000\020\001*\n" +
-      "Delete Tag\022e\n\006getRun\022\016.mlflow.GetRun\032\027.m" +
-      "lflow.GetRun.Response\"2\362\206\031*\n\035\n\003GET\022\020/mlf" +
-      "low/runs/get\032\004\010\002\020\000\020\001*\007Get Run\272\214\031\000\022y\n\nsea" +
-      "rchRuns\022\022.mlflow.SearchRuns\032\033.mlflow.Sea" +
-      "rchRuns.Response\":\362\206\0312\n!\n\004POST\022\023/mlflow/" +
-      "runs/search\032\004\010\002\020\000\020\001*\013Search Runs\272\214\031\000\022\207\001\n" +
-      "\rlistArtifacts\022\025.mlflow.ListArtifacts\032\036." +
-      "mlflow.ListArtifacts.Response\"?\362\206\0317\n#\n\003G" +
-      "ET\022\026/mlflow/artifacts/list\032\004\010\002\020\000\020\001*\016List" +
-      " Artifacts\272\214\031\000\022\225\001\n\020getMetricHistory\022\030.ml" +
-      "flow.GetMetricHistory\032!.mlflow.GetMetric" +
-      "History.Response\"D\362\206\031@\n(\n\003GET\022\033/mlflow/m" +
-      "etrics/get-history\032\004\010\002\020\000\020\001*\022Get Metric H" +
-      "istory\022\267\001\n\034getMetricHistoryBulkInterval\022" +
-      "$.mlflow.GetMetricHistoryBulkInterval\032-." +
-      "mlflow.GetMetricHistoryBulkInterval.Resp" +
-      "onse\"B\362\206\031:\n6\n\003GET\022)/mlflow/metrics/get-h" +
-      "istory-bulk-interval\032\004\010\002\020\013\020\003\272\214\031\000\022p\n\010logB" +
-      "atch\022\020.mlflow.LogBatch\032\031.mlflow.LogBatch" +
-      ".Response\"7\362\206\0313\n$\n\004POST\022\026/mlflow/runs/lo" +
-      "g-batch\032\004\010\002\020\000\020\001*\tLog Batch\022p\n\010logModel\022\020" +
-      ".mlflow.LogModel\032\031.mlflow.LogModel.Respo" +
-      "nse\"7\362\206\0313\n$\n\004POST\022\026/mlflow/runs/log-mode" +
-      "l\032\004\010\002\020\000\020\001*\tLog Model\022u\n\tlogInputs\022\021.mlfl" +
-      "ow.LogInputs\032\032.mlflow.LogInputs.Response" +
-      "\"9\362\206\0315\n%\n\004POST\022\027/mlflow/runs/log-inputs\032" +
-      "\004\010\002\020\000\020\001*\nLog Inputs\022v\n\nlogOutputs\022\022.mlfl" +
-      "ow.LogOutputs\032\033.mlflow.LogOutputs.Respon" +
-      "se\"7\362\206\0313\n\"\n\004POST\022\024/mlflow/runs/outputs\032\004" +
-      "\010\002\020\000\020\003*\013Log Outputs\022\207\001\n\016searchDatasets\022\026" +
-      ".mlflow.SearchDatasets\032\037.mlflow.SearchDa" +
-      "tasets.Response\"<\362\206\0314\n0\n\004POST\022\"mlflow/ex" +
-      "periments/search-datasets\032\004\010\002\020\000\020\003\272\214\031\000\022p\n" +
-      "\nstartTrace\022\022.mlflow.StartTrace\032\033.mlflow" +
-      ".StartTrace.Response\"1\362\206\031-\n\034\n\004POST\022\016/mlf" +
-      "low/traces\032\004\010\002\020\000\020\003*\013Start Trace\022v\n\010endTr" +
-      "ace\022\020.mlflow.EndTrace\032\031.mlflow.EndTrace." +
-      "Response\"=\362\206\0319\n*\n\005PATCH\022\033/mlflow/traces/" +
-      "{request_id}\032\004\010\002\020\000\020\003*\tEnd Trace\022\211\001\n\014getT" +
-      "raceInfo\022\024.mlflow.GetTraceInfo\032\035.mlflow." +
-      "GetTraceInfo.Response\"D\362\206\031@\n-\n\003GET\022 /mlf" +
-      "low/traces/{request_id}/info\032\004\010\002\020\000\020\003*\rGe" +
-      "t TraceInfo\022\213\001\n\016getTraceInfoV3\022\026.mlflow." +
-      "GetTraceInfoV3\032\037.mlflow.GetTraceInfoV3.R" +
-      "esponse\"@\362\206\031<\n&\n\003GET\022\031/mlflow/traces/{tr" +
-      "ace_id}\032\004\010\003\020\000\020\003*\020Get TraceInfo v3\022n\n\010get" +
-      "Trace\022\020.mlflow.GetTrace\032\031.mlflow.GetTrac" +
-      "e.Response\"5\362\206\0311\n\037\n\003GET\022\022/mlflow/traces/" +
-      "get\032\004\010\003\020\000\020\003*\014Get Trace v3\022\203\001\n\016batchGetTr" +
-      "aces\022\026.mlflow.BatchGetTraces\032\037.mlflow.Ba" +
-      "tchGetTraces.Response\"8\362\206\0314\n$\n\003GET\022\027/mlf" +
-      "low/traces/batchGet\032\004\010\003\020\000\020\003*\nGet Traces\022" +
-      "w\n\014searchTraces\022\024.mlflow.SearchTraces\032\035." +
-      "mlflow.SearchTraces.Response\"2\362\206\031.\n\033\n\003GE" +
-      "T\022\016/mlflow/traces\032\004\010\002\020\000\020\003*\rSearch Traces" +
-      "\022\210\001\n\016searchTracesV3\022\026.mlflow.SearchTrace" +
-      "sV3\032\037.mlflow.SearchTracesV3.Response\"=\362\206" +
-      "\0319\n#\n\004POST\022\025/mlflow/traces/search\032\004\010\003\020\000\020" +
-      "\003*\020Search Traces V3\022i\n\014startTraceV3\022\024.ml" +
-      "flow.StartTraceV3\032\035.mlflow.StartTraceV3." +
-      "Response\"$\362\206\031 \n\034\n\004POST\022\016/mlflow/traces\032\004" +
-      "\010\003\020\000\020\003\022\222\001\n\017linkTracesToRun\022\027.mlflow.Link" +
-      "TracesToRun\032 .mlflow.LinkTracesToRun.Res" +
-      "ponse\"D\362\206\031@\n(\n\004POST\022\032/mlflow/traces/link" +
-      "-to-run\032\004\010\002\020\000\020\003*\022Link Traces to Run\022\237\001\n\022" +
-      "linkPromptsToTrace\022\032.mlflow.LinkPromptsT" +
-      "oTrace\032#.mlflow.LinkPromptsToTrace.Respo" +
-      "nse\"H\362\206\031D\n)\n\004POST\022\033/mlflow/traces/link-p" +
-      "rompts\032\004\010\002\020\000\020\003*\025Link Prompts to Trace\022\242\001" +
-      "\n\031searchUnifiedTraceHandler\022\033.mlflow.Sea" +
-      "rchUnifiedTraces\032$.mlflow.SearchUnifiedT" +
-      "races.Response\"B\362\206\031>\n#\n\003GET\022\026/mlflow/uni" +
-      "fied-traces\032\004\010\002\020\000\020\003*\025Search Unified Trac" +
-      "es\022\257\001\n\025getOnlineTraceDetails\022\035.mlflow.Ge" +
-      "tOnlineTraceDetails\032&.mlflow.GetOnlineTr" +
-      "aceDetails.Response\"O\362\206\031K\n-\n\003GET\022 /mlflo" +
-      "w/get-online-trace-details\032\004\010\002\020\000\020\003*\030Get " +
-      "Online Trace Details\022\206\001\n\014deleteTraces\022\024." +
-      "mlflow.DeleteTraces\032\035.mlflow.DeleteTrace" +
-      "s.Response\"A\362\206\031=\n*\n\004POST\022\034/mlflow/traces" +
-      "/delete-traces\032\004\010\002\020\000\020\003*\rDelete Traces\022\217\001" +
-      "\n\016deleteTracesV3\022\026.mlflow.DeleteTracesV3" +
-      "\032\037.mlflow.DeleteTracesV3.Response\"D\362\206\031@\n" +
-      "*\n\004POST\022\034/mlflow/traces/delete-traces\032\004\010" +
-      "\003\020\000\020\003*\020Delete Traces V3\022\343\001\n\037calculateTra" +
-      "ceFilterCorrelation\022\'.mlflow.CalculateTr" +
-      "aceFilterCorrelation\0320.mlflow.CalculateT" +
-      "raceFilterCorrelation.Response\"e\362\206\031a\n9\n\004" +
-      "POST\022+/mlflow/traces/calculate-filter-co" +
-      "rrelation\032\004\010\003\020\000\020\003*\"Calculate Trace Filte" +
-      "r Correlation\022\225\001\n\021queryTraceMetrics\022\031.ml" +
-      "flow.QueryTraceMetrics\032\".mlflow.QueryTra" +
-      "ceMetrics.Response\"A\362\206\031=\n$\n\004POST\022\026/mlflo" +
-      "w/traces/metrics\032\004\010\003\020\000\020\003*\023Query Trace Me" +
-      "trics\022\224\001\n\021createLoggedModel\022\031.mlflow.Cre" +
-      "ateLoggedModel\032\".mlflow.CreateLoggedMode" +
-      "l.Response\"@\362\206\031<\n#\n\004POST\022\025/mlflow/logged" +
-      "-models\032\004\010\002\020\000\020\003*\023Create Logged Model\022\250\001\n" +
-      "\023finalizeLoggedModel\022\033.mlflow.FinalizeLo" +
-      "ggedModel\032$.mlflow.FinalizeLoggedModel.R" +
-      "esponse\"N\362\206\031J\n/\n\005PATCH\022 /mlflow/logged-m" +
-      "odels/{model_id}\032\004\010\002\020\000\020\003*\025Finalize Logge" +
-      "d Model\022\222\001\n\016getLoggedModel\022\026.mlflow.GetL",
-      "oggedModel\032\037.mlflow.GetLoggedModel.Respo" +
-      "nse\"G\362\206\031C\n-\n\003GET\022 /mlflow/logged-models/" +
-      "{model_id}\032\004\010\002\020\000\020\003*\020Get Logged Model\022\243\001\n" +
-      "\021deleteLoggedModel\022\031.mlflow.DeleteLogged" +
-      "Model\032\".mlflow.DeleteLoggedModel.Respons" +
-      "e\"O\362\206\031K\n0\n\006DELETE\022 /mlflow/logged-models" +
-      "/{model_id}\032\004\010\002\020\000\020\003*\025Delete a Logged Mod" +
-      "el\022\236\001\n\022searchLoggedModels\022\032.mlflow.Searc" +
-      "hLoggedModels\032#.mlflow.SearchLoggedModel" +
-      "s.Response\"G\362\206\031C\n*\n\004POST\022\034/mlflow/logged" +
-      "-models/search\032\004\010\002\020\000\020\003*\023Search LoggedMod" +
-      "els\022\251\001\n\022setLoggedModelTags\022\032.mlflow.SetL" +
-      "oggedModelTags\032#.mlflow.SetLoggedModelTa" +
-      "gs.Response\"R\362\206\031N\n4\n\005PATCH\022%/mlflow/logg" +
-      "ed-models/{model_id}/tags\032\004\010\002\020\000\020\003*\024Set L" +
-      "ogged Model Tag\022\275\001\n\024deleteLoggedModelTag" +
-      "\022\034.mlflow.DeleteLoggedModelTag\032%.mlflow." +
-      "DeleteLoggedModelTag.Response\"`\362\206\031\\\n?\n\006D" +
-      "ELETE\022//mlflow/logged-models/{model_id}/" +
-      "tags/{tag_key}\032\004\010\002\020\000\020\003*\027Delete Logged Mo" +
-      "del Tag\022\326\001\n\030listLoggedModelArtifacts\022 .m" +
-      "lflow.ListLoggedModelArtifacts\032).mlflow." +
-      "ListLoggedModelArtifacts.Response\"m\362\206\031i\n" +
-      "C\n\003GET\0226/mlflow/logged-models/{model_id}" +
-      "/artifacts/directories\032\004\010\002\020\000\020\003* List Art" +
-      "ifacts for Logged Models\022\301\001\n\024LogLoggedMo" +
-      "delParams\022#.mlflow.LogLoggedModelParamsR" +
-      "equest\032,.mlflow.LogLoggedModelParamsRequ" +
-      "est.Response\"V\362\206\031R\n5\n\004POST\022\'/mlflow/logg" +
-      "ed-models/{model_id}/params\032\004\010\002\020\000\020\003*\027Log" +
-      " Logged Model Params\022\260\001\n\rGetAssessment\022\034" +
-      ".mlflow.GetAssessmentRequest\032%.mlflow.Ge" +
-      "tAssessmentRequest.Response\"Z\362\206\031V\nB\n\003GET" +
-      "\0225/mlflow/traces/{trace_id}/assessments/" +
-      "{assessment_id}\032\004\010\003\020\000\020\003*\016Get Assessment\022" +
-      "\337\001\n\020createAssessment\022\030.mlflow.CreateAsse" +
-      "ssment\032!.mlflow.CreateAssessment.Respons" +
-      "e\"\215\001\362\206\031\210\001\n>\n\004POST\0220/mlflow/traces/{asses" +
-      "sment.trace_id}/assessments\032\004\010\003\020\000\020\003\030\350\007\030\356" +
-      "\007\030\014\030\001*:Create an assessment of a trace o" +
-      "r a span within the trace\022\320\001\n\020updateAsse" +
-      "ssment\022\030.mlflow.UpdateAssessment\032!.mlflo" +
-      "w.UpdateAssessment.Response\"\177\362\206\031{\nD\n\005PAT" +
-      "CH\0225/mlflow/traces/{trace_id}/assessment" +
-      "s/{assessment_id}\032\004\010\003\020\000\020\003\030\350\007\030\356\007\030\001*)Updat" +
-      "e an existing assessment on a trace.\022\261\001\n" +
-      "\020deleteAssessment\022\030.mlflow.DeleteAssessm" +
-      "ent\032!.mlflow.DeleteAssessment.Response\"`" +
-      "\362\206\031\\\nE\n\006DELETE\0225/mlflow/traces/{trace_id" +
-      "}/assessments/{assessment_id}\032\004\010\003\020\000\020\003*\021D" +
-      "elete Assessment\022\232\001\n\rcreateDataset\022\025.mlf" +
-      "low.CreateDataset\032\036.mlflow.CreateDataset" +
-      ".Response\"R\362\206\031N\n%\n\004POST\022\027/mlflow/dataset" +
-      "s/create\032\004\010\003\020\000\020\003\030\350\007\030\356\007\030\014\030\001*\031Create Evalu" +
-      "ation Dataset\022\221\001\n\ngetDataset\022\022.mlflow.Ge" +
-      "tDataset\032\033.mlflow.GetDataset.Response\"R\362" +
-      "\206\031N\n*\n\003GET\022\035/mlflow/datasets/{dataset_id" +
-      "}\032\004\010\003\020\000\020\003\030\350\007\030\272\027\030\001*\026Get Evaluation Datase" +
-      "t\022\240\001\n\rdeleteDataset\022\025.mlflow.DeleteDatas" +
-      "et\032\036.mlflow.DeleteDataset.Response\"X\362\206\031T" +
-      "\n-\n\006DELETE\022\035/mlflow/datasets/{dataset_id" +
-      "}\032\004\010\003\020\000\020\003\030\350\007\030\272\027\030\001*\031Delete Evaluation Dat" +
-      "aset\022\335\001\n\030searchEvaluationDatasets\022 .mlfl" +
-      "ow.SearchEvaluationDatasets\032).mlflow.Sea" +
-      "rchEvaluationDatasets.Response\"t\362\206\031p\n%\n\004" +
-      "POST\022\027/mlflow/datasets/search\032\004\010\003\020\000\n$\n\003G" +
-      "ET\022\027/mlflow/datasets/search\032\004\010\003\020\000\020\003\030\350\007\030\001" +
-      "*\032Search Evaluation Datasets\022\251\001\n\016setData" +
-      "setTags\022\026.mlflow.SetDatasetTags\032\037.mlflow" +
-      ".SetDatasetTags.Response\"^\362\206\031Z\n1\n\005PATCH\022" +
-      "\"/mlflow/datasets/{dataset_id}/tags\032\004\010\003\020" +
-      "\000\020\003\030\350\007\030\272\027\030\001*\033Set Evaluation Dataset Tags" +
-      "\022\270\001\n\020deleteDatasetTag\022\030.mlflow.DeleteDat" +
-      "asetTag\032!.mlflow.DeleteDatasetTag.Respon" +
-      "se\"g\362\206\031c\n8\n\006DELETE\022(/mlflow/datasets/{da" +
-      "taset_id}/tags/{key}\032\004\010\003\020\000\020\003\030\350\007\030\272\027\030\001*\035De" +
-      "lete Evaluation Dataset Tag\022\303\001\n\024upsertDa" +
-      "tasetRecords\022\034.mlflow.UpsertDatasetRecor" +
-      "ds\032%.mlflow.UpsertDatasetRecords.Respons" +
-      "e\"f\362\206\031b\n3\n\004POST\022%/mlflow/datasets/{datas" +
-      "et_id}/records\032\004\010\003\020\000\020\003\030\350\007\030\272\027\030\001*!Upsert E" +
-      "valuation Dataset Records\022\326\001\n\027getDataset" +
-      "ExperimentIds\022\037.mlflow.GetDatasetExperim" +
-      "entIds\032(.mlflow.GetDatasetExperimentIds." +
-      "Response\"p\362\206\031l\n9\n\003GET\022,/mlflow/datasets/" +
-      "{dataset_id}/experiment-ids\032\004\010\003\020\000\020\003\030\350\007\030\272" +
-      "\027\030\001*%Get Evaluation Dataset Experiment I" +
-      "Ds\022\212\001\n\016registerScorer\022\026.mlflow.RegisterS" +
-      "corer\032\037.mlflow.RegisterScorer.Response\"?" +
-      "\362\206\031;\n&\n\004POST\022\030/mlflow/scorers/register\032\004" +
-      "\010\003\020\000\020\001*\017Register Scorer\022y\n\013listScorers\022\023" +
-      ".mlflow.ListScorers\032\034.mlflow.ListScorers" +
-      ".Response\"7\362\206\0313\n!\n\003GET\022\024/mlflow/scorers/" +
-      "list\032\004\010\003\020\000\020\001*\014List Scorers\022\232\001\n\022listScore" +
-      "rVersions\022\032.mlflow.ListScorerVersions\032#." +
-      "mlflow.ListScorerVersions.Response\"C\362\206\031?" +
-      "\n%\n\003GET\022\030/mlflow/scorers/versions\032\004\010\003\020\000\020" +
-      "\001*\024List Scorer Versions\022p\n\tgetScorer\022\021.m" +
-      "lflow.GetScorer\032\032.mlflow.GetScorer.Respo" +
-      "nse\"4\362\206\0310\n \n\003GET\022\023/mlflow/scorers/get\032\004\010" +
-      "\003\020\000\020\001*\nGet Scorer\022\202\001\n\014deleteScorer\022\024.mlf" +
-      "low.DeleteScorer\032\035.mlflow.DeleteScorer.R" +
-      "esponse\"=\362\206\0319\n&\n\006DELETE\022\026/mlflow/scorers" +
-      "/delete\032\004\010\003\020\000\020\001*\rDelete Scorer\022\266\001\n\021getDa" +
-      "tasetRecords\022\031.mlflow.GetDatasetRecords\032" +
-      "\".mlflow.GetDatasetRecords.Response\"b\362\206\031" +
-      "^\n2\n\003GET\022%/mlflow/datasets/{dataset_id}/" +
-      "records\032\004\010\003\020\000\020\003\030\350\007\030\272\027\030\001*\036Get Evaluation " +
-      "Dataset Records\022\315\001\n\027addDatasetToExperime" +
-      "nts\022\037.mlflow.AddDatasetToExperiments\032(.m" +
-      "lflow.AddDatasetToExperiments.Response\"g" +
-      "\362\206\031c\n;\n\004POST\022-/mlflow/datasets/{dataset_" +
-      "id}/add-experiments\032\004\010\003\020\000\020\003\030\350\007\030\272\027\030\001*\032Add" +
-      " Dataset to Experiments\022\344\001\n\034removeDatase" +
-      "tFromExperiments\022$.mlflow.RemoveDatasetF" +
-      "romExperiments\032-.mlflow.RemoveDatasetFro" +
-      "mExperiments.Response\"o\362\206\031k\n>\n\004POST\0220/ml" +
-      "flow/datasets/{dataset_id}/remove-experi" +
-      "ments\032\004\010\003\020\000\020\003\030\350\007\030\272\027\030\001*\037Remove Dataset fr" +
-      "om Experiments\022\245\001\n\023createGatewaySecret\022\033" +
-      ".mlflow.CreateGatewaySecret\032$.mlflow.Cre" +
-      "ateGatewaySecret.Response\"K\362\206\031G\n,\n\004POST\022" +
-      "\036/mlflow/gateway/secrets/create\032\004\010\003\020\000\020\001*" +
-      "\025Create Gateway Secret\022\246\001\n\024getGatewaySec" +
-      "retInfo\022\034.mlflow.GetGatewaySecretInfo\032%." +
-      "mlflow.GetGatewaySecretInfo.Response\"I\362\206" +
-      "\031E\n(\n\003GET\022\033/mlflow/gateway/secrets/get\032\004" +
-      "\010\003\020\000\020\001*\027Get Gateway Secret Info\022\245\001\n\023upda" +
-      "teGatewaySecret\022\033.mlflow.UpdateGatewaySe" +
-      "cret\032$.mlflow.UpdateGatewaySecret.Respon" +
-      "se\"K\362\206\031G\n,\n\004POST\022\036/mlflow/gateway/secret" +
-      "s/update\032\004\010\003\020\000\020\001*\025Update Gateway Secret\022" +
-      "\247\001\n\023deleteGatewaySecret\022\033.mlflow.DeleteG" +
-      "atewaySecret\032$.mlflow.DeleteGatewaySecre" +
-      "t.Response\"M\362\206\031I\n.\n\006DELETE\022\036/mlflow/gate" +
-      "way/secrets/delete\032\004\010\003\020\000\020\001*\025Delete Gatew" +
-      "ay Secret\022\252\001\n\026listGatewaySecretInfos\022\036.m" +
-      "lflow.ListGatewaySecretInfos\032\'.mlflow.Li" +
-      "stGatewaySecretInfos.Response\"G\362\206\031C\n)\n\003G" +
-      "ET\022\034/mlflow/gateway/secrets/list\032\004\010\003\020\000\020\001" +
-      "*\024List Gateway Secrets\022\257\001\n\025createGateway" +
-      "Endpoint\022\035.mlflow.CreateGatewayEndpoint\032" +
-      "&.mlflow.CreateGatewayEndpoint.Response\"" +
-      "O\362\206\031K\n.\n\004POST\022 /mlflow/gateway/endpoints" +
-      "/create\032\004\010\003\020\000\020\001*\027Create Gateway Endpoint" +
-      "\022\237\001\n\022getGatewayEndpoint\022\032.mlflow.GetGate" +
-      "wayEndpoint\032#.mlflow.GetGatewayEndpoint." +
-      "Response\"H\362\206\031D\n*\n\003GET\022\035/mlflow/gateway/e" +
-      "ndpoints/get\032\004\010\003\020\000\020\001*\024Get Gateway Endpoi" +
-      "nt\022\257\001\n\025updateGatewayEndpoint\022\035.mlflow.Up" +
-      "dateGatewayEndpoint\032&.mlflow.UpdateGatew" +
-      "ayEndpoint.Response\"O\362\206\031K\n.\n\004POST\022 /mlfl" +
-      "ow/gateway/endpoints/update\032\004\010\003\020\000\020\001*\027Upd" +
-      "ate Gateway Endpoint\022\261\001\n\025deleteGatewayEn" +
-      "dpoint\022\035.mlflow.DeleteGatewayEndpoint\032&." +
-      "mlflow.DeleteGatewayEndpoint.Response\"Q\362" +
-      "\206\031M\n0\n\006DELETE\022 /mlflow/gateway/endpoints" +
-      "/delete\032\004\010\003\020\000\020\001*\027Delete Gateway Endpoint" +
-      "\022\250\001\n\024listGatewayEndpoints\022\034.mlflow.ListG" +
-      "atewayEndpoints\032%.mlflow.ListGatewayEndp" +
-      "oints.Response\"K\362\206\031G\n+\n\003GET\022\036/mlflow/gat" +
-      "eway/endpoints/list\032\004\010\003\020\000\020\001*\026List Gatewa" +
-      "y Endpoints\022\324\001\n\034createGatewayModelDefini" +
-      "tion\022$.mlflow.CreateGatewayModelDefiniti" +
-      "on\032-.mlflow.CreateGatewayModelDefinition" +
-      ".Response\"_\362\206\031[\n6\n\004POST\022(/mlflow/gateway" +
-      "/model-definitions/create\032\004\010\003\020\000\020\001*\037Creat" +
-      "e Gateway Model Definition\022\304\001\n\031getGatewa" +
-      "yModelDefinition\022!.mlflow.GetGatewayMode" +
-      "lDefinition\032*.mlflow.GetGatewayModelDefi" +
-      "nition.Response\"X\362\206\031T\n2\n\003GET\022%/mlflow/ga" +
-      "teway/model-definitions/get\032\004\010\003\020\000\020\001*\034Get" +
-      " Gateway Model Definition\022\315\001\n\033listGatewa" +
-      "yModelDefinitions\022#.mlflow.ListGatewayMo" +
-      "delDefinitions\032,.mlflow.ListGatewayModel" +
-      "Definitions.Response\"[\362\206\031W\n3\n\003GET\022&/mlfl" +
-      "ow/gateway/model-definitions/list\032\004\010\003\020\000\020" +
-      "\001*\036List Gateway Model Definitions\022\324\001\n\034up" +
-      "dateGatewayModelDefinition\022$.mlflow.Upda" +
-      "teGatewayModelDefinition\032-.mlflow.Update" +
-      "GatewayModelDefinition.Response\"_\362\206\031[\n6\n" +
-      "\004POST\022(/mlflow/gateway/model-definitions" +
-      "/update\032\004\010\003\020\000\020\001*\037Update Gateway Model De" +
-      "finition\022\326\001\n\034deleteGatewayModelDefinitio" +
-      "n\022$.mlflow.DeleteGatewayModelDefinition\032" +
-      "-.mlflow.DeleteGatewayModelDefinition.Re" +
-      "sponse\"a\362\206\031]\n8\n\006DELETE\022(/mlflow/gateway/" +
-      "model-definitions/delete\032\004\010\003\020\000\020\001*\037Delete" +
-      " Gateway Model Definition\022\305\001\n\025attachMode" +
-      "lToEndpoint\022$.mlflow.AttachModelToGatewa" +
-      "yEndpoint\032-.mlflow.AttachModelToGatewayE" +
-      "ndpoint.Response\"W\362\206\031S\n5\n\004POST\022\'/mlflow/" +
-      "gateway/endpoints/models/attach\032\004\010\003\020\000\020\001*" +
-      "\030Attach Model to Endpoint\022\315\001\n\027detachMode" +
-      "lFromEndpoint\022&.mlflow.DetachModelFromGa" +
-      "tewayEndpoint\032/.mlflow.DetachModelFromGa" +
-      "tewayEndpoint.Response\"Y\362\206\031U\n5\n\004POST\022\'/m" +
-      "lflow/gateway/endpoints/models/detach\032\004\010" +
-      "\003\020\000\020\001*\032Detach Model from Endpoint\022\306\001\n\025cr" +
-      "eateEndpointBinding\022$.mlflow.CreateGatew" +
-      "ayEndpointBinding\032-.mlflow.CreateGateway" +
-      "EndpointBinding.Response\"X\362\206\031T\n7\n\004POST\022)" +
-      "/mlflow/gateway/endpoints/bindings/creat" +
-      "e\032\004\010\003\020\000\020\001*\027Create Endpoint Binding\022\310\001\n\025d" +
-      "eleteEndpointBinding\022$.mlflow.DeleteGate" +
-      "wayEndpointBinding\032-.mlflow.DeleteGatewa" +
-      "yEndpointBinding.Response\"Z\362\206\031V\n9\n\006DELET" +
-      "E\022)/mlflow/gateway/endpoints/bindings/de" +
-      "lete\032\004\010\003\020\000\020\001*\027Delete Endpoint Binding\022\277\001" +
-      "\n\024listEndpointBindings\022#.mlflow.ListGate" +
-      "wayEndpointBindings\032,.mlflow.ListGateway" +
-      "EndpointBindings.Response\"T\362\206\031P\n4\n\003GET\022\'" +
-      "/mlflow/gateway/endpoints/bindings/list\032" +
-      "\004\010\003\020\000\020\001*\026List Endpoint Bindings\022\261\001\n\025setG" +
-      "atewayEndpointTag\022\035.mlflow.SetGatewayEnd" +
-      "pointTag\032&.mlflow.SetGatewayEndpointTag." +
-      "Response\"Q\362\206\031M\n/\n\004POST\022!/mlflow/gateway/" +
-      "endpoints/set-tag\032\004\010\003\020\000\020\001*\030Gateway Set E" +
-      "ndpoint Tag\022\302\001\n\030deleteGatewayEndpointTag" +
-      "\022 .mlflow.DeleteGatewayEndpointTag\032).mlf" +
-      "low.DeleteGatewayEndpointTag.Response\"Y\362" +
-      "\206\031U\n4\n\006DELETE\022$/mlflow/gateway/endpoints" +
-      "/delete-tag\032\004\010\003\020\000\020\001*\033Gateway Delete Endp" +
-      "oint TagB\036\n\024org.mlflow.api.proto\220\001\001\342?\002\020\001"
+      "\005\"\230\001\n\032GatewayEndpointModelConfig\022\033\n\023mode" +
+      "l_definition_id\030\001 \001(\t\0225\n\014linkage_type\030\002 " +
+      "\001(\0162\037.mlflow.GatewayModelLinkageType\022\016\n\006" +
+      "weight\030\003 \001(\002\022\026\n\016fallback_order\030\004 \001(\005\"\217\002\n" +
+      "\025CreateGatewayEndpoint\022\014\n\004name\030\001 \001(\t\0229\n\r" +
+      "model_configs\030\002 \003(\0132\".mlflow.GatewayEndp" +
+      "ointModelConfig\022\022\n\ncreated_by\030\003 \001(\t\0221\n\020r" +
+      "outing_strategy\030\004 \001(\0162\027.mlflow.RoutingSt" +
+      "rategy\022/\n\017fallback_config\030\005 \001(\0132\026.mlflow" +
+      ".FallbackConfig\0325\n\010Response\022)\n\010endpoint\030" +
+      "\001 \001(\0132\027.mlflow.GatewayEndpoint\"n\n\022GetGat" +
+      "ewayEndpoint\022\023\n\013endpoint_id\030\001 \001(\t\022\014\n\004nam" +
+      "e\030\002 \001(\t\0325\n\010Response\022)\n\010endpoint\030\001 \001(\0132\027." +
+      "mlflow.GatewayEndpoint\"\244\002\n\025UpdateGateway" +
+      "Endpoint\022\023\n\013endpoint_id\030\001 \001(\t\022\014\n\004name\030\002 " +
+      "\001(\t\022\022\n\nupdated_by\030\003 \001(\t\0229\n\rmodel_configs" +
+      "\030\004 \003(\0132\".mlflow.GatewayEndpointModelConf" +
+      "ig\0221\n\020routing_strategy\030\005 \001(\0162\027.mlflow.Ro" +
+      "utingStrategy\022/\n\017fallback_config\030\006 \001(\0132\026" +
+      ".mlflow.FallbackConfig\0325\n\010Response\022)\n\010en" +
+      "dpoint\030\001 \001(\0132\027.mlflow.GatewayEndpoint\"8\n" +
+      "\025DeleteGatewayEndpoint\022\023\n\013endpoint_id\030\001 " +
+      "\001(\t\032\n\n\010Response\"s\n\024ListGatewayEndpoints\022" +
+      "\020\n\010provider\030\001 \001(\t\022\021\n\tsecret_id\030\002 \001(\t\0326\n\010" +
+      "Response\022*\n\tendpoints\030\001 \003(\0132\027.mlflow.Gat" +
+      "ewayEndpoint\"\303\001\n\034AttachModelToGatewayEnd" +
+      "point\022\023\n\013endpoint_id\030\001 \001(\t\0228\n\014model_conf" +
+      "ig\030\002 \001(\0132\".mlflow.GatewayEndpointModelCo" +
+      "nfig\022\022\n\ncreated_by\030\003 \001(\t\032@\n\010Response\0224\n\007" +
+      "mapping\030\001 \001(\0132#.mlflow.GatewayEndpointMo" +
+      "delMapping\"^\n\036DetachModelFromGatewayEndp" +
+      "oint\022\023\n\013endpoint_id\030\001 \001(\t\022\033\n\023model_defin" +
+      "ition_id\030\002 \001(\t\032\n\n\010Response\"\260\001\n\034CreateGat" +
+      "ewayEndpointBinding\022\023\n\013endpoint_id\030\001 \001(\t" +
+      "\022\025\n\rresource_type\030\002 \001(\t\022\023\n\013resource_id\030\003" +
+      " \001(\t\022\022\n\ncreated_by\030\004 \001(\t\032;\n\010Response\022/\n\007" +
+      "binding\030\001 \001(\0132\036.mlflow.GatewayEndpointBi" +
+      "nding\"k\n\034DeleteGatewayEndpointBinding\022\023\n" +
+      "\013endpoint_id\030\001 \001(\t\022\025\n\rresource_type\030\002 \001(" +
+      "\t\022\023\n\013resource_id\030\003 \001(\t\032\n\n\010Response\"\234\001\n\033L" +
+      "istGatewayEndpointBindings\022\023\n\013endpoint_i" +
+      "d\030\001 \001(\t\022\025\n\rresource_type\030\002 \001(\t\022\023\n\013resour" +
+      "ce_id\030\003 \001(\t\032<\n\010Response\0220\n\010bindings\030\001 \003(" +
+      "\0132\036.mlflow.GatewayEndpointBinding\"T\n\025Set" +
+      "GatewayEndpointTag\022\023\n\013endpoint_id\030\001 \001(\t\022" +
+      "\013\n\003key\030\002 \001(\t\022\r\n\005value\030\003 \001(\t\032\n\n\010Response\"" +
+      "H\n\030DeleteGatewayEndpointTag\022\023\n\013endpoint_" +
+      "id\030\001 \001(\t\022\013\n\003key\030\002 \001(\t\032\n\n\010Response\"9\n\020Get" +
+      "SecretsConfig\032%\n\010Response\022\031\n\021secrets_ava" +
+      "ilable\030\001 \001(\010*6\n\010ViewType\022\017\n\013ACTIVE_ONLY\020" +
+      "\001\022\020\n\014DELETED_ONLY\020\002\022\007\n\003ALL\020\003*I\n\nSourceTy" +
+      "pe\022\014\n\010NOTEBOOK\020\001\022\007\n\003JOB\020\002\022\013\n\007PROJECT\020\003\022\t" +
+      "\n\005LOCAL\020\004\022\014\n\007UNKNOWN\020\350\007*M\n\tRunStatus\022\013\n\007" +
+      "RUNNING\020\001\022\r\n\tSCHEDULED\020\002\022\014\n\010FINISHED\020\003\022\n" +
+      "\n\006FAILED\020\004\022\n\n\006KILLED\020\005*O\n\013TraceStatus\022\034\n" +
+      "\030TRACE_STATUS_UNSPECIFIED\020\000\022\006\n\002OK\020\001\022\t\n\005E" +
+      "RROR\020\002\022\017\n\013IN_PROGRESS\020\003*8\n\016MetricViewTyp" +
+      "e\022\n\n\006TRACES\020\001\022\t\n\005SPANS\020\002\022\017\n\013ASSESSMENTS\020" +
+      "\003*P\n\017AggregationType\022\t\n\005COUNT\020\001\022\007\n\003SUM\020\002" +
+      "\022\007\n\003AVG\020\003\022\016\n\nPERCENTILE\020\004\022\007\n\003MIN\020\005\022\007\n\003MA" +
+      "X\020\006*\212\001\n\021LoggedModelStatus\022#\n\037LOGGED_MODE" +
+      "L_STATUS_UNSPECIFIED\020\000\022\030\n\024LOGGED_MODEL_P" +
+      "ENDING\020\001\022\026\n\022LOGGED_MODEL_READY\020\002\022\036\n\032LOGG" +
+      "ED_MODEL_UPLOAD_FAILED\020\003*Z\n\017RoutingStrat" +
+      "egy\022&\n\034ROUTING_STRATEGY_UNSPECIFIED\020\000\032\004\360" +
+      "\206\031\003\022\037\n\033REQUEST_BASED_TRAFFIC_SPLIT\020\001*K\n\020" +
+      "FallbackStrategy\022\'\n\035FALLBACK_STRATEGY_UN" +
+      "SPECIFIED\020\000\032\004\360\206\031\003\022\016\n\nSEQUENTIAL\020\001*X\n\027Gat" +
+      "ewayModelLinkageType\022\"\n\030LINKAGE_TYPE_UNS" +
+      "PECIFIED\020\000\032\004\360\206\031\003\022\013\n\007PRIMARY\020\001\022\014\n\010FALLBAC" +
+      "K\020\0022\236}\n\rMlflowService\022\246\001\n\023getExperimentB" +
+      "yName\022\033.mlflow.GetExperimentByName\032$.mlf" +
+      "low.GetExperimentByName.Response\"L\362\206\031H\n," +
+      "\n\003GET\022\037/mlflow/experiments/get-by-name\032\004" +
+      "\010\002\020\000\020\001*\026Get Experiment By Name\022\224\001\n\020creat" +
+      "eExperiment\022\030.mlflow.CreateExperiment\032!." +
+      "mlflow.CreateExperiment.Response\"C\362\206\031?\n(" +
+      "\n\004POST\022\032/mlflow/experiments/create\032\004\010\002\020\000" +
+      "\020\001*\021Create Experiment\022\301\001\n\021searchExperime" +
+      "nts\022\031.mlflow.SearchExperiments\032\".mlflow." +
+      "SearchExperiments.Response\"m\362\206\031i\n(\n\004POST" +
+      "\022\032/mlflow/experiments/search\032\004\010\002\020\000\n\'\n\003GE" +
+      "T\022\032/mlflow/experiments/search\032\004\010\002\020\000\020\001*\022S" +
+      "earch Experiments\022\210\001\n\rgetExperiment\022\025.ml" +
+      "flow.GetExperiment\032\036.mlflow.GetExperimen" +
+      "t.Response\"@\362\206\0318\n$\n\003GET\022\027/mlflow/experim" +
+      "ents/get\032\004\010\002\020\000\020\001*\016Get Experiment\272\214\031\000\022\224\001\n" +
+      "\020deleteExperiment\022\030.mlflow.DeleteExperim" +
+      "ent\032!.mlflow.DeleteExperiment.Response\"C" +
+      "\362\206\031?\n(\n\004POST\022\032/mlflow/experiments/delete" +
+      "\032\004\010\002\020\000\020\001*\021Delete Experiment\022\231\001\n\021restoreE" +
+      "xperiment\022\031.mlflow.RestoreExperiment\032\".m" +
+      "lflow.RestoreExperiment.Response\"E\362\206\031A\n)" +
+      "\n\004POST\022\033/mlflow/experiments/restore\032\004\010\002\020" +
+      "\000\020\001*\022Restore Experiment\022\224\001\n\020updateExperi" +
+      "ment\022\030.mlflow.UpdateExperiment\032!.mlflow." +
+      "UpdateExperiment.Response\"C\362\206\031?\n(\n\004POST\022" +
+      "\032/mlflow/experiments/update\032\004\010\002\020\000\020\001*\021Upd" +
+      "ate Experiment\022q\n\tcreateRun\022\021.mlflow.Cre" +
+      "ateRun\032\032.mlflow.CreateRun.Response\"5\362\206\0311" +
+      "\n!\n\004POST\022\023/mlflow/runs/create\032\004\010\002\020\000\020\001*\nC" +
+      "reate Run\022q\n\tupdateRun\022\021.mlflow.UpdateRu" +
+      "n\032\032.mlflow.UpdateRun.Response\"5\362\206\0311\n!\n\004P" +
+      "OST\022\023/mlflow/runs/update\032\004\010\002\020\000\020\001*\nUpdate" +
+      " Run\022q\n\tdeleteRun\022\021.mlflow.DeleteRun\032\032.m" +
+      "lflow.DeleteRun.Response\"5\362\206\0311\n!\n\004POST\022\023" +
+      "/mlflow/runs/delete\032\004\010\002\020\000\020\001*\nDelete Run\022" +
+      "v\n\nrestoreRun\022\022.mlflow.RestoreRun\032\033.mlfl" +
+      "ow.RestoreRun.Response\"7\362\206\0313\n\"\n\004POST\022\024/m" +
+      "lflow/runs/restore\032\004\010\002\020\000\020\001*\013Restore Run\022" +
+      "u\n\tlogMetric\022\021.mlflow.LogMetric\032\032.mlflow" +
+      ".LogMetric.Response\"9\362\206\0315\n%\n\004POST\022\027/mlfl" +
+      "ow/runs/log-metric\032\004\010\002\020\000\020\001*\nLog Metric\022t" +
+      "\n\010logParam\022\020.mlflow.LogParam\032\031.mlflow.Lo" +
+      "gParam.Response\";\362\206\0317\n(\n\004POST\022\032/mlflow/r" +
+      "uns/log-parameter\032\004\010\002\020\000\020\001*\tLog Param\022\241\001\n" +
+      "\020setExperimentTag\022\030.mlflow.SetExperiment" +
+      "Tag\032!.mlflow.SetExperimentTag.Response\"P" +
+      "\362\206\031L\n4\n\004POST\022&/mlflow/experiments/set-ex" +
+      "periment-tag\032\004\010\002\020\000\020\001*\022Set Experiment Tag" +
+      "\022\260\001\n\023deleteExperimentTag\022\033.mlflow.Delete" +
+      "ExperimentTag\032$.mlflow.DeleteExperimentT" +
+      "ag.Response\"V\362\206\031R\n7\n\004POST\022)/mlflow/exper" +
+      "iments/delete-experiment-tag\032\004\010\002\020\000\020\001*\025De" +
+      "lete Experiment Tag\022f\n\006setTag\022\016.mlflow.S" +
+      "etTag\032\027.mlflow.SetTag.Response\"3\362\206\031/\n\"\n\004" +
+      "POST\022\024/mlflow/runs/set-tag\032\004\010\002\020\000\020\001*\007Set " +
+      "Tag\022\210\001\n\013setTraceTag\022\023.mlflow.SetTraceTag" +
+      "\032\034.mlflow.SetTraceTag.Response\"F\362\206\031B\n/\n\005" +
+      "PATCH\022 /mlflow/traces/{request_id}/tags\032" +
+      "\004\010\002\020\000\020\003*\rSet Trace Tag\022\217\001\n\rsetTraceTagV3" +
+      "\022\025.mlflow.SetTraceTagV3\032\036.mlflow.SetTrac" +
+      "eTagV3.Response\"G\362\206\031C\n-\n\005PATCH\022\036/mlflow/" +
+      "traces/{trace_id}/tags\032\004\010\003\020\000\020\003*\020Set Trac" +
+      "e Tag V3\022\225\001\n\016deleteTraceTag\022\026.mlflow.Del" +
+      "eteTraceTag\032\037.mlflow.DeleteTraceTag.Resp" +
+      "onse\"J\362\206\031F\n0\n\006DELETE\022 /mlflow/traces/{re" +
+      "quest_id}/tags\032\004\010\002\020\000\020\003*\020Delete Trace Tag" +
+      "\022\234\001\n\020deleteTraceTagV3\022\030.mlflow.DeleteTra" +
+      "ceTagV3\032!.mlflow.DeleteTraceTagV3.Respon" +
+      "se\"K\362\206\031G\n.\n\006DELETE\022\036/mlflow/traces/{trac" +
+      "e_id}/tags\032\004\010\003\020\000\020\003*\023Delete Trace Tag V3\022" +
+      "u\n\tdeleteTag\022\021.mlflow.DeleteTag\032\032.mlflow" +
+      ".DeleteTag.Response\"9\362\206\0315\n%\n\004POST\022\027/mlfl" +
+      "ow/runs/delete-tag\032\004\010\002\020\000\020\001*\nDelete Tag\022e" +
+      "\n\006getRun\022\016.mlflow.GetRun\032\027.mlflow.GetRun" +
+      ".Response\"2\362\206\031*\n\035\n\003GET\022\020/mlflow/runs/get" +
+      "\032\004\010\002\020\000\020\001*\007Get Run\272\214\031\000\022y\n\nsearchRuns\022\022.ml" +
+      "flow.SearchRuns\032\033.mlflow.SearchRuns.Resp" +
+      "onse\":\362\206\0312\n!\n\004POST\022\023/mlflow/runs/search\032" +
+      "\004\010\002\020\000\020\001*\013Search Runs\272\214\031\000\022\207\001\n\rlistArtifac" +
+      "ts\022\025.mlflow.ListArtifacts\032\036.mlflow.ListA" +
+      "rtifacts.Response\"?\362\206\0317\n#\n\003GET\022\026/mlflow/" +
+      "artifacts/list\032\004\010\002\020\000\020\001*\016List Artifacts\272\214" +
+      "\031\000\022\225\001\n\020getMetricHistory\022\030.mlflow.GetMetr" +
+      "icHistory\032!.mlflow.GetMetricHistory.Resp" +
+      "onse\"D\362\206\031@\n(\n\003GET\022\033/mlflow/metrics/get-h" +
+      "istory\032\004\010\002\020\000\020\001*\022Get Metric History\022\267\001\n\034g" +
+      "etMetricHistoryBulkInterval\022$.mlflow.Get" +
+      "MetricHistoryBulkInterval\032-.mlflow.GetMe" +
+      "tricHistoryBulkInterval.Response\"B\362\206\031:\n6" +
+      "\n\003GET\022)/mlflow/metrics/get-history-bulk-" +
+      "interval\032\004\010\002\020\013\020\003\272\214\031\000\022p\n\010logBatch\022\020.mlflo" +
+      "w.LogBatch\032\031.mlflow.LogBatch.Response\"7\362" +
+      "\206\0313\n$\n\004POST\022\026/mlflow/runs/log-batch\032\004\010\002\020" +
+      "\000\020\001*\tLog Batch\022p\n\010logModel\022\020.mlflow.LogM" +
+      "odel\032\031.mlflow.LogModel.Response\"7\362\206\0313\n$\n" +
+      "\004POST\022\026/mlflow/runs/log-model\032\004\010\002\020\000\020\001*\tL" +
+      "og Model\022u\n\tlogInputs\022\021.mlflow.LogInputs" +
+      "\032\032.mlflow.LogInputs.Response\"9\362\206\0315\n%\n\004PO" +
+      "ST\022\027/mlflow/runs/log-inputs\032\004\010\002\020\000\020\001*\nLog" +
+      " Inputs\022v\n\nlogOutputs\022\022.mlflow.LogOutput" +
+      "s\032\033.mlflow.LogOutputs.Response\"7\362\206\0313\n\"\n\004" +
+      "POST\022\024/mlflow/runs/outputs\032\004\010\002\020\000\020\003*\013Log " +
+      "Outputs\022\207\001\n\016searchDatasets\022\026.mlflow.Sear" +
+      "chDatasets\032\037.mlflow.SearchDatasets.Respo" +
+      "nse\"<\362\206\0314\n0\n\004POST\022\"mlflow/experiments/se" +
+      "arch-datasets\032\004\010\002\020\000\020\003\272\214\031\000\022p\n\nstartTrace\022" +
+      "\022.mlflow.StartTrace\032\033.mlflow.StartTrace." +
+      "Response\"1\362\206\031-\n\034\n\004POST\022\016/mlflow/traces\032\004" +
+      "\010\002\020\000\020\003*\013Start Trace\022v\n\010endTrace\022\020.mlflow" +
+      ".EndTrace\032\031.mlflow.EndTrace.Response\"=\362\206" +
+      "\0319\n*\n\005PATCH\022\033/mlflow/traces/{request_id}" +
+      "\032\004\010\002\020\000\020\003*\tEnd Trace\022\211\001\n\014getTraceInfo\022\024.m" +
+      "lflow.GetTraceInfo\032\035.mlflow.GetTraceInfo" +
+      ".Response\"D\362\206\031@\n-\n\003GET\022 /mlflow/traces/{" +
+      "request_id}/info\032\004\010\002\020\000\020\003*\rGet TraceInfo\022" +
+      "\213\001\n\016getTraceInfoV3\022\026.mlflow.GetTraceInfo" +
+      "V3\032\037.mlflow.GetTraceInfoV3.Response\"@\362\206\031" +
+      "<\n&\n\003GET\022\031/mlflow/traces/{trace_id}\032\004\010\003\020" +
+      "\000\020\003*\020Get TraceInfo v3\022n\n\010getTrace\022\020.mlfl" +
+      "ow.GetTrace\032\031.mlflow.GetTrace.Response\"5" +
+      "\362\206\0311\n\037\n\003GET\022\022/mlflow/traces/get\032\004\010\003\020\000\020\003*" +
+      "\014Get Trace v3\022\203\001\n\016batchGetTraces\022\026.mlflo" +
+      "w.BatchGetTraces\032\037.mlflow.BatchGetTraces" +
+      ".Response\"8\362\206\0314\n$\n\003GET\022\027/mlflow/traces/b" +
+      "atchGet\032\004\010\003\020\000\020\003*\nGet Traces\022w\n\014searchTra" +
+      "ces\022\024.mlflow.SearchTraces\032\035.mlflow.Searc" +
+      "hTraces.Response\"2\362\206\031.\n\033\n\003GET\022\016/mlflow/t" +
+      "races\032\004\010\002\020\000\020\003*\rSearch Traces\022\210\001\n\016searchT" +
+      "racesV3\022\026.mlflow.SearchTracesV3\032\037.mlflow" +
+      ".SearchTracesV3.Response\"=\362\206\0319\n#\n\004POST\022\025" +
+      "/mlflow/traces/search\032\004\010\003\020\000\020\003*\020Search Tr" +
+      "aces V3\022i\n\014startTraceV3\022\024.mlflow.StartTr" +
+      "aceV3\032\035.mlflow.StartTraceV3.Response\"$\362\206" +
+      "\031 \n\034\n\004POST\022\016/mlflow/traces\032\004\010\003\020\000\020\003\022\222\001\n\017l" +
+      "inkTracesToRun\022\027.mlflow.LinkTracesToRun\032" +
+      " .mlflow.LinkTracesToRun.Response\"D\362\206\031@\n" +
+      "(\n\004POST\022\032/mlflow/traces/link-to-run\032\004\010\002\020" +
+      "\000\020\003*\022Link Traces to Run\022\237\001\n\022linkPromptsT" +
+      "oTrace\022\032.mlflow.LinkPromptsToTrace\032#.mlf" +
+      "low.LinkPromptsToTrace.Response\"H\362\206\031D\n)\n" +
+      "\004POST\022\033/mlflow/traces/link-prompts\032\004\010\002\020\000" +
+      "\020\003*\025Link Prompts to Trace\022\242\001\n\031searchUnif" +
+      "iedTraceHandler\022\033.mlflow.SearchUnifiedTr" +
+      "aces\032$.mlflow.SearchUnifiedTraces.Respon" +
+      "se\"B\362\206\031>\n#\n\003GET\022\026/mlflow/unified-traces\032" +
+      "\004\010\002\020\000\020\003*\025Search Unified Traces\022\257\001\n\025getOn" +
+      "lineTraceDetails\022\035.mlflow.GetOnlineTrace" +
+      "Details\032&.mlflow.GetOnlineTraceDetails.R" +
+      "esponse\"O\362\206\031K\n-\n\003GET\022 /mlflow/get-online" +
+      "-trace-details\032\004\010\002\020\000\020\003*\030Get Online Trace" +
+      " Details\022\206\001\n\014deleteTraces\022\024.mlflow.Delet" +
+      "eTraces\032\035.mlflow.DeleteTraces.Response\"A" +
+      "\362\206\031=\n*\n\004POST\022\034/mlflow/traces/delete-trac" +
+      "es\032\004\010\002\020\000\020\003*\rDelete Traces\022\217\001\n\016deleteTrac" +
+      "esV3\022\026.mlflow.DeleteTracesV3\032\037.mlflow.De" +
+      "leteTracesV3.Response\"D\362\206\031@\n*\n\004POST\022\034/ml" +
+      "flow/traces/delete-traces\032\004\010\003\020\000\020\003*\020Delet" +
+      "e Traces V3\022\343\001\n\037calculateTraceFilterCorr" +
+      "elation\022\'.mlflow.CalculateTraceFilterCor" +
+      "relation\0320.mlflow.CalculateTraceFilterCo" +
+      "rrelation.Response\"e\362\206\031a\n9\n\004POST\022+/mlflo" +
+      "w/traces/calculate-filter-correlation\032\004\010" +
+      "\003\020\000\020\003*\"Calculate Trace Filter Correlatio" +
+      "n\022\225\001\n\021queryTraceMetrics\022\031.mlflow.QueryTr" +
+      "aceMetrics\032\".mlflow.QueryTraceMetrics.Re" +
+      "sponse\"A\362\206\031=\n$\n\004POST\022\026/mlflow/traces/met" +
+      "rics\032\004\010\003\020\000\020\003*\023Query Trace Metrics\022\224\001\n\021cr" +
+      "eateLoggedModel\022\031.mlflow.CreateLoggedMod" +
+      "el\032\".mlflow.CreateLoggedModel.Response\"@" +
+      "\362\206\031<\n#\n\004POST\022\025/mlflow/logged-models\032\004\010\002\020" +
+      "\000\020\003*\023Create Logged Model\022\250\001\n\023finalizeLog" +
+      "gedModel\022\033.mlflow.FinalizeLoggedModel\032$.",
+      "mlflow.FinalizeLoggedModel.Response\"N\362\206\031" +
+      "J\n/\n\005PATCH\022 /mlflow/logged-models/{model" +
+      "_id}\032\004\010\002\020\000\020\003*\025Finalize Logged Model\022\222\001\n\016" +
+      "getLoggedModel\022\026.mlflow.GetLoggedModel\032\037" +
+      ".mlflow.GetLoggedModel.Response\"G\362\206\031C\n-\n" +
+      "\003GET\022 /mlflow/logged-models/{model_id}\032\004" +
+      "\010\002\020\000\020\003*\020Get Logged Model\022\243\001\n\021deleteLogge" +
+      "dModel\022\031.mlflow.DeleteLoggedModel\032\".mlfl" +
+      "ow.DeleteLoggedModel.Response\"O\362\206\031K\n0\n\006D" +
+      "ELETE\022 /mlflow/logged-models/{model_id}\032" +
+      "\004\010\002\020\000\020\003*\025Delete a Logged Model\022\236\001\n\022searc" +
+      "hLoggedModels\022\032.mlflow.SearchLoggedModel" +
+      "s\032#.mlflow.SearchLoggedModels.Response\"G" +
+      "\362\206\031C\n*\n\004POST\022\034/mlflow/logged-models/sear" +
+      "ch\032\004\010\002\020\000\020\003*\023Search LoggedModels\022\251\001\n\022setL" +
+      "oggedModelTags\022\032.mlflow.SetLoggedModelTa" +
+      "gs\032#.mlflow.SetLoggedModelTags.Response\"" +
+      "R\362\206\031N\n4\n\005PATCH\022%/mlflow/logged-models/{m" +
+      "odel_id}/tags\032\004\010\002\020\000\020\003*\024Set Logged Model " +
+      "Tag\022\275\001\n\024deleteLoggedModelTag\022\034.mlflow.De" +
+      "leteLoggedModelTag\032%.mlflow.DeleteLogged" +
+      "ModelTag.Response\"`\362\206\031\\\n?\n\006DELETE\022//mlfl" +
+      "ow/logged-models/{model_id}/tags/{tag_ke" +
+      "y}\032\004\010\002\020\000\020\003*\027Delete Logged Model Tag\022\326\001\n\030" +
+      "listLoggedModelArtifacts\022 .mlflow.ListLo" +
+      "ggedModelArtifacts\032).mlflow.ListLoggedMo" +
+      "delArtifacts.Response\"m\362\206\031i\nC\n\003GET\0226/mlf" +
+      "low/logged-models/{model_id}/artifacts/d" +
+      "irectories\032\004\010\002\020\000\020\003* List Artifacts for L" +
+      "ogged Models\022\301\001\n\024LogLoggedModelParams\022#." +
+      "mlflow.LogLoggedModelParamsRequest\032,.mlf" +
+      "low.LogLoggedModelParamsRequest.Response" +
+      "\"V\362\206\031R\n5\n\004POST\022\'/mlflow/logged-models/{m" +
+      "odel_id}/params\032\004\010\002\020\000\020\003*\027Log Logged Mode" +
+      "l Params\022\260\001\n\rGetAssessment\022\034.mlflow.GetA" +
+      "ssessmentRequest\032%.mlflow.GetAssessmentR" +
+      "equest.Response\"Z\362\206\031V\nB\n\003GET\0225/mlflow/tr" +
+      "aces/{trace_id}/assessments/{assessment_" +
+      "id}\032\004\010\003\020\000\020\003*\016Get Assessment\022\337\001\n\020createAs" +
+      "sessment\022\030.mlflow.CreateAssessment\032!.mlf" +
+      "low.CreateAssessment.Response\"\215\001\362\206\031\210\001\n>\n" +
+      "\004POST\0220/mlflow/traces/{assessment.trace_" +
+      "id}/assessments\032\004\010\003\020\000\020\003\030\350\007\030\356\007\030\014\030\001*:Creat" +
+      "e an assessment of a trace or a span wit" +
+      "hin the trace\022\320\001\n\020updateAssessment\022\030.mlf" +
+      "low.UpdateAssessment\032!.mlflow.UpdateAsse" +
+      "ssment.Response\"\177\362\206\031{\nD\n\005PATCH\0225/mlflow/" +
+      "traces/{trace_id}/assessments/{assessmen" +
+      "t_id}\032\004\010\003\020\000\020\003\030\350\007\030\356\007\030\001*)Update an existin" +
+      "g assessment on a trace.\022\261\001\n\020deleteAsses" +
+      "sment\022\030.mlflow.DeleteAssessment\032!.mlflow" +
+      ".DeleteAssessment.Response\"`\362\206\031\\\nE\n\006DELE" +
+      "TE\0225/mlflow/traces/{trace_id}/assessment" +
+      "s/{assessment_id}\032\004\010\003\020\000\020\003*\021Delete Assess" +
+      "ment\022\232\001\n\rcreateDataset\022\025.mlflow.CreateDa" +
+      "taset\032\036.mlflow.CreateDataset.Response\"R\362" +
+      "\206\031N\n%\n\004POST\022\027/mlflow/datasets/create\032\004\010\003" +
+      "\020\000\020\003\030\350\007\030\356\007\030\014\030\001*\031Create Evaluation Datase" +
+      "t\022\221\001\n\ngetDataset\022\022.mlflow.GetDataset\032\033.m" +
+      "lflow.GetDataset.Response\"R\362\206\031N\n*\n\003GET\022\035" +
+      "/mlflow/datasets/{dataset_id}\032\004\010\003\020\000\020\003\030\350\007" +
+      "\030\272\027\030\001*\026Get Evaluation Dataset\022\240\001\n\rdelete" +
+      "Dataset\022\025.mlflow.DeleteDataset\032\036.mlflow." +
+      "DeleteDataset.Response\"X\362\206\031T\n-\n\006DELETE\022\035" +
+      "/mlflow/datasets/{dataset_id}\032\004\010\003\020\000\020\003\030\350\007" +
+      "\030\272\027\030\001*\031Delete Evaluation Dataset\022\335\001\n\030sea" +
+      "rchEvaluationDatasets\022 .mlflow.SearchEva" +
+      "luationDatasets\032).mlflow.SearchEvaluatio" +
+      "nDatasets.Response\"t\362\206\031p\n%\n\004POST\022\027/mlflo" +
+      "w/datasets/search\032\004\010\003\020\000\n$\n\003GET\022\027/mlflow/" +
+      "datasets/search\032\004\010\003\020\000\020\003\030\350\007\030\001*\032Search Eva" +
+      "luation Datasets\022\251\001\n\016setDatasetTags\022\026.ml" +
+      "flow.SetDatasetTags\032\037.mlflow.SetDatasetT" +
+      "ags.Response\"^\362\206\031Z\n1\n\005PATCH\022\"/mlflow/dat" +
+      "asets/{dataset_id}/tags\032\004\010\003\020\000\020\003\030\350\007\030\272\027\030\001*" +
+      "\033Set Evaluation Dataset Tags\022\270\001\n\020deleteD" +
+      "atasetTag\022\030.mlflow.DeleteDatasetTag\032!.ml" +
+      "flow.DeleteDatasetTag.Response\"g\362\206\031c\n8\n\006" +
+      "DELETE\022(/mlflow/datasets/{dataset_id}/ta" +
+      "gs/{key}\032\004\010\003\020\000\020\003\030\350\007\030\272\027\030\001*\035Delete Evaluat" +
+      "ion Dataset Tag\022\303\001\n\024upsertDatasetRecords" +
+      "\022\034.mlflow.UpsertDatasetRecords\032%.mlflow." +
+      "UpsertDatasetRecords.Response\"f\362\206\031b\n3\n\004P" +
+      "OST\022%/mlflow/datasets/{dataset_id}/recor" +
+      "ds\032\004\010\003\020\000\020\003\030\350\007\030\272\027\030\001*!Upsert Evaluation Da" +
+      "taset Records\022\326\001\n\027getDatasetExperimentId" +
+      "s\022\037.mlflow.GetDatasetExperimentIds\032(.mlf" +
+      "low.GetDatasetExperimentIds.Response\"p\362\206" +
+      "\031l\n9\n\003GET\022,/mlflow/datasets/{dataset_id}" +
+      "/experiment-ids\032\004\010\003\020\000\020\003\030\350\007\030\272\027\030\001*%Get Eva" +
+      "luation Dataset Experiment IDs\022\212\001\n\016regis" +
+      "terScorer\022\026.mlflow.RegisterScorer\032\037.mlfl" +
+      "ow.RegisterScorer.Response\"?\362\206\031;\n&\n\004POST" +
+      "\022\030/mlflow/scorers/register\032\004\010\003\020\000\020\001*\017Regi" +
+      "ster Scorer\022y\n\013listScorers\022\023.mlflow.List" +
+      "Scorers\032\034.mlflow.ListScorers.Response\"7\362" +
+      "\206\0313\n!\n\003GET\022\024/mlflow/scorers/list\032\004\010\003\020\000\020\001" +
+      "*\014List Scorers\022\232\001\n\022listScorerVersions\022\032." +
+      "mlflow.ListScorerVersions\032#.mlflow.ListS" +
+      "corerVersions.Response\"C\362\206\031?\n%\n\003GET\022\030/ml" +
+      "flow/scorers/versions\032\004\010\003\020\000\020\001*\024List Scor" +
+      "er Versions\022p\n\tgetScorer\022\021.mlflow.GetSco" +
+      "rer\032\032.mlflow.GetScorer.Response\"4\362\206\0310\n \n" +
+      "\003GET\022\023/mlflow/scorers/get\032\004\010\003\020\000\020\001*\nGet S" +
+      "corer\022\202\001\n\014deleteScorer\022\024.mlflow.DeleteSc" +
+      "orer\032\035.mlflow.DeleteScorer.Response\"=\362\206\031" +
+      "9\n&\n\006DELETE\022\026/mlflow/scorers/delete\032\004\010\003\020" +
+      "\000\020\001*\rDelete Scorer\022\266\001\n\021getDatasetRecords" +
+      "\022\031.mlflow.GetDatasetRecords\032\".mlflow.Get" +
+      "DatasetRecords.Response\"b\362\206\031^\n2\n\003GET\022%/m" +
+      "lflow/datasets/{dataset_id}/records\032\004\010\003\020" +
+      "\000\020\003\030\350\007\030\272\027\030\001*\036Get Evaluation Dataset Reco" +
+      "rds\022\315\001\n\027addDatasetToExperiments\022\037.mlflow" +
+      ".AddDatasetToExperiments\032(.mlflow.AddDat" +
+      "asetToExperiments.Response\"g\362\206\031c\n;\n\004POST" +
+      "\022-/mlflow/datasets/{dataset_id}/add-expe" +
+      "riments\032\004\010\003\020\000\020\003\030\350\007\030\272\027\030\001*\032Add Dataset to " +
+      "Experiments\022\344\001\n\034removeDatasetFromExperim" +
+      "ents\022$.mlflow.RemoveDatasetFromExperimen" +
+      "ts\032-.mlflow.RemoveDatasetFromExperiments" +
+      ".Response\"o\362\206\031k\n>\n\004POST\0220/mlflow/dataset" +
+      "s/{dataset_id}/remove-experiments\032\004\010\003\020\000\020" +
+      "\003\030\350\007\030\272\027\030\001*\037Remove Dataset from Experimen" +
+      "ts\022\245\001\n\023createGatewaySecret\022\033.mlflow.Crea" +
+      "teGatewaySecret\032$.mlflow.CreateGatewaySe" +
+      "cret.Response\"K\362\206\031G\n,\n\004POST\022\036/mlflow/gat" +
+      "eway/secrets/create\032\004\010\003\020\000\020\001*\025Create Gate" +
+      "way Secret\022\246\001\n\024getGatewaySecretInfo\022\034.ml" +
+      "flow.GetGatewaySecretInfo\032%.mlflow.GetGa" +
+      "tewaySecretInfo.Response\"I\362\206\031E\n(\n\003GET\022\033/" +
+      "mlflow/gateway/secrets/get\032\004\010\003\020\000\020\001*\027Get " +
+      "Gateway Secret Info\022\245\001\n\023updateGatewaySec" +
+      "ret\022\033.mlflow.UpdateGatewaySecret\032$.mlflo" +
+      "w.UpdateGatewaySecret.Response\"K\362\206\031G\n,\n\004" +
+      "POST\022\036/mlflow/gateway/secrets/update\032\004\010\003" +
+      "\020\000\020\001*\025Update Gateway Secret\022\247\001\n\023deleteGa" +
+      "tewaySecret\022\033.mlflow.DeleteGatewaySecret" +
+      "\032$.mlflow.DeleteGatewaySecret.Response\"M" +
+      "\362\206\031I\n.\n\006DELETE\022\036/mlflow/gateway/secrets/" +
+      "delete\032\004\010\003\020\000\020\001*\025Delete Gateway Secret\022\252\001" +
+      "\n\026listGatewaySecretInfos\022\036.mlflow.ListGa" +
+      "tewaySecretInfos\032\'.mlflow.ListGatewaySec" +
+      "retInfos.Response\"G\362\206\031C\n)\n\003GET\022\034/mlflow/" +
+      "gateway/secrets/list\032\004\010\003\020\000\020\001*\024List Gatew" +
+      "ay Secrets\022\257\001\n\025createGatewayEndpoint\022\035.m" +
+      "lflow.CreateGatewayEndpoint\032&.mlflow.Cre" +
+      "ateGatewayEndpoint.Response\"O\362\206\031K\n.\n\004POS" +
+      "T\022 /mlflow/gateway/endpoints/create\032\004\010\003\020" +
+      "\000\020\001*\027Create Gateway Endpoint\022\237\001\n\022getGate" +
+      "wayEndpoint\022\032.mlflow.GetGatewayEndpoint\032" +
+      "#.mlflow.GetGatewayEndpoint.Response\"H\362\206" +
+      "\031D\n*\n\003GET\022\035/mlflow/gateway/endpoints/get" +
+      "\032\004\010\003\020\000\020\001*\024Get Gateway Endpoint\022\257\001\n\025updat" +
+      "eGatewayEndpoint\022\035.mlflow.UpdateGatewayE" +
+      "ndpoint\032&.mlflow.UpdateGatewayEndpoint.R" +
+      "esponse\"O\362\206\031K\n.\n\004POST\022 /mlflow/gateway/e" +
+      "ndpoints/update\032\004\010\003\020\000\020\001*\027Update Gateway " +
+      "Endpoint\022\261\001\n\025deleteGatewayEndpoint\022\035.mlf" +
+      "low.DeleteGatewayEndpoint\032&.mlflow.Delet" +
+      "eGatewayEndpoint.Response\"Q\362\206\031M\n0\n\006DELET" +
+      "E\022 /mlflow/gateway/endpoints/delete\032\004\010\003\020" +
+      "\000\020\001*\027Delete Gateway Endpoint\022\250\001\n\024listGat" +
+      "ewayEndpoints\022\034.mlflow.ListGatewayEndpoi" +
+      "nts\032%.mlflow.ListGatewayEndpoints.Respon" +
+      "se\"K\362\206\031G\n+\n\003GET\022\036/mlflow/gateway/endpoin" +
+      "ts/list\032\004\010\003\020\000\020\001*\026List Gateway Endpoints\022" +
+      "\324\001\n\034createGatewayModelDefinition\022$.mlflo" +
+      "w.CreateGatewayModelDefinition\032-.mlflow." +
+      "CreateGatewayModelDefinition.Response\"_\362" +
+      "\206\031[\n6\n\004POST\022(/mlflow/gateway/model-defin" +
+      "itions/create\032\004\010\003\020\000\020\001*\037Create Gateway Mo" +
+      "del Definition\022\304\001\n\031getGatewayModelDefini" +
+      "tion\022!.mlflow.GetGatewayModelDefinition\032" +
+      "*.mlflow.GetGatewayModelDefinition.Respo" +
+      "nse\"X\362\206\031T\n2\n\003GET\022%/mlflow/gateway/model-" +
+      "definitions/get\032\004\010\003\020\000\020\001*\034Get Gateway Mod" +
+      "el Definition\022\315\001\n\033listGatewayModelDefini" +
+      "tions\022#.mlflow.ListGatewayModelDefinitio" +
+      "ns\032,.mlflow.ListGatewayModelDefinitions." +
+      "Response\"[\362\206\031W\n3\n\003GET\022&/mlflow/gateway/m" +
+      "odel-definitions/list\032\004\010\003\020\000\020\001*\036List Gate" +
+      "way Model Definitions\022\324\001\n\034updateGatewayM" +
+      "odelDefinition\022$.mlflow.UpdateGatewayMod" +
+      "elDefinition\032-.mlflow.UpdateGatewayModel" +
+      "Definition.Response\"_\362\206\031[\n6\n\004POST\022(/mlfl" +
+      "ow/gateway/model-definitions/update\032\004\010\003\020" +
+      "\000\020\001*\037Update Gateway Model Definition\022\326\001\n" +
+      "\034deleteGatewayModelDefinition\022$.mlflow.D" +
+      "eleteGatewayModelDefinition\032-.mlflow.Del" +
+      "eteGatewayModelDefinition.Response\"a\362\206\031]" +
+      "\n8\n\006DELETE\022(/mlflow/gateway/model-defini" +
+      "tions/delete\032\004\010\003\020\000\020\001*\037Delete Gateway Mod" +
+      "el Definition\022\305\001\n\025attachModelToEndpoint\022" +
+      "$.mlflow.AttachModelToGatewayEndpoint\032-." +
+      "mlflow.AttachModelToGatewayEndpoint.Resp" +
+      "onse\"W\362\206\031S\n5\n\004POST\022\'/mlflow/gateway/endp" +
+      "oints/models/attach\032\004\010\003\020\000\020\001*\030Attach Mode" +
+      "l to Endpoint\022\315\001\n\027detachModelFromEndpoin" +
+      "t\022&.mlflow.DetachModelFromGatewayEndpoin" +
+      "t\032/.mlflow.DetachModelFromGatewayEndpoin" +
+      "t.Response\"Y\362\206\031U\n5\n\004POST\022\'/mlflow/gatewa" +
+      "y/endpoints/models/detach\032\004\010\003\020\000\020\001*\032Detac" +
+      "h Model from Endpoint\022\306\001\n\025createEndpoint" +
+      "Binding\022$.mlflow.CreateGatewayEndpointBi" +
+      "nding\032-.mlflow.CreateGatewayEndpointBind" +
+      "ing.Response\"X\362\206\031T\n7\n\004POST\022)/mlflow/gate" +
+      "way/endpoints/bindings/create\032\004\010\003\020\000\020\001*\027C" +
+      "reate Endpoint Binding\022\310\001\n\025deleteEndpoin" +
+      "tBinding\022$.mlflow.DeleteGatewayEndpointB" +
+      "inding\032-.mlflow.DeleteGatewayEndpointBin" +
+      "ding.Response\"Z\362\206\031V\n9\n\006DELETE\022)/mlflow/g" +
+      "ateway/endpoints/bindings/delete\032\004\010\003\020\000\020\001" +
+      "*\027Delete Endpoint Binding\022\277\001\n\024listEndpoi" +
+      "ntBindings\022#.mlflow.ListGatewayEndpointB" +
+      "indings\032,.mlflow.ListGatewayEndpointBind" +
+      "ings.Response\"T\362\206\031P\n4\n\003GET\022\'/mlflow/gate" +
+      "way/endpoints/bindings/list\032\004\010\003\020\000\020\001*\026Lis" +
+      "t Endpoint Bindings\022\261\001\n\025setGatewayEndpoi" +
+      "ntTag\022\035.mlflow.SetGatewayEndpointTag\032&.m" +
+      "lflow.SetGatewayEndpointTag.Response\"Q\362\206" +
+      "\031M\n/\n\004POST\022!/mlflow/gateway/endpoints/se" +
+      "t-tag\032\004\010\003\020\000\020\001*\030Gateway Set Endpoint Tag\022" +
+      "\302\001\n\030deleteGatewayEndpointTag\022 .mlflow.De" +
+      "leteGatewayEndpointTag\032).mlflow.DeleteGa" +
+      "tewayEndpointTag.Response\"Y\362\206\031U\n4\n\006DELET" +
+      "E\022$/mlflow/gateway/endpoints/delete-tag\032" +
+      "\004\010\003\020\000\020\001*\033Gateway Delete Endpoint TagB\036\n\024" +
+      "org.mlflow.api.proto\220\001\001\342?\002\020\001"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -253853,12 +254667,18 @@ public final class Service {
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_mlflow_FallbackConfig_descriptor,
         new java.lang.String[] { "Strategy", "MaxAttempts", });
-    internal_static_mlflow_CreateGatewayEndpoint_descriptor =
+    internal_static_mlflow_GatewayEndpointModelConfig_descriptor =
       getDescriptor().getMessageTypes().get(127);
+    internal_static_mlflow_GatewayEndpointModelConfig_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_mlflow_GatewayEndpointModelConfig_descriptor,
+        new java.lang.String[] { "ModelDefinitionId", "LinkageType", "Weight", "FallbackOrder", });
+    internal_static_mlflow_CreateGatewayEndpoint_descriptor =
+      getDescriptor().getMessageTypes().get(128);
     internal_static_mlflow_CreateGatewayEndpoint_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_mlflow_CreateGatewayEndpoint_descriptor,
-        new java.lang.String[] { "Name", "ModelDefinitionIds", "CreatedBy", "RoutingStrategy", "FallbackConfig", "FallbackModelDefinitionIds", });
+        new java.lang.String[] { "Name", "ModelConfigs", "CreatedBy", "RoutingStrategy", "FallbackConfig", });
     internal_static_mlflow_CreateGatewayEndpoint_Response_descriptor =
       internal_static_mlflow_CreateGatewayEndpoint_descriptor.getNestedTypes().get(0);
     internal_static_mlflow_CreateGatewayEndpoint_Response_fieldAccessorTable = new
@@ -253866,7 +254686,7 @@ public final class Service {
         internal_static_mlflow_CreateGatewayEndpoint_Response_descriptor,
         new java.lang.String[] { "Endpoint", });
     internal_static_mlflow_GetGatewayEndpoint_descriptor =
-      getDescriptor().getMessageTypes().get(128);
+      getDescriptor().getMessageTypes().get(129);
     internal_static_mlflow_GetGatewayEndpoint_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_mlflow_GetGatewayEndpoint_descriptor,
@@ -253878,11 +254698,11 @@ public final class Service {
         internal_static_mlflow_GetGatewayEndpoint_Response_descriptor,
         new java.lang.String[] { "Endpoint", });
     internal_static_mlflow_UpdateGatewayEndpoint_descriptor =
-      getDescriptor().getMessageTypes().get(129);
+      getDescriptor().getMessageTypes().get(130);
     internal_static_mlflow_UpdateGatewayEndpoint_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_mlflow_UpdateGatewayEndpoint_descriptor,
-        new java.lang.String[] { "EndpointId", "Name", "UpdatedBy", "ModelDefinitionIds", "RoutingStrategy", "FallbackConfig", "FallbackModelDefinitionIds", });
+        new java.lang.String[] { "EndpointId", "Name", "UpdatedBy", "ModelConfigs", "RoutingStrategy", "FallbackConfig", });
     internal_static_mlflow_UpdateGatewayEndpoint_Response_descriptor =
       internal_static_mlflow_UpdateGatewayEndpoint_descriptor.getNestedTypes().get(0);
     internal_static_mlflow_UpdateGatewayEndpoint_Response_fieldAccessorTable = new
@@ -253890,7 +254710,7 @@ public final class Service {
         internal_static_mlflow_UpdateGatewayEndpoint_Response_descriptor,
         new java.lang.String[] { "Endpoint", });
     internal_static_mlflow_DeleteGatewayEndpoint_descriptor =
-      getDescriptor().getMessageTypes().get(130);
+      getDescriptor().getMessageTypes().get(131);
     internal_static_mlflow_DeleteGatewayEndpoint_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_mlflow_DeleteGatewayEndpoint_descriptor,
@@ -253902,7 +254722,7 @@ public final class Service {
         internal_static_mlflow_DeleteGatewayEndpoint_Response_descriptor,
         new java.lang.String[] { });
     internal_static_mlflow_ListGatewayEndpoints_descriptor =
-      getDescriptor().getMessageTypes().get(131);
+      getDescriptor().getMessageTypes().get(132);
     internal_static_mlflow_ListGatewayEndpoints_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_mlflow_ListGatewayEndpoints_descriptor,
@@ -253914,11 +254734,11 @@ public final class Service {
         internal_static_mlflow_ListGatewayEndpoints_Response_descriptor,
         new java.lang.String[] { "Endpoints", });
     internal_static_mlflow_AttachModelToGatewayEndpoint_descriptor =
-      getDescriptor().getMessageTypes().get(132);
+      getDescriptor().getMessageTypes().get(133);
     internal_static_mlflow_AttachModelToGatewayEndpoint_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_mlflow_AttachModelToGatewayEndpoint_descriptor,
-        new java.lang.String[] { "EndpointId", "ModelDefinitionId", "Weight", "CreatedBy", });
+        new java.lang.String[] { "EndpointId", "ModelConfig", "CreatedBy", });
     internal_static_mlflow_AttachModelToGatewayEndpoint_Response_descriptor =
       internal_static_mlflow_AttachModelToGatewayEndpoint_descriptor.getNestedTypes().get(0);
     internal_static_mlflow_AttachModelToGatewayEndpoint_Response_fieldAccessorTable = new
@@ -253926,7 +254746,7 @@ public final class Service {
         internal_static_mlflow_AttachModelToGatewayEndpoint_Response_descriptor,
         new java.lang.String[] { "Mapping", });
     internal_static_mlflow_DetachModelFromGatewayEndpoint_descriptor =
-      getDescriptor().getMessageTypes().get(133);
+      getDescriptor().getMessageTypes().get(134);
     internal_static_mlflow_DetachModelFromGatewayEndpoint_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_mlflow_DetachModelFromGatewayEndpoint_descriptor,
@@ -253938,7 +254758,7 @@ public final class Service {
         internal_static_mlflow_DetachModelFromGatewayEndpoint_Response_descriptor,
         new java.lang.String[] { });
     internal_static_mlflow_CreateGatewayEndpointBinding_descriptor =
-      getDescriptor().getMessageTypes().get(134);
+      getDescriptor().getMessageTypes().get(135);
     internal_static_mlflow_CreateGatewayEndpointBinding_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_mlflow_CreateGatewayEndpointBinding_descriptor,
@@ -253950,7 +254770,7 @@ public final class Service {
         internal_static_mlflow_CreateGatewayEndpointBinding_Response_descriptor,
         new java.lang.String[] { "Binding", });
     internal_static_mlflow_DeleteGatewayEndpointBinding_descriptor =
-      getDescriptor().getMessageTypes().get(135);
+      getDescriptor().getMessageTypes().get(136);
     internal_static_mlflow_DeleteGatewayEndpointBinding_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_mlflow_DeleteGatewayEndpointBinding_descriptor,
@@ -253962,7 +254782,7 @@ public final class Service {
         internal_static_mlflow_DeleteGatewayEndpointBinding_Response_descriptor,
         new java.lang.String[] { });
     internal_static_mlflow_ListGatewayEndpointBindings_descriptor =
-      getDescriptor().getMessageTypes().get(136);
+      getDescriptor().getMessageTypes().get(137);
     internal_static_mlflow_ListGatewayEndpointBindings_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_mlflow_ListGatewayEndpointBindings_descriptor,
@@ -253974,7 +254794,7 @@ public final class Service {
         internal_static_mlflow_ListGatewayEndpointBindings_Response_descriptor,
         new java.lang.String[] { "Bindings", });
     internal_static_mlflow_SetGatewayEndpointTag_descriptor =
-      getDescriptor().getMessageTypes().get(137);
+      getDescriptor().getMessageTypes().get(138);
     internal_static_mlflow_SetGatewayEndpointTag_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_mlflow_SetGatewayEndpointTag_descriptor,
@@ -253986,7 +254806,7 @@ public final class Service {
         internal_static_mlflow_SetGatewayEndpointTag_Response_descriptor,
         new java.lang.String[] { });
     internal_static_mlflow_DeleteGatewayEndpointTag_descriptor =
-      getDescriptor().getMessageTypes().get(138);
+      getDescriptor().getMessageTypes().get(139);
     internal_static_mlflow_DeleteGatewayEndpointTag_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_mlflow_DeleteGatewayEndpointTag_descriptor,
@@ -253998,7 +254818,7 @@ public final class Service {
         internal_static_mlflow_DeleteGatewayEndpointTag_Response_descriptor,
         new java.lang.String[] { });
     internal_static_mlflow_GetSecretsConfig_descriptor =
-      getDescriptor().getMessageTypes().get(139);
+      getDescriptor().getMessageTypes().get(140);
     internal_static_mlflow_GetSecretsConfig_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_mlflow_GetSecretsConfig_descriptor,
