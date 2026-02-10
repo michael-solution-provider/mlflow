@@ -261495,6 +261495,8521 @@ public final class Service {
 
   }
 
+  public interface WorkspaceOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:mlflow.Workspace)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <pre>
+     * The unique workspace name.
+     * </pre>
+     *
+     * <code>optional string name = 1 [(.mlflow.validate_required) = true];</code>
+     * @return Whether the name field is set.
+     */
+    boolean hasName();
+    /**
+     * <pre>
+     * The unique workspace name.
+     * </pre>
+     *
+     * <code>optional string name = 1 [(.mlflow.validate_required) = true];</code>
+     * @return The name.
+     */
+    java.lang.String getName();
+    /**
+     * <pre>
+     * The unique workspace name.
+     * </pre>
+     *
+     * <code>optional string name = 1 [(.mlflow.validate_required) = true];</code>
+     * @return The bytes for name.
+     */
+    com.google.protobuf.ByteString
+        getNameBytes();
+
+    /**
+     * <pre>
+     * Optional workspace description.
+     * </pre>
+     *
+     * <code>optional string description = 2;</code>
+     * @return Whether the description field is set.
+     */
+    boolean hasDescription();
+    /**
+     * <pre>
+     * Optional workspace description.
+     * </pre>
+     *
+     * <code>optional string description = 2;</code>
+     * @return The description.
+     */
+    java.lang.String getDescription();
+    /**
+     * <pre>
+     * Optional workspace description.
+     * </pre>
+     *
+     * <code>optional string description = 2;</code>
+     * @return The bytes for description.
+     */
+    com.google.protobuf.ByteString
+        getDescriptionBytes();
+
+    /**
+     * <pre>
+     * Optional default artifact root override for this workspace.
+     * </pre>
+     *
+     * <code>optional string default_artifact_root = 3;</code>
+     * @return Whether the defaultArtifactRoot field is set.
+     */
+    boolean hasDefaultArtifactRoot();
+    /**
+     * <pre>
+     * Optional default artifact root override for this workspace.
+     * </pre>
+     *
+     * <code>optional string default_artifact_root = 3;</code>
+     * @return The defaultArtifactRoot.
+     */
+    java.lang.String getDefaultArtifactRoot();
+    /**
+     * <pre>
+     * Optional default artifact root override for this workspace.
+     * </pre>
+     *
+     * <code>optional string default_artifact_root = 3;</code>
+     * @return The bytes for defaultArtifactRoot.
+     */
+    com.google.protobuf.ByteString
+        getDefaultArtifactRootBytes();
+  }
+  /**
+   * <pre>
+   * Workspace metadata returned by workspace APIs.
+   * </pre>
+   *
+   * Protobuf type {@code mlflow.Workspace}
+   */
+  public static final class Workspace extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:mlflow.Workspace)
+      WorkspaceOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use Workspace.newBuilder() to construct.
+    private Workspace(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private Workspace() {
+      name_ = "";
+      description_ = "";
+      defaultArtifactRoot_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new Workspace();
+    }
+
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet
+    getUnknownFields() {
+      return this.unknownFields;
+    }
+    private Workspace(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      this();
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
+      int mutable_bitField0_ = 0;
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            case 10: {
+              com.google.protobuf.ByteString bs = input.readBytes();
+              bitField0_ |= 0x00000001;
+              name_ = bs;
+              break;
+            }
+            case 18: {
+              com.google.protobuf.ByteString bs = input.readBytes();
+              bitField0_ |= 0x00000002;
+              description_ = bs;
+              break;
+            }
+            case 26: {
+              com.google.protobuf.ByteString bs = input.readBytes();
+              bitField0_ |= 0x00000004;
+              defaultArtifactRoot_ = bs;
+              break;
+            }
+            default: {
+              if (!parseUnknownField(
+                  input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e).setUnfinishedMessage(this);
+      } finally {
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return org.mlflow.api.proto.Service.internal_static_mlflow_Workspace_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return org.mlflow.api.proto.Service.internal_static_mlflow_Workspace_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              org.mlflow.api.proto.Service.Workspace.class, org.mlflow.api.proto.Service.Workspace.Builder.class);
+    }
+
+    private int bitField0_;
+    public static final int NAME_FIELD_NUMBER = 1;
+    private volatile java.lang.Object name_;
+    /**
+     * <pre>
+     * The unique workspace name.
+     * </pre>
+     *
+     * <code>optional string name = 1 [(.mlflow.validate_required) = true];</code>
+     * @return Whether the name field is set.
+     */
+    @java.lang.Override
+    public boolean hasName() {
+      return ((bitField0_ & 0x00000001) != 0);
+    }
+    /**
+     * <pre>
+     * The unique workspace name.
+     * </pre>
+     *
+     * <code>optional string name = 1 [(.mlflow.validate_required) = true];</code>
+     * @return The name.
+     */
+    @java.lang.Override
+    public java.lang.String getName() {
+      java.lang.Object ref = name_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        if (bs.isValidUtf8()) {
+          name_ = s;
+        }
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * The unique workspace name.
+     * </pre>
+     *
+     * <code>optional string name = 1 [(.mlflow.validate_required) = true];</code>
+     * @return The bytes for name.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getNameBytes() {
+      java.lang.Object ref = name_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        name_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int DESCRIPTION_FIELD_NUMBER = 2;
+    private volatile java.lang.Object description_;
+    /**
+     * <pre>
+     * Optional workspace description.
+     * </pre>
+     *
+     * <code>optional string description = 2;</code>
+     * @return Whether the description field is set.
+     */
+    @java.lang.Override
+    public boolean hasDescription() {
+      return ((bitField0_ & 0x00000002) != 0);
+    }
+    /**
+     * <pre>
+     * Optional workspace description.
+     * </pre>
+     *
+     * <code>optional string description = 2;</code>
+     * @return The description.
+     */
+    @java.lang.Override
+    public java.lang.String getDescription() {
+      java.lang.Object ref = description_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        if (bs.isValidUtf8()) {
+          description_ = s;
+        }
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * Optional workspace description.
+     * </pre>
+     *
+     * <code>optional string description = 2;</code>
+     * @return The bytes for description.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getDescriptionBytes() {
+      java.lang.Object ref = description_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        description_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int DEFAULT_ARTIFACT_ROOT_FIELD_NUMBER = 3;
+    private volatile java.lang.Object defaultArtifactRoot_;
+    /**
+     * <pre>
+     * Optional default artifact root override for this workspace.
+     * </pre>
+     *
+     * <code>optional string default_artifact_root = 3;</code>
+     * @return Whether the defaultArtifactRoot field is set.
+     */
+    @java.lang.Override
+    public boolean hasDefaultArtifactRoot() {
+      return ((bitField0_ & 0x00000004) != 0);
+    }
+    /**
+     * <pre>
+     * Optional default artifact root override for this workspace.
+     * </pre>
+     *
+     * <code>optional string default_artifact_root = 3;</code>
+     * @return The defaultArtifactRoot.
+     */
+    @java.lang.Override
+    public java.lang.String getDefaultArtifactRoot() {
+      java.lang.Object ref = defaultArtifactRoot_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        if (bs.isValidUtf8()) {
+          defaultArtifactRoot_ = s;
+        }
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * Optional default artifact root override for this workspace.
+     * </pre>
+     *
+     * <code>optional string default_artifact_root = 3;</code>
+     * @return The bytes for defaultArtifactRoot.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getDefaultArtifactRootBytes() {
+      java.lang.Object ref = defaultArtifactRoot_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        defaultArtifactRoot_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (((bitField0_ & 0x00000001) != 0)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, name_);
+      }
+      if (((bitField0_ & 0x00000002) != 0)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 2, description_);
+      }
+      if (((bitField0_ & 0x00000004) != 0)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 3, defaultArtifactRoot_);
+      }
+      unknownFields.writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (((bitField0_ & 0x00000001) != 0)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, name_);
+      }
+      if (((bitField0_ & 0x00000002) != 0)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, description_);
+      }
+      if (((bitField0_ & 0x00000004) != 0)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(3, defaultArtifactRoot_);
+      }
+      size += unknownFields.getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof org.mlflow.api.proto.Service.Workspace)) {
+        return super.equals(obj);
+      }
+      org.mlflow.api.proto.Service.Workspace other = (org.mlflow.api.proto.Service.Workspace) obj;
+
+      if (hasName() != other.hasName()) return false;
+      if (hasName()) {
+        if (!getName()
+            .equals(other.getName())) return false;
+      }
+      if (hasDescription() != other.hasDescription()) return false;
+      if (hasDescription()) {
+        if (!getDescription()
+            .equals(other.getDescription())) return false;
+      }
+      if (hasDefaultArtifactRoot() != other.hasDefaultArtifactRoot()) return false;
+      if (hasDefaultArtifactRoot()) {
+        if (!getDefaultArtifactRoot()
+            .equals(other.getDefaultArtifactRoot())) return false;
+      }
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      if (hasName()) {
+        hash = (37 * hash) + NAME_FIELD_NUMBER;
+        hash = (53 * hash) + getName().hashCode();
+      }
+      if (hasDescription()) {
+        hash = (37 * hash) + DESCRIPTION_FIELD_NUMBER;
+        hash = (53 * hash) + getDescription().hashCode();
+      }
+      if (hasDefaultArtifactRoot()) {
+        hash = (37 * hash) + DEFAULT_ARTIFACT_ROOT_FIELD_NUMBER;
+        hash = (53 * hash) + getDefaultArtifactRoot().hashCode();
+      }
+      hash = (29 * hash) + unknownFields.hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static org.mlflow.api.proto.Service.Workspace parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static org.mlflow.api.proto.Service.Workspace parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static org.mlflow.api.proto.Service.Workspace parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static org.mlflow.api.proto.Service.Workspace parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static org.mlflow.api.proto.Service.Workspace parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static org.mlflow.api.proto.Service.Workspace parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static org.mlflow.api.proto.Service.Workspace parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static org.mlflow.api.proto.Service.Workspace parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static org.mlflow.api.proto.Service.Workspace parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+    public static org.mlflow.api.proto.Service.Workspace parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static org.mlflow.api.proto.Service.Workspace parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static org.mlflow.api.proto.Service.Workspace parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(org.mlflow.api.proto.Service.Workspace prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * <pre>
+     * Workspace metadata returned by workspace APIs.
+     * </pre>
+     *
+     * Protobuf type {@code mlflow.Workspace}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:mlflow.Workspace)
+        org.mlflow.api.proto.Service.WorkspaceOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return org.mlflow.api.proto.Service.internal_static_mlflow_Workspace_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return org.mlflow.api.proto.Service.internal_static_mlflow_Workspace_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                org.mlflow.api.proto.Service.Workspace.class, org.mlflow.api.proto.Service.Workspace.Builder.class);
+      }
+
+      // Construct using org.mlflow.api.proto.Service.Workspace.newBuilder()
+      private Builder() {
+        maybeForceBuilderInitialization();
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+        }
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        name_ = "";
+        bitField0_ = (bitField0_ & ~0x00000001);
+        description_ = "";
+        bitField0_ = (bitField0_ & ~0x00000002);
+        defaultArtifactRoot_ = "";
+        bitField0_ = (bitField0_ & ~0x00000004);
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return org.mlflow.api.proto.Service.internal_static_mlflow_Workspace_descriptor;
+      }
+
+      @java.lang.Override
+      public org.mlflow.api.proto.Service.Workspace getDefaultInstanceForType() {
+        return org.mlflow.api.proto.Service.Workspace.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public org.mlflow.api.proto.Service.Workspace build() {
+        org.mlflow.api.proto.Service.Workspace result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public org.mlflow.api.proto.Service.Workspace buildPartial() {
+        org.mlflow.api.proto.Service.Workspace result = new org.mlflow.api.proto.Service.Workspace(this);
+        int from_bitField0_ = bitField0_;
+        int to_bitField0_ = 0;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          to_bitField0_ |= 0x00000001;
+        }
+        result.name_ = name_;
+        if (((from_bitField0_ & 0x00000002) != 0)) {
+          to_bitField0_ |= 0x00000002;
+        }
+        result.description_ = description_;
+        if (((from_bitField0_ & 0x00000004) != 0)) {
+          to_bitField0_ |= 0x00000004;
+        }
+        result.defaultArtifactRoot_ = defaultArtifactRoot_;
+        result.bitField0_ = to_bitField0_;
+        onBuilt();
+        return result;
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof org.mlflow.api.proto.Service.Workspace) {
+          return mergeFrom((org.mlflow.api.proto.Service.Workspace)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(org.mlflow.api.proto.Service.Workspace other) {
+        if (other == org.mlflow.api.proto.Service.Workspace.getDefaultInstance()) return this;
+        if (other.hasName()) {
+          bitField0_ |= 0x00000001;
+          name_ = other.name_;
+          onChanged();
+        }
+        if (other.hasDescription()) {
+          bitField0_ |= 0x00000002;
+          description_ = other.description_;
+          onChanged();
+        }
+        if (other.hasDefaultArtifactRoot()) {
+          bitField0_ |= 0x00000004;
+          defaultArtifactRoot_ = other.defaultArtifactRoot_;
+          onChanged();
+        }
+        this.mergeUnknownFields(other.unknownFields);
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        org.mlflow.api.proto.Service.Workspace parsedMessage = null;
+        try {
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (org.mlflow.api.proto.Service.Workspace) e.getUnfinishedMessage();
+          throw e.unwrapIOException();
+        } finally {
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
+        return this;
+      }
+      private int bitField0_;
+
+      private java.lang.Object name_ = "";
+      /**
+       * <pre>
+       * The unique workspace name.
+       * </pre>
+       *
+       * <code>optional string name = 1 [(.mlflow.validate_required) = true];</code>
+       * @return Whether the name field is set.
+       */
+      public boolean hasName() {
+        return ((bitField0_ & 0x00000001) != 0);
+      }
+      /**
+       * <pre>
+       * The unique workspace name.
+       * </pre>
+       *
+       * <code>optional string name = 1 [(.mlflow.validate_required) = true];</code>
+       * @return The name.
+       */
+      public java.lang.String getName() {
+        java.lang.Object ref = name_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          if (bs.isValidUtf8()) {
+            name_ = s;
+          }
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * The unique workspace name.
+       * </pre>
+       *
+       * <code>optional string name = 1 [(.mlflow.validate_required) = true];</code>
+       * @return The bytes for name.
+       */
+      public com.google.protobuf.ByteString
+          getNameBytes() {
+        java.lang.Object ref = name_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          name_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * The unique workspace name.
+       * </pre>
+       *
+       * <code>optional string name = 1 [(.mlflow.validate_required) = true];</code>
+       * @param value The name to set.
+       * @return This builder for chaining.
+       */
+      public Builder setName(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  bitField0_ |= 0x00000001;
+        name_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * The unique workspace name.
+       * </pre>
+       *
+       * <code>optional string name = 1 [(.mlflow.validate_required) = true];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearName() {
+        bitField0_ = (bitField0_ & ~0x00000001);
+        name_ = getDefaultInstance().getName();
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * The unique workspace name.
+       * </pre>
+       *
+       * <code>optional string name = 1 [(.mlflow.validate_required) = true];</code>
+       * @param value The bytes for name to set.
+       * @return This builder for chaining.
+       */
+      public Builder setNameBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  bitField0_ |= 0x00000001;
+        name_ = value;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object description_ = "";
+      /**
+       * <pre>
+       * Optional workspace description.
+       * </pre>
+       *
+       * <code>optional string description = 2;</code>
+       * @return Whether the description field is set.
+       */
+      public boolean hasDescription() {
+        return ((bitField0_ & 0x00000002) != 0);
+      }
+      /**
+       * <pre>
+       * Optional workspace description.
+       * </pre>
+       *
+       * <code>optional string description = 2;</code>
+       * @return The description.
+       */
+      public java.lang.String getDescription() {
+        java.lang.Object ref = description_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          if (bs.isValidUtf8()) {
+            description_ = s;
+          }
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * Optional workspace description.
+       * </pre>
+       *
+       * <code>optional string description = 2;</code>
+       * @return The bytes for description.
+       */
+      public com.google.protobuf.ByteString
+          getDescriptionBytes() {
+        java.lang.Object ref = description_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          description_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * Optional workspace description.
+       * </pre>
+       *
+       * <code>optional string description = 2;</code>
+       * @param value The description to set.
+       * @return This builder for chaining.
+       */
+      public Builder setDescription(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  bitField0_ |= 0x00000002;
+        description_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Optional workspace description.
+       * </pre>
+       *
+       * <code>optional string description = 2;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearDescription() {
+        bitField0_ = (bitField0_ & ~0x00000002);
+        description_ = getDefaultInstance().getDescription();
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Optional workspace description.
+       * </pre>
+       *
+       * <code>optional string description = 2;</code>
+       * @param value The bytes for description to set.
+       * @return This builder for chaining.
+       */
+      public Builder setDescriptionBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  bitField0_ |= 0x00000002;
+        description_ = value;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object defaultArtifactRoot_ = "";
+      /**
+       * <pre>
+       * Optional default artifact root override for this workspace.
+       * </pre>
+       *
+       * <code>optional string default_artifact_root = 3;</code>
+       * @return Whether the defaultArtifactRoot field is set.
+       */
+      public boolean hasDefaultArtifactRoot() {
+        return ((bitField0_ & 0x00000004) != 0);
+      }
+      /**
+       * <pre>
+       * Optional default artifact root override for this workspace.
+       * </pre>
+       *
+       * <code>optional string default_artifact_root = 3;</code>
+       * @return The defaultArtifactRoot.
+       */
+      public java.lang.String getDefaultArtifactRoot() {
+        java.lang.Object ref = defaultArtifactRoot_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          if (bs.isValidUtf8()) {
+            defaultArtifactRoot_ = s;
+          }
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * Optional default artifact root override for this workspace.
+       * </pre>
+       *
+       * <code>optional string default_artifact_root = 3;</code>
+       * @return The bytes for defaultArtifactRoot.
+       */
+      public com.google.protobuf.ByteString
+          getDefaultArtifactRootBytes() {
+        java.lang.Object ref = defaultArtifactRoot_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          defaultArtifactRoot_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * Optional default artifact root override for this workspace.
+       * </pre>
+       *
+       * <code>optional string default_artifact_root = 3;</code>
+       * @param value The defaultArtifactRoot to set.
+       * @return This builder for chaining.
+       */
+      public Builder setDefaultArtifactRoot(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  bitField0_ |= 0x00000004;
+        defaultArtifactRoot_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Optional default artifact root override for this workspace.
+       * </pre>
+       *
+       * <code>optional string default_artifact_root = 3;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearDefaultArtifactRoot() {
+        bitField0_ = (bitField0_ & ~0x00000004);
+        defaultArtifactRoot_ = getDefaultInstance().getDefaultArtifactRoot();
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Optional default artifact root override for this workspace.
+       * </pre>
+       *
+       * <code>optional string default_artifact_root = 3;</code>
+       * @param value The bytes for defaultArtifactRoot to set.
+       * @return This builder for chaining.
+       */
+      public Builder setDefaultArtifactRootBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  bitField0_ |= 0x00000004;
+        defaultArtifactRoot_ = value;
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:mlflow.Workspace)
+    }
+
+    // @@protoc_insertion_point(class_scope:mlflow.Workspace)
+    private static final org.mlflow.api.proto.Service.Workspace DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new org.mlflow.api.proto.Service.Workspace();
+    }
+
+    public static org.mlflow.api.proto.Service.Workspace getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    @java.lang.Deprecated public static final com.google.protobuf.Parser<Workspace>
+        PARSER = new com.google.protobuf.AbstractParser<Workspace>() {
+      @java.lang.Override
+      public Workspace parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return new Workspace(input, extensionRegistry);
+      }
+    };
+
+    public static com.google.protobuf.Parser<Workspace> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<Workspace> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public org.mlflow.api.proto.Service.Workspace getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface ListWorkspacesOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:mlflow.ListWorkspaces)
+      com.google.protobuf.MessageOrBuilder {
+  }
+  /**
+   * <pre>
+   * List workspaces available to the current principal.
+   * </pre>
+   *
+   * Protobuf type {@code mlflow.ListWorkspaces}
+   */
+  public static final class ListWorkspaces extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:mlflow.ListWorkspaces)
+      ListWorkspacesOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use ListWorkspaces.newBuilder() to construct.
+    private ListWorkspaces(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private ListWorkspaces() {
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new ListWorkspaces();
+    }
+
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet
+    getUnknownFields() {
+      return this.unknownFields;
+    }
+    private ListWorkspaces(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      this();
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            default: {
+              if (!parseUnknownField(
+                  input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e).setUnfinishedMessage(this);
+      } finally {
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return org.mlflow.api.proto.Service.internal_static_mlflow_ListWorkspaces_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return org.mlflow.api.proto.Service.internal_static_mlflow_ListWorkspaces_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              org.mlflow.api.proto.Service.ListWorkspaces.class, org.mlflow.api.proto.Service.ListWorkspaces.Builder.class);
+    }
+
+    public interface ResponseOrBuilder extends
+        // @@protoc_insertion_point(interface_extends:mlflow.ListWorkspaces.Response)
+        com.google.protobuf.MessageOrBuilder {
+
+      /**
+       * <pre>
+       * Collection of workspace records.
+       * </pre>
+       *
+       * <code>repeated .mlflow.Workspace workspaces = 1;</code>
+       */
+      java.util.List<org.mlflow.api.proto.Service.Workspace> 
+          getWorkspacesList();
+      /**
+       * <pre>
+       * Collection of workspace records.
+       * </pre>
+       *
+       * <code>repeated .mlflow.Workspace workspaces = 1;</code>
+       */
+      org.mlflow.api.proto.Service.Workspace getWorkspaces(int index);
+      /**
+       * <pre>
+       * Collection of workspace records.
+       * </pre>
+       *
+       * <code>repeated .mlflow.Workspace workspaces = 1;</code>
+       */
+      int getWorkspacesCount();
+      /**
+       * <pre>
+       * Collection of workspace records.
+       * </pre>
+       *
+       * <code>repeated .mlflow.Workspace workspaces = 1;</code>
+       */
+      java.util.List<? extends org.mlflow.api.proto.Service.WorkspaceOrBuilder> 
+          getWorkspacesOrBuilderList();
+      /**
+       * <pre>
+       * Collection of workspace records.
+       * </pre>
+       *
+       * <code>repeated .mlflow.Workspace workspaces = 1;</code>
+       */
+      org.mlflow.api.proto.Service.WorkspaceOrBuilder getWorkspacesOrBuilder(
+          int index);
+    }
+    /**
+     * Protobuf type {@code mlflow.ListWorkspaces.Response}
+     */
+    public static final class Response extends
+        com.google.protobuf.GeneratedMessageV3 implements
+        // @@protoc_insertion_point(message_implements:mlflow.ListWorkspaces.Response)
+        ResponseOrBuilder {
+    private static final long serialVersionUID = 0L;
+      // Use Response.newBuilder() to construct.
+      private Response(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+        super(builder);
+      }
+      private Response() {
+        workspaces_ = java.util.Collections.emptyList();
+      }
+
+      @java.lang.Override
+      @SuppressWarnings({"unused"})
+      protected java.lang.Object newInstance(
+          UnusedPrivateParameter unused) {
+        return new Response();
+      }
+
+      @java.lang.Override
+      public final com.google.protobuf.UnknownFieldSet
+      getUnknownFields() {
+        return this.unknownFields;
+      }
+      private Response(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        this();
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        int mutable_bitField0_ = 0;
+        com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+            com.google.protobuf.UnknownFieldSet.newBuilder();
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                if (!((mutable_bitField0_ & 0x00000001) != 0)) {
+                  workspaces_ = new java.util.ArrayList<org.mlflow.api.proto.Service.Workspace>();
+                  mutable_bitField0_ |= 0x00000001;
+                }
+                workspaces_.add(
+                    input.readMessage(org.mlflow.api.proto.Service.Workspace.PARSER, extensionRegistry));
+                break;
+              }
+              default: {
+                if (!parseUnknownField(
+                    input, unknownFields, extensionRegistry, tag)) {
+                  done = true;
+                }
+                break;
+              }
+            }
+          }
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(this);
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(
+              e).setUnfinishedMessage(this);
+        } finally {
+          if (((mutable_bitField0_ & 0x00000001) != 0)) {
+            workspaces_ = java.util.Collections.unmodifiableList(workspaces_);
+          }
+          this.unknownFields = unknownFields.build();
+          makeExtensionsImmutable();
+        }
+      }
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return org.mlflow.api.proto.Service.internal_static_mlflow_ListWorkspaces_Response_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return org.mlflow.api.proto.Service.internal_static_mlflow_ListWorkspaces_Response_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                org.mlflow.api.proto.Service.ListWorkspaces.Response.class, org.mlflow.api.proto.Service.ListWorkspaces.Response.Builder.class);
+      }
+
+      public static final int WORKSPACES_FIELD_NUMBER = 1;
+      private java.util.List<org.mlflow.api.proto.Service.Workspace> workspaces_;
+      /**
+       * <pre>
+       * Collection of workspace records.
+       * </pre>
+       *
+       * <code>repeated .mlflow.Workspace workspaces = 1;</code>
+       */
+      @java.lang.Override
+      public java.util.List<org.mlflow.api.proto.Service.Workspace> getWorkspacesList() {
+        return workspaces_;
+      }
+      /**
+       * <pre>
+       * Collection of workspace records.
+       * </pre>
+       *
+       * <code>repeated .mlflow.Workspace workspaces = 1;</code>
+       */
+      @java.lang.Override
+      public java.util.List<? extends org.mlflow.api.proto.Service.WorkspaceOrBuilder> 
+          getWorkspacesOrBuilderList() {
+        return workspaces_;
+      }
+      /**
+       * <pre>
+       * Collection of workspace records.
+       * </pre>
+       *
+       * <code>repeated .mlflow.Workspace workspaces = 1;</code>
+       */
+      @java.lang.Override
+      public int getWorkspacesCount() {
+        return workspaces_.size();
+      }
+      /**
+       * <pre>
+       * Collection of workspace records.
+       * </pre>
+       *
+       * <code>repeated .mlflow.Workspace workspaces = 1;</code>
+       */
+      @java.lang.Override
+      public org.mlflow.api.proto.Service.Workspace getWorkspaces(int index) {
+        return workspaces_.get(index);
+      }
+      /**
+       * <pre>
+       * Collection of workspace records.
+       * </pre>
+       *
+       * <code>repeated .mlflow.Workspace workspaces = 1;</code>
+       */
+      @java.lang.Override
+      public org.mlflow.api.proto.Service.WorkspaceOrBuilder getWorkspacesOrBuilder(
+          int index) {
+        return workspaces_.get(index);
+      }
+
+      private byte memoizedIsInitialized = -1;
+      @java.lang.Override
+      public final boolean isInitialized() {
+        byte isInitialized = memoizedIsInitialized;
+        if (isInitialized == 1) return true;
+        if (isInitialized == 0) return false;
+
+        memoizedIsInitialized = 1;
+        return true;
+      }
+
+      @java.lang.Override
+      public void writeTo(com.google.protobuf.CodedOutputStream output)
+                          throws java.io.IOException {
+        for (int i = 0; i < workspaces_.size(); i++) {
+          output.writeMessage(1, workspaces_.get(i));
+        }
+        unknownFields.writeTo(output);
+      }
+
+      @java.lang.Override
+      public int getSerializedSize() {
+        int size = memoizedSize;
+        if (size != -1) return size;
+
+        size = 0;
+        for (int i = 0; i < workspaces_.size(); i++) {
+          size += com.google.protobuf.CodedOutputStream
+            .computeMessageSize(1, workspaces_.get(i));
+        }
+        size += unknownFields.getSerializedSize();
+        memoizedSize = size;
+        return size;
+      }
+
+      @java.lang.Override
+      public boolean equals(final java.lang.Object obj) {
+        if (obj == this) {
+         return true;
+        }
+        if (!(obj instanceof org.mlflow.api.proto.Service.ListWorkspaces.Response)) {
+          return super.equals(obj);
+        }
+        org.mlflow.api.proto.Service.ListWorkspaces.Response other = (org.mlflow.api.proto.Service.ListWorkspaces.Response) obj;
+
+        if (!getWorkspacesList()
+            .equals(other.getWorkspacesList())) return false;
+        if (!unknownFields.equals(other.unknownFields)) return false;
+        return true;
+      }
+
+      @java.lang.Override
+      public int hashCode() {
+        if (memoizedHashCode != 0) {
+          return memoizedHashCode;
+        }
+        int hash = 41;
+        hash = (19 * hash) + getDescriptor().hashCode();
+        if (getWorkspacesCount() > 0) {
+          hash = (37 * hash) + WORKSPACES_FIELD_NUMBER;
+          hash = (53 * hash) + getWorkspacesList().hashCode();
+        }
+        hash = (29 * hash) + unknownFields.hashCode();
+        memoizedHashCode = hash;
+        return hash;
+      }
+
+      public static org.mlflow.api.proto.Service.ListWorkspaces.Response parseFrom(
+          java.nio.ByteBuffer data)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data);
+      }
+      public static org.mlflow.api.proto.Service.ListWorkspaces.Response parseFrom(
+          java.nio.ByteBuffer data,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data, extensionRegistry);
+      }
+      public static org.mlflow.api.proto.Service.ListWorkspaces.Response parseFrom(
+          com.google.protobuf.ByteString data)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data);
+      }
+      public static org.mlflow.api.proto.Service.ListWorkspaces.Response parseFrom(
+          com.google.protobuf.ByteString data,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data, extensionRegistry);
+      }
+      public static org.mlflow.api.proto.Service.ListWorkspaces.Response parseFrom(byte[] data)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data);
+      }
+      public static org.mlflow.api.proto.Service.ListWorkspaces.Response parseFrom(
+          byte[] data,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data, extensionRegistry);
+      }
+      public static org.mlflow.api.proto.Service.ListWorkspaces.Response parseFrom(java.io.InputStream input)
+          throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessageV3
+            .parseWithIOException(PARSER, input);
+      }
+      public static org.mlflow.api.proto.Service.ListWorkspaces.Response parseFrom(
+          java.io.InputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessageV3
+            .parseWithIOException(PARSER, input, extensionRegistry);
+      }
+      public static org.mlflow.api.proto.Service.ListWorkspaces.Response parseDelimitedFrom(java.io.InputStream input)
+          throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessageV3
+            .parseDelimitedWithIOException(PARSER, input);
+      }
+      public static org.mlflow.api.proto.Service.ListWorkspaces.Response parseDelimitedFrom(
+          java.io.InputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessageV3
+            .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+      }
+      public static org.mlflow.api.proto.Service.ListWorkspaces.Response parseFrom(
+          com.google.protobuf.CodedInputStream input)
+          throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessageV3
+            .parseWithIOException(PARSER, input);
+      }
+      public static org.mlflow.api.proto.Service.ListWorkspaces.Response parseFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessageV3
+            .parseWithIOException(PARSER, input, extensionRegistry);
+      }
+
+      @java.lang.Override
+      public Builder newBuilderForType() { return newBuilder(); }
+      public static Builder newBuilder() {
+        return DEFAULT_INSTANCE.toBuilder();
+      }
+      public static Builder newBuilder(org.mlflow.api.proto.Service.ListWorkspaces.Response prototype) {
+        return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+      }
+      @java.lang.Override
+      public Builder toBuilder() {
+        return this == DEFAULT_INSTANCE
+            ? new Builder() : new Builder().mergeFrom(this);
+      }
+
+      @java.lang.Override
+      protected Builder newBuilderForType(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        Builder builder = new Builder(parent);
+        return builder;
+      }
+      /**
+       * Protobuf type {@code mlflow.ListWorkspaces.Response}
+       */
+      public static final class Builder extends
+          com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+          // @@protoc_insertion_point(builder_implements:mlflow.ListWorkspaces.Response)
+          org.mlflow.api.proto.Service.ListWorkspaces.ResponseOrBuilder {
+        public static final com.google.protobuf.Descriptors.Descriptor
+            getDescriptor() {
+          return org.mlflow.api.proto.Service.internal_static_mlflow_ListWorkspaces_Response_descriptor;
+        }
+
+        @java.lang.Override
+        protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+            internalGetFieldAccessorTable() {
+          return org.mlflow.api.proto.Service.internal_static_mlflow_ListWorkspaces_Response_fieldAccessorTable
+              .ensureFieldAccessorsInitialized(
+                  org.mlflow.api.proto.Service.ListWorkspaces.Response.class, org.mlflow.api.proto.Service.ListWorkspaces.Response.Builder.class);
+        }
+
+        // Construct using org.mlflow.api.proto.Service.ListWorkspaces.Response.newBuilder()
+        private Builder() {
+          maybeForceBuilderInitialization();
+        }
+
+        private Builder(
+            com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+          super(parent);
+          maybeForceBuilderInitialization();
+        }
+        private void maybeForceBuilderInitialization() {
+          if (com.google.protobuf.GeneratedMessageV3
+                  .alwaysUseFieldBuilders) {
+            getWorkspacesFieldBuilder();
+          }
+        }
+        @java.lang.Override
+        public Builder clear() {
+          super.clear();
+          if (workspacesBuilder_ == null) {
+            workspaces_ = java.util.Collections.emptyList();
+            bitField0_ = (bitField0_ & ~0x00000001);
+          } else {
+            workspacesBuilder_.clear();
+          }
+          return this;
+        }
+
+        @java.lang.Override
+        public com.google.protobuf.Descriptors.Descriptor
+            getDescriptorForType() {
+          return org.mlflow.api.proto.Service.internal_static_mlflow_ListWorkspaces_Response_descriptor;
+        }
+
+        @java.lang.Override
+        public org.mlflow.api.proto.Service.ListWorkspaces.Response getDefaultInstanceForType() {
+          return org.mlflow.api.proto.Service.ListWorkspaces.Response.getDefaultInstance();
+        }
+
+        @java.lang.Override
+        public org.mlflow.api.proto.Service.ListWorkspaces.Response build() {
+          org.mlflow.api.proto.Service.ListWorkspaces.Response result = buildPartial();
+          if (!result.isInitialized()) {
+            throw newUninitializedMessageException(result);
+          }
+          return result;
+        }
+
+        @java.lang.Override
+        public org.mlflow.api.proto.Service.ListWorkspaces.Response buildPartial() {
+          org.mlflow.api.proto.Service.ListWorkspaces.Response result = new org.mlflow.api.proto.Service.ListWorkspaces.Response(this);
+          int from_bitField0_ = bitField0_;
+          if (workspacesBuilder_ == null) {
+            if (((bitField0_ & 0x00000001) != 0)) {
+              workspaces_ = java.util.Collections.unmodifiableList(workspaces_);
+              bitField0_ = (bitField0_ & ~0x00000001);
+            }
+            result.workspaces_ = workspaces_;
+          } else {
+            result.workspaces_ = workspacesBuilder_.build();
+          }
+          onBuilt();
+          return result;
+        }
+
+        @java.lang.Override
+        public Builder clone() {
+          return super.clone();
+        }
+        @java.lang.Override
+        public Builder setField(
+            com.google.protobuf.Descriptors.FieldDescriptor field,
+            java.lang.Object value) {
+          return super.setField(field, value);
+        }
+        @java.lang.Override
+        public Builder clearField(
+            com.google.protobuf.Descriptors.FieldDescriptor field) {
+          return super.clearField(field);
+        }
+        @java.lang.Override
+        public Builder clearOneof(
+            com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+          return super.clearOneof(oneof);
+        }
+        @java.lang.Override
+        public Builder setRepeatedField(
+            com.google.protobuf.Descriptors.FieldDescriptor field,
+            int index, java.lang.Object value) {
+          return super.setRepeatedField(field, index, value);
+        }
+        @java.lang.Override
+        public Builder addRepeatedField(
+            com.google.protobuf.Descriptors.FieldDescriptor field,
+            java.lang.Object value) {
+          return super.addRepeatedField(field, value);
+        }
+        @java.lang.Override
+        public Builder mergeFrom(com.google.protobuf.Message other) {
+          if (other instanceof org.mlflow.api.proto.Service.ListWorkspaces.Response) {
+            return mergeFrom((org.mlflow.api.proto.Service.ListWorkspaces.Response)other);
+          } else {
+            super.mergeFrom(other);
+            return this;
+          }
+        }
+
+        public Builder mergeFrom(org.mlflow.api.proto.Service.ListWorkspaces.Response other) {
+          if (other == org.mlflow.api.proto.Service.ListWorkspaces.Response.getDefaultInstance()) return this;
+          if (workspacesBuilder_ == null) {
+            if (!other.workspaces_.isEmpty()) {
+              if (workspaces_.isEmpty()) {
+                workspaces_ = other.workspaces_;
+                bitField0_ = (bitField0_ & ~0x00000001);
+              } else {
+                ensureWorkspacesIsMutable();
+                workspaces_.addAll(other.workspaces_);
+              }
+              onChanged();
+            }
+          } else {
+            if (!other.workspaces_.isEmpty()) {
+              if (workspacesBuilder_.isEmpty()) {
+                workspacesBuilder_.dispose();
+                workspacesBuilder_ = null;
+                workspaces_ = other.workspaces_;
+                bitField0_ = (bitField0_ & ~0x00000001);
+                workspacesBuilder_ = 
+                  com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
+                     getWorkspacesFieldBuilder() : null;
+              } else {
+                workspacesBuilder_.addAllMessages(other.workspaces_);
+              }
+            }
+          }
+          this.mergeUnknownFields(other.unknownFields);
+          onChanged();
+          return this;
+        }
+
+        @java.lang.Override
+        public final boolean isInitialized() {
+          return true;
+        }
+
+        @java.lang.Override
+        public Builder mergeFrom(
+            com.google.protobuf.CodedInputStream input,
+            com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+            throws java.io.IOException {
+          org.mlflow.api.proto.Service.ListWorkspaces.Response parsedMessage = null;
+          try {
+            parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+          } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+            parsedMessage = (org.mlflow.api.proto.Service.ListWorkspaces.Response) e.getUnfinishedMessage();
+            throw e.unwrapIOException();
+          } finally {
+            if (parsedMessage != null) {
+              mergeFrom(parsedMessage);
+            }
+          }
+          return this;
+        }
+        private int bitField0_;
+
+        private java.util.List<org.mlflow.api.proto.Service.Workspace> workspaces_ =
+          java.util.Collections.emptyList();
+        private void ensureWorkspacesIsMutable() {
+          if (!((bitField0_ & 0x00000001) != 0)) {
+            workspaces_ = new java.util.ArrayList<org.mlflow.api.proto.Service.Workspace>(workspaces_);
+            bitField0_ |= 0x00000001;
+           }
+        }
+
+        private com.google.protobuf.RepeatedFieldBuilderV3<
+            org.mlflow.api.proto.Service.Workspace, org.mlflow.api.proto.Service.Workspace.Builder, org.mlflow.api.proto.Service.WorkspaceOrBuilder> workspacesBuilder_;
+
+        /**
+         * <pre>
+         * Collection of workspace records.
+         * </pre>
+         *
+         * <code>repeated .mlflow.Workspace workspaces = 1;</code>
+         */
+        public java.util.List<org.mlflow.api.proto.Service.Workspace> getWorkspacesList() {
+          if (workspacesBuilder_ == null) {
+            return java.util.Collections.unmodifiableList(workspaces_);
+          } else {
+            return workspacesBuilder_.getMessageList();
+          }
+        }
+        /**
+         * <pre>
+         * Collection of workspace records.
+         * </pre>
+         *
+         * <code>repeated .mlflow.Workspace workspaces = 1;</code>
+         */
+        public int getWorkspacesCount() {
+          if (workspacesBuilder_ == null) {
+            return workspaces_.size();
+          } else {
+            return workspacesBuilder_.getCount();
+          }
+        }
+        /**
+         * <pre>
+         * Collection of workspace records.
+         * </pre>
+         *
+         * <code>repeated .mlflow.Workspace workspaces = 1;</code>
+         */
+        public org.mlflow.api.proto.Service.Workspace getWorkspaces(int index) {
+          if (workspacesBuilder_ == null) {
+            return workspaces_.get(index);
+          } else {
+            return workspacesBuilder_.getMessage(index);
+          }
+        }
+        /**
+         * <pre>
+         * Collection of workspace records.
+         * </pre>
+         *
+         * <code>repeated .mlflow.Workspace workspaces = 1;</code>
+         */
+        public Builder setWorkspaces(
+            int index, org.mlflow.api.proto.Service.Workspace value) {
+          if (workspacesBuilder_ == null) {
+            if (value == null) {
+              throw new NullPointerException();
+            }
+            ensureWorkspacesIsMutable();
+            workspaces_.set(index, value);
+            onChanged();
+          } else {
+            workspacesBuilder_.setMessage(index, value);
+          }
+          return this;
+        }
+        /**
+         * <pre>
+         * Collection of workspace records.
+         * </pre>
+         *
+         * <code>repeated .mlflow.Workspace workspaces = 1;</code>
+         */
+        public Builder setWorkspaces(
+            int index, org.mlflow.api.proto.Service.Workspace.Builder builderForValue) {
+          if (workspacesBuilder_ == null) {
+            ensureWorkspacesIsMutable();
+            workspaces_.set(index, builderForValue.build());
+            onChanged();
+          } else {
+            workspacesBuilder_.setMessage(index, builderForValue.build());
+          }
+          return this;
+        }
+        /**
+         * <pre>
+         * Collection of workspace records.
+         * </pre>
+         *
+         * <code>repeated .mlflow.Workspace workspaces = 1;</code>
+         */
+        public Builder addWorkspaces(org.mlflow.api.proto.Service.Workspace value) {
+          if (workspacesBuilder_ == null) {
+            if (value == null) {
+              throw new NullPointerException();
+            }
+            ensureWorkspacesIsMutable();
+            workspaces_.add(value);
+            onChanged();
+          } else {
+            workspacesBuilder_.addMessage(value);
+          }
+          return this;
+        }
+        /**
+         * <pre>
+         * Collection of workspace records.
+         * </pre>
+         *
+         * <code>repeated .mlflow.Workspace workspaces = 1;</code>
+         */
+        public Builder addWorkspaces(
+            int index, org.mlflow.api.proto.Service.Workspace value) {
+          if (workspacesBuilder_ == null) {
+            if (value == null) {
+              throw new NullPointerException();
+            }
+            ensureWorkspacesIsMutable();
+            workspaces_.add(index, value);
+            onChanged();
+          } else {
+            workspacesBuilder_.addMessage(index, value);
+          }
+          return this;
+        }
+        /**
+         * <pre>
+         * Collection of workspace records.
+         * </pre>
+         *
+         * <code>repeated .mlflow.Workspace workspaces = 1;</code>
+         */
+        public Builder addWorkspaces(
+            org.mlflow.api.proto.Service.Workspace.Builder builderForValue) {
+          if (workspacesBuilder_ == null) {
+            ensureWorkspacesIsMutable();
+            workspaces_.add(builderForValue.build());
+            onChanged();
+          } else {
+            workspacesBuilder_.addMessage(builderForValue.build());
+          }
+          return this;
+        }
+        /**
+         * <pre>
+         * Collection of workspace records.
+         * </pre>
+         *
+         * <code>repeated .mlflow.Workspace workspaces = 1;</code>
+         */
+        public Builder addWorkspaces(
+            int index, org.mlflow.api.proto.Service.Workspace.Builder builderForValue) {
+          if (workspacesBuilder_ == null) {
+            ensureWorkspacesIsMutable();
+            workspaces_.add(index, builderForValue.build());
+            onChanged();
+          } else {
+            workspacesBuilder_.addMessage(index, builderForValue.build());
+          }
+          return this;
+        }
+        /**
+         * <pre>
+         * Collection of workspace records.
+         * </pre>
+         *
+         * <code>repeated .mlflow.Workspace workspaces = 1;</code>
+         */
+        public Builder addAllWorkspaces(
+            java.lang.Iterable<? extends org.mlflow.api.proto.Service.Workspace> values) {
+          if (workspacesBuilder_ == null) {
+            ensureWorkspacesIsMutable();
+            com.google.protobuf.AbstractMessageLite.Builder.addAll(
+                values, workspaces_);
+            onChanged();
+          } else {
+            workspacesBuilder_.addAllMessages(values);
+          }
+          return this;
+        }
+        /**
+         * <pre>
+         * Collection of workspace records.
+         * </pre>
+         *
+         * <code>repeated .mlflow.Workspace workspaces = 1;</code>
+         */
+        public Builder clearWorkspaces() {
+          if (workspacesBuilder_ == null) {
+            workspaces_ = java.util.Collections.emptyList();
+            bitField0_ = (bitField0_ & ~0x00000001);
+            onChanged();
+          } else {
+            workspacesBuilder_.clear();
+          }
+          return this;
+        }
+        /**
+         * <pre>
+         * Collection of workspace records.
+         * </pre>
+         *
+         * <code>repeated .mlflow.Workspace workspaces = 1;</code>
+         */
+        public Builder removeWorkspaces(int index) {
+          if (workspacesBuilder_ == null) {
+            ensureWorkspacesIsMutable();
+            workspaces_.remove(index);
+            onChanged();
+          } else {
+            workspacesBuilder_.remove(index);
+          }
+          return this;
+        }
+        /**
+         * <pre>
+         * Collection of workspace records.
+         * </pre>
+         *
+         * <code>repeated .mlflow.Workspace workspaces = 1;</code>
+         */
+        public org.mlflow.api.proto.Service.Workspace.Builder getWorkspacesBuilder(
+            int index) {
+          return getWorkspacesFieldBuilder().getBuilder(index);
+        }
+        /**
+         * <pre>
+         * Collection of workspace records.
+         * </pre>
+         *
+         * <code>repeated .mlflow.Workspace workspaces = 1;</code>
+         */
+        public org.mlflow.api.proto.Service.WorkspaceOrBuilder getWorkspacesOrBuilder(
+            int index) {
+          if (workspacesBuilder_ == null) {
+            return workspaces_.get(index);  } else {
+            return workspacesBuilder_.getMessageOrBuilder(index);
+          }
+        }
+        /**
+         * <pre>
+         * Collection of workspace records.
+         * </pre>
+         *
+         * <code>repeated .mlflow.Workspace workspaces = 1;</code>
+         */
+        public java.util.List<? extends org.mlflow.api.proto.Service.WorkspaceOrBuilder> 
+             getWorkspacesOrBuilderList() {
+          if (workspacesBuilder_ != null) {
+            return workspacesBuilder_.getMessageOrBuilderList();
+          } else {
+            return java.util.Collections.unmodifiableList(workspaces_);
+          }
+        }
+        /**
+         * <pre>
+         * Collection of workspace records.
+         * </pre>
+         *
+         * <code>repeated .mlflow.Workspace workspaces = 1;</code>
+         */
+        public org.mlflow.api.proto.Service.Workspace.Builder addWorkspacesBuilder() {
+          return getWorkspacesFieldBuilder().addBuilder(
+              org.mlflow.api.proto.Service.Workspace.getDefaultInstance());
+        }
+        /**
+         * <pre>
+         * Collection of workspace records.
+         * </pre>
+         *
+         * <code>repeated .mlflow.Workspace workspaces = 1;</code>
+         */
+        public org.mlflow.api.proto.Service.Workspace.Builder addWorkspacesBuilder(
+            int index) {
+          return getWorkspacesFieldBuilder().addBuilder(
+              index, org.mlflow.api.proto.Service.Workspace.getDefaultInstance());
+        }
+        /**
+         * <pre>
+         * Collection of workspace records.
+         * </pre>
+         *
+         * <code>repeated .mlflow.Workspace workspaces = 1;</code>
+         */
+        public java.util.List<org.mlflow.api.proto.Service.Workspace.Builder> 
+             getWorkspacesBuilderList() {
+          return getWorkspacesFieldBuilder().getBuilderList();
+        }
+        private com.google.protobuf.RepeatedFieldBuilderV3<
+            org.mlflow.api.proto.Service.Workspace, org.mlflow.api.proto.Service.Workspace.Builder, org.mlflow.api.proto.Service.WorkspaceOrBuilder> 
+            getWorkspacesFieldBuilder() {
+          if (workspacesBuilder_ == null) {
+            workspacesBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
+                org.mlflow.api.proto.Service.Workspace, org.mlflow.api.proto.Service.Workspace.Builder, org.mlflow.api.proto.Service.WorkspaceOrBuilder>(
+                    workspaces_,
+                    ((bitField0_ & 0x00000001) != 0),
+                    getParentForChildren(),
+                    isClean());
+            workspaces_ = null;
+          }
+          return workspacesBuilder_;
+        }
+        @java.lang.Override
+        public final Builder setUnknownFields(
+            final com.google.protobuf.UnknownFieldSet unknownFields) {
+          return super.setUnknownFields(unknownFields);
+        }
+
+        @java.lang.Override
+        public final Builder mergeUnknownFields(
+            final com.google.protobuf.UnknownFieldSet unknownFields) {
+          return super.mergeUnknownFields(unknownFields);
+        }
+
+
+        // @@protoc_insertion_point(builder_scope:mlflow.ListWorkspaces.Response)
+      }
+
+      // @@protoc_insertion_point(class_scope:mlflow.ListWorkspaces.Response)
+      private static final org.mlflow.api.proto.Service.ListWorkspaces.Response DEFAULT_INSTANCE;
+      static {
+        DEFAULT_INSTANCE = new org.mlflow.api.proto.Service.ListWorkspaces.Response();
+      }
+
+      public static org.mlflow.api.proto.Service.ListWorkspaces.Response getDefaultInstance() {
+        return DEFAULT_INSTANCE;
+      }
+
+      @java.lang.Deprecated public static final com.google.protobuf.Parser<Response>
+          PARSER = new com.google.protobuf.AbstractParser<Response>() {
+        @java.lang.Override
+        public Response parsePartialFrom(
+            com.google.protobuf.CodedInputStream input,
+            com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+            throws com.google.protobuf.InvalidProtocolBufferException {
+          return new Response(input, extensionRegistry);
+        }
+      };
+
+      public static com.google.protobuf.Parser<Response> parser() {
+        return PARSER;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Parser<Response> getParserForType() {
+        return PARSER;
+      }
+
+      @java.lang.Override
+      public org.mlflow.api.proto.Service.ListWorkspaces.Response getDefaultInstanceForType() {
+        return DEFAULT_INSTANCE;
+      }
+
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      unknownFields.writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      size += unknownFields.getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof org.mlflow.api.proto.Service.ListWorkspaces)) {
+        return super.equals(obj);
+      }
+      org.mlflow.api.proto.Service.ListWorkspaces other = (org.mlflow.api.proto.Service.ListWorkspaces) obj;
+
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (29 * hash) + unknownFields.hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static org.mlflow.api.proto.Service.ListWorkspaces parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static org.mlflow.api.proto.Service.ListWorkspaces parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static org.mlflow.api.proto.Service.ListWorkspaces parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static org.mlflow.api.proto.Service.ListWorkspaces parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static org.mlflow.api.proto.Service.ListWorkspaces parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static org.mlflow.api.proto.Service.ListWorkspaces parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static org.mlflow.api.proto.Service.ListWorkspaces parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static org.mlflow.api.proto.Service.ListWorkspaces parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static org.mlflow.api.proto.Service.ListWorkspaces parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+    public static org.mlflow.api.proto.Service.ListWorkspaces parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static org.mlflow.api.proto.Service.ListWorkspaces parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static org.mlflow.api.proto.Service.ListWorkspaces parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(org.mlflow.api.proto.Service.ListWorkspaces prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * <pre>
+     * List workspaces available to the current principal.
+     * </pre>
+     *
+     * Protobuf type {@code mlflow.ListWorkspaces}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:mlflow.ListWorkspaces)
+        org.mlflow.api.proto.Service.ListWorkspacesOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return org.mlflow.api.proto.Service.internal_static_mlflow_ListWorkspaces_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return org.mlflow.api.proto.Service.internal_static_mlflow_ListWorkspaces_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                org.mlflow.api.proto.Service.ListWorkspaces.class, org.mlflow.api.proto.Service.ListWorkspaces.Builder.class);
+      }
+
+      // Construct using org.mlflow.api.proto.Service.ListWorkspaces.newBuilder()
+      private Builder() {
+        maybeForceBuilderInitialization();
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+        }
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return org.mlflow.api.proto.Service.internal_static_mlflow_ListWorkspaces_descriptor;
+      }
+
+      @java.lang.Override
+      public org.mlflow.api.proto.Service.ListWorkspaces getDefaultInstanceForType() {
+        return org.mlflow.api.proto.Service.ListWorkspaces.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public org.mlflow.api.proto.Service.ListWorkspaces build() {
+        org.mlflow.api.proto.Service.ListWorkspaces result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public org.mlflow.api.proto.Service.ListWorkspaces buildPartial() {
+        org.mlflow.api.proto.Service.ListWorkspaces result = new org.mlflow.api.proto.Service.ListWorkspaces(this);
+        onBuilt();
+        return result;
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof org.mlflow.api.proto.Service.ListWorkspaces) {
+          return mergeFrom((org.mlflow.api.proto.Service.ListWorkspaces)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(org.mlflow.api.proto.Service.ListWorkspaces other) {
+        if (other == org.mlflow.api.proto.Service.ListWorkspaces.getDefaultInstance()) return this;
+        this.mergeUnknownFields(other.unknownFields);
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        org.mlflow.api.proto.Service.ListWorkspaces parsedMessage = null;
+        try {
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (org.mlflow.api.proto.Service.ListWorkspaces) e.getUnfinishedMessage();
+          throw e.unwrapIOException();
+        } finally {
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:mlflow.ListWorkspaces)
+    }
+
+    // @@protoc_insertion_point(class_scope:mlflow.ListWorkspaces)
+    private static final org.mlflow.api.proto.Service.ListWorkspaces DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new org.mlflow.api.proto.Service.ListWorkspaces();
+    }
+
+    public static org.mlflow.api.proto.Service.ListWorkspaces getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    @java.lang.Deprecated public static final com.google.protobuf.Parser<ListWorkspaces>
+        PARSER = new com.google.protobuf.AbstractParser<ListWorkspaces>() {
+      @java.lang.Override
+      public ListWorkspaces parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return new ListWorkspaces(input, extensionRegistry);
+      }
+    };
+
+    public static com.google.protobuf.Parser<ListWorkspaces> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<ListWorkspaces> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public org.mlflow.api.proto.Service.ListWorkspaces getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface CreateWorkspaceOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:mlflow.CreateWorkspace)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <pre>
+     * Workspace name to create.
+     * </pre>
+     *
+     * <code>optional string name = 1 [(.mlflow.validate_required) = true];</code>
+     * @return Whether the name field is set.
+     */
+    boolean hasName();
+    /**
+     * <pre>
+     * Workspace name to create.
+     * </pre>
+     *
+     * <code>optional string name = 1 [(.mlflow.validate_required) = true];</code>
+     * @return The name.
+     */
+    java.lang.String getName();
+    /**
+     * <pre>
+     * Workspace name to create.
+     * </pre>
+     *
+     * <code>optional string name = 1 [(.mlflow.validate_required) = true];</code>
+     * @return The bytes for name.
+     */
+    com.google.protobuf.ByteString
+        getNameBytes();
+
+    /**
+     * <pre>
+     * Optional workspace description.
+     * </pre>
+     *
+     * <code>optional string description = 2;</code>
+     * @return Whether the description field is set.
+     */
+    boolean hasDescription();
+    /**
+     * <pre>
+     * Optional workspace description.
+     * </pre>
+     *
+     * <code>optional string description = 2;</code>
+     * @return The description.
+     */
+    java.lang.String getDescription();
+    /**
+     * <pre>
+     * Optional workspace description.
+     * </pre>
+     *
+     * <code>optional string description = 2;</code>
+     * @return The bytes for description.
+     */
+    com.google.protobuf.ByteString
+        getDescriptionBytes();
+
+    /**
+     * <pre>
+     * Optional default artifact root override to apply at creation time.
+     * </pre>
+     *
+     * <code>optional string default_artifact_root = 3;</code>
+     * @return Whether the defaultArtifactRoot field is set.
+     */
+    boolean hasDefaultArtifactRoot();
+    /**
+     * <pre>
+     * Optional default artifact root override to apply at creation time.
+     * </pre>
+     *
+     * <code>optional string default_artifact_root = 3;</code>
+     * @return The defaultArtifactRoot.
+     */
+    java.lang.String getDefaultArtifactRoot();
+    /**
+     * <pre>
+     * Optional default artifact root override to apply at creation time.
+     * </pre>
+     *
+     * <code>optional string default_artifact_root = 3;</code>
+     * @return The bytes for defaultArtifactRoot.
+     */
+    com.google.protobuf.ByteString
+        getDefaultArtifactRootBytes();
+  }
+  /**
+   * <pre>
+   * Create a new workspace.
+   * </pre>
+   *
+   * Protobuf type {@code mlflow.CreateWorkspace}
+   */
+  public static final class CreateWorkspace extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:mlflow.CreateWorkspace)
+      CreateWorkspaceOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use CreateWorkspace.newBuilder() to construct.
+    private CreateWorkspace(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private CreateWorkspace() {
+      name_ = "";
+      description_ = "";
+      defaultArtifactRoot_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new CreateWorkspace();
+    }
+
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet
+    getUnknownFields() {
+      return this.unknownFields;
+    }
+    private CreateWorkspace(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      this();
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
+      int mutable_bitField0_ = 0;
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            case 10: {
+              com.google.protobuf.ByteString bs = input.readBytes();
+              bitField0_ |= 0x00000001;
+              name_ = bs;
+              break;
+            }
+            case 18: {
+              com.google.protobuf.ByteString bs = input.readBytes();
+              bitField0_ |= 0x00000002;
+              description_ = bs;
+              break;
+            }
+            case 26: {
+              com.google.protobuf.ByteString bs = input.readBytes();
+              bitField0_ |= 0x00000004;
+              defaultArtifactRoot_ = bs;
+              break;
+            }
+            default: {
+              if (!parseUnknownField(
+                  input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e).setUnfinishedMessage(this);
+      } finally {
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return org.mlflow.api.proto.Service.internal_static_mlflow_CreateWorkspace_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return org.mlflow.api.proto.Service.internal_static_mlflow_CreateWorkspace_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              org.mlflow.api.proto.Service.CreateWorkspace.class, org.mlflow.api.proto.Service.CreateWorkspace.Builder.class);
+    }
+
+    public interface ResponseOrBuilder extends
+        // @@protoc_insertion_point(interface_extends:mlflow.CreateWorkspace.Response)
+        com.google.protobuf.MessageOrBuilder {
+
+      /**
+       * <pre>
+       * Metadata describing the created workspace.
+       * </pre>
+       *
+       * <code>optional .mlflow.Workspace workspace = 1;</code>
+       * @return Whether the workspace field is set.
+       */
+      boolean hasWorkspace();
+      /**
+       * <pre>
+       * Metadata describing the created workspace.
+       * </pre>
+       *
+       * <code>optional .mlflow.Workspace workspace = 1;</code>
+       * @return The workspace.
+       */
+      org.mlflow.api.proto.Service.Workspace getWorkspace();
+      /**
+       * <pre>
+       * Metadata describing the created workspace.
+       * </pre>
+       *
+       * <code>optional .mlflow.Workspace workspace = 1;</code>
+       */
+      org.mlflow.api.proto.Service.WorkspaceOrBuilder getWorkspaceOrBuilder();
+    }
+    /**
+     * Protobuf type {@code mlflow.CreateWorkspace.Response}
+     */
+    public static final class Response extends
+        com.google.protobuf.GeneratedMessageV3 implements
+        // @@protoc_insertion_point(message_implements:mlflow.CreateWorkspace.Response)
+        ResponseOrBuilder {
+    private static final long serialVersionUID = 0L;
+      // Use Response.newBuilder() to construct.
+      private Response(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+        super(builder);
+      }
+      private Response() {
+      }
+
+      @java.lang.Override
+      @SuppressWarnings({"unused"})
+      protected java.lang.Object newInstance(
+          UnusedPrivateParameter unused) {
+        return new Response();
+      }
+
+      @java.lang.Override
+      public final com.google.protobuf.UnknownFieldSet
+      getUnknownFields() {
+        return this.unknownFields;
+      }
+      private Response(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        this();
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        int mutable_bitField0_ = 0;
+        com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+            com.google.protobuf.UnknownFieldSet.newBuilder();
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                org.mlflow.api.proto.Service.Workspace.Builder subBuilder = null;
+                if (((bitField0_ & 0x00000001) != 0)) {
+                  subBuilder = workspace_.toBuilder();
+                }
+                workspace_ = input.readMessage(org.mlflow.api.proto.Service.Workspace.PARSER, extensionRegistry);
+                if (subBuilder != null) {
+                  subBuilder.mergeFrom(workspace_);
+                  workspace_ = subBuilder.buildPartial();
+                }
+                bitField0_ |= 0x00000001;
+                break;
+              }
+              default: {
+                if (!parseUnknownField(
+                    input, unknownFields, extensionRegistry, tag)) {
+                  done = true;
+                }
+                break;
+              }
+            }
+          }
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(this);
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(
+              e).setUnfinishedMessage(this);
+        } finally {
+          this.unknownFields = unknownFields.build();
+          makeExtensionsImmutable();
+        }
+      }
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return org.mlflow.api.proto.Service.internal_static_mlflow_CreateWorkspace_Response_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return org.mlflow.api.proto.Service.internal_static_mlflow_CreateWorkspace_Response_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                org.mlflow.api.proto.Service.CreateWorkspace.Response.class, org.mlflow.api.proto.Service.CreateWorkspace.Response.Builder.class);
+      }
+
+      private int bitField0_;
+      public static final int WORKSPACE_FIELD_NUMBER = 1;
+      private org.mlflow.api.proto.Service.Workspace workspace_;
+      /**
+       * <pre>
+       * Metadata describing the created workspace.
+       * </pre>
+       *
+       * <code>optional .mlflow.Workspace workspace = 1;</code>
+       * @return Whether the workspace field is set.
+       */
+      @java.lang.Override
+      public boolean hasWorkspace() {
+        return ((bitField0_ & 0x00000001) != 0);
+      }
+      /**
+       * <pre>
+       * Metadata describing the created workspace.
+       * </pre>
+       *
+       * <code>optional .mlflow.Workspace workspace = 1;</code>
+       * @return The workspace.
+       */
+      @java.lang.Override
+      public org.mlflow.api.proto.Service.Workspace getWorkspace() {
+        return workspace_ == null ? org.mlflow.api.proto.Service.Workspace.getDefaultInstance() : workspace_;
+      }
+      /**
+       * <pre>
+       * Metadata describing the created workspace.
+       * </pre>
+       *
+       * <code>optional .mlflow.Workspace workspace = 1;</code>
+       */
+      @java.lang.Override
+      public org.mlflow.api.proto.Service.WorkspaceOrBuilder getWorkspaceOrBuilder() {
+        return workspace_ == null ? org.mlflow.api.proto.Service.Workspace.getDefaultInstance() : workspace_;
+      }
+
+      private byte memoizedIsInitialized = -1;
+      @java.lang.Override
+      public final boolean isInitialized() {
+        byte isInitialized = memoizedIsInitialized;
+        if (isInitialized == 1) return true;
+        if (isInitialized == 0) return false;
+
+        memoizedIsInitialized = 1;
+        return true;
+      }
+
+      @java.lang.Override
+      public void writeTo(com.google.protobuf.CodedOutputStream output)
+                          throws java.io.IOException {
+        if (((bitField0_ & 0x00000001) != 0)) {
+          output.writeMessage(1, getWorkspace());
+        }
+        unknownFields.writeTo(output);
+      }
+
+      @java.lang.Override
+      public int getSerializedSize() {
+        int size = memoizedSize;
+        if (size != -1) return size;
+
+        size = 0;
+        if (((bitField0_ & 0x00000001) != 0)) {
+          size += com.google.protobuf.CodedOutputStream
+            .computeMessageSize(1, getWorkspace());
+        }
+        size += unknownFields.getSerializedSize();
+        memoizedSize = size;
+        return size;
+      }
+
+      @java.lang.Override
+      public boolean equals(final java.lang.Object obj) {
+        if (obj == this) {
+         return true;
+        }
+        if (!(obj instanceof org.mlflow.api.proto.Service.CreateWorkspace.Response)) {
+          return super.equals(obj);
+        }
+        org.mlflow.api.proto.Service.CreateWorkspace.Response other = (org.mlflow.api.proto.Service.CreateWorkspace.Response) obj;
+
+        if (hasWorkspace() != other.hasWorkspace()) return false;
+        if (hasWorkspace()) {
+          if (!getWorkspace()
+              .equals(other.getWorkspace())) return false;
+        }
+        if (!unknownFields.equals(other.unknownFields)) return false;
+        return true;
+      }
+
+      @java.lang.Override
+      public int hashCode() {
+        if (memoizedHashCode != 0) {
+          return memoizedHashCode;
+        }
+        int hash = 41;
+        hash = (19 * hash) + getDescriptor().hashCode();
+        if (hasWorkspace()) {
+          hash = (37 * hash) + WORKSPACE_FIELD_NUMBER;
+          hash = (53 * hash) + getWorkspace().hashCode();
+        }
+        hash = (29 * hash) + unknownFields.hashCode();
+        memoizedHashCode = hash;
+        return hash;
+      }
+
+      public static org.mlflow.api.proto.Service.CreateWorkspace.Response parseFrom(
+          java.nio.ByteBuffer data)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data);
+      }
+      public static org.mlflow.api.proto.Service.CreateWorkspace.Response parseFrom(
+          java.nio.ByteBuffer data,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data, extensionRegistry);
+      }
+      public static org.mlflow.api.proto.Service.CreateWorkspace.Response parseFrom(
+          com.google.protobuf.ByteString data)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data);
+      }
+      public static org.mlflow.api.proto.Service.CreateWorkspace.Response parseFrom(
+          com.google.protobuf.ByteString data,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data, extensionRegistry);
+      }
+      public static org.mlflow.api.proto.Service.CreateWorkspace.Response parseFrom(byte[] data)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data);
+      }
+      public static org.mlflow.api.proto.Service.CreateWorkspace.Response parseFrom(
+          byte[] data,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data, extensionRegistry);
+      }
+      public static org.mlflow.api.proto.Service.CreateWorkspace.Response parseFrom(java.io.InputStream input)
+          throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessageV3
+            .parseWithIOException(PARSER, input);
+      }
+      public static org.mlflow.api.proto.Service.CreateWorkspace.Response parseFrom(
+          java.io.InputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessageV3
+            .parseWithIOException(PARSER, input, extensionRegistry);
+      }
+      public static org.mlflow.api.proto.Service.CreateWorkspace.Response parseDelimitedFrom(java.io.InputStream input)
+          throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessageV3
+            .parseDelimitedWithIOException(PARSER, input);
+      }
+      public static org.mlflow.api.proto.Service.CreateWorkspace.Response parseDelimitedFrom(
+          java.io.InputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessageV3
+            .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+      }
+      public static org.mlflow.api.proto.Service.CreateWorkspace.Response parseFrom(
+          com.google.protobuf.CodedInputStream input)
+          throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessageV3
+            .parseWithIOException(PARSER, input);
+      }
+      public static org.mlflow.api.proto.Service.CreateWorkspace.Response parseFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessageV3
+            .parseWithIOException(PARSER, input, extensionRegistry);
+      }
+
+      @java.lang.Override
+      public Builder newBuilderForType() { return newBuilder(); }
+      public static Builder newBuilder() {
+        return DEFAULT_INSTANCE.toBuilder();
+      }
+      public static Builder newBuilder(org.mlflow.api.proto.Service.CreateWorkspace.Response prototype) {
+        return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+      }
+      @java.lang.Override
+      public Builder toBuilder() {
+        return this == DEFAULT_INSTANCE
+            ? new Builder() : new Builder().mergeFrom(this);
+      }
+
+      @java.lang.Override
+      protected Builder newBuilderForType(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        Builder builder = new Builder(parent);
+        return builder;
+      }
+      /**
+       * Protobuf type {@code mlflow.CreateWorkspace.Response}
+       */
+      public static final class Builder extends
+          com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+          // @@protoc_insertion_point(builder_implements:mlflow.CreateWorkspace.Response)
+          org.mlflow.api.proto.Service.CreateWorkspace.ResponseOrBuilder {
+        public static final com.google.protobuf.Descriptors.Descriptor
+            getDescriptor() {
+          return org.mlflow.api.proto.Service.internal_static_mlflow_CreateWorkspace_Response_descriptor;
+        }
+
+        @java.lang.Override
+        protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+            internalGetFieldAccessorTable() {
+          return org.mlflow.api.proto.Service.internal_static_mlflow_CreateWorkspace_Response_fieldAccessorTable
+              .ensureFieldAccessorsInitialized(
+                  org.mlflow.api.proto.Service.CreateWorkspace.Response.class, org.mlflow.api.proto.Service.CreateWorkspace.Response.Builder.class);
+        }
+
+        // Construct using org.mlflow.api.proto.Service.CreateWorkspace.Response.newBuilder()
+        private Builder() {
+          maybeForceBuilderInitialization();
+        }
+
+        private Builder(
+            com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+          super(parent);
+          maybeForceBuilderInitialization();
+        }
+        private void maybeForceBuilderInitialization() {
+          if (com.google.protobuf.GeneratedMessageV3
+                  .alwaysUseFieldBuilders) {
+            getWorkspaceFieldBuilder();
+          }
+        }
+        @java.lang.Override
+        public Builder clear() {
+          super.clear();
+          if (workspaceBuilder_ == null) {
+            workspace_ = null;
+          } else {
+            workspaceBuilder_.clear();
+          }
+          bitField0_ = (bitField0_ & ~0x00000001);
+          return this;
+        }
+
+        @java.lang.Override
+        public com.google.protobuf.Descriptors.Descriptor
+            getDescriptorForType() {
+          return org.mlflow.api.proto.Service.internal_static_mlflow_CreateWorkspace_Response_descriptor;
+        }
+
+        @java.lang.Override
+        public org.mlflow.api.proto.Service.CreateWorkspace.Response getDefaultInstanceForType() {
+          return org.mlflow.api.proto.Service.CreateWorkspace.Response.getDefaultInstance();
+        }
+
+        @java.lang.Override
+        public org.mlflow.api.proto.Service.CreateWorkspace.Response build() {
+          org.mlflow.api.proto.Service.CreateWorkspace.Response result = buildPartial();
+          if (!result.isInitialized()) {
+            throw newUninitializedMessageException(result);
+          }
+          return result;
+        }
+
+        @java.lang.Override
+        public org.mlflow.api.proto.Service.CreateWorkspace.Response buildPartial() {
+          org.mlflow.api.proto.Service.CreateWorkspace.Response result = new org.mlflow.api.proto.Service.CreateWorkspace.Response(this);
+          int from_bitField0_ = bitField0_;
+          int to_bitField0_ = 0;
+          if (((from_bitField0_ & 0x00000001) != 0)) {
+            if (workspaceBuilder_ == null) {
+              result.workspace_ = workspace_;
+            } else {
+              result.workspace_ = workspaceBuilder_.build();
+            }
+            to_bitField0_ |= 0x00000001;
+          }
+          result.bitField0_ = to_bitField0_;
+          onBuilt();
+          return result;
+        }
+
+        @java.lang.Override
+        public Builder clone() {
+          return super.clone();
+        }
+        @java.lang.Override
+        public Builder setField(
+            com.google.protobuf.Descriptors.FieldDescriptor field,
+            java.lang.Object value) {
+          return super.setField(field, value);
+        }
+        @java.lang.Override
+        public Builder clearField(
+            com.google.protobuf.Descriptors.FieldDescriptor field) {
+          return super.clearField(field);
+        }
+        @java.lang.Override
+        public Builder clearOneof(
+            com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+          return super.clearOneof(oneof);
+        }
+        @java.lang.Override
+        public Builder setRepeatedField(
+            com.google.protobuf.Descriptors.FieldDescriptor field,
+            int index, java.lang.Object value) {
+          return super.setRepeatedField(field, index, value);
+        }
+        @java.lang.Override
+        public Builder addRepeatedField(
+            com.google.protobuf.Descriptors.FieldDescriptor field,
+            java.lang.Object value) {
+          return super.addRepeatedField(field, value);
+        }
+        @java.lang.Override
+        public Builder mergeFrom(com.google.protobuf.Message other) {
+          if (other instanceof org.mlflow.api.proto.Service.CreateWorkspace.Response) {
+            return mergeFrom((org.mlflow.api.proto.Service.CreateWorkspace.Response)other);
+          } else {
+            super.mergeFrom(other);
+            return this;
+          }
+        }
+
+        public Builder mergeFrom(org.mlflow.api.proto.Service.CreateWorkspace.Response other) {
+          if (other == org.mlflow.api.proto.Service.CreateWorkspace.Response.getDefaultInstance()) return this;
+          if (other.hasWorkspace()) {
+            mergeWorkspace(other.getWorkspace());
+          }
+          this.mergeUnknownFields(other.unknownFields);
+          onChanged();
+          return this;
+        }
+
+        @java.lang.Override
+        public final boolean isInitialized() {
+          return true;
+        }
+
+        @java.lang.Override
+        public Builder mergeFrom(
+            com.google.protobuf.CodedInputStream input,
+            com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+            throws java.io.IOException {
+          org.mlflow.api.proto.Service.CreateWorkspace.Response parsedMessage = null;
+          try {
+            parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+          } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+            parsedMessage = (org.mlflow.api.proto.Service.CreateWorkspace.Response) e.getUnfinishedMessage();
+            throw e.unwrapIOException();
+          } finally {
+            if (parsedMessage != null) {
+              mergeFrom(parsedMessage);
+            }
+          }
+          return this;
+        }
+        private int bitField0_;
+
+        private org.mlflow.api.proto.Service.Workspace workspace_;
+        private com.google.protobuf.SingleFieldBuilderV3<
+            org.mlflow.api.proto.Service.Workspace, org.mlflow.api.proto.Service.Workspace.Builder, org.mlflow.api.proto.Service.WorkspaceOrBuilder> workspaceBuilder_;
+        /**
+         * <pre>
+         * Metadata describing the created workspace.
+         * </pre>
+         *
+         * <code>optional .mlflow.Workspace workspace = 1;</code>
+         * @return Whether the workspace field is set.
+         */
+        public boolean hasWorkspace() {
+          return ((bitField0_ & 0x00000001) != 0);
+        }
+        /**
+         * <pre>
+         * Metadata describing the created workspace.
+         * </pre>
+         *
+         * <code>optional .mlflow.Workspace workspace = 1;</code>
+         * @return The workspace.
+         */
+        public org.mlflow.api.proto.Service.Workspace getWorkspace() {
+          if (workspaceBuilder_ == null) {
+            return workspace_ == null ? org.mlflow.api.proto.Service.Workspace.getDefaultInstance() : workspace_;
+          } else {
+            return workspaceBuilder_.getMessage();
+          }
+        }
+        /**
+         * <pre>
+         * Metadata describing the created workspace.
+         * </pre>
+         *
+         * <code>optional .mlflow.Workspace workspace = 1;</code>
+         */
+        public Builder setWorkspace(org.mlflow.api.proto.Service.Workspace value) {
+          if (workspaceBuilder_ == null) {
+            if (value == null) {
+              throw new NullPointerException();
+            }
+            workspace_ = value;
+            onChanged();
+          } else {
+            workspaceBuilder_.setMessage(value);
+          }
+          bitField0_ |= 0x00000001;
+          return this;
+        }
+        /**
+         * <pre>
+         * Metadata describing the created workspace.
+         * </pre>
+         *
+         * <code>optional .mlflow.Workspace workspace = 1;</code>
+         */
+        public Builder setWorkspace(
+            org.mlflow.api.proto.Service.Workspace.Builder builderForValue) {
+          if (workspaceBuilder_ == null) {
+            workspace_ = builderForValue.build();
+            onChanged();
+          } else {
+            workspaceBuilder_.setMessage(builderForValue.build());
+          }
+          bitField0_ |= 0x00000001;
+          return this;
+        }
+        /**
+         * <pre>
+         * Metadata describing the created workspace.
+         * </pre>
+         *
+         * <code>optional .mlflow.Workspace workspace = 1;</code>
+         */
+        public Builder mergeWorkspace(org.mlflow.api.proto.Service.Workspace value) {
+          if (workspaceBuilder_ == null) {
+            if (((bitField0_ & 0x00000001) != 0) &&
+                workspace_ != null &&
+                workspace_ != org.mlflow.api.proto.Service.Workspace.getDefaultInstance()) {
+              workspace_ =
+                org.mlflow.api.proto.Service.Workspace.newBuilder(workspace_).mergeFrom(value).buildPartial();
+            } else {
+              workspace_ = value;
+            }
+            onChanged();
+          } else {
+            workspaceBuilder_.mergeFrom(value);
+          }
+          bitField0_ |= 0x00000001;
+          return this;
+        }
+        /**
+         * <pre>
+         * Metadata describing the created workspace.
+         * </pre>
+         *
+         * <code>optional .mlflow.Workspace workspace = 1;</code>
+         */
+        public Builder clearWorkspace() {
+          if (workspaceBuilder_ == null) {
+            workspace_ = null;
+            onChanged();
+          } else {
+            workspaceBuilder_.clear();
+          }
+          bitField0_ = (bitField0_ & ~0x00000001);
+          return this;
+        }
+        /**
+         * <pre>
+         * Metadata describing the created workspace.
+         * </pre>
+         *
+         * <code>optional .mlflow.Workspace workspace = 1;</code>
+         */
+        public org.mlflow.api.proto.Service.Workspace.Builder getWorkspaceBuilder() {
+          bitField0_ |= 0x00000001;
+          onChanged();
+          return getWorkspaceFieldBuilder().getBuilder();
+        }
+        /**
+         * <pre>
+         * Metadata describing the created workspace.
+         * </pre>
+         *
+         * <code>optional .mlflow.Workspace workspace = 1;</code>
+         */
+        public org.mlflow.api.proto.Service.WorkspaceOrBuilder getWorkspaceOrBuilder() {
+          if (workspaceBuilder_ != null) {
+            return workspaceBuilder_.getMessageOrBuilder();
+          } else {
+            return workspace_ == null ?
+                org.mlflow.api.proto.Service.Workspace.getDefaultInstance() : workspace_;
+          }
+        }
+        /**
+         * <pre>
+         * Metadata describing the created workspace.
+         * </pre>
+         *
+         * <code>optional .mlflow.Workspace workspace = 1;</code>
+         */
+        private com.google.protobuf.SingleFieldBuilderV3<
+            org.mlflow.api.proto.Service.Workspace, org.mlflow.api.proto.Service.Workspace.Builder, org.mlflow.api.proto.Service.WorkspaceOrBuilder> 
+            getWorkspaceFieldBuilder() {
+          if (workspaceBuilder_ == null) {
+            workspaceBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+                org.mlflow.api.proto.Service.Workspace, org.mlflow.api.proto.Service.Workspace.Builder, org.mlflow.api.proto.Service.WorkspaceOrBuilder>(
+                    getWorkspace(),
+                    getParentForChildren(),
+                    isClean());
+            workspace_ = null;
+          }
+          return workspaceBuilder_;
+        }
+        @java.lang.Override
+        public final Builder setUnknownFields(
+            final com.google.protobuf.UnknownFieldSet unknownFields) {
+          return super.setUnknownFields(unknownFields);
+        }
+
+        @java.lang.Override
+        public final Builder mergeUnknownFields(
+            final com.google.protobuf.UnknownFieldSet unknownFields) {
+          return super.mergeUnknownFields(unknownFields);
+        }
+
+
+        // @@protoc_insertion_point(builder_scope:mlflow.CreateWorkspace.Response)
+      }
+
+      // @@protoc_insertion_point(class_scope:mlflow.CreateWorkspace.Response)
+      private static final org.mlflow.api.proto.Service.CreateWorkspace.Response DEFAULT_INSTANCE;
+      static {
+        DEFAULT_INSTANCE = new org.mlflow.api.proto.Service.CreateWorkspace.Response();
+      }
+
+      public static org.mlflow.api.proto.Service.CreateWorkspace.Response getDefaultInstance() {
+        return DEFAULT_INSTANCE;
+      }
+
+      @java.lang.Deprecated public static final com.google.protobuf.Parser<Response>
+          PARSER = new com.google.protobuf.AbstractParser<Response>() {
+        @java.lang.Override
+        public Response parsePartialFrom(
+            com.google.protobuf.CodedInputStream input,
+            com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+            throws com.google.protobuf.InvalidProtocolBufferException {
+          return new Response(input, extensionRegistry);
+        }
+      };
+
+      public static com.google.protobuf.Parser<Response> parser() {
+        return PARSER;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Parser<Response> getParserForType() {
+        return PARSER;
+      }
+
+      @java.lang.Override
+      public org.mlflow.api.proto.Service.CreateWorkspace.Response getDefaultInstanceForType() {
+        return DEFAULT_INSTANCE;
+      }
+
+    }
+
+    private int bitField0_;
+    public static final int NAME_FIELD_NUMBER = 1;
+    private volatile java.lang.Object name_;
+    /**
+     * <pre>
+     * Workspace name to create.
+     * </pre>
+     *
+     * <code>optional string name = 1 [(.mlflow.validate_required) = true];</code>
+     * @return Whether the name field is set.
+     */
+    @java.lang.Override
+    public boolean hasName() {
+      return ((bitField0_ & 0x00000001) != 0);
+    }
+    /**
+     * <pre>
+     * Workspace name to create.
+     * </pre>
+     *
+     * <code>optional string name = 1 [(.mlflow.validate_required) = true];</code>
+     * @return The name.
+     */
+    @java.lang.Override
+    public java.lang.String getName() {
+      java.lang.Object ref = name_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        if (bs.isValidUtf8()) {
+          name_ = s;
+        }
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * Workspace name to create.
+     * </pre>
+     *
+     * <code>optional string name = 1 [(.mlflow.validate_required) = true];</code>
+     * @return The bytes for name.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getNameBytes() {
+      java.lang.Object ref = name_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        name_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int DESCRIPTION_FIELD_NUMBER = 2;
+    private volatile java.lang.Object description_;
+    /**
+     * <pre>
+     * Optional workspace description.
+     * </pre>
+     *
+     * <code>optional string description = 2;</code>
+     * @return Whether the description field is set.
+     */
+    @java.lang.Override
+    public boolean hasDescription() {
+      return ((bitField0_ & 0x00000002) != 0);
+    }
+    /**
+     * <pre>
+     * Optional workspace description.
+     * </pre>
+     *
+     * <code>optional string description = 2;</code>
+     * @return The description.
+     */
+    @java.lang.Override
+    public java.lang.String getDescription() {
+      java.lang.Object ref = description_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        if (bs.isValidUtf8()) {
+          description_ = s;
+        }
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * Optional workspace description.
+     * </pre>
+     *
+     * <code>optional string description = 2;</code>
+     * @return The bytes for description.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getDescriptionBytes() {
+      java.lang.Object ref = description_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        description_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int DEFAULT_ARTIFACT_ROOT_FIELD_NUMBER = 3;
+    private volatile java.lang.Object defaultArtifactRoot_;
+    /**
+     * <pre>
+     * Optional default artifact root override to apply at creation time.
+     * </pre>
+     *
+     * <code>optional string default_artifact_root = 3;</code>
+     * @return Whether the defaultArtifactRoot field is set.
+     */
+    @java.lang.Override
+    public boolean hasDefaultArtifactRoot() {
+      return ((bitField0_ & 0x00000004) != 0);
+    }
+    /**
+     * <pre>
+     * Optional default artifact root override to apply at creation time.
+     * </pre>
+     *
+     * <code>optional string default_artifact_root = 3;</code>
+     * @return The defaultArtifactRoot.
+     */
+    @java.lang.Override
+    public java.lang.String getDefaultArtifactRoot() {
+      java.lang.Object ref = defaultArtifactRoot_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        if (bs.isValidUtf8()) {
+          defaultArtifactRoot_ = s;
+        }
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * Optional default artifact root override to apply at creation time.
+     * </pre>
+     *
+     * <code>optional string default_artifact_root = 3;</code>
+     * @return The bytes for defaultArtifactRoot.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getDefaultArtifactRootBytes() {
+      java.lang.Object ref = defaultArtifactRoot_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        defaultArtifactRoot_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (((bitField0_ & 0x00000001) != 0)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, name_);
+      }
+      if (((bitField0_ & 0x00000002) != 0)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 2, description_);
+      }
+      if (((bitField0_ & 0x00000004) != 0)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 3, defaultArtifactRoot_);
+      }
+      unknownFields.writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (((bitField0_ & 0x00000001) != 0)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, name_);
+      }
+      if (((bitField0_ & 0x00000002) != 0)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, description_);
+      }
+      if (((bitField0_ & 0x00000004) != 0)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(3, defaultArtifactRoot_);
+      }
+      size += unknownFields.getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof org.mlflow.api.proto.Service.CreateWorkspace)) {
+        return super.equals(obj);
+      }
+      org.mlflow.api.proto.Service.CreateWorkspace other = (org.mlflow.api.proto.Service.CreateWorkspace) obj;
+
+      if (hasName() != other.hasName()) return false;
+      if (hasName()) {
+        if (!getName()
+            .equals(other.getName())) return false;
+      }
+      if (hasDescription() != other.hasDescription()) return false;
+      if (hasDescription()) {
+        if (!getDescription()
+            .equals(other.getDescription())) return false;
+      }
+      if (hasDefaultArtifactRoot() != other.hasDefaultArtifactRoot()) return false;
+      if (hasDefaultArtifactRoot()) {
+        if (!getDefaultArtifactRoot()
+            .equals(other.getDefaultArtifactRoot())) return false;
+      }
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      if (hasName()) {
+        hash = (37 * hash) + NAME_FIELD_NUMBER;
+        hash = (53 * hash) + getName().hashCode();
+      }
+      if (hasDescription()) {
+        hash = (37 * hash) + DESCRIPTION_FIELD_NUMBER;
+        hash = (53 * hash) + getDescription().hashCode();
+      }
+      if (hasDefaultArtifactRoot()) {
+        hash = (37 * hash) + DEFAULT_ARTIFACT_ROOT_FIELD_NUMBER;
+        hash = (53 * hash) + getDefaultArtifactRoot().hashCode();
+      }
+      hash = (29 * hash) + unknownFields.hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static org.mlflow.api.proto.Service.CreateWorkspace parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static org.mlflow.api.proto.Service.CreateWorkspace parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static org.mlflow.api.proto.Service.CreateWorkspace parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static org.mlflow.api.proto.Service.CreateWorkspace parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static org.mlflow.api.proto.Service.CreateWorkspace parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static org.mlflow.api.proto.Service.CreateWorkspace parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static org.mlflow.api.proto.Service.CreateWorkspace parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static org.mlflow.api.proto.Service.CreateWorkspace parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static org.mlflow.api.proto.Service.CreateWorkspace parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+    public static org.mlflow.api.proto.Service.CreateWorkspace parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static org.mlflow.api.proto.Service.CreateWorkspace parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static org.mlflow.api.proto.Service.CreateWorkspace parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(org.mlflow.api.proto.Service.CreateWorkspace prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * <pre>
+     * Create a new workspace.
+     * </pre>
+     *
+     * Protobuf type {@code mlflow.CreateWorkspace}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:mlflow.CreateWorkspace)
+        org.mlflow.api.proto.Service.CreateWorkspaceOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return org.mlflow.api.proto.Service.internal_static_mlflow_CreateWorkspace_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return org.mlflow.api.proto.Service.internal_static_mlflow_CreateWorkspace_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                org.mlflow.api.proto.Service.CreateWorkspace.class, org.mlflow.api.proto.Service.CreateWorkspace.Builder.class);
+      }
+
+      // Construct using org.mlflow.api.proto.Service.CreateWorkspace.newBuilder()
+      private Builder() {
+        maybeForceBuilderInitialization();
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+        }
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        name_ = "";
+        bitField0_ = (bitField0_ & ~0x00000001);
+        description_ = "";
+        bitField0_ = (bitField0_ & ~0x00000002);
+        defaultArtifactRoot_ = "";
+        bitField0_ = (bitField0_ & ~0x00000004);
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return org.mlflow.api.proto.Service.internal_static_mlflow_CreateWorkspace_descriptor;
+      }
+
+      @java.lang.Override
+      public org.mlflow.api.proto.Service.CreateWorkspace getDefaultInstanceForType() {
+        return org.mlflow.api.proto.Service.CreateWorkspace.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public org.mlflow.api.proto.Service.CreateWorkspace build() {
+        org.mlflow.api.proto.Service.CreateWorkspace result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public org.mlflow.api.proto.Service.CreateWorkspace buildPartial() {
+        org.mlflow.api.proto.Service.CreateWorkspace result = new org.mlflow.api.proto.Service.CreateWorkspace(this);
+        int from_bitField0_ = bitField0_;
+        int to_bitField0_ = 0;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          to_bitField0_ |= 0x00000001;
+        }
+        result.name_ = name_;
+        if (((from_bitField0_ & 0x00000002) != 0)) {
+          to_bitField0_ |= 0x00000002;
+        }
+        result.description_ = description_;
+        if (((from_bitField0_ & 0x00000004) != 0)) {
+          to_bitField0_ |= 0x00000004;
+        }
+        result.defaultArtifactRoot_ = defaultArtifactRoot_;
+        result.bitField0_ = to_bitField0_;
+        onBuilt();
+        return result;
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof org.mlflow.api.proto.Service.CreateWorkspace) {
+          return mergeFrom((org.mlflow.api.proto.Service.CreateWorkspace)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(org.mlflow.api.proto.Service.CreateWorkspace other) {
+        if (other == org.mlflow.api.proto.Service.CreateWorkspace.getDefaultInstance()) return this;
+        if (other.hasName()) {
+          bitField0_ |= 0x00000001;
+          name_ = other.name_;
+          onChanged();
+        }
+        if (other.hasDescription()) {
+          bitField0_ |= 0x00000002;
+          description_ = other.description_;
+          onChanged();
+        }
+        if (other.hasDefaultArtifactRoot()) {
+          bitField0_ |= 0x00000004;
+          defaultArtifactRoot_ = other.defaultArtifactRoot_;
+          onChanged();
+        }
+        this.mergeUnknownFields(other.unknownFields);
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        org.mlflow.api.proto.Service.CreateWorkspace parsedMessage = null;
+        try {
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (org.mlflow.api.proto.Service.CreateWorkspace) e.getUnfinishedMessage();
+          throw e.unwrapIOException();
+        } finally {
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
+        return this;
+      }
+      private int bitField0_;
+
+      private java.lang.Object name_ = "";
+      /**
+       * <pre>
+       * Workspace name to create.
+       * </pre>
+       *
+       * <code>optional string name = 1 [(.mlflow.validate_required) = true];</code>
+       * @return Whether the name field is set.
+       */
+      public boolean hasName() {
+        return ((bitField0_ & 0x00000001) != 0);
+      }
+      /**
+       * <pre>
+       * Workspace name to create.
+       * </pre>
+       *
+       * <code>optional string name = 1 [(.mlflow.validate_required) = true];</code>
+       * @return The name.
+       */
+      public java.lang.String getName() {
+        java.lang.Object ref = name_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          if (bs.isValidUtf8()) {
+            name_ = s;
+          }
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * Workspace name to create.
+       * </pre>
+       *
+       * <code>optional string name = 1 [(.mlflow.validate_required) = true];</code>
+       * @return The bytes for name.
+       */
+      public com.google.protobuf.ByteString
+          getNameBytes() {
+        java.lang.Object ref = name_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          name_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * Workspace name to create.
+       * </pre>
+       *
+       * <code>optional string name = 1 [(.mlflow.validate_required) = true];</code>
+       * @param value The name to set.
+       * @return This builder for chaining.
+       */
+      public Builder setName(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  bitField0_ |= 0x00000001;
+        name_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Workspace name to create.
+       * </pre>
+       *
+       * <code>optional string name = 1 [(.mlflow.validate_required) = true];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearName() {
+        bitField0_ = (bitField0_ & ~0x00000001);
+        name_ = getDefaultInstance().getName();
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Workspace name to create.
+       * </pre>
+       *
+       * <code>optional string name = 1 [(.mlflow.validate_required) = true];</code>
+       * @param value The bytes for name to set.
+       * @return This builder for chaining.
+       */
+      public Builder setNameBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  bitField0_ |= 0x00000001;
+        name_ = value;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object description_ = "";
+      /**
+       * <pre>
+       * Optional workspace description.
+       * </pre>
+       *
+       * <code>optional string description = 2;</code>
+       * @return Whether the description field is set.
+       */
+      public boolean hasDescription() {
+        return ((bitField0_ & 0x00000002) != 0);
+      }
+      /**
+       * <pre>
+       * Optional workspace description.
+       * </pre>
+       *
+       * <code>optional string description = 2;</code>
+       * @return The description.
+       */
+      public java.lang.String getDescription() {
+        java.lang.Object ref = description_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          if (bs.isValidUtf8()) {
+            description_ = s;
+          }
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * Optional workspace description.
+       * </pre>
+       *
+       * <code>optional string description = 2;</code>
+       * @return The bytes for description.
+       */
+      public com.google.protobuf.ByteString
+          getDescriptionBytes() {
+        java.lang.Object ref = description_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          description_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * Optional workspace description.
+       * </pre>
+       *
+       * <code>optional string description = 2;</code>
+       * @param value The description to set.
+       * @return This builder for chaining.
+       */
+      public Builder setDescription(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  bitField0_ |= 0x00000002;
+        description_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Optional workspace description.
+       * </pre>
+       *
+       * <code>optional string description = 2;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearDescription() {
+        bitField0_ = (bitField0_ & ~0x00000002);
+        description_ = getDefaultInstance().getDescription();
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Optional workspace description.
+       * </pre>
+       *
+       * <code>optional string description = 2;</code>
+       * @param value The bytes for description to set.
+       * @return This builder for chaining.
+       */
+      public Builder setDescriptionBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  bitField0_ |= 0x00000002;
+        description_ = value;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object defaultArtifactRoot_ = "";
+      /**
+       * <pre>
+       * Optional default artifact root override to apply at creation time.
+       * </pre>
+       *
+       * <code>optional string default_artifact_root = 3;</code>
+       * @return Whether the defaultArtifactRoot field is set.
+       */
+      public boolean hasDefaultArtifactRoot() {
+        return ((bitField0_ & 0x00000004) != 0);
+      }
+      /**
+       * <pre>
+       * Optional default artifact root override to apply at creation time.
+       * </pre>
+       *
+       * <code>optional string default_artifact_root = 3;</code>
+       * @return The defaultArtifactRoot.
+       */
+      public java.lang.String getDefaultArtifactRoot() {
+        java.lang.Object ref = defaultArtifactRoot_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          if (bs.isValidUtf8()) {
+            defaultArtifactRoot_ = s;
+          }
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * Optional default artifact root override to apply at creation time.
+       * </pre>
+       *
+       * <code>optional string default_artifact_root = 3;</code>
+       * @return The bytes for defaultArtifactRoot.
+       */
+      public com.google.protobuf.ByteString
+          getDefaultArtifactRootBytes() {
+        java.lang.Object ref = defaultArtifactRoot_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          defaultArtifactRoot_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * Optional default artifact root override to apply at creation time.
+       * </pre>
+       *
+       * <code>optional string default_artifact_root = 3;</code>
+       * @param value The defaultArtifactRoot to set.
+       * @return This builder for chaining.
+       */
+      public Builder setDefaultArtifactRoot(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  bitField0_ |= 0x00000004;
+        defaultArtifactRoot_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Optional default artifact root override to apply at creation time.
+       * </pre>
+       *
+       * <code>optional string default_artifact_root = 3;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearDefaultArtifactRoot() {
+        bitField0_ = (bitField0_ & ~0x00000004);
+        defaultArtifactRoot_ = getDefaultInstance().getDefaultArtifactRoot();
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Optional default artifact root override to apply at creation time.
+       * </pre>
+       *
+       * <code>optional string default_artifact_root = 3;</code>
+       * @param value The bytes for defaultArtifactRoot to set.
+       * @return This builder for chaining.
+       */
+      public Builder setDefaultArtifactRootBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  bitField0_ |= 0x00000004;
+        defaultArtifactRoot_ = value;
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:mlflow.CreateWorkspace)
+    }
+
+    // @@protoc_insertion_point(class_scope:mlflow.CreateWorkspace)
+    private static final org.mlflow.api.proto.Service.CreateWorkspace DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new org.mlflow.api.proto.Service.CreateWorkspace();
+    }
+
+    public static org.mlflow.api.proto.Service.CreateWorkspace getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    @java.lang.Deprecated public static final com.google.protobuf.Parser<CreateWorkspace>
+        PARSER = new com.google.protobuf.AbstractParser<CreateWorkspace>() {
+      @java.lang.Override
+      public CreateWorkspace parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return new CreateWorkspace(input, extensionRegistry);
+      }
+    };
+
+    public static com.google.protobuf.Parser<CreateWorkspace> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<CreateWorkspace> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public org.mlflow.api.proto.Service.CreateWorkspace getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface GetWorkspaceOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:mlflow.GetWorkspace)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <pre>
+     * Name of the workspace to fetch.
+     * </pre>
+     *
+     * <code>optional string workspace_name = 1 [(.mlflow.validate_required) = true];</code>
+     * @return Whether the workspaceName field is set.
+     */
+    boolean hasWorkspaceName();
+    /**
+     * <pre>
+     * Name of the workspace to fetch.
+     * </pre>
+     *
+     * <code>optional string workspace_name = 1 [(.mlflow.validate_required) = true];</code>
+     * @return The workspaceName.
+     */
+    java.lang.String getWorkspaceName();
+    /**
+     * <pre>
+     * Name of the workspace to fetch.
+     * </pre>
+     *
+     * <code>optional string workspace_name = 1 [(.mlflow.validate_required) = true];</code>
+     * @return The bytes for workspaceName.
+     */
+    com.google.protobuf.ByteString
+        getWorkspaceNameBytes();
+  }
+  /**
+   * <pre>
+   * Retrieve workspace metadata.
+   * </pre>
+   *
+   * Protobuf type {@code mlflow.GetWorkspace}
+   */
+  public static final class GetWorkspace extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:mlflow.GetWorkspace)
+      GetWorkspaceOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use GetWorkspace.newBuilder() to construct.
+    private GetWorkspace(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private GetWorkspace() {
+      workspaceName_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new GetWorkspace();
+    }
+
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet
+    getUnknownFields() {
+      return this.unknownFields;
+    }
+    private GetWorkspace(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      this();
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
+      int mutable_bitField0_ = 0;
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            case 10: {
+              com.google.protobuf.ByteString bs = input.readBytes();
+              bitField0_ |= 0x00000001;
+              workspaceName_ = bs;
+              break;
+            }
+            default: {
+              if (!parseUnknownField(
+                  input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e).setUnfinishedMessage(this);
+      } finally {
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return org.mlflow.api.proto.Service.internal_static_mlflow_GetWorkspace_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return org.mlflow.api.proto.Service.internal_static_mlflow_GetWorkspace_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              org.mlflow.api.proto.Service.GetWorkspace.class, org.mlflow.api.proto.Service.GetWorkspace.Builder.class);
+    }
+
+    public interface ResponseOrBuilder extends
+        // @@protoc_insertion_point(interface_extends:mlflow.GetWorkspace.Response)
+        com.google.protobuf.MessageOrBuilder {
+
+      /**
+       * <pre>
+       * Metadata describing the requested workspace.
+       * </pre>
+       *
+       * <code>optional .mlflow.Workspace workspace = 1;</code>
+       * @return Whether the workspace field is set.
+       */
+      boolean hasWorkspace();
+      /**
+       * <pre>
+       * Metadata describing the requested workspace.
+       * </pre>
+       *
+       * <code>optional .mlflow.Workspace workspace = 1;</code>
+       * @return The workspace.
+       */
+      org.mlflow.api.proto.Service.Workspace getWorkspace();
+      /**
+       * <pre>
+       * Metadata describing the requested workspace.
+       * </pre>
+       *
+       * <code>optional .mlflow.Workspace workspace = 1;</code>
+       */
+      org.mlflow.api.proto.Service.WorkspaceOrBuilder getWorkspaceOrBuilder();
+    }
+    /**
+     * Protobuf type {@code mlflow.GetWorkspace.Response}
+     */
+    public static final class Response extends
+        com.google.protobuf.GeneratedMessageV3 implements
+        // @@protoc_insertion_point(message_implements:mlflow.GetWorkspace.Response)
+        ResponseOrBuilder {
+    private static final long serialVersionUID = 0L;
+      // Use Response.newBuilder() to construct.
+      private Response(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+        super(builder);
+      }
+      private Response() {
+      }
+
+      @java.lang.Override
+      @SuppressWarnings({"unused"})
+      protected java.lang.Object newInstance(
+          UnusedPrivateParameter unused) {
+        return new Response();
+      }
+
+      @java.lang.Override
+      public final com.google.protobuf.UnknownFieldSet
+      getUnknownFields() {
+        return this.unknownFields;
+      }
+      private Response(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        this();
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        int mutable_bitField0_ = 0;
+        com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+            com.google.protobuf.UnknownFieldSet.newBuilder();
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                org.mlflow.api.proto.Service.Workspace.Builder subBuilder = null;
+                if (((bitField0_ & 0x00000001) != 0)) {
+                  subBuilder = workspace_.toBuilder();
+                }
+                workspace_ = input.readMessage(org.mlflow.api.proto.Service.Workspace.PARSER, extensionRegistry);
+                if (subBuilder != null) {
+                  subBuilder.mergeFrom(workspace_);
+                  workspace_ = subBuilder.buildPartial();
+                }
+                bitField0_ |= 0x00000001;
+                break;
+              }
+              default: {
+                if (!parseUnknownField(
+                    input, unknownFields, extensionRegistry, tag)) {
+                  done = true;
+                }
+                break;
+              }
+            }
+          }
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(this);
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(
+              e).setUnfinishedMessage(this);
+        } finally {
+          this.unknownFields = unknownFields.build();
+          makeExtensionsImmutable();
+        }
+      }
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return org.mlflow.api.proto.Service.internal_static_mlflow_GetWorkspace_Response_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return org.mlflow.api.proto.Service.internal_static_mlflow_GetWorkspace_Response_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                org.mlflow.api.proto.Service.GetWorkspace.Response.class, org.mlflow.api.proto.Service.GetWorkspace.Response.Builder.class);
+      }
+
+      private int bitField0_;
+      public static final int WORKSPACE_FIELD_NUMBER = 1;
+      private org.mlflow.api.proto.Service.Workspace workspace_;
+      /**
+       * <pre>
+       * Metadata describing the requested workspace.
+       * </pre>
+       *
+       * <code>optional .mlflow.Workspace workspace = 1;</code>
+       * @return Whether the workspace field is set.
+       */
+      @java.lang.Override
+      public boolean hasWorkspace() {
+        return ((bitField0_ & 0x00000001) != 0);
+      }
+      /**
+       * <pre>
+       * Metadata describing the requested workspace.
+       * </pre>
+       *
+       * <code>optional .mlflow.Workspace workspace = 1;</code>
+       * @return The workspace.
+       */
+      @java.lang.Override
+      public org.mlflow.api.proto.Service.Workspace getWorkspace() {
+        return workspace_ == null ? org.mlflow.api.proto.Service.Workspace.getDefaultInstance() : workspace_;
+      }
+      /**
+       * <pre>
+       * Metadata describing the requested workspace.
+       * </pre>
+       *
+       * <code>optional .mlflow.Workspace workspace = 1;</code>
+       */
+      @java.lang.Override
+      public org.mlflow.api.proto.Service.WorkspaceOrBuilder getWorkspaceOrBuilder() {
+        return workspace_ == null ? org.mlflow.api.proto.Service.Workspace.getDefaultInstance() : workspace_;
+      }
+
+      private byte memoizedIsInitialized = -1;
+      @java.lang.Override
+      public final boolean isInitialized() {
+        byte isInitialized = memoizedIsInitialized;
+        if (isInitialized == 1) return true;
+        if (isInitialized == 0) return false;
+
+        memoizedIsInitialized = 1;
+        return true;
+      }
+
+      @java.lang.Override
+      public void writeTo(com.google.protobuf.CodedOutputStream output)
+                          throws java.io.IOException {
+        if (((bitField0_ & 0x00000001) != 0)) {
+          output.writeMessage(1, getWorkspace());
+        }
+        unknownFields.writeTo(output);
+      }
+
+      @java.lang.Override
+      public int getSerializedSize() {
+        int size = memoizedSize;
+        if (size != -1) return size;
+
+        size = 0;
+        if (((bitField0_ & 0x00000001) != 0)) {
+          size += com.google.protobuf.CodedOutputStream
+            .computeMessageSize(1, getWorkspace());
+        }
+        size += unknownFields.getSerializedSize();
+        memoizedSize = size;
+        return size;
+      }
+
+      @java.lang.Override
+      public boolean equals(final java.lang.Object obj) {
+        if (obj == this) {
+         return true;
+        }
+        if (!(obj instanceof org.mlflow.api.proto.Service.GetWorkspace.Response)) {
+          return super.equals(obj);
+        }
+        org.mlflow.api.proto.Service.GetWorkspace.Response other = (org.mlflow.api.proto.Service.GetWorkspace.Response) obj;
+
+        if (hasWorkspace() != other.hasWorkspace()) return false;
+        if (hasWorkspace()) {
+          if (!getWorkspace()
+              .equals(other.getWorkspace())) return false;
+        }
+        if (!unknownFields.equals(other.unknownFields)) return false;
+        return true;
+      }
+
+      @java.lang.Override
+      public int hashCode() {
+        if (memoizedHashCode != 0) {
+          return memoizedHashCode;
+        }
+        int hash = 41;
+        hash = (19 * hash) + getDescriptor().hashCode();
+        if (hasWorkspace()) {
+          hash = (37 * hash) + WORKSPACE_FIELD_NUMBER;
+          hash = (53 * hash) + getWorkspace().hashCode();
+        }
+        hash = (29 * hash) + unknownFields.hashCode();
+        memoizedHashCode = hash;
+        return hash;
+      }
+
+      public static org.mlflow.api.proto.Service.GetWorkspace.Response parseFrom(
+          java.nio.ByteBuffer data)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data);
+      }
+      public static org.mlflow.api.proto.Service.GetWorkspace.Response parseFrom(
+          java.nio.ByteBuffer data,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data, extensionRegistry);
+      }
+      public static org.mlflow.api.proto.Service.GetWorkspace.Response parseFrom(
+          com.google.protobuf.ByteString data)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data);
+      }
+      public static org.mlflow.api.proto.Service.GetWorkspace.Response parseFrom(
+          com.google.protobuf.ByteString data,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data, extensionRegistry);
+      }
+      public static org.mlflow.api.proto.Service.GetWorkspace.Response parseFrom(byte[] data)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data);
+      }
+      public static org.mlflow.api.proto.Service.GetWorkspace.Response parseFrom(
+          byte[] data,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data, extensionRegistry);
+      }
+      public static org.mlflow.api.proto.Service.GetWorkspace.Response parseFrom(java.io.InputStream input)
+          throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessageV3
+            .parseWithIOException(PARSER, input);
+      }
+      public static org.mlflow.api.proto.Service.GetWorkspace.Response parseFrom(
+          java.io.InputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessageV3
+            .parseWithIOException(PARSER, input, extensionRegistry);
+      }
+      public static org.mlflow.api.proto.Service.GetWorkspace.Response parseDelimitedFrom(java.io.InputStream input)
+          throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessageV3
+            .parseDelimitedWithIOException(PARSER, input);
+      }
+      public static org.mlflow.api.proto.Service.GetWorkspace.Response parseDelimitedFrom(
+          java.io.InputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessageV3
+            .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+      }
+      public static org.mlflow.api.proto.Service.GetWorkspace.Response parseFrom(
+          com.google.protobuf.CodedInputStream input)
+          throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessageV3
+            .parseWithIOException(PARSER, input);
+      }
+      public static org.mlflow.api.proto.Service.GetWorkspace.Response parseFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessageV3
+            .parseWithIOException(PARSER, input, extensionRegistry);
+      }
+
+      @java.lang.Override
+      public Builder newBuilderForType() { return newBuilder(); }
+      public static Builder newBuilder() {
+        return DEFAULT_INSTANCE.toBuilder();
+      }
+      public static Builder newBuilder(org.mlflow.api.proto.Service.GetWorkspace.Response prototype) {
+        return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+      }
+      @java.lang.Override
+      public Builder toBuilder() {
+        return this == DEFAULT_INSTANCE
+            ? new Builder() : new Builder().mergeFrom(this);
+      }
+
+      @java.lang.Override
+      protected Builder newBuilderForType(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        Builder builder = new Builder(parent);
+        return builder;
+      }
+      /**
+       * Protobuf type {@code mlflow.GetWorkspace.Response}
+       */
+      public static final class Builder extends
+          com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+          // @@protoc_insertion_point(builder_implements:mlflow.GetWorkspace.Response)
+          org.mlflow.api.proto.Service.GetWorkspace.ResponseOrBuilder {
+        public static final com.google.protobuf.Descriptors.Descriptor
+            getDescriptor() {
+          return org.mlflow.api.proto.Service.internal_static_mlflow_GetWorkspace_Response_descriptor;
+        }
+
+        @java.lang.Override
+        protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+            internalGetFieldAccessorTable() {
+          return org.mlflow.api.proto.Service.internal_static_mlflow_GetWorkspace_Response_fieldAccessorTable
+              .ensureFieldAccessorsInitialized(
+                  org.mlflow.api.proto.Service.GetWorkspace.Response.class, org.mlflow.api.proto.Service.GetWorkspace.Response.Builder.class);
+        }
+
+        // Construct using org.mlflow.api.proto.Service.GetWorkspace.Response.newBuilder()
+        private Builder() {
+          maybeForceBuilderInitialization();
+        }
+
+        private Builder(
+            com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+          super(parent);
+          maybeForceBuilderInitialization();
+        }
+        private void maybeForceBuilderInitialization() {
+          if (com.google.protobuf.GeneratedMessageV3
+                  .alwaysUseFieldBuilders) {
+            getWorkspaceFieldBuilder();
+          }
+        }
+        @java.lang.Override
+        public Builder clear() {
+          super.clear();
+          if (workspaceBuilder_ == null) {
+            workspace_ = null;
+          } else {
+            workspaceBuilder_.clear();
+          }
+          bitField0_ = (bitField0_ & ~0x00000001);
+          return this;
+        }
+
+        @java.lang.Override
+        public com.google.protobuf.Descriptors.Descriptor
+            getDescriptorForType() {
+          return org.mlflow.api.proto.Service.internal_static_mlflow_GetWorkspace_Response_descriptor;
+        }
+
+        @java.lang.Override
+        public org.mlflow.api.proto.Service.GetWorkspace.Response getDefaultInstanceForType() {
+          return org.mlflow.api.proto.Service.GetWorkspace.Response.getDefaultInstance();
+        }
+
+        @java.lang.Override
+        public org.mlflow.api.proto.Service.GetWorkspace.Response build() {
+          org.mlflow.api.proto.Service.GetWorkspace.Response result = buildPartial();
+          if (!result.isInitialized()) {
+            throw newUninitializedMessageException(result);
+          }
+          return result;
+        }
+
+        @java.lang.Override
+        public org.mlflow.api.proto.Service.GetWorkspace.Response buildPartial() {
+          org.mlflow.api.proto.Service.GetWorkspace.Response result = new org.mlflow.api.proto.Service.GetWorkspace.Response(this);
+          int from_bitField0_ = bitField0_;
+          int to_bitField0_ = 0;
+          if (((from_bitField0_ & 0x00000001) != 0)) {
+            if (workspaceBuilder_ == null) {
+              result.workspace_ = workspace_;
+            } else {
+              result.workspace_ = workspaceBuilder_.build();
+            }
+            to_bitField0_ |= 0x00000001;
+          }
+          result.bitField0_ = to_bitField0_;
+          onBuilt();
+          return result;
+        }
+
+        @java.lang.Override
+        public Builder clone() {
+          return super.clone();
+        }
+        @java.lang.Override
+        public Builder setField(
+            com.google.protobuf.Descriptors.FieldDescriptor field,
+            java.lang.Object value) {
+          return super.setField(field, value);
+        }
+        @java.lang.Override
+        public Builder clearField(
+            com.google.protobuf.Descriptors.FieldDescriptor field) {
+          return super.clearField(field);
+        }
+        @java.lang.Override
+        public Builder clearOneof(
+            com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+          return super.clearOneof(oneof);
+        }
+        @java.lang.Override
+        public Builder setRepeatedField(
+            com.google.protobuf.Descriptors.FieldDescriptor field,
+            int index, java.lang.Object value) {
+          return super.setRepeatedField(field, index, value);
+        }
+        @java.lang.Override
+        public Builder addRepeatedField(
+            com.google.protobuf.Descriptors.FieldDescriptor field,
+            java.lang.Object value) {
+          return super.addRepeatedField(field, value);
+        }
+        @java.lang.Override
+        public Builder mergeFrom(com.google.protobuf.Message other) {
+          if (other instanceof org.mlflow.api.proto.Service.GetWorkspace.Response) {
+            return mergeFrom((org.mlflow.api.proto.Service.GetWorkspace.Response)other);
+          } else {
+            super.mergeFrom(other);
+            return this;
+          }
+        }
+
+        public Builder mergeFrom(org.mlflow.api.proto.Service.GetWorkspace.Response other) {
+          if (other == org.mlflow.api.proto.Service.GetWorkspace.Response.getDefaultInstance()) return this;
+          if (other.hasWorkspace()) {
+            mergeWorkspace(other.getWorkspace());
+          }
+          this.mergeUnknownFields(other.unknownFields);
+          onChanged();
+          return this;
+        }
+
+        @java.lang.Override
+        public final boolean isInitialized() {
+          return true;
+        }
+
+        @java.lang.Override
+        public Builder mergeFrom(
+            com.google.protobuf.CodedInputStream input,
+            com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+            throws java.io.IOException {
+          org.mlflow.api.proto.Service.GetWorkspace.Response parsedMessage = null;
+          try {
+            parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+          } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+            parsedMessage = (org.mlflow.api.proto.Service.GetWorkspace.Response) e.getUnfinishedMessage();
+            throw e.unwrapIOException();
+          } finally {
+            if (parsedMessage != null) {
+              mergeFrom(parsedMessage);
+            }
+          }
+          return this;
+        }
+        private int bitField0_;
+
+        private org.mlflow.api.proto.Service.Workspace workspace_;
+        private com.google.protobuf.SingleFieldBuilderV3<
+            org.mlflow.api.proto.Service.Workspace, org.mlflow.api.proto.Service.Workspace.Builder, org.mlflow.api.proto.Service.WorkspaceOrBuilder> workspaceBuilder_;
+        /**
+         * <pre>
+         * Metadata describing the requested workspace.
+         * </pre>
+         *
+         * <code>optional .mlflow.Workspace workspace = 1;</code>
+         * @return Whether the workspace field is set.
+         */
+        public boolean hasWorkspace() {
+          return ((bitField0_ & 0x00000001) != 0);
+        }
+        /**
+         * <pre>
+         * Metadata describing the requested workspace.
+         * </pre>
+         *
+         * <code>optional .mlflow.Workspace workspace = 1;</code>
+         * @return The workspace.
+         */
+        public org.mlflow.api.proto.Service.Workspace getWorkspace() {
+          if (workspaceBuilder_ == null) {
+            return workspace_ == null ? org.mlflow.api.proto.Service.Workspace.getDefaultInstance() : workspace_;
+          } else {
+            return workspaceBuilder_.getMessage();
+          }
+        }
+        /**
+         * <pre>
+         * Metadata describing the requested workspace.
+         * </pre>
+         *
+         * <code>optional .mlflow.Workspace workspace = 1;</code>
+         */
+        public Builder setWorkspace(org.mlflow.api.proto.Service.Workspace value) {
+          if (workspaceBuilder_ == null) {
+            if (value == null) {
+              throw new NullPointerException();
+            }
+            workspace_ = value;
+            onChanged();
+          } else {
+            workspaceBuilder_.setMessage(value);
+          }
+          bitField0_ |= 0x00000001;
+          return this;
+        }
+        /**
+         * <pre>
+         * Metadata describing the requested workspace.
+         * </pre>
+         *
+         * <code>optional .mlflow.Workspace workspace = 1;</code>
+         */
+        public Builder setWorkspace(
+            org.mlflow.api.proto.Service.Workspace.Builder builderForValue) {
+          if (workspaceBuilder_ == null) {
+            workspace_ = builderForValue.build();
+            onChanged();
+          } else {
+            workspaceBuilder_.setMessage(builderForValue.build());
+          }
+          bitField0_ |= 0x00000001;
+          return this;
+        }
+        /**
+         * <pre>
+         * Metadata describing the requested workspace.
+         * </pre>
+         *
+         * <code>optional .mlflow.Workspace workspace = 1;</code>
+         */
+        public Builder mergeWorkspace(org.mlflow.api.proto.Service.Workspace value) {
+          if (workspaceBuilder_ == null) {
+            if (((bitField0_ & 0x00000001) != 0) &&
+                workspace_ != null &&
+                workspace_ != org.mlflow.api.proto.Service.Workspace.getDefaultInstance()) {
+              workspace_ =
+                org.mlflow.api.proto.Service.Workspace.newBuilder(workspace_).mergeFrom(value).buildPartial();
+            } else {
+              workspace_ = value;
+            }
+            onChanged();
+          } else {
+            workspaceBuilder_.mergeFrom(value);
+          }
+          bitField0_ |= 0x00000001;
+          return this;
+        }
+        /**
+         * <pre>
+         * Metadata describing the requested workspace.
+         * </pre>
+         *
+         * <code>optional .mlflow.Workspace workspace = 1;</code>
+         */
+        public Builder clearWorkspace() {
+          if (workspaceBuilder_ == null) {
+            workspace_ = null;
+            onChanged();
+          } else {
+            workspaceBuilder_.clear();
+          }
+          bitField0_ = (bitField0_ & ~0x00000001);
+          return this;
+        }
+        /**
+         * <pre>
+         * Metadata describing the requested workspace.
+         * </pre>
+         *
+         * <code>optional .mlflow.Workspace workspace = 1;</code>
+         */
+        public org.mlflow.api.proto.Service.Workspace.Builder getWorkspaceBuilder() {
+          bitField0_ |= 0x00000001;
+          onChanged();
+          return getWorkspaceFieldBuilder().getBuilder();
+        }
+        /**
+         * <pre>
+         * Metadata describing the requested workspace.
+         * </pre>
+         *
+         * <code>optional .mlflow.Workspace workspace = 1;</code>
+         */
+        public org.mlflow.api.proto.Service.WorkspaceOrBuilder getWorkspaceOrBuilder() {
+          if (workspaceBuilder_ != null) {
+            return workspaceBuilder_.getMessageOrBuilder();
+          } else {
+            return workspace_ == null ?
+                org.mlflow.api.proto.Service.Workspace.getDefaultInstance() : workspace_;
+          }
+        }
+        /**
+         * <pre>
+         * Metadata describing the requested workspace.
+         * </pre>
+         *
+         * <code>optional .mlflow.Workspace workspace = 1;</code>
+         */
+        private com.google.protobuf.SingleFieldBuilderV3<
+            org.mlflow.api.proto.Service.Workspace, org.mlflow.api.proto.Service.Workspace.Builder, org.mlflow.api.proto.Service.WorkspaceOrBuilder> 
+            getWorkspaceFieldBuilder() {
+          if (workspaceBuilder_ == null) {
+            workspaceBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+                org.mlflow.api.proto.Service.Workspace, org.mlflow.api.proto.Service.Workspace.Builder, org.mlflow.api.proto.Service.WorkspaceOrBuilder>(
+                    getWorkspace(),
+                    getParentForChildren(),
+                    isClean());
+            workspace_ = null;
+          }
+          return workspaceBuilder_;
+        }
+        @java.lang.Override
+        public final Builder setUnknownFields(
+            final com.google.protobuf.UnknownFieldSet unknownFields) {
+          return super.setUnknownFields(unknownFields);
+        }
+
+        @java.lang.Override
+        public final Builder mergeUnknownFields(
+            final com.google.protobuf.UnknownFieldSet unknownFields) {
+          return super.mergeUnknownFields(unknownFields);
+        }
+
+
+        // @@protoc_insertion_point(builder_scope:mlflow.GetWorkspace.Response)
+      }
+
+      // @@protoc_insertion_point(class_scope:mlflow.GetWorkspace.Response)
+      private static final org.mlflow.api.proto.Service.GetWorkspace.Response DEFAULT_INSTANCE;
+      static {
+        DEFAULT_INSTANCE = new org.mlflow.api.proto.Service.GetWorkspace.Response();
+      }
+
+      public static org.mlflow.api.proto.Service.GetWorkspace.Response getDefaultInstance() {
+        return DEFAULT_INSTANCE;
+      }
+
+      @java.lang.Deprecated public static final com.google.protobuf.Parser<Response>
+          PARSER = new com.google.protobuf.AbstractParser<Response>() {
+        @java.lang.Override
+        public Response parsePartialFrom(
+            com.google.protobuf.CodedInputStream input,
+            com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+            throws com.google.protobuf.InvalidProtocolBufferException {
+          return new Response(input, extensionRegistry);
+        }
+      };
+
+      public static com.google.protobuf.Parser<Response> parser() {
+        return PARSER;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Parser<Response> getParserForType() {
+        return PARSER;
+      }
+
+      @java.lang.Override
+      public org.mlflow.api.proto.Service.GetWorkspace.Response getDefaultInstanceForType() {
+        return DEFAULT_INSTANCE;
+      }
+
+    }
+
+    private int bitField0_;
+    public static final int WORKSPACE_NAME_FIELD_NUMBER = 1;
+    private volatile java.lang.Object workspaceName_;
+    /**
+     * <pre>
+     * Name of the workspace to fetch.
+     * </pre>
+     *
+     * <code>optional string workspace_name = 1 [(.mlflow.validate_required) = true];</code>
+     * @return Whether the workspaceName field is set.
+     */
+    @java.lang.Override
+    public boolean hasWorkspaceName() {
+      return ((bitField0_ & 0x00000001) != 0);
+    }
+    /**
+     * <pre>
+     * Name of the workspace to fetch.
+     * </pre>
+     *
+     * <code>optional string workspace_name = 1 [(.mlflow.validate_required) = true];</code>
+     * @return The workspaceName.
+     */
+    @java.lang.Override
+    public java.lang.String getWorkspaceName() {
+      java.lang.Object ref = workspaceName_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        if (bs.isValidUtf8()) {
+          workspaceName_ = s;
+        }
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * Name of the workspace to fetch.
+     * </pre>
+     *
+     * <code>optional string workspace_name = 1 [(.mlflow.validate_required) = true];</code>
+     * @return The bytes for workspaceName.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getWorkspaceNameBytes() {
+      java.lang.Object ref = workspaceName_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        workspaceName_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (((bitField0_ & 0x00000001) != 0)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, workspaceName_);
+      }
+      unknownFields.writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (((bitField0_ & 0x00000001) != 0)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, workspaceName_);
+      }
+      size += unknownFields.getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof org.mlflow.api.proto.Service.GetWorkspace)) {
+        return super.equals(obj);
+      }
+      org.mlflow.api.proto.Service.GetWorkspace other = (org.mlflow.api.proto.Service.GetWorkspace) obj;
+
+      if (hasWorkspaceName() != other.hasWorkspaceName()) return false;
+      if (hasWorkspaceName()) {
+        if (!getWorkspaceName()
+            .equals(other.getWorkspaceName())) return false;
+      }
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      if (hasWorkspaceName()) {
+        hash = (37 * hash) + WORKSPACE_NAME_FIELD_NUMBER;
+        hash = (53 * hash) + getWorkspaceName().hashCode();
+      }
+      hash = (29 * hash) + unknownFields.hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static org.mlflow.api.proto.Service.GetWorkspace parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static org.mlflow.api.proto.Service.GetWorkspace parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static org.mlflow.api.proto.Service.GetWorkspace parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static org.mlflow.api.proto.Service.GetWorkspace parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static org.mlflow.api.proto.Service.GetWorkspace parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static org.mlflow.api.proto.Service.GetWorkspace parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static org.mlflow.api.proto.Service.GetWorkspace parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static org.mlflow.api.proto.Service.GetWorkspace parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static org.mlflow.api.proto.Service.GetWorkspace parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+    public static org.mlflow.api.proto.Service.GetWorkspace parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static org.mlflow.api.proto.Service.GetWorkspace parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static org.mlflow.api.proto.Service.GetWorkspace parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(org.mlflow.api.proto.Service.GetWorkspace prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * <pre>
+     * Retrieve workspace metadata.
+     * </pre>
+     *
+     * Protobuf type {@code mlflow.GetWorkspace}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:mlflow.GetWorkspace)
+        org.mlflow.api.proto.Service.GetWorkspaceOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return org.mlflow.api.proto.Service.internal_static_mlflow_GetWorkspace_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return org.mlflow.api.proto.Service.internal_static_mlflow_GetWorkspace_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                org.mlflow.api.proto.Service.GetWorkspace.class, org.mlflow.api.proto.Service.GetWorkspace.Builder.class);
+      }
+
+      // Construct using org.mlflow.api.proto.Service.GetWorkspace.newBuilder()
+      private Builder() {
+        maybeForceBuilderInitialization();
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+        }
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        workspaceName_ = "";
+        bitField0_ = (bitField0_ & ~0x00000001);
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return org.mlflow.api.proto.Service.internal_static_mlflow_GetWorkspace_descriptor;
+      }
+
+      @java.lang.Override
+      public org.mlflow.api.proto.Service.GetWorkspace getDefaultInstanceForType() {
+        return org.mlflow.api.proto.Service.GetWorkspace.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public org.mlflow.api.proto.Service.GetWorkspace build() {
+        org.mlflow.api.proto.Service.GetWorkspace result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public org.mlflow.api.proto.Service.GetWorkspace buildPartial() {
+        org.mlflow.api.proto.Service.GetWorkspace result = new org.mlflow.api.proto.Service.GetWorkspace(this);
+        int from_bitField0_ = bitField0_;
+        int to_bitField0_ = 0;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          to_bitField0_ |= 0x00000001;
+        }
+        result.workspaceName_ = workspaceName_;
+        result.bitField0_ = to_bitField0_;
+        onBuilt();
+        return result;
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof org.mlflow.api.proto.Service.GetWorkspace) {
+          return mergeFrom((org.mlflow.api.proto.Service.GetWorkspace)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(org.mlflow.api.proto.Service.GetWorkspace other) {
+        if (other == org.mlflow.api.proto.Service.GetWorkspace.getDefaultInstance()) return this;
+        if (other.hasWorkspaceName()) {
+          bitField0_ |= 0x00000001;
+          workspaceName_ = other.workspaceName_;
+          onChanged();
+        }
+        this.mergeUnknownFields(other.unknownFields);
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        org.mlflow.api.proto.Service.GetWorkspace parsedMessage = null;
+        try {
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (org.mlflow.api.proto.Service.GetWorkspace) e.getUnfinishedMessage();
+          throw e.unwrapIOException();
+        } finally {
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
+        return this;
+      }
+      private int bitField0_;
+
+      private java.lang.Object workspaceName_ = "";
+      /**
+       * <pre>
+       * Name of the workspace to fetch.
+       * </pre>
+       *
+       * <code>optional string workspace_name = 1 [(.mlflow.validate_required) = true];</code>
+       * @return Whether the workspaceName field is set.
+       */
+      public boolean hasWorkspaceName() {
+        return ((bitField0_ & 0x00000001) != 0);
+      }
+      /**
+       * <pre>
+       * Name of the workspace to fetch.
+       * </pre>
+       *
+       * <code>optional string workspace_name = 1 [(.mlflow.validate_required) = true];</code>
+       * @return The workspaceName.
+       */
+      public java.lang.String getWorkspaceName() {
+        java.lang.Object ref = workspaceName_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          if (bs.isValidUtf8()) {
+            workspaceName_ = s;
+          }
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * Name of the workspace to fetch.
+       * </pre>
+       *
+       * <code>optional string workspace_name = 1 [(.mlflow.validate_required) = true];</code>
+       * @return The bytes for workspaceName.
+       */
+      public com.google.protobuf.ByteString
+          getWorkspaceNameBytes() {
+        java.lang.Object ref = workspaceName_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          workspaceName_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * Name of the workspace to fetch.
+       * </pre>
+       *
+       * <code>optional string workspace_name = 1 [(.mlflow.validate_required) = true];</code>
+       * @param value The workspaceName to set.
+       * @return This builder for chaining.
+       */
+      public Builder setWorkspaceName(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  bitField0_ |= 0x00000001;
+        workspaceName_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Name of the workspace to fetch.
+       * </pre>
+       *
+       * <code>optional string workspace_name = 1 [(.mlflow.validate_required) = true];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearWorkspaceName() {
+        bitField0_ = (bitField0_ & ~0x00000001);
+        workspaceName_ = getDefaultInstance().getWorkspaceName();
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Name of the workspace to fetch.
+       * </pre>
+       *
+       * <code>optional string workspace_name = 1 [(.mlflow.validate_required) = true];</code>
+       * @param value The bytes for workspaceName to set.
+       * @return This builder for chaining.
+       */
+      public Builder setWorkspaceNameBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  bitField0_ |= 0x00000001;
+        workspaceName_ = value;
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:mlflow.GetWorkspace)
+    }
+
+    // @@protoc_insertion_point(class_scope:mlflow.GetWorkspace)
+    private static final org.mlflow.api.proto.Service.GetWorkspace DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new org.mlflow.api.proto.Service.GetWorkspace();
+    }
+
+    public static org.mlflow.api.proto.Service.GetWorkspace getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    @java.lang.Deprecated public static final com.google.protobuf.Parser<GetWorkspace>
+        PARSER = new com.google.protobuf.AbstractParser<GetWorkspace>() {
+      @java.lang.Override
+      public GetWorkspace parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return new GetWorkspace(input, extensionRegistry);
+      }
+    };
+
+    public static com.google.protobuf.Parser<GetWorkspace> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<GetWorkspace> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public org.mlflow.api.proto.Service.GetWorkspace getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface UpdateWorkspaceOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:mlflow.UpdateWorkspace)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <pre>
+     * Name of the workspace to update.
+     * </pre>
+     *
+     * <code>optional string workspace_name = 1 [(.mlflow.validate_required) = true];</code>
+     * @return Whether the workspaceName field is set.
+     */
+    boolean hasWorkspaceName();
+    /**
+     * <pre>
+     * Name of the workspace to update.
+     * </pre>
+     *
+     * <code>optional string workspace_name = 1 [(.mlflow.validate_required) = true];</code>
+     * @return The workspaceName.
+     */
+    java.lang.String getWorkspaceName();
+    /**
+     * <pre>
+     * Name of the workspace to update.
+     * </pre>
+     *
+     * <code>optional string workspace_name = 1 [(.mlflow.validate_required) = true];</code>
+     * @return The bytes for workspaceName.
+     */
+    com.google.protobuf.ByteString
+        getWorkspaceNameBytes();
+
+    /**
+     * <pre>
+     * Optional description update.
+     * </pre>
+     *
+     * <code>optional string description = 2;</code>
+     * @return Whether the description field is set.
+     */
+    boolean hasDescription();
+    /**
+     * <pre>
+     * Optional description update.
+     * </pre>
+     *
+     * <code>optional string description = 2;</code>
+     * @return The description.
+     */
+    java.lang.String getDescription();
+    /**
+     * <pre>
+     * Optional description update.
+     * </pre>
+     *
+     * <code>optional string description = 2;</code>
+     * @return The bytes for description.
+     */
+    com.google.protobuf.ByteString
+        getDescriptionBytes();
+
+    /**
+     * <pre>
+     * Optional default artifact root override update.
+     * </pre>
+     *
+     * <code>optional string default_artifact_root = 3;</code>
+     * @return Whether the defaultArtifactRoot field is set.
+     */
+    boolean hasDefaultArtifactRoot();
+    /**
+     * <pre>
+     * Optional default artifact root override update.
+     * </pre>
+     *
+     * <code>optional string default_artifact_root = 3;</code>
+     * @return The defaultArtifactRoot.
+     */
+    java.lang.String getDefaultArtifactRoot();
+    /**
+     * <pre>
+     * Optional default artifact root override update.
+     * </pre>
+     *
+     * <code>optional string default_artifact_root = 3;</code>
+     * @return The bytes for defaultArtifactRoot.
+     */
+    com.google.protobuf.ByteString
+        getDefaultArtifactRootBytes();
+  }
+  /**
+   * <pre>
+   * Update workspace metadata.
+   * </pre>
+   *
+   * Protobuf type {@code mlflow.UpdateWorkspace}
+   */
+  public static final class UpdateWorkspace extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:mlflow.UpdateWorkspace)
+      UpdateWorkspaceOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use UpdateWorkspace.newBuilder() to construct.
+    private UpdateWorkspace(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private UpdateWorkspace() {
+      workspaceName_ = "";
+      description_ = "";
+      defaultArtifactRoot_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new UpdateWorkspace();
+    }
+
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet
+    getUnknownFields() {
+      return this.unknownFields;
+    }
+    private UpdateWorkspace(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      this();
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
+      int mutable_bitField0_ = 0;
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            case 10: {
+              com.google.protobuf.ByteString bs = input.readBytes();
+              bitField0_ |= 0x00000001;
+              workspaceName_ = bs;
+              break;
+            }
+            case 18: {
+              com.google.protobuf.ByteString bs = input.readBytes();
+              bitField0_ |= 0x00000002;
+              description_ = bs;
+              break;
+            }
+            case 26: {
+              com.google.protobuf.ByteString bs = input.readBytes();
+              bitField0_ |= 0x00000004;
+              defaultArtifactRoot_ = bs;
+              break;
+            }
+            default: {
+              if (!parseUnknownField(
+                  input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e).setUnfinishedMessage(this);
+      } finally {
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return org.mlflow.api.proto.Service.internal_static_mlflow_UpdateWorkspace_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return org.mlflow.api.proto.Service.internal_static_mlflow_UpdateWorkspace_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              org.mlflow.api.proto.Service.UpdateWorkspace.class, org.mlflow.api.proto.Service.UpdateWorkspace.Builder.class);
+    }
+
+    public interface ResponseOrBuilder extends
+        // @@protoc_insertion_point(interface_extends:mlflow.UpdateWorkspace.Response)
+        com.google.protobuf.MessageOrBuilder {
+
+      /**
+       * <pre>
+       * Metadata describing the updated workspace.
+       * </pre>
+       *
+       * <code>optional .mlflow.Workspace workspace = 1;</code>
+       * @return Whether the workspace field is set.
+       */
+      boolean hasWorkspace();
+      /**
+       * <pre>
+       * Metadata describing the updated workspace.
+       * </pre>
+       *
+       * <code>optional .mlflow.Workspace workspace = 1;</code>
+       * @return The workspace.
+       */
+      org.mlflow.api.proto.Service.Workspace getWorkspace();
+      /**
+       * <pre>
+       * Metadata describing the updated workspace.
+       * </pre>
+       *
+       * <code>optional .mlflow.Workspace workspace = 1;</code>
+       */
+      org.mlflow.api.proto.Service.WorkspaceOrBuilder getWorkspaceOrBuilder();
+    }
+    /**
+     * Protobuf type {@code mlflow.UpdateWorkspace.Response}
+     */
+    public static final class Response extends
+        com.google.protobuf.GeneratedMessageV3 implements
+        // @@protoc_insertion_point(message_implements:mlflow.UpdateWorkspace.Response)
+        ResponseOrBuilder {
+    private static final long serialVersionUID = 0L;
+      // Use Response.newBuilder() to construct.
+      private Response(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+        super(builder);
+      }
+      private Response() {
+      }
+
+      @java.lang.Override
+      @SuppressWarnings({"unused"})
+      protected java.lang.Object newInstance(
+          UnusedPrivateParameter unused) {
+        return new Response();
+      }
+
+      @java.lang.Override
+      public final com.google.protobuf.UnknownFieldSet
+      getUnknownFields() {
+        return this.unknownFields;
+      }
+      private Response(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        this();
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        int mutable_bitField0_ = 0;
+        com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+            com.google.protobuf.UnknownFieldSet.newBuilder();
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                org.mlflow.api.proto.Service.Workspace.Builder subBuilder = null;
+                if (((bitField0_ & 0x00000001) != 0)) {
+                  subBuilder = workspace_.toBuilder();
+                }
+                workspace_ = input.readMessage(org.mlflow.api.proto.Service.Workspace.PARSER, extensionRegistry);
+                if (subBuilder != null) {
+                  subBuilder.mergeFrom(workspace_);
+                  workspace_ = subBuilder.buildPartial();
+                }
+                bitField0_ |= 0x00000001;
+                break;
+              }
+              default: {
+                if (!parseUnknownField(
+                    input, unknownFields, extensionRegistry, tag)) {
+                  done = true;
+                }
+                break;
+              }
+            }
+          }
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(this);
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(
+              e).setUnfinishedMessage(this);
+        } finally {
+          this.unknownFields = unknownFields.build();
+          makeExtensionsImmutable();
+        }
+      }
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return org.mlflow.api.proto.Service.internal_static_mlflow_UpdateWorkspace_Response_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return org.mlflow.api.proto.Service.internal_static_mlflow_UpdateWorkspace_Response_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                org.mlflow.api.proto.Service.UpdateWorkspace.Response.class, org.mlflow.api.proto.Service.UpdateWorkspace.Response.Builder.class);
+      }
+
+      private int bitField0_;
+      public static final int WORKSPACE_FIELD_NUMBER = 1;
+      private org.mlflow.api.proto.Service.Workspace workspace_;
+      /**
+       * <pre>
+       * Metadata describing the updated workspace.
+       * </pre>
+       *
+       * <code>optional .mlflow.Workspace workspace = 1;</code>
+       * @return Whether the workspace field is set.
+       */
+      @java.lang.Override
+      public boolean hasWorkspace() {
+        return ((bitField0_ & 0x00000001) != 0);
+      }
+      /**
+       * <pre>
+       * Metadata describing the updated workspace.
+       * </pre>
+       *
+       * <code>optional .mlflow.Workspace workspace = 1;</code>
+       * @return The workspace.
+       */
+      @java.lang.Override
+      public org.mlflow.api.proto.Service.Workspace getWorkspace() {
+        return workspace_ == null ? org.mlflow.api.proto.Service.Workspace.getDefaultInstance() : workspace_;
+      }
+      /**
+       * <pre>
+       * Metadata describing the updated workspace.
+       * </pre>
+       *
+       * <code>optional .mlflow.Workspace workspace = 1;</code>
+       */
+      @java.lang.Override
+      public org.mlflow.api.proto.Service.WorkspaceOrBuilder getWorkspaceOrBuilder() {
+        return workspace_ == null ? org.mlflow.api.proto.Service.Workspace.getDefaultInstance() : workspace_;
+      }
+
+      private byte memoizedIsInitialized = -1;
+      @java.lang.Override
+      public final boolean isInitialized() {
+        byte isInitialized = memoizedIsInitialized;
+        if (isInitialized == 1) return true;
+        if (isInitialized == 0) return false;
+
+        memoizedIsInitialized = 1;
+        return true;
+      }
+
+      @java.lang.Override
+      public void writeTo(com.google.protobuf.CodedOutputStream output)
+                          throws java.io.IOException {
+        if (((bitField0_ & 0x00000001) != 0)) {
+          output.writeMessage(1, getWorkspace());
+        }
+        unknownFields.writeTo(output);
+      }
+
+      @java.lang.Override
+      public int getSerializedSize() {
+        int size = memoizedSize;
+        if (size != -1) return size;
+
+        size = 0;
+        if (((bitField0_ & 0x00000001) != 0)) {
+          size += com.google.protobuf.CodedOutputStream
+            .computeMessageSize(1, getWorkspace());
+        }
+        size += unknownFields.getSerializedSize();
+        memoizedSize = size;
+        return size;
+      }
+
+      @java.lang.Override
+      public boolean equals(final java.lang.Object obj) {
+        if (obj == this) {
+         return true;
+        }
+        if (!(obj instanceof org.mlflow.api.proto.Service.UpdateWorkspace.Response)) {
+          return super.equals(obj);
+        }
+        org.mlflow.api.proto.Service.UpdateWorkspace.Response other = (org.mlflow.api.proto.Service.UpdateWorkspace.Response) obj;
+
+        if (hasWorkspace() != other.hasWorkspace()) return false;
+        if (hasWorkspace()) {
+          if (!getWorkspace()
+              .equals(other.getWorkspace())) return false;
+        }
+        if (!unknownFields.equals(other.unknownFields)) return false;
+        return true;
+      }
+
+      @java.lang.Override
+      public int hashCode() {
+        if (memoizedHashCode != 0) {
+          return memoizedHashCode;
+        }
+        int hash = 41;
+        hash = (19 * hash) + getDescriptor().hashCode();
+        if (hasWorkspace()) {
+          hash = (37 * hash) + WORKSPACE_FIELD_NUMBER;
+          hash = (53 * hash) + getWorkspace().hashCode();
+        }
+        hash = (29 * hash) + unknownFields.hashCode();
+        memoizedHashCode = hash;
+        return hash;
+      }
+
+      public static org.mlflow.api.proto.Service.UpdateWorkspace.Response parseFrom(
+          java.nio.ByteBuffer data)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data);
+      }
+      public static org.mlflow.api.proto.Service.UpdateWorkspace.Response parseFrom(
+          java.nio.ByteBuffer data,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data, extensionRegistry);
+      }
+      public static org.mlflow.api.proto.Service.UpdateWorkspace.Response parseFrom(
+          com.google.protobuf.ByteString data)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data);
+      }
+      public static org.mlflow.api.proto.Service.UpdateWorkspace.Response parseFrom(
+          com.google.protobuf.ByteString data,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data, extensionRegistry);
+      }
+      public static org.mlflow.api.proto.Service.UpdateWorkspace.Response parseFrom(byte[] data)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data);
+      }
+      public static org.mlflow.api.proto.Service.UpdateWorkspace.Response parseFrom(
+          byte[] data,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data, extensionRegistry);
+      }
+      public static org.mlflow.api.proto.Service.UpdateWorkspace.Response parseFrom(java.io.InputStream input)
+          throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessageV3
+            .parseWithIOException(PARSER, input);
+      }
+      public static org.mlflow.api.proto.Service.UpdateWorkspace.Response parseFrom(
+          java.io.InputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessageV3
+            .parseWithIOException(PARSER, input, extensionRegistry);
+      }
+      public static org.mlflow.api.proto.Service.UpdateWorkspace.Response parseDelimitedFrom(java.io.InputStream input)
+          throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessageV3
+            .parseDelimitedWithIOException(PARSER, input);
+      }
+      public static org.mlflow.api.proto.Service.UpdateWorkspace.Response parseDelimitedFrom(
+          java.io.InputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessageV3
+            .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+      }
+      public static org.mlflow.api.proto.Service.UpdateWorkspace.Response parseFrom(
+          com.google.protobuf.CodedInputStream input)
+          throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessageV3
+            .parseWithIOException(PARSER, input);
+      }
+      public static org.mlflow.api.proto.Service.UpdateWorkspace.Response parseFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessageV3
+            .parseWithIOException(PARSER, input, extensionRegistry);
+      }
+
+      @java.lang.Override
+      public Builder newBuilderForType() { return newBuilder(); }
+      public static Builder newBuilder() {
+        return DEFAULT_INSTANCE.toBuilder();
+      }
+      public static Builder newBuilder(org.mlflow.api.proto.Service.UpdateWorkspace.Response prototype) {
+        return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+      }
+      @java.lang.Override
+      public Builder toBuilder() {
+        return this == DEFAULT_INSTANCE
+            ? new Builder() : new Builder().mergeFrom(this);
+      }
+
+      @java.lang.Override
+      protected Builder newBuilderForType(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        Builder builder = new Builder(parent);
+        return builder;
+      }
+      /**
+       * Protobuf type {@code mlflow.UpdateWorkspace.Response}
+       */
+      public static final class Builder extends
+          com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+          // @@protoc_insertion_point(builder_implements:mlflow.UpdateWorkspace.Response)
+          org.mlflow.api.proto.Service.UpdateWorkspace.ResponseOrBuilder {
+        public static final com.google.protobuf.Descriptors.Descriptor
+            getDescriptor() {
+          return org.mlflow.api.proto.Service.internal_static_mlflow_UpdateWorkspace_Response_descriptor;
+        }
+
+        @java.lang.Override
+        protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+            internalGetFieldAccessorTable() {
+          return org.mlflow.api.proto.Service.internal_static_mlflow_UpdateWorkspace_Response_fieldAccessorTable
+              .ensureFieldAccessorsInitialized(
+                  org.mlflow.api.proto.Service.UpdateWorkspace.Response.class, org.mlflow.api.proto.Service.UpdateWorkspace.Response.Builder.class);
+        }
+
+        // Construct using org.mlflow.api.proto.Service.UpdateWorkspace.Response.newBuilder()
+        private Builder() {
+          maybeForceBuilderInitialization();
+        }
+
+        private Builder(
+            com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+          super(parent);
+          maybeForceBuilderInitialization();
+        }
+        private void maybeForceBuilderInitialization() {
+          if (com.google.protobuf.GeneratedMessageV3
+                  .alwaysUseFieldBuilders) {
+            getWorkspaceFieldBuilder();
+          }
+        }
+        @java.lang.Override
+        public Builder clear() {
+          super.clear();
+          if (workspaceBuilder_ == null) {
+            workspace_ = null;
+          } else {
+            workspaceBuilder_.clear();
+          }
+          bitField0_ = (bitField0_ & ~0x00000001);
+          return this;
+        }
+
+        @java.lang.Override
+        public com.google.protobuf.Descriptors.Descriptor
+            getDescriptorForType() {
+          return org.mlflow.api.proto.Service.internal_static_mlflow_UpdateWorkspace_Response_descriptor;
+        }
+
+        @java.lang.Override
+        public org.mlflow.api.proto.Service.UpdateWorkspace.Response getDefaultInstanceForType() {
+          return org.mlflow.api.proto.Service.UpdateWorkspace.Response.getDefaultInstance();
+        }
+
+        @java.lang.Override
+        public org.mlflow.api.proto.Service.UpdateWorkspace.Response build() {
+          org.mlflow.api.proto.Service.UpdateWorkspace.Response result = buildPartial();
+          if (!result.isInitialized()) {
+            throw newUninitializedMessageException(result);
+          }
+          return result;
+        }
+
+        @java.lang.Override
+        public org.mlflow.api.proto.Service.UpdateWorkspace.Response buildPartial() {
+          org.mlflow.api.proto.Service.UpdateWorkspace.Response result = new org.mlflow.api.proto.Service.UpdateWorkspace.Response(this);
+          int from_bitField0_ = bitField0_;
+          int to_bitField0_ = 0;
+          if (((from_bitField0_ & 0x00000001) != 0)) {
+            if (workspaceBuilder_ == null) {
+              result.workspace_ = workspace_;
+            } else {
+              result.workspace_ = workspaceBuilder_.build();
+            }
+            to_bitField0_ |= 0x00000001;
+          }
+          result.bitField0_ = to_bitField0_;
+          onBuilt();
+          return result;
+        }
+
+        @java.lang.Override
+        public Builder clone() {
+          return super.clone();
+        }
+        @java.lang.Override
+        public Builder setField(
+            com.google.protobuf.Descriptors.FieldDescriptor field,
+            java.lang.Object value) {
+          return super.setField(field, value);
+        }
+        @java.lang.Override
+        public Builder clearField(
+            com.google.protobuf.Descriptors.FieldDescriptor field) {
+          return super.clearField(field);
+        }
+        @java.lang.Override
+        public Builder clearOneof(
+            com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+          return super.clearOneof(oneof);
+        }
+        @java.lang.Override
+        public Builder setRepeatedField(
+            com.google.protobuf.Descriptors.FieldDescriptor field,
+            int index, java.lang.Object value) {
+          return super.setRepeatedField(field, index, value);
+        }
+        @java.lang.Override
+        public Builder addRepeatedField(
+            com.google.protobuf.Descriptors.FieldDescriptor field,
+            java.lang.Object value) {
+          return super.addRepeatedField(field, value);
+        }
+        @java.lang.Override
+        public Builder mergeFrom(com.google.protobuf.Message other) {
+          if (other instanceof org.mlflow.api.proto.Service.UpdateWorkspace.Response) {
+            return mergeFrom((org.mlflow.api.proto.Service.UpdateWorkspace.Response)other);
+          } else {
+            super.mergeFrom(other);
+            return this;
+          }
+        }
+
+        public Builder mergeFrom(org.mlflow.api.proto.Service.UpdateWorkspace.Response other) {
+          if (other == org.mlflow.api.proto.Service.UpdateWorkspace.Response.getDefaultInstance()) return this;
+          if (other.hasWorkspace()) {
+            mergeWorkspace(other.getWorkspace());
+          }
+          this.mergeUnknownFields(other.unknownFields);
+          onChanged();
+          return this;
+        }
+
+        @java.lang.Override
+        public final boolean isInitialized() {
+          return true;
+        }
+
+        @java.lang.Override
+        public Builder mergeFrom(
+            com.google.protobuf.CodedInputStream input,
+            com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+            throws java.io.IOException {
+          org.mlflow.api.proto.Service.UpdateWorkspace.Response parsedMessage = null;
+          try {
+            parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+          } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+            parsedMessage = (org.mlflow.api.proto.Service.UpdateWorkspace.Response) e.getUnfinishedMessage();
+            throw e.unwrapIOException();
+          } finally {
+            if (parsedMessage != null) {
+              mergeFrom(parsedMessage);
+            }
+          }
+          return this;
+        }
+        private int bitField0_;
+
+        private org.mlflow.api.proto.Service.Workspace workspace_;
+        private com.google.protobuf.SingleFieldBuilderV3<
+            org.mlflow.api.proto.Service.Workspace, org.mlflow.api.proto.Service.Workspace.Builder, org.mlflow.api.proto.Service.WorkspaceOrBuilder> workspaceBuilder_;
+        /**
+         * <pre>
+         * Metadata describing the updated workspace.
+         * </pre>
+         *
+         * <code>optional .mlflow.Workspace workspace = 1;</code>
+         * @return Whether the workspace field is set.
+         */
+        public boolean hasWorkspace() {
+          return ((bitField0_ & 0x00000001) != 0);
+        }
+        /**
+         * <pre>
+         * Metadata describing the updated workspace.
+         * </pre>
+         *
+         * <code>optional .mlflow.Workspace workspace = 1;</code>
+         * @return The workspace.
+         */
+        public org.mlflow.api.proto.Service.Workspace getWorkspace() {
+          if (workspaceBuilder_ == null) {
+            return workspace_ == null ? org.mlflow.api.proto.Service.Workspace.getDefaultInstance() : workspace_;
+          } else {
+            return workspaceBuilder_.getMessage();
+          }
+        }
+        /**
+         * <pre>
+         * Metadata describing the updated workspace.
+         * </pre>
+         *
+         * <code>optional .mlflow.Workspace workspace = 1;</code>
+         */
+        public Builder setWorkspace(org.mlflow.api.proto.Service.Workspace value) {
+          if (workspaceBuilder_ == null) {
+            if (value == null) {
+              throw new NullPointerException();
+            }
+            workspace_ = value;
+            onChanged();
+          } else {
+            workspaceBuilder_.setMessage(value);
+          }
+          bitField0_ |= 0x00000001;
+          return this;
+        }
+        /**
+         * <pre>
+         * Metadata describing the updated workspace.
+         * </pre>
+         *
+         * <code>optional .mlflow.Workspace workspace = 1;</code>
+         */
+        public Builder setWorkspace(
+            org.mlflow.api.proto.Service.Workspace.Builder builderForValue) {
+          if (workspaceBuilder_ == null) {
+            workspace_ = builderForValue.build();
+            onChanged();
+          } else {
+            workspaceBuilder_.setMessage(builderForValue.build());
+          }
+          bitField0_ |= 0x00000001;
+          return this;
+        }
+        /**
+         * <pre>
+         * Metadata describing the updated workspace.
+         * </pre>
+         *
+         * <code>optional .mlflow.Workspace workspace = 1;</code>
+         */
+        public Builder mergeWorkspace(org.mlflow.api.proto.Service.Workspace value) {
+          if (workspaceBuilder_ == null) {
+            if (((bitField0_ & 0x00000001) != 0) &&
+                workspace_ != null &&
+                workspace_ != org.mlflow.api.proto.Service.Workspace.getDefaultInstance()) {
+              workspace_ =
+                org.mlflow.api.proto.Service.Workspace.newBuilder(workspace_).mergeFrom(value).buildPartial();
+            } else {
+              workspace_ = value;
+            }
+            onChanged();
+          } else {
+            workspaceBuilder_.mergeFrom(value);
+          }
+          bitField0_ |= 0x00000001;
+          return this;
+        }
+        /**
+         * <pre>
+         * Metadata describing the updated workspace.
+         * </pre>
+         *
+         * <code>optional .mlflow.Workspace workspace = 1;</code>
+         */
+        public Builder clearWorkspace() {
+          if (workspaceBuilder_ == null) {
+            workspace_ = null;
+            onChanged();
+          } else {
+            workspaceBuilder_.clear();
+          }
+          bitField0_ = (bitField0_ & ~0x00000001);
+          return this;
+        }
+        /**
+         * <pre>
+         * Metadata describing the updated workspace.
+         * </pre>
+         *
+         * <code>optional .mlflow.Workspace workspace = 1;</code>
+         */
+        public org.mlflow.api.proto.Service.Workspace.Builder getWorkspaceBuilder() {
+          bitField0_ |= 0x00000001;
+          onChanged();
+          return getWorkspaceFieldBuilder().getBuilder();
+        }
+        /**
+         * <pre>
+         * Metadata describing the updated workspace.
+         * </pre>
+         *
+         * <code>optional .mlflow.Workspace workspace = 1;</code>
+         */
+        public org.mlflow.api.proto.Service.WorkspaceOrBuilder getWorkspaceOrBuilder() {
+          if (workspaceBuilder_ != null) {
+            return workspaceBuilder_.getMessageOrBuilder();
+          } else {
+            return workspace_ == null ?
+                org.mlflow.api.proto.Service.Workspace.getDefaultInstance() : workspace_;
+          }
+        }
+        /**
+         * <pre>
+         * Metadata describing the updated workspace.
+         * </pre>
+         *
+         * <code>optional .mlflow.Workspace workspace = 1;</code>
+         */
+        private com.google.protobuf.SingleFieldBuilderV3<
+            org.mlflow.api.proto.Service.Workspace, org.mlflow.api.proto.Service.Workspace.Builder, org.mlflow.api.proto.Service.WorkspaceOrBuilder> 
+            getWorkspaceFieldBuilder() {
+          if (workspaceBuilder_ == null) {
+            workspaceBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+                org.mlflow.api.proto.Service.Workspace, org.mlflow.api.proto.Service.Workspace.Builder, org.mlflow.api.proto.Service.WorkspaceOrBuilder>(
+                    getWorkspace(),
+                    getParentForChildren(),
+                    isClean());
+            workspace_ = null;
+          }
+          return workspaceBuilder_;
+        }
+        @java.lang.Override
+        public final Builder setUnknownFields(
+            final com.google.protobuf.UnknownFieldSet unknownFields) {
+          return super.setUnknownFields(unknownFields);
+        }
+
+        @java.lang.Override
+        public final Builder mergeUnknownFields(
+            final com.google.protobuf.UnknownFieldSet unknownFields) {
+          return super.mergeUnknownFields(unknownFields);
+        }
+
+
+        // @@protoc_insertion_point(builder_scope:mlflow.UpdateWorkspace.Response)
+      }
+
+      // @@protoc_insertion_point(class_scope:mlflow.UpdateWorkspace.Response)
+      private static final org.mlflow.api.proto.Service.UpdateWorkspace.Response DEFAULT_INSTANCE;
+      static {
+        DEFAULT_INSTANCE = new org.mlflow.api.proto.Service.UpdateWorkspace.Response();
+      }
+
+      public static org.mlflow.api.proto.Service.UpdateWorkspace.Response getDefaultInstance() {
+        return DEFAULT_INSTANCE;
+      }
+
+      @java.lang.Deprecated public static final com.google.protobuf.Parser<Response>
+          PARSER = new com.google.protobuf.AbstractParser<Response>() {
+        @java.lang.Override
+        public Response parsePartialFrom(
+            com.google.protobuf.CodedInputStream input,
+            com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+            throws com.google.protobuf.InvalidProtocolBufferException {
+          return new Response(input, extensionRegistry);
+        }
+      };
+
+      public static com.google.protobuf.Parser<Response> parser() {
+        return PARSER;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Parser<Response> getParserForType() {
+        return PARSER;
+      }
+
+      @java.lang.Override
+      public org.mlflow.api.proto.Service.UpdateWorkspace.Response getDefaultInstanceForType() {
+        return DEFAULT_INSTANCE;
+      }
+
+    }
+
+    private int bitField0_;
+    public static final int WORKSPACE_NAME_FIELD_NUMBER = 1;
+    private volatile java.lang.Object workspaceName_;
+    /**
+     * <pre>
+     * Name of the workspace to update.
+     * </pre>
+     *
+     * <code>optional string workspace_name = 1 [(.mlflow.validate_required) = true];</code>
+     * @return Whether the workspaceName field is set.
+     */
+    @java.lang.Override
+    public boolean hasWorkspaceName() {
+      return ((bitField0_ & 0x00000001) != 0);
+    }
+    /**
+     * <pre>
+     * Name of the workspace to update.
+     * </pre>
+     *
+     * <code>optional string workspace_name = 1 [(.mlflow.validate_required) = true];</code>
+     * @return The workspaceName.
+     */
+    @java.lang.Override
+    public java.lang.String getWorkspaceName() {
+      java.lang.Object ref = workspaceName_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        if (bs.isValidUtf8()) {
+          workspaceName_ = s;
+        }
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * Name of the workspace to update.
+     * </pre>
+     *
+     * <code>optional string workspace_name = 1 [(.mlflow.validate_required) = true];</code>
+     * @return The bytes for workspaceName.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getWorkspaceNameBytes() {
+      java.lang.Object ref = workspaceName_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        workspaceName_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int DESCRIPTION_FIELD_NUMBER = 2;
+    private volatile java.lang.Object description_;
+    /**
+     * <pre>
+     * Optional description update.
+     * </pre>
+     *
+     * <code>optional string description = 2;</code>
+     * @return Whether the description field is set.
+     */
+    @java.lang.Override
+    public boolean hasDescription() {
+      return ((bitField0_ & 0x00000002) != 0);
+    }
+    /**
+     * <pre>
+     * Optional description update.
+     * </pre>
+     *
+     * <code>optional string description = 2;</code>
+     * @return The description.
+     */
+    @java.lang.Override
+    public java.lang.String getDescription() {
+      java.lang.Object ref = description_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        if (bs.isValidUtf8()) {
+          description_ = s;
+        }
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * Optional description update.
+     * </pre>
+     *
+     * <code>optional string description = 2;</code>
+     * @return The bytes for description.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getDescriptionBytes() {
+      java.lang.Object ref = description_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        description_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int DEFAULT_ARTIFACT_ROOT_FIELD_NUMBER = 3;
+    private volatile java.lang.Object defaultArtifactRoot_;
+    /**
+     * <pre>
+     * Optional default artifact root override update.
+     * </pre>
+     *
+     * <code>optional string default_artifact_root = 3;</code>
+     * @return Whether the defaultArtifactRoot field is set.
+     */
+    @java.lang.Override
+    public boolean hasDefaultArtifactRoot() {
+      return ((bitField0_ & 0x00000004) != 0);
+    }
+    /**
+     * <pre>
+     * Optional default artifact root override update.
+     * </pre>
+     *
+     * <code>optional string default_artifact_root = 3;</code>
+     * @return The defaultArtifactRoot.
+     */
+    @java.lang.Override
+    public java.lang.String getDefaultArtifactRoot() {
+      java.lang.Object ref = defaultArtifactRoot_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        if (bs.isValidUtf8()) {
+          defaultArtifactRoot_ = s;
+        }
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * Optional default artifact root override update.
+     * </pre>
+     *
+     * <code>optional string default_artifact_root = 3;</code>
+     * @return The bytes for defaultArtifactRoot.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getDefaultArtifactRootBytes() {
+      java.lang.Object ref = defaultArtifactRoot_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        defaultArtifactRoot_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (((bitField0_ & 0x00000001) != 0)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, workspaceName_);
+      }
+      if (((bitField0_ & 0x00000002) != 0)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 2, description_);
+      }
+      if (((bitField0_ & 0x00000004) != 0)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 3, defaultArtifactRoot_);
+      }
+      unknownFields.writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (((bitField0_ & 0x00000001) != 0)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, workspaceName_);
+      }
+      if (((bitField0_ & 0x00000002) != 0)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, description_);
+      }
+      if (((bitField0_ & 0x00000004) != 0)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(3, defaultArtifactRoot_);
+      }
+      size += unknownFields.getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof org.mlflow.api.proto.Service.UpdateWorkspace)) {
+        return super.equals(obj);
+      }
+      org.mlflow.api.proto.Service.UpdateWorkspace other = (org.mlflow.api.proto.Service.UpdateWorkspace) obj;
+
+      if (hasWorkspaceName() != other.hasWorkspaceName()) return false;
+      if (hasWorkspaceName()) {
+        if (!getWorkspaceName()
+            .equals(other.getWorkspaceName())) return false;
+      }
+      if (hasDescription() != other.hasDescription()) return false;
+      if (hasDescription()) {
+        if (!getDescription()
+            .equals(other.getDescription())) return false;
+      }
+      if (hasDefaultArtifactRoot() != other.hasDefaultArtifactRoot()) return false;
+      if (hasDefaultArtifactRoot()) {
+        if (!getDefaultArtifactRoot()
+            .equals(other.getDefaultArtifactRoot())) return false;
+      }
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      if (hasWorkspaceName()) {
+        hash = (37 * hash) + WORKSPACE_NAME_FIELD_NUMBER;
+        hash = (53 * hash) + getWorkspaceName().hashCode();
+      }
+      if (hasDescription()) {
+        hash = (37 * hash) + DESCRIPTION_FIELD_NUMBER;
+        hash = (53 * hash) + getDescription().hashCode();
+      }
+      if (hasDefaultArtifactRoot()) {
+        hash = (37 * hash) + DEFAULT_ARTIFACT_ROOT_FIELD_NUMBER;
+        hash = (53 * hash) + getDefaultArtifactRoot().hashCode();
+      }
+      hash = (29 * hash) + unknownFields.hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static org.mlflow.api.proto.Service.UpdateWorkspace parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static org.mlflow.api.proto.Service.UpdateWorkspace parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static org.mlflow.api.proto.Service.UpdateWorkspace parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static org.mlflow.api.proto.Service.UpdateWorkspace parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static org.mlflow.api.proto.Service.UpdateWorkspace parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static org.mlflow.api.proto.Service.UpdateWorkspace parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static org.mlflow.api.proto.Service.UpdateWorkspace parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static org.mlflow.api.proto.Service.UpdateWorkspace parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static org.mlflow.api.proto.Service.UpdateWorkspace parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+    public static org.mlflow.api.proto.Service.UpdateWorkspace parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static org.mlflow.api.proto.Service.UpdateWorkspace parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static org.mlflow.api.proto.Service.UpdateWorkspace parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(org.mlflow.api.proto.Service.UpdateWorkspace prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * <pre>
+     * Update workspace metadata.
+     * </pre>
+     *
+     * Protobuf type {@code mlflow.UpdateWorkspace}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:mlflow.UpdateWorkspace)
+        org.mlflow.api.proto.Service.UpdateWorkspaceOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return org.mlflow.api.proto.Service.internal_static_mlflow_UpdateWorkspace_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return org.mlflow.api.proto.Service.internal_static_mlflow_UpdateWorkspace_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                org.mlflow.api.proto.Service.UpdateWorkspace.class, org.mlflow.api.proto.Service.UpdateWorkspace.Builder.class);
+      }
+
+      // Construct using org.mlflow.api.proto.Service.UpdateWorkspace.newBuilder()
+      private Builder() {
+        maybeForceBuilderInitialization();
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+        }
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        workspaceName_ = "";
+        bitField0_ = (bitField0_ & ~0x00000001);
+        description_ = "";
+        bitField0_ = (bitField0_ & ~0x00000002);
+        defaultArtifactRoot_ = "";
+        bitField0_ = (bitField0_ & ~0x00000004);
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return org.mlflow.api.proto.Service.internal_static_mlflow_UpdateWorkspace_descriptor;
+      }
+
+      @java.lang.Override
+      public org.mlflow.api.proto.Service.UpdateWorkspace getDefaultInstanceForType() {
+        return org.mlflow.api.proto.Service.UpdateWorkspace.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public org.mlflow.api.proto.Service.UpdateWorkspace build() {
+        org.mlflow.api.proto.Service.UpdateWorkspace result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public org.mlflow.api.proto.Service.UpdateWorkspace buildPartial() {
+        org.mlflow.api.proto.Service.UpdateWorkspace result = new org.mlflow.api.proto.Service.UpdateWorkspace(this);
+        int from_bitField0_ = bitField0_;
+        int to_bitField0_ = 0;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          to_bitField0_ |= 0x00000001;
+        }
+        result.workspaceName_ = workspaceName_;
+        if (((from_bitField0_ & 0x00000002) != 0)) {
+          to_bitField0_ |= 0x00000002;
+        }
+        result.description_ = description_;
+        if (((from_bitField0_ & 0x00000004) != 0)) {
+          to_bitField0_ |= 0x00000004;
+        }
+        result.defaultArtifactRoot_ = defaultArtifactRoot_;
+        result.bitField0_ = to_bitField0_;
+        onBuilt();
+        return result;
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof org.mlflow.api.proto.Service.UpdateWorkspace) {
+          return mergeFrom((org.mlflow.api.proto.Service.UpdateWorkspace)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(org.mlflow.api.proto.Service.UpdateWorkspace other) {
+        if (other == org.mlflow.api.proto.Service.UpdateWorkspace.getDefaultInstance()) return this;
+        if (other.hasWorkspaceName()) {
+          bitField0_ |= 0x00000001;
+          workspaceName_ = other.workspaceName_;
+          onChanged();
+        }
+        if (other.hasDescription()) {
+          bitField0_ |= 0x00000002;
+          description_ = other.description_;
+          onChanged();
+        }
+        if (other.hasDefaultArtifactRoot()) {
+          bitField0_ |= 0x00000004;
+          defaultArtifactRoot_ = other.defaultArtifactRoot_;
+          onChanged();
+        }
+        this.mergeUnknownFields(other.unknownFields);
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        org.mlflow.api.proto.Service.UpdateWorkspace parsedMessage = null;
+        try {
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (org.mlflow.api.proto.Service.UpdateWorkspace) e.getUnfinishedMessage();
+          throw e.unwrapIOException();
+        } finally {
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
+        return this;
+      }
+      private int bitField0_;
+
+      private java.lang.Object workspaceName_ = "";
+      /**
+       * <pre>
+       * Name of the workspace to update.
+       * </pre>
+       *
+       * <code>optional string workspace_name = 1 [(.mlflow.validate_required) = true];</code>
+       * @return Whether the workspaceName field is set.
+       */
+      public boolean hasWorkspaceName() {
+        return ((bitField0_ & 0x00000001) != 0);
+      }
+      /**
+       * <pre>
+       * Name of the workspace to update.
+       * </pre>
+       *
+       * <code>optional string workspace_name = 1 [(.mlflow.validate_required) = true];</code>
+       * @return The workspaceName.
+       */
+      public java.lang.String getWorkspaceName() {
+        java.lang.Object ref = workspaceName_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          if (bs.isValidUtf8()) {
+            workspaceName_ = s;
+          }
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * Name of the workspace to update.
+       * </pre>
+       *
+       * <code>optional string workspace_name = 1 [(.mlflow.validate_required) = true];</code>
+       * @return The bytes for workspaceName.
+       */
+      public com.google.protobuf.ByteString
+          getWorkspaceNameBytes() {
+        java.lang.Object ref = workspaceName_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          workspaceName_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * Name of the workspace to update.
+       * </pre>
+       *
+       * <code>optional string workspace_name = 1 [(.mlflow.validate_required) = true];</code>
+       * @param value The workspaceName to set.
+       * @return This builder for chaining.
+       */
+      public Builder setWorkspaceName(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  bitField0_ |= 0x00000001;
+        workspaceName_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Name of the workspace to update.
+       * </pre>
+       *
+       * <code>optional string workspace_name = 1 [(.mlflow.validate_required) = true];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearWorkspaceName() {
+        bitField0_ = (bitField0_ & ~0x00000001);
+        workspaceName_ = getDefaultInstance().getWorkspaceName();
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Name of the workspace to update.
+       * </pre>
+       *
+       * <code>optional string workspace_name = 1 [(.mlflow.validate_required) = true];</code>
+       * @param value The bytes for workspaceName to set.
+       * @return This builder for chaining.
+       */
+      public Builder setWorkspaceNameBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  bitField0_ |= 0x00000001;
+        workspaceName_ = value;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object description_ = "";
+      /**
+       * <pre>
+       * Optional description update.
+       * </pre>
+       *
+       * <code>optional string description = 2;</code>
+       * @return Whether the description field is set.
+       */
+      public boolean hasDescription() {
+        return ((bitField0_ & 0x00000002) != 0);
+      }
+      /**
+       * <pre>
+       * Optional description update.
+       * </pre>
+       *
+       * <code>optional string description = 2;</code>
+       * @return The description.
+       */
+      public java.lang.String getDescription() {
+        java.lang.Object ref = description_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          if (bs.isValidUtf8()) {
+            description_ = s;
+          }
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * Optional description update.
+       * </pre>
+       *
+       * <code>optional string description = 2;</code>
+       * @return The bytes for description.
+       */
+      public com.google.protobuf.ByteString
+          getDescriptionBytes() {
+        java.lang.Object ref = description_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          description_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * Optional description update.
+       * </pre>
+       *
+       * <code>optional string description = 2;</code>
+       * @param value The description to set.
+       * @return This builder for chaining.
+       */
+      public Builder setDescription(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  bitField0_ |= 0x00000002;
+        description_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Optional description update.
+       * </pre>
+       *
+       * <code>optional string description = 2;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearDescription() {
+        bitField0_ = (bitField0_ & ~0x00000002);
+        description_ = getDefaultInstance().getDescription();
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Optional description update.
+       * </pre>
+       *
+       * <code>optional string description = 2;</code>
+       * @param value The bytes for description to set.
+       * @return This builder for chaining.
+       */
+      public Builder setDescriptionBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  bitField0_ |= 0x00000002;
+        description_ = value;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object defaultArtifactRoot_ = "";
+      /**
+       * <pre>
+       * Optional default artifact root override update.
+       * </pre>
+       *
+       * <code>optional string default_artifact_root = 3;</code>
+       * @return Whether the defaultArtifactRoot field is set.
+       */
+      public boolean hasDefaultArtifactRoot() {
+        return ((bitField0_ & 0x00000004) != 0);
+      }
+      /**
+       * <pre>
+       * Optional default artifact root override update.
+       * </pre>
+       *
+       * <code>optional string default_artifact_root = 3;</code>
+       * @return The defaultArtifactRoot.
+       */
+      public java.lang.String getDefaultArtifactRoot() {
+        java.lang.Object ref = defaultArtifactRoot_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          if (bs.isValidUtf8()) {
+            defaultArtifactRoot_ = s;
+          }
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * Optional default artifact root override update.
+       * </pre>
+       *
+       * <code>optional string default_artifact_root = 3;</code>
+       * @return The bytes for defaultArtifactRoot.
+       */
+      public com.google.protobuf.ByteString
+          getDefaultArtifactRootBytes() {
+        java.lang.Object ref = defaultArtifactRoot_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          defaultArtifactRoot_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * Optional default artifact root override update.
+       * </pre>
+       *
+       * <code>optional string default_artifact_root = 3;</code>
+       * @param value The defaultArtifactRoot to set.
+       * @return This builder for chaining.
+       */
+      public Builder setDefaultArtifactRoot(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  bitField0_ |= 0x00000004;
+        defaultArtifactRoot_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Optional default artifact root override update.
+       * </pre>
+       *
+       * <code>optional string default_artifact_root = 3;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearDefaultArtifactRoot() {
+        bitField0_ = (bitField0_ & ~0x00000004);
+        defaultArtifactRoot_ = getDefaultInstance().getDefaultArtifactRoot();
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Optional default artifact root override update.
+       * </pre>
+       *
+       * <code>optional string default_artifact_root = 3;</code>
+       * @param value The bytes for defaultArtifactRoot to set.
+       * @return This builder for chaining.
+       */
+      public Builder setDefaultArtifactRootBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  bitField0_ |= 0x00000004;
+        defaultArtifactRoot_ = value;
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:mlflow.UpdateWorkspace)
+    }
+
+    // @@protoc_insertion_point(class_scope:mlflow.UpdateWorkspace)
+    private static final org.mlflow.api.proto.Service.UpdateWorkspace DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new org.mlflow.api.proto.Service.UpdateWorkspace();
+    }
+
+    public static org.mlflow.api.proto.Service.UpdateWorkspace getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    @java.lang.Deprecated public static final com.google.protobuf.Parser<UpdateWorkspace>
+        PARSER = new com.google.protobuf.AbstractParser<UpdateWorkspace>() {
+      @java.lang.Override
+      public UpdateWorkspace parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return new UpdateWorkspace(input, extensionRegistry);
+      }
+    };
+
+    public static com.google.protobuf.Parser<UpdateWorkspace> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<UpdateWorkspace> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public org.mlflow.api.proto.Service.UpdateWorkspace getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface DeleteWorkspaceOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:mlflow.DeleteWorkspace)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <pre>
+     * Name of the workspace to delete.
+     * </pre>
+     *
+     * <code>optional string workspace_name = 1 [(.mlflow.validate_required) = true];</code>
+     * @return Whether the workspaceName field is set.
+     */
+    boolean hasWorkspaceName();
+    /**
+     * <pre>
+     * Name of the workspace to delete.
+     * </pre>
+     *
+     * <code>optional string workspace_name = 1 [(.mlflow.validate_required) = true];</code>
+     * @return The workspaceName.
+     */
+    java.lang.String getWorkspaceName();
+    /**
+     * <pre>
+     * Name of the workspace to delete.
+     * </pre>
+     *
+     * <code>optional string workspace_name = 1 [(.mlflow.validate_required) = true];</code>
+     * @return The bytes for workspaceName.
+     */
+    com.google.protobuf.ByteString
+        getWorkspaceNameBytes();
+  }
+  /**
+   * <pre>
+   * Delete a workspace.
+   * </pre>
+   *
+   * Protobuf type {@code mlflow.DeleteWorkspace}
+   */
+  public static final class DeleteWorkspace extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:mlflow.DeleteWorkspace)
+      DeleteWorkspaceOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use DeleteWorkspace.newBuilder() to construct.
+    private DeleteWorkspace(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private DeleteWorkspace() {
+      workspaceName_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new DeleteWorkspace();
+    }
+
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet
+    getUnknownFields() {
+      return this.unknownFields;
+    }
+    private DeleteWorkspace(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      this();
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
+      int mutable_bitField0_ = 0;
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            case 10: {
+              com.google.protobuf.ByteString bs = input.readBytes();
+              bitField0_ |= 0x00000001;
+              workspaceName_ = bs;
+              break;
+            }
+            default: {
+              if (!parseUnknownField(
+                  input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e).setUnfinishedMessage(this);
+      } finally {
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return org.mlflow.api.proto.Service.internal_static_mlflow_DeleteWorkspace_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return org.mlflow.api.proto.Service.internal_static_mlflow_DeleteWorkspace_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              org.mlflow.api.proto.Service.DeleteWorkspace.class, org.mlflow.api.proto.Service.DeleteWorkspace.Builder.class);
+    }
+
+    public interface ResponseOrBuilder extends
+        // @@protoc_insertion_point(interface_extends:mlflow.DeleteWorkspace.Response)
+        com.google.protobuf.MessageOrBuilder {
+    }
+    /**
+     * Protobuf type {@code mlflow.DeleteWorkspace.Response}
+     */
+    public static final class Response extends
+        com.google.protobuf.GeneratedMessageV3 implements
+        // @@protoc_insertion_point(message_implements:mlflow.DeleteWorkspace.Response)
+        ResponseOrBuilder {
+    private static final long serialVersionUID = 0L;
+      // Use Response.newBuilder() to construct.
+      private Response(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+        super(builder);
+      }
+      private Response() {
+      }
+
+      @java.lang.Override
+      @SuppressWarnings({"unused"})
+      protected java.lang.Object newInstance(
+          UnusedPrivateParameter unused) {
+        return new Response();
+      }
+
+      @java.lang.Override
+      public final com.google.protobuf.UnknownFieldSet
+      getUnknownFields() {
+        return this.unknownFields;
+      }
+      private Response(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        this();
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+            com.google.protobuf.UnknownFieldSet.newBuilder();
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              default: {
+                if (!parseUnknownField(
+                    input, unknownFields, extensionRegistry, tag)) {
+                  done = true;
+                }
+                break;
+              }
+            }
+          }
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(this);
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(
+              e).setUnfinishedMessage(this);
+        } finally {
+          this.unknownFields = unknownFields.build();
+          makeExtensionsImmutable();
+        }
+      }
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return org.mlflow.api.proto.Service.internal_static_mlflow_DeleteWorkspace_Response_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return org.mlflow.api.proto.Service.internal_static_mlflow_DeleteWorkspace_Response_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                org.mlflow.api.proto.Service.DeleteWorkspace.Response.class, org.mlflow.api.proto.Service.DeleteWorkspace.Response.Builder.class);
+      }
+
+      private byte memoizedIsInitialized = -1;
+      @java.lang.Override
+      public final boolean isInitialized() {
+        byte isInitialized = memoizedIsInitialized;
+        if (isInitialized == 1) return true;
+        if (isInitialized == 0) return false;
+
+        memoizedIsInitialized = 1;
+        return true;
+      }
+
+      @java.lang.Override
+      public void writeTo(com.google.protobuf.CodedOutputStream output)
+                          throws java.io.IOException {
+        unknownFields.writeTo(output);
+      }
+
+      @java.lang.Override
+      public int getSerializedSize() {
+        int size = memoizedSize;
+        if (size != -1) return size;
+
+        size = 0;
+        size += unknownFields.getSerializedSize();
+        memoizedSize = size;
+        return size;
+      }
+
+      @java.lang.Override
+      public boolean equals(final java.lang.Object obj) {
+        if (obj == this) {
+         return true;
+        }
+        if (!(obj instanceof org.mlflow.api.proto.Service.DeleteWorkspace.Response)) {
+          return super.equals(obj);
+        }
+        org.mlflow.api.proto.Service.DeleteWorkspace.Response other = (org.mlflow.api.proto.Service.DeleteWorkspace.Response) obj;
+
+        if (!unknownFields.equals(other.unknownFields)) return false;
+        return true;
+      }
+
+      @java.lang.Override
+      public int hashCode() {
+        if (memoizedHashCode != 0) {
+          return memoizedHashCode;
+        }
+        int hash = 41;
+        hash = (19 * hash) + getDescriptor().hashCode();
+        hash = (29 * hash) + unknownFields.hashCode();
+        memoizedHashCode = hash;
+        return hash;
+      }
+
+      public static org.mlflow.api.proto.Service.DeleteWorkspace.Response parseFrom(
+          java.nio.ByteBuffer data)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data);
+      }
+      public static org.mlflow.api.proto.Service.DeleteWorkspace.Response parseFrom(
+          java.nio.ByteBuffer data,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data, extensionRegistry);
+      }
+      public static org.mlflow.api.proto.Service.DeleteWorkspace.Response parseFrom(
+          com.google.protobuf.ByteString data)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data);
+      }
+      public static org.mlflow.api.proto.Service.DeleteWorkspace.Response parseFrom(
+          com.google.protobuf.ByteString data,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data, extensionRegistry);
+      }
+      public static org.mlflow.api.proto.Service.DeleteWorkspace.Response parseFrom(byte[] data)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data);
+      }
+      public static org.mlflow.api.proto.Service.DeleteWorkspace.Response parseFrom(
+          byte[] data,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data, extensionRegistry);
+      }
+      public static org.mlflow.api.proto.Service.DeleteWorkspace.Response parseFrom(java.io.InputStream input)
+          throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessageV3
+            .parseWithIOException(PARSER, input);
+      }
+      public static org.mlflow.api.proto.Service.DeleteWorkspace.Response parseFrom(
+          java.io.InputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessageV3
+            .parseWithIOException(PARSER, input, extensionRegistry);
+      }
+      public static org.mlflow.api.proto.Service.DeleteWorkspace.Response parseDelimitedFrom(java.io.InputStream input)
+          throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessageV3
+            .parseDelimitedWithIOException(PARSER, input);
+      }
+      public static org.mlflow.api.proto.Service.DeleteWorkspace.Response parseDelimitedFrom(
+          java.io.InputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessageV3
+            .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+      }
+      public static org.mlflow.api.proto.Service.DeleteWorkspace.Response parseFrom(
+          com.google.protobuf.CodedInputStream input)
+          throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessageV3
+            .parseWithIOException(PARSER, input);
+      }
+      public static org.mlflow.api.proto.Service.DeleteWorkspace.Response parseFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessageV3
+            .parseWithIOException(PARSER, input, extensionRegistry);
+      }
+
+      @java.lang.Override
+      public Builder newBuilderForType() { return newBuilder(); }
+      public static Builder newBuilder() {
+        return DEFAULT_INSTANCE.toBuilder();
+      }
+      public static Builder newBuilder(org.mlflow.api.proto.Service.DeleteWorkspace.Response prototype) {
+        return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+      }
+      @java.lang.Override
+      public Builder toBuilder() {
+        return this == DEFAULT_INSTANCE
+            ? new Builder() : new Builder().mergeFrom(this);
+      }
+
+      @java.lang.Override
+      protected Builder newBuilderForType(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        Builder builder = new Builder(parent);
+        return builder;
+      }
+      /**
+       * Protobuf type {@code mlflow.DeleteWorkspace.Response}
+       */
+      public static final class Builder extends
+          com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+          // @@protoc_insertion_point(builder_implements:mlflow.DeleteWorkspace.Response)
+          org.mlflow.api.proto.Service.DeleteWorkspace.ResponseOrBuilder {
+        public static final com.google.protobuf.Descriptors.Descriptor
+            getDescriptor() {
+          return org.mlflow.api.proto.Service.internal_static_mlflow_DeleteWorkspace_Response_descriptor;
+        }
+
+        @java.lang.Override
+        protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+            internalGetFieldAccessorTable() {
+          return org.mlflow.api.proto.Service.internal_static_mlflow_DeleteWorkspace_Response_fieldAccessorTable
+              .ensureFieldAccessorsInitialized(
+                  org.mlflow.api.proto.Service.DeleteWorkspace.Response.class, org.mlflow.api.proto.Service.DeleteWorkspace.Response.Builder.class);
+        }
+
+        // Construct using org.mlflow.api.proto.Service.DeleteWorkspace.Response.newBuilder()
+        private Builder() {
+          maybeForceBuilderInitialization();
+        }
+
+        private Builder(
+            com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+          super(parent);
+          maybeForceBuilderInitialization();
+        }
+        private void maybeForceBuilderInitialization() {
+          if (com.google.protobuf.GeneratedMessageV3
+                  .alwaysUseFieldBuilders) {
+          }
+        }
+        @java.lang.Override
+        public Builder clear() {
+          super.clear();
+          return this;
+        }
+
+        @java.lang.Override
+        public com.google.protobuf.Descriptors.Descriptor
+            getDescriptorForType() {
+          return org.mlflow.api.proto.Service.internal_static_mlflow_DeleteWorkspace_Response_descriptor;
+        }
+
+        @java.lang.Override
+        public org.mlflow.api.proto.Service.DeleteWorkspace.Response getDefaultInstanceForType() {
+          return org.mlflow.api.proto.Service.DeleteWorkspace.Response.getDefaultInstance();
+        }
+
+        @java.lang.Override
+        public org.mlflow.api.proto.Service.DeleteWorkspace.Response build() {
+          org.mlflow.api.proto.Service.DeleteWorkspace.Response result = buildPartial();
+          if (!result.isInitialized()) {
+            throw newUninitializedMessageException(result);
+          }
+          return result;
+        }
+
+        @java.lang.Override
+        public org.mlflow.api.proto.Service.DeleteWorkspace.Response buildPartial() {
+          org.mlflow.api.proto.Service.DeleteWorkspace.Response result = new org.mlflow.api.proto.Service.DeleteWorkspace.Response(this);
+          onBuilt();
+          return result;
+        }
+
+        @java.lang.Override
+        public Builder clone() {
+          return super.clone();
+        }
+        @java.lang.Override
+        public Builder setField(
+            com.google.protobuf.Descriptors.FieldDescriptor field,
+            java.lang.Object value) {
+          return super.setField(field, value);
+        }
+        @java.lang.Override
+        public Builder clearField(
+            com.google.protobuf.Descriptors.FieldDescriptor field) {
+          return super.clearField(field);
+        }
+        @java.lang.Override
+        public Builder clearOneof(
+            com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+          return super.clearOneof(oneof);
+        }
+        @java.lang.Override
+        public Builder setRepeatedField(
+            com.google.protobuf.Descriptors.FieldDescriptor field,
+            int index, java.lang.Object value) {
+          return super.setRepeatedField(field, index, value);
+        }
+        @java.lang.Override
+        public Builder addRepeatedField(
+            com.google.protobuf.Descriptors.FieldDescriptor field,
+            java.lang.Object value) {
+          return super.addRepeatedField(field, value);
+        }
+        @java.lang.Override
+        public Builder mergeFrom(com.google.protobuf.Message other) {
+          if (other instanceof org.mlflow.api.proto.Service.DeleteWorkspace.Response) {
+            return mergeFrom((org.mlflow.api.proto.Service.DeleteWorkspace.Response)other);
+          } else {
+            super.mergeFrom(other);
+            return this;
+          }
+        }
+
+        public Builder mergeFrom(org.mlflow.api.proto.Service.DeleteWorkspace.Response other) {
+          if (other == org.mlflow.api.proto.Service.DeleteWorkspace.Response.getDefaultInstance()) return this;
+          this.mergeUnknownFields(other.unknownFields);
+          onChanged();
+          return this;
+        }
+
+        @java.lang.Override
+        public final boolean isInitialized() {
+          return true;
+        }
+
+        @java.lang.Override
+        public Builder mergeFrom(
+            com.google.protobuf.CodedInputStream input,
+            com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+            throws java.io.IOException {
+          org.mlflow.api.proto.Service.DeleteWorkspace.Response parsedMessage = null;
+          try {
+            parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+          } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+            parsedMessage = (org.mlflow.api.proto.Service.DeleteWorkspace.Response) e.getUnfinishedMessage();
+            throw e.unwrapIOException();
+          } finally {
+            if (parsedMessage != null) {
+              mergeFrom(parsedMessage);
+            }
+          }
+          return this;
+        }
+        @java.lang.Override
+        public final Builder setUnknownFields(
+            final com.google.protobuf.UnknownFieldSet unknownFields) {
+          return super.setUnknownFields(unknownFields);
+        }
+
+        @java.lang.Override
+        public final Builder mergeUnknownFields(
+            final com.google.protobuf.UnknownFieldSet unknownFields) {
+          return super.mergeUnknownFields(unknownFields);
+        }
+
+
+        // @@protoc_insertion_point(builder_scope:mlflow.DeleteWorkspace.Response)
+      }
+
+      // @@protoc_insertion_point(class_scope:mlflow.DeleteWorkspace.Response)
+      private static final org.mlflow.api.proto.Service.DeleteWorkspace.Response DEFAULT_INSTANCE;
+      static {
+        DEFAULT_INSTANCE = new org.mlflow.api.proto.Service.DeleteWorkspace.Response();
+      }
+
+      public static org.mlflow.api.proto.Service.DeleteWorkspace.Response getDefaultInstance() {
+        return DEFAULT_INSTANCE;
+      }
+
+      @java.lang.Deprecated public static final com.google.protobuf.Parser<Response>
+          PARSER = new com.google.protobuf.AbstractParser<Response>() {
+        @java.lang.Override
+        public Response parsePartialFrom(
+            com.google.protobuf.CodedInputStream input,
+            com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+            throws com.google.protobuf.InvalidProtocolBufferException {
+          return new Response(input, extensionRegistry);
+        }
+      };
+
+      public static com.google.protobuf.Parser<Response> parser() {
+        return PARSER;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Parser<Response> getParserForType() {
+        return PARSER;
+      }
+
+      @java.lang.Override
+      public org.mlflow.api.proto.Service.DeleteWorkspace.Response getDefaultInstanceForType() {
+        return DEFAULT_INSTANCE;
+      }
+
+    }
+
+    private int bitField0_;
+    public static final int WORKSPACE_NAME_FIELD_NUMBER = 1;
+    private volatile java.lang.Object workspaceName_;
+    /**
+     * <pre>
+     * Name of the workspace to delete.
+     * </pre>
+     *
+     * <code>optional string workspace_name = 1 [(.mlflow.validate_required) = true];</code>
+     * @return Whether the workspaceName field is set.
+     */
+    @java.lang.Override
+    public boolean hasWorkspaceName() {
+      return ((bitField0_ & 0x00000001) != 0);
+    }
+    /**
+     * <pre>
+     * Name of the workspace to delete.
+     * </pre>
+     *
+     * <code>optional string workspace_name = 1 [(.mlflow.validate_required) = true];</code>
+     * @return The workspaceName.
+     */
+    @java.lang.Override
+    public java.lang.String getWorkspaceName() {
+      java.lang.Object ref = workspaceName_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        if (bs.isValidUtf8()) {
+          workspaceName_ = s;
+        }
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * Name of the workspace to delete.
+     * </pre>
+     *
+     * <code>optional string workspace_name = 1 [(.mlflow.validate_required) = true];</code>
+     * @return The bytes for workspaceName.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getWorkspaceNameBytes() {
+      java.lang.Object ref = workspaceName_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        workspaceName_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (((bitField0_ & 0x00000001) != 0)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, workspaceName_);
+      }
+      unknownFields.writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (((bitField0_ & 0x00000001) != 0)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, workspaceName_);
+      }
+      size += unknownFields.getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof org.mlflow.api.proto.Service.DeleteWorkspace)) {
+        return super.equals(obj);
+      }
+      org.mlflow.api.proto.Service.DeleteWorkspace other = (org.mlflow.api.proto.Service.DeleteWorkspace) obj;
+
+      if (hasWorkspaceName() != other.hasWorkspaceName()) return false;
+      if (hasWorkspaceName()) {
+        if (!getWorkspaceName()
+            .equals(other.getWorkspaceName())) return false;
+      }
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      if (hasWorkspaceName()) {
+        hash = (37 * hash) + WORKSPACE_NAME_FIELD_NUMBER;
+        hash = (53 * hash) + getWorkspaceName().hashCode();
+      }
+      hash = (29 * hash) + unknownFields.hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static org.mlflow.api.proto.Service.DeleteWorkspace parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static org.mlflow.api.proto.Service.DeleteWorkspace parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static org.mlflow.api.proto.Service.DeleteWorkspace parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static org.mlflow.api.proto.Service.DeleteWorkspace parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static org.mlflow.api.proto.Service.DeleteWorkspace parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static org.mlflow.api.proto.Service.DeleteWorkspace parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static org.mlflow.api.proto.Service.DeleteWorkspace parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static org.mlflow.api.proto.Service.DeleteWorkspace parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static org.mlflow.api.proto.Service.DeleteWorkspace parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+    public static org.mlflow.api.proto.Service.DeleteWorkspace parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static org.mlflow.api.proto.Service.DeleteWorkspace parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static org.mlflow.api.proto.Service.DeleteWorkspace parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(org.mlflow.api.proto.Service.DeleteWorkspace prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * <pre>
+     * Delete a workspace.
+     * </pre>
+     *
+     * Protobuf type {@code mlflow.DeleteWorkspace}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:mlflow.DeleteWorkspace)
+        org.mlflow.api.proto.Service.DeleteWorkspaceOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return org.mlflow.api.proto.Service.internal_static_mlflow_DeleteWorkspace_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return org.mlflow.api.proto.Service.internal_static_mlflow_DeleteWorkspace_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                org.mlflow.api.proto.Service.DeleteWorkspace.class, org.mlflow.api.proto.Service.DeleteWorkspace.Builder.class);
+      }
+
+      // Construct using org.mlflow.api.proto.Service.DeleteWorkspace.newBuilder()
+      private Builder() {
+        maybeForceBuilderInitialization();
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+        }
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        workspaceName_ = "";
+        bitField0_ = (bitField0_ & ~0x00000001);
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return org.mlflow.api.proto.Service.internal_static_mlflow_DeleteWorkspace_descriptor;
+      }
+
+      @java.lang.Override
+      public org.mlflow.api.proto.Service.DeleteWorkspace getDefaultInstanceForType() {
+        return org.mlflow.api.proto.Service.DeleteWorkspace.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public org.mlflow.api.proto.Service.DeleteWorkspace build() {
+        org.mlflow.api.proto.Service.DeleteWorkspace result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public org.mlflow.api.proto.Service.DeleteWorkspace buildPartial() {
+        org.mlflow.api.proto.Service.DeleteWorkspace result = new org.mlflow.api.proto.Service.DeleteWorkspace(this);
+        int from_bitField0_ = bitField0_;
+        int to_bitField0_ = 0;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          to_bitField0_ |= 0x00000001;
+        }
+        result.workspaceName_ = workspaceName_;
+        result.bitField0_ = to_bitField0_;
+        onBuilt();
+        return result;
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof org.mlflow.api.proto.Service.DeleteWorkspace) {
+          return mergeFrom((org.mlflow.api.proto.Service.DeleteWorkspace)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(org.mlflow.api.proto.Service.DeleteWorkspace other) {
+        if (other == org.mlflow.api.proto.Service.DeleteWorkspace.getDefaultInstance()) return this;
+        if (other.hasWorkspaceName()) {
+          bitField0_ |= 0x00000001;
+          workspaceName_ = other.workspaceName_;
+          onChanged();
+        }
+        this.mergeUnknownFields(other.unknownFields);
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        org.mlflow.api.proto.Service.DeleteWorkspace parsedMessage = null;
+        try {
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (org.mlflow.api.proto.Service.DeleteWorkspace) e.getUnfinishedMessage();
+          throw e.unwrapIOException();
+        } finally {
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
+        return this;
+      }
+      private int bitField0_;
+
+      private java.lang.Object workspaceName_ = "";
+      /**
+       * <pre>
+       * Name of the workspace to delete.
+       * </pre>
+       *
+       * <code>optional string workspace_name = 1 [(.mlflow.validate_required) = true];</code>
+       * @return Whether the workspaceName field is set.
+       */
+      public boolean hasWorkspaceName() {
+        return ((bitField0_ & 0x00000001) != 0);
+      }
+      /**
+       * <pre>
+       * Name of the workspace to delete.
+       * </pre>
+       *
+       * <code>optional string workspace_name = 1 [(.mlflow.validate_required) = true];</code>
+       * @return The workspaceName.
+       */
+      public java.lang.String getWorkspaceName() {
+        java.lang.Object ref = workspaceName_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          if (bs.isValidUtf8()) {
+            workspaceName_ = s;
+          }
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * Name of the workspace to delete.
+       * </pre>
+       *
+       * <code>optional string workspace_name = 1 [(.mlflow.validate_required) = true];</code>
+       * @return The bytes for workspaceName.
+       */
+      public com.google.protobuf.ByteString
+          getWorkspaceNameBytes() {
+        java.lang.Object ref = workspaceName_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          workspaceName_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * Name of the workspace to delete.
+       * </pre>
+       *
+       * <code>optional string workspace_name = 1 [(.mlflow.validate_required) = true];</code>
+       * @param value The workspaceName to set.
+       * @return This builder for chaining.
+       */
+      public Builder setWorkspaceName(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  bitField0_ |= 0x00000001;
+        workspaceName_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Name of the workspace to delete.
+       * </pre>
+       *
+       * <code>optional string workspace_name = 1 [(.mlflow.validate_required) = true];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearWorkspaceName() {
+        bitField0_ = (bitField0_ & ~0x00000001);
+        workspaceName_ = getDefaultInstance().getWorkspaceName();
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Name of the workspace to delete.
+       * </pre>
+       *
+       * <code>optional string workspace_name = 1 [(.mlflow.validate_required) = true];</code>
+       * @param value The bytes for workspaceName to set.
+       * @return This builder for chaining.
+       */
+      public Builder setWorkspaceNameBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  bitField0_ |= 0x00000001;
+        workspaceName_ = value;
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:mlflow.DeleteWorkspace)
+    }
+
+    // @@protoc_insertion_point(class_scope:mlflow.DeleteWorkspace)
+    private static final org.mlflow.api.proto.Service.DeleteWorkspace DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new org.mlflow.api.proto.Service.DeleteWorkspace();
+    }
+
+    public static org.mlflow.api.proto.Service.DeleteWorkspace getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    @java.lang.Deprecated public static final com.google.protobuf.Parser<DeleteWorkspace>
+        PARSER = new com.google.protobuf.AbstractParser<DeleteWorkspace>() {
+      @java.lang.Override
+      public DeleteWorkspace parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return new DeleteWorkspace(input, extensionRegistry);
+      }
+    };
+
+    public static com.google.protobuf.Parser<DeleteWorkspace> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<DeleteWorkspace> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public org.mlflow.api.proto.Service.DeleteWorkspace getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
   private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_mlflow_Metric_descriptor;
   private static final 
@@ -262835,6 +271350,61 @@ public final class Service {
   private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_mlflow_DeletePromptOptimizationJob_Response_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_mlflow_Workspace_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_mlflow_Workspace_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_mlflow_ListWorkspaces_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_mlflow_ListWorkspaces_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_mlflow_ListWorkspaces_Response_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_mlflow_ListWorkspaces_Response_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_mlflow_CreateWorkspace_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_mlflow_CreateWorkspace_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_mlflow_CreateWorkspace_Response_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_mlflow_CreateWorkspace_Response_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_mlflow_GetWorkspace_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_mlflow_GetWorkspace_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_mlflow_GetWorkspace_Response_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_mlflow_GetWorkspace_Response_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_mlflow_UpdateWorkspace_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_mlflow_UpdateWorkspace_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_mlflow_UpdateWorkspace_Response_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_mlflow_UpdateWorkspace_Response_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_mlflow_DeleteWorkspace_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_mlflow_DeleteWorkspace_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_mlflow_DeleteWorkspace_Response_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_mlflow_DeleteWorkspace_Response_fieldAccessorTable;
 
   public static com.google.protobuf.Descriptors.FileDescriptor
       getDescriptor() {
@@ -263473,463 +272043,502 @@ public final class Service {
       "Job\022\016\n\006job_id\030\001 \001(\t\0326\n\010Response\022*\n\003job\030\001" +
       " \001(\0132\035.mlflow.PromptOptimizationJob\"9\n\033D" +
       "eletePromptOptimizationJob\022\016\n\006job_id\030\001 \001" +
-      "(\t\032\n\n\010Response*6\n\010ViewType\022\017\n\013ACTIVE_ONL" +
-      "Y\020\001\022\020\n\014DELETED_ONLY\020\002\022\007\n\003ALL\020\003*I\n\nSource" +
-      "Type\022\014\n\010NOTEBOOK\020\001\022\007\n\003JOB\020\002\022\013\n\007PROJECT\020\003" +
-      "\022\t\n\005LOCAL\020\004\022\014\n\007UNKNOWN\020\350\007*M\n\tRunStatus\022\013" +
-      "\n\007RUNNING\020\001\022\r\n\tSCHEDULED\020\002\022\014\n\010FINISHED\020\003" +
-      "\022\n\n\006FAILED\020\004\022\n\n\006KILLED\020\005*O\n\013TraceStatus\022" +
-      "\034\n\030TRACE_STATUS_UNSPECIFIED\020\000\022\006\n\002OK\020\001\022\t\n" +
-      "\005ERROR\020\002\022\017\n\013IN_PROGRESS\020\003*8\n\016MetricViewT" +
-      "ype\022\n\n\006TRACES\020\001\022\t\n\005SPANS\020\002\022\017\n\013ASSESSMENT" +
-      "S\020\003*P\n\017AggregationType\022\t\n\005COUNT\020\001\022\007\n\003SUM" +
-      "\020\002\022\007\n\003AVG\020\003\022\016\n\nPERCENTILE\020\004\022\007\n\003MIN\020\005\022\007\n\003" +
-      "MAX\020\006*\212\001\n\021LoggedModelStatus\022#\n\037LOGGED_MO" +
-      "DEL_STATUS_UNSPECIFIED\020\000\022\030\n\024LOGGED_MODEL" +
-      "_PENDING\020\001\022\026\n\022LOGGED_MODEL_READY\020\002\022\036\n\032LO" +
-      "GGED_MODEL_UPLOAD_FAILED\020\003*Z\n\017RoutingStr" +
-      "ategy\022&\n\034ROUTING_STRATEGY_UNSPECIFIED\020\000\032" +
-      "\004\360\206\031\003\022\037\n\033REQUEST_BASED_TRAFFIC_SPLIT\020\001*K" +
-      "\n\020FallbackStrategy\022\'\n\035FALLBACK_STRATEGY_" +
-      "UNSPECIFIED\020\000\032\004\360\206\031\003\022\016\n\nSEQUENTIAL\020\001*X\n\027G" +
-      "atewayModelLinkageType\022\"\n\030LINKAGE_TYPE_U" +
-      "NSPECIFIED\020\000\032\004\360\206\031\003\022\013\n\007PRIMARY\020\001\022\014\n\010FALLB" +
-      "ACK\020\0022\337\207\001\n\rMlflowService\022\246\001\n\023getExperime" +
-      "ntByName\022\033.mlflow.GetExperimentByName\032$." +
-      "mlflow.GetExperimentByName.Response\"L\362\206\031" +
-      "H\n,\n\003GET\022\037/mlflow/experiments/get-by-nam" +
-      "e\032\004\010\002\020\000\020\001*\026Get Experiment By Name\022\224\001\n\020cr" +
-      "eateExperiment\022\030.mlflow.CreateExperiment" +
-      "\032!.mlflow.CreateExperiment.Response\"C\362\206\031" +
-      "?\n(\n\004POST\022\032/mlflow/experiments/create\032\004\010" +
-      "\002\020\000\020\001*\021Create Experiment\022\301\001\n\021searchExper" +
-      "iments\022\031.mlflow.SearchExperiments\032\".mlfl" +
-      "ow.SearchExperiments.Response\"m\362\206\031i\n(\n\004P" +
-      "OST\022\032/mlflow/experiments/search\032\004\010\002\020\000\n\'\n" +
-      "\003GET\022\032/mlflow/experiments/search\032\004\010\002\020\000\020\001" +
-      "*\022Search Experiments\022\210\001\n\rgetExperiment\022\025" +
-      ".mlflow.GetExperiment\032\036.mlflow.GetExperi" +
-      "ment.Response\"@\362\206\0318\n$\n\003GET\022\027/mlflow/expe" +
-      "riments/get\032\004\010\002\020\000\020\001*\016Get Experiment\272\214\031\000\022" +
-      "\224\001\n\020deleteExperiment\022\030.mlflow.DeleteExpe" +
-      "riment\032!.mlflow.DeleteExperiment.Respons" +
-      "e\"C\362\206\031?\n(\n\004POST\022\032/mlflow/experiments/del" +
-      "ete\032\004\010\002\020\000\020\001*\021Delete Experiment\022\231\001\n\021resto" +
-      "reExperiment\022\031.mlflow.RestoreExperiment\032" +
-      "\".mlflow.RestoreExperiment.Response\"E\362\206\031" +
-      "A\n)\n\004POST\022\033/mlflow/experiments/restore\032\004" +
-      "\010\002\020\000\020\001*\022Restore Experiment\022\224\001\n\020updateExp" +
-      "eriment\022\030.mlflow.UpdateExperiment\032!.mlfl" +
-      "ow.UpdateExperiment.Response\"C\362\206\031?\n(\n\004PO" +
-      "ST\022\032/mlflow/experiments/update\032\004\010\002\020\000\020\001*\021" +
-      "Update Experiment\022q\n\tcreateRun\022\021.mlflow." +
-      "CreateRun\032\032.mlflow.CreateRun.Response\"5\362" +
-      "\206\0311\n!\n\004POST\022\023/mlflow/runs/create\032\004\010\002\020\000\020\001" +
-      "*\nCreate Run\022q\n\tupdateRun\022\021.mlflow.Updat" +
-      "eRun\032\032.mlflow.UpdateRun.Response\"5\362\206\0311\n!" +
-      "\n\004POST\022\023/mlflow/runs/update\032\004\010\002\020\000\020\001*\nUpd" +
-      "ate Run\022q\n\tdeleteRun\022\021.mlflow.DeleteRun\032" +
-      "\032.mlflow.DeleteRun.Response\"5\362\206\0311\n!\n\004POS" +
-      "T\022\023/mlflow/runs/delete\032\004\010\002\020\000\020\001*\nDelete R" +
-      "un\022v\n\nrestoreRun\022\022.mlflow.RestoreRun\032\033.m" +
-      "lflow.RestoreRun.Response\"7\362\206\0313\n\"\n\004POST\022" +
-      "\024/mlflow/runs/restore\032\004\010\002\020\000\020\001*\013Restore R" +
-      "un\022u\n\tlogMetric\022\021.mlflow.LogMetric\032\032.mlf" +
-      "low.LogMetric.Response\"9\362\206\0315\n%\n\004POST\022\027/m" +
-      "lflow/runs/log-metric\032\004\010\002\020\000\020\001*\nLog Metri" +
-      "c\022t\n\010logParam\022\020.mlflow.LogParam\032\031.mlflow" +
-      ".LogParam.Response\";\362\206\0317\n(\n\004POST\022\032/mlflo" +
-      "w/runs/log-parameter\032\004\010\002\020\000\020\001*\tLog Param\022" +
-      "\241\001\n\020setExperimentTag\022\030.mlflow.SetExperim" +
-      "entTag\032!.mlflow.SetExperimentTag.Respons" +
-      "e\"P\362\206\031L\n4\n\004POST\022&/mlflow/experiments/set" +
-      "-experiment-tag\032\004\010\002\020\000\020\001*\022Set Experiment " +
-      "Tag\022\260\001\n\023deleteExperimentTag\022\033.mlflow.Del" +
-      "eteExperimentTag\032$.mlflow.DeleteExperime" +
-      "ntTag.Response\"V\362\206\031R\n7\n\004POST\022)/mlflow/ex" +
-      "periments/delete-experiment-tag\032\004\010\002\020\000\020\001*" +
-      "\025Delete Experiment Tag\022f\n\006setTag\022\016.mlflo" +
-      "w.SetTag\032\027.mlflow.SetTag.Response\"3\362\206\031/\n" +
-      "\"\n\004POST\022\024/mlflow/runs/set-tag\032\004\010\002\020\000\020\001*\007S" +
-      "et Tag\022\210\001\n\013setTraceTag\022\023.mlflow.SetTrace" +
-      "Tag\032\034.mlflow.SetTraceTag.Response\"F\362\206\031B\n" +
-      "/\n\005PATCH\022 /mlflow/traces/{request_id}/ta" +
-      "gs\032\004\010\002\020\000\020\003*\rSet Trace Tag\022\217\001\n\rsetTraceTa" +
-      "gV3\022\025.mlflow.SetTraceTagV3\032\036.mlflow.SetT" +
-      "raceTagV3.Response\"G\362\206\031C\n-\n\005PATCH\022\036/mlfl" +
-      "ow/traces/{trace_id}/tags\032\004\010\003\020\000\020\003*\020Set T" +
-      "race Tag V3\022\225\001\n\016deleteTraceTag\022\026.mlflow." +
-      "DeleteTraceTag\032\037.mlflow.DeleteTraceTag.R" +
-      "esponse\"J\362\206\031F\n0\n\006DELETE\022 /mlflow/traces/" +
-      "{request_id}/tags\032\004\010\002\020\000\020\003*\020Delete Trace " +
-      "Tag\022\234\001\n\020deleteTraceTagV3\022\030.mlflow.Delete" +
-      "TraceTagV3\032!.mlflow.DeleteTraceTagV3.Res" +
-      "ponse\"K\362\206\031G\n.\n\006DELETE\022\036/mlflow/traces/{t" +
-      "race_id}/tags\032\004\010\003\020\000\020\003*\023Delete Trace Tag " +
-      "V3\022u\n\tdeleteTag\022\021.mlflow.DeleteTag\032\032.mlf" +
-      "low.DeleteTag.Response\"9\362\206\0315\n%\n\004POST\022\027/m" +
-      "lflow/runs/delete-tag\032\004\010\002\020\000\020\001*\nDelete Ta" +
-      "g\022e\n\006getRun\022\016.mlflow.GetRun\032\027.mlflow.Get" +
-      "Run.Response\"2\362\206\031*\n\035\n\003GET\022\020/mlflow/runs/" +
-      "get\032\004\010\002\020\000\020\001*\007Get Run\272\214\031\000\022y\n\nsearchRuns\022\022" +
-      ".mlflow.SearchRuns\032\033.mlflow.SearchRuns.R" +
-      "esponse\":\362\206\0312\n!\n\004POST\022\023/mlflow/runs/sear" +
-      "ch\032\004\010\002\020\000\020\001*\013Search Runs\272\214\031\000\022\207\001\n\rlistArti" +
-      "facts\022\025.mlflow.ListArtifacts\032\036.mlflow.Li" +
-      "stArtifacts.Response\"?\362\206\0317\n#\n\003GET\022\026/mlfl" +
-      "ow/artifacts/list\032\004\010\002\020\000\020\001*\016List Artifact" +
-      "s\272\214\031\000\022\225\001\n\020getMetricHistory\022\030.mlflow.GetM" +
-      "etricHistory\032!.mlflow.GetMetricHistory.R" +
-      "esponse\"D\362\206\031@\n(\n\003GET\022\033/mlflow/metrics/ge" +
-      "t-history\032\004\010\002\020\000\020\001*\022Get Metric History\022\267\001" +
-      "\n\034getMetricHistoryBulkInterval\022$.mlflow." +
-      "GetMetricHistoryBulkInterval\032-.mlflow.Ge" +
-      "tMetricHistoryBulkInterval.Response\"B\362\206\031" +
-      ":\n6\n\003GET\022)/mlflow/metrics/get-history-bu" +
-      "lk-interval\032\004\010\002\020\013\020\003\272\214\031\000\022p\n\010logBatch\022\020.ml" +
-      "flow.LogBatch\032\031.mlflow.LogBatch.Response" +
-      "\"7\362\206\0313\n$\n\004POST\022\026/mlflow/runs/log-batch\032\004" +
-      "\010\002\020\000\020\001*\tLog Batch\022p\n\010logModel\022\020.mlflow.L" +
-      "ogModel\032\031.mlflow.LogModel.Response\"7\362\206\0313" +
-      "\n$\n\004POST\022\026/mlflow/runs/log-model\032\004\010\002\020\000\020\001" +
-      "*\tLog Model\022u\n\tlogInputs\022\021.mlflow.LogInp" +
-      "uts\032\032.mlflow.LogInputs.Response\"9\362\206\0315\n%\n" +
-      "\004POST\022\027/mlflow/runs/log-inputs\032\004\010\002\020\000\020\001*\n" +
-      "Log Inputs\022v\n\nlogOutputs\022\022.mlflow.LogOut" +
-      "puts\032\033.mlflow.LogOutputs.Response\"7\362\206\0313\n" +
-      "\"\n\004POST\022\024/mlflow/runs/outputs\032\004\010\002\020\000\020\003*\013L" +
-      "og Outputs\022\207\001\n\016searchDatasets\022\026.mlflow.S" +
-      "earchDatasets\032\037.mlflow.SearchDatasets.Re" +
-      "sponse\"<\362\206\0314\n0\n\004POST\022\"mlflow/experiments" +
-      "/search-datasets\032\004\010\002\020\000\020\003\272\214\031\000\022p\n\nstartTra" +
-      "ce\022\022.mlflow.StartTrace\032\033.mlflow.StartTra" +
-      "ce.Response\"1\362\206\031-\n\034\n\004POST\022\016/mlflow/trace" +
-      "s\032\004\010\002\020\000\020\003*\013Start Trace\022v\n\010endTrace\022\020.mlf" +
-      "low.EndTrace\032\031.mlflow.EndTrace.Response\"" +
-      "=\362\206\0319\n*\n\005PATCH\022\033/mlflow/traces/{request_" +
-      "id}\032\004\010\002\020\000\020\003*\tEnd Trace\022\211\001\n\014getTraceInfo\022" +
-      "\024.mlflow.GetTraceInfo\032\035.mlflow.GetTraceI" +
-      "nfo.Response\"D\362\206\031@\n-\n\003GET\022 /mlflow/trace" +
-      "s/{request_id}/info\032\004\010\002\020\000\020\003*\rGet TraceIn" +
-      "fo\022\213\001\n\016getTraceInfoV3\022\026.mlflow.GetTraceI" +
-      "nfoV3\032\037.mlflow.GetTraceInfoV3.Response\"@" +
-      "\362\206\031<\n&\n\003GET\022\031/mlflow/traces/{trace_id}\032\004" +
-      "\010\003\020\000\020\003*\020Get TraceInfo v3\022n\n\010getTrace\022\020.m" +
-      "lflow.GetTrace\032\031.mlflow.GetTrace.Respons" +
-      "e\"5\362\206\0311\n\037\n\003GET\022\022/mlflow/traces/get\032\004\010\003\020\000" +
-      "\020\003*\014Get Trace v3\022\203\001\n\016batchGetTraces\022\026.ml" +
-      "flow.BatchGetTraces\032\037.mlflow.BatchGetTra" +
-      "ces.Response\"8\362\206\0314\n$\n\003GET\022\027/mlflow/trace" +
-      "s/batchGet\032\004\010\003\020\000\020\003*\nGet Traces\022w\n\014search" +
-      "Traces\022\024.mlflow.SearchTraces\032\035.mlflow.Se" +
-      "archTraces.Response\"2\362\206\031.\n\033\n\003GET\022\016/mlflo" +
-      "w/traces\032\004\010\002\020\000\020\003*\rSearch Traces\022\210\001\n\016sear" +
-      "chTracesV3\022\026.mlflow.SearchTracesV3\032\037.mlf" +
-      "low.SearchTracesV3.Response\"=\362\206\0319\n#\n\004POS" +
-      "T\022\025/mlflow/traces/search\032\004\010\003\020\000\020\003*\020Search" +
-      " Traces V3\022i\n\014startTraceV3\022\024.mlflow.Star" +
-      "tTraceV3\032\035.mlflow.StartTraceV3.Response\"" +
-      "$\362\206\031 \n\034\n\004POST\022\016/mlflow/traces\032\004\010\003\020\000\020\003\022\222\001" +
-      "\n\017linkTracesToRun\022\027.mlflow.LinkTracesToR" +
-      "un\032 .mlflow.LinkTracesToRun.Response\"D\362\206" +
-      "\031@\n(\n\004POST\022\032/mlflow/traces/link-to-run\032\004" +
-      "\010\002\020\000\020\003*\022Link Traces to Run\022\237\001\n\022linkPromp" +
-      "tsToTrace\022\032.mlflow.LinkPromptsToTrace\032#." +
-      "mlflow.LinkPromptsToTrace.Response\"H\362\206\031D" +
-      "\n)\n\004POST\022\033/mlflow/traces/link-prompts\032\004\010" +
-      "\002\020\000\020\003*\025Link Prompts to Trace\022\242\001\n\031searchU" +
-      "nifiedTraceHandler\022\033.mlflow.SearchUnifie" +
-      "dTraces\032$.mlflow.SearchUnifiedTraces.Res" +
-      "ponse\"B\362\206\031>\n#\n\003GET\022\026/mlflow/unified-trac" +
-      "es\032\004\010\002\020\000\020\003*\025Search Unified Traces\022\257\001\n\025ge" +
-      "tOnlineTraceDetails\022\035.mlflow.GetOnlineTr" +
-      "aceDetails\032&.mlflow.GetOnlineTraceDetail",
-      "s.Response\"O\362\206\031K\n-\n\003GET\022 /mlflow/get-onl" +
-      "ine-trace-details\032\004\010\002\020\000\020\003*\030Get Online Tr" +
-      "ace Details\022\206\001\n\014deleteTraces\022\024.mlflow.De" +
-      "leteTraces\032\035.mlflow.DeleteTraces.Respons" +
-      "e\"A\362\206\031=\n*\n\004POST\022\034/mlflow/traces/delete-t" +
-      "races\032\004\010\002\020\000\020\003*\rDelete Traces\022\217\001\n\016deleteT" +
-      "racesV3\022\026.mlflow.DeleteTracesV3\032\037.mlflow" +
-      ".DeleteTracesV3.Response\"D\362\206\031@\n*\n\004POST\022\034" +
-      "/mlflow/traces/delete-traces\032\004\010\003\020\000\020\003*\020De" +
-      "lete Traces V3\022\343\001\n\037calculateTraceFilterC" +
-      "orrelation\022\'.mlflow.CalculateTraceFilter" +
-      "Correlation\0320.mlflow.CalculateTraceFilte" +
-      "rCorrelation.Response\"e\362\206\031a\n9\n\004POST\022+/ml" +
-      "flow/traces/calculate-filter-correlation" +
-      "\032\004\010\003\020\000\020\003*\"Calculate Trace Filter Correla" +
-      "tion\022\225\001\n\021queryTraceMetrics\022\031.mlflow.Quer" +
-      "yTraceMetrics\032\".mlflow.QueryTraceMetrics" +
-      ".Response\"A\362\206\031=\n$\n\004POST\022\026/mlflow/traces/" +
-      "metrics\032\004\010\003\020\000\020\003*\023Query Trace Metrics\022\224\001\n" +
-      "\021createLoggedModel\022\031.mlflow.CreateLogged" +
-      "Model\032\".mlflow.CreateLoggedModel.Respons" +
-      "e\"@\362\206\031<\n#\n\004POST\022\025/mlflow/logged-models\032\004" +
-      "\010\002\020\000\020\003*\023Create Logged Model\022\250\001\n\023finalize" +
-      "LoggedModel\022\033.mlflow.FinalizeLoggedModel" +
-      "\032$.mlflow.FinalizeLoggedModel.Response\"N" +
-      "\362\206\031J\n/\n\005PATCH\022 /mlflow/logged-models/{mo" +
-      "del_id}\032\004\010\002\020\000\020\003*\025Finalize Logged Model\022\222" +
-      "\001\n\016getLoggedModel\022\026.mlflow.GetLoggedMode" +
-      "l\032\037.mlflow.GetLoggedModel.Response\"G\362\206\031C" +
-      "\n-\n\003GET\022 /mlflow/logged-models/{model_id" +
-      "}\032\004\010\002\020\000\020\003*\020Get Logged Model\022\243\001\n\021deleteLo" +
-      "ggedModel\022\031.mlflow.DeleteLoggedModel\032\".m" +
-      "lflow.DeleteLoggedModel.Response\"O\362\206\031K\n0" +
-      "\n\006DELETE\022 /mlflow/logged-models/{model_i" +
-      "d}\032\004\010\002\020\000\020\003*\025Delete a Logged Model\022\236\001\n\022se" +
-      "archLoggedModels\022\032.mlflow.SearchLoggedMo" +
-      "dels\032#.mlflow.SearchLoggedModels.Respons" +
-      "e\"G\362\206\031C\n*\n\004POST\022\034/mlflow/logged-models/s" +
-      "earch\032\004\010\002\020\000\020\003*\023Search LoggedModels\022\251\001\n\022s" +
-      "etLoggedModelTags\022\032.mlflow.SetLoggedMode" +
-      "lTags\032#.mlflow.SetLoggedModelTags.Respon" +
-      "se\"R\362\206\031N\n4\n\005PATCH\022%/mlflow/logged-models" +
-      "/{model_id}/tags\032\004\010\002\020\000\020\003*\024Set Logged Mod" +
-      "el Tag\022\275\001\n\024deleteLoggedModelTag\022\034.mlflow" +
-      ".DeleteLoggedModelTag\032%.mlflow.DeleteLog" +
-      "gedModelTag.Response\"`\362\206\031\\\n?\n\006DELETE\022//m" +
-      "lflow/logged-models/{model_id}/tags/{tag" +
-      "_key}\032\004\010\002\020\000\020\003*\027Delete Logged Model Tag\022\326" +
-      "\001\n\030listLoggedModelArtifacts\022 .mlflow.Lis" +
-      "tLoggedModelArtifacts\032).mlflow.ListLogge" +
-      "dModelArtifacts.Response\"m\362\206\031i\nC\n\003GET\0226/" +
-      "mlflow/logged-models/{model_id}/artifact" +
-      "s/directories\032\004\010\002\020\000\020\003* List Artifacts fo" +
-      "r Logged Models\022\301\001\n\024LogLoggedModelParams" +
-      "\022#.mlflow.LogLoggedModelParamsRequest\032,." +
-      "mlflow.LogLoggedModelParamsRequest.Respo" +
-      "nse\"V\362\206\031R\n5\n\004POST\022\'/mlflow/logged-models" +
-      "/{model_id}/params\032\004\010\002\020\000\020\003*\027Log Logged M" +
-      "odel Params\022\260\001\n\rGetAssessment\022\034.mlflow.G" +
-      "etAssessmentRequest\032%.mlflow.GetAssessme" +
-      "ntRequest.Response\"Z\362\206\031V\nB\n\003GET\0225/mlflow" +
-      "/traces/{trace_id}/assessments/{assessme" +
-      "nt_id}\032\004\010\003\020\000\020\003*\016Get Assessment\022\337\001\n\020creat" +
-      "eAssessment\022\030.mlflow.CreateAssessment\032!." +
-      "mlflow.CreateAssessment.Response\"\215\001\362\206\031\210\001" +
-      "\n>\n\004POST\0220/mlflow/traces/{assessment.tra" +
-      "ce_id}/assessments\032\004\010\003\020\000\020\003\030\350\007\030\356\007\030\014\030\001*:Cr" +
-      "eate an assessment of a trace or a span " +
-      "within the trace\022\320\001\n\020updateAssessment\022\030." +
-      "mlflow.UpdateAssessment\032!.mlflow.UpdateA" +
-      "ssessment.Response\"\177\362\206\031{\nD\n\005PATCH\0225/mlfl" +
+      "(\t\032\n\n\010Response\"S\n\tWorkspace\022\022\n\004name\030\001 \001(" +
+      "\tB\004\370\206\031\001\022\023\n\013description\030\002 \001(\t\022\035\n\025default_" +
+      "artifact_root\030\003 \001(\t\"p\n\016ListWorkspaces\0321\n" +
+      "\010Response\022%\n\nworkspaces\030\001 \003(\0132\021.mlflow.W" +
+      "orkspace:+\342?(\n&com.databricks.rpc.RPC[$t" +
+      "his.Response]\"\270\001\n\017CreateWorkspace\022\022\n\004nam" +
+      "e\030\001 \001(\tB\004\370\206\031\001\022\023\n\013description\030\002 \001(\t\022\035\n\025de" +
+      "fault_artifact_root\030\003 \001(\t\0320\n\010Response\022$\n" +
+      "\tworkspace\030\001 \001(\0132\021.mlflow.Workspace:+\342?(" +
+      "\n&com.databricks.rpc.RPC[$this.Response]" +
+      "\"\213\001\n\014GetWorkspace\022\034\n\016workspace_name\030\001 \001(" +
+      "\tB\004\370\206\031\001\0320\n\010Response\022$\n\tworkspace\030\001 \001(\0132\021" +
+      ".mlflow.Workspace:+\342?(\n&com.databricks.r" +
+      "pc.RPC[$this.Response]\"\302\001\n\017UpdateWorkspa" +
+      "ce\022\034\n\016workspace_name\030\001 \001(\tB\004\370\206\031\001\022\023\n\013desc" +
+      "ription\030\002 \001(\t\022\035\n\025default_artifact_root\030\003" +
+      " \001(\t\0320\n\010Response\022$\n\tworkspace\030\001 \001(\0132\021.ml" +
+      "flow.Workspace:+\342?(\n&com.databricks.rpc." +
+      "RPC[$this.Response]\"h\n\017DeleteWorkspace\022\034" +
+      "\n\016workspace_name\030\001 \001(\tB\004\370\206\031\001\032\n\n\010Response" +
+      ":+\342?(\n&com.databricks.rpc.RPC[$this.Resp" +
+      "onse]*6\n\010ViewType\022\017\n\013ACTIVE_ONLY\020\001\022\020\n\014DE" +
+      "LETED_ONLY\020\002\022\007\n\003ALL\020\003*I\n\nSourceType\022\014\n\010N" +
+      "OTEBOOK\020\001\022\007\n\003JOB\020\002\022\013\n\007PROJECT\020\003\022\t\n\005LOCAL" +
+      "\020\004\022\014\n\007UNKNOWN\020\350\007*M\n\tRunStatus\022\013\n\007RUNNING" +
+      "\020\001\022\r\n\tSCHEDULED\020\002\022\014\n\010FINISHED\020\003\022\n\n\006FAILE" +
+      "D\020\004\022\n\n\006KILLED\020\005*O\n\013TraceStatus\022\034\n\030TRACE_" +
+      "STATUS_UNSPECIFIED\020\000\022\006\n\002OK\020\001\022\t\n\005ERROR\020\002\022" +
+      "\017\n\013IN_PROGRESS\020\003*8\n\016MetricViewType\022\n\n\006TR" +
+      "ACES\020\001\022\t\n\005SPANS\020\002\022\017\n\013ASSESSMENTS\020\003*P\n\017Ag" +
+      "gregationType\022\t\n\005COUNT\020\001\022\007\n\003SUM\020\002\022\007\n\003AVG" +
+      "\020\003\022\016\n\nPERCENTILE\020\004\022\007\n\003MIN\020\005\022\007\n\003MAX\020\006*\212\001\n" +
+      "\021LoggedModelStatus\022#\n\037LOGGED_MODEL_STATU" +
+      "S_UNSPECIFIED\020\000\022\030\n\024LOGGED_MODEL_PENDING\020" +
+      "\001\022\026\n\022LOGGED_MODEL_READY\020\002\022\036\n\032LOGGED_MODE" +
+      "L_UPLOAD_FAILED\020\003*Z\n\017RoutingStrategy\022&\n\034" +
+      "ROUTING_STRATEGY_UNSPECIFIED\020\000\032\004\360\206\031\003\022\037\n\033" +
+      "REQUEST_BASED_TRAFFIC_SPLIT\020\001*K\n\020Fallbac" +
+      "kStrategy\022\'\n\035FALLBACK_STRATEGY_UNSPECIFI" +
+      "ED\020\000\032\004\360\206\031\003\022\016\n\nSEQUENTIAL\020\001*X\n\027GatewayMod" +
+      "elLinkageType\022\"\n\030LINKAGE_TYPE_UNSPECIFIE" +
+      "D\020\000\032\004\360\206\031\003\022\013\n\007PRIMARY\020\001\022\014\n\010FALLBACK\020\0022\272\215\001" +
+      "\n\rMlflowService\022\246\001\n\023getExperimentByName\022" +
+      "\033.mlflow.GetExperimentByName\032$.mlflow.Ge" +
+      "tExperimentByName.Response\"L\362\206\031H\n,\n\003GET\022" +
+      "\037/mlflow/experiments/get-by-name\032\004\010\002\020\000\020\001" +
+      "*\026Get Experiment By Name\022\224\001\n\020createExper" +
+      "iment\022\030.mlflow.CreateExperiment\032!.mlflow" +
+      ".CreateExperiment.Response\"C\362\206\031?\n(\n\004POST" +
+      "\022\032/mlflow/experiments/create\032\004\010\002\020\000\020\001*\021Cr" +
+      "eate Experiment\022\301\001\n\021searchExperiments\022\031." +
+      "mlflow.SearchExperiments\032\".mlflow.Search" +
+      "Experiments.Response\"m\362\206\031i\n(\n\004POST\022\032/mlf" +
+      "low/experiments/search\032\004\010\002\020\000\n\'\n\003GET\022\032/ml" +
+      "flow/experiments/search\032\004\010\002\020\000\020\001*\022Search " +
+      "Experiments\022\210\001\n\rgetExperiment\022\025.mlflow.G" +
+      "etExperiment\032\036.mlflow.GetExperiment.Resp" +
+      "onse\"@\362\206\0318\n$\n\003GET\022\027/mlflow/experiments/g" +
+      "et\032\004\010\002\020\000\020\001*\016Get Experiment\272\214\031\000\022\224\001\n\020delet" +
+      "eExperiment\022\030.mlflow.DeleteExperiment\032!." +
+      "mlflow.DeleteExperiment.Response\"C\362\206\031?\n(" +
+      "\n\004POST\022\032/mlflow/experiments/delete\032\004\010\002\020\000" +
+      "\020\001*\021Delete Experiment\022\231\001\n\021restoreExperim" +
+      "ent\022\031.mlflow.RestoreExperiment\032\".mlflow." +
+      "RestoreExperiment.Response\"E\362\206\031A\n)\n\004POST" +
+      "\022\033/mlflow/experiments/restore\032\004\010\002\020\000\020\001*\022R" +
+      "estore Experiment\022\224\001\n\020updateExperiment\022\030" +
+      ".mlflow.UpdateExperiment\032!.mlflow.Update" +
+      "Experiment.Response\"C\362\206\031?\n(\n\004POST\022\032/mlfl" +
+      "ow/experiments/update\032\004\010\002\020\000\020\001*\021Update Ex" +
+      "periment\022q\n\tcreateRun\022\021.mlflow.CreateRun" +
+      "\032\032.mlflow.CreateRun.Response\"5\362\206\0311\n!\n\004PO" +
+      "ST\022\023/mlflow/runs/create\032\004\010\002\020\000\020\001*\nCreate " +
+      "Run\022q\n\tupdateRun\022\021.mlflow.UpdateRun\032\032.ml" +
+      "flow.UpdateRun.Response\"5\362\206\0311\n!\n\004POST\022\023/" +
+      "mlflow/runs/update\032\004\010\002\020\000\020\001*\nUpdate Run\022q" +
+      "\n\tdeleteRun\022\021.mlflow.DeleteRun\032\032.mlflow." +
+      "DeleteRun.Response\"5\362\206\0311\n!\n\004POST\022\023/mlflo" +
+      "w/runs/delete\032\004\010\002\020\000\020\001*\nDelete Run\022v\n\nres" +
+      "toreRun\022\022.mlflow.RestoreRun\032\033.mlflow.Res" +
+      "toreRun.Response\"7\362\206\0313\n\"\n\004POST\022\024/mlflow/" +
+      "runs/restore\032\004\010\002\020\000\020\001*\013Restore Run\022u\n\tlog" +
+      "Metric\022\021.mlflow.LogMetric\032\032.mlflow.LogMe" +
+      "tric.Response\"9\362\206\0315\n%\n\004POST\022\027/mlflow/run" +
+      "s/log-metric\032\004\010\002\020\000\020\001*\nLog Metric\022t\n\010logP" +
+      "aram\022\020.mlflow.LogParam\032\031.mlflow.LogParam" +
+      ".Response\";\362\206\0317\n(\n\004POST\022\032/mlflow/runs/lo" +
+      "g-parameter\032\004\010\002\020\000\020\001*\tLog Param\022\241\001\n\020setEx" +
+      "perimentTag\022\030.mlflow.SetExperimentTag\032!." +
+      "mlflow.SetExperimentTag.Response\"P\362\206\031L\n4" +
+      "\n\004POST\022&/mlflow/experiments/set-experime" +
+      "nt-tag\032\004\010\002\020\000\020\001*\022Set Experiment Tag\022\260\001\n\023d" +
+      "eleteExperimentTag\022\033.mlflow.DeleteExperi" +
+      "mentTag\032$.mlflow.DeleteExperimentTag.Res" +
+      "ponse\"V\362\206\031R\n7\n\004POST\022)/mlflow/experiments" +
+      "/delete-experiment-tag\032\004\010\002\020\000\020\001*\025Delete E" +
+      "xperiment Tag\022f\n\006setTag\022\016.mlflow.SetTag\032" +
+      "\027.mlflow.SetTag.Response\"3\362\206\031/\n\"\n\004POST\022\024" +
+      "/mlflow/runs/set-tag\032\004\010\002\020\000\020\001*\007Set Tag\022\210\001" +
+      "\n\013setTraceTag\022\023.mlflow.SetTraceTag\032\034.mlf" +
+      "low.SetTraceTag.Response\"F\362\206\031B\n/\n\005PATCH\022" +
+      " /mlflow/traces/{request_id}/tags\032\004\010\002\020\000\020" +
+      "\003*\rSet Trace Tag\022\217\001\n\rsetTraceTagV3\022\025.mlf" +
+      "low.SetTraceTagV3\032\036.mlflow.SetTraceTagV3" +
+      ".Response\"G\362\206\031C\n-\n\005PATCH\022\036/mlflow/traces" +
+      "/{trace_id}/tags\032\004\010\003\020\000\020\003*\020Set Trace Tag " +
+      "V3\022\225\001\n\016deleteTraceTag\022\026.mlflow.DeleteTra" +
+      "ceTag\032\037.mlflow.DeleteTraceTag.Response\"J" +
+      "\362\206\031F\n0\n\006DELETE\022 /mlflow/traces/{request_" +
+      "id}/tags\032\004\010\002\020\000\020\003*\020Delete Trace Tag\022\234\001\n\020d" +
+      "eleteTraceTagV3\022\030.mlflow.DeleteTraceTagV" +
+      "3\032!.mlflow.DeleteTraceTagV3.Response\"K\362\206" +
+      "\031G\n.\n\006DELETE\022\036/mlflow/traces/{trace_id}/" +
+      "tags\032\004\010\003\020\000\020\003*\023Delete Trace Tag V3\022u\n\tdel" +
+      "eteTag\022\021.mlflow.DeleteTag\032\032.mlflow.Delet" +
+      "eTag.Response\"9\362\206\0315\n%\n\004POST\022\027/mlflow/run" +
+      "s/delete-tag\032\004\010\002\020\000\020\001*\nDelete Tag\022e\n\006getR" +
+      "un\022\016.mlflow.GetRun\032\027.mlflow.GetRun.Respo" +
+      "nse\"2\362\206\031*\n\035\n\003GET\022\020/mlflow/runs/get\032\004\010\002\020\000" +
+      "\020\001*\007Get Run\272\214\031\000\022y\n\nsearchRuns\022\022.mlflow.S" +
+      "earchRuns\032\033.mlflow.SearchRuns.Response\":" +
+      "\362\206\0312\n!\n\004POST\022\023/mlflow/runs/search\032\004\010\002\020\000\020" +
+      "\001*\013Search Runs\272\214\031\000\022\207\001\n\rlistArtifacts\022\025.m" +
+      "lflow.ListArtifacts\032\036.mlflow.ListArtifac" +
+      "ts.Response\"?\362\206\0317\n#\n\003GET\022\026/mlflow/artifa" +
+      "cts/list\032\004\010\002\020\000\020\001*\016List Artifacts\272\214\031\000\022\225\001\n" +
+      "\020getMetricHistory\022\030.mlflow.GetMetricHist" +
+      "ory\032!.mlflow.GetMetricHistory.Response\"D" +
+      "\362\206\031@\n(\n\003GET\022\033/mlflow/metrics/get-history" +
+      "\032\004\010\002\020\000\020\001*\022Get Metric History\022\267\001\n\034getMetr" +
+      "icHistoryBulkInterval\022$.mlflow.GetMetric" +
+      "HistoryBulkInterval\032-.mlflow.GetMetricHi" +
+      "storyBulkInterval.Response\"B\362\206\031:\n6\n\003GET\022" +
+      ")/mlflow/metrics/get-history-bulk-interv" +
+      "al\032\004\010\002\020\013\020\003\272\214\031\000\022p\n\010logBatch\022\020.mlflow.LogB" +
+      "atch\032\031.mlflow.LogBatch.Response\"7\362\206\0313\n$\n" +
+      "\004POST\022\026/mlflow/runs/log-batch\032\004\010\002\020\000\020\001*\tL" +
+      "og Batch\022p\n\010logModel\022\020.mlflow.LogModel\032\031" +
+      ".mlflow.LogModel.Response\"7\362\206\0313\n$\n\004POST\022" +
+      "\026/mlflow/runs/log-model\032\004\010\002\020\000\020\001*\tLog Mod" +
+      "el\022u\n\tlogInputs\022\021.mlflow.LogInputs\032\032.mlf" +
+      "low.LogInputs.Response\"9\362\206\0315\n%\n\004POST\022\027/m" +
+      "lflow/runs/log-inputs\032\004\010\002\020\000\020\001*\nLog Input" +
+      "s\022v\n\nlogOutputs\022\022.mlflow.LogOutputs\032\033.ml" +
+      "flow.LogOutputs.Response\"7\362\206\0313\n\"\n\004POST\022\024" +
+      "/mlflow/runs/outputs\032\004\010\002\020\000\020\003*\013Log Output" +
+      "s\022\207\001\n\016searchDatasets\022\026.mlflow.SearchData" +
+      "sets\032\037.mlflow.SearchDatasets.Response\"<\362" +
+      "\206\0314\n0\n\004POST\022\"mlflow/experiments/search-d" +
+      "atasets\032\004\010\002\020\000\020\003\272\214\031\000\022p\n\nstartTrace\022\022.mlfl" +
+      "ow.StartTrace\032\033.mlflow.StartTrace.Respon" +
+      "se\"1\362\206\031-\n\034\n\004POST\022\016/mlflow/traces\032\004\010\002\020\000\020\003" +
+      "*\013Start Trace\022v\n\010endTrace\022\020.mlflow.EndTr" +
+      "ace\032\031.mlflow.EndTrace.Response\"=\362\206\0319\n*\n\005" +
+      "PATCH\022\033/mlflow/traces/{request_id}\032\004\010\002\020\000" +
+      "\020\003*\tEnd Trace\022\211\001\n\014getTraceInfo\022\024.mlflow." +
+      "GetTraceInfo\032\035.mlflow.GetTraceInfo.Respo" +
+      "nse\"D\362\206\031@\n-\n\003GET\022 /mlflow/traces/{reques" +
+      "t_id}/info\032\004\010\002\020\000\020\003*\rGet TraceInfo\022\213\001\n\016ge" +
+      "tTraceInfoV3\022\026.mlflow.GetTraceInfoV3\032\037.m" +
+      "lflow.GetTraceInfoV3.Response\"@\362\206\031<\n&\n\003G" +
+      "ET\022\031/mlflow/traces/{trace_id}\032\004\010\003\020\000\020\003*\020G" +
+      "et TraceInfo v3\022n\n\010getTrace\022\020.mlflow.Get" +
+      "Trace\032\031.mlflow.GetTrace.Response\"5\362\206\0311\n\037" +
+      "\n\003GET\022\022/mlflow/traces/get\032\004\010\003\020\000\020\003*\014Get T" +
+      "race v3\022\203\001\n\016batchGetTraces\022\026.mlflow.Batc" +
+      "hGetTraces\032\037.mlflow.BatchGetTraces.Respo" +
+      "nse\"8\362\206\0314\n$\n\003GET\022\027/mlflow/traces/batchGe" +
+      "t\032\004\010\003\020\000\020\003*\nGet Traces\022w\n\014searchTraces\022\024." +
+      "mlflow.SearchTraces\032\035.mlflow.SearchTrace" +
+      "s.Response\"2\362\206\031.\n\033\n\003GET\022\016/mlflow/traces\032",
+      "\004\010\002\020\000\020\003*\rSearch Traces\022\210\001\n\016searchTracesV" +
+      "3\022\026.mlflow.SearchTracesV3\032\037.mlflow.Searc" +
+      "hTracesV3.Response\"=\362\206\0319\n#\n\004POST\022\025/mlflo" +
+      "w/traces/search\032\004\010\003\020\000\020\003*\020Search Traces V" +
+      "3\022i\n\014startTraceV3\022\024.mlflow.StartTraceV3\032" +
+      "\035.mlflow.StartTraceV3.Response\"$\362\206\031 \n\034\n\004" +
+      "POST\022\016/mlflow/traces\032\004\010\003\020\000\020\003\022\222\001\n\017linkTra" +
+      "cesToRun\022\027.mlflow.LinkTracesToRun\032 .mlfl" +
+      "ow.LinkTracesToRun.Response\"D\362\206\031@\n(\n\004POS" +
+      "T\022\032/mlflow/traces/link-to-run\032\004\010\002\020\000\020\003*\022L" +
+      "ink Traces to Run\022\237\001\n\022linkPromptsToTrace" +
+      "\022\032.mlflow.LinkPromptsToTrace\032#.mlflow.Li" +
+      "nkPromptsToTrace.Response\"H\362\206\031D\n)\n\004POST\022" +
+      "\033/mlflow/traces/link-prompts\032\004\010\002\020\000\020\003*\025Li" +
+      "nk Prompts to Trace\022\242\001\n\031searchUnifiedTra" +
+      "ceHandler\022\033.mlflow.SearchUnifiedTraces\032$" +
+      ".mlflow.SearchUnifiedTraces.Response\"B\362\206" +
+      "\031>\n#\n\003GET\022\026/mlflow/unified-traces\032\004\010\002\020\000\020" +
+      "\003*\025Search Unified Traces\022\257\001\n\025getOnlineTr" +
+      "aceDetails\022\035.mlflow.GetOnlineTraceDetail" +
+      "s\032&.mlflow.GetOnlineTraceDetails.Respons" +
+      "e\"O\362\206\031K\n-\n\003GET\022 /mlflow/get-online-trace" +
+      "-details\032\004\010\002\020\000\020\003*\030Get Online Trace Detai" +
+      "ls\022\206\001\n\014deleteTraces\022\024.mlflow.DeleteTrace" +
+      "s\032\035.mlflow.DeleteTraces.Response\"A\362\206\031=\n*" +
+      "\n\004POST\022\034/mlflow/traces/delete-traces\032\004\010\002" +
+      "\020\000\020\003*\rDelete Traces\022\217\001\n\016deleteTracesV3\022\026" +
+      ".mlflow.DeleteTracesV3\032\037.mlflow.DeleteTr" +
+      "acesV3.Response\"D\362\206\031@\n*\n\004POST\022\034/mlflow/t" +
+      "races/delete-traces\032\004\010\003\020\000\020\003*\020Delete Trac" +
+      "es V3\022\343\001\n\037calculateTraceFilterCorrelatio" +
+      "n\022\'.mlflow.CalculateTraceFilterCorrelati" +
+      "on\0320.mlflow.CalculateTraceFilterCorrelat" +
+      "ion.Response\"e\362\206\031a\n9\n\004POST\022+/mlflow/trac" +
+      "es/calculate-filter-correlation\032\004\010\003\020\000\020\003*" +
+      "\"Calculate Trace Filter Correlation\022\225\001\n\021" +
+      "queryTraceMetrics\022\031.mlflow.QueryTraceMet" +
+      "rics\032\".mlflow.QueryTraceMetrics.Response" +
+      "\"A\362\206\031=\n$\n\004POST\022\026/mlflow/traces/metrics\032\004" +
+      "\010\003\020\000\020\003*\023Query Trace Metrics\022\203\001\n\016listWork" +
+      "spaces\022\026.mlflow.ListWorkspaces\032\037.mlflow." +
+      "ListWorkspaces.Response\"8\362\206\0314\n\037\n\003GET\022\022/m" +
+      "lflow/workspaces\032\004\010\003\020\000\020\003*\017List Workspace" +
+      "s\022\210\001\n\017createWorkspace\022\027.mlflow.CreateWor" +
+      "kspace\032 .mlflow.CreateWorkspace.Response" +
+      "\":\362\206\0316\n \n\004POST\022\022/mlflow/workspaces\032\004\010\003\020\000" +
+      "\020\003*\020Create Workspace\022\214\001\n\014getWorkspace\022\024." +
+      "mlflow.GetWorkspace\032\035.mlflow.GetWorkspac" +
+      "e.Response\"G\362\206\031C\n0\n\003GET\022#/mlflow/workspa" +
+      "ces/{workspace_name}\032\004\010\003\020\000\020\003*\rGet Worksp" +
+      "ace\022\232\001\n\017updateWorkspace\022\027.mlflow.UpdateW" +
+      "orkspace\032 .mlflow.UpdateWorkspace.Respon" +
+      "se\"L\362\206\031H\n2\n\005PATCH\022#/mlflow/workspaces/{w" +
+      "orkspace_name}\032\004\010\003\020\000\020\003*\020Update Workspace" +
+      "\022\233\001\n\017deleteWorkspace\022\027.mlflow.DeleteWork" +
+      "space\032 .mlflow.DeleteWorkspace.Response\"" +
+      "M\362\206\031I\n3\n\006DELETE\022#/mlflow/workspaces/{wor" +
+      "kspace_name}\032\004\010\003\020\000\020\003*\020Delete Workspace\022\224" +
+      "\001\n\021createLoggedModel\022\031.mlflow.CreateLogg" +
+      "edModel\032\".mlflow.CreateLoggedModel.Respo" +
+      "nse\"@\362\206\031<\n#\n\004POST\022\025/mlflow/logged-models" +
+      "\032\004\010\002\020\000\020\003*\023Create Logged Model\022\250\001\n\023finali" +
+      "zeLoggedModel\022\033.mlflow.FinalizeLoggedMod" +
+      "el\032$.mlflow.FinalizeLoggedModel.Response" +
+      "\"N\362\206\031J\n/\n\005PATCH\022 /mlflow/logged-models/{" +
+      "model_id}\032\004\010\002\020\000\020\003*\025Finalize Logged Model" +
+      "\022\222\001\n\016getLoggedModel\022\026.mlflow.GetLoggedMo" +
+      "del\032\037.mlflow.GetLoggedModel.Response\"G\362\206" +
+      "\031C\n-\n\003GET\022 /mlflow/logged-models/{model_" +
+      "id}\032\004\010\002\020\000\020\003*\020Get Logged Model\022\243\001\n\021delete" +
+      "LoggedModel\022\031.mlflow.DeleteLoggedModel\032\"" +
+      ".mlflow.DeleteLoggedModel.Response\"O\362\206\031K" +
+      "\n0\n\006DELETE\022 /mlflow/logged-models/{model" +
+      "_id}\032\004\010\002\020\000\020\003*\025Delete a Logged Model\022\236\001\n\022" +
+      "searchLoggedModels\022\032.mlflow.SearchLogged" +
+      "Models\032#.mlflow.SearchLoggedModels.Respo" +
+      "nse\"G\362\206\031C\n*\n\004POST\022\034/mlflow/logged-models" +
+      "/search\032\004\010\002\020\000\020\003*\023Search LoggedModels\022\251\001\n" +
+      "\022setLoggedModelTags\022\032.mlflow.SetLoggedMo" +
+      "delTags\032#.mlflow.SetLoggedModelTags.Resp" +
+      "onse\"R\362\206\031N\n4\n\005PATCH\022%/mlflow/logged-mode" +
+      "ls/{model_id}/tags\032\004\010\002\020\000\020\003*\024Set Logged M" +
+      "odel Tag\022\275\001\n\024deleteLoggedModelTag\022\034.mlfl" +
+      "ow.DeleteLoggedModelTag\032%.mlflow.DeleteL" +
+      "oggedModelTag.Response\"`\362\206\031\\\n?\n\006DELETE\022/" +
+      "/mlflow/logged-models/{model_id}/tags/{t" +
+      "ag_key}\032\004\010\002\020\000\020\003*\027Delete Logged Model Tag" +
+      "\022\326\001\n\030listLoggedModelArtifacts\022 .mlflow.L" +
+      "istLoggedModelArtifacts\032).mlflow.ListLog" +
+      "gedModelArtifacts.Response\"m\362\206\031i\nC\n\003GET\022" +
+      "6/mlflow/logged-models/{model_id}/artifa" +
+      "cts/directories\032\004\010\002\020\000\020\003* List Artifacts " +
+      "for Logged Models\022\301\001\n\024LogLoggedModelPara" +
+      "ms\022#.mlflow.LogLoggedModelParamsRequest\032" +
+      ",.mlflow.LogLoggedModelParamsRequest.Res" +
+      "ponse\"V\362\206\031R\n5\n\004POST\022\'/mlflow/logged-mode" +
+      "ls/{model_id}/params\032\004\010\002\020\000\020\003*\027Log Logged" +
+      " Model Params\022\260\001\n\rGetAssessment\022\034.mlflow" +
+      ".GetAssessmentRequest\032%.mlflow.GetAssess" +
+      "mentRequest.Response\"Z\362\206\031V\nB\n\003GET\0225/mlfl" +
       "ow/traces/{trace_id}/assessments/{assess" +
-      "ment_id}\032\004\010\003\020\000\020\003\030\350\007\030\356\007\030\001*)Update an exis" +
-      "ting assessment on a trace.\022\261\001\n\020deleteAs" +
-      "sessment\022\030.mlflow.DeleteAssessment\032!.mlf" +
-      "low.DeleteAssessment.Response\"`\362\206\031\\\nE\n\006D" +
-      "ELETE\0225/mlflow/traces/{trace_id}/assessm" +
-      "ents/{assessment_id}\032\004\010\003\020\000\020\003*\021Delete Ass" +
-      "essment\022\232\001\n\rcreateDataset\022\025.mlflow.Creat" +
-      "eDataset\032\036.mlflow.CreateDataset.Response" +
-      "\"R\362\206\031N\n%\n\004POST\022\027/mlflow/datasets/create\032" +
-      "\004\010\003\020\000\020\003\030\350\007\030\356\007\030\014\030\001*\031Create Evaluation Dat" +
-      "aset\022\221\001\n\ngetDataset\022\022.mlflow.GetDataset\032" +
-      "\033.mlflow.GetDataset.Response\"R\362\206\031N\n*\n\003GE" +
-      "T\022\035/mlflow/datasets/{dataset_id}\032\004\010\003\020\000\020\003" +
-      "\030\350\007\030\272\027\030\001*\026Get Evaluation Dataset\022\240\001\n\rdel" +
-      "eteDataset\022\025.mlflow.DeleteDataset\032\036.mlfl" +
-      "ow.DeleteDataset.Response\"X\362\206\031T\n-\n\006DELET" +
-      "E\022\035/mlflow/datasets/{dataset_id}\032\004\010\003\020\000\020\003" +
-      "\030\350\007\030\272\027\030\001*\031Delete Evaluation Dataset\022\335\001\n\030" +
-      "searchEvaluationDatasets\022 .mlflow.Search" +
-      "EvaluationDatasets\032).mlflow.SearchEvalua" +
-      "tionDatasets.Response\"t\362\206\031p\n%\n\004POST\022\027/ml" +
-      "flow/datasets/search\032\004\010\003\020\000\n$\n\003GET\022\027/mlfl" +
-      "ow/datasets/search\032\004\010\003\020\000\020\003\030\350\007\030\001*\032Search " +
-      "Evaluation Datasets\022\251\001\n\016setDatasetTags\022\026" +
-      ".mlflow.SetDatasetTags\032\037.mlflow.SetDatas" +
-      "etTags.Response\"^\362\206\031Z\n1\n\005PATCH\022\"/mlflow/" +
-      "datasets/{dataset_id}/tags\032\004\010\003\020\000\020\003\030\350\007\030\272\027" +
-      "\030\001*\033Set Evaluation Dataset Tags\022\270\001\n\020dele" +
-      "teDatasetTag\022\030.mlflow.DeleteDatasetTag\032!" +
-      ".mlflow.DeleteDatasetTag.Response\"g\362\206\031c\n" +
-      "8\n\006DELETE\022(/mlflow/datasets/{dataset_id}" +
-      "/tags/{key}\032\004\010\003\020\000\020\003\030\350\007\030\272\027\030\001*\035Delete Eval" +
-      "uation Dataset Tag\022\303\001\n\024upsertDatasetReco" +
-      "rds\022\034.mlflow.UpsertDatasetRecords\032%.mlfl" +
-      "ow.UpsertDatasetRecords.Response\"f\362\206\031b\n3" +
-      "\n\004POST\022%/mlflow/datasets/{dataset_id}/re" +
-      "cords\032\004\010\003\020\000\020\003\030\350\007\030\272\027\030\001*!Upsert Evaluation" +
-      " Dataset Records\022\326\001\n\027getDatasetExperimen" +
-      "tIds\022\037.mlflow.GetDatasetExperimentIds\032(." +
-      "mlflow.GetDatasetExperimentIds.Response\"" +
-      "p\362\206\031l\n9\n\003GET\022,/mlflow/datasets/{dataset_" +
-      "id}/experiment-ids\032\004\010\003\020\000\020\003\030\350\007\030\272\027\030\001*%Get " +
-      "Evaluation Dataset Experiment IDs\022\212\001\n\016re" +
-      "gisterScorer\022\026.mlflow.RegisterScorer\032\037.m" +
-      "lflow.RegisterScorer.Response\"?\362\206\031;\n&\n\004P" +
-      "OST\022\030/mlflow/scorers/register\032\004\010\003\020\000\020\001*\017R" +
-      "egister Scorer\022y\n\013listScorers\022\023.mlflow.L" +
-      "istScorers\032\034.mlflow.ListScorers.Response" +
-      "\"7\362\206\0313\n!\n\003GET\022\024/mlflow/scorers/list\032\004\010\003\020" +
-      "\000\020\001*\014List Scorers\022\232\001\n\022listScorerVersions" +
-      "\022\032.mlflow.ListScorerVersions\032#.mlflow.Li" +
-      "stScorerVersions.Response\"C\362\206\031?\n%\n\003GET\022\030" +
-      "/mlflow/scorers/versions\032\004\010\003\020\000\020\001*\024List S" +
-      "corer Versions\022p\n\tgetScorer\022\021.mlflow.Get" +
-      "Scorer\032\032.mlflow.GetScorer.Response\"4\362\206\0310" +
-      "\n \n\003GET\022\023/mlflow/scorers/get\032\004\010\003\020\000\020\001*\nGe" +
-      "t Scorer\022\202\001\n\014deleteScorer\022\024.mlflow.Delet" +
-      "eScorer\032\035.mlflow.DeleteScorer.Response\"=" +
-      "\362\206\0319\n&\n\006DELETE\022\026/mlflow/scorers/delete\032\004" +
-      "\010\003\020\000\020\001*\rDelete Scorer\022\266\001\n\021getDatasetReco" +
-      "rds\022\031.mlflow.GetDatasetRecords\032\".mlflow." +
-      "GetDatasetRecords.Response\"b\362\206\031^\n2\n\003GET\022" +
-      "%/mlflow/datasets/{dataset_id}/records\032\004" +
-      "\010\003\020\000\020\003\030\350\007\030\272\027\030\001*\036Get Evaluation Dataset R" +
-      "ecords\022\305\001\n\024deleteDatasetRecords\022\034.mlflow" +
-      ".DeleteDatasetRecords\032%.mlflow.DeleteDat" +
-      "asetRecords.Response\"h\362\206\031d\n5\n\006DELETE\022%/m" +
-      "lflow/datasets/{dataset_id}/records\032\004\010\003\020" +
-      "\000\020\003\030\350\007\030\272\027\030\001*!Delete Evaluation Dataset R" +
-      "ecords\022\315\001\n\027addDatasetToExperiments\022\037.mlf" +
-      "low.AddDatasetToExperiments\032(.mlflow.Add" +
-      "DatasetToExperiments.Response\"g\362\206\031c\n;\n\004P" +
-      "OST\022-/mlflow/datasets/{dataset_id}/add-e" +
-      "xperiments\032\004\010\003\020\000\020\003\030\350\007\030\272\027\030\001*\032Add Dataset " +
-      "to Experiments\022\344\001\n\034removeDatasetFromExpe" +
-      "riments\022$.mlflow.RemoveDatasetFromExperi" +
-      "ments\032-.mlflow.RemoveDatasetFromExperime" +
-      "nts.Response\"o\362\206\031k\n>\n\004POST\0220/mlflow/data" +
-      "sets/{dataset_id}/remove-experiments\032\004\010\003" +
-      "\020\000\020\003\030\350\007\030\272\027\030\001*\037Remove Dataset from Experi" +
-      "ments\022\245\001\n\023createGatewaySecret\022\033.mlflow.C" +
-      "reateGatewaySecret\032$.mlflow.CreateGatewa" +
-      "ySecret.Response\"K\362\206\031G\n,\n\004POST\022\036/mlflow/" +
-      "gateway/secrets/create\032\004\010\003\020\000\020\001*\025Create G" +
-      "ateway Secret\022\246\001\n\024getGatewaySecretInfo\022\034" +
-      ".mlflow.GetGatewaySecretInfo\032%.mlflow.Ge" +
-      "tGatewaySecretInfo.Response\"I\362\206\031E\n(\n\003GET" +
-      "\022\033/mlflow/gateway/secrets/get\032\004\010\003\020\000\020\001*\027G" +
-      "et Gateway Secret Info\022\245\001\n\023updateGateway" +
-      "Secret\022\033.mlflow.UpdateGatewaySecret\032$.ml" +
-      "flow.UpdateGatewaySecret.Response\"K\362\206\031G\n" +
-      ",\n\004POST\022\036/mlflow/gateway/secrets/update\032" +
-      "\004\010\003\020\000\020\001*\025Update Gateway Secret\022\247\001\n\023delet" +
-      "eGatewaySecret\022\033.mlflow.DeleteGatewaySec" +
-      "ret\032$.mlflow.DeleteGatewaySecret.Respons" +
-      "e\"M\362\206\031I\n.\n\006DELETE\022\036/mlflow/gateway/secre" +
-      "ts/delete\032\004\010\003\020\000\020\001*\025Delete Gateway Secret" +
-      "\022\252\001\n\026listGatewaySecretInfos\022\036.mlflow.Lis" +
-      "tGatewaySecretInfos\032\'.mlflow.ListGateway" +
-      "SecretInfos.Response\"G\362\206\031C\n)\n\003GET\022\034/mlfl" +
-      "ow/gateway/secrets/list\032\004\010\003\020\000\020\001*\024List Ga" +
-      "teway Secrets\022\257\001\n\025createGatewayEndpoint\022" +
-      "\035.mlflow.CreateGatewayEndpoint\032&.mlflow." +
-      "CreateGatewayEndpoint.Response\"O\362\206\031K\n.\n\004" +
-      "POST\022 /mlflow/gateway/endpoints/create\032\004" +
-      "\010\003\020\000\020\001*\027Create Gateway Endpoint\022\237\001\n\022getG" +
-      "atewayEndpoint\022\032.mlflow.GetGatewayEndpoi" +
-      "nt\032#.mlflow.GetGatewayEndpoint.Response\"" +
-      "H\362\206\031D\n*\n\003GET\022\035/mlflow/gateway/endpoints/" +
-      "get\032\004\010\003\020\000\020\001*\024Get Gateway Endpoint\022\257\001\n\025up" +
-      "dateGatewayEndpoint\022\035.mlflow.UpdateGatew" +
-      "ayEndpoint\032&.mlflow.UpdateGatewayEndpoin" +
-      "t.Response\"O\362\206\031K\n.\n\004POST\022 /mlflow/gatewa" +
-      "y/endpoints/update\032\004\010\003\020\000\020\001*\027Update Gatew" +
-      "ay Endpoint\022\261\001\n\025deleteGatewayEndpoint\022\035." +
-      "mlflow.DeleteGatewayEndpoint\032&.mlflow.De" +
-      "leteGatewayEndpoint.Response\"Q\362\206\031M\n0\n\006DE" +
-      "LETE\022 /mlflow/gateway/endpoints/delete\032\004" +
-      "\010\003\020\000\020\001*\027Delete Gateway Endpoint\022\250\001\n\024list" +
-      "GatewayEndpoints\022\034.mlflow.ListGatewayEnd" +
-      "points\032%.mlflow.ListGatewayEndpoints.Res" +
-      "ponse\"K\362\206\031G\n+\n\003GET\022\036/mlflow/gateway/endp" +
-      "oints/list\032\004\010\003\020\000\020\001*\026List Gateway Endpoin" +
-      "ts\022\324\001\n\034createGatewayModelDefinition\022$.ml" +
-      "flow.CreateGatewayModelDefinition\032-.mlfl" +
-      "ow.CreateGatewayModelDefinition.Response" +
-      "\"_\362\206\031[\n6\n\004POST\022(/mlflow/gateway/model-de" +
-      "finitions/create\032\004\010\003\020\000\020\001*\037Create Gateway" +
-      " Model Definition\022\304\001\n\031getGatewayModelDef" +
-      "inition\022!.mlflow.GetGatewayModelDefiniti" +
-      "on\032*.mlflow.GetGatewayModelDefinition.Re" +
-      "sponse\"X\362\206\031T\n2\n\003GET\022%/mlflow/gateway/mod" +
-      "el-definitions/get\032\004\010\003\020\000\020\001*\034Get Gateway " +
-      "Model Definition\022\315\001\n\033listGatewayModelDef" +
-      "initions\022#.mlflow.ListGatewayModelDefini" +
-      "tions\032,.mlflow.ListGatewayModelDefinitio" +
-      "ns.Response\"[\362\206\031W\n3\n\003GET\022&/mlflow/gatewa" +
-      "y/model-definitions/list\032\004\010\003\020\000\020\001*\036List G" +
-      "ateway Model Definitions\022\324\001\n\034updateGatew" +
-      "ayModelDefinition\022$.mlflow.UpdateGateway" +
-      "ModelDefinition\032-.mlflow.UpdateGatewayMo" +
-      "delDefinition.Response\"_\362\206\031[\n6\n\004POST\022(/m" +
-      "lflow/gateway/model-definitions/update\032\004" +
-      "\010\003\020\000\020\001*\037Update Gateway Model Definition\022" +
-      "\326\001\n\034deleteGatewayModelDefinition\022$.mlflo" +
-      "w.DeleteGatewayModelDefinition\032-.mlflow." +
-      "DeleteGatewayModelDefinition.Response\"a\362" +
-      "\206\031]\n8\n\006DELETE\022(/mlflow/gateway/model-def" +
-      "initions/delete\032\004\010\003\020\000\020\001*\037Delete Gateway " +
-      "Model Definition\022\305\001\n\025attachModelToEndpoi" +
-      "nt\022$.mlflow.AttachModelToGatewayEndpoint" +
-      "\032-.mlflow.AttachModelToGatewayEndpoint.R" +
-      "esponse\"W\362\206\031S\n5\n\004POST\022\'/mlflow/gateway/e" +
-      "ndpoints/models/attach\032\004\010\003\020\000\020\001*\030Attach M" +
-      "odel to Endpoint\022\315\001\n\027detachModelFromEndp" +
-      "oint\022&.mlflow.DetachModelFromGatewayEndp" +
-      "oint\032/.mlflow.DetachModelFromGatewayEndp" +
-      "oint.Response\"Y\362\206\031U\n5\n\004POST\022\'/mlflow/gat" +
-      "eway/endpoints/models/detach\032\004\010\003\020\000\020\001*\032De" +
-      "tach Model from Endpoint\022\306\001\n\025createEndpo" +
-      "intBinding\022$.mlflow.CreateGatewayEndpoin" +
-      "tBinding\032-.mlflow.CreateGatewayEndpointB" +
-      "inding.Response\"X\362\206\031T\n7\n\004POST\022)/mlflow/g" +
-      "ateway/endpoints/bindings/create\032\004\010\003\020\000\020\001" +
-      "*\027Create Endpoint Binding\022\310\001\n\025deleteEndp" +
-      "ointBinding\022$.mlflow.DeleteGatewayEndpoi" +
-      "ntBinding\032-.mlflow.DeleteGatewayEndpoint" +
-      "Binding.Response\"Z\362\206\031V\n9\n\006DELETE\022)/mlflo" +
-      "w/gateway/endpoints/bindings/delete\032\004\010\003\020" +
-      "\000\020\001*\027Delete Endpoint Binding\022\277\001\n\024listEnd" +
-      "pointBindings\022#.mlflow.ListGatewayEndpoi" +
-      "ntBindings\032,.mlflow.ListGatewayEndpointB" +
-      "indings.Response\"T\362\206\031P\n4\n\003GET\022\'/mlflow/g" +
-      "ateway/endpoints/bindings/list\032\004\010\003\020\000\020\001*\026" +
-      "List Endpoint Bindings\022\261\001\n\025setGatewayEnd" +
-      "pointTag\022\035.mlflow.SetGatewayEndpointTag\032" +
-      "&.mlflow.SetGatewayEndpointTag.Response\"" +
-      "Q\362\206\031M\n/\n\004POST\022!/mlflow/gateway/endpoints" +
-      "/set-tag\032\004\010\003\020\000\020\001*\030Gateway Set Endpoint T" +
-      "ag\022\302\001\n\030deleteGatewayEndpointTag\022 .mlflow" +
-      ".DeleteGatewayEndpointTag\032).mlflow.Delet" +
-      "eGatewayEndpointTag.Response\"Y\362\206\031U\n4\n\006DE" +
-      "LETE\022$/mlflow/gateway/endpoints/delete-t" +
-      "ag\032\004\010\003\020\000\020\001*\033Gateway Delete Endpoint Tag\022" +
-      "\320\001\n\033createPromptOptimizationJob\022#.mlflow" +
-      ".CreatePromptOptimizationJob\032,.mlflow.Cr" +
-      "eatePromptOptimizationJob.Response\"^\362\206\031Z" +
-      "\n.\n\004POST\022 /mlflow/prompt-optimization/jo" +
-      "bs\032\004\010\003\020\000\020\001\030\350\007\030\272\027\030\001*\036Create Prompt Optimi" +
-      "zation Job\022\314\001\n\030getPromptOptimizationJob\022" +
-      " .mlflow.GetPromptOptimizationJob\032).mlfl" +
-      "ow.GetPromptOptimizationJob.Response\"c\362\206" +
-      "\031_\n6\n\003GET\022)/mlflow/prompt-optimization/j" +
-      "obs/{job_id}\032\004\010\003\020\000\020\001\030\350\007\030\272\027\030\001*\033Get Prompt" +
-      " Optimization Job\022\220\002\n\034searchPromptOptimi" +
-      "zationJobs\022$.mlflow.SearchPromptOptimiza" +
-      "tionJobs\032-.mlflow.SearchPromptOptimizati" +
-      "onJobs.Response\"\232\001\362\206\031\225\001\n5\n\004POST\022\'/mlflow" +
-      "/prompt-optimization/jobs/search\032\004\010\003\020\000\n4" +
-      "\n\003GET\022\'/mlflow/prompt-optimization/jobs/" +
-      "search\032\004\010\003\020\000\020\001\030\350\007\030\001*\037Search Prompt Optim" +
-      "ization Jobs\022\343\001\n\033cancelPromptOptimizatio" +
-      "nJob\022#.mlflow.CancelPromptOptimizationJo" +
-      "b\032,.mlflow.CancelPromptOptimizationJob.R" +
-      "esponse\"q\362\206\031m\n>\n\004POST\0220/mlflow/prompt-op" +
-      "timization/jobs/{job_id}/cancel\032\004\010\003\020\000\020\001\030" +
-      "\350\007\030\272\027\030\353\007\030\001*\036Cancel Prompt Optimization J" +
-      "ob\022\333\001\n\033deletePromptOptimizationJob\022#.mlf" +
-      "low.DeletePromptOptimizationJob\032,.mlflow" +
-      ".DeletePromptOptimizationJob.Response\"i\362" +
-      "\206\031e\n9\n\006DELETE\022)/mlflow/prompt-optimizati" +
-      "on/jobs/{job_id}\032\004\010\003\020\000\020\001\030\350\007\030\272\027\030\001*\036Delete" +
-      " Prompt Optimization JobB\036\n\024org.mlflow.a" +
-      "pi.proto\220\001\001\342?\002\020\001"
+      "ment_id}\032\004\010\003\020\000\020\003*\016Get Assessment\022\337\001\n\020cre" +
+      "ateAssessment\022\030.mlflow.CreateAssessment\032" +
+      "!.mlflow.CreateAssessment.Response\"\215\001\362\206\031" +
+      "\210\001\n>\n\004POST\0220/mlflow/traces/{assessment.t" +
+      "race_id}/assessments\032\004\010\003\020\000\020\003\030\350\007\030\356\007\030\014\030\001*:" +
+      "Create an assessment of a trace or a spa" +
+      "n within the trace\022\320\001\n\020updateAssessment\022" +
+      "\030.mlflow.UpdateAssessment\032!.mlflow.Updat" +
+      "eAssessment.Response\"\177\362\206\031{\nD\n\005PATCH\0225/ml" +
+      "flow/traces/{trace_id}/assessments/{asse" +
+      "ssment_id}\032\004\010\003\020\000\020\003\030\350\007\030\356\007\030\001*)Update an ex" +
+      "isting assessment on a trace.\022\261\001\n\020delete" +
+      "Assessment\022\030.mlflow.DeleteAssessment\032!.m" +
+      "lflow.DeleteAssessment.Response\"`\362\206\031\\\nE\n" +
+      "\006DELETE\0225/mlflow/traces/{trace_id}/asses" +
+      "sments/{assessment_id}\032\004\010\003\020\000\020\003*\021Delete A" +
+      "ssessment\022\232\001\n\rcreateDataset\022\025.mlflow.Cre" +
+      "ateDataset\032\036.mlflow.CreateDataset.Respon" +
+      "se\"R\362\206\031N\n%\n\004POST\022\027/mlflow/datasets/creat" +
+      "e\032\004\010\003\020\000\020\003\030\350\007\030\356\007\030\014\030\001*\031Create Evaluation D" +
+      "ataset\022\221\001\n\ngetDataset\022\022.mlflow.GetDatase" +
+      "t\032\033.mlflow.GetDataset.Response\"R\362\206\031N\n*\n\003" +
+      "GET\022\035/mlflow/datasets/{dataset_id}\032\004\010\003\020\000" +
+      "\020\003\030\350\007\030\272\027\030\001*\026Get Evaluation Dataset\022\240\001\n\rd" +
+      "eleteDataset\022\025.mlflow.DeleteDataset\032\036.ml" +
+      "flow.DeleteDataset.Response\"X\362\206\031T\n-\n\006DEL" +
+      "ETE\022\035/mlflow/datasets/{dataset_id}\032\004\010\003\020\000" +
+      "\020\003\030\350\007\030\272\027\030\001*\031Delete Evaluation Dataset\022\335\001" +
+      "\n\030searchEvaluationDatasets\022 .mlflow.Sear" +
+      "chEvaluationDatasets\032).mlflow.SearchEval" +
+      "uationDatasets.Response\"t\362\206\031p\n%\n\004POST\022\027/" +
+      "mlflow/datasets/search\032\004\010\003\020\000\n$\n\003GET\022\027/ml" +
+      "flow/datasets/search\032\004\010\003\020\000\020\003\030\350\007\030\001*\032Searc" +
+      "h Evaluation Datasets\022\251\001\n\016setDatasetTags" +
+      "\022\026.mlflow.SetDatasetTags\032\037.mlflow.SetDat" +
+      "asetTags.Response\"^\362\206\031Z\n1\n\005PATCH\022\"/mlflo" +
+      "w/datasets/{dataset_id}/tags\032\004\010\003\020\000\020\003\030\350\007\030" +
+      "\272\027\030\001*\033Set Evaluation Dataset Tags\022\270\001\n\020de" +
+      "leteDatasetTag\022\030.mlflow.DeleteDatasetTag" +
+      "\032!.mlflow.DeleteDatasetTag.Response\"g\362\206\031" +
+      "c\n8\n\006DELETE\022(/mlflow/datasets/{dataset_i" +
+      "d}/tags/{key}\032\004\010\003\020\000\020\003\030\350\007\030\272\027\030\001*\035Delete Ev" +
+      "aluation Dataset Tag\022\303\001\n\024upsertDatasetRe" +
+      "cords\022\034.mlflow.UpsertDatasetRecords\032%.ml" +
+      "flow.UpsertDatasetRecords.Response\"f\362\206\031b" +
+      "\n3\n\004POST\022%/mlflow/datasets/{dataset_id}/" +
+      "records\032\004\010\003\020\000\020\003\030\350\007\030\272\027\030\001*!Upsert Evaluati" +
+      "on Dataset Records\022\326\001\n\027getDatasetExperim" +
+      "entIds\022\037.mlflow.GetDatasetExperimentIds\032" +
+      "(.mlflow.GetDatasetExperimentIds.Respons" +
+      "e\"p\362\206\031l\n9\n\003GET\022,/mlflow/datasets/{datase" +
+      "t_id}/experiment-ids\032\004\010\003\020\000\020\003\030\350\007\030\272\027\030\001*%Ge" +
+      "t Evaluation Dataset Experiment IDs\022\212\001\n\016" +
+      "registerScorer\022\026.mlflow.RegisterScorer\032\037" +
+      ".mlflow.RegisterScorer.Response\"?\362\206\031;\n&\n" +
+      "\004POST\022\030/mlflow/scorers/register\032\004\010\003\020\000\020\001*" +
+      "\017Register Scorer\022y\n\013listScorers\022\023.mlflow" +
+      ".ListScorers\032\034.mlflow.ListScorers.Respon" +
+      "se\"7\362\206\0313\n!\n\003GET\022\024/mlflow/scorers/list\032\004\010" +
+      "\003\020\000\020\001*\014List Scorers\022\232\001\n\022listScorerVersio" +
+      "ns\022\032.mlflow.ListScorerVersions\032#.mlflow." +
+      "ListScorerVersions.Response\"C\362\206\031?\n%\n\003GET" +
+      "\022\030/mlflow/scorers/versions\032\004\010\003\020\000\020\001*\024List" +
+      " Scorer Versions\022p\n\tgetScorer\022\021.mlflow.G" +
+      "etScorer\032\032.mlflow.GetScorer.Response\"4\362\206" +
+      "\0310\n \n\003GET\022\023/mlflow/scorers/get\032\004\010\003\020\000\020\001*\n" +
+      "Get Scorer\022\202\001\n\014deleteScorer\022\024.mlflow.Del" +
+      "eteScorer\032\035.mlflow.DeleteScorer.Response" +
+      "\"=\362\206\0319\n&\n\006DELETE\022\026/mlflow/scorers/delete" +
+      "\032\004\010\003\020\000\020\001*\rDelete Scorer\022\266\001\n\021getDatasetRe" +
+      "cords\022\031.mlflow.GetDatasetRecords\032\".mlflo" +
+      "w.GetDatasetRecords.Response\"b\362\206\031^\n2\n\003GE" +
+      "T\022%/mlflow/datasets/{dataset_id}/records" +
+      "\032\004\010\003\020\000\020\003\030\350\007\030\272\027\030\001*\036Get Evaluation Dataset" +
+      " Records\022\305\001\n\024deleteDatasetRecords\022\034.mlfl" +
+      "ow.DeleteDatasetRecords\032%.mlflow.DeleteD" +
+      "atasetRecords.Response\"h\362\206\031d\n5\n\006DELETE\022%" +
+      "/mlflow/datasets/{dataset_id}/records\032\004\010" +
+      "\003\020\000\020\003\030\350\007\030\272\027\030\001*!Delete Evaluation Dataset" +
+      " Records\022\315\001\n\027addDatasetToExperiments\022\037.m" +
+      "lflow.AddDatasetToExperiments\032(.mlflow.A" +
+      "ddDatasetToExperiments.Response\"g\362\206\031c\n;\n" +
+      "\004POST\022-/mlflow/datasets/{dataset_id}/add" +
+      "-experiments\032\004\010\003\020\000\020\003\030\350\007\030\272\027\030\001*\032Add Datase" +
+      "t to Experiments\022\344\001\n\034removeDatasetFromEx" +
+      "periments\022$.mlflow.RemoveDatasetFromExpe" +
+      "riments\032-.mlflow.RemoveDatasetFromExperi" +
+      "ments.Response\"o\362\206\031k\n>\n\004POST\0220/mlflow/da" +
+      "tasets/{dataset_id}/remove-experiments\032\004" +
+      "\010\003\020\000\020\003\030\350\007\030\272\027\030\001*\037Remove Dataset from Expe" +
+      "riments\022\245\001\n\023createGatewaySecret\022\033.mlflow" +
+      ".CreateGatewaySecret\032$.mlflow.CreateGate" +
+      "waySecret.Response\"K\362\206\031G\n,\n\004POST\022\036/mlflo" +
+      "w/gateway/secrets/create\032\004\010\003\020\000\020\001*\025Create" +
+      " Gateway Secret\022\246\001\n\024getGatewaySecretInfo" +
+      "\022\034.mlflow.GetGatewaySecretInfo\032%.mlflow." +
+      "GetGatewaySecretInfo.Response\"I\362\206\031E\n(\n\003G" +
+      "ET\022\033/mlflow/gateway/secrets/get\032\004\010\003\020\000\020\001*" +
+      "\027Get Gateway Secret Info\022\245\001\n\023updateGatew" +
+      "aySecret\022\033.mlflow.UpdateGatewaySecret\032$." +
+      "mlflow.UpdateGatewaySecret.Response\"K\362\206\031" +
+      "G\n,\n\004POST\022\036/mlflow/gateway/secrets/updat" +
+      "e\032\004\010\003\020\000\020\001*\025Update Gateway Secret\022\247\001\n\023del" +
+      "eteGatewaySecret\022\033.mlflow.DeleteGatewayS" +
+      "ecret\032$.mlflow.DeleteGatewaySecret.Respo" +
+      "nse\"M\362\206\031I\n.\n\006DELETE\022\036/mlflow/gateway/sec" +
+      "rets/delete\032\004\010\003\020\000\020\001*\025Delete Gateway Secr" +
+      "et\022\252\001\n\026listGatewaySecretInfos\022\036.mlflow.L" +
+      "istGatewaySecretInfos\032\'.mlflow.ListGatew" +
+      "aySecretInfos.Response\"G\362\206\031C\n)\n\003GET\022\034/ml" +
+      "flow/gateway/secrets/list\032\004\010\003\020\000\020\001*\024List " +
+      "Gateway Secrets\022\257\001\n\025createGatewayEndpoin" +
+      "t\022\035.mlflow.CreateGatewayEndpoint\032&.mlflo" +
+      "w.CreateGatewayEndpoint.Response\"O\362\206\031K\n." +
+      "\n\004POST\022 /mlflow/gateway/endpoints/create" +
+      "\032\004\010\003\020\000\020\001*\027Create Gateway Endpoint\022\237\001\n\022ge" +
+      "tGatewayEndpoint\022\032.mlflow.GetGatewayEndp" +
+      "oint\032#.mlflow.GetGatewayEndpoint.Respons" +
+      "e\"H\362\206\031D\n*\n\003GET\022\035/mlflow/gateway/endpoint" +
+      "s/get\032\004\010\003\020\000\020\001*\024Get Gateway Endpoint\022\257\001\n\025" +
+      "updateGatewayEndpoint\022\035.mlflow.UpdateGat" +
+      "ewayEndpoint\032&.mlflow.UpdateGatewayEndpo" +
+      "int.Response\"O\362\206\031K\n.\n\004POST\022 /mlflow/gate" +
+      "way/endpoints/update\032\004\010\003\020\000\020\001*\027Update Gat" +
+      "eway Endpoint\022\261\001\n\025deleteGatewayEndpoint\022" +
+      "\035.mlflow.DeleteGatewayEndpoint\032&.mlflow." +
+      "DeleteGatewayEndpoint.Response\"Q\362\206\031M\n0\n\006" +
+      "DELETE\022 /mlflow/gateway/endpoints/delete" +
+      "\032\004\010\003\020\000\020\001*\027Delete Gateway Endpoint\022\250\001\n\024li" +
+      "stGatewayEndpoints\022\034.mlflow.ListGatewayE" +
+      "ndpoints\032%.mlflow.ListGatewayEndpoints.R" +
+      "esponse\"K\362\206\031G\n+\n\003GET\022\036/mlflow/gateway/en" +
+      "dpoints/list\032\004\010\003\020\000\020\001*\026List Gateway Endpo" +
+      "ints\022\324\001\n\034createGatewayModelDefinition\022$." +
+      "mlflow.CreateGatewayModelDefinition\032-.ml" +
+      "flow.CreateGatewayModelDefinition.Respon" +
+      "se\"_\362\206\031[\n6\n\004POST\022(/mlflow/gateway/model-" +
+      "definitions/create\032\004\010\003\020\000\020\001*\037Create Gatew" +
+      "ay Model Definition\022\304\001\n\031getGatewayModelD" +
+      "efinition\022!.mlflow.GetGatewayModelDefini" +
+      "tion\032*.mlflow.GetGatewayModelDefinition." +
+      "Response\"X\362\206\031T\n2\n\003GET\022%/mlflow/gateway/m" +
+      "odel-definitions/get\032\004\010\003\020\000\020\001*\034Get Gatewa" +
+      "y Model Definition\022\315\001\n\033listGatewayModelD" +
+      "efinitions\022#.mlflow.ListGatewayModelDefi" +
+      "nitions\032,.mlflow.ListGatewayModelDefinit" +
+      "ions.Response\"[\362\206\031W\n3\n\003GET\022&/mlflow/gate" +
+      "way/model-definitions/list\032\004\010\003\020\000\020\001*\036List" +
+      " Gateway Model Definitions\022\324\001\n\034updateGat" +
+      "ewayModelDefinition\022$.mlflow.UpdateGatew" +
+      "ayModelDefinition\032-.mlflow.UpdateGateway" +
+      "ModelDefinition.Response\"_\362\206\031[\n6\n\004POST\022(" +
+      "/mlflow/gateway/model-definitions/update" +
+      "\032\004\010\003\020\000\020\001*\037Update Gateway Model Definitio" +
+      "n\022\326\001\n\034deleteGatewayModelDefinition\022$.mlf" +
+      "low.DeleteGatewayModelDefinition\032-.mlflo" +
+      "w.DeleteGatewayModelDefinition.Response\"" +
+      "a\362\206\031]\n8\n\006DELETE\022(/mlflow/gateway/model-d" +
+      "efinitions/delete\032\004\010\003\020\000\020\001*\037Delete Gatewa" +
+      "y Model Definition\022\305\001\n\025attachModelToEndp" +
+      "oint\022$.mlflow.AttachModelToGatewayEndpoi" +
+      "nt\032-.mlflow.AttachModelToGatewayEndpoint" +
+      ".Response\"W\362\206\031S\n5\n\004POST\022\'/mlflow/gateway" +
+      "/endpoints/models/attach\032\004\010\003\020\000\020\001*\030Attach" +
+      " Model to Endpoint\022\315\001\n\027detachModelFromEn" +
+      "dpoint\022&.mlflow.DetachModelFromGatewayEn" +
+      "dpoint\032/.mlflow.DetachModelFromGatewayEn" +
+      "dpoint.Response\"Y\362\206\031U\n5\n\004POST\022\'/mlflow/g" +
+      "ateway/endpoints/models/detach\032\004\010\003\020\000\020\001*\032" +
+      "Detach Model from Endpoint\022\306\001\n\025createEnd" +
+      "pointBinding\022$.mlflow.CreateGatewayEndpo" +
+      "intBinding\032-.mlflow.CreateGatewayEndpoin" +
+      "tBinding.Response\"X\362\206\031T\n7\n\004POST\022)/mlflow" +
+      "/gateway/endpoints/bindings/create\032\004\010\003\020\000" +
+      "\020\001*\027Create Endpoint Binding\022\310\001\n\025deleteEn" +
+      "dpointBinding\022$.mlflow.DeleteGatewayEndp" +
+      "ointBinding\032-.mlflow.DeleteGatewayEndpoi" +
+      "ntBinding.Response\"Z\362\206\031V\n9\n\006DELETE\022)/mlf" +
+      "low/gateway/endpoints/bindings/delete\032\004\010" +
+      "\003\020\000\020\001*\027Delete Endpoint Binding\022\277\001\n\024listE" +
+      "ndpointBindings\022#.mlflow.ListGatewayEndp" +
+      "ointBindings\032,.mlflow.ListGatewayEndpoin" +
+      "tBindings.Response\"T\362\206\031P\n4\n\003GET\022\'/mlflow" +
+      "/gateway/endpoints/bindings/list\032\004\010\003\020\000\020\001" +
+      "*\026List Endpoint Bindings\022\261\001\n\025setGatewayE" +
+      "ndpointTag\022\035.mlflow.SetGatewayEndpointTa" +
+      "g\032&.mlflow.SetGatewayEndpointTag.Respons" +
+      "e\"Q\362\206\031M\n/\n\004POST\022!/mlflow/gateway/endpoin" +
+      "ts/set-tag\032\004\010\003\020\000\020\001*\030Gateway Set Endpoint" +
+      " Tag\022\302\001\n\030deleteGatewayEndpointTag\022 .mlfl" +
+      "ow.DeleteGatewayEndpointTag\032).mlflow.Del" +
+      "eteGatewayEndpointTag.Response\"Y\362\206\031U\n4\n\006" +
+      "DELETE\022$/mlflow/gateway/endpoints/delete" +
+      "-tag\032\004\010\003\020\000\020\001*\033Gateway Delete Endpoint Ta" +
+      "g\022\320\001\n\033createPromptOptimizationJob\022#.mlfl" +
+      "ow.CreatePromptOptimizationJob\032,.mlflow." +
+      "CreatePromptOptimizationJob.Response\"^\362\206" +
+      "\031Z\n.\n\004POST\022 /mlflow/prompt-optimization/" +
+      "jobs\032\004\010\003\020\000\020\001\030\350\007\030\272\027\030\001*\036Create Prompt Opti" +
+      "mization Job\022\314\001\n\030getPromptOptimizationJo" +
+      "b\022 .mlflow.GetPromptOptimizationJob\032).ml" +
+      "flow.GetPromptOptimizationJob.Response\"c" +
+      "\362\206\031_\n6\n\003GET\022)/mlflow/prompt-optimization" +
+      "/jobs/{job_id}\032\004\010\003\020\000\020\001\030\350\007\030\272\027\030\001*\033Get Prom" +
+      "pt Optimization Job\022\220\002\n\034searchPromptOpti" +
+      "mizationJobs\022$.mlflow.SearchPromptOptimi" +
+      "zationJobs\032-.mlflow.SearchPromptOptimiza" +
+      "tionJobs.Response\"\232\001\362\206\031\225\001\n5\n\004POST\022\'/mlfl" +
+      "ow/prompt-optimization/jobs/search\032\004\010\003\020\000" +
+      "\n4\n\003GET\022\'/mlflow/prompt-optimization/job" +
+      "s/search\032\004\010\003\020\000\020\001\030\350\007\030\001*\037Search Prompt Opt" +
+      "imization Jobs\022\343\001\n\033cancelPromptOptimizat" +
+      "ionJob\022#.mlflow.CancelPromptOptimization" +
+      "Job\032,.mlflow.CancelPromptOptimizationJob" +
+      ".Response\"q\362\206\031m\n>\n\004POST\0220/mlflow/prompt-" +
+      "optimization/jobs/{job_id}/cancel\032\004\010\003\020\000\020" +
+      "\001\030\350\007\030\272\027\030\353\007\030\001*\036Cancel Prompt Optimization" +
+      " Job\022\333\001\n\033deletePromptOptimizationJob\022#.m" +
+      "lflow.DeletePromptOptimizationJob\032,.mlfl" +
+      "ow.DeletePromptOptimizationJob.Response\"" +
+      "i\362\206\031e\n9\n\006DELETE\022)/mlflow/prompt-optimiza" +
+      "tion/jobs/{job_id}\032\004\010\003\020\000\020\001\030\350\007\030\272\027\030\001*\036Dele" +
+      "te Prompt Optimization JobB\036\n\024org.mlflow" +
+      ".api.proto\220\001\001\342?\002\020\001"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -265551,6 +274160,72 @@ public final class Service {
     internal_static_mlflow_DeletePromptOptimizationJob_Response_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_mlflow_DeletePromptOptimizationJob_Response_descriptor,
+        new java.lang.String[] { });
+    internal_static_mlflow_Workspace_descriptor =
+      getDescriptor().getMessageTypes().get(147);
+    internal_static_mlflow_Workspace_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_mlflow_Workspace_descriptor,
+        new java.lang.String[] { "Name", "Description", "DefaultArtifactRoot", });
+    internal_static_mlflow_ListWorkspaces_descriptor =
+      getDescriptor().getMessageTypes().get(148);
+    internal_static_mlflow_ListWorkspaces_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_mlflow_ListWorkspaces_descriptor,
+        new java.lang.String[] { });
+    internal_static_mlflow_ListWorkspaces_Response_descriptor =
+      internal_static_mlflow_ListWorkspaces_descriptor.getNestedTypes().get(0);
+    internal_static_mlflow_ListWorkspaces_Response_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_mlflow_ListWorkspaces_Response_descriptor,
+        new java.lang.String[] { "Workspaces", });
+    internal_static_mlflow_CreateWorkspace_descriptor =
+      getDescriptor().getMessageTypes().get(149);
+    internal_static_mlflow_CreateWorkspace_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_mlflow_CreateWorkspace_descriptor,
+        new java.lang.String[] { "Name", "Description", "DefaultArtifactRoot", });
+    internal_static_mlflow_CreateWorkspace_Response_descriptor =
+      internal_static_mlflow_CreateWorkspace_descriptor.getNestedTypes().get(0);
+    internal_static_mlflow_CreateWorkspace_Response_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_mlflow_CreateWorkspace_Response_descriptor,
+        new java.lang.String[] { "Workspace", });
+    internal_static_mlflow_GetWorkspace_descriptor =
+      getDescriptor().getMessageTypes().get(150);
+    internal_static_mlflow_GetWorkspace_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_mlflow_GetWorkspace_descriptor,
+        new java.lang.String[] { "WorkspaceName", });
+    internal_static_mlflow_GetWorkspace_Response_descriptor =
+      internal_static_mlflow_GetWorkspace_descriptor.getNestedTypes().get(0);
+    internal_static_mlflow_GetWorkspace_Response_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_mlflow_GetWorkspace_Response_descriptor,
+        new java.lang.String[] { "Workspace", });
+    internal_static_mlflow_UpdateWorkspace_descriptor =
+      getDescriptor().getMessageTypes().get(151);
+    internal_static_mlflow_UpdateWorkspace_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_mlflow_UpdateWorkspace_descriptor,
+        new java.lang.String[] { "WorkspaceName", "Description", "DefaultArtifactRoot", });
+    internal_static_mlflow_UpdateWorkspace_Response_descriptor =
+      internal_static_mlflow_UpdateWorkspace_descriptor.getNestedTypes().get(0);
+    internal_static_mlflow_UpdateWorkspace_Response_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_mlflow_UpdateWorkspace_Response_descriptor,
+        new java.lang.String[] { "Workspace", });
+    internal_static_mlflow_DeleteWorkspace_descriptor =
+      getDescriptor().getMessageTypes().get(152);
+    internal_static_mlflow_DeleteWorkspace_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_mlflow_DeleteWorkspace_descriptor,
+        new java.lang.String[] { "WorkspaceName", });
+    internal_static_mlflow_DeleteWorkspace_Response_descriptor =
+      internal_static_mlflow_DeleteWorkspace_descriptor.getNestedTypes().get(0);
+    internal_static_mlflow_DeleteWorkspace_Response_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_mlflow_DeleteWorkspace_Response_descriptor,
         new java.lang.String[] { });
     com.google.protobuf.ExtensionRegistry registry =
         com.google.protobuf.ExtensionRegistry.newInstance();
