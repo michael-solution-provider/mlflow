@@ -263418,6 +263418,2124 @@ public final class Service {
 
   }
 
+  public interface ListGatewayBudgetWindowsOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:mlflow.ListGatewayBudgetWindows)
+      com.google.protobuf.MessageOrBuilder {
+  }
+  /**
+   * Protobuf type {@code mlflow.ListGatewayBudgetWindows}
+   */
+  public static final class ListGatewayBudgetWindows extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:mlflow.ListGatewayBudgetWindows)
+      ListGatewayBudgetWindowsOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use ListGatewayBudgetWindows.newBuilder() to construct.
+    private ListGatewayBudgetWindows(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private ListGatewayBudgetWindows() {
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new ListGatewayBudgetWindows();
+    }
+
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet
+    getUnknownFields() {
+      return this.unknownFields;
+    }
+    private ListGatewayBudgetWindows(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      this();
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            default: {
+              if (!parseUnknownField(
+                  input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e).setUnfinishedMessage(this);
+      } finally {
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return org.mlflow.api.proto.Service.internal_static_mlflow_ListGatewayBudgetWindows_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return org.mlflow.api.proto.Service.internal_static_mlflow_ListGatewayBudgetWindows_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              org.mlflow.api.proto.Service.ListGatewayBudgetWindows.class, org.mlflow.api.proto.Service.ListGatewayBudgetWindows.Builder.class);
+    }
+
+    public interface BudgetWindowOrBuilder extends
+        // @@protoc_insertion_point(interface_extends:mlflow.ListGatewayBudgetWindows.BudgetWindow)
+        com.google.protobuf.MessageOrBuilder {
+
+      /**
+       * <code>optional string budget_policy_id = 1;</code>
+       * @return Whether the budgetPolicyId field is set.
+       */
+      boolean hasBudgetPolicyId();
+      /**
+       * <code>optional string budget_policy_id = 1;</code>
+       * @return The budgetPolicyId.
+       */
+      java.lang.String getBudgetPolicyId();
+      /**
+       * <code>optional string budget_policy_id = 1;</code>
+       * @return The bytes for budgetPolicyId.
+       */
+      com.google.protobuf.ByteString
+          getBudgetPolicyIdBytes();
+
+      /**
+       * <code>optional int64 window_start_ms = 2;</code>
+       * @return Whether the windowStartMs field is set.
+       */
+      boolean hasWindowStartMs();
+      /**
+       * <code>optional int64 window_start_ms = 2;</code>
+       * @return The windowStartMs.
+       */
+      long getWindowStartMs();
+
+      /**
+       * <code>optional int64 window_end_ms = 3;</code>
+       * @return Whether the windowEndMs field is set.
+       */
+      boolean hasWindowEndMs();
+      /**
+       * <code>optional int64 window_end_ms = 3;</code>
+       * @return The windowEndMs.
+       */
+      long getWindowEndMs();
+
+      /**
+       * <code>optional double current_spend = 4;</code>
+       * @return Whether the currentSpend field is set.
+       */
+      boolean hasCurrentSpend();
+      /**
+       * <code>optional double current_spend = 4;</code>
+       * @return The currentSpend.
+       */
+      double getCurrentSpend();
+    }
+    /**
+     * Protobuf type {@code mlflow.ListGatewayBudgetWindows.BudgetWindow}
+     */
+    public static final class BudgetWindow extends
+        com.google.protobuf.GeneratedMessageV3 implements
+        // @@protoc_insertion_point(message_implements:mlflow.ListGatewayBudgetWindows.BudgetWindow)
+        BudgetWindowOrBuilder {
+    private static final long serialVersionUID = 0L;
+      // Use BudgetWindow.newBuilder() to construct.
+      private BudgetWindow(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+        super(builder);
+      }
+      private BudgetWindow() {
+        budgetPolicyId_ = "";
+      }
+
+      @java.lang.Override
+      @SuppressWarnings({"unused"})
+      protected java.lang.Object newInstance(
+          UnusedPrivateParameter unused) {
+        return new BudgetWindow();
+      }
+
+      @java.lang.Override
+      public final com.google.protobuf.UnknownFieldSet
+      getUnknownFields() {
+        return this.unknownFields;
+      }
+      private BudgetWindow(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        this();
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        int mutable_bitField0_ = 0;
+        com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+            com.google.protobuf.UnknownFieldSet.newBuilder();
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                com.google.protobuf.ByteString bs = input.readBytes();
+                bitField0_ |= 0x00000001;
+                budgetPolicyId_ = bs;
+                break;
+              }
+              case 16: {
+                bitField0_ |= 0x00000002;
+                windowStartMs_ = input.readInt64();
+                break;
+              }
+              case 24: {
+                bitField0_ |= 0x00000004;
+                windowEndMs_ = input.readInt64();
+                break;
+              }
+              case 33: {
+                bitField0_ |= 0x00000008;
+                currentSpend_ = input.readDouble();
+                break;
+              }
+              default: {
+                if (!parseUnknownField(
+                    input, unknownFields, extensionRegistry, tag)) {
+                  done = true;
+                }
+                break;
+              }
+            }
+          }
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(this);
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(
+              e).setUnfinishedMessage(this);
+        } finally {
+          this.unknownFields = unknownFields.build();
+          makeExtensionsImmutable();
+        }
+      }
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return org.mlflow.api.proto.Service.internal_static_mlflow_ListGatewayBudgetWindows_BudgetWindow_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return org.mlflow.api.proto.Service.internal_static_mlflow_ListGatewayBudgetWindows_BudgetWindow_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                org.mlflow.api.proto.Service.ListGatewayBudgetWindows.BudgetWindow.class, org.mlflow.api.proto.Service.ListGatewayBudgetWindows.BudgetWindow.Builder.class);
+      }
+
+      private int bitField0_;
+      public static final int BUDGET_POLICY_ID_FIELD_NUMBER = 1;
+      private volatile java.lang.Object budgetPolicyId_;
+      /**
+       * <code>optional string budget_policy_id = 1;</code>
+       * @return Whether the budgetPolicyId field is set.
+       */
+      @java.lang.Override
+      public boolean hasBudgetPolicyId() {
+        return ((bitField0_ & 0x00000001) != 0);
+      }
+      /**
+       * <code>optional string budget_policy_id = 1;</code>
+       * @return The budgetPolicyId.
+       */
+      @java.lang.Override
+      public java.lang.String getBudgetPolicyId() {
+        java.lang.Object ref = budgetPolicyId_;
+        if (ref instanceof java.lang.String) {
+          return (java.lang.String) ref;
+        } else {
+          com.google.protobuf.ByteString bs = 
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          if (bs.isValidUtf8()) {
+            budgetPolicyId_ = s;
+          }
+          return s;
+        }
+      }
+      /**
+       * <code>optional string budget_policy_id = 1;</code>
+       * @return The bytes for budgetPolicyId.
+       */
+      @java.lang.Override
+      public com.google.protobuf.ByteString
+          getBudgetPolicyIdBytes() {
+        java.lang.Object ref = budgetPolicyId_;
+        if (ref instanceof java.lang.String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          budgetPolicyId_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+
+      public static final int WINDOW_START_MS_FIELD_NUMBER = 2;
+      private long windowStartMs_;
+      /**
+       * <code>optional int64 window_start_ms = 2;</code>
+       * @return Whether the windowStartMs field is set.
+       */
+      @java.lang.Override
+      public boolean hasWindowStartMs() {
+        return ((bitField0_ & 0x00000002) != 0);
+      }
+      /**
+       * <code>optional int64 window_start_ms = 2;</code>
+       * @return The windowStartMs.
+       */
+      @java.lang.Override
+      public long getWindowStartMs() {
+        return windowStartMs_;
+      }
+
+      public static final int WINDOW_END_MS_FIELD_NUMBER = 3;
+      private long windowEndMs_;
+      /**
+       * <code>optional int64 window_end_ms = 3;</code>
+       * @return Whether the windowEndMs field is set.
+       */
+      @java.lang.Override
+      public boolean hasWindowEndMs() {
+        return ((bitField0_ & 0x00000004) != 0);
+      }
+      /**
+       * <code>optional int64 window_end_ms = 3;</code>
+       * @return The windowEndMs.
+       */
+      @java.lang.Override
+      public long getWindowEndMs() {
+        return windowEndMs_;
+      }
+
+      public static final int CURRENT_SPEND_FIELD_NUMBER = 4;
+      private double currentSpend_;
+      /**
+       * <code>optional double current_spend = 4;</code>
+       * @return Whether the currentSpend field is set.
+       */
+      @java.lang.Override
+      public boolean hasCurrentSpend() {
+        return ((bitField0_ & 0x00000008) != 0);
+      }
+      /**
+       * <code>optional double current_spend = 4;</code>
+       * @return The currentSpend.
+       */
+      @java.lang.Override
+      public double getCurrentSpend() {
+        return currentSpend_;
+      }
+
+      private byte memoizedIsInitialized = -1;
+      @java.lang.Override
+      public final boolean isInitialized() {
+        byte isInitialized = memoizedIsInitialized;
+        if (isInitialized == 1) return true;
+        if (isInitialized == 0) return false;
+
+        memoizedIsInitialized = 1;
+        return true;
+      }
+
+      @java.lang.Override
+      public void writeTo(com.google.protobuf.CodedOutputStream output)
+                          throws java.io.IOException {
+        if (((bitField0_ & 0x00000001) != 0)) {
+          com.google.protobuf.GeneratedMessageV3.writeString(output, 1, budgetPolicyId_);
+        }
+        if (((bitField0_ & 0x00000002) != 0)) {
+          output.writeInt64(2, windowStartMs_);
+        }
+        if (((bitField0_ & 0x00000004) != 0)) {
+          output.writeInt64(3, windowEndMs_);
+        }
+        if (((bitField0_ & 0x00000008) != 0)) {
+          output.writeDouble(4, currentSpend_);
+        }
+        unknownFields.writeTo(output);
+      }
+
+      @java.lang.Override
+      public int getSerializedSize() {
+        int size = memoizedSize;
+        if (size != -1) return size;
+
+        size = 0;
+        if (((bitField0_ & 0x00000001) != 0)) {
+          size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, budgetPolicyId_);
+        }
+        if (((bitField0_ & 0x00000002) != 0)) {
+          size += com.google.protobuf.CodedOutputStream
+            .computeInt64Size(2, windowStartMs_);
+        }
+        if (((bitField0_ & 0x00000004) != 0)) {
+          size += com.google.protobuf.CodedOutputStream
+            .computeInt64Size(3, windowEndMs_);
+        }
+        if (((bitField0_ & 0x00000008) != 0)) {
+          size += com.google.protobuf.CodedOutputStream
+            .computeDoubleSize(4, currentSpend_);
+        }
+        size += unknownFields.getSerializedSize();
+        memoizedSize = size;
+        return size;
+      }
+
+      @java.lang.Override
+      public boolean equals(final java.lang.Object obj) {
+        if (obj == this) {
+         return true;
+        }
+        if (!(obj instanceof org.mlflow.api.proto.Service.ListGatewayBudgetWindows.BudgetWindow)) {
+          return super.equals(obj);
+        }
+        org.mlflow.api.proto.Service.ListGatewayBudgetWindows.BudgetWindow other = (org.mlflow.api.proto.Service.ListGatewayBudgetWindows.BudgetWindow) obj;
+
+        if (hasBudgetPolicyId() != other.hasBudgetPolicyId()) return false;
+        if (hasBudgetPolicyId()) {
+          if (!getBudgetPolicyId()
+              .equals(other.getBudgetPolicyId())) return false;
+        }
+        if (hasWindowStartMs() != other.hasWindowStartMs()) return false;
+        if (hasWindowStartMs()) {
+          if (getWindowStartMs()
+              != other.getWindowStartMs()) return false;
+        }
+        if (hasWindowEndMs() != other.hasWindowEndMs()) return false;
+        if (hasWindowEndMs()) {
+          if (getWindowEndMs()
+              != other.getWindowEndMs()) return false;
+        }
+        if (hasCurrentSpend() != other.hasCurrentSpend()) return false;
+        if (hasCurrentSpend()) {
+          if (java.lang.Double.doubleToLongBits(getCurrentSpend())
+              != java.lang.Double.doubleToLongBits(
+                  other.getCurrentSpend())) return false;
+        }
+        if (!unknownFields.equals(other.unknownFields)) return false;
+        return true;
+      }
+
+      @java.lang.Override
+      public int hashCode() {
+        if (memoizedHashCode != 0) {
+          return memoizedHashCode;
+        }
+        int hash = 41;
+        hash = (19 * hash) + getDescriptor().hashCode();
+        if (hasBudgetPolicyId()) {
+          hash = (37 * hash) + BUDGET_POLICY_ID_FIELD_NUMBER;
+          hash = (53 * hash) + getBudgetPolicyId().hashCode();
+        }
+        if (hasWindowStartMs()) {
+          hash = (37 * hash) + WINDOW_START_MS_FIELD_NUMBER;
+          hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+              getWindowStartMs());
+        }
+        if (hasWindowEndMs()) {
+          hash = (37 * hash) + WINDOW_END_MS_FIELD_NUMBER;
+          hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+              getWindowEndMs());
+        }
+        if (hasCurrentSpend()) {
+          hash = (37 * hash) + CURRENT_SPEND_FIELD_NUMBER;
+          hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+              java.lang.Double.doubleToLongBits(getCurrentSpend()));
+        }
+        hash = (29 * hash) + unknownFields.hashCode();
+        memoizedHashCode = hash;
+        return hash;
+      }
+
+      public static org.mlflow.api.proto.Service.ListGatewayBudgetWindows.BudgetWindow parseFrom(
+          java.nio.ByteBuffer data)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data);
+      }
+      public static org.mlflow.api.proto.Service.ListGatewayBudgetWindows.BudgetWindow parseFrom(
+          java.nio.ByteBuffer data,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data, extensionRegistry);
+      }
+      public static org.mlflow.api.proto.Service.ListGatewayBudgetWindows.BudgetWindow parseFrom(
+          com.google.protobuf.ByteString data)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data);
+      }
+      public static org.mlflow.api.proto.Service.ListGatewayBudgetWindows.BudgetWindow parseFrom(
+          com.google.protobuf.ByteString data,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data, extensionRegistry);
+      }
+      public static org.mlflow.api.proto.Service.ListGatewayBudgetWindows.BudgetWindow parseFrom(byte[] data)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data);
+      }
+      public static org.mlflow.api.proto.Service.ListGatewayBudgetWindows.BudgetWindow parseFrom(
+          byte[] data,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data, extensionRegistry);
+      }
+      public static org.mlflow.api.proto.Service.ListGatewayBudgetWindows.BudgetWindow parseFrom(java.io.InputStream input)
+          throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessageV3
+            .parseWithIOException(PARSER, input);
+      }
+      public static org.mlflow.api.proto.Service.ListGatewayBudgetWindows.BudgetWindow parseFrom(
+          java.io.InputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessageV3
+            .parseWithIOException(PARSER, input, extensionRegistry);
+      }
+      public static org.mlflow.api.proto.Service.ListGatewayBudgetWindows.BudgetWindow parseDelimitedFrom(java.io.InputStream input)
+          throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessageV3
+            .parseDelimitedWithIOException(PARSER, input);
+      }
+      public static org.mlflow.api.proto.Service.ListGatewayBudgetWindows.BudgetWindow parseDelimitedFrom(
+          java.io.InputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessageV3
+            .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+      }
+      public static org.mlflow.api.proto.Service.ListGatewayBudgetWindows.BudgetWindow parseFrom(
+          com.google.protobuf.CodedInputStream input)
+          throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessageV3
+            .parseWithIOException(PARSER, input);
+      }
+      public static org.mlflow.api.proto.Service.ListGatewayBudgetWindows.BudgetWindow parseFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessageV3
+            .parseWithIOException(PARSER, input, extensionRegistry);
+      }
+
+      @java.lang.Override
+      public Builder newBuilderForType() { return newBuilder(); }
+      public static Builder newBuilder() {
+        return DEFAULT_INSTANCE.toBuilder();
+      }
+      public static Builder newBuilder(org.mlflow.api.proto.Service.ListGatewayBudgetWindows.BudgetWindow prototype) {
+        return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+      }
+      @java.lang.Override
+      public Builder toBuilder() {
+        return this == DEFAULT_INSTANCE
+            ? new Builder() : new Builder().mergeFrom(this);
+      }
+
+      @java.lang.Override
+      protected Builder newBuilderForType(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        Builder builder = new Builder(parent);
+        return builder;
+      }
+      /**
+       * Protobuf type {@code mlflow.ListGatewayBudgetWindows.BudgetWindow}
+       */
+      public static final class Builder extends
+          com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+          // @@protoc_insertion_point(builder_implements:mlflow.ListGatewayBudgetWindows.BudgetWindow)
+          org.mlflow.api.proto.Service.ListGatewayBudgetWindows.BudgetWindowOrBuilder {
+        public static final com.google.protobuf.Descriptors.Descriptor
+            getDescriptor() {
+          return org.mlflow.api.proto.Service.internal_static_mlflow_ListGatewayBudgetWindows_BudgetWindow_descriptor;
+        }
+
+        @java.lang.Override
+        protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+            internalGetFieldAccessorTable() {
+          return org.mlflow.api.proto.Service.internal_static_mlflow_ListGatewayBudgetWindows_BudgetWindow_fieldAccessorTable
+              .ensureFieldAccessorsInitialized(
+                  org.mlflow.api.proto.Service.ListGatewayBudgetWindows.BudgetWindow.class, org.mlflow.api.proto.Service.ListGatewayBudgetWindows.BudgetWindow.Builder.class);
+        }
+
+        // Construct using org.mlflow.api.proto.Service.ListGatewayBudgetWindows.BudgetWindow.newBuilder()
+        private Builder() {
+          maybeForceBuilderInitialization();
+        }
+
+        private Builder(
+            com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+          super(parent);
+          maybeForceBuilderInitialization();
+        }
+        private void maybeForceBuilderInitialization() {
+          if (com.google.protobuf.GeneratedMessageV3
+                  .alwaysUseFieldBuilders) {
+          }
+        }
+        @java.lang.Override
+        public Builder clear() {
+          super.clear();
+          budgetPolicyId_ = "";
+          bitField0_ = (bitField0_ & ~0x00000001);
+          windowStartMs_ = 0L;
+          bitField0_ = (bitField0_ & ~0x00000002);
+          windowEndMs_ = 0L;
+          bitField0_ = (bitField0_ & ~0x00000004);
+          currentSpend_ = 0D;
+          bitField0_ = (bitField0_ & ~0x00000008);
+          return this;
+        }
+
+        @java.lang.Override
+        public com.google.protobuf.Descriptors.Descriptor
+            getDescriptorForType() {
+          return org.mlflow.api.proto.Service.internal_static_mlflow_ListGatewayBudgetWindows_BudgetWindow_descriptor;
+        }
+
+        @java.lang.Override
+        public org.mlflow.api.proto.Service.ListGatewayBudgetWindows.BudgetWindow getDefaultInstanceForType() {
+          return org.mlflow.api.proto.Service.ListGatewayBudgetWindows.BudgetWindow.getDefaultInstance();
+        }
+
+        @java.lang.Override
+        public org.mlflow.api.proto.Service.ListGatewayBudgetWindows.BudgetWindow build() {
+          org.mlflow.api.proto.Service.ListGatewayBudgetWindows.BudgetWindow result = buildPartial();
+          if (!result.isInitialized()) {
+            throw newUninitializedMessageException(result);
+          }
+          return result;
+        }
+
+        @java.lang.Override
+        public org.mlflow.api.proto.Service.ListGatewayBudgetWindows.BudgetWindow buildPartial() {
+          org.mlflow.api.proto.Service.ListGatewayBudgetWindows.BudgetWindow result = new org.mlflow.api.proto.Service.ListGatewayBudgetWindows.BudgetWindow(this);
+          int from_bitField0_ = bitField0_;
+          int to_bitField0_ = 0;
+          if (((from_bitField0_ & 0x00000001) != 0)) {
+            to_bitField0_ |= 0x00000001;
+          }
+          result.budgetPolicyId_ = budgetPolicyId_;
+          if (((from_bitField0_ & 0x00000002) != 0)) {
+            result.windowStartMs_ = windowStartMs_;
+            to_bitField0_ |= 0x00000002;
+          }
+          if (((from_bitField0_ & 0x00000004) != 0)) {
+            result.windowEndMs_ = windowEndMs_;
+            to_bitField0_ |= 0x00000004;
+          }
+          if (((from_bitField0_ & 0x00000008) != 0)) {
+            result.currentSpend_ = currentSpend_;
+            to_bitField0_ |= 0x00000008;
+          }
+          result.bitField0_ = to_bitField0_;
+          onBuilt();
+          return result;
+        }
+
+        @java.lang.Override
+        public Builder clone() {
+          return super.clone();
+        }
+        @java.lang.Override
+        public Builder setField(
+            com.google.protobuf.Descriptors.FieldDescriptor field,
+            java.lang.Object value) {
+          return super.setField(field, value);
+        }
+        @java.lang.Override
+        public Builder clearField(
+            com.google.protobuf.Descriptors.FieldDescriptor field) {
+          return super.clearField(field);
+        }
+        @java.lang.Override
+        public Builder clearOneof(
+            com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+          return super.clearOneof(oneof);
+        }
+        @java.lang.Override
+        public Builder setRepeatedField(
+            com.google.protobuf.Descriptors.FieldDescriptor field,
+            int index, java.lang.Object value) {
+          return super.setRepeatedField(field, index, value);
+        }
+        @java.lang.Override
+        public Builder addRepeatedField(
+            com.google.protobuf.Descriptors.FieldDescriptor field,
+            java.lang.Object value) {
+          return super.addRepeatedField(field, value);
+        }
+        @java.lang.Override
+        public Builder mergeFrom(com.google.protobuf.Message other) {
+          if (other instanceof org.mlflow.api.proto.Service.ListGatewayBudgetWindows.BudgetWindow) {
+            return mergeFrom((org.mlflow.api.proto.Service.ListGatewayBudgetWindows.BudgetWindow)other);
+          } else {
+            super.mergeFrom(other);
+            return this;
+          }
+        }
+
+        public Builder mergeFrom(org.mlflow.api.proto.Service.ListGatewayBudgetWindows.BudgetWindow other) {
+          if (other == org.mlflow.api.proto.Service.ListGatewayBudgetWindows.BudgetWindow.getDefaultInstance()) return this;
+          if (other.hasBudgetPolicyId()) {
+            bitField0_ |= 0x00000001;
+            budgetPolicyId_ = other.budgetPolicyId_;
+            onChanged();
+          }
+          if (other.hasWindowStartMs()) {
+            setWindowStartMs(other.getWindowStartMs());
+          }
+          if (other.hasWindowEndMs()) {
+            setWindowEndMs(other.getWindowEndMs());
+          }
+          if (other.hasCurrentSpend()) {
+            setCurrentSpend(other.getCurrentSpend());
+          }
+          this.mergeUnknownFields(other.unknownFields);
+          onChanged();
+          return this;
+        }
+
+        @java.lang.Override
+        public final boolean isInitialized() {
+          return true;
+        }
+
+        @java.lang.Override
+        public Builder mergeFrom(
+            com.google.protobuf.CodedInputStream input,
+            com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+            throws java.io.IOException {
+          org.mlflow.api.proto.Service.ListGatewayBudgetWindows.BudgetWindow parsedMessage = null;
+          try {
+            parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+          } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+            parsedMessage = (org.mlflow.api.proto.Service.ListGatewayBudgetWindows.BudgetWindow) e.getUnfinishedMessage();
+            throw e.unwrapIOException();
+          } finally {
+            if (parsedMessage != null) {
+              mergeFrom(parsedMessage);
+            }
+          }
+          return this;
+        }
+        private int bitField0_;
+
+        private java.lang.Object budgetPolicyId_ = "";
+        /**
+         * <code>optional string budget_policy_id = 1;</code>
+         * @return Whether the budgetPolicyId field is set.
+         */
+        public boolean hasBudgetPolicyId() {
+          return ((bitField0_ & 0x00000001) != 0);
+        }
+        /**
+         * <code>optional string budget_policy_id = 1;</code>
+         * @return The budgetPolicyId.
+         */
+        public java.lang.String getBudgetPolicyId() {
+          java.lang.Object ref = budgetPolicyId_;
+          if (!(ref instanceof java.lang.String)) {
+            com.google.protobuf.ByteString bs =
+                (com.google.protobuf.ByteString) ref;
+            java.lang.String s = bs.toStringUtf8();
+            if (bs.isValidUtf8()) {
+              budgetPolicyId_ = s;
+            }
+            return s;
+          } else {
+            return (java.lang.String) ref;
+          }
+        }
+        /**
+         * <code>optional string budget_policy_id = 1;</code>
+         * @return The bytes for budgetPolicyId.
+         */
+        public com.google.protobuf.ByteString
+            getBudgetPolicyIdBytes() {
+          java.lang.Object ref = budgetPolicyId_;
+          if (ref instanceof String) {
+            com.google.protobuf.ByteString b = 
+                com.google.protobuf.ByteString.copyFromUtf8(
+                    (java.lang.String) ref);
+            budgetPolicyId_ = b;
+            return b;
+          } else {
+            return (com.google.protobuf.ByteString) ref;
+          }
+        }
+        /**
+         * <code>optional string budget_policy_id = 1;</code>
+         * @param value The budgetPolicyId to set.
+         * @return This builder for chaining.
+         */
+        public Builder setBudgetPolicyId(
+            java.lang.String value) {
+          if (value == null) {
+    throw new NullPointerException();
+  }
+  bitField0_ |= 0x00000001;
+          budgetPolicyId_ = value;
+          onChanged();
+          return this;
+        }
+        /**
+         * <code>optional string budget_policy_id = 1;</code>
+         * @return This builder for chaining.
+         */
+        public Builder clearBudgetPolicyId() {
+          bitField0_ = (bitField0_ & ~0x00000001);
+          budgetPolicyId_ = getDefaultInstance().getBudgetPolicyId();
+          onChanged();
+          return this;
+        }
+        /**
+         * <code>optional string budget_policy_id = 1;</code>
+         * @param value The bytes for budgetPolicyId to set.
+         * @return This builder for chaining.
+         */
+        public Builder setBudgetPolicyIdBytes(
+            com.google.protobuf.ByteString value) {
+          if (value == null) {
+    throw new NullPointerException();
+  }
+  bitField0_ |= 0x00000001;
+          budgetPolicyId_ = value;
+          onChanged();
+          return this;
+        }
+
+        private long windowStartMs_ ;
+        /**
+         * <code>optional int64 window_start_ms = 2;</code>
+         * @return Whether the windowStartMs field is set.
+         */
+        @java.lang.Override
+        public boolean hasWindowStartMs() {
+          return ((bitField0_ & 0x00000002) != 0);
+        }
+        /**
+         * <code>optional int64 window_start_ms = 2;</code>
+         * @return The windowStartMs.
+         */
+        @java.lang.Override
+        public long getWindowStartMs() {
+          return windowStartMs_;
+        }
+        /**
+         * <code>optional int64 window_start_ms = 2;</code>
+         * @param value The windowStartMs to set.
+         * @return This builder for chaining.
+         */
+        public Builder setWindowStartMs(long value) {
+          bitField0_ |= 0x00000002;
+          windowStartMs_ = value;
+          onChanged();
+          return this;
+        }
+        /**
+         * <code>optional int64 window_start_ms = 2;</code>
+         * @return This builder for chaining.
+         */
+        public Builder clearWindowStartMs() {
+          bitField0_ = (bitField0_ & ~0x00000002);
+          windowStartMs_ = 0L;
+          onChanged();
+          return this;
+        }
+
+        private long windowEndMs_ ;
+        /**
+         * <code>optional int64 window_end_ms = 3;</code>
+         * @return Whether the windowEndMs field is set.
+         */
+        @java.lang.Override
+        public boolean hasWindowEndMs() {
+          return ((bitField0_ & 0x00000004) != 0);
+        }
+        /**
+         * <code>optional int64 window_end_ms = 3;</code>
+         * @return The windowEndMs.
+         */
+        @java.lang.Override
+        public long getWindowEndMs() {
+          return windowEndMs_;
+        }
+        /**
+         * <code>optional int64 window_end_ms = 3;</code>
+         * @param value The windowEndMs to set.
+         * @return This builder for chaining.
+         */
+        public Builder setWindowEndMs(long value) {
+          bitField0_ |= 0x00000004;
+          windowEndMs_ = value;
+          onChanged();
+          return this;
+        }
+        /**
+         * <code>optional int64 window_end_ms = 3;</code>
+         * @return This builder for chaining.
+         */
+        public Builder clearWindowEndMs() {
+          bitField0_ = (bitField0_ & ~0x00000004);
+          windowEndMs_ = 0L;
+          onChanged();
+          return this;
+        }
+
+        private double currentSpend_ ;
+        /**
+         * <code>optional double current_spend = 4;</code>
+         * @return Whether the currentSpend field is set.
+         */
+        @java.lang.Override
+        public boolean hasCurrentSpend() {
+          return ((bitField0_ & 0x00000008) != 0);
+        }
+        /**
+         * <code>optional double current_spend = 4;</code>
+         * @return The currentSpend.
+         */
+        @java.lang.Override
+        public double getCurrentSpend() {
+          return currentSpend_;
+        }
+        /**
+         * <code>optional double current_spend = 4;</code>
+         * @param value The currentSpend to set.
+         * @return This builder for chaining.
+         */
+        public Builder setCurrentSpend(double value) {
+          bitField0_ |= 0x00000008;
+          currentSpend_ = value;
+          onChanged();
+          return this;
+        }
+        /**
+         * <code>optional double current_spend = 4;</code>
+         * @return This builder for chaining.
+         */
+        public Builder clearCurrentSpend() {
+          bitField0_ = (bitField0_ & ~0x00000008);
+          currentSpend_ = 0D;
+          onChanged();
+          return this;
+        }
+        @java.lang.Override
+        public final Builder setUnknownFields(
+            final com.google.protobuf.UnknownFieldSet unknownFields) {
+          return super.setUnknownFields(unknownFields);
+        }
+
+        @java.lang.Override
+        public final Builder mergeUnknownFields(
+            final com.google.protobuf.UnknownFieldSet unknownFields) {
+          return super.mergeUnknownFields(unknownFields);
+        }
+
+
+        // @@protoc_insertion_point(builder_scope:mlflow.ListGatewayBudgetWindows.BudgetWindow)
+      }
+
+      // @@protoc_insertion_point(class_scope:mlflow.ListGatewayBudgetWindows.BudgetWindow)
+      private static final org.mlflow.api.proto.Service.ListGatewayBudgetWindows.BudgetWindow DEFAULT_INSTANCE;
+      static {
+        DEFAULT_INSTANCE = new org.mlflow.api.proto.Service.ListGatewayBudgetWindows.BudgetWindow();
+      }
+
+      public static org.mlflow.api.proto.Service.ListGatewayBudgetWindows.BudgetWindow getDefaultInstance() {
+        return DEFAULT_INSTANCE;
+      }
+
+      @java.lang.Deprecated public static final com.google.protobuf.Parser<BudgetWindow>
+          PARSER = new com.google.protobuf.AbstractParser<BudgetWindow>() {
+        @java.lang.Override
+        public BudgetWindow parsePartialFrom(
+            com.google.protobuf.CodedInputStream input,
+            com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+            throws com.google.protobuf.InvalidProtocolBufferException {
+          return new BudgetWindow(input, extensionRegistry);
+        }
+      };
+
+      public static com.google.protobuf.Parser<BudgetWindow> parser() {
+        return PARSER;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Parser<BudgetWindow> getParserForType() {
+        return PARSER;
+      }
+
+      @java.lang.Override
+      public org.mlflow.api.proto.Service.ListGatewayBudgetWindows.BudgetWindow getDefaultInstanceForType() {
+        return DEFAULT_INSTANCE;
+      }
+
+    }
+
+    public interface ResponseOrBuilder extends
+        // @@protoc_insertion_point(interface_extends:mlflow.ListGatewayBudgetWindows.Response)
+        com.google.protobuf.MessageOrBuilder {
+
+      /**
+       * <code>repeated .mlflow.ListGatewayBudgetWindows.BudgetWindow windows = 1;</code>
+       */
+      java.util.List<org.mlflow.api.proto.Service.ListGatewayBudgetWindows.BudgetWindow> 
+          getWindowsList();
+      /**
+       * <code>repeated .mlflow.ListGatewayBudgetWindows.BudgetWindow windows = 1;</code>
+       */
+      org.mlflow.api.proto.Service.ListGatewayBudgetWindows.BudgetWindow getWindows(int index);
+      /**
+       * <code>repeated .mlflow.ListGatewayBudgetWindows.BudgetWindow windows = 1;</code>
+       */
+      int getWindowsCount();
+      /**
+       * <code>repeated .mlflow.ListGatewayBudgetWindows.BudgetWindow windows = 1;</code>
+       */
+      java.util.List<? extends org.mlflow.api.proto.Service.ListGatewayBudgetWindows.BudgetWindowOrBuilder> 
+          getWindowsOrBuilderList();
+      /**
+       * <code>repeated .mlflow.ListGatewayBudgetWindows.BudgetWindow windows = 1;</code>
+       */
+      org.mlflow.api.proto.Service.ListGatewayBudgetWindows.BudgetWindowOrBuilder getWindowsOrBuilder(
+          int index);
+    }
+    /**
+     * Protobuf type {@code mlflow.ListGatewayBudgetWindows.Response}
+     */
+    public static final class Response extends
+        com.google.protobuf.GeneratedMessageV3 implements
+        // @@protoc_insertion_point(message_implements:mlflow.ListGatewayBudgetWindows.Response)
+        ResponseOrBuilder {
+    private static final long serialVersionUID = 0L;
+      // Use Response.newBuilder() to construct.
+      private Response(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+        super(builder);
+      }
+      private Response() {
+        windows_ = java.util.Collections.emptyList();
+      }
+
+      @java.lang.Override
+      @SuppressWarnings({"unused"})
+      protected java.lang.Object newInstance(
+          UnusedPrivateParameter unused) {
+        return new Response();
+      }
+
+      @java.lang.Override
+      public final com.google.protobuf.UnknownFieldSet
+      getUnknownFields() {
+        return this.unknownFields;
+      }
+      private Response(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        this();
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        int mutable_bitField0_ = 0;
+        com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+            com.google.protobuf.UnknownFieldSet.newBuilder();
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                if (!((mutable_bitField0_ & 0x00000001) != 0)) {
+                  windows_ = new java.util.ArrayList<org.mlflow.api.proto.Service.ListGatewayBudgetWindows.BudgetWindow>();
+                  mutable_bitField0_ |= 0x00000001;
+                }
+                windows_.add(
+                    input.readMessage(org.mlflow.api.proto.Service.ListGatewayBudgetWindows.BudgetWindow.PARSER, extensionRegistry));
+                break;
+              }
+              default: {
+                if (!parseUnknownField(
+                    input, unknownFields, extensionRegistry, tag)) {
+                  done = true;
+                }
+                break;
+              }
+            }
+          }
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(this);
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(
+              e).setUnfinishedMessage(this);
+        } finally {
+          if (((mutable_bitField0_ & 0x00000001) != 0)) {
+            windows_ = java.util.Collections.unmodifiableList(windows_);
+          }
+          this.unknownFields = unknownFields.build();
+          makeExtensionsImmutable();
+        }
+      }
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return org.mlflow.api.proto.Service.internal_static_mlflow_ListGatewayBudgetWindows_Response_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return org.mlflow.api.proto.Service.internal_static_mlflow_ListGatewayBudgetWindows_Response_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                org.mlflow.api.proto.Service.ListGatewayBudgetWindows.Response.class, org.mlflow.api.proto.Service.ListGatewayBudgetWindows.Response.Builder.class);
+      }
+
+      public static final int WINDOWS_FIELD_NUMBER = 1;
+      private java.util.List<org.mlflow.api.proto.Service.ListGatewayBudgetWindows.BudgetWindow> windows_;
+      /**
+       * <code>repeated .mlflow.ListGatewayBudgetWindows.BudgetWindow windows = 1;</code>
+       */
+      @java.lang.Override
+      public java.util.List<org.mlflow.api.proto.Service.ListGatewayBudgetWindows.BudgetWindow> getWindowsList() {
+        return windows_;
+      }
+      /**
+       * <code>repeated .mlflow.ListGatewayBudgetWindows.BudgetWindow windows = 1;</code>
+       */
+      @java.lang.Override
+      public java.util.List<? extends org.mlflow.api.proto.Service.ListGatewayBudgetWindows.BudgetWindowOrBuilder> 
+          getWindowsOrBuilderList() {
+        return windows_;
+      }
+      /**
+       * <code>repeated .mlflow.ListGatewayBudgetWindows.BudgetWindow windows = 1;</code>
+       */
+      @java.lang.Override
+      public int getWindowsCount() {
+        return windows_.size();
+      }
+      /**
+       * <code>repeated .mlflow.ListGatewayBudgetWindows.BudgetWindow windows = 1;</code>
+       */
+      @java.lang.Override
+      public org.mlflow.api.proto.Service.ListGatewayBudgetWindows.BudgetWindow getWindows(int index) {
+        return windows_.get(index);
+      }
+      /**
+       * <code>repeated .mlflow.ListGatewayBudgetWindows.BudgetWindow windows = 1;</code>
+       */
+      @java.lang.Override
+      public org.mlflow.api.proto.Service.ListGatewayBudgetWindows.BudgetWindowOrBuilder getWindowsOrBuilder(
+          int index) {
+        return windows_.get(index);
+      }
+
+      private byte memoizedIsInitialized = -1;
+      @java.lang.Override
+      public final boolean isInitialized() {
+        byte isInitialized = memoizedIsInitialized;
+        if (isInitialized == 1) return true;
+        if (isInitialized == 0) return false;
+
+        memoizedIsInitialized = 1;
+        return true;
+      }
+
+      @java.lang.Override
+      public void writeTo(com.google.protobuf.CodedOutputStream output)
+                          throws java.io.IOException {
+        for (int i = 0; i < windows_.size(); i++) {
+          output.writeMessage(1, windows_.get(i));
+        }
+        unknownFields.writeTo(output);
+      }
+
+      @java.lang.Override
+      public int getSerializedSize() {
+        int size = memoizedSize;
+        if (size != -1) return size;
+
+        size = 0;
+        for (int i = 0; i < windows_.size(); i++) {
+          size += com.google.protobuf.CodedOutputStream
+            .computeMessageSize(1, windows_.get(i));
+        }
+        size += unknownFields.getSerializedSize();
+        memoizedSize = size;
+        return size;
+      }
+
+      @java.lang.Override
+      public boolean equals(final java.lang.Object obj) {
+        if (obj == this) {
+         return true;
+        }
+        if (!(obj instanceof org.mlflow.api.proto.Service.ListGatewayBudgetWindows.Response)) {
+          return super.equals(obj);
+        }
+        org.mlflow.api.proto.Service.ListGatewayBudgetWindows.Response other = (org.mlflow.api.proto.Service.ListGatewayBudgetWindows.Response) obj;
+
+        if (!getWindowsList()
+            .equals(other.getWindowsList())) return false;
+        if (!unknownFields.equals(other.unknownFields)) return false;
+        return true;
+      }
+
+      @java.lang.Override
+      public int hashCode() {
+        if (memoizedHashCode != 0) {
+          return memoizedHashCode;
+        }
+        int hash = 41;
+        hash = (19 * hash) + getDescriptor().hashCode();
+        if (getWindowsCount() > 0) {
+          hash = (37 * hash) + WINDOWS_FIELD_NUMBER;
+          hash = (53 * hash) + getWindowsList().hashCode();
+        }
+        hash = (29 * hash) + unknownFields.hashCode();
+        memoizedHashCode = hash;
+        return hash;
+      }
+
+      public static org.mlflow.api.proto.Service.ListGatewayBudgetWindows.Response parseFrom(
+          java.nio.ByteBuffer data)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data);
+      }
+      public static org.mlflow.api.proto.Service.ListGatewayBudgetWindows.Response parseFrom(
+          java.nio.ByteBuffer data,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data, extensionRegistry);
+      }
+      public static org.mlflow.api.proto.Service.ListGatewayBudgetWindows.Response parseFrom(
+          com.google.protobuf.ByteString data)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data);
+      }
+      public static org.mlflow.api.proto.Service.ListGatewayBudgetWindows.Response parseFrom(
+          com.google.protobuf.ByteString data,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data, extensionRegistry);
+      }
+      public static org.mlflow.api.proto.Service.ListGatewayBudgetWindows.Response parseFrom(byte[] data)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data);
+      }
+      public static org.mlflow.api.proto.Service.ListGatewayBudgetWindows.Response parseFrom(
+          byte[] data,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data, extensionRegistry);
+      }
+      public static org.mlflow.api.proto.Service.ListGatewayBudgetWindows.Response parseFrom(java.io.InputStream input)
+          throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessageV3
+            .parseWithIOException(PARSER, input);
+      }
+      public static org.mlflow.api.proto.Service.ListGatewayBudgetWindows.Response parseFrom(
+          java.io.InputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessageV3
+            .parseWithIOException(PARSER, input, extensionRegistry);
+      }
+      public static org.mlflow.api.proto.Service.ListGatewayBudgetWindows.Response parseDelimitedFrom(java.io.InputStream input)
+          throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessageV3
+            .parseDelimitedWithIOException(PARSER, input);
+      }
+      public static org.mlflow.api.proto.Service.ListGatewayBudgetWindows.Response parseDelimitedFrom(
+          java.io.InputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessageV3
+            .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+      }
+      public static org.mlflow.api.proto.Service.ListGatewayBudgetWindows.Response parseFrom(
+          com.google.protobuf.CodedInputStream input)
+          throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessageV3
+            .parseWithIOException(PARSER, input);
+      }
+      public static org.mlflow.api.proto.Service.ListGatewayBudgetWindows.Response parseFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessageV3
+            .parseWithIOException(PARSER, input, extensionRegistry);
+      }
+
+      @java.lang.Override
+      public Builder newBuilderForType() { return newBuilder(); }
+      public static Builder newBuilder() {
+        return DEFAULT_INSTANCE.toBuilder();
+      }
+      public static Builder newBuilder(org.mlflow.api.proto.Service.ListGatewayBudgetWindows.Response prototype) {
+        return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+      }
+      @java.lang.Override
+      public Builder toBuilder() {
+        return this == DEFAULT_INSTANCE
+            ? new Builder() : new Builder().mergeFrom(this);
+      }
+
+      @java.lang.Override
+      protected Builder newBuilderForType(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        Builder builder = new Builder(parent);
+        return builder;
+      }
+      /**
+       * Protobuf type {@code mlflow.ListGatewayBudgetWindows.Response}
+       */
+      public static final class Builder extends
+          com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+          // @@protoc_insertion_point(builder_implements:mlflow.ListGatewayBudgetWindows.Response)
+          org.mlflow.api.proto.Service.ListGatewayBudgetWindows.ResponseOrBuilder {
+        public static final com.google.protobuf.Descriptors.Descriptor
+            getDescriptor() {
+          return org.mlflow.api.proto.Service.internal_static_mlflow_ListGatewayBudgetWindows_Response_descriptor;
+        }
+
+        @java.lang.Override
+        protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+            internalGetFieldAccessorTable() {
+          return org.mlflow.api.proto.Service.internal_static_mlflow_ListGatewayBudgetWindows_Response_fieldAccessorTable
+              .ensureFieldAccessorsInitialized(
+                  org.mlflow.api.proto.Service.ListGatewayBudgetWindows.Response.class, org.mlflow.api.proto.Service.ListGatewayBudgetWindows.Response.Builder.class);
+        }
+
+        // Construct using org.mlflow.api.proto.Service.ListGatewayBudgetWindows.Response.newBuilder()
+        private Builder() {
+          maybeForceBuilderInitialization();
+        }
+
+        private Builder(
+            com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+          super(parent);
+          maybeForceBuilderInitialization();
+        }
+        private void maybeForceBuilderInitialization() {
+          if (com.google.protobuf.GeneratedMessageV3
+                  .alwaysUseFieldBuilders) {
+            getWindowsFieldBuilder();
+          }
+        }
+        @java.lang.Override
+        public Builder clear() {
+          super.clear();
+          if (windowsBuilder_ == null) {
+            windows_ = java.util.Collections.emptyList();
+            bitField0_ = (bitField0_ & ~0x00000001);
+          } else {
+            windowsBuilder_.clear();
+          }
+          return this;
+        }
+
+        @java.lang.Override
+        public com.google.protobuf.Descriptors.Descriptor
+            getDescriptorForType() {
+          return org.mlflow.api.proto.Service.internal_static_mlflow_ListGatewayBudgetWindows_Response_descriptor;
+        }
+
+        @java.lang.Override
+        public org.mlflow.api.proto.Service.ListGatewayBudgetWindows.Response getDefaultInstanceForType() {
+          return org.mlflow.api.proto.Service.ListGatewayBudgetWindows.Response.getDefaultInstance();
+        }
+
+        @java.lang.Override
+        public org.mlflow.api.proto.Service.ListGatewayBudgetWindows.Response build() {
+          org.mlflow.api.proto.Service.ListGatewayBudgetWindows.Response result = buildPartial();
+          if (!result.isInitialized()) {
+            throw newUninitializedMessageException(result);
+          }
+          return result;
+        }
+
+        @java.lang.Override
+        public org.mlflow.api.proto.Service.ListGatewayBudgetWindows.Response buildPartial() {
+          org.mlflow.api.proto.Service.ListGatewayBudgetWindows.Response result = new org.mlflow.api.proto.Service.ListGatewayBudgetWindows.Response(this);
+          int from_bitField0_ = bitField0_;
+          if (windowsBuilder_ == null) {
+            if (((bitField0_ & 0x00000001) != 0)) {
+              windows_ = java.util.Collections.unmodifiableList(windows_);
+              bitField0_ = (bitField0_ & ~0x00000001);
+            }
+            result.windows_ = windows_;
+          } else {
+            result.windows_ = windowsBuilder_.build();
+          }
+          onBuilt();
+          return result;
+        }
+
+        @java.lang.Override
+        public Builder clone() {
+          return super.clone();
+        }
+        @java.lang.Override
+        public Builder setField(
+            com.google.protobuf.Descriptors.FieldDescriptor field,
+            java.lang.Object value) {
+          return super.setField(field, value);
+        }
+        @java.lang.Override
+        public Builder clearField(
+            com.google.protobuf.Descriptors.FieldDescriptor field) {
+          return super.clearField(field);
+        }
+        @java.lang.Override
+        public Builder clearOneof(
+            com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+          return super.clearOneof(oneof);
+        }
+        @java.lang.Override
+        public Builder setRepeatedField(
+            com.google.protobuf.Descriptors.FieldDescriptor field,
+            int index, java.lang.Object value) {
+          return super.setRepeatedField(field, index, value);
+        }
+        @java.lang.Override
+        public Builder addRepeatedField(
+            com.google.protobuf.Descriptors.FieldDescriptor field,
+            java.lang.Object value) {
+          return super.addRepeatedField(field, value);
+        }
+        @java.lang.Override
+        public Builder mergeFrom(com.google.protobuf.Message other) {
+          if (other instanceof org.mlflow.api.proto.Service.ListGatewayBudgetWindows.Response) {
+            return mergeFrom((org.mlflow.api.proto.Service.ListGatewayBudgetWindows.Response)other);
+          } else {
+            super.mergeFrom(other);
+            return this;
+          }
+        }
+
+        public Builder mergeFrom(org.mlflow.api.proto.Service.ListGatewayBudgetWindows.Response other) {
+          if (other == org.mlflow.api.proto.Service.ListGatewayBudgetWindows.Response.getDefaultInstance()) return this;
+          if (windowsBuilder_ == null) {
+            if (!other.windows_.isEmpty()) {
+              if (windows_.isEmpty()) {
+                windows_ = other.windows_;
+                bitField0_ = (bitField0_ & ~0x00000001);
+              } else {
+                ensureWindowsIsMutable();
+                windows_.addAll(other.windows_);
+              }
+              onChanged();
+            }
+          } else {
+            if (!other.windows_.isEmpty()) {
+              if (windowsBuilder_.isEmpty()) {
+                windowsBuilder_.dispose();
+                windowsBuilder_ = null;
+                windows_ = other.windows_;
+                bitField0_ = (bitField0_ & ~0x00000001);
+                windowsBuilder_ = 
+                  com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
+                     getWindowsFieldBuilder() : null;
+              } else {
+                windowsBuilder_.addAllMessages(other.windows_);
+              }
+            }
+          }
+          this.mergeUnknownFields(other.unknownFields);
+          onChanged();
+          return this;
+        }
+
+        @java.lang.Override
+        public final boolean isInitialized() {
+          return true;
+        }
+
+        @java.lang.Override
+        public Builder mergeFrom(
+            com.google.protobuf.CodedInputStream input,
+            com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+            throws java.io.IOException {
+          org.mlflow.api.proto.Service.ListGatewayBudgetWindows.Response parsedMessage = null;
+          try {
+            parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+          } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+            parsedMessage = (org.mlflow.api.proto.Service.ListGatewayBudgetWindows.Response) e.getUnfinishedMessage();
+            throw e.unwrapIOException();
+          } finally {
+            if (parsedMessage != null) {
+              mergeFrom(parsedMessage);
+            }
+          }
+          return this;
+        }
+        private int bitField0_;
+
+        private java.util.List<org.mlflow.api.proto.Service.ListGatewayBudgetWindows.BudgetWindow> windows_ =
+          java.util.Collections.emptyList();
+        private void ensureWindowsIsMutable() {
+          if (!((bitField0_ & 0x00000001) != 0)) {
+            windows_ = new java.util.ArrayList<org.mlflow.api.proto.Service.ListGatewayBudgetWindows.BudgetWindow>(windows_);
+            bitField0_ |= 0x00000001;
+           }
+        }
+
+        private com.google.protobuf.RepeatedFieldBuilderV3<
+            org.mlflow.api.proto.Service.ListGatewayBudgetWindows.BudgetWindow, org.mlflow.api.proto.Service.ListGatewayBudgetWindows.BudgetWindow.Builder, org.mlflow.api.proto.Service.ListGatewayBudgetWindows.BudgetWindowOrBuilder> windowsBuilder_;
+
+        /**
+         * <code>repeated .mlflow.ListGatewayBudgetWindows.BudgetWindow windows = 1;</code>
+         */
+        public java.util.List<org.mlflow.api.proto.Service.ListGatewayBudgetWindows.BudgetWindow> getWindowsList() {
+          if (windowsBuilder_ == null) {
+            return java.util.Collections.unmodifiableList(windows_);
+          } else {
+            return windowsBuilder_.getMessageList();
+          }
+        }
+        /**
+         * <code>repeated .mlflow.ListGatewayBudgetWindows.BudgetWindow windows = 1;</code>
+         */
+        public int getWindowsCount() {
+          if (windowsBuilder_ == null) {
+            return windows_.size();
+          } else {
+            return windowsBuilder_.getCount();
+          }
+        }
+        /**
+         * <code>repeated .mlflow.ListGatewayBudgetWindows.BudgetWindow windows = 1;</code>
+         */
+        public org.mlflow.api.proto.Service.ListGatewayBudgetWindows.BudgetWindow getWindows(int index) {
+          if (windowsBuilder_ == null) {
+            return windows_.get(index);
+          } else {
+            return windowsBuilder_.getMessage(index);
+          }
+        }
+        /**
+         * <code>repeated .mlflow.ListGatewayBudgetWindows.BudgetWindow windows = 1;</code>
+         */
+        public Builder setWindows(
+            int index, org.mlflow.api.proto.Service.ListGatewayBudgetWindows.BudgetWindow value) {
+          if (windowsBuilder_ == null) {
+            if (value == null) {
+              throw new NullPointerException();
+            }
+            ensureWindowsIsMutable();
+            windows_.set(index, value);
+            onChanged();
+          } else {
+            windowsBuilder_.setMessage(index, value);
+          }
+          return this;
+        }
+        /**
+         * <code>repeated .mlflow.ListGatewayBudgetWindows.BudgetWindow windows = 1;</code>
+         */
+        public Builder setWindows(
+            int index, org.mlflow.api.proto.Service.ListGatewayBudgetWindows.BudgetWindow.Builder builderForValue) {
+          if (windowsBuilder_ == null) {
+            ensureWindowsIsMutable();
+            windows_.set(index, builderForValue.build());
+            onChanged();
+          } else {
+            windowsBuilder_.setMessage(index, builderForValue.build());
+          }
+          return this;
+        }
+        /**
+         * <code>repeated .mlflow.ListGatewayBudgetWindows.BudgetWindow windows = 1;</code>
+         */
+        public Builder addWindows(org.mlflow.api.proto.Service.ListGatewayBudgetWindows.BudgetWindow value) {
+          if (windowsBuilder_ == null) {
+            if (value == null) {
+              throw new NullPointerException();
+            }
+            ensureWindowsIsMutable();
+            windows_.add(value);
+            onChanged();
+          } else {
+            windowsBuilder_.addMessage(value);
+          }
+          return this;
+        }
+        /**
+         * <code>repeated .mlflow.ListGatewayBudgetWindows.BudgetWindow windows = 1;</code>
+         */
+        public Builder addWindows(
+            int index, org.mlflow.api.proto.Service.ListGatewayBudgetWindows.BudgetWindow value) {
+          if (windowsBuilder_ == null) {
+            if (value == null) {
+              throw new NullPointerException();
+            }
+            ensureWindowsIsMutable();
+            windows_.add(index, value);
+            onChanged();
+          } else {
+            windowsBuilder_.addMessage(index, value);
+          }
+          return this;
+        }
+        /**
+         * <code>repeated .mlflow.ListGatewayBudgetWindows.BudgetWindow windows = 1;</code>
+         */
+        public Builder addWindows(
+            org.mlflow.api.proto.Service.ListGatewayBudgetWindows.BudgetWindow.Builder builderForValue) {
+          if (windowsBuilder_ == null) {
+            ensureWindowsIsMutable();
+            windows_.add(builderForValue.build());
+            onChanged();
+          } else {
+            windowsBuilder_.addMessage(builderForValue.build());
+          }
+          return this;
+        }
+        /**
+         * <code>repeated .mlflow.ListGatewayBudgetWindows.BudgetWindow windows = 1;</code>
+         */
+        public Builder addWindows(
+            int index, org.mlflow.api.proto.Service.ListGatewayBudgetWindows.BudgetWindow.Builder builderForValue) {
+          if (windowsBuilder_ == null) {
+            ensureWindowsIsMutable();
+            windows_.add(index, builderForValue.build());
+            onChanged();
+          } else {
+            windowsBuilder_.addMessage(index, builderForValue.build());
+          }
+          return this;
+        }
+        /**
+         * <code>repeated .mlflow.ListGatewayBudgetWindows.BudgetWindow windows = 1;</code>
+         */
+        public Builder addAllWindows(
+            java.lang.Iterable<? extends org.mlflow.api.proto.Service.ListGatewayBudgetWindows.BudgetWindow> values) {
+          if (windowsBuilder_ == null) {
+            ensureWindowsIsMutable();
+            com.google.protobuf.AbstractMessageLite.Builder.addAll(
+                values, windows_);
+            onChanged();
+          } else {
+            windowsBuilder_.addAllMessages(values);
+          }
+          return this;
+        }
+        /**
+         * <code>repeated .mlflow.ListGatewayBudgetWindows.BudgetWindow windows = 1;</code>
+         */
+        public Builder clearWindows() {
+          if (windowsBuilder_ == null) {
+            windows_ = java.util.Collections.emptyList();
+            bitField0_ = (bitField0_ & ~0x00000001);
+            onChanged();
+          } else {
+            windowsBuilder_.clear();
+          }
+          return this;
+        }
+        /**
+         * <code>repeated .mlflow.ListGatewayBudgetWindows.BudgetWindow windows = 1;</code>
+         */
+        public Builder removeWindows(int index) {
+          if (windowsBuilder_ == null) {
+            ensureWindowsIsMutable();
+            windows_.remove(index);
+            onChanged();
+          } else {
+            windowsBuilder_.remove(index);
+          }
+          return this;
+        }
+        /**
+         * <code>repeated .mlflow.ListGatewayBudgetWindows.BudgetWindow windows = 1;</code>
+         */
+        public org.mlflow.api.proto.Service.ListGatewayBudgetWindows.BudgetWindow.Builder getWindowsBuilder(
+            int index) {
+          return getWindowsFieldBuilder().getBuilder(index);
+        }
+        /**
+         * <code>repeated .mlflow.ListGatewayBudgetWindows.BudgetWindow windows = 1;</code>
+         */
+        public org.mlflow.api.proto.Service.ListGatewayBudgetWindows.BudgetWindowOrBuilder getWindowsOrBuilder(
+            int index) {
+          if (windowsBuilder_ == null) {
+            return windows_.get(index);  } else {
+            return windowsBuilder_.getMessageOrBuilder(index);
+          }
+        }
+        /**
+         * <code>repeated .mlflow.ListGatewayBudgetWindows.BudgetWindow windows = 1;</code>
+         */
+        public java.util.List<? extends org.mlflow.api.proto.Service.ListGatewayBudgetWindows.BudgetWindowOrBuilder> 
+             getWindowsOrBuilderList() {
+          if (windowsBuilder_ != null) {
+            return windowsBuilder_.getMessageOrBuilderList();
+          } else {
+            return java.util.Collections.unmodifiableList(windows_);
+          }
+        }
+        /**
+         * <code>repeated .mlflow.ListGatewayBudgetWindows.BudgetWindow windows = 1;</code>
+         */
+        public org.mlflow.api.proto.Service.ListGatewayBudgetWindows.BudgetWindow.Builder addWindowsBuilder() {
+          return getWindowsFieldBuilder().addBuilder(
+              org.mlflow.api.proto.Service.ListGatewayBudgetWindows.BudgetWindow.getDefaultInstance());
+        }
+        /**
+         * <code>repeated .mlflow.ListGatewayBudgetWindows.BudgetWindow windows = 1;</code>
+         */
+        public org.mlflow.api.proto.Service.ListGatewayBudgetWindows.BudgetWindow.Builder addWindowsBuilder(
+            int index) {
+          return getWindowsFieldBuilder().addBuilder(
+              index, org.mlflow.api.proto.Service.ListGatewayBudgetWindows.BudgetWindow.getDefaultInstance());
+        }
+        /**
+         * <code>repeated .mlflow.ListGatewayBudgetWindows.BudgetWindow windows = 1;</code>
+         */
+        public java.util.List<org.mlflow.api.proto.Service.ListGatewayBudgetWindows.BudgetWindow.Builder> 
+             getWindowsBuilderList() {
+          return getWindowsFieldBuilder().getBuilderList();
+        }
+        private com.google.protobuf.RepeatedFieldBuilderV3<
+            org.mlflow.api.proto.Service.ListGatewayBudgetWindows.BudgetWindow, org.mlflow.api.proto.Service.ListGatewayBudgetWindows.BudgetWindow.Builder, org.mlflow.api.proto.Service.ListGatewayBudgetWindows.BudgetWindowOrBuilder> 
+            getWindowsFieldBuilder() {
+          if (windowsBuilder_ == null) {
+            windowsBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
+                org.mlflow.api.proto.Service.ListGatewayBudgetWindows.BudgetWindow, org.mlflow.api.proto.Service.ListGatewayBudgetWindows.BudgetWindow.Builder, org.mlflow.api.proto.Service.ListGatewayBudgetWindows.BudgetWindowOrBuilder>(
+                    windows_,
+                    ((bitField0_ & 0x00000001) != 0),
+                    getParentForChildren(),
+                    isClean());
+            windows_ = null;
+          }
+          return windowsBuilder_;
+        }
+        @java.lang.Override
+        public final Builder setUnknownFields(
+            final com.google.protobuf.UnknownFieldSet unknownFields) {
+          return super.setUnknownFields(unknownFields);
+        }
+
+        @java.lang.Override
+        public final Builder mergeUnknownFields(
+            final com.google.protobuf.UnknownFieldSet unknownFields) {
+          return super.mergeUnknownFields(unknownFields);
+        }
+
+
+        // @@protoc_insertion_point(builder_scope:mlflow.ListGatewayBudgetWindows.Response)
+      }
+
+      // @@protoc_insertion_point(class_scope:mlflow.ListGatewayBudgetWindows.Response)
+      private static final org.mlflow.api.proto.Service.ListGatewayBudgetWindows.Response DEFAULT_INSTANCE;
+      static {
+        DEFAULT_INSTANCE = new org.mlflow.api.proto.Service.ListGatewayBudgetWindows.Response();
+      }
+
+      public static org.mlflow.api.proto.Service.ListGatewayBudgetWindows.Response getDefaultInstance() {
+        return DEFAULT_INSTANCE;
+      }
+
+      @java.lang.Deprecated public static final com.google.protobuf.Parser<Response>
+          PARSER = new com.google.protobuf.AbstractParser<Response>() {
+        @java.lang.Override
+        public Response parsePartialFrom(
+            com.google.protobuf.CodedInputStream input,
+            com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+            throws com.google.protobuf.InvalidProtocolBufferException {
+          return new Response(input, extensionRegistry);
+        }
+      };
+
+      public static com.google.protobuf.Parser<Response> parser() {
+        return PARSER;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Parser<Response> getParserForType() {
+        return PARSER;
+      }
+
+      @java.lang.Override
+      public org.mlflow.api.proto.Service.ListGatewayBudgetWindows.Response getDefaultInstanceForType() {
+        return DEFAULT_INSTANCE;
+      }
+
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      unknownFields.writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      size += unknownFields.getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof org.mlflow.api.proto.Service.ListGatewayBudgetWindows)) {
+        return super.equals(obj);
+      }
+      org.mlflow.api.proto.Service.ListGatewayBudgetWindows other = (org.mlflow.api.proto.Service.ListGatewayBudgetWindows) obj;
+
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (29 * hash) + unknownFields.hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static org.mlflow.api.proto.Service.ListGatewayBudgetWindows parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static org.mlflow.api.proto.Service.ListGatewayBudgetWindows parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static org.mlflow.api.proto.Service.ListGatewayBudgetWindows parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static org.mlflow.api.proto.Service.ListGatewayBudgetWindows parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static org.mlflow.api.proto.Service.ListGatewayBudgetWindows parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static org.mlflow.api.proto.Service.ListGatewayBudgetWindows parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static org.mlflow.api.proto.Service.ListGatewayBudgetWindows parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static org.mlflow.api.proto.Service.ListGatewayBudgetWindows parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static org.mlflow.api.proto.Service.ListGatewayBudgetWindows parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+    public static org.mlflow.api.proto.Service.ListGatewayBudgetWindows parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static org.mlflow.api.proto.Service.ListGatewayBudgetWindows parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static org.mlflow.api.proto.Service.ListGatewayBudgetWindows parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(org.mlflow.api.proto.Service.ListGatewayBudgetWindows prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code mlflow.ListGatewayBudgetWindows}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:mlflow.ListGatewayBudgetWindows)
+        org.mlflow.api.proto.Service.ListGatewayBudgetWindowsOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return org.mlflow.api.proto.Service.internal_static_mlflow_ListGatewayBudgetWindows_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return org.mlflow.api.proto.Service.internal_static_mlflow_ListGatewayBudgetWindows_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                org.mlflow.api.proto.Service.ListGatewayBudgetWindows.class, org.mlflow.api.proto.Service.ListGatewayBudgetWindows.Builder.class);
+      }
+
+      // Construct using org.mlflow.api.proto.Service.ListGatewayBudgetWindows.newBuilder()
+      private Builder() {
+        maybeForceBuilderInitialization();
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+        }
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return org.mlflow.api.proto.Service.internal_static_mlflow_ListGatewayBudgetWindows_descriptor;
+      }
+
+      @java.lang.Override
+      public org.mlflow.api.proto.Service.ListGatewayBudgetWindows getDefaultInstanceForType() {
+        return org.mlflow.api.proto.Service.ListGatewayBudgetWindows.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public org.mlflow.api.proto.Service.ListGatewayBudgetWindows build() {
+        org.mlflow.api.proto.Service.ListGatewayBudgetWindows result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public org.mlflow.api.proto.Service.ListGatewayBudgetWindows buildPartial() {
+        org.mlflow.api.proto.Service.ListGatewayBudgetWindows result = new org.mlflow.api.proto.Service.ListGatewayBudgetWindows(this);
+        onBuilt();
+        return result;
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof org.mlflow.api.proto.Service.ListGatewayBudgetWindows) {
+          return mergeFrom((org.mlflow.api.proto.Service.ListGatewayBudgetWindows)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(org.mlflow.api.proto.Service.ListGatewayBudgetWindows other) {
+        if (other == org.mlflow.api.proto.Service.ListGatewayBudgetWindows.getDefaultInstance()) return this;
+        this.mergeUnknownFields(other.unknownFields);
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        org.mlflow.api.proto.Service.ListGatewayBudgetWindows parsedMessage = null;
+        try {
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (org.mlflow.api.proto.Service.ListGatewayBudgetWindows) e.getUnfinishedMessage();
+          throw e.unwrapIOException();
+        } finally {
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:mlflow.ListGatewayBudgetWindows)
+    }
+
+    // @@protoc_insertion_point(class_scope:mlflow.ListGatewayBudgetWindows)
+    private static final org.mlflow.api.proto.Service.ListGatewayBudgetWindows DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new org.mlflow.api.proto.Service.ListGatewayBudgetWindows();
+    }
+
+    public static org.mlflow.api.proto.Service.ListGatewayBudgetWindows getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    @java.lang.Deprecated public static final com.google.protobuf.Parser<ListGatewayBudgetWindows>
+        PARSER = new com.google.protobuf.AbstractParser<ListGatewayBudgetWindows>() {
+      @java.lang.Override
+      public ListGatewayBudgetWindows parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return new ListGatewayBudgetWindows(input, extensionRegistry);
+      }
+    };
+
+    public static com.google.protobuf.Parser<ListGatewayBudgetWindows> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<ListGatewayBudgetWindows> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public org.mlflow.api.proto.Service.ListGatewayBudgetWindows getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
   public interface GetSecretsConfigOrBuilder extends
       // @@protoc_insertion_point(interface_extends:mlflow.GetSecretsConfig)
       com.google.protobuf.MessageOrBuilder {
@@ -281902,6 +284020,21 @@ public final class Service {
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_mlflow_ListGatewayBudgetPolicies_Response_fieldAccessorTable;
   private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_mlflow_ListGatewayBudgetWindows_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_mlflow_ListGatewayBudgetWindows_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_mlflow_ListGatewayBudgetWindows_BudgetWindow_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_mlflow_ListGatewayBudgetWindows_BudgetWindow_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_mlflow_ListGatewayBudgetWindows_Response_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_mlflow_ListGatewayBudgetWindows_Response_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_mlflow_GetSecretsConfig_descriptor;
   private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
@@ -282673,564 +284806,574 @@ public final class Service {
       "tGatewayBudgetPolicies\022\023\n\013max_results\030\001 " +
       "\001(\003\022\022\n\npage_token\030\002 \001(\t\032Y\n\010Response\0224\n\017b" +
       "udget_policies\030\001 \003(\0132\033.mlflow.GatewayBud" +
-      "getPolicy\022\027\n\017next_page_token\030\002 \001(\t\"9\n\020Ge" +
-      "tSecretsConfig\032%\n\010Response\022\031\n\021secrets_av" +
-      "ailable\030\001 \001(\010\"\354\001\n\033CreatePromptOptimizati" +
-      "onJob\022\025\n\rexperiment_id\030\001 \001(\t\022\031\n\021source_p" +
-      "rompt_uri\030\002 \001(\t\0223\n\006config\030\003 \001(\0132#.mlflow" +
-      ".PromptOptimizationJobConfig\022.\n\004tags\030\004 \003" +
-      "(\0132 .mlflow.PromptOptimizationJobTag\0326\n\010" +
-      "Response\022*\n\003job\030\001 \001(\0132\035.mlflow.PromptOpt" +
-      "imizationJob\"b\n\030GetPromptOptimizationJob" +
-      "\022\016\n\006job_id\030\001 \001(\t\0326\n\010Response\022*\n\003job\030\001 \001(" +
-      "\0132\035.mlflow.PromptOptimizationJob\"n\n\034Sear" +
-      "chPromptOptimizationJobs\022\025\n\rexperiment_i" +
-      "d\030\001 \001(\t\0327\n\010Response\022+\n\004jobs\030\001 \003(\0132\035.mlfl" +
-      "ow.PromptOptimizationJob\"e\n\033CancelPrompt" +
-      "OptimizationJob\022\016\n\006job_id\030\001 \001(\t\0326\n\010Respo" +
-      "nse\022*\n\003job\030\001 \001(\0132\035.mlflow.PromptOptimiza" +
-      "tionJob\"9\n\033DeletePromptOptimizationJob\022\016" +
-      "\n\006job_id\030\001 \001(\t\032\n\n\010Response\"S\n\tWorkspace\022" +
-      "\022\n\004name\030\001 \001(\tB\004\370\206\031\001\022\023\n\013description\030\002 \001(\t" +
-      "\022\035\n\025default_artifact_root\030\003 \001(\t\"p\n\016ListW" +
-      "orkspaces\0321\n\010Response\022%\n\nworkspaces\030\001 \003(" +
-      "\0132\021.mlflow.Workspace:+\342?(\n&com.databrick" +
-      "s.rpc.RPC[$this.Response]\"\270\001\n\017CreateWork" +
-      "space\022\022\n\004name\030\001 \001(\tB\004\370\206\031\001\022\023\n\013description" +
-      "\030\002 \001(\t\022\035\n\025default_artifact_root\030\003 \001(\t\0320\n" +
+      "getPolicy\022\027\n\017next_page_token\030\002 \001(\t\"\327\001\n\030L" +
+      "istGatewayBudgetWindows\032o\n\014BudgetWindow\022" +
+      "\030\n\020budget_policy_id\030\001 \001(\t\022\027\n\017window_star" +
+      "t_ms\030\002 \001(\003\022\025\n\rwindow_end_ms\030\003 \001(\003\022\025\n\rcur" +
+      "rent_spend\030\004 \001(\001\032J\n\010Response\022>\n\007windows\030" +
+      "\001 \003(\0132-.mlflow.ListGatewayBudgetWindows." +
+      "BudgetWindow\"9\n\020GetSecretsConfig\032%\n\010Resp" +
+      "onse\022\031\n\021secrets_available\030\001 \001(\010\"\354\001\n\033Crea" +
+      "tePromptOptimizationJob\022\025\n\rexperiment_id" +
+      "\030\001 \001(\t\022\031\n\021source_prompt_uri\030\002 \001(\t\0223\n\006con" +
+      "fig\030\003 \001(\0132#.mlflow.PromptOptimizationJob" +
+      "Config\022.\n\004tags\030\004 \003(\0132 .mlflow.PromptOpti" +
+      "mizationJobTag\0326\n\010Response\022*\n\003job\030\001 \001(\0132" +
+      "\035.mlflow.PromptOptimizationJob\"b\n\030GetPro" +
+      "mptOptimizationJob\022\016\n\006job_id\030\001 \001(\t\0326\n\010Re" +
+      "sponse\022*\n\003job\030\001 \001(\0132\035.mlflow.PromptOptim" +
+      "izationJob\"n\n\034SearchPromptOptimizationJo" +
+      "bs\022\025\n\rexperiment_id\030\001 \001(\t\0327\n\010Response\022+\n" +
+      "\004jobs\030\001 \003(\0132\035.mlflow.PromptOptimizationJ" +
+      "ob\"e\n\033CancelPromptOptimizationJob\022\016\n\006job" +
+      "_id\030\001 \001(\t\0326\n\010Response\022*\n\003job\030\001 \001(\0132\035.mlf" +
+      "low.PromptOptimizationJob\"9\n\033DeletePromp" +
+      "tOptimizationJob\022\016\n\006job_id\030\001 \001(\t\032\n\n\010Resp" +
+      "onse\"S\n\tWorkspace\022\022\n\004name\030\001 \001(\tB\004\370\206\031\001\022\023\n" +
+      "\013description\030\002 \001(\t\022\035\n\025default_artifact_r" +
+      "oot\030\003 \001(\t\"p\n\016ListWorkspaces\0321\n\010Response\022" +
+      "%\n\nworkspaces\030\001 \003(\0132\021.mlflow.Workspace:+" +
+      "\342?(\n&com.databricks.rpc.RPC[$this.Respon" +
+      "se]\"\270\001\n\017CreateWorkspace\022\022\n\004name\030\001 \001(\tB\004\370" +
+      "\206\031\001\022\023\n\013description\030\002 \001(\t\022\035\n\025default_arti" +
+      "fact_root\030\003 \001(\t\0320\n\010Response\022$\n\tworkspace" +
+      "\030\001 \001(\0132\021.mlflow.Workspace:+\342?(\n&com.data" +
+      "bricks.rpc.RPC[$this.Response]\"\213\001\n\014GetWo" +
+      "rkspace\022\034\n\016workspace_name\030\001 \001(\tB\004\370\206\031\001\0320\n" +
       "\010Response\022$\n\tworkspace\030\001 \001(\0132\021.mlflow.Wo" +
       "rkspace:+\342?(\n&com.databricks.rpc.RPC[$th" +
-      "is.Response]\"\213\001\n\014GetWorkspace\022\034\n\016workspa" +
-      "ce_name\030\001 \001(\tB\004\370\206\031\001\0320\n\010Response\022$\n\tworks" +
-      "pace\030\001 \001(\0132\021.mlflow.Workspace:+\342?(\n&com." +
-      "databricks.rpc.RPC[$this.Response]\"\302\001\n\017U" +
-      "pdateWorkspace\022\034\n\016workspace_name\030\001 \001(\tB\004" +
-      "\370\206\031\001\022\023\n\013description\030\002 \001(\t\022\035\n\025default_art" +
-      "ifact_root\030\003 \001(\t\0320\n\010Response\022$\n\tworkspac" +
-      "e\030\001 \001(\0132\021.mlflow.Workspace:+\342?(\n&com.dat" +
-      "abricks.rpc.RPC[$this.Response]\"h\n\017Delet" +
-      "eWorkspace\022\034\n\016workspace_name\030\001 \001(\tB\004\370\206\031\001" +
-      "\032\n\n\010Response:+\342?(\n&com.databricks.rpc.RP" +
-      "C[$this.Response]*6\n\010ViewType\022\017\n\013ACTIVE_" +
-      "ONLY\020\001\022\020\n\014DELETED_ONLY\020\002\022\007\n\003ALL\020\003*I\n\nSou" +
-      "rceType\022\014\n\010NOTEBOOK\020\001\022\007\n\003JOB\020\002\022\013\n\007PROJEC" +
-      "T\020\003\022\t\n\005LOCAL\020\004\022\014\n\007UNKNOWN\020\350\007*M\n\tRunStatu" +
-      "s\022\013\n\007RUNNING\020\001\022\r\n\tSCHEDULED\020\002\022\014\n\010FINISHE" +
-      "D\020\003\022\n\n\006FAILED\020\004\022\n\n\006KILLED\020\005*O\n\013TraceStat" +
-      "us\022\034\n\030TRACE_STATUS_UNSPECIFIED\020\000\022\006\n\002OK\020\001" +
-      "\022\t\n\005ERROR\020\002\022\017\n\013IN_PROGRESS\020\003*8\n\016MetricVi" +
-      "ewType\022\n\n\006TRACES\020\001\022\t\n\005SPANS\020\002\022\017\n\013ASSESSM" +
-      "ENTS\020\003*P\n\017AggregationType\022\t\n\005COUNT\020\001\022\007\n\003" +
-      "SUM\020\002\022\007\n\003AVG\020\003\022\016\n\nPERCENTILE\020\004\022\007\n\003MIN\020\005\022" +
-      "\007\n\003MAX\020\006*\212\001\n\021LoggedModelStatus\022#\n\037LOGGED" +
-      "_MODEL_STATUS_UNSPECIFIED\020\000\022\030\n\024LOGGED_MO" +
-      "DEL_PENDING\020\001\022\026\n\022LOGGED_MODEL_READY\020\002\022\036\n" +
-      "\032LOGGED_MODEL_UPLOAD_FAILED\020\003*Z\n\017Routing" +
-      "Strategy\022&\n\034ROUTING_STRATEGY_UNSPECIFIED" +
-      "\020\000\032\004\360\206\031\003\022\037\n\033REQUEST_BASED_TRAFFIC_SPLIT\020" +
-      "\001*K\n\020FallbackStrategy\022\'\n\035FALLBACK_STRATE" +
-      "GY_UNSPECIFIED\020\000\032\004\360\206\031\003\022\016\n\nSEQUENTIAL\020\001*X" +
-      "\n\027GatewayModelLinkageType\022\"\n\030LINKAGE_TYP" +
-      "E_UNSPECIFIED\020\000\032\004\360\206\031\003\022\013\n\007PRIMARY\020\001\022\014\n\010FA" +
-      "LLBACK\020\002*r\n\022BudgetDurationUnit\022#\n\031DURATI" +
-      "ON_UNIT_UNSPECIFIED\020\000\032\004\360\206\031\003\022\013\n\007MINUTES\020\001" +
-      "\022\t\n\005HOURS\020\002\022\010\n\004DAYS\020\003\022\t\n\005WEEKS\020\004\022\n\n\006MONT" +
-      "HS\020\005*R\n\021BudgetTargetScope\022\"\n\030TARGET_SCOP" +
-      "E_UNSPECIFIED\020\000\032\004\360\206\031\003\022\n\n\006GLOBAL\020\001\022\r\n\tWOR" +
-      "KSPACE\020\002*J\n\014BudgetAction\022#\n\031BUDGET_ACTIO" +
-      "N_UNSPECIFIED\020\000\032\004\360\206\031\003\022\t\n\005ALERT\020\001\022\n\n\006REJE" +
-      "CT\020\002*8\n\nBudgetUnit\022!\n\027BUDGET_UNIT_UNSPEC" +
-      "IFIED\020\000\032\004\360\206\031\003\022\007\n\003USD\020\0012\344\230\001\n\rMlflowServic" +
-      "e\022\246\001\n\023getExperimentByName\022\033.mlflow.GetEx" +
-      "perimentByName\032$.mlflow.GetExperimentByN" +
-      "ame.Response\"L\362\206\031H\n,\n\003GET\022\037/mlflow/exper" +
-      "iments/get-by-name\032\004\010\002\020\000\020\001*\026Get Experime" +
-      "nt By Name\022\224\001\n\020createExperiment\022\030.mlflow" +
-      ".CreateExperiment\032!.mlflow.CreateExperim" +
-      "ent.Response\"C\362\206\031?\n(\n\004POST\022\032/mlflow/expe" +
-      "riments/create\032\004\010\002\020\000\020\001*\021Create Experimen" +
-      "t\022\301\001\n\021searchExperiments\022\031.mlflow.SearchE" +
-      "xperiments\032\".mlflow.SearchExperiments.Re" +
-      "sponse\"m\362\206\031i\n(\n\004POST\022\032/mlflow/experiment" +
-      "s/search\032\004\010\002\020\000\n\'\n\003GET\022\032/mlflow/experimen" +
-      "ts/search\032\004\010\002\020\000\020\001*\022Search Experiments\022\210\001" +
-      "\n\rgetExperiment\022\025.mlflow.GetExperiment\032\036" +
-      ".mlflow.GetExperiment.Response\"@\362\206\0318\n$\n\003" +
-      "GET\022\027/mlflow/experiments/get\032\004\010\002\020\000\020\001*\016Ge" +
-      "t Experiment\272\214\031\000\022\224\001\n\020deleteExperiment\022\030." +
-      "mlflow.DeleteExperiment\032!.mlflow.DeleteE" +
-      "xperiment.Response\"C\362\206\031?\n(\n\004POST\022\032/mlflo" +
-      "w/experiments/delete\032\004\010\002\020\000\020\001*\021Delete Exp" +
-      "eriment\022\231\001\n\021restoreExperiment\022\031.mlflow.R" +
-      "estoreExperiment\032\".mlflow.RestoreExperim" +
-      "ent.Response\"E\362\206\031A\n)\n\004POST\022\033/mlflow/expe" +
-      "riments/restore\032\004\010\002\020\000\020\001*\022Restore Experim" +
-      "ent\022\224\001\n\020updateExperiment\022\030.mlflow.Update" +
-      "Experiment\032!.mlflow.UpdateExperiment.Res" +
-      "ponse\"C\362\206\031?\n(\n\004POST\022\032/mlflow/experiments" +
-      "/update\032\004\010\002\020\000\020\001*\021Update Experiment\022q\n\tcr" +
-      "eateRun\022\021.mlflow.CreateRun\032\032.mlflow.Crea" +
-      "teRun.Response\"5\362\206\0311\n!\n\004POST\022\023/mlflow/ru" +
-      "ns/create\032\004\010\002\020\000\020\001*\nCreate Run\022q\n\tupdateR" +
-      "un\022\021.mlflow.UpdateRun\032\032.mlflow.UpdateRun" +
-      ".Response\"5\362\206\0311\n!\n\004POST\022\023/mlflow/runs/up" +
-      "date\032\004\010\002\020\000\020\001*\nUpdate Run\022q\n\tdeleteRun\022\021." +
-      "mlflow.DeleteRun\032\032.mlflow.DeleteRun.Resp" +
-      "onse\"5\362\206\0311\n!\n\004POST\022\023/mlflow/runs/delete\032" +
-      "\004\010\002\020\000\020\001*\nDelete Run\022v\n\nrestoreRun\022\022.mlfl" +
-      "ow.RestoreRun\032\033.mlflow.RestoreRun.Respon" +
-      "se\"7\362\206\0313\n\"\n\004POST\022\024/mlflow/runs/restore\032\004" +
-      "\010\002\020\000\020\001*\013Restore Run\022u\n\tlogMetric\022\021.mlflo" +
-      "w.LogMetric\032\032.mlflow.LogMetric.Response\"" +
-      "9\362\206\0315\n%\n\004POST\022\027/mlflow/runs/log-metric\032\004" +
-      "\010\002\020\000\020\001*\nLog Metric\022t\n\010logParam\022\020.mlflow." +
-      "LogParam\032\031.mlflow.LogParam.Response\";\362\206\031" +
-      "7\n(\n\004POST\022\032/mlflow/runs/log-parameter\032\004\010" +
-      "\002\020\000\020\001*\tLog Param\022\241\001\n\020setExperimentTag\022\030." +
-      "mlflow.SetExperimentTag\032!.mlflow.SetExpe" +
-      "rimentTag.Response\"P\362\206\031L\n4\n\004POST\022&/mlflo" +
-      "w/experiments/set-experiment-tag\032\004\010\002\020\000\020\001" +
-      "*\022Set Experiment Tag\022\260\001\n\023deleteExperimen" +
-      "tTag\022\033.mlflow.DeleteExperimentTag\032$.mlfl" +
-      "ow.DeleteExperimentTag.Response\"V\362\206\031R\n7\n" +
-      "\004POST\022)/mlflow/experiments/delete-experi" +
-      "ment-tag\032\004\010\002\020\000\020\001*\025Delete Experiment Tag\022" +
-      "f\n\006setTag\022\016.mlflow.SetTag\032\027.mlflow.SetTa" +
-      "g.Response\"3\362\206\031/\n\"\n\004POST\022\024/mlflow/runs/s" +
-      "et-tag\032\004\010\002\020\000\020\001*\007Set Tag\022\210\001\n\013setTraceTag\022" +
-      "\023.mlflow.SetTraceTag\032\034.mlflow.SetTraceTa" +
-      "g.Response\"F\362\206\031B\n/\n\005PATCH\022 /mlflow/trace" +
-      "s/{request_id}/tags\032\004\010\002\020\000\020\003*\rSet Trace T" +
-      "ag\022\217\001\n\rsetTraceTagV3\022\025.mlflow.SetTraceTa" +
-      "gV3\032\036.mlflow.SetTraceTagV3.Response\"G\362\206\031" +
-      "C\n-\n\005PATCH\022\036/mlflow/traces/{trace_id}/ta" +
-      "gs\032\004\010\003\020\000\020\003*\020Set Trace Tag V3\022\225\001\n\016deleteT" +
-      "raceTag\022\026.mlflow.DeleteTraceTag\032\037.mlflow" +
-      ".DeleteTraceTag.Response\"J\362\206\031F\n0\n\006DELETE" +
-      "\022 /mlflow/traces/{request_id}/tags\032\004\010\002\020\000" +
-      "\020\003*\020Delete Trace Tag\022\234\001\n\020deleteTraceTagV" +
-      "3\022\030.mlflow.DeleteTraceTagV3\032!.mlflow.Del" +
-      "eteTraceTagV3.Response\"K\362\206\031G\n.\n\006DELETE\022\036" +
-      "/mlflow/traces/{trace_id}/tags\032\004\010\003\020\000\020\003*\023" +
-      "Delete Trace Tag V3\022u\n\tdeleteTag\022\021.mlflo" +
-      "w.DeleteTag\032\032.mlflow.DeleteTag.Response\"" +
-      "9\362\206\0315\n%\n\004POST\022\027/mlflow/runs/delete-tag\032\004" +
-      "\010\002\020\000\020\001*\nDelete Tag\022e\n\006getRun\022\016.mlflow.Ge" +
-      "tRun\032\027.mlflow.GetRun.Response\"2\362\206\031*\n\035\n\003G" +
-      "ET\022\020/mlflow/runs/get\032\004\010\002\020\000\020\001*\007Get Run\272\214\031" +
-      "\000\022y\n\nsearchRuns\022\022.mlflow.SearchRuns\032\033.ml" +
-      "flow.SearchRuns.Response\":\362\206\0312\n!\n\004POST\022\023" +
-      "/mlflow/runs/search\032\004\010\002\020\000\020\001*\013Search Runs" +
-      "\272\214\031\000\022\207\001\n\rlistArtifacts\022\025.mlflow.ListArti" +
-      "facts\032\036.mlflow.ListArtifacts.Response\"?\362" +
-      "\206\0317\n#\n\003GET\022\026/mlflow/artifacts/list\032\004\010\002\020\000" +
-      "\020\001*\016List Artifacts\272\214\031\000\022\225\001\n\020getMetricHist",
-      "ory\022\030.mlflow.GetMetricHistory\032!.mlflow.G" +
-      "etMetricHistory.Response\"D\362\206\031@\n(\n\003GET\022\033/" +
-      "mlflow/metrics/get-history\032\004\010\002\020\000\020\001*\022Get " +
-      "Metric History\022\267\001\n\034getMetricHistoryBulkI" +
-      "nterval\022$.mlflow.GetMetricHistoryBulkInt" +
-      "erval\032-.mlflow.GetMetricHistoryBulkInter" +
-      "val.Response\"B\362\206\031:\n6\n\003GET\022)/mlflow/metri" +
-      "cs/get-history-bulk-interval\032\004\010\002\020\013\020\003\272\214\031\000" +
-      "\022p\n\010logBatch\022\020.mlflow.LogBatch\032\031.mlflow." +
-      "LogBatch.Response\"7\362\206\0313\n$\n\004POST\022\026/mlflow" +
-      "/runs/log-batch\032\004\010\002\020\000\020\001*\tLog Batch\022p\n\010lo" +
-      "gModel\022\020.mlflow.LogModel\032\031.mlflow.LogMod" +
-      "el.Response\"7\362\206\0313\n$\n\004POST\022\026/mlflow/runs/" +
-      "log-model\032\004\010\002\020\000\020\001*\tLog Model\022u\n\tlogInput" +
-      "s\022\021.mlflow.LogInputs\032\032.mlflow.LogInputs." +
-      "Response\"9\362\206\0315\n%\n\004POST\022\027/mlflow/runs/log" +
-      "-inputs\032\004\010\002\020\000\020\001*\nLog Inputs\022v\n\nlogOutput" +
-      "s\022\022.mlflow.LogOutputs\032\033.mlflow.LogOutput" +
-      "s.Response\"7\362\206\0313\n\"\n\004POST\022\024/mlflow/runs/o" +
-      "utputs\032\004\010\002\020\000\020\003*\013Log Outputs\022\207\001\n\016searchDa" +
-      "tasets\022\026.mlflow.SearchDatasets\032\037.mlflow." +
-      "SearchDatasets.Response\"<\362\206\0314\n0\n\004POST\022\"m" +
-      "lflow/experiments/search-datasets\032\004\010\002\020\000\020" +
-      "\003\272\214\031\000\022p\n\nstartTrace\022\022.mlflow.StartTrace\032" +
-      "\033.mlflow.StartTrace.Response\"1\362\206\031-\n\034\n\004PO" +
-      "ST\022\016/mlflow/traces\032\004\010\002\020\000\020\003*\013Start Trace\022" +
-      "v\n\010endTrace\022\020.mlflow.EndTrace\032\031.mlflow.E" +
-      "ndTrace.Response\"=\362\206\0319\n*\n\005PATCH\022\033/mlflow" +
-      "/traces/{request_id}\032\004\010\002\020\000\020\003*\tEnd Trace\022" +
-      "\211\001\n\014getTraceInfo\022\024.mlflow.GetTraceInfo\032\035" +
-      ".mlflow.GetTraceInfo.Response\"D\362\206\031@\n-\n\003G" +
-      "ET\022 /mlflow/traces/{request_id}/info\032\004\010\002" +
-      "\020\000\020\003*\rGet TraceInfo\022\213\001\n\016getTraceInfoV3\022\026" +
-      ".mlflow.GetTraceInfoV3\032\037.mlflow.GetTrace" +
-      "InfoV3.Response\"@\362\206\031<\n&\n\003GET\022\031/mlflow/tr" +
-      "aces/{trace_id}\032\004\010\003\020\000\020\003*\020Get TraceInfo v" +
-      "3\022n\n\010getTrace\022\020.mlflow.GetTrace\032\031.mlflow" +
-      ".GetTrace.Response\"5\362\206\0311\n\037\n\003GET\022\022/mlflow" +
-      "/traces/get\032\004\010\003\020\000\020\003*\014Get Trace v3\022\203\001\n\016ba" +
-      "tchGetTraces\022\026.mlflow.BatchGetTraces\032\037.m" +
-      "lflow.BatchGetTraces.Response\"8\362\206\0314\n$\n\003G" +
-      "ET\022\027/mlflow/traces/batchGet\032\004\010\003\020\000\020\003*\nGet" +
-      " Traces\022w\n\014searchTraces\022\024.mlflow.SearchT" +
-      "races\032\035.mlflow.SearchTraces.Response\"2\362\206" +
-      "\031.\n\033\n\003GET\022\016/mlflow/traces\032\004\010\002\020\000\020\003*\rSearc" +
-      "h Traces\022\210\001\n\016searchTracesV3\022\026.mlflow.Sea" +
-      "rchTracesV3\032\037.mlflow.SearchTracesV3.Resp" +
-      "onse\"=\362\206\0319\n#\n\004POST\022\025/mlflow/traces/searc" +
-      "h\032\004\010\003\020\000\020\003*\020Search Traces V3\022i\n\014startTrac" +
-      "eV3\022\024.mlflow.StartTraceV3\032\035.mlflow.Start" +
-      "TraceV3.Response\"$\362\206\031 \n\034\n\004POST\022\016/mlflow/" +
-      "traces\032\004\010\003\020\000\020\003\022\222\001\n\017linkTracesToRun\022\027.mlf" +
-      "low.LinkTracesToRun\032 .mlflow.LinkTracesT" +
-      "oRun.Response\"D\362\206\031@\n(\n\004POST\022\032/mlflow/tra" +
-      "ces/link-to-run\032\004\010\002\020\000\020\003*\022Link Traces to " +
-      "Run\022\237\001\n\022linkPromptsToTrace\022\032.mlflow.Link" +
-      "PromptsToTrace\032#.mlflow.LinkPromptsToTra" +
-      "ce.Response\"H\362\206\031D\n)\n\004POST\022\033/mlflow/trace" +
-      "s/link-prompts\032\004\010\002\020\000\020\003*\025Link Prompts to " +
-      "Trace\022\242\001\n\031searchUnifiedTraceHandler\022\033.ml" +
-      "flow.SearchUnifiedTraces\032$.mlflow.Search" +
-      "UnifiedTraces.Response\"B\362\206\031>\n#\n\003GET\022\026/ml" +
-      "flow/unified-traces\032\004\010\002\020\000\020\003*\025Search Unif" +
-      "ied Traces\022\257\001\n\025getOnlineTraceDetails\022\035.m" +
-      "lflow.GetOnlineTraceDetails\032&.mlflow.Get" +
-      "OnlineTraceDetails.Response\"O\362\206\031K\n-\n\003GET" +
-      "\022 /mlflow/get-online-trace-details\032\004\010\002\020\000" +
-      "\020\003*\030Get Online Trace Details\022\206\001\n\014deleteT" +
-      "races\022\024.mlflow.DeleteTraces\032\035.mlflow.Del" +
-      "eteTraces.Response\"A\362\206\031=\n*\n\004POST\022\034/mlflo" +
-      "w/traces/delete-traces\032\004\010\002\020\000\020\003*\rDelete T" +
-      "races\022\217\001\n\016deleteTracesV3\022\026.mlflow.Delete" +
-      "TracesV3\032\037.mlflow.DeleteTracesV3.Respons" +
-      "e\"D\362\206\031@\n*\n\004POST\022\034/mlflow/traces/delete-t" +
-      "races\032\004\010\003\020\000\020\003*\020Delete Traces V3\022\343\001\n\037calc" +
-      "ulateTraceFilterCorrelation\022\'.mlflow.Cal" +
-      "culateTraceFilterCorrelation\0320.mlflow.Ca" +
-      "lculateTraceFilterCorrelation.Response\"e" +
-      "\362\206\031a\n9\n\004POST\022+/mlflow/traces/calculate-f" +
-      "ilter-correlation\032\004\010\003\020\000\020\003*\"Calculate Tra" +
-      "ce Filter Correlation\022\225\001\n\021queryTraceMetr" +
-      "ics\022\031.mlflow.QueryTraceMetrics\032\".mlflow." +
-      "QueryTraceMetrics.Response\"A\362\206\031=\n$\n\004POST" +
-      "\022\026/mlflow/traces/metrics\032\004\010\003\020\000\020\003*\023Query " +
-      "Trace Metrics\022\203\001\n\016listWorkspaces\022\026.mlflo" +
-      "w.ListWorkspaces\032\037.mlflow.ListWorkspaces" +
-      ".Response\"8\362\206\0314\n\037\n\003GET\022\022/mlflow/workspac" +
-      "es\032\004\010\003\020\000\020\003*\017List Workspaces\022\210\001\n\017createWo" +
-      "rkspace\022\027.mlflow.CreateWorkspace\032 .mlflo" +
-      "w.CreateWorkspace.Response\":\362\206\0316\n \n\004POST" +
-      "\022\022/mlflow/workspaces\032\004\010\003\020\000\020\003*\020Create Wor" +
-      "kspace\022\214\001\n\014getWorkspace\022\024.mlflow.GetWork" +
-      "space\032\035.mlflow.GetWorkspace.Response\"G\362\206" +
-      "\031C\n0\n\003GET\022#/mlflow/workspaces/{workspace" +
-      "_name}\032\004\010\003\020\000\020\003*\rGet Workspace\022\232\001\n\017update" +
-      "Workspace\022\027.mlflow.UpdateWorkspace\032 .mlf" +
-      "low.UpdateWorkspace.Response\"L\362\206\031H\n2\n\005PA" +
-      "TCH\022#/mlflow/workspaces/{workspace_name}" +
-      "\032\004\010\003\020\000\020\003*\020Update Workspace\022\233\001\n\017deleteWor" +
-      "kspace\022\027.mlflow.DeleteWorkspace\032 .mlflow" +
-      ".DeleteWorkspace.Response\"M\362\206\031I\n3\n\006DELET" +
-      "E\022#/mlflow/workspaces/{workspace_name}\032\004" +
-      "\010\003\020\000\020\003*\020Delete Workspace\022\224\001\n\021createLogge" +
-      "dModel\022\031.mlflow.CreateLoggedModel\032\".mlfl" +
-      "ow.CreateLoggedModel.Response\"@\362\206\031<\n#\n\004P" +
-      "OST\022\025/mlflow/logged-models\032\004\010\002\020\000\020\003*\023Crea" +
-      "te Logged Model\022\250\001\n\023finalizeLoggedModel\022" +
-      "\033.mlflow.FinalizeLoggedModel\032$.mlflow.Fi" +
-      "nalizeLoggedModel.Response\"N\362\206\031J\n/\n\005PATC" +
-      "H\022 /mlflow/logged-models/{model_id}\032\004\010\002\020" +
-      "\000\020\003*\025Finalize Logged Model\022\222\001\n\016getLogged" +
-      "Model\022\026.mlflow.GetLoggedModel\032\037.mlflow.G" +
-      "etLoggedModel.Response\"G\362\206\031C\n-\n\003GET\022 /ml" +
-      "flow/logged-models/{model_id}\032\004\010\002\020\000\020\003*\020G" +
-      "et Logged Model\022\243\001\n\021deleteLoggedModel\022\031." +
-      "mlflow.DeleteLoggedModel\032\".mlflow.Delete" +
-      "LoggedModel.Response\"O\362\206\031K\n0\n\006DELETE\022 /m" +
-      "lflow/logged-models/{model_id}\032\004\010\002\020\000\020\003*\025" +
-      "Delete a Logged Model\022\236\001\n\022searchLoggedMo" +
-      "dels\022\032.mlflow.SearchLoggedModels\032#.mlflo" +
-      "w.SearchLoggedModels.Response\"G\362\206\031C\n*\n\004P" +
-      "OST\022\034/mlflow/logged-models/search\032\004\010\002\020\000\020" +
-      "\003*\023Search LoggedModels\022\251\001\n\022setLoggedMode" +
-      "lTags\022\032.mlflow.SetLoggedModelTags\032#.mlfl" +
-      "ow.SetLoggedModelTags.Response\"R\362\206\031N\n4\n\005" +
-      "PATCH\022%/mlflow/logged-models/{model_id}/" +
-      "tags\032\004\010\002\020\000\020\003*\024Set Logged Model Tag\022\275\001\n\024d" +
-      "eleteLoggedModelTag\022\034.mlflow.DeleteLogge" +
-      "dModelTag\032%.mlflow.DeleteLoggedModelTag." +
-      "Response\"`\362\206\031\\\n?\n\006DELETE\022//mlflow/logged" +
-      "-models/{model_id}/tags/{tag_key}\032\004\010\002\020\000\020" +
-      "\003*\027Delete Logged Model Tag\022\326\001\n\030listLogge" +
-      "dModelArtifacts\022 .mlflow.ListLoggedModel" +
-      "Artifacts\032).mlflow.ListLoggedModelArtifa" +
-      "cts.Response\"m\362\206\031i\nC\n\003GET\0226/mlflow/logge" +
-      "d-models/{model_id}/artifacts/directorie" +
-      "s\032\004\010\002\020\000\020\003* List Artifacts for Logged Mod" +
-      "els\022\301\001\n\024LogLoggedModelParams\022#.mlflow.Lo" +
-      "gLoggedModelParamsRequest\032,.mlflow.LogLo" +
-      "ggedModelParamsRequest.Response\"V\362\206\031R\n5\n" +
-      "\004POST\022\'/mlflow/logged-models/{model_id}/" +
-      "params\032\004\010\002\020\000\020\003*\027Log Logged Model Params\022" +
-      "\260\001\n\rGetAssessment\022\034.mlflow.GetAssessment" +
-      "Request\032%.mlflow.GetAssessmentRequest.Re" +
-      "sponse\"Z\362\206\031V\nB\n\003GET\0225/mlflow/traces/{tra" +
-      "ce_id}/assessments/{assessment_id}\032\004\010\003\020\000" +
-      "\020\003*\016Get Assessment\022\337\001\n\020createAssessment\022" +
-      "\030.mlflow.CreateAssessment\032!.mlflow.Creat" +
-      "eAssessment.Response\"\215\001\362\206\031\210\001\n>\n\004POST\0220/m" +
-      "lflow/traces/{assessment.trace_id}/asses" +
-      "sments\032\004\010\003\020\000\020\003\030\350\007\030\356\007\030\014\030\001*:Create an asse" +
-      "ssment of a trace or a span within the t" +
-      "race\022\320\001\n\020updateAssessment\022\030.mlflow.Updat" +
-      "eAssessment\032!.mlflow.UpdateAssessment.Re" +
-      "sponse\"\177\362\206\031{\nD\n\005PATCH\0225/mlflow/traces/{t" +
-      "race_id}/assessments/{assessment_id}\032\004\010\003" +
-      "\020\000\020\003\030\350\007\030\356\007\030\001*)Update an existing assessm" +
-      "ent on a trace.\022\261\001\n\020deleteAssessment\022\030.m" +
-      "lflow.DeleteAssessment\032!.mlflow.DeleteAs" +
-      "sessment.Response\"`\362\206\031\\\nE\n\006DELETE\0225/mlfl" +
-      "ow/traces/{trace_id}/assessments/{assess" +
-      "ment_id}\032\004\010\003\020\000\020\003*\021Delete Assessment\022\205\001\n\013" +
-      "createIssue\022\032.mlflow.issues.CreateIssue\032" +
-      "#.mlflow.issues.CreateIssue.Response\"5\362\206" +
-      "\0311\n\034\n\004POST\022\016/mlflow/issues\032\004\010\003\020\000\020\003*\017Crea" +
-      "te an issue\022\232\001\n\013updateIssue\022\032.mlflow.iss" +
-      "ues.UpdateIssue\032#.mlflow.issues.UpdateIs" +
-      "sue.Response\"J\362\206\031F\n(\n\005PATCH\022\031/mlflow/iss" +
-      "ues/{issue_id}\032\004\010\003\020\000\020\003*\030Update an existi" +
-      "ng issue\022\211\001\n\010getIssue\022\027.mlflow.issues.Ge" +
-      "tIssue\032 .mlflow.issues.GetIssue.Response" +
-      "\"B\362\206\031>\n&\n\003GET\022\031/mlflow/issues/{issue_id}" +
-      "\032\004\010\003\020\000\020\003*\022Get an issue by ID\022\215\001\n\014searchI" +
-      "ssues\022\033.mlflow.issues.SearchIssues\032$.mlf" +
-      "low.issues.SearchIssues.Response\":\362\206\0316\n#" +
-      "\n\004POST\022\025/mlflow/issues/search\032\004\010\003\020\000\020\003*\rS" +
-      "earch issues\022\232\001\n\rcreateDataset\022\025.mlflow." +
-      "CreateDataset\032\036.mlflow.CreateDataset.Res" +
-      "ponse\"R\362\206\031N\n%\n\004POST\022\027/mlflow/datasets/cr" +
-      "eate\032\004\010\003\020\000\020\003\030\350\007\030\356\007\030\014\030\001*\031Create Evaluatio" +
-      "n Dataset\022\221\001\n\ngetDataset\022\022.mlflow.GetDat" +
-      "aset\032\033.mlflow.GetDataset.Response\"R\362\206\031N\n" +
-      "*\n\003GET\022\035/mlflow/datasets/{dataset_id}\032\004\010" +
-      "\003\020\000\020\003\030\350\007\030\272\027\030\001*\026Get Evaluation Dataset\022\240\001" +
-      "\n\rdeleteDataset\022\025.mlflow.DeleteDataset\032\036" +
-      ".mlflow.DeleteDataset.Response\"X\362\206\031T\n-\n\006" +
-      "DELETE\022\035/mlflow/datasets/{dataset_id}\032\004\010" +
-      "\003\020\000\020\003\030\350\007\030\272\027\030\001*\031Delete Evaluation Dataset" +
-      "\022\335\001\n\030searchEvaluationDatasets\022 .mlflow.S" +
-      "earchEvaluationDatasets\032).mlflow.SearchE" +
-      "valuationDatasets.Response\"t\362\206\031p\n%\n\004POST" +
-      "\022\027/mlflow/datasets/search\032\004\010\003\020\000\n$\n\003GET\022\027" +
-      "/mlflow/datasets/search\032\004\010\003\020\000\020\003\030\350\007\030\001*\032Se" +
-      "arch Evaluation Datasets\022\251\001\n\016setDatasetT" +
-      "ags\022\026.mlflow.SetDatasetTags\032\037.mlflow.Set" +
-      "DatasetTags.Response\"^\362\206\031Z\n1\n\005PATCH\022\"/ml" +
-      "flow/datasets/{dataset_id}/tags\032\004\010\003\020\000\020\003\030" +
-      "\350\007\030\272\027\030\001*\033Set Evaluation Dataset Tags\022\270\001\n" +
-      "\020deleteDatasetTag\022\030.mlflow.DeleteDataset" +
-      "Tag\032!.mlflow.DeleteDatasetTag.Response\"g" +
-      "\362\206\031c\n8\n\006DELETE\022(/mlflow/datasets/{datase" +
-      "t_id}/tags/{key}\032\004\010\003\020\000\020\003\030\350\007\030\272\027\030\001*\035Delete" +
-      " Evaluation Dataset Tag\022\303\001\n\024upsertDatase" +
-      "tRecords\022\034.mlflow.UpsertDatasetRecords\032%" +
-      ".mlflow.UpsertDatasetRecords.Response\"f\362" +
-      "\206\031b\n3\n\004POST\022%/mlflow/datasets/{dataset_i" +
-      "d}/records\032\004\010\003\020\000\020\003\030\350\007\030\272\027\030\001*!Upsert Evalu" +
-      "ation Dataset Records\022\326\001\n\027getDatasetExpe" +
-      "rimentIds\022\037.mlflow.GetDatasetExperimentI" +
-      "ds\032(.mlflow.GetDatasetExperimentIds.Resp" +
-      "onse\"p\362\206\031l\n9\n\003GET\022,/mlflow/datasets/{dat" +
-      "aset_id}/experiment-ids\032\004\010\003\020\000\020\003\030\350\007\030\272\027\030\001*" +
-      "%Get Evaluation Dataset Experiment IDs\022\212" +
-      "\001\n\016registerScorer\022\026.mlflow.RegisterScore" +
-      "r\032\037.mlflow.RegisterScorer.Response\"?\362\206\031;" +
-      "\n&\n\004POST\022\030/mlflow/scorers/register\032\004\010\003\020\000" +
-      "\020\001*\017Register Scorer\022y\n\013listScorers\022\023.mlf" +
-      "low.ListScorers\032\034.mlflow.ListScorers.Res" +
-      "ponse\"7\362\206\0313\n!\n\003GET\022\024/mlflow/scorers/list" +
-      "\032\004\010\003\020\000\020\001*\014List Scorers\022\232\001\n\022listScorerVer" +
-      "sions\022\032.mlflow.ListScorerVersions\032#.mlfl" +
-      "ow.ListScorerVersions.Response\"C\362\206\031?\n%\n\003" +
-      "GET\022\030/mlflow/scorers/versions\032\004\010\003\020\000\020\001*\024L" +
-      "ist Scorer Versions\022p\n\tgetScorer\022\021.mlflo" +
-      "w.GetScorer\032\032.mlflow.GetScorer.Response\"" +
-      "4\362\206\0310\n \n\003GET\022\023/mlflow/scorers/get\032\004\010\003\020\000\020" +
-      "\001*\nGet Scorer\022\202\001\n\014deleteScorer\022\024.mlflow." +
-      "DeleteScorer\032\035.mlflow.DeleteScorer.Respo" +
-      "nse\"=\362\206\0319\n&\n\006DELETE\022\026/mlflow/scorers/del" +
-      "ete\032\004\010\003\020\000\020\001*\rDelete Scorer\022\266\001\n\021getDatase" +
-      "tRecords\022\031.mlflow.GetDatasetRecords\032\".ml" +
-      "flow.GetDatasetRecords.Response\"b\362\206\031^\n2\n" +
-      "\003GET\022%/mlflow/datasets/{dataset_id}/reco" +
-      "rds\032\004\010\003\020\000\020\003\030\350\007\030\272\027\030\001*\036Get Evaluation Data" +
-      "set Records\022\305\001\n\024deleteDatasetRecords\022\034.m" +
-      "lflow.DeleteDatasetRecords\032%.mlflow.Dele" +
-      "teDatasetRecords.Response\"h\362\206\031d\n5\n\006DELET" +
-      "E\022%/mlflow/datasets/{dataset_id}/records" +
-      "\032\004\010\003\020\000\020\003\030\350\007\030\272\027\030\001*!Delete Evaluation Data" +
-      "set Records\022\315\001\n\027addDatasetToExperiments\022" +
-      "\037.mlflow.AddDatasetToExperiments\032(.mlflo" +
-      "w.AddDatasetToExperiments.Response\"g\362\206\031c" +
-      "\n;\n\004POST\022-/mlflow/datasets/{dataset_id}/" +
-      "add-experiments\032\004\010\003\020\000\020\003\030\350\007\030\272\027\030\001*\032Add Dat" +
-      "aset to Experiments\022\344\001\n\034removeDatasetFro" +
-      "mExperiments\022$.mlflow.RemoveDatasetFromE" +
-      "xperiments\032-.mlflow.RemoveDatasetFromExp" +
-      "eriments.Response\"o\362\206\031k\n>\n\004POST\0220/mlflow" +
-      "/datasets/{dataset_id}/remove-experiment" +
-      "s\032\004\010\003\020\000\020\003\030\350\007\030\272\027\030\001*\037Remove Dataset from E" +
-      "xperiments\022\245\001\n\023createGatewaySecret\022\033.mlf" +
-      "low.CreateGatewaySecret\032$.mlflow.CreateG" +
-      "atewaySecret.Response\"K\362\206\031G\n,\n\004POST\022\036/ml" +
-      "flow/gateway/secrets/create\032\004\010\003\020\000\020\001*\025Cre" +
-      "ate Gateway Secret\022\246\001\n\024getGatewaySecretI" +
-      "nfo\022\034.mlflow.GetGatewaySecretInfo\032%.mlfl" +
-      "ow.GetGatewaySecretInfo.Response\"I\362\206\031E\n(" +
-      "\n\003GET\022\033/mlflow/gateway/secrets/get\032\004\010\003\020\000" +
-      "\020\001*\027Get Gateway Secret Info\022\245\001\n\023updateGa" +
-      "tewaySecret\022\033.mlflow.UpdateGatewaySecret" +
-      "\032$.mlflow.UpdateGatewaySecret.Response\"K" +
-      "\362\206\031G\n,\n\004POST\022\036/mlflow/gateway/secrets/up" +
-      "date\032\004\010\003\020\000\020\001*\025Update Gateway Secret\022\247\001\n\023" +
-      "deleteGatewaySecret\022\033.mlflow.DeleteGatew" +
-      "aySecret\032$.mlflow.DeleteGatewaySecret.Re" +
-      "sponse\"M\362\206\031I\n.\n\006DELETE\022\036/mlflow/gateway/" +
-      "secrets/delete\032\004\010\003\020\000\020\001*\025Delete Gateway S" +
-      "ecret\022\252\001\n\026listGatewaySecretInfos\022\036.mlflo" +
-      "w.ListGatewaySecretInfos\032\'.mlflow.ListGa" +
-      "tewaySecretInfos.Response\"G\362\206\031C\n)\n\003GET\022\034" +
-      "/mlflow/gateway/secrets/list\032\004\010\003\020\000\020\001*\024Li" +
-      "st Gateway Secrets\022\257\001\n\025createGatewayEndp" +
-      "oint\022\035.mlflow.CreateGatewayEndpoint\032&.ml" +
-      "flow.CreateGatewayEndpoint.Response\"O\362\206\031" +
-      "K\n.\n\004POST\022 /mlflow/gateway/endpoints/cre" +
-      "ate\032\004\010\003\020\000\020\001*\027Create Gateway Endpoint\022\237\001\n" +
-      "\022getGatewayEndpoint\022\032.mlflow.GetGatewayE" +
-      "ndpoint\032#.mlflow.GetGatewayEndpoint.Resp" +
-      "onse\"H\362\206\031D\n*\n\003GET\022\035/mlflow/gateway/endpo" +
-      "ints/get\032\004\010\003\020\000\020\001*\024Get Gateway Endpoint\022\257" +
-      "\001\n\025updateGatewayEndpoint\022\035.mlflow.Update" +
-      "GatewayEndpoint\032&.mlflow.UpdateGatewayEn" +
-      "dpoint.Response\"O\362\206\031K\n.\n\004POST\022 /mlflow/g" +
-      "ateway/endpoints/update\032\004\010\003\020\000\020\001*\027Update " +
-      "Gateway Endpoint\022\261\001\n\025deleteGatewayEndpoi" +
-      "nt\022\035.mlflow.DeleteGatewayEndpoint\032&.mlfl" +
-      "ow.DeleteGatewayEndpoint.Response\"Q\362\206\031M\n" +
-      "0\n\006DELETE\022 /mlflow/gateway/endpoints/del" +
-      "ete\032\004\010\003\020\000\020\001*\027Delete Gateway Endpoint\022\250\001\n" +
-      "\024listGatewayEndpoints\022\034.mlflow.ListGatew" +
-      "ayEndpoints\032%.mlflow.ListGatewayEndpoint" +
-      "s.Response\"K\362\206\031G\n+\n\003GET\022\036/mlflow/gateway" +
-      "/endpoints/list\032\004\010\003\020\000\020\001*\026List Gateway En" +
-      "dpoints\022\324\001\n\034createGatewayModelDefinition" +
-      "\022$.mlflow.CreateGatewayModelDefinition\032-" +
-      ".mlflow.CreateGatewayModelDefinition.Res" +
+      "is.Response]\"\302\001\n\017UpdateWorkspace\022\034\n\016work" +
+      "space_name\030\001 \001(\tB\004\370\206\031\001\022\023\n\013description\030\002 " +
+      "\001(\t\022\035\n\025default_artifact_root\030\003 \001(\t\0320\n\010Re" +
+      "sponse\022$\n\tworkspace\030\001 \001(\0132\021.mlflow.Works" +
+      "pace:+\342?(\n&com.databricks.rpc.RPC[$this." +
+      "Response]\"h\n\017DeleteWorkspace\022\034\n\016workspac" +
+      "e_name\030\001 \001(\tB\004\370\206\031\001\032\n\n\010Response:+\342?(\n&com" +
+      ".databricks.rpc.RPC[$this.Response]*6\n\010V" +
+      "iewType\022\017\n\013ACTIVE_ONLY\020\001\022\020\n\014DELETED_ONLY" +
+      "\020\002\022\007\n\003ALL\020\003*I\n\nSourceType\022\014\n\010NOTEBOOK\020\001\022" +
+      "\007\n\003JOB\020\002\022\013\n\007PROJECT\020\003\022\t\n\005LOCAL\020\004\022\014\n\007UNKN" +
+      "OWN\020\350\007*M\n\tRunStatus\022\013\n\007RUNNING\020\001\022\r\n\tSCHE" +
+      "DULED\020\002\022\014\n\010FINISHED\020\003\022\n\n\006FAILED\020\004\022\n\n\006KIL" +
+      "LED\020\005*O\n\013TraceStatus\022\034\n\030TRACE_STATUS_UNS" +
+      "PECIFIED\020\000\022\006\n\002OK\020\001\022\t\n\005ERROR\020\002\022\017\n\013IN_PROG" +
+      "RESS\020\003*8\n\016MetricViewType\022\n\n\006TRACES\020\001\022\t\n\005" +
+      "SPANS\020\002\022\017\n\013ASSESSMENTS\020\003*P\n\017AggregationT" +
+      "ype\022\t\n\005COUNT\020\001\022\007\n\003SUM\020\002\022\007\n\003AVG\020\003\022\016\n\nPERC" +
+      "ENTILE\020\004\022\007\n\003MIN\020\005\022\007\n\003MAX\020\006*\212\001\n\021LoggedMod" +
+      "elStatus\022#\n\037LOGGED_MODEL_STATUS_UNSPECIF" +
+      "IED\020\000\022\030\n\024LOGGED_MODEL_PENDING\020\001\022\026\n\022LOGGE" +
+      "D_MODEL_READY\020\002\022\036\n\032LOGGED_MODEL_UPLOAD_F" +
+      "AILED\020\003*Z\n\017RoutingStrategy\022&\n\034ROUTING_ST" +
+      "RATEGY_UNSPECIFIED\020\000\032\004\360\206\031\003\022\037\n\033REQUEST_BA" +
+      "SED_TRAFFIC_SPLIT\020\001*K\n\020FallbackStrategy\022" +
+      "\'\n\035FALLBACK_STRATEGY_UNSPECIFIED\020\000\032\004\360\206\031\003" +
+      "\022\016\n\nSEQUENTIAL\020\001*X\n\027GatewayModelLinkageT" +
+      "ype\022\"\n\030LINKAGE_TYPE_UNSPECIFIED\020\000\032\004\360\206\031\003\022" +
+      "\013\n\007PRIMARY\020\001\022\014\n\010FALLBACK\020\002*r\n\022BudgetDura" +
+      "tionUnit\022#\n\031DURATION_UNIT_UNSPECIFIED\020\000\032" +
+      "\004\360\206\031\003\022\013\n\007MINUTES\020\001\022\t\n\005HOURS\020\002\022\010\n\004DAYS\020\003\022" +
+      "\t\n\005WEEKS\020\004\022\n\n\006MONTHS\020\005*R\n\021BudgetTargetSc" +
+      "ope\022\"\n\030TARGET_SCOPE_UNSPECIFIED\020\000\032\004\360\206\031\003\022" +
+      "\n\n\006GLOBAL\020\001\022\r\n\tWORKSPACE\020\002*J\n\014BudgetActi" +
+      "on\022#\n\031BUDGET_ACTION_UNSPECIFIED\020\000\032\004\360\206\031\003\022" +
+      "\t\n\005ALERT\020\001\022\n\n\006REJECT\020\002*8\n\nBudgetUnit\022!\n\027" +
+      "BUDGET_UNIT_UNSPECIFIED\020\000\032\004\360\206\031\003\022\007\n\003USD\020\001" +
+      "2\222\232\001\n\rMlflowService\022\246\001\n\023getExperimentByN" +
+      "ame\022\033.mlflow.GetExperimentByName\032$.mlflo" +
+      "w.GetExperimentByName.Response\"L\362\206\031H\n,\n\003" +
+      "GET\022\037/mlflow/experiments/get-by-name\032\004\010\002" +
+      "\020\000\020\001*\026Get Experiment By Name\022\224\001\n\020createE" +
+      "xperiment\022\030.mlflow.CreateExperiment\032!.ml" +
+      "flow.CreateExperiment.Response\"C\362\206\031?\n(\n\004" +
+      "POST\022\032/mlflow/experiments/create\032\004\010\002\020\000\020\001" +
+      "*\021Create Experiment\022\301\001\n\021searchExperiment" +
+      "s\022\031.mlflow.SearchExperiments\032\".mlflow.Se" +
+      "archExperiments.Response\"m\362\206\031i\n(\n\004POST\022\032" +
+      "/mlflow/experiments/search\032\004\010\002\020\000\n\'\n\003GET\022" +
+      "\032/mlflow/experiments/search\032\004\010\002\020\000\020\001*\022Sea" +
+      "rch Experiments\022\210\001\n\rgetExperiment\022\025.mlfl" +
+      "ow.GetExperiment\032\036.mlflow.GetExperiment." +
+      "Response\"@\362\206\0318\n$\n\003GET\022\027/mlflow/experimen" +
+      "ts/get\032\004\010\002\020\000\020\001*\016Get Experiment\272\214\031\000\022\224\001\n\020d" +
+      "eleteExperiment\022\030.mlflow.DeleteExperimen" +
+      "t\032!.mlflow.DeleteExperiment.Response\"C\362\206" +
+      "\031?\n(\n\004POST\022\032/mlflow/experiments/delete\032\004" +
+      "\010\002\020\000\020\001*\021Delete Experiment\022\231\001\n\021restoreExp" +
+      "eriment\022\031.mlflow.RestoreExperiment\032\".mlf" +
+      "low.RestoreExperiment.Response\"E\362\206\031A\n)\n\004" +
+      "POST\022\033/mlflow/experiments/restore\032\004\010\002\020\000\020" +
+      "\001*\022Restore Experiment\022\224\001\n\020updateExperime" +
+      "nt\022\030.mlflow.UpdateExperiment\032!.mlflow.Up" +
+      "dateExperiment.Response\"C\362\206\031?\n(\n\004POST\022\032/" +
+      "mlflow/experiments/update\032\004\010\002\020\000\020\001*\021Updat" +
+      "e Experiment\022q\n\tcreateRun\022\021.mlflow.Creat" +
+      "eRun\032\032.mlflow.CreateRun.Response\"5\362\206\0311\n!" +
+      "\n\004POST\022\023/mlflow/runs/create\032\004\010\002\020\000\020\001*\nCre" +
+      "ate Run\022q\n\tupdateRun\022\021.mlflow.UpdateRun\032" +
+      "\032.mlflow.UpdateRun.Response\"5\362\206\0311\n!\n\004POS" +
+      "T\022\023/mlflow/runs/update\032\004\010\002\020\000\020\001*\nUpdate R" +
+      "un\022q\n\tdeleteRun\022\021.mlflow.DeleteRun\032\032.mlf" +
+      "low.DeleteRun.Response\"5\362\206\0311\n!\n\004POST\022\023/m" +
+      "lflow/runs/delete\032\004\010\002\020\000\020\001*\nDelete Run\022v\n" +
+      "\nrestoreRun\022\022.mlflow.RestoreRun\032\033.mlflow" +
+      ".RestoreRun.Response\"7\362\206\0313\n\"\n\004POST\022\024/mlf" +
+      "low/runs/restore\032\004\010\002\020\000\020\001*\013Restore Run\022u\n" +
+      "\tlogMetric\022\021.mlflow.LogMetric\032\032.mlflow.L" +
+      "ogMetric.Response\"9\362\206\0315\n%\n\004POST\022\027/mlflow" +
+      "/runs/log-metric\032\004\010\002\020\000\020\001*\nLog Metric\022t\n\010" +
+      "logParam\022\020.mlflow.LogParam\032\031.mlflow.LogP" +
+      "aram.Response\";\362\206\0317\n(\n\004POST\022\032/mlflow/run" +
+      "s/log-parameter\032\004\010\002\020\000\020\001*\tLog Param\022\241\001\n\020s" +
+      "etExperimentTag\022\030.mlflow.SetExperimentTa" +
+      "g\032!.mlflow.SetExperimentTag.Response\"P\362\206" +
+      "\031L\n4\n\004POST\022&/mlflow/experiments/set-expe" +
+      "riment-tag\032\004\010\002\020\000\020\001*\022Set Experiment Tag\022\260" +
+      "\001\n\023deleteExperimentTag\022\033.mlflow.DeleteEx" +
+      "perimentTag\032$.mlflow.DeleteExperimentTag" +
+      ".Response\"V\362\206\031R\n7\n\004POST\022)/mlflow/experim" +
+      "ents/delete-experiment-tag\032\004\010\002\020\000\020\001*\025Dele" +
+      "te Experiment Tag\022f\n\006setTag\022\016.mlflow.Set" +
+      "Tag\032\027.mlflow.SetTag.Response\"3\362\206\031/\n\"\n\004PO" +
+      "ST\022\024/mlflow/runs/set-tag\032\004\010\002\020\000\020\001*\007Set Ta" +
+      "g\022\210\001\n\013setTraceTag\022\023.mlflow.SetTraceTag\032\034" +
+      ".mlflow.SetTraceTag.Response\"F\362\206\031B\n/\n\005PA" +
+      "TCH\022 /mlflow/traces/{request_id}/tags\032\004\010" +
+      "\002\020\000\020\003*\rSet Trace Tag\022\217\001\n\rsetTraceTagV3\022\025" +
+      ".mlflow.SetTraceTagV3\032\036.mlflow.SetTraceT" +
+      "agV3.Response\"G\362\206\031C\n-\n\005PATCH\022\036/mlflow/tr" +
+      "aces/{trace_id}/tags\032\004\010\003\020\000\020\003*\020Set Trace " +
+      "Tag V3\022\225\001\n\016deleteTraceTag\022\026.mlflow.Delet" +
+      "eTraceTag\032\037.mlflow.DeleteTraceTag.Respon" +
+      "se\"J\362\206\031F\n0\n\006DELETE\022 /mlflow/traces/{requ" +
+      "est_id}/tags\032\004\010\002\020\000\020\003*\020Delete Trace Tag\022\234" +
+      "\001\n\020deleteTraceTagV3\022\030.mlflow.DeleteTrace" +
+      "TagV3\032!.mlflow.DeleteTraceTagV3.Response" +
+      "\"K\362\206\031G\n.\n\006DELETE\022\036/mlflow/traces/{trace_" +
+      "id}/tags\032\004\010\003\020\000\020\003*\023Delete Trace Tag V3\022u\n" +
+      "\tdeleteTag\022\021.mlflow.DeleteTag\032\032.mlflow.D" +
+      "eleteTag.Response\"9\362\206\0315\n%\n\004POST\022\027/mlflow" +
+      "/runs/delete-tag\032\004\010\002\020\000\020\001*\nDelete Tag\022e\n\006" +
+      "getRun\022\016.mlflow.GetRun\032\027.mlflow.GetRun.R" +
+      "esponse\"2\362\206\031*\n\035\n\003GET\022\020/mlflow/runs/get\032\004" +
+      "\010\002\020\000\020\001*\007Get Run\272\214\031\000\022y\n\nsearchRuns\022\022.mlfl" +
+      "ow.SearchRuns\032\033.mlflow.SearchRuns.Respon",
+      "se\":\362\206\0312\n!\n\004POST\022\023/mlflow/runs/search\032\004\010" +
+      "\002\020\000\020\001*\013Search Runs\272\214\031\000\022\207\001\n\rlistArtifacts" +
+      "\022\025.mlflow.ListArtifacts\032\036.mlflow.ListArt" +
+      "ifacts.Response\"?\362\206\0317\n#\n\003GET\022\026/mlflow/ar" +
+      "tifacts/list\032\004\010\002\020\000\020\001*\016List Artifacts\272\214\031\000" +
+      "\022\225\001\n\020getMetricHistory\022\030.mlflow.GetMetric" +
+      "History\032!.mlflow.GetMetricHistory.Respon" +
+      "se\"D\362\206\031@\n(\n\003GET\022\033/mlflow/metrics/get-his" +
+      "tory\032\004\010\002\020\000\020\001*\022Get Metric History\022\267\001\n\034get" +
+      "MetricHistoryBulkInterval\022$.mlflow.GetMe" +
+      "tricHistoryBulkInterval\032-.mlflow.GetMetr" +
+      "icHistoryBulkInterval.Response\"B\362\206\031:\n6\n\003" +
+      "GET\022)/mlflow/metrics/get-history-bulk-in" +
+      "terval\032\004\010\002\020\013\020\003\272\214\031\000\022p\n\010logBatch\022\020.mlflow." +
+      "LogBatch\032\031.mlflow.LogBatch.Response\"7\362\206\031" +
+      "3\n$\n\004POST\022\026/mlflow/runs/log-batch\032\004\010\002\020\000\020" +
+      "\001*\tLog Batch\022p\n\010logModel\022\020.mlflow.LogMod" +
+      "el\032\031.mlflow.LogModel.Response\"7\362\206\0313\n$\n\004P" +
+      "OST\022\026/mlflow/runs/log-model\032\004\010\002\020\000\020\001*\tLog" +
+      " Model\022u\n\tlogInputs\022\021.mlflow.LogInputs\032\032" +
+      ".mlflow.LogInputs.Response\"9\362\206\0315\n%\n\004POST" +
+      "\022\027/mlflow/runs/log-inputs\032\004\010\002\020\000\020\001*\nLog I" +
+      "nputs\022v\n\nlogOutputs\022\022.mlflow.LogOutputs\032" +
+      "\033.mlflow.LogOutputs.Response\"7\362\206\0313\n\"\n\004PO" +
+      "ST\022\024/mlflow/runs/outputs\032\004\010\002\020\000\020\003*\013Log Ou" +
+      "tputs\022\207\001\n\016searchDatasets\022\026.mlflow.Search" +
+      "Datasets\032\037.mlflow.SearchDatasets.Respons" +
+      "e\"<\362\206\0314\n0\n\004POST\022\"mlflow/experiments/sear" +
+      "ch-datasets\032\004\010\002\020\000\020\003\272\214\031\000\022p\n\nstartTrace\022\022." +
+      "mlflow.StartTrace\032\033.mlflow.StartTrace.Re" +
+      "sponse\"1\362\206\031-\n\034\n\004POST\022\016/mlflow/traces\032\004\010\002" +
+      "\020\000\020\003*\013Start Trace\022v\n\010endTrace\022\020.mlflow.E" +
+      "ndTrace\032\031.mlflow.EndTrace.Response\"=\362\206\0319" +
+      "\n*\n\005PATCH\022\033/mlflow/traces/{request_id}\032\004" +
+      "\010\002\020\000\020\003*\tEnd Trace\022\211\001\n\014getTraceInfo\022\024.mlf" +
+      "low.GetTraceInfo\032\035.mlflow.GetTraceInfo.R" +
+      "esponse\"D\362\206\031@\n-\n\003GET\022 /mlflow/traces/{re" +
+      "quest_id}/info\032\004\010\002\020\000\020\003*\rGet TraceInfo\022\213\001" +
+      "\n\016getTraceInfoV3\022\026.mlflow.GetTraceInfoV3" +
+      "\032\037.mlflow.GetTraceInfoV3.Response\"@\362\206\031<\n" +
+      "&\n\003GET\022\031/mlflow/traces/{trace_id}\032\004\010\003\020\000\020" +
+      "\003*\020Get TraceInfo v3\022n\n\010getTrace\022\020.mlflow" +
+      ".GetTrace\032\031.mlflow.GetTrace.Response\"5\362\206" +
+      "\0311\n\037\n\003GET\022\022/mlflow/traces/get\032\004\010\003\020\000\020\003*\014G" +
+      "et Trace v3\022\203\001\n\016batchGetTraces\022\026.mlflow." +
+      "BatchGetTraces\032\037.mlflow.BatchGetTraces.R" +
+      "esponse\"8\362\206\0314\n$\n\003GET\022\027/mlflow/traces/bat" +
+      "chGet\032\004\010\003\020\000\020\003*\nGet Traces\022w\n\014searchTrace" +
+      "s\022\024.mlflow.SearchTraces\032\035.mlflow.SearchT" +
+      "races.Response\"2\362\206\031.\n\033\n\003GET\022\016/mlflow/tra" +
+      "ces\032\004\010\002\020\000\020\003*\rSearch Traces\022\210\001\n\016searchTra" +
+      "cesV3\022\026.mlflow.SearchTracesV3\032\037.mlflow.S" +
+      "earchTracesV3.Response\"=\362\206\0319\n#\n\004POST\022\025/m" +
+      "lflow/traces/search\032\004\010\003\020\000\020\003*\020Search Trac" +
+      "es V3\022i\n\014startTraceV3\022\024.mlflow.StartTrac" +
+      "eV3\032\035.mlflow.StartTraceV3.Response\"$\362\206\031 " +
+      "\n\034\n\004POST\022\016/mlflow/traces\032\004\010\003\020\000\020\003\022\222\001\n\017lin" +
+      "kTracesToRun\022\027.mlflow.LinkTracesToRun\032 ." +
+      "mlflow.LinkTracesToRun.Response\"D\362\206\031@\n(\n" +
+      "\004POST\022\032/mlflow/traces/link-to-run\032\004\010\002\020\000\020" +
+      "\003*\022Link Traces to Run\022\237\001\n\022linkPromptsToT" +
+      "race\022\032.mlflow.LinkPromptsToTrace\032#.mlflo" +
+      "w.LinkPromptsToTrace.Response\"H\362\206\031D\n)\n\004P" +
+      "OST\022\033/mlflow/traces/link-prompts\032\004\010\002\020\000\020\003" +
+      "*\025Link Prompts to Trace\022\242\001\n\031searchUnifie" +
+      "dTraceHandler\022\033.mlflow.SearchUnifiedTrac" +
+      "es\032$.mlflow.SearchUnifiedTraces.Response" +
+      "\"B\362\206\031>\n#\n\003GET\022\026/mlflow/unified-traces\032\004\010" +
+      "\002\020\000\020\003*\025Search Unified Traces\022\257\001\n\025getOnli" +
+      "neTraceDetails\022\035.mlflow.GetOnlineTraceDe" +
+      "tails\032&.mlflow.GetOnlineTraceDetails.Res" +
+      "ponse\"O\362\206\031K\n-\n\003GET\022 /mlflow/get-online-t" +
+      "race-details\032\004\010\002\020\000\020\003*\030Get Online Trace D" +
+      "etails\022\206\001\n\014deleteTraces\022\024.mlflow.DeleteT" +
+      "races\032\035.mlflow.DeleteTraces.Response\"A\362\206" +
+      "\031=\n*\n\004POST\022\034/mlflow/traces/delete-traces" +
+      "\032\004\010\002\020\000\020\003*\rDelete Traces\022\217\001\n\016deleteTraces" +
+      "V3\022\026.mlflow.DeleteTracesV3\032\037.mlflow.Dele" +
+      "teTracesV3.Response\"D\362\206\031@\n*\n\004POST\022\034/mlfl" +
+      "ow/traces/delete-traces\032\004\010\003\020\000\020\003*\020Delete " +
+      "Traces V3\022\343\001\n\037calculateTraceFilterCorrel" +
+      "ation\022\'.mlflow.CalculateTraceFilterCorre" +
+      "lation\0320.mlflow.CalculateTraceFilterCorr" +
+      "elation.Response\"e\362\206\031a\n9\n\004POST\022+/mlflow/" +
+      "traces/calculate-filter-correlation\032\004\010\003\020" +
+      "\000\020\003*\"Calculate Trace Filter Correlation\022" +
+      "\225\001\n\021queryTraceMetrics\022\031.mlflow.QueryTrac" +
+      "eMetrics\032\".mlflow.QueryTraceMetrics.Resp" +
+      "onse\"A\362\206\031=\n$\n\004POST\022\026/mlflow/traces/metri" +
+      "cs\032\004\010\003\020\000\020\003*\023Query Trace Metrics\022\203\001\n\016list" +
+      "Workspaces\022\026.mlflow.ListWorkspaces\032\037.mlf" +
+      "low.ListWorkspaces.Response\"8\362\206\0314\n\037\n\003GET" +
+      "\022\022/mlflow/workspaces\032\004\010\003\020\000\020\003*\017List Works" +
+      "paces\022\210\001\n\017createWorkspace\022\027.mlflow.Creat" +
+      "eWorkspace\032 .mlflow.CreateWorkspace.Resp" +
+      "onse\":\362\206\0316\n \n\004POST\022\022/mlflow/workspaces\032\004" +
+      "\010\003\020\000\020\003*\020Create Workspace\022\214\001\n\014getWorkspac" +
+      "e\022\024.mlflow.GetWorkspace\032\035.mlflow.GetWork" +
+      "space.Response\"G\362\206\031C\n0\n\003GET\022#/mlflow/wor" +
+      "kspaces/{workspace_name}\032\004\010\003\020\000\020\003*\rGet Wo" +
+      "rkspace\022\232\001\n\017updateWorkspace\022\027.mlflow.Upd" +
+      "ateWorkspace\032 .mlflow.UpdateWorkspace.Re" +
+      "sponse\"L\362\206\031H\n2\n\005PATCH\022#/mlflow/workspace" +
+      "s/{workspace_name}\032\004\010\003\020\000\020\003*\020Update Works" +
+      "pace\022\233\001\n\017deleteWorkspace\022\027.mlflow.Delete" +
+      "Workspace\032 .mlflow.DeleteWorkspace.Respo" +
+      "nse\"M\362\206\031I\n3\n\006DELETE\022#/mlflow/workspaces/" +
+      "{workspace_name}\032\004\010\003\020\000\020\003*\020Delete Workspa" +
+      "ce\022\224\001\n\021createLoggedModel\022\031.mlflow.Create" +
+      "LoggedModel\032\".mlflow.CreateLoggedModel.R" +
+      "esponse\"@\362\206\031<\n#\n\004POST\022\025/mlflow/logged-mo" +
+      "dels\032\004\010\002\020\000\020\003*\023Create Logged Model\022\250\001\n\023fi" +
+      "nalizeLoggedModel\022\033.mlflow.FinalizeLogge" +
+      "dModel\032$.mlflow.FinalizeLoggedModel.Resp" +
+      "onse\"N\362\206\031J\n/\n\005PATCH\022 /mlflow/logged-mode" +
+      "ls/{model_id}\032\004\010\002\020\000\020\003*\025Finalize Logged M" +
+      "odel\022\222\001\n\016getLoggedModel\022\026.mlflow.GetLogg" +
+      "edModel\032\037.mlflow.GetLoggedModel.Response" +
+      "\"G\362\206\031C\n-\n\003GET\022 /mlflow/logged-models/{mo" +
+      "del_id}\032\004\010\002\020\000\020\003*\020Get Logged Model\022\243\001\n\021de" +
+      "leteLoggedModel\022\031.mlflow.DeleteLoggedMod" +
+      "el\032\".mlflow.DeleteLoggedModel.Response\"O" +
+      "\362\206\031K\n0\n\006DELETE\022 /mlflow/logged-models/{m" +
+      "odel_id}\032\004\010\002\020\000\020\003*\025Delete a Logged Model\022" +
+      "\236\001\n\022searchLoggedModels\022\032.mlflow.SearchLo" +
+      "ggedModels\032#.mlflow.SearchLoggedModels.R" +
+      "esponse\"G\362\206\031C\n*\n\004POST\022\034/mlflow/logged-mo" +
+      "dels/search\032\004\010\002\020\000\020\003*\023Search LoggedModels" +
+      "\022\251\001\n\022setLoggedModelTags\022\032.mlflow.SetLogg" +
+      "edModelTags\032#.mlflow.SetLoggedModelTags." +
+      "Response\"R\362\206\031N\n4\n\005PATCH\022%/mlflow/logged-" +
+      "models/{model_id}/tags\032\004\010\002\020\000\020\003*\024Set Logg" +
+      "ed Model Tag\022\275\001\n\024deleteLoggedModelTag\022\034." +
+      "mlflow.DeleteLoggedModelTag\032%.mlflow.Del" +
+      "eteLoggedModelTag.Response\"`\362\206\031\\\n?\n\006DELE" +
+      "TE\022//mlflow/logged-models/{model_id}/tag" +
+      "s/{tag_key}\032\004\010\002\020\000\020\003*\027Delete Logged Model" +
+      " Tag\022\326\001\n\030listLoggedModelArtifacts\022 .mlfl" +
+      "ow.ListLoggedModelArtifacts\032).mlflow.Lis" +
+      "tLoggedModelArtifacts.Response\"m\362\206\031i\nC\n\003" +
+      "GET\0226/mlflow/logged-models/{model_id}/ar" +
+      "tifacts/directories\032\004\010\002\020\000\020\003* List Artifa" +
+      "cts for Logged Models\022\301\001\n\024LogLoggedModel" +
+      "Params\022#.mlflow.LogLoggedModelParamsRequ" +
+      "est\032,.mlflow.LogLoggedModelParamsRequest" +
+      ".Response\"V\362\206\031R\n5\n\004POST\022\'/mlflow/logged-" +
+      "models/{model_id}/params\032\004\010\002\020\000\020\003*\027Log Lo" +
+      "gged Model Params\022\260\001\n\rGetAssessment\022\034.ml" +
+      "flow.GetAssessmentRequest\032%.mlflow.GetAs" +
+      "sessmentRequest.Response\"Z\362\206\031V\nB\n\003GET\0225/" +
+      "mlflow/traces/{trace_id}/assessments/{as" +
+      "sessment_id}\032\004\010\003\020\000\020\003*\016Get Assessment\022\337\001\n" +
+      "\020createAssessment\022\030.mlflow.CreateAssessm" +
+      "ent\032!.mlflow.CreateAssessment.Response\"\215" +
+      "\001\362\206\031\210\001\n>\n\004POST\0220/mlflow/traces/{assessme" +
+      "nt.trace_id}/assessments\032\004\010\003\020\000\020\003\030\350\007\030\356\007\030\014" +
+      "\030\001*:Create an assessment of a trace or a" +
+      " span within the trace\022\320\001\n\020updateAssessm" +
+      "ent\022\030.mlflow.UpdateAssessment\032!.mlflow.U" +
+      "pdateAssessment.Response\"\177\362\206\031{\nD\n\005PATCH\022" +
+      "5/mlflow/traces/{trace_id}/assessments/{" +
+      "assessment_id}\032\004\010\003\020\000\020\003\030\350\007\030\356\007\030\001*)Update a" +
+      "n existing assessment on a trace.\022\261\001\n\020de" +
+      "leteAssessment\022\030.mlflow.DeleteAssessment" +
+      "\032!.mlflow.DeleteAssessment.Response\"`\362\206\031" +
+      "\\\nE\n\006DELETE\0225/mlflow/traces/{trace_id}/a" +
+      "ssessments/{assessment_id}\032\004\010\003\020\000\020\003*\021Dele" +
+      "te Assessment\022\205\001\n\013createIssue\022\032.mlflow.i" +
+      "ssues.CreateIssue\032#.mlflow.issues.Create" +
+      "Issue.Response\"5\362\206\0311\n\034\n\004POST\022\016/mlflow/is" +
+      "sues\032\004\010\003\020\000\020\003*\017Create an issue\022\232\001\n\013update" +
+      "Issue\022\032.mlflow.issues.UpdateIssue\032#.mlfl" +
+      "ow.issues.UpdateIssue.Response\"J\362\206\031F\n(\n\005" +
+      "PATCH\022\031/mlflow/issues/{issue_id}\032\004\010\003\020\000\020\003" +
+      "*\030Update an existing issue\022\211\001\n\010getIssue\022" +
+      "\027.mlflow.issues.GetIssue\032 .mlflow.issues" +
+      ".GetIssue.Response\"B\362\206\031>\n&\n\003GET\022\031/mlflow" +
+      "/issues/{issue_id}\032\004\010\003\020\000\020\003*\022Get an issue" +
+      " by ID\022\215\001\n\014searchIssues\022\033.mlflow.issues." +
+      "SearchIssues\032$.mlflow.issues.SearchIssue" +
+      "s.Response\":\362\206\0316\n#\n\004POST\022\025/mlflow/issues" +
+      "/search\032\004\010\003\020\000\020\003*\rSearch issues\022\232\001\n\rcreat" +
+      "eDataset\022\025.mlflow.CreateDataset\032\036.mlflow" +
+      ".CreateDataset.Response\"R\362\206\031N\n%\n\004POST\022\027/" +
+      "mlflow/datasets/create\032\004\010\003\020\000\020\003\030\350\007\030\356\007\030\014\030\001" +
+      "*\031Create Evaluation Dataset\022\221\001\n\ngetDatas" +
+      "et\022\022.mlflow.GetDataset\032\033.mlflow.GetDatas" +
+      "et.Response\"R\362\206\031N\n*\n\003GET\022\035/mlflow/datase" +
+      "ts/{dataset_id}\032\004\010\003\020\000\020\003\030\350\007\030\272\027\030\001*\026Get Eva" +
+      "luation Dataset\022\240\001\n\rdeleteDataset\022\025.mlfl" +
+      "ow.DeleteDataset\032\036.mlflow.DeleteDataset." +
+      "Response\"X\362\206\031T\n-\n\006DELETE\022\035/mlflow/datase" +
+      "ts/{dataset_id}\032\004\010\003\020\000\020\003\030\350\007\030\272\027\030\001*\031Delete " +
+      "Evaluation Dataset\022\335\001\n\030searchEvaluationD" +
+      "atasets\022 .mlflow.SearchEvaluationDataset" +
+      "s\032).mlflow.SearchEvaluationDatasets.Resp" +
+      "onse\"t\362\206\031p\n%\n\004POST\022\027/mlflow/datasets/sea" +
+      "rch\032\004\010\003\020\000\n$\n\003GET\022\027/mlflow/datasets/searc" +
+      "h\032\004\010\003\020\000\020\003\030\350\007\030\001*\032Search Evaluation Datase" +
+      "ts\022\251\001\n\016setDatasetTags\022\026.mlflow.SetDatase" +
+      "tTags\032\037.mlflow.SetDatasetTags.Response\"^" +
+      "\362\206\031Z\n1\n\005PATCH\022\"/mlflow/datasets/{dataset" +
+      "_id}/tags\032\004\010\003\020\000\020\003\030\350\007\030\272\027\030\001*\033Set Evaluatio" +
+      "n Dataset Tags\022\270\001\n\020deleteDatasetTag\022\030.ml" +
+      "flow.DeleteDatasetTag\032!.mlflow.DeleteDat" +
+      "asetTag.Response\"g\362\206\031c\n8\n\006DELETE\022(/mlflo" +
+      "w/datasets/{dataset_id}/tags/{key}\032\004\010\003\020\000" +
+      "\020\003\030\350\007\030\272\027\030\001*\035Delete Evaluation Dataset Ta" +
+      "g\022\303\001\n\024upsertDatasetRecords\022\034.mlflow.Upse" +
+      "rtDatasetRecords\032%.mlflow.UpsertDatasetR" +
+      "ecords.Response\"f\362\206\031b\n3\n\004POST\022%/mlflow/d" +
+      "atasets/{dataset_id}/records\032\004\010\003\020\000\020\003\030\350\007\030" +
+      "\272\027\030\001*!Upsert Evaluation Dataset Records\022" +
+      "\326\001\n\027getDatasetExperimentIds\022\037.mlflow.Get" +
+      "DatasetExperimentIds\032(.mlflow.GetDataset" +
+      "ExperimentIds.Response\"p\362\206\031l\n9\n\003GET\022,/ml" +
+      "flow/datasets/{dataset_id}/experiment-id" +
+      "s\032\004\010\003\020\000\020\003\030\350\007\030\272\027\030\001*%Get Evaluation Datase" +
+      "t Experiment IDs\022\212\001\n\016registerScorer\022\026.ml" +
+      "flow.RegisterScorer\032\037.mlflow.RegisterSco" +
+      "rer.Response\"?\362\206\031;\n&\n\004POST\022\030/mlflow/scor" +
+      "ers/register\032\004\010\003\020\000\020\001*\017Register Scorer\022y\n" +
+      "\013listScorers\022\023.mlflow.ListScorers\032\034.mlfl" +
+      "ow.ListScorers.Response\"7\362\206\0313\n!\n\003GET\022\024/m" +
+      "lflow/scorers/list\032\004\010\003\020\000\020\001*\014List Scorers" +
+      "\022\232\001\n\022listScorerVersions\022\032.mlflow.ListSco" +
+      "rerVersions\032#.mlflow.ListScorerVersions." +
+      "Response\"C\362\206\031?\n%\n\003GET\022\030/mlflow/scorers/v" +
+      "ersions\032\004\010\003\020\000\020\001*\024List Scorer Versions\022p\n" +
+      "\tgetScorer\022\021.mlflow.GetScorer\032\032.mlflow.G" +
+      "etScorer.Response\"4\362\206\0310\n \n\003GET\022\023/mlflow/" +
+      "scorers/get\032\004\010\003\020\000\020\001*\nGet Scorer\022\202\001\n\014dele" +
+      "teScorer\022\024.mlflow.DeleteScorer\032\035.mlflow." +
+      "DeleteScorer.Response\"=\362\206\0319\n&\n\006DELETE\022\026/" +
+      "mlflow/scorers/delete\032\004\010\003\020\000\020\001*\rDelete Sc" +
+      "orer\022\266\001\n\021getDatasetRecords\022\031.mlflow.GetD" +
+      "atasetRecords\032\".mlflow.GetDatasetRecords" +
+      ".Response\"b\362\206\031^\n2\n\003GET\022%/mlflow/datasets" +
+      "/{dataset_id}/records\032\004\010\003\020\000\020\003\030\350\007\030\272\027\030\001*\036G" +
+      "et Evaluation Dataset Records\022\305\001\n\024delete" +
+      "DatasetRecords\022\034.mlflow.DeleteDatasetRec" +
+      "ords\032%.mlflow.DeleteDatasetRecords.Respo" +
+      "nse\"h\362\206\031d\n5\n\006DELETE\022%/mlflow/datasets/{d" +
+      "ataset_id}/records\032\004\010\003\020\000\020\003\030\350\007\030\272\027\030\001*!Dele" +
+      "te Evaluation Dataset Records\022\315\001\n\027addDat" +
+      "asetToExperiments\022\037.mlflow.AddDatasetToE" +
+      "xperiments\032(.mlflow.AddDatasetToExperime" +
+      "nts.Response\"g\362\206\031c\n;\n\004POST\022-/mlflow/data" +
+      "sets/{dataset_id}/add-experiments\032\004\010\003\020\000\020" +
+      "\003\030\350\007\030\272\027\030\001*\032Add Dataset to Experiments\022\344\001" +
+      "\n\034removeDatasetFromExperiments\022$.mlflow." +
+      "RemoveDatasetFromExperiments\032-.mlflow.Re" +
+      "moveDatasetFromExperiments.Response\"o\362\206\031" +
+      "k\n>\n\004POST\0220/mlflow/datasets/{dataset_id}" +
+      "/remove-experiments\032\004\010\003\020\000\020\003\030\350\007\030\272\027\030\001*\037Rem" +
+      "ove Dataset from Experiments\022\245\001\n\023createG" +
+      "atewaySecret\022\033.mlflow.CreateGatewaySecre" +
+      "t\032$.mlflow.CreateGatewaySecret.Response\"" +
+      "K\362\206\031G\n,\n\004POST\022\036/mlflow/gateway/secrets/c" +
+      "reate\032\004\010\003\020\000\020\001*\025Create Gateway Secret\022\246\001\n" +
+      "\024getGatewaySecretInfo\022\034.mlflow.GetGatewa" +
+      "ySecretInfo\032%.mlflow.GetGatewaySecretInf" +
+      "o.Response\"I\362\206\031E\n(\n\003GET\022\033/mlflow/gateway" +
+      "/secrets/get\032\004\010\003\020\000\020\001*\027Get Gateway Secret" +
+      " Info\022\245\001\n\023updateGatewaySecret\022\033.mlflow.U" +
+      "pdateGatewaySecret\032$.mlflow.UpdateGatewa" +
+      "ySecret.Response\"K\362\206\031G\n,\n\004POST\022\036/mlflow/" +
+      "gateway/secrets/update\032\004\010\003\020\000\020\001*\025Update G" +
+      "ateway Secret\022\247\001\n\023deleteGatewaySecret\022\033." +
+      "mlflow.DeleteGatewaySecret\032$.mlflow.Dele" +
+      "teGatewaySecret.Response\"M\362\206\031I\n.\n\006DELETE" +
+      "\022\036/mlflow/gateway/secrets/delete\032\004\010\003\020\000\020\001" +
+      "*\025Delete Gateway Secret\022\252\001\n\026listGatewayS" +
+      "ecretInfos\022\036.mlflow.ListGatewaySecretInf" +
+      "os\032\'.mlflow.ListGatewaySecretInfos.Respo" +
+      "nse\"G\362\206\031C\n)\n\003GET\022\034/mlflow/gateway/secret" +
+      "s/list\032\004\010\003\020\000\020\001*\024List Gateway Secrets\022\257\001\n" +
+      "\025createGatewayEndpoint\022\035.mlflow.CreateGa" +
+      "tewayEndpoint\032&.mlflow.CreateGatewayEndp" +
+      "oint.Response\"O\362\206\031K\n.\n\004POST\022 /mlflow/gat" +
+      "eway/endpoints/create\032\004\010\003\020\000\020\001*\027Create Ga" +
+      "teway Endpoint\022\237\001\n\022getGatewayEndpoint\022\032." +
+      "mlflow.GetGatewayEndpoint\032#.mlflow.GetGa" +
+      "tewayEndpoint.Response\"H\362\206\031D\n*\n\003GET\022\035/ml" +
+      "flow/gateway/endpoints/get\032\004\010\003\020\000\020\001*\024Get " +
+      "Gateway Endpoint\022\257\001\n\025updateGatewayEndpoi" +
+      "nt\022\035.mlflow.UpdateGatewayEndpoint\032&.mlfl" +
+      "ow.UpdateGatewayEndpoint.Response\"O\362\206\031K\n" +
+      ".\n\004POST\022 /mlflow/gateway/endpoints/updat" +
+      "e\032\004\010\003\020\000\020\001*\027Update Gateway Endpoint\022\261\001\n\025d" +
+      "eleteGatewayEndpoint\022\035.mlflow.DeleteGate" +
+      "wayEndpoint\032&.mlflow.DeleteGatewayEndpoi" +
+      "nt.Response\"Q\362\206\031M\n0\n\006DELETE\022 /mlflow/gat" +
+      "eway/endpoints/delete\032\004\010\003\020\000\020\001*\027Delete Ga" +
+      "teway Endpoint\022\250\001\n\024listGatewayEndpoints\022" +
+      "\034.mlflow.ListGatewayEndpoints\032%.mlflow.L" +
+      "istGatewayEndpoints.Response\"K\362\206\031G\n+\n\003GE" +
+      "T\022\036/mlflow/gateway/endpoints/list\032\004\010\003\020\000\020" +
+      "\001*\026List Gateway Endpoints\022\324\001\n\034createGate" +
+      "wayModelDefinition\022$.mlflow.CreateGatewa" +
+      "yModelDefinition\032-.mlflow.CreateGatewayM" +
+      "odelDefinition.Response\"_\362\206\031[\n6\n\004POST\022(/" +
+      "mlflow/gateway/model-definitions/create\032" +
+      "\004\010\003\020\000\020\001*\037Create Gateway Model Definition" +
+      "\022\304\001\n\031getGatewayModelDefinition\022!.mlflow." +
+      "GetGatewayModelDefinition\032*.mlflow.GetGa" +
+      "tewayModelDefinition.Response\"X\362\206\031T\n2\n\003G" +
+      "ET\022%/mlflow/gateway/model-definitions/ge" +
+      "t\032\004\010\003\020\000\020\001*\034Get Gateway Model Definition\022" +
+      "\315\001\n\033listGatewayModelDefinitions\022#.mlflow" +
+      ".ListGatewayModelDefinitions\032,.mlflow.Li" +
+      "stGatewayModelDefinitions.Response\"[\362\206\031W" +
+      "\n3\n\003GET\022&/mlflow/gateway/model-definitio" +
+      "ns/list\032\004\010\003\020\000\020\001*\036List Gateway Model Defi" +
+      "nitions\022\324\001\n\034updateGatewayModelDefinition" +
+      "\022$.mlflow.UpdateGatewayModelDefinition\032-" +
+      ".mlflow.UpdateGatewayModelDefinition.Res" +
       "ponse\"_\362\206\031[\n6\n\004POST\022(/mlflow/gateway/mod" +
-      "el-definitions/create\032\004\010\003\020\000\020\001*\037Create Ga" +
-      "teway Model Definition\022\304\001\n\031getGatewayMod" +
-      "elDefinition\022!.mlflow.GetGatewayModelDef" +
-      "inition\032*.mlflow.GetGatewayModelDefiniti" +
-      "on.Response\"X\362\206\031T\n2\n\003GET\022%/mlflow/gatewa" +
-      "y/model-definitions/get\032\004\010\003\020\000\020\001*\034Get Gat" +
-      "eway Model Definition\022\315\001\n\033listGatewayMod" +
-      "elDefinitions\022#.mlflow.ListGatewayModelD" +
-      "efinitions\032,.mlflow.ListGatewayModelDefi" +
-      "nitions.Response\"[\362\206\031W\n3\n\003GET\022&/mlflow/g" +
-      "ateway/model-definitions/list\032\004\010\003\020\000\020\001*\036L" +
-      "ist Gateway Model Definitions\022\324\001\n\034update" +
-      "GatewayModelDefinition\022$.mlflow.UpdateGa" +
-      "tewayModelDefinition\032-.mlflow.UpdateGate" +
-      "wayModelDefinition.Response\"_\362\206\031[\n6\n\004POS" +
-      "T\022(/mlflow/gateway/model-definitions/upd" +
-      "ate\032\004\010\003\020\000\020\001*\037Update Gateway Model Defini" +
-      "tion\022\326\001\n\034deleteGatewayModelDefinition\022$." +
-      "mlflow.DeleteGatewayModelDefinition\032-.ml" +
-      "flow.DeleteGatewayModelDefinition.Respon" +
-      "se\"a\362\206\031]\n8\n\006DELETE\022(/mlflow/gateway/mode" +
-      "l-definitions/delete\032\004\010\003\020\000\020\001*\037Delete Gat" +
-      "eway Model Definition\022\305\001\n\025attachModelToE" +
-      "ndpoint\022$.mlflow.AttachModelToGatewayEnd" +
-      "point\032-.mlflow.AttachModelToGatewayEndpo" +
-      "int.Response\"W\362\206\031S\n5\n\004POST\022\'/mlflow/gate" +
-      "way/endpoints/models/attach\032\004\010\003\020\000\020\001*\030Att" +
-      "ach Model to Endpoint\022\315\001\n\027detachModelFro" +
-      "mEndpoint\022&.mlflow.DetachModelFromGatewa" +
-      "yEndpoint\032/.mlflow.DetachModelFromGatewa" +
-      "yEndpoint.Response\"Y\362\206\031U\n5\n\004POST\022\'/mlflo" +
-      "w/gateway/endpoints/models/detach\032\004\010\003\020\000\020" +
-      "\001*\032Detach Model from Endpoint\022\306\001\n\025create" +
-      "EndpointBinding\022$.mlflow.CreateGatewayEn" +
-      "dpointBinding\032-.mlflow.CreateGatewayEndp" +
-      "ointBinding.Response\"X\362\206\031T\n7\n\004POST\022)/mlf" +
-      "low/gateway/endpoints/bindings/create\032\004\010" +
-      "\003\020\000\020\001*\027Create Endpoint Binding\022\310\001\n\025delet" +
-      "eEndpointBinding\022$.mlflow.DeleteGatewayE" +
-      "ndpointBinding\032-.mlflow.DeleteGatewayEnd" +
-      "pointBinding.Response\"Z\362\206\031V\n9\n\006DELETE\022)/" +
-      "mlflow/gateway/endpoints/bindings/delete" +
-      "\032\004\010\003\020\000\020\001*\027Delete Endpoint Binding\022\277\001\n\024li" +
-      "stEndpointBindings\022#.mlflow.ListGatewayE" +
-      "ndpointBindings\032,.mlflow.ListGatewayEndp" +
-      "ointBindings.Response\"T\362\206\031P\n4\n\003GET\022\'/mlf" +
-      "low/gateway/endpoints/bindings/list\032\004\010\003\020" +
-      "\000\020\001*\026List Endpoint Bindings\022\261\001\n\025setGatew" +
-      "ayEndpointTag\022\035.mlflow.SetGatewayEndpoin" +
-      "tTag\032&.mlflow.SetGatewayEndpointTag.Resp" +
-      "onse\"Q\362\206\031M\n/\n\004POST\022!/mlflow/gateway/endp" +
-      "oints/set-tag\032\004\010\003\020\000\020\001*\030Gateway Set Endpo" +
-      "int Tag\022\302\001\n\030deleteGatewayEndpointTag\022 .m" +
-      "lflow.DeleteGatewayEndpointTag\032).mlflow." +
-      "DeleteGatewayEndpointTag.Response\"Y\362\206\031U\n" +
-      "4\n\006DELETE\022$/mlflow/gateway/endpoints/del" +
-      "ete-tag\032\004\010\003\020\000\020\001*\033Gateway Delete Endpoint" +
-      " Tag\022\257\001\n\022createBudgetPolicy\022!.mlflow.Cre" +
-      "ateGatewayBudgetPolicy\032*.mlflow.CreateGa" +
-      "tewayBudgetPolicy.Response\"J\362\206\031F\n,\n\004POST" +
-      "\022\036/mlflow/gateway/budgets/create\032\004\010\003\020\000\020\001" +
-      "*\024Create Budget Policy\022\237\001\n\017getBudgetPoli" +
-      "cy\022\036.mlflow.GetGatewayBudgetPolicy\032\'.mlf" +
-      "low.GetGatewayBudgetPolicy.Response\"C\362\206\031" +
-      "?\n(\n\003GET\022\033/mlflow/gateway/budgets/get\032\004\010" +
-      "\003\020\000\020\001*\021Get Budget Policy\022\257\001\n\022updateBudge" +
-      "tPolicy\022!.mlflow.UpdateGatewayBudgetPoli" +
-      "cy\032*.mlflow.UpdateGatewayBudgetPolicy.Re" +
-      "sponse\"J\362\206\031F\n,\n\004POST\022\036/mlflow/gateway/bu" +
-      "dgets/update\032\004\010\003\020\000\020\001*\024Update Budget Poli" +
-      "cy\022\261\001\n\022deleteBudgetPolicy\022!.mlflow.Delet" +
-      "eGatewayBudgetPolicy\032*.mlflow.DeleteGate" +
-      "wayBudgetPolicy.Response\"L\362\206\031H\n.\n\006DELETE" +
-      "\022\036/mlflow/gateway/budgets/delete\032\004\010\003\020\000\020\001" +
-      "*\024Delete Budget Policy\022\254\001\n\022listBudgetPol" +
-      "icies\022!.mlflow.ListGatewayBudgetPolicies" +
-      "\032*.mlflow.ListGatewayBudgetPolicies.Resp" +
-      "onse\"G\362\206\031C\n)\n\003GET\022\034/mlflow/gateway/budge" +
-      "ts/list\032\004\010\003\020\000\020\001*\024List Budget Policies\022\320\001" +
-      "\n\033createPromptOptimizationJob\022#.mlflow.C" +
-      "reatePromptOptimizationJob\032,.mlflow.Crea" +
-      "tePromptOptimizationJob.Response\"^\362\206\031Z\n." +
-      "\n\004POST\022 /mlflow/prompt-optimization/jobs" +
-      "\032\004\010\003\020\000\020\001\030\350\007\030\272\027\030\001*\036Create Prompt Optimiza" +
-      "tion Job\022\314\001\n\030getPromptOptimizationJob\022 ." +
-      "mlflow.GetPromptOptimizationJob\032).mlflow" +
-      ".GetPromptOptimizationJob.Response\"c\362\206\031_" +
-      "\n6\n\003GET\022)/mlflow/prompt-optimization/job" +
-      "s/{job_id}\032\004\010\003\020\000\020\001\030\350\007\030\272\027\030\001*\033Get Prompt O" +
-      "ptimization Job\022\220\002\n\034searchPromptOptimiza" +
-      "tionJobs\022$.mlflow.SearchPromptOptimizati" +
-      "onJobs\032-.mlflow.SearchPromptOptimization" +
-      "Jobs.Response\"\232\001\362\206\031\225\001\n5\n\004POST\022\'/mlflow/p" +
-      "rompt-optimization/jobs/search\032\004\010\003\020\000\n4\n\003" +
-      "GET\022\'/mlflow/prompt-optimization/jobs/se" +
-      "arch\032\004\010\003\020\000\020\001\030\350\007\030\001*\037Search Prompt Optimiz" +
-      "ation Jobs\022\343\001\n\033cancelPromptOptimizationJ" +
-      "ob\022#.mlflow.CancelPromptOptimizationJob\032" +
-      ",.mlflow.CancelPromptOptimizationJob.Res" +
-      "ponse\"q\362\206\031m\n>\n\004POST\0220/mlflow/prompt-opti" +
-      "mization/jobs/{job_id}/cancel\032\004\010\003\020\000\020\001\030\350\007" +
-      "\030\272\027\030\353\007\030\001*\036Cancel Prompt Optimization Job" +
-      "\022\333\001\n\033deletePromptOptimizationJob\022#.mlflo",
-      "w.DeletePromptOptimizationJob\032,.mlflow.D" +
-      "eletePromptOptimizationJob.Response\"i\362\206\031" +
-      "e\n9\n\006DELETE\022)/mlflow/prompt-optimization" +
-      "/jobs/{job_id}\032\004\010\003\020\000\020\001\030\350\007\030\272\027\030\001*\036Delete P" +
-      "rompt Optimization JobB\036\n\024org.mlflow.api" +
-      ".proto\220\001\001\342?\002\020\001"
+      "el-definitions/update\032\004\010\003\020\000\020\001*\037Update Ga" +
+      "teway Model Definition\022\326\001\n\034deleteGateway" +
+      "ModelDefinition\022$.mlflow.DeleteGatewayMo" +
+      "delDefinition\032-.mlflow.DeleteGatewayMode" +
+      "lDefinition.Response\"a\362\206\031]\n8\n\006DELETE\022(/m" +
+      "lflow/gateway/model-definitions/delete\032\004" +
+      "\010\003\020\000\020\001*\037Delete Gateway Model Definition\022" +
+      "\305\001\n\025attachModelToEndpoint\022$.mlflow.Attac" +
+      "hModelToGatewayEndpoint\032-.mlflow.AttachM" +
+      "odelToGatewayEndpoint.Response\"W\362\206\031S\n5\n\004" +
+      "POST\022\'/mlflow/gateway/endpoints/models/a" +
+      "ttach\032\004\010\003\020\000\020\001*\030Attach Model to Endpoint\022" +
+      "\315\001\n\027detachModelFromEndpoint\022&.mlflow.Det" +
+      "achModelFromGatewayEndpoint\032/.mlflow.Det" +
+      "achModelFromGatewayEndpoint.Response\"Y\362\206" +
+      "\031U\n5\n\004POST\022\'/mlflow/gateway/endpoints/mo" +
+      "dels/detach\032\004\010\003\020\000\020\001*\032Detach Model from E" +
+      "ndpoint\022\306\001\n\025createEndpointBinding\022$.mlfl" +
+      "ow.CreateGatewayEndpointBinding\032-.mlflow" +
+      ".CreateGatewayEndpointBinding.Response\"X" +
+      "\362\206\031T\n7\n\004POST\022)/mlflow/gateway/endpoints/" +
+      "bindings/create\032\004\010\003\020\000\020\001*\027Create Endpoint" +
+      " Binding\022\310\001\n\025deleteEndpointBinding\022$.mlf" +
+      "low.DeleteGatewayEndpointBinding\032-.mlflo" +
+      "w.DeleteGatewayEndpointBinding.Response\"" +
+      "Z\362\206\031V\n9\n\006DELETE\022)/mlflow/gateway/endpoin" +
+      "ts/bindings/delete\032\004\010\003\020\000\020\001*\027Delete Endpo" +
+      "int Binding\022\277\001\n\024listEndpointBindings\022#.m" +
+      "lflow.ListGatewayEndpointBindings\032,.mlfl" +
+      "ow.ListGatewayEndpointBindings.Response\"" +
+      "T\362\206\031P\n4\n\003GET\022\'/mlflow/gateway/endpoints/" +
+      "bindings/list\032\004\010\003\020\000\020\001*\026List Endpoint Bin" +
+      "dings\022\261\001\n\025setGatewayEndpointTag\022\035.mlflow" +
+      ".SetGatewayEndpointTag\032&.mlflow.SetGatew" +
+      "ayEndpointTag.Response\"Q\362\206\031M\n/\n\004POST\022!/m" +
+      "lflow/gateway/endpoints/set-tag\032\004\010\003\020\000\020\001*" +
+      "\030Gateway Set Endpoint Tag\022\302\001\n\030deleteGate" +
+      "wayEndpointTag\022 .mlflow.DeleteGatewayEnd" +
+      "pointTag\032).mlflow.DeleteGatewayEndpointT" +
+      "ag.Response\"Y\362\206\031U\n4\n\006DELETE\022$/mlflow/gat" +
+      "eway/endpoints/delete-tag\032\004\010\003\020\000\020\001*\033Gatew" +
+      "ay Delete Endpoint Tag\022\257\001\n\022createBudgetP" +
+      "olicy\022!.mlflow.CreateGatewayBudgetPolicy" +
+      "\032*.mlflow.CreateGatewayBudgetPolicy.Resp" +
+      "onse\"J\362\206\031F\n,\n\004POST\022\036/mlflow/gateway/budg" +
+      "ets/create\032\004\010\003\020\000\020\001*\024Create Budget Policy" +
+      "\022\237\001\n\017getBudgetPolicy\022\036.mlflow.GetGateway" +
+      "BudgetPolicy\032\'.mlflow.GetGatewayBudgetPo" +
+      "licy.Response\"C\362\206\031?\n(\n\003GET\022\033/mlflow/gate" +
+      "way/budgets/get\032\004\010\003\020\000\020\001*\021Get Budget Poli" +
+      "cy\022\257\001\n\022updateBudgetPolicy\022!.mlflow.Updat" +
+      "eGatewayBudgetPolicy\032*.mlflow.UpdateGate" +
+      "wayBudgetPolicy.Response\"J\362\206\031F\n,\n\004POST\022\036" +
+      "/mlflow/gateway/budgets/update\032\004\010\003\020\000\020\001*\024" +
+      "Update Budget Policy\022\261\001\n\022deleteBudgetPol" +
+      "icy\022!.mlflow.DeleteGatewayBudgetPolicy\032*" +
+      ".mlflow.DeleteGatewayBudgetPolicy.Respon" +
+      "se\"L\362\206\031H\n.\n\006DELETE\022\036/mlflow/gateway/budg" +
+      "ets/delete\032\004\010\003\020\000\020\001*\024Delete Budget Policy" +
+      "\022\254\001\n\022listBudgetPolicies\022!.mlflow.ListGat" +
+      "ewayBudgetPolicies\032*.mlflow.ListGatewayB" +
+      "udgetPolicies.Response\"G\362\206\031C\n)\n\003GET\022\034/ml" +
+      "flow/gateway/budgets/list\032\004\010\003\020\000\020\001*\024List " +
+      "Budget Policies\022\253\001\n\021listBudgetWindows\022 ." +
+      "mlflow.ListGatewayBudgetWindows\032).mlflow" +
+      ".ListGatewayBudgetWindows.Response\"I\362\206\031E" +
+      "\n,\n\003GET\022\037/mlflow/gateway/budgets/windows" +
+      "\032\004\010\003\020\000\020\001*\023List Budget Windows\022\320\001\n\033create" +
+      "PromptOptimizationJob\022#.mlflow.CreatePro" +
+      "mptOptimizationJob\032,.mlflow.CreatePrompt" +
+      "OptimizationJob.Response\"^\362\206\031Z\n.\n\004POST\022 " +
+      "/mlflow/prompt-optimization/jobs\032\004\010\003\020\000\020\001" +
+      "\030\350\007\030\272\027\030\001*\036Create Prompt Optimization Job" +
+      "\022\314\001\n\030getPromptOptimizationJob\022 .mlflow.G" +
+      "etPromptOptimizationJob\032).mlflow.GetProm" +
+      "ptOptimizationJob.Response\"c\362\206\031_\n6\n\003GET\022" +
+      ")/mlflow/prompt-optimization/jobs/{job_i" +
+      "d}\032\004\010\003\020\000\020\001\030\350\007\030\272\027\030\001*\033Get Prompt Optimizat" +
+      "ion Job\022\220\002\n\034searchPromptOptimizationJobs" +
+      "\022$.mlflow.SearchPromptOptimizationJobs\032-" +
+      ".mlflow.SearchPromptOptimizationJobs.Res" +
+      "ponse\"\232\001\362\206\031\225\001\n5\n\004POST\022\'/mlflow/prompt-op",
+      "timization/jobs/search\032\004\010\003\020\000\n4\n\003GET\022\'/ml" +
+      "flow/prompt-optimization/jobs/search\032\004\010\003" +
+      "\020\000\020\001\030\350\007\030\001*\037Search Prompt Optimization Jo" +
+      "bs\022\343\001\n\033cancelPromptOptimizationJob\022#.mlf" +
+      "low.CancelPromptOptimizationJob\032,.mlflow" +
+      ".CancelPromptOptimizationJob.Response\"q\362" +
+      "\206\031m\n>\n\004POST\0220/mlflow/prompt-optimization" +
+      "/jobs/{job_id}/cancel\032\004\010\003\020\000\020\001\030\350\007\030\272\027\030\353\007\030\001" +
+      "*\036Cancel Prompt Optimization Job\022\333\001\n\033del" +
+      "etePromptOptimizationJob\022#.mlflow.Delete" +
+      "PromptOptimizationJob\032,.mlflow.DeletePro" +
+      "mptOptimizationJob.Response\"i\362\206\031e\n9\n\006DEL" +
+      "ETE\022)/mlflow/prompt-optimization/jobs/{j" +
+      "ob_id}\032\004\010\003\020\000\020\001\030\350\007\030\272\027\030\001*\036Delete Prompt Op" +
+      "timization JobB\036\n\024org.mlflow.api.proto\220\001" +
+      "\001\342?\002\020\001"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -284848,8 +286991,26 @@ public final class Service {
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_mlflow_ListGatewayBudgetPolicies_Response_descriptor,
         new java.lang.String[] { "BudgetPolicies", "NextPageToken", });
-    internal_static_mlflow_GetSecretsConfig_descriptor =
+    internal_static_mlflow_ListGatewayBudgetWindows_descriptor =
       getDescriptor().getMessageTypes().get(147);
+    internal_static_mlflow_ListGatewayBudgetWindows_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_mlflow_ListGatewayBudgetWindows_descriptor,
+        new java.lang.String[] { });
+    internal_static_mlflow_ListGatewayBudgetWindows_BudgetWindow_descriptor =
+      internal_static_mlflow_ListGatewayBudgetWindows_descriptor.getNestedTypes().get(0);
+    internal_static_mlflow_ListGatewayBudgetWindows_BudgetWindow_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_mlflow_ListGatewayBudgetWindows_BudgetWindow_descriptor,
+        new java.lang.String[] { "BudgetPolicyId", "WindowStartMs", "WindowEndMs", "CurrentSpend", });
+    internal_static_mlflow_ListGatewayBudgetWindows_Response_descriptor =
+      internal_static_mlflow_ListGatewayBudgetWindows_descriptor.getNestedTypes().get(1);
+    internal_static_mlflow_ListGatewayBudgetWindows_Response_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_mlflow_ListGatewayBudgetWindows_Response_descriptor,
+        new java.lang.String[] { "Windows", });
+    internal_static_mlflow_GetSecretsConfig_descriptor =
+      getDescriptor().getMessageTypes().get(148);
     internal_static_mlflow_GetSecretsConfig_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_mlflow_GetSecretsConfig_descriptor,
@@ -284861,7 +287022,7 @@ public final class Service {
         internal_static_mlflow_GetSecretsConfig_Response_descriptor,
         new java.lang.String[] { "SecretsAvailable", });
     internal_static_mlflow_CreatePromptOptimizationJob_descriptor =
-      getDescriptor().getMessageTypes().get(148);
+      getDescriptor().getMessageTypes().get(149);
     internal_static_mlflow_CreatePromptOptimizationJob_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_mlflow_CreatePromptOptimizationJob_descriptor,
@@ -284873,7 +287034,7 @@ public final class Service {
         internal_static_mlflow_CreatePromptOptimizationJob_Response_descriptor,
         new java.lang.String[] { "Job", });
     internal_static_mlflow_GetPromptOptimizationJob_descriptor =
-      getDescriptor().getMessageTypes().get(149);
+      getDescriptor().getMessageTypes().get(150);
     internal_static_mlflow_GetPromptOptimizationJob_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_mlflow_GetPromptOptimizationJob_descriptor,
@@ -284885,7 +287046,7 @@ public final class Service {
         internal_static_mlflow_GetPromptOptimizationJob_Response_descriptor,
         new java.lang.String[] { "Job", });
     internal_static_mlflow_SearchPromptOptimizationJobs_descriptor =
-      getDescriptor().getMessageTypes().get(150);
+      getDescriptor().getMessageTypes().get(151);
     internal_static_mlflow_SearchPromptOptimizationJobs_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_mlflow_SearchPromptOptimizationJobs_descriptor,
@@ -284897,7 +287058,7 @@ public final class Service {
         internal_static_mlflow_SearchPromptOptimizationJobs_Response_descriptor,
         new java.lang.String[] { "Jobs", });
     internal_static_mlflow_CancelPromptOptimizationJob_descriptor =
-      getDescriptor().getMessageTypes().get(151);
+      getDescriptor().getMessageTypes().get(152);
     internal_static_mlflow_CancelPromptOptimizationJob_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_mlflow_CancelPromptOptimizationJob_descriptor,
@@ -284909,7 +287070,7 @@ public final class Service {
         internal_static_mlflow_CancelPromptOptimizationJob_Response_descriptor,
         new java.lang.String[] { "Job", });
     internal_static_mlflow_DeletePromptOptimizationJob_descriptor =
-      getDescriptor().getMessageTypes().get(152);
+      getDescriptor().getMessageTypes().get(153);
     internal_static_mlflow_DeletePromptOptimizationJob_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_mlflow_DeletePromptOptimizationJob_descriptor,
@@ -284921,13 +287082,13 @@ public final class Service {
         internal_static_mlflow_DeletePromptOptimizationJob_Response_descriptor,
         new java.lang.String[] { });
     internal_static_mlflow_Workspace_descriptor =
-      getDescriptor().getMessageTypes().get(153);
+      getDescriptor().getMessageTypes().get(154);
     internal_static_mlflow_Workspace_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_mlflow_Workspace_descriptor,
         new java.lang.String[] { "Name", "Description", "DefaultArtifactRoot", });
     internal_static_mlflow_ListWorkspaces_descriptor =
-      getDescriptor().getMessageTypes().get(154);
+      getDescriptor().getMessageTypes().get(155);
     internal_static_mlflow_ListWorkspaces_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_mlflow_ListWorkspaces_descriptor,
@@ -284939,7 +287100,7 @@ public final class Service {
         internal_static_mlflow_ListWorkspaces_Response_descriptor,
         new java.lang.String[] { "Workspaces", });
     internal_static_mlflow_CreateWorkspace_descriptor =
-      getDescriptor().getMessageTypes().get(155);
+      getDescriptor().getMessageTypes().get(156);
     internal_static_mlflow_CreateWorkspace_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_mlflow_CreateWorkspace_descriptor,
@@ -284951,7 +287112,7 @@ public final class Service {
         internal_static_mlflow_CreateWorkspace_Response_descriptor,
         new java.lang.String[] { "Workspace", });
     internal_static_mlflow_GetWorkspace_descriptor =
-      getDescriptor().getMessageTypes().get(156);
+      getDescriptor().getMessageTypes().get(157);
     internal_static_mlflow_GetWorkspace_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_mlflow_GetWorkspace_descriptor,
@@ -284963,7 +287124,7 @@ public final class Service {
         internal_static_mlflow_GetWorkspace_Response_descriptor,
         new java.lang.String[] { "Workspace", });
     internal_static_mlflow_UpdateWorkspace_descriptor =
-      getDescriptor().getMessageTypes().get(157);
+      getDescriptor().getMessageTypes().get(158);
     internal_static_mlflow_UpdateWorkspace_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_mlflow_UpdateWorkspace_descriptor,
@@ -284975,7 +287136,7 @@ public final class Service {
         internal_static_mlflow_UpdateWorkspace_Response_descriptor,
         new java.lang.String[] { "Workspace", });
     internal_static_mlflow_DeleteWorkspace_descriptor =
-      getDescriptor().getMessageTypes().get(158);
+      getDescriptor().getMessageTypes().get(159);
     internal_static_mlflow_DeleteWorkspace_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_mlflow_DeleteWorkspace_descriptor,
