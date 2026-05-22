@@ -193991,7 +193991,8 @@ public final class Service {
 
     /**
      * <pre>
-     * The experiment ID.
+     * The experiment ID. If empty, returns scorers across all experiments
+     * in the active workspace (used by the admin-UI scorer picker).
      * </pre>
      *
      * <code>optional string experiment_id = 1;</code>
@@ -194000,7 +194001,8 @@ public final class Service {
     boolean hasExperimentId();
     /**
      * <pre>
-     * The experiment ID.
+     * The experiment ID. If empty, returns scorers across all experiments
+     * in the active workspace (used by the admin-UI scorer picker).
      * </pre>
      *
      * <code>optional string experiment_id = 1;</code>
@@ -194009,7 +194011,8 @@ public final class Service {
     java.lang.String getExperimentId();
     /**
      * <pre>
-     * The experiment ID.
+     * The experiment ID. If empty, returns scorers across all experiments
+     * in the active workspace (used by the admin-UI scorer picker).
      * </pre>
      *
      * <code>optional string experiment_id = 1;</code>
@@ -194020,7 +194023,7 @@ public final class Service {
   }
   /**
    * <pre>
-   * List all scorers for an experiment.
+   * List all scorers, optionally scoped to a single experiment.
    * </pre>
    *
    * Protobuf type {@code mlflow.ListScorers}
@@ -195017,7 +195020,8 @@ public final class Service {
     private volatile java.lang.Object experimentId_;
     /**
      * <pre>
-     * The experiment ID.
+     * The experiment ID. If empty, returns scorers across all experiments
+     * in the active workspace (used by the admin-UI scorer picker).
      * </pre>
      *
      * <code>optional string experiment_id = 1;</code>
@@ -195029,7 +195033,8 @@ public final class Service {
     }
     /**
      * <pre>
-     * The experiment ID.
+     * The experiment ID. If empty, returns scorers across all experiments
+     * in the active workspace (used by the admin-UI scorer picker).
      * </pre>
      *
      * <code>optional string experiment_id = 1;</code>
@@ -195052,7 +195057,8 @@ public final class Service {
     }
     /**
      * <pre>
-     * The experiment ID.
+     * The experiment ID. If empty, returns scorers across all experiments
+     * in the active workspace (used by the admin-UI scorer picker).
      * </pre>
      *
      * <code>optional string experiment_id = 1;</code>
@@ -195234,7 +195240,7 @@ public final class Service {
     }
     /**
      * <pre>
-     * List all scorers for an experiment.
+     * List all scorers, optionally scoped to a single experiment.
      * </pre>
      *
      * Protobuf type {@code mlflow.ListScorers}
@@ -195395,7 +195401,8 @@ public final class Service {
       private java.lang.Object experimentId_ = "";
       /**
        * <pre>
-       * The experiment ID.
+       * The experiment ID. If empty, returns scorers across all experiments
+       * in the active workspace (used by the admin-UI scorer picker).
        * </pre>
        *
        * <code>optional string experiment_id = 1;</code>
@@ -195406,7 +195413,8 @@ public final class Service {
       }
       /**
        * <pre>
-       * The experiment ID.
+       * The experiment ID. If empty, returns scorers across all experiments
+       * in the active workspace (used by the admin-UI scorer picker).
        * </pre>
        *
        * <code>optional string experiment_id = 1;</code>
@@ -195428,7 +195436,8 @@ public final class Service {
       }
       /**
        * <pre>
-       * The experiment ID.
+       * The experiment ID. If empty, returns scorers across all experiments
+       * in the active workspace (used by the admin-UI scorer picker).
        * </pre>
        *
        * <code>optional string experiment_id = 1;</code>
@@ -195449,7 +195458,8 @@ public final class Service {
       }
       /**
        * <pre>
-       * The experiment ID.
+       * The experiment ID. If empty, returns scorers across all experiments
+       * in the active workspace (used by the admin-UI scorer picker).
        * </pre>
        *
        * <code>optional string experiment_id = 1;</code>
@@ -195468,7 +195478,8 @@ public final class Service {
       }
       /**
        * <pre>
-       * The experiment ID.
+       * The experiment ID. If empty, returns scorers across all experiments
+       * in the active workspace (used by the admin-UI scorer picker).
        * </pre>
        *
        * <code>optional string experiment_id = 1;</code>
@@ -195482,7 +195493,8 @@ public final class Service {
       }
       /**
        * <pre>
-       * The experiment ID.
+       * The experiment ID. If empty, returns scorers across all experiments
+       * in the active workspace (used by the admin-UI scorer picker).
        * </pre>
        *
        * <code>optional string experiment_id = 1;</code>
